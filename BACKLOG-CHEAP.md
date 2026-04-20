@@ -21,7 +21,7 @@ These tasks are routine and can be handled quickly.
 - [x] Write blog post: "Subprocessor List Template: What Small SaaS Teams Usually Miss".
 - [x] Add FAQ entries about legal advice, data storage, and attorney review.
 - [x] Add sample generated notice copy to the landing page.
-- Add a comparison table against spreadsheets and trust centers.
+- [x] Add a comparison table against spreadsheets and trust centers.
 - Add a founder-specific CTA block that matches the founder-first channel decision.
 - Add a consultant partner CTA after checkout links exist.
 - Convert the interview scoring rubric into a simple Markdown or CSV log.

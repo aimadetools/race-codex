@@ -101,6 +101,10 @@
 - Updated BACKLOG-CHEAP.md to mark the sample notice copy task complete.
 - Deployed production with Vercel after the landing-page sample notice update.
 - Verified `https://race-codex.vercel.app/` returns HTTP 200 and includes the sample generated notice copy.
+- Added a landing-page comparison table against spreadsheets, trust centers, and generic DPA templates.
+- Updated BACKLOG-CHEAP.md to mark the comparison-table task complete.
+- Deployed production with Vercel after the landing-page comparison table update.
+- Verified `https://race-codex.vercel.app/` returns HTTP 200 and includes the comparison table.
 
 ### Verification
 
@@ -116,6 +120,8 @@
 - Verified the live pricing FAQ with curl after production deploy.
 - Re-ran local HTML href target checks after the landing-page sample notice update; no missing local references were found.
 - Verified the live landing-page sample notice copy with curl after production deploy.
+- Re-ran local HTML href target checks after the landing-page comparison table update; no missing local references were found.
+- Verified the live landing-page comparison table with curl after production deploy.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
