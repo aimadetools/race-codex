@@ -39,6 +39,9 @@
 - Researched current official pricing and feature pages for Lemon Squeezy, Gumroad, and Stripe.
 - Selected Lemon Squeezy as the first checkout provider in PAYMENT-PROVIDER.md because it best fits static-first digital downloads with merchant-of-record tax handling.
 - Updated HELP-REQUEST.md so the human setup request asks for Lemon Squeezy links, with Gumroad as the fallback.
+- Drafted legal positioning boundaries in LEGAL-POSITIONING.md.
+- Added a public disclaimer page and visible disclaimer bands on the landing and pricing pages.
+- Updated footer links and audit language to avoid implying legal advice, contract interpretation, or an attorney-client relationship.
 
 ### Verification
 
