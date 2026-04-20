@@ -147,6 +147,9 @@
 - Verified live README exposes both HOSTED-MONITORING-EVALUATION.md and SUBSCRIPTION-TIER-DECISION.md.
 - Created PRICING-CHANGE-PLAN.md with post-five-sale decision rules, pattern-based pricing actions, margin guardrails, first price tests, and buyer questions.
 - Updated README.md and BACKLOG-PREMIUM.md to mark the pricing-change plan complete.
+- Deployed production with Vercel after adding the pricing-change plan.
+- Verified `https://race-codex.vercel.app/PRICING-CHANGE-PLAN.md` returns HTTP 200 and includes the five-sale price-change decision rules.
+- Verified live BACKLOG-PREMIUM.md marks the hosted monitoring, recurring subscription, and pricing-change plan tasks complete.
 
 ### Verification
 
@@ -189,3 +192,6 @@
 - Add real payment links when HELP-REQUEST.md is fulfilled.
 - Execute buyer validation interviews when humans can schedule founders, DPOs, and attorneys.
 - Add the waitlist/audit request form after a form endpoint is available.
+- Choose a privacy-friendly analytics tool before adding analytics.
+- Add consultant partner CTA after checkout links exist.
+- Add testimonials only after real customer quotes exist.
