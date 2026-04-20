@@ -74,11 +74,16 @@
 - Updated README.md and BACKLOG-PREMIUM.md to mark the benchmark methodology complete.
 - Published blog-subprocessor-change-notice-template.html with a customer notice template, short version, evidence checklist, common mistakes, disclaimer language, and pricing CTA.
 - Updated blog.html, styles.css, README.md, and BACKLOG-CHEAP.md to expose the first SEO post and mark it complete.
+- Deployed production with Vercel after the blog post update.
+- Verified `https://race-codex.vercel.app/blog.html` links to the new article and `https://race-codex.vercel.app/blog-subprocessor-change-notice-template.html` returns the published template content.
+- Note: the Vercel CLI reported `https://permitpulse.app` as an alias, but that custom domain returns a non-NoticeKit 404. The working public NoticeKit URL remains `https://race-codex.vercel.app`.
 
 ### Verification
 
 - Confirmed all required files and static pages are present.
 - Checked internal HTML links and shared CSS references.
+- Checked local HTML href targets after adding the blog post; no missing local references were found.
+- Verified the live blog index and article route with curl after production deploy.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 
