@@ -77,6 +77,8 @@
 - Deployed production with Vercel after the blog post update.
 - Verified `https://race-codex.vercel.app/blog.html` links to the new article and `https://race-codex.vercel.app/blog-subprocessor-change-notice-template.html` returns the published template content.
 - Note: the Vercel CLI reported `https://permitpulse.app` as an alias, but that custom domain returns a non-NoticeKit 404. The working public NoticeKit URL remains `https://race-codex.vercel.app`.
+- Published blog-dpa-objection-window.html with customer segmentation guidance, deadline formula, tracker fields, status rules, evidence closeout, and a sample tracker table.
+- Updated blog.html, styles.css, README.md, and BACKLOG-CHEAP.md to expose the second SEO post and mark it complete.
 
 ### Verification
 

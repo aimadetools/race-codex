@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Track a DPA Objection Window | NoticeKit</title>
+    <meta name="description" content="A practical workflow for tracking DPA objection windows after a SaaS subprocessor change notice.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:title" content="How to Track a DPA Objection Window">
+    <meta property="og:description" content="Track notice dates, objection deadlines, customer segments, owners, and evidence records for subprocessor changes.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="How to Track a DPA Objection Window">
+    <meta name="twitter:description" content="Track notice dates, objection deadlines, customer segments, owners, and evidence records for subprocessor changes.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a class="button secondary" href="mailto:hello@noticekit.example?subject=NoticeKit%20early%20access">Request audit</a>
+        </div>
+      </nav>
+
+      <main>
+        <article class="article">
+          <header class="article-header">
+            <span class="eyebrow">Workflow</span>
+            <h1>How to track a DPA objection window</h1>
+            <p>A customer notice is not finished when the email is sent. Track the objection window so your team knows when the change can proceed, who owns follow-up, and what evidence should be kept.</p>
+          </header>
+
+          <div class="notice-band">
+            <strong>Operational workflow, not legal advice.</strong>
+            <p>This article explains a tracking process. Your DPA, customer agreement, and counsel determine what notice period or objection process applies.</p>
+          </div>
+
+          <section>
+            <h2>Start with the customer segment</h2>
+            <p>Do not assume every customer has the same objection window. Segment customers by the agreement or DPA language that controls their notice process.</p>
+            <ul class="article-list">
+              <li>Standard self-serve customers with no negotiated DPA.</li>
+              <li>Customers on your standard DPA.</li>
+              <li>Enterprise customers with negotiated notice periods.</li>
+              <li>Customers with special recipients, portals, or procurement contacts.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Use one deadline formula per segment</h2>
+            <p>For each segment, calculate the objection deadline from the notice date and the applicable window. Keep the formula visible so another operator can audit the math later.</p>
+            <div class="template-box">
+              <p><strong>Objection deadline = notice date + required notice period</strong></p>
+              <p>Example: notice sent on April 20, 2026 with a 30-day window means the objection deadline is May 20, 2026.</p>
+            </div>
+            <p>If the agreement uses business days, local holidays, receipt dates, or portal delivery rules, flag that segment for attorney review before sending.</p>
+          </section>
+
+          <section>
+            <h2>Track these fields</h2>
+            <ul class="article-list">
+              <li>Customer or segment name.</li>
+              <li>Contract source or DPA version.</li>
+              <li>Notice method, such as email, portal, account admin, or public page update.</li>
+              <li>Notice sent date.</li>
+              <li>Objection window in days.</li>
+              <li>Calculated objection deadline.</li>
+              <li>Internal owner.</li>
+              <li>Status: draft, sent, waiting, objected, resolved, or closed.</li>
+              <li>Evidence link for the notice, recipient list, and page proof.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Status rules</h2>
+            <div class="grid-2">
+              <article class="card">
+                <h3>Draft</h3>
+                <p>The notice copy exists, but the customer has not been notified and the clock has not started.</p>
+              </article>
+              <article class="card">
+                <h3>Sent</h3>
+                <p>The notice was delivered through the intended channel. Save proof before moving on.</p>
+              </article>
+              <article class="card">
+                <h3>Waiting</h3>
+                <p>The objection period is open. Assign an owner to monitor replies and escalations.</p>
+              </article>
+              <article class="card">
+                <h3>Closed</h3>
+                <p>The objection deadline passed or all objections were resolved. Archive the evidence record.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2>Evidence to save before closing</h2>
+            <p>The closeout step is where teams often lose the proof they need later. Before marking a segment closed, save the records that show what happened.</p>
+            <ul class="article-list">
+              <li>Final notice copy.</li>
+              <li>Send timestamp and sender.</li>
+              <li>Recipient list or export from the sending system.</li>
+              <li>Subprocessor page URL and screenshot after the update.</li>
+              <li>Objections, responses, and resolution notes.</li>
+              <li>Approval notes from the internal owner and counsel if reviewed.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Simple tracker example</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Segment</th>
+                    <th>Notice date</th>
+                    <th>Window</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Standard DPA</td>
+                    <td>2026-04-20</td>
+                    <td>30 days</td>
+                    <td>2026-05-20</td>
+                    <td>Waiting</td>
+                  </tr>
+                  <tr>
+                    <td>Enterprise EU</td>
+                    <td>2026-04-20</td>
+                    <td>14 days</td>
+                    <td>2026-05-04</td>
+                    <td>Sent</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <div class="cta-band">
+              <div>
+                <h2>Need the tracker file?</h2>
+                <p>NoticeKit Starter includes a one-change objection-window tracker. Pro adds customer segmentation and repeated vendor-change workflows.</p>
+              </div>
+              <a class="button gold" href="pricing.html">See pricing</a>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="disclaimer.html">Disclaimer</a></span>
+      </footer>
+    </div>
+  </body>
+</html>
