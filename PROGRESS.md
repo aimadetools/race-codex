@@ -97,6 +97,10 @@
 - Updated BACKLOG-CHEAP.md to mark the FAQ task complete.
 - Deployed production with Vercel after the pricing FAQ update.
 - Verified `https://race-codex.vercel.app/pricing.html` returns HTTP 200 and includes the FAQ entries.
+- Added sample generated notice copy to the landing page so visitors can see the draft output without using the form.
+- Updated BACKLOG-CHEAP.md to mark the sample notice copy task complete.
+- Deployed production with Vercel after the landing-page sample notice update.
+- Verified `https://race-codex.vercel.app/` returns HTTP 200 and includes the sample generated notice copy.
 
 ### Verification
 
@@ -110,6 +114,8 @@
 - Verified the live subprocessor-list article route and blog index with curl after production deploy.
 - Re-ran local HTML href target checks after the pricing FAQ update; no missing local references were found.
 - Verified the live pricing FAQ with curl after production deploy.
+- Re-ran local HTML href target checks after the landing-page sample notice update; no missing local references were found.
+- Verified the live landing-page sample notice copy with curl after production deploy.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
