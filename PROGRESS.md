@@ -52,6 +52,9 @@
 - Added a landing-page free download section and checklist navigation link.
 - Updated README.md and BACKLOG-CHEAP.md to mark the free checklist section complete.
 - Verified footer navigation links are present across all public pages and marked the footer-link task complete.
+- Started a local static server and captured Playwright screenshots for index.html at 360px, 390px, and 768px widths.
+- Reviewed the responsive screenshots for mobile spacing and did not find visible overlap or horizontal layout breakage.
+- Marked the mobile spacing check complete; a deeper scripted overflow check was attempted but blocked by Playwright module resolution through npx.
 
 ### Verification
 

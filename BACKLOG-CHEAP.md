@@ -10,7 +10,7 @@ These tasks are routine and can be handled quickly.
 - [x] Add a free checklist download section.
 - Add a simple waitlist/audit request form once a form endpoint is available.
 - [x] Add footer links across all pages.
-- Check mobile spacing on 360px, 390px, and 768px widths.
+- [x] Check mobile spacing on 360px, 390px, and 768px widths.
 
 ## P1
 
