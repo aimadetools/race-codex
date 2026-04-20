@@ -124,6 +124,9 @@
 - Updated README.md and BACKLOG-CHEAP.md to mark the social preview image complete.
 - Deployed production with Vercel after adding the social preview image and metadata.
 - Verified `https://race-codex.vercel.app/social-preview.png` returns HTTP 200 as a 1200x630 PNG and homepage/blog metadata references it.
+- Added `changelog.html` with product, content, buyer validation, search, sharing, and deployment update entries.
+- Added the changelog to `sitemap.xml` and README.md.
+- Updated BACKLOG-CHEAP.md to mark the changelog page complete.
 
 ### Verification
 
@@ -149,6 +152,7 @@
 - Verified live robots.txt returns HTTP 200 with the sitemap reference, live sitemap.xml returns HTTP 200, live missing routes return HTTP 404 with the custom page, and live homepage HTML includes the `SoftwareApplication` JSON-LD.
 - Verified the social preview PNG dimensions are 1200x630 and the rendered asset has no headline overlap.
 - Verified live social preview metadata uses `summary_large_image` and points to `https://race-codex.vercel.app/social-preview.png`.
+- Verified the changelog page has social preview metadata and is included in the sitemap locally.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.

@@ -34,5 +34,5 @@ These tasks are routine and can be handled quickly.
 - [x] Add schema.org SoftwareApplication or Product markup.
 - [x] Add compressed social preview image.
 - [x] Add 404.html.
-- Add a changelog page.
+- [x] Add a changelog page.
 - Add testimonials section once customer quotes exist.
