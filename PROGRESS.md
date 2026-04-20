@@ -64,6 +64,10 @@
 - Created EVIDENCE-WORKFLOW.md with a no-backend folder, file, evidence-log, and status workflow.
 - Added the evidence folder workflow to the Pro kit contents.
 - Updated README.md and BACKLOG-PREMIUM.md to mark the evidence workflow complete.
+- Linked the project to Vercel under `jochenvandenbroele-5976s-projects/race-codex`; Vercel created `.vercel` and `.gitignore`.
+- Deployed production with Vercel: https://race-codex.vercel.app
+- Verified the live production alias returns the NoticeKit page and includes the checklist CSV and disclaimer links.
+- Note: the unique deployment URL is Ready in Vercel inspect but returns 401 due deployment protection; `https://race-codex.vercel.app` returns HTTP 200.
 
 ### Verification
 
