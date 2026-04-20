@@ -113,6 +113,10 @@
 - Updated README.md and BACKLOG-CHEAP.md to expose the interview log and mark the rubric-conversion task complete.
 - Deployed production with Vercel after adding the buyer validation interview log.
 - Verified `https://race-codex.vercel.app/buyer-validation-interview-log.csv` returns HTTP 200 and parses as one row with 17 columns.
+- Added `robots.txt` and `sitemap.xml` for the current public static pages on `https://race-codex.vercel.app`.
+- Added schema.org `SoftwareApplication` structured data to the homepage with Starter, Pro, and Concierge Audit offers marked as preorder while checkout is pending.
+- Added a static `404.html` page with noindex metadata, shared navigation, and recovery links to the homepage and blog.
+- Updated README.md and BACKLOG-CHEAP.md to mark the crawler, schema, and 404 tasks complete.
 
 ### Verification
 
@@ -134,6 +138,7 @@
 - Verified the live founder CTA with curl after production deploy.
 - Confirmed the buyer validation CSV uses the rubric scoring dimensions from BUYER-VALIDATION-PACKET.md.
 - Verified the live buyer validation CSV with curl and Python csv parsing after production deploy.
+- Verified sitemap XML parsing, robots.txt sitemap reference, and homepage JSON-LD structure locally after adding crawler metadata.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.

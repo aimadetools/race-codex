@@ -456,6 +456,10 @@ textarea {
   font-size: 1.14rem;
 }
 
+.not-found {
+  min-height: 58vh;
+}
+
 .post-card {
   display: grid;
   gap: 12px;

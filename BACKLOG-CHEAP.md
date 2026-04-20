@@ -30,9 +30,9 @@ These tasks are routine and can be handled quickly.
 ## P2
 
 - Add basic analytics after privacy-friendly tool is chosen.
-- Add robots.txt and sitemap.xml.
-- Add schema.org SoftwareApplication or Product markup.
+- [x] Add robots.txt and sitemap.xml.
+- [x] Add schema.org SoftwareApplication or Product markup.
 - Add compressed social preview image.
-- Add 404.html.
+- [x] Add 404.html.
 - Add a changelog page.
 - Add testimonials section once customer quotes exist.
