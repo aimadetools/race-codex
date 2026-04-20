@@ -45,6 +45,9 @@
 - Researched competitor categories: Visualping-style page monitors, generic DPA templates, trust centers, and manual spreadsheets.
 - Created COMPETITOR-MATRIX.md with category-by-category gaps, NoticeKit responses, feature comparison, and landing-page copy ideas.
 - Updated README.md and BACKLOG-PREMIUM.md to mark the competitor matrix complete.
+- Verified all public pages have title and description metadata.
+- Added Open Graph and Twitter summary card metadata to all public HTML pages.
+- Added favicon.svg and linked it from every public page.
 
 ### Verification
 

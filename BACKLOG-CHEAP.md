@@ -4,9 +4,9 @@ These tasks are routine and can be handled quickly.
 
 ## P0
 
-- Add meta title and description tags to all pages.
-- Add Open Graph and Twitter card tags.
-- Add a favicon.
+- [x] Add meta title and description tags to all pages.
+- [x] Add Open Graph and Twitter card tags.
+- [x] Add a favicon.
 - Add a free checklist download section.
 - Add a simple waitlist/audit request form once a form endpoint is available.
 - Add footer links across all pages.
@@ -31,4 +31,3 @@ These tasks are routine and can be handled quickly.
 - Add 404.html.
 - Add a changelog page.
 - Add testimonials section once customer quotes exist.
-
