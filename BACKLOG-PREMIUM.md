@@ -8,7 +8,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 - [x] Design the paid Starter and Pro kit contents so the $29 and $79 tiers feel materially different.
 - [x] Decide payment provider based on country support, checkout friction, fees, and digital download handling.
 - [x] Draft legal disclaimers and positioning language that avoids implying legal advice.
-- Create a competitor matrix against Visualping, generic DPA templates, trust centers, and manual spreadsheets.
+- [x] Create a competitor matrix against Visualping, generic DPA templates, trust centers, and manual spreadsheets.
 
 ## P1
 

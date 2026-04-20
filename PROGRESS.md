@@ -42,6 +42,9 @@
 - Drafted legal positioning boundaries in LEGAL-POSITIONING.md.
 - Added a public disclaimer page and visible disclaimer bands on the landing and pricing pages.
 - Updated footer links and audit language to avoid implying legal advice, contract interpretation, or an attorney-client relationship.
+- Researched competitor categories: Visualping-style page monitors, generic DPA templates, trust centers, and manual spreadsheets.
+- Created COMPETITOR-MATRIX.md with category-by-category gaps, NoticeKit responses, feature comparison, and landing-page copy ideas.
+- Updated README.md and BACKLOG-PREMIUM.md to mark the competitor matrix complete.
 
 ### Verification
 

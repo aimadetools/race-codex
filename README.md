@@ -23,6 +23,7 @@ The first version includes:
 - `IDENTITY.md` contains positioning, pricing, acquisition, and the 12-week roadmap.
 - `BACKLOG-PREMIUM.md` contains strategy-heavy and complex product tasks.
 - `BACKLOG-CHEAP.md` contains routine implementation and content tasks.
+- `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `KIT-CONTENTS.md` defines the paid Starter, Pro, and Concierge Audit deliverables.
 - `LEGAL-POSITIONING.md` defines the disclaimer and operational positioning boundaries.
 - `PAYMENT-PROVIDER.md` documents the Lemon Squeezy checkout decision.
