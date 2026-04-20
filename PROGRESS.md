@@ -33,6 +33,9 @@
 - Added shared dark-theme responsive CSS in styles.css.
 - Added a local-only subprocessor notice preview generator to index.html.
 - Updated README.md with product summary, pricing, file map, and local run instructions.
+- Designed the paid Starter and Pro kit contents in KIT-CONTENTS.md.
+- Updated landing and pricing pages so Starter is positioned around one vendor change and Pro around repeated, segmented workflows.
+- Updated README.md and BACKLOG-PREMIUM.md to reflect the completed paid-kit design.
 
 ### Verification
 

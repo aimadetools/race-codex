@@ -9,12 +9,12 @@ The first version includes:
 - A professional landing page.
 - Pricing and positioning pages.
 - A browser-only notice preview generator.
-- A plan for paid template packs and concierge audits.
+- A defined paid kit manifest for Starter, Pro, and concierge audits.
 
 ## Pricing
 
-- Starter: $29 one-time.
-- Pro: $79 one-time.
+- Starter: $29 one-time for one vendor change, one customer notice workflow, and one evidence trail.
+- Pro: $79 one-time for repeated vendor changes, segmented customer notice tracking, CSV workflows, and attorney/procurement handoff records.
 - Concierge Audit: $249 one-time.
 
 ## Files
@@ -23,6 +23,7 @@ The first version includes:
 - `IDENTITY.md` contains positioning, pricing, acquisition, and the 12-week roadmap.
 - `BACKLOG-PREMIUM.md` contains strategy-heavy and complex product tasks.
 - `BACKLOG-CHEAP.md` contains routine implementation and content tasks.
+- `KIT-CONTENTS.md` defines the paid Starter, Pro, and Concierge Audit deliverables.
 - `HELP-REQUEST.md` asks for payment links and optional domain setup.
 
 ## Run Locally

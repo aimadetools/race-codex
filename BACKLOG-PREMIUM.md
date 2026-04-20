@@ -5,7 +5,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 ## P0
 
 - Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain.
-- Design the paid Starter and Pro kit contents so the $29 and $79 tiers feel materially different.
+- [x] Design the paid Starter and Pro kit contents so the $29 and $79 tiers feel materially different.
 - Decide payment provider based on country support, checkout friction, fees, and digital download handling.
 - Draft legal disclaimers and positioning language that avoids implying legal advice.
 - Create a competitor matrix against Visualping, generic DPA templates, trust centers, and manual spreadsheets.
@@ -25,4 +25,3 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 - Explore localized packs for UK GDPR, EU GDPR, and US enterprise procurement workflows.
 - Design a recurring subscription tier only if customers explicitly ask for reminders or hosted notices.
 - Write a defensible pricing-change plan after the first five sales.
-
