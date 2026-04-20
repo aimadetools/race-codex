@@ -36,6 +36,9 @@
 - Designed the paid Starter and Pro kit contents in KIT-CONTENTS.md.
 - Updated landing and pricing pages so Starter is positioned around one vendor change and Pro around repeated, segmented workflows.
 - Updated README.md and BACKLOG-PREMIUM.md to reflect the completed paid-kit design.
+- Researched current official pricing and feature pages for Lemon Squeezy, Gumroad, and Stripe.
+- Selected Lemon Squeezy as the first checkout provider in PAYMENT-PROVIDER.md because it best fits static-first digital downloads with merchant-of-record tax handling.
+- Updated HELP-REQUEST.md so the human setup request asks for Lemon Squeezy links, with Gumroad as the fallback.
 
 ### Verification
 

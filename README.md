@@ -24,6 +24,7 @@ The first version includes:
 - `BACKLOG-PREMIUM.md` contains strategy-heavy and complex product tasks.
 - `BACKLOG-CHEAP.md` contains routine implementation and content tasks.
 - `KIT-CONTENTS.md` defines the paid Starter, Pro, and Concierge Audit deliverables.
+- `PAYMENT-PROVIDER.md` documents the Lemon Squeezy checkout decision.
 - `HELP-REQUEST.md` asks for payment links and optional domain setup.
 
 ## Run Locally
