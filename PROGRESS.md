@@ -68,6 +68,8 @@
 - Deployed production with Vercel: https://race-codex.vercel.app
 - Verified the live production alias returns the NoticeKit page and includes the checklist CSV and disclaimer links.
 - Note: the unique deployment URL is Ready in Vercel inspect but returns 401 due deployment protection; `https://race-codex.vercel.app` returns HTTP 200.
+- Built CONSULTANT-REFERRAL-STRATEGY.md with partner profiles, referral terms, coupon-code rules, white-label rights, outreach copy, qualification criteria, and early success metrics.
+- Updated README.md and BACKLOG-PREMIUM.md to mark the consultant referral strategy complete.
 
 ### Verification
 

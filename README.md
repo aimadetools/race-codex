@@ -24,6 +24,7 @@ The first version includes:
 - `BACKLOG-PREMIUM.md` contains strategy-heavy and complex product tasks.
 - `BACKLOG-CHEAP.md` contains routine implementation and content tasks.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
+- `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
 - `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
 - `favicon.svg` provides the browser favicon.
