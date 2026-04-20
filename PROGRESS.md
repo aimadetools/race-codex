@@ -132,6 +132,8 @@
 - Researched current official ICO, EDPB, NIST, and FTC sources for localized pack strategy.
 - Created LOCALIZED-PACKS-EXPLORATION.md covering EU GDPR, UK GDPR, and US enterprise procurement pack differences, source links, packaging sequence, and the decision to build EU first only after validation.
 - Updated README.md and BACKLOG-PREMIUM.md to mark localized-pack exploration complete.
+- Deployed production with Vercel after adding the localized-pack exploration.
+- Verified `https://race-codex.vercel.app/LOCALIZED-PACKS-EXPLORATION.md` returns HTTP 200 and includes the EU-first decision.
 
 ### Verification
 
@@ -160,6 +162,7 @@
 - Verified the changelog page has social preview metadata and is included in the sitemap locally.
 - Verified live changelog route includes the expected heading, social image metadata, and search/sharing update entry.
 - Verified LOCALIZED-PACKS-EXPLORATION.md cites official source URLs and preserves the non-legal-advice positioning.
+- Verified the live localized-pack exploration document is served as text/markdown on the production alias.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
