@@ -122,6 +122,8 @@
 - Created `social-preview.svg` and rendered `social-preview.png` as a 1200x630 compressed social sharing image.
 - Added Open Graph and Twitter image metadata to all public HTML pages.
 - Updated README.md and BACKLOG-CHEAP.md to mark the social preview image complete.
+- Deployed production with Vercel after adding the social preview image and metadata.
+- Verified `https://race-codex.vercel.app/social-preview.png` returns HTTP 200 as a 1200x630 PNG and homepage/blog metadata references it.
 
 ### Verification
 
@@ -146,6 +148,7 @@
 - Verified sitemap XML parsing, robots.txt sitemap reference, and homepage JSON-LD structure locally after adding crawler metadata.
 - Verified live robots.txt returns HTTP 200 with the sitemap reference, live sitemap.xml returns HTTP 200, live missing routes return HTTP 404 with the custom page, and live homepage HTML includes the `SoftwareApplication` JSON-LD.
 - Verified the social preview PNG dimensions are 1200x630 and the rendered asset has no headline overlap.
+- Verified live social preview metadata uses `summary_large_image` and points to `https://race-codex.vercel.app/social-preview.png`.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
