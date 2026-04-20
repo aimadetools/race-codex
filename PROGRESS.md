@@ -142,6 +142,11 @@
 - Confirmed `https://race-codex.vercel.app/` remains the working NoticeKit production alias while `https://permitpulse.app/` still serves the unrelated PermitPulse site despite the Vercel CLI alias output.
 - Created SUBSCRIPTION-TIER-DECISION.md with the decision not to launch subscriptions before sales, explicit customer-demand triggers, a $19/month Maintainer add-on test, higher-tier conditions, launch rules, and interview copy to hold.
 - Updated README.md and BACKLOG-PREMIUM.md to mark the recurring subscription tier decision complete.
+- Deployed production with Vercel after adding the subscription tier decision.
+- Verified `https://race-codex.vercel.app/SUBSCRIPTION-TIER-DECISION.md` returns HTTP 200 and includes the no-subscription-before-sales decision and subscription trigger.
+- Verified live README exposes both HOSTED-MONITORING-EVALUATION.md and SUBSCRIPTION-TIER-DECISION.md.
+- Created PRICING-CHANGE-PLAN.md with post-five-sale decision rules, pattern-based pricing actions, margin guardrails, first price tests, and buyer questions.
+- Updated README.md and BACKLOG-PREMIUM.md to mark the pricing-change plan complete.
 
 ### Verification
 
@@ -173,6 +178,7 @@
 - Verified the live localized-pack exploration document is served as text/markdown on the production alias.
 - Verified HOSTED-MONITORING-EVALUATION.md cites current monitoring sources and keeps NoticeKit positioned as the workflow after detection rather than a generic page monitor.
 - Verified SUBSCRIPTION-TIER-DECISION.md keeps public pricing unchanged and makes any subscription conditional on customer requests for reminders, monitoring, or monthly review.
+- Verified PRICING-CHANGE-PLAN.md preserves the launch prices until five sales and ties any increase, add-on, or discount test to concrete buyer behavior.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.

@@ -43,6 +43,7 @@ The first version includes:
 - `LOCALIZED-PACKS-EXPLORATION.md` evaluates EU GDPR, UK GDPR, and US enterprise procurement pack opportunities.
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
 - `PAYMENT-PROVIDER.md` documents the Lemon Squeezy checkout decision.
+- `PRICING-CHANGE-PLAN.md` defines how to adjust Starter, Pro, Concierge, add-ons, and discounts after the first five sales.
 - `robots.txt` and `sitemap.xml` expose the public static pages for search crawlers.
 - `sample-subprocessor-notice.csv` is a sample NoticeKit CSV import/export file.
 - `social-preview.png` is the compressed 1200x630 social sharing image, generated from `social-preview.svg`.
