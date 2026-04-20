@@ -14,7 +14,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 - [x] Design the local notice generator data model: vendors, purpose, processing region, data categories, effective date, notice date, objection deadline, and customer segment.
 - [x] Design CSV import/export format that can survive user edits in Google Sheets and Excel.
-- Create a customer evidence workflow that works without backend storage.
+- [x] Create a customer evidence workflow that works without backend storage.
 - Build consultant referral strategy, including white-label rights, coupon codes, and partner terms.
 - Define the first benchmark report methodology for reviewing 50 public subprocessor pages.
 

@@ -25,6 +25,7 @@ The first version includes:
 - `BACKLOG-CHEAP.md` contains routine implementation and content tasks.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
+- `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
 - `favicon.svg` provides the browser favicon.
 - `GENERATOR-DATA-MODEL.md` defines the local notice generator fields and future CSV header.
 - `KIT-CONTENTS.md` defines the paid Starter, Pro, and Concierge Audit deliverables.

@@ -59,6 +59,7 @@ Pro is for a team managing several customers, multiple notice obligations, or re
 | Attorney-review packet | Google Doc, PDF | Summarize the change, supporting evidence, customer impact, and review questions for counsel. |
 | Procurement-ready summary | Google Doc, PDF | Convert the workflow into a concise customer-facing explanation for security and procurement reviews. |
 | 90-day operating calendar | Google Sheet, XLSX | Plan page updates, customer notices, objection windows, reminders, and evidence closeout. |
+| Evidence folder workflow | PDF, folder template | Organize notice copy, approvals, recipient records, page proof, and objection logs without backend storage. |
 
 ### Upgrade Value
 

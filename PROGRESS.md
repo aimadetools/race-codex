@@ -61,6 +61,9 @@
 - Designed the spreadsheet-safe CSV import/export format in CSV-FORMAT.md.
 - Added sample-subprocessor-notice.csv and linked it from the landing-page download section.
 - Updated the Premium and Cheap backlogs to mark the CSV format and downloadable CSV sample complete.
+- Created EVIDENCE-WORKFLOW.md with a no-backend folder, file, evidence-log, and status workflow.
+- Added the evidence folder workflow to the Pro kit contents.
+- Updated README.md and BACKLOG-PREMIUM.md to mark the evidence workflow complete.
 
 ### Verification
 
