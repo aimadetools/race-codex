@@ -23,5 +23,5 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 - [x] Evaluate whether hosted monitoring is worth building after the first 10 paid customers.
 - [x] Explore localized packs for UK GDPR, EU GDPR, and US enterprise procurement workflows.
-- Design a recurring subscription tier only if customers explicitly ask for reminders or hosted notices.
+- [x] Design a recurring subscription tier only if customers explicitly ask for reminders or hosted notices.
 - Write a defensible pricing-change plan after the first five sales.
