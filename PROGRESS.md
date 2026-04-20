@@ -55,6 +55,9 @@
 - Started a local static server and captured Playwright screenshots for index.html at 360px, 390px, and 768px widths.
 - Reviewed the responsive screenshots for mobile spacing and did not find visible overlap or horizontal layout breakage.
 - Marked the mobile spacing check complete; a deeper scripted overflow check was attempted but blocked by Playwright module resolution through npx.
+- Designed the local notice generator data model in GENERATOR-DATA-MODEL.md, including required fields and future CSV header.
+- Updated the landing-page generator to include processing region, customer segment, notice date, and a calculated objection deadline.
+- Updated README.md and BACKLOG-PREMIUM.md to mark the data-model task complete.
 
 ### Verification
 

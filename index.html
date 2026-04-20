@@ -58,6 +58,15 @@
                 <label>Service
                   <input id="service" value="transactional email delivery">
                 </label>
+                <label>Processing region
+                  <input id="region" value="United States and EU">
+                </label>
+                <label>Customer segment
+                  <input id="segment" value="EU customers on signed DPA">
+                </label>
+                <label>Notice date
+                  <input id="notice-date" type="date" value="2026-04-20">
+                </label>
                 <label>Effective date
                   <input id="effective" type="date" value="2026-05-20">
                 </label>
@@ -195,7 +204,7 @@
     </div>
 
     <script>
-      const fields = ["vendor", "service", "effective", "window", "data"];
+      const fields = ["vendor", "service", "region", "segment", "notice-date", "effective", "window", "data"];
       const output = document.querySelector("#output");
 
       function formatDate(value) {
@@ -207,13 +216,24 @@
         });
       }
 
+      function addDays(value, days) {
+        if (!value) return "";
+        const date = new Date(`${value}T00:00:00Z`);
+        date.setUTCDate(date.getUTCDate() + Number(days || 0));
+        return date.toISOString().slice(0, 10);
+      }
+
       function renderNotice() {
         const vendor = document.querySelector("#vendor").value || "[vendor]";
         const service = document.querySelector("#service").value || "[service]";
+        const region = document.querySelector("#region").value || "[processing region]";
+        const segment = document.querySelector("#segment").value || "[customer segment]";
+        const noticeDate = document.querySelector("#notice-date").value;
         const effective = document.querySelector("#effective").value;
         const windowDays = document.querySelector("#window").value;
+        const objectionDeadline = addDays(noticeDate, windowDays);
         const data = document.querySelector("#data").value || "[data categories]";
-        output.textContent = `Subject: Upcoming subprocessor update\n\nWe are updating our subprocessor list to add ${vendor} for ${service}. This vendor may process ${data}. The change is planned for ${formatDate(effective)}.\n\nIf your agreement includes a right to object, please send any objection within ${windowDays} days of this notice so we can review it before the change takes effect.`;
+        output.textContent = `Subject: Upcoming subprocessor update\n\nWe are updating our subprocessor list to add ${vendor} for ${service}. This vendor may process ${data} for ${segment}. Processing may occur in ${region}.\n\nNotice date: ${formatDate(noticeDate)}\nPlanned effective date: ${formatDate(effective)}\nObjection deadline: ${formatDate(objectionDeadline)}\n\nIf your agreement includes a right to object, please send any objection within ${windowDays} days of this notice so we can review it before the change takes effect.`;
       }
 
       fields.forEach((id) => document.querySelector(`#${id}`).addEventListener("input", renderNotice));
