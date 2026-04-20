@@ -117,6 +117,8 @@
 - Added schema.org `SoftwareApplication` structured data to the homepage with Starter, Pro, and Concierge Audit offers marked as preorder while checkout is pending.
 - Added a static `404.html` page with noindex metadata, shared navigation, and recovery links to the homepage and blog.
 - Updated README.md and BACKLOG-CHEAP.md to mark the crawler, schema, and 404 tasks complete.
+- Deployed production with Vercel after adding crawler metadata, homepage schema, and the 404 page.
+- Verified `https://race-codex.vercel.app/robots.txt`, `https://race-codex.vercel.app/sitemap.xml`, and a missing route on `https://race-codex.vercel.app` after production deploy.
 
 ### Verification
 
@@ -139,6 +141,7 @@
 - Confirmed the buyer validation CSV uses the rubric scoring dimensions from BUYER-VALIDATION-PACKET.md.
 - Verified the live buyer validation CSV with curl and Python csv parsing after production deploy.
 - Verified sitemap XML parsing, robots.txt sitemap reference, and homepage JSON-LD structure locally after adding crawler metadata.
+- Verified live robots.txt returns HTTP 200 with the sitemap reference, live sitemap.xml returns HTTP 200, live missing routes return HTTP 404 with the custom page, and live homepage HTML includes the `SoftwareApplication` JSON-LD.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
