@@ -5,6 +5,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 ## P0
 
 - Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain.
+- [x] Decide whether to target SaaS founders directly or privacy consultants as the main channel.
 - [x] Design the paid Starter and Pro kit contents so the $29 and $79 tiers feel materially different.
 - [x] Decide payment provider based on country support, checkout friction, fees, and digital download handling.
 - [x] Draft legal disclaimers and positioning language that avoids implying legal advice.
@@ -21,7 +22,6 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 ## P2
 
 - Evaluate whether hosted monitoring is worth building after the first 10 paid customers.
-- Decide whether to target SaaS founders directly or privacy consultants as the main channel.
 - Explore localized packs for UK GDPR, EU GDPR, and US enterprise procurement workflows.
 - Design a recurring subscription tier only if customers explicitly ask for reminders or hosted notices.
 - Write a defensible pricing-change plan after the first five sales.

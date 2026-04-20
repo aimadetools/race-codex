@@ -26,6 +26,8 @@ The first version includes:
 - `BENCHMARK-REPORT-METHODOLOGY.md` defines the first 50-page public subprocessor benchmark methodology.
 - `blog-dpa-objection-window.html` is the second SEO article and objection-window workflow guide.
 - `blog-subprocessor-change-notice-template.html` is the first SEO article and public notice template.
+- `BUYER-CHANNEL-DECISION.md` decides that founders are the first sales channel and consultants are secondary until direct demand is proven.
+- `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
@@ -37,7 +39,7 @@ The first version includes:
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
 - `PAYMENT-PROVIDER.md` documents the Lemon Squeezy checkout decision.
 - `sample-subprocessor-notice.csv` is a sample NoticeKit CSV import/export file.
-- `HELP-REQUEST.md` asks for payment links and optional domain setup.
+- `help-requests/20260420-043303-HELP-REQUEST.md` is the submitted payment-link and optional-domain request. `HELP-STATUS.md` tracks whether the human setup is complete.
 
 ## Run Locally
 

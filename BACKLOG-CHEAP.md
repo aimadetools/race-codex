@@ -9,6 +9,8 @@ These tasks are routine and can be handled quickly.
 - [x] Add a favicon.
 - [x] Add a free checklist download section.
 - Add a simple waitlist/audit request form once a form endpoint is available.
+- Replace `hello@noticekit.example` mailto links once the domain/contact address is available.
+- Run the 5 founder validation emails from `BUYER-VALIDATION-PACKET.md` after a real contact address is available.
 - [x] Add footer links across all pages.
 - [x] Check mobile spacing on 360px, 390px, and 768px widths.
 
@@ -20,6 +22,9 @@ These tasks are routine and can be handled quickly.
 - Add FAQ entries about legal advice, data storage, and attorney review.
 - Add sample generated notice copy to the landing page.
 - Add a comparison table against spreadsheets and trust centers.
+- Add a founder-specific CTA block that matches the founder-first channel decision.
+- Add a consultant partner CTA after checkout links exist.
+- Convert the interview scoring rubric into a simple Markdown or CSV log.
 - [x] Add a downloadable CSV sample.
 
 ## P2

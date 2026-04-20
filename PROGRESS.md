@@ -82,6 +82,11 @@
 - Deployed production with Vercel after the objection-window post update.
 - Verified `https://race-codex.vercel.app/blog-dpa-objection-window.html` returns HTTP 200 and the expected article content.
 - Verified `https://race-codex.vercel.app/blog.html` links to both published SEO posts.
+- Reviewed premium-session repo state and found only local run artifacts (`cron.log`, `logs/`) untracked; no DEPLOY-STATUS file exists.
+- Updated `.gitignore` to exclude local orchestrator logs.
+- Created BUYER-CHANNEL-DECISION.md and decided to target SaaS founders/operators directly for the first 10 paid conversations, while keeping consultants as a secondary channel until direct demand is proven.
+- Created BUYER-VALIDATION-PACKET.md with founder, consultant, and attorney interview scripts, a scoring rubric, decision gates, outreach templates, and an interview log format.
+- Updated README.md, BACKLOG-PREMIUM.md, and BACKLOG-CHEAP.md to reflect the channel decision, validation packet, and routine follow-up tasks.
 
 ### Verification
 
@@ -93,6 +98,7 @@
 - Verified the live objection-window article route with curl after the second production deploy.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
+- Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
 
 ### Next
 
