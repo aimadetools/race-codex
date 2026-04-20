@@ -127,6 +127,8 @@
 - Added `changelog.html` with product, content, buyer validation, search, sharing, and deployment update entries.
 - Added the changelog to `sitemap.xml` and README.md.
 - Updated BACKLOG-CHEAP.md to mark the changelog page complete.
+- Deployed production with Vercel after adding the changelog.
+- Verified `https://race-codex.vercel.app/changelog.html` returns HTTP 200, the sitemap includes it, and the homepage footer links to it.
 
 ### Verification
 
@@ -153,6 +155,7 @@
 - Verified the social preview PNG dimensions are 1200x630 and the rendered asset has no headline overlap.
 - Verified live social preview metadata uses `summary_large_image` and points to `https://race-codex.vercel.app/social-preview.png`.
 - Verified the changelog page has social preview metadata and is included in the sitemap locally.
+- Verified live changelog route includes the expected heading, social image metadata, and search/sharing update entry.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
