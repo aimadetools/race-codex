@@ -385,6 +385,26 @@ textarea {
   background: linear-gradient(135deg, rgba(85, 214, 190, 0.16), rgba(244, 201, 93, 0.1));
 }
 
+.download-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(16, 23, 32, 0.78);
+}
+
+.download-band h2 {
+  margin-top: 14px;
+}
+
+.download-band p {
+  max-width: 660px;
+  margin-top: 12px;
+}
+
 .notice-band {
   display: grid;
   gap: 8px;
@@ -449,6 +469,7 @@ textarea {
   .hero,
   .grid-2,
   .grid-3,
+  .download-band,
   .cta-band {
     grid-template-columns: 1fr;
   }

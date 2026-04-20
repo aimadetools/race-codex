@@ -27,6 +27,7 @@ The first version includes:
 - `favicon.svg` provides the browser favicon.
 - `KIT-CONTENTS.md` defines the paid Starter, Pro, and Concierge Audit deliverables.
 - `LEGAL-POSITIONING.md` defines the disclaimer and operational positioning boundaries.
+- `noticekit-free-checklist.md` is the free downloadable lead magnet.
 - `PAYMENT-PROVIDER.md` documents the Lemon Squeezy checkout decision.
 - `HELP-REQUEST.md` asks for payment links and optional domain setup.
 

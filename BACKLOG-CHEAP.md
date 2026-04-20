@@ -7,7 +7,7 @@ These tasks are routine and can be handled quickly.
 - [x] Add meta title and description tags to all pages.
 - [x] Add Open Graph and Twitter card tags.
 - [x] Add a favicon.
-- Add a free checklist download section.
+- [x] Add a free checklist download section.
 - Add a simple waitlist/audit request form once a form endpoint is available.
 - Add footer links across all pages.
 - Check mobile spacing on 360px, 390px, and 768px widths.

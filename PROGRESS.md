@@ -48,6 +48,9 @@
 - Verified all public pages have title and description metadata.
 - Added Open Graph and Twitter summary card metadata to all public HTML pages.
 - Added favicon.svg and linked it from every public page.
+- Created noticekit-free-checklist.md as a free operational subprocessor change checklist.
+- Added a landing-page free download section and checklist navigation link.
+- Updated README.md and BACKLOG-CHEAP.md to mark the free checklist section complete.
 
 ### Verification
 
