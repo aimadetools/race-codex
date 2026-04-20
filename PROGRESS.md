@@ -51,6 +51,7 @@
 - Created noticekit-free-checklist.md as a free operational subprocessor change checklist.
 - Added a landing-page free download section and checklist navigation link.
 - Updated README.md and BACKLOG-CHEAP.md to mark the free checklist section complete.
+- Verified footer navigation links are present across all public pages and marked the footer-link task complete.
 
 ### Verification
 
