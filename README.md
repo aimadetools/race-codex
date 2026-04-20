@@ -28,6 +28,7 @@ The first version includes:
 - `blog-subprocessor-list-template.html` is the third SEO article and public subprocessor list template.
 - `blog-subprocessor-change-notice-template.html` is the first SEO article and public notice template.
 - `BUYER-CHANNEL-DECISION.md` decides that founders are the first sales channel and consultants are secondary until direct demand is proven.
+- `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
 - `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.

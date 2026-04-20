@@ -24,7 +24,7 @@ These tasks are routine and can be handled quickly.
 - [x] Add a comparison table against spreadsheets and trust centers.
 - [x] Add a founder-specific CTA block that matches the founder-first channel decision.
 - Add a consultant partner CTA after checkout links exist.
-- Convert the interview scoring rubric into a simple Markdown or CSV log.
+- [x] Convert the interview scoring rubric into a simple Markdown or CSV log.
 - [x] Add a downloadable CSV sample.
 
 ## P2
