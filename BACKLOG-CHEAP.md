@@ -20,7 +20,7 @@ These tasks are routine and can be handled quickly.
 - Add FAQ entries about legal advice, data storage, and attorney review.
 - Add sample generated notice copy to the landing page.
 - Add a comparison table against spreadsheets and trust centers.
-- Add a downloadable CSV sample.
+- [x] Add a downloadable CSV sample.
 
 ## P2
 

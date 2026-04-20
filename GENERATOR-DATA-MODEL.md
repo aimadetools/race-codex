@@ -29,6 +29,4 @@ The public generator should not persist values to localStorage, cookies, analyti
 
 ## Future CSV Header
 
-```csv
-vendor_name,vendor_purpose,processing_region,data_categories,customer_segment,notice_date,effective_date,objection_window_days,objection_deadline
-```
+The complete import/export format is defined in `CSV-FORMAT.md`.

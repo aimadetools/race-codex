@@ -1,0 +1,4 @@
+vendor_name,vendor_purpose,change_type,processing_region,data_categories,customer_segment,notice_date,effective_date,objection_window_days,objection_deadline,notice_status,owner,evidence_url,review_notes
+Acme Email Cloud,Transactional email delivery,add,United States; European Union,Customer names; email addresses,EU customers on signed DPA,2026-04-20,2026-05-20,30,2026-05-20,draft,Priya,,Counsel to confirm EU transfer language
+Northstar Analytics,Product usage analytics,replace,United States,User IDs; workspace events,Enterprise customers with analytics enabled,2026-04-22,2026-05-06,14,2026-05-06,approved,Marco,https://example.com/tickets/notice-104,Replacement for legacy analytics vendor
+ArchiveBox Storage,Encrypted backup storage,update,European Union,Account metadata; support attachments,All active customers,2026-04-25,2026-05-25,30,2026-05-25,sent,Avery,https://example.com/evidence/archivebox-notice,Public subprocessor page updated same day

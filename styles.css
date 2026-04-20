@@ -405,6 +405,13 @@ textarea {
   margin-top: 12px;
 }
 
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
 .notice-band {
   display: grid;
   gap: 8px;
@@ -504,6 +511,11 @@ textarea {
 
   .field-grid {
     grid-template-columns: 1fr;
+  }
+
+  .download-actions {
+    display: grid;
+    justify-content: stretch;
   }
 
   .hero-actions,

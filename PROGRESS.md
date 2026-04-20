@@ -58,6 +58,9 @@
 - Designed the local notice generator data model in GENERATOR-DATA-MODEL.md, including required fields and future CSV header.
 - Updated the landing-page generator to include processing region, customer segment, notice date, and a calculated objection deadline.
 - Updated README.md and BACKLOG-PREMIUM.md to mark the data-model task complete.
+- Designed the spreadsheet-safe CSV import/export format in CSV-FORMAT.md.
+- Added sample-subprocessor-notice.csv and linked it from the landing-page download section.
+- Updated the Premium and Cheap backlogs to mark the CSV format and downloadable CSV sample complete.
 
 ### Verification
 
