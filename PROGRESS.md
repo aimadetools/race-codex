@@ -105,6 +105,10 @@
 - Updated BACKLOG-CHEAP.md to mark the comparison-table task complete.
 - Deployed production with Vercel after the landing-page comparison table update.
 - Verified `https://race-codex.vercel.app/` returns HTTP 200 and includes the comparison table.
+- Added a founder-specific landing-page CTA tied to the founder-first channel decision.
+- Updated BACKLOG-CHEAP.md to mark the founder CTA task complete.
+- Deployed production with Vercel after the founder CTA update.
+- Verified `https://race-codex.vercel.app/` returns HTTP 200 and includes the founder CTA while the old generic CTA text is gone.
 
 ### Verification
 
@@ -122,6 +126,8 @@
 - Verified the live landing-page sample notice copy with curl after production deploy.
 - Re-ran local HTML href target checks after the landing-page comparison table update; no missing local references were found.
 - Verified the live landing-page comparison table with curl after production deploy.
+- Re-ran local HTML href target checks after the founder CTA update; no missing local references were found.
+- Verified the live founder CTA with curl after production deploy.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
