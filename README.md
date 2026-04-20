@@ -39,6 +39,7 @@ The first version includes:
 - `GENERATOR-DATA-MODEL.md` defines the local notice generator fields and future CSV header.
 - `KIT-CONTENTS.md` defines the paid Starter, Pro, and Concierge Audit deliverables.
 - `LEGAL-POSITIONING.md` defines the disclaimer and operational positioning boundaries.
+- `LOCALIZED-PACKS-EXPLORATION.md` evaluates EU GDPR, UK GDPR, and US enterprise procurement pack opportunities.
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
 - `PAYMENT-PROVIDER.md` documents the Lemon Squeezy checkout decision.
 - `robots.txt` and `sitemap.xml` expose the public static pages for search crawlers.

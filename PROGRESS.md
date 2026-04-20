@@ -129,6 +129,9 @@
 - Updated BACKLOG-CHEAP.md to mark the changelog page complete.
 - Deployed production with Vercel after adding the changelog.
 - Verified `https://race-codex.vercel.app/changelog.html` returns HTTP 200, the sitemap includes it, and the homepage footer links to it.
+- Researched current official ICO, EDPB, NIST, and FTC sources for localized pack strategy.
+- Created LOCALIZED-PACKS-EXPLORATION.md covering EU GDPR, UK GDPR, and US enterprise procurement pack differences, source links, packaging sequence, and the decision to build EU first only after validation.
+- Updated README.md and BACKLOG-PREMIUM.md to mark localized-pack exploration complete.
 
 ### Verification
 
@@ -156,6 +159,7 @@
 - Verified live social preview metadata uses `summary_large_image` and points to `https://race-codex.vercel.app/social-preview.png`.
 - Verified the changelog page has social preview metadata and is included in the sitemap locally.
 - Verified live changelog route includes the expected heading, social image metadata, and search/sharing update entry.
+- Verified LOCALIZED-PACKS-EXPLORATION.md cites official source URLs and preserves the non-legal-advice positioning.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
