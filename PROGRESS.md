@@ -70,6 +70,8 @@
 - Note: the unique deployment URL is Ready in Vercel inspect but returns 401 due deployment protection; `https://race-codex.vercel.app` returns HTTP 200.
 - Built CONSULTANT-REFERRAL-STRATEGY.md with partner profiles, referral terms, coupon-code rules, white-label rights, outreach copy, qualification criteria, and early success metrics.
 - Updated README.md and BACKLOG-PREMIUM.md to mark the consultant referral strategy complete.
+- Built BENCHMARK-REPORT-METHODOLOGY.md with sample criteria, public-source discovery rules, review fields, a 20-point scoring rubric, reviewer controls, report outline, outreach use, and production timeline.
+- Updated README.md and BACKLOG-PREMIUM.md to mark the benchmark methodology complete.
 
 ### Verification
 
@@ -82,3 +84,5 @@
 
 - Replace placeholder email/domain once human setup is complete.
 - Add real payment links when HELP-REQUEST.md is fulfilled.
+- Execute buyer validation interviews when humans can schedule founders, DPOs, and attorneys.
+- Add the waitlist/audit request form after a form endpoint is available.

@@ -23,6 +23,7 @@ The first version includes:
 - `IDENTITY.md` contains positioning, pricing, acquisition, and the 12-week roadmap.
 - `BACKLOG-PREMIUM.md` contains strategy-heavy and complex product tasks.
 - `BACKLOG-CHEAP.md` contains routine implementation and content tasks.
+- `BENCHMARK-REPORT-METHODOLOGY.md` defines the first 50-page public subprocessor benchmark methodology.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
