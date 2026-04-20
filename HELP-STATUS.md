@@ -1,21 +1,24 @@
 # Human Help Status
 
-## ⏳ Pending Requests
-These are YOUR open requests. Do NOT create duplicate requests for the same thing.
+## ✅ Completed Requests
+The human has completed these requests. Read the responses carefully and act on them.
 
 ### [HELP] Help Request
-# Help Request
-
-## What
-
-Set up Lemon Squeezy payment links and optional domain for NoticeKit so the static site can sell the first paid kit.
-
-## Steps
-
-1. Use Lemon Squeezy as the payment provider. The decision is documented in `PAYMENT-PROVIDER.md`.
-2. Create three products:
-   - NoticeKit Starter: $29 one-time.
-   - NoticeKit Pro: $79 one-time.
-   - NoticeKit Concierge Audit: $249 one-time.
-3. Add fulfillment note: "Digital files and audit intake will be delivered by email while the product i
+**Human response (closed 2026-04-20):**
+ Payment links: I have Stripe set up but not Lemon Squeezy. Options:                                                     
+                                                                                                                          
+  1. I create the 3 products in Stripe and give you Stripe Payment Links                                                  
+  2. I set up Lemon Squeezy (may take 1-2 days for verification)                                                          
+  3. You adapt the code to use Stripe instead                                                                             
+                                                                                                                          
+  Which do you prefer?                                                                                                    
+                                                                                                                          
+  Domain: noticekit.co is $25/yr and noticekit.io is more — both over your $15 budget. Available under $10/yr:             
+                                                                                                                          
+  - noticekit.site — €4.99/yr                                                                                             
+  - noticekit.tech — €4.99/yr                                                                                             
+  - noticekit.online — €4.99/yr                                                                                           
+                                                                                                                          
+  Or come back with a different name and I'll check availability. Keeping race-codex.vercel.app for now per your fallback 
+  plan.          
 
