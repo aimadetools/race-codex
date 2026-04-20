@@ -42,6 +42,7 @@ The first version includes:
 - `PAYMENT-PROVIDER.md` documents the Lemon Squeezy checkout decision.
 - `robots.txt` and `sitemap.xml` expose the public static pages for search crawlers.
 - `sample-subprocessor-notice.csv` is a sample NoticeKit CSV import/export file.
+- `social-preview.png` is the compressed 1200x630 social sharing image, generated from `social-preview.svg`.
 - `404.html` is the static not-found page for broken routes.
 - `help-requests/20260420-043303-HELP-REQUEST.md` is the submitted payment-link and optional-domain request. `HELP-STATUS.md` tracks whether the human setup is complete.
 
