@@ -19,7 +19,7 @@ These tasks are routine and can be handled quickly.
 - [x] Write blog post: "Subprocessor Change Notice Template for SaaS Teams".
 - [x] Write blog post: "How to Track a DPA Objection Window".
 - [x] Write blog post: "Subprocessor List Template: What Small SaaS Teams Usually Miss".
-- Add FAQ entries about legal advice, data storage, and attorney review.
+- [x] Add FAQ entries about legal advice, data storage, and attorney review.
 - Add sample generated notice copy to the landing page.
 - Add a comparison table against spreadsheets and trust centers.
 - Add a founder-specific CTA block that matches the founder-first channel decision.

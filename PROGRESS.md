@@ -93,6 +93,10 @@
 - Verified `https://race-codex.vercel.app/blog-subprocessor-list-template.html` returns HTTP 200 and the expected article content.
 - Verified `https://race-codex.vercel.app/blog.html` links to all three published SEO posts.
 - Note: the unique deployment URL is Ready but returns 401 due deployment protection; `https://permitpulse.app` still returns a non-NoticeKit 404. The working public NoticeKit URL remains `https://race-codex.vercel.app`.
+- Added pricing-page FAQ entries for legal advice boundaries, browser/local data storage, and attorney-review usage.
+- Updated BACKLOG-CHEAP.md to mark the FAQ task complete.
+- Deployed production with Vercel after the pricing FAQ update.
+- Verified `https://race-codex.vercel.app/pricing.html` returns HTTP 200 and includes the FAQ entries.
 
 ### Verification
 
@@ -104,6 +108,8 @@
 - Verified the live objection-window article route with curl after the second production deploy.
 - Re-ran local HTML href target checks after the subprocessor-list article; no missing local references were found.
 - Verified the live subprocessor-list article route and blog index with curl after production deploy.
+- Re-ran local HTML href target checks after the pricing FAQ update; no missing local references were found.
+- Verified the live pricing FAQ with curl after production deploy.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
