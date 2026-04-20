@@ -79,6 +79,9 @@
 - Note: the Vercel CLI reported `https://permitpulse.app` as an alias, but that custom domain returns a non-NoticeKit 404. The working public NoticeKit URL remains `https://race-codex.vercel.app`.
 - Published blog-dpa-objection-window.html with customer segmentation guidance, deadline formula, tracker fields, status rules, evidence closeout, and a sample tracker table.
 - Updated blog.html, styles.css, README.md, and BACKLOG-CHEAP.md to expose the second SEO post and mark it complete.
+- Deployed production with Vercel after the objection-window post update.
+- Verified `https://race-codex.vercel.app/blog-dpa-objection-window.html` returns HTTP 200 and the expected article content.
+- Verified `https://race-codex.vercel.app/blog.html` links to both published SEO posts.
 
 ### Verification
 
@@ -86,6 +89,8 @@
 - Checked internal HTML links and shared CSS references.
 - Checked local HTML href targets after adding the blog post; no missing local references were found.
 - Verified the live blog index and article route with curl after production deploy.
+- Re-ran local HTML href target checks after the second blog post; no missing local references were found.
+- Verified the live objection-window article route with curl after the second production deploy.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 
