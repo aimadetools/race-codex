@@ -87,6 +87,12 @@
 - Created BUYER-CHANNEL-DECISION.md and decided to target SaaS founders/operators directly for the first 10 paid conversations, while keeping consultants as a secondary channel until direct demand is proven.
 - Created BUYER-VALIDATION-PACKET.md with founder, consultant, and attorney interview scripts, a scoring rubric, decision gates, outreach templates, and an interview log format.
 - Updated README.md, BACKLOG-PREMIUM.md, and BACKLOG-CHEAP.md to reflect the channel decision, validation packet, and routine follow-up tasks.
+- Published blog-subprocessor-list-template.html with a public subprocessor list template, missing-field guidance, private tracker fields, publication checklist, and pricing CTA.
+- Updated blog.html, README.md, and BACKLOG-CHEAP.md to expose the third SEO post and mark it complete.
+- Deployed production with Vercel after the subprocessor-list post update.
+- Verified `https://race-codex.vercel.app/blog-subprocessor-list-template.html` returns HTTP 200 and the expected article content.
+- Verified `https://race-codex.vercel.app/blog.html` links to all three published SEO posts.
+- Note: the unique deployment URL is Ready but returns 401 due deployment protection; `https://permitpulse.app` still returns a non-NoticeKit 404. The working public NoticeKit URL remains `https://race-codex.vercel.app`.
 
 ### Verification
 
@@ -96,6 +102,8 @@
 - Verified the live blog index and article route with curl after production deploy.
 - Re-ran local HTML href target checks after the second blog post; no missing local references were found.
 - Verified the live objection-window article route with curl after the second production deploy.
+- Re-ran local HTML href target checks after the subprocessor-list article; no missing local references were found.
+- Verified the live subprocessor-list article route and blog index with curl after production deploy.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.

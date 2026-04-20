@@ -25,6 +25,7 @@ The first version includes:
 - `BACKLOG-CHEAP.md` contains routine implementation and content tasks.
 - `BENCHMARK-REPORT-METHODOLOGY.md` defines the first 50-page public subprocessor benchmark methodology.
 - `blog-dpa-objection-window.html` is the second SEO article and objection-window workflow guide.
+- `blog-subprocessor-list-template.html` is the third SEO article and public subprocessor list template.
 - `blog-subprocessor-change-notice-template.html` is the first SEO article and public notice template.
 - `BUYER-CHANNEL-DECISION.md` decides that founders are the first sales channel and consultants are secondary until direct demand is proven.
 - `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
