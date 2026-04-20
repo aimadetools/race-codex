@@ -37,6 +37,7 @@ The first version includes:
 - `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
 - `favicon.svg` provides the browser favicon.
 - `GENERATOR-DATA-MODEL.md` defines the local notice generator fields and future CSV header.
+- `HOSTED-MONITORING-EVALUATION.md` decides not to build hosted monitoring until paid customers prove recurring demand for NoticeKit-specific change triage.
 - `KIT-CONTENTS.md` defines the paid Starter, Pro, and Concierge Audit deliverables.
 - `LEGAL-POSITIONING.md` defines the disclaimer and operational positioning boundaries.
 - `LOCALIZED-PACKS-EXPLORATION.md` evaluates EU GDPR, UK GDPR, and US enterprise procurement pack opportunities.

@@ -134,6 +134,9 @@
 - Updated README.md and BACKLOG-PREMIUM.md to mark localized-pack exploration complete.
 - Deployed production with Vercel after adding the localized-pack exploration.
 - Verified `https://race-codex.vercel.app/LOCALIZED-PACKS-EXPLORATION.md` returns HTTP 200 and includes the EU-first decision.
+- Researched current hosted page-monitoring competitors and pricing/features from Visualping, Distill, ChangeTower, and Wachete.
+- Created HOSTED-MONITORING-EVALUATION.md with the decision not to build monitoring now, customer-demand thresholds after 10 paid customers, MVP scope, pricing-test anchors, engineering risk notes, and interview questions.
+- Updated README.md and BACKLOG-PREMIUM.md to mark hosted-monitoring evaluation complete.
 
 ### Verification
 
@@ -163,6 +166,7 @@
 - Verified live changelog route includes the expected heading, social image metadata, and search/sharing update entry.
 - Verified LOCALIZED-PACKS-EXPLORATION.md cites official source URLs and preserves the non-legal-advice positioning.
 - Verified the live localized-pack exploration document is served as text/markdown on the production alias.
+- Verified HOSTED-MONITORING-EVALUATION.md cites current monitoring sources and keeps NoticeKit positioned as the workflow after detection rather than a generic page monitor.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
