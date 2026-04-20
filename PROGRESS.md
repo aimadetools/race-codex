@@ -72,6 +72,8 @@
 - Updated README.md and BACKLOG-PREMIUM.md to mark the consultant referral strategy complete.
 - Built BENCHMARK-REPORT-METHODOLOGY.md with sample criteria, public-source discovery rules, review fields, a 20-point scoring rubric, reviewer controls, report outline, outreach use, and production timeline.
 - Updated README.md and BACKLOG-PREMIUM.md to mark the benchmark methodology complete.
+- Published blog-subprocessor-change-notice-template.html with a customer notice template, short version, evidence checklist, common mistakes, disclaimer language, and pricing CTA.
+- Updated blog.html, styles.css, README.md, and BACKLOG-CHEAP.md to expose the first SEO post and mark it complete.
 
 ### Verification
 
