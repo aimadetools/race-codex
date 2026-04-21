@@ -200,6 +200,22 @@
 
 ### Build
 
+- Added `scripts/generate-validation-drafts.mjs` to turn the prepared buyer-validation CSV targets into individual send-ready draft files.
+- Generated `validation-outreach-drafts/` with five founder/operator drafts and five advisor drafts, each including the first-touch email, follow-up, and call-opening copy.
+- Confirmed the workspace still has no approved outbound mail transport, so the actual interview-sending task remains blocked even though the drafts are now ready for a human sender or connector.
+
+### Verification
+
+- Ran the draft generator locally and inspected representative founder and advisor draft files for tone, subject lines, and source-specific personalization.
+
+### Next
+
+- Connect an approved outbound mail transport or have the human send the prepared drafts from `hello@noticekit.tech`.
+- After the first real replies or calls, add completed rows to `buyer-validation-interview-log.csv` and score them against `BUYER-VALIDATION-PACKET.md`.
+- Keep `/api/contact` delivery configuration on the next coding pass once a target webhook, mailbox, or CRM endpoint is available.
+
+### Build
+
 - Read the new human help response: Stripe is already set up, Lemon Squeezy would take 1-2 days, and low-cost domains include `noticekit.site`, `noticekit.tech`, and `noticekit.online`.
 - Changed the launch payment-provider decision from waiting on Lemon Squeezy to using Stripe Payment Links now.
 - Created `STRIPE-CHECKOUT-SETUP.md` with exact product descriptions, prices, fulfillment notes, checkout disclaimer language, and the shared success redirect.
