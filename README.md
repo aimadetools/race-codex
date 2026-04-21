@@ -59,8 +59,8 @@ The first version includes:
 - `404.html` is the static not-found page for broken routes.
 - `ANALYTICS-DECISION.md` records the Vercel Web Analytics choice and dashboard enablement step.
 - `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`.
-- `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` while the public contact alias is pending.
-- `HELP-REQUEST.md` asks the human operator to create the included `hello@noticekit.tech` mailbox. `HELP-STATUS.md` tracks human setup.
+- `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` and the public contact alias.
+- `HELP-REQUEST.md` documents the active human setup request for outbound sending or manual outreach. `HELP-STATUS.md` tracks human setup and confirms the alias is live.
 
 ## Run Locally
 

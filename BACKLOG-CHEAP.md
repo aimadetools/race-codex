@@ -11,13 +11,13 @@ These tasks are routine and can be handled quickly.
 - [x] Add a simple waitlist/audit request form once a form endpoint is available.
 - [x] Add an interim no-backend audit request intake page while the form endpoint is unavailable.
 - [x] Route pre-checkout Starter and Pro CTAs through the interim intake page while Stripe Payment Links are unavailable.
-- Request and then publish the `hello@noticekit.tech` mailbox once the human creates it.
+- [x] Request and publish the `hello@noticekit.tech` mailbox once the human creates it.
 - [x] Remove the placeholder `hello@noticekit.example` mailto path from the audit intake page.
 - [x] Replace pricing-page checkout CTAs with Stripe Payment Links once `HELP-STATUS.md` contains the three URLs.
 - [x] Update homepage schema offer availability from preorder after Stripe links are live.
 - [x] Update Stripe success redirect and public metadata after the custom domain is connected.
 - [x] Verify `https://noticekit.tech` after the orchestrator deploys this checkout/domain update.
-- Add the public contact alias to the purchase next-steps page after mailbox setup.
+- [x] Add the public contact alias to the purchase next-steps page after mailbox setup.
 - [x] Replace the local audit worksheet with a real Vercel `/api/contact` intake endpoint.
 - [x] Document `/api/contact` webhook delivery configuration so intake forwarding can be connected once a target exists.
 - Configure email or webhook delivery for `/api/contact` after a mailbox, webhook, or CRM target is available.

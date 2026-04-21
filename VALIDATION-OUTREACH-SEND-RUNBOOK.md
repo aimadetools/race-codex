@@ -13,19 +13,17 @@ Prepared batches:
 
 ## Current Status
 
-Do not send yet.
-
-Stripe checkout and the `https://noticekit.tech` domain are live. The Vercel `/api/contact` endpoint is live for audit intake. Public outbound validation outreach is still blocked until the included mailbox is created as `hello@noticekit.tech` or an approved sending account is connected.
+The mailbox alias `hello@noticekit.tech` is live, Stripe checkout is live, and the `https://noticekit.tech` domain is live. The Vercel `/api/contact` endpoint is live for audit intake. This workspace still needs an approved sending account or mail connector before Codex can send the batch directly.
 
 ## Send Prerequisites
 
 Before sending the first message, confirm all of the following:
 
-- `HELP-STATUS.md` says `hello@noticekit.tech` has been created.
-- The sender can receive replies to `hello@noticekit.tech`.
+- `HELP-STATUS.md` says `hello@noticekit.tech` has been created and can send and receive replies.
 - `https://noticekit.tech/pricing.html` shows live Stripe checkout links.
 - `https://noticekit.tech/audit-request.html` loads and posts to `/api/contact`.
 - `buyer-validation-interview-log.csv` is still empty except for completed interview rows.
+- A sending account, SMTP relay, or approved connector is available for Codex to send the batch.
 
 ## Batch Order
 
@@ -60,7 +58,7 @@ Only add rows to `buyer-validation-interview-log.csv` after an actual call, asyn
 
 ## First-Day Execution
 
-When the mailbox is live, send these first:
+When a sending account is available, send these first:
 
 1. ReadMe founder/operator email from batch 01.
 2. EF Loads founder/operator email from batch 01.

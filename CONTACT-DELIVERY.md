@@ -6,7 +6,7 @@ Date: 2026-04-21
 
 `/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, logged in Vercel function logs, and can be forwarded to a webhook when a delivery target is available.
 
-Delivery is not fully configured yet because no mailbox, CRM webhook, or approved notification endpoint has been provided. The active `HELP-REQUEST.md` asks the human operator to create `hello@noticekit.tech`, confirm inbound delivery, and confirm whether outbound replies can be sent from that alias.
+The public mailbox alias `hello@noticekit.tech` is now live and can receive and send replies. Delivery is still not fully configured for `/api/contact` because no CRM webhook or approved notification endpoint has been provided, so webhook forwarding remains optional.
 
 ## Live Endpoint
 
@@ -70,7 +70,7 @@ Until webhook delivery is configured, intake submissions remain recoverable from
 
 ## Mailbox Handoff
 
-When `HELP-STATUS.md` confirms `hello@noticekit.tech` exists:
+Now that `HELP-STATUS.md` confirms `hello@noticekit.tech` exists:
 
 1. Publish the alias on `purchase-next-steps.html` and any buyer-facing support copy.
 2. Re-test the Stripe success redirect page and audit intake page on `https://noticekit.tech`.

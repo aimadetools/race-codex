@@ -441,6 +441,28 @@
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
 
+## 2026-04-21
+
+### Build
+
+- Published `hello@noticekit.tech` on `purchase-next-steps.html` with a direct mailto CTA for purchase questions, audit follow-up, and early-access support.
+- Updated `audit-request.html` so the public mailbox is described as live and linked from the intake page.
+- Updated `CONTACT-DELIVERY.md` and `README.md` to reflect the live alias while keeping `/api/contact` webhook forwarding optional.
+- Created a new `HELP-REQUEST.md` asking for an approved outbound sending path or for the human operator to send the first founder batch.
+- Marked the mailbox and purchase-next-steps alias tasks complete in `BACKLOG-CHEAP.md`.
+
+### Verification
+
+- Ran a local static server and confirmed the edited pages return HTTP 200.
+- Verified `purchase-next-steps.html` and `audit-request.html` both expose `hello@noticekit.tech` in the rendered HTML.
+- Confirmed the site still keeps `/api/contact` separate from the public mailbox, so webhook or CRM forwarding remains a later setup item.
+
+### Next
+
+- Connect a mail-sending path if Codex needs to send the prepared validation outreach directly.
+- Run the first five founder validation emails from `BUYER-VALIDATION-PACKET.md` once an approved send transport is available.
+- Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` when a mailbox, webhook, or CRM target is chosen.
+
 ### Build
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and the active contact handoff files.
