@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const OUTPUT_DIR = join(ROOT, "validation-outreach-drafts");
+const EML_OUTPUT_DIR = join(ROOT, "validation-outreach-eml");
 
 function slugify(value) {
   return String(value)
@@ -185,6 +186,47 @@ function bodyForRow(row) {
   };
 }
 
+function extractRecipient(route) {
+  const match = String(route || "").match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+  return match ? match[0] : "";
+}
+
+function escapeHeader(value) {
+  return String(value || "")
+    .replace(/\r/g, "")
+    .replace(/\n/g, " ")
+    .trim();
+}
+
+function buildEml(row, batchLabel) {
+  const content = bodyForRow(row);
+  const recipient = extractRecipient(row.public_contact_route);
+  if (!recipient) {
+    return null;
+  }
+
+  const company = escapeHeader(row.company || row.organization || "");
+  const subject = escapeHeader(content.subject);
+  const textBody = [
+    `To: ${recipient}`,
+    `From: NoticeKit <hello@noticekit.tech>`,
+    `Subject: ${subject}`,
+    `Content-Type: text/plain; charset=utf-8`,
+    `Reply-To: hello@noticekit.tech`,
+    ``,
+    content.firstTouch
+  ].join("\n");
+
+  return {
+    fileName: `${String(row.priority).padStart(2, "0")}-${slugify(company)}.eml`,
+    body: textBody,
+    recipient,
+    subject,
+    company,
+    batchLabel
+  };
+}
+
 function renderDraft(row, batchLabel) {
   const content = bodyForRow(row);
   const safeCompany = String(row.company || row.organization || "").replace(/[\r\n]+/g, " ").trim();
@@ -232,17 +274,31 @@ async function main() {
   const batch02 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-02.csv"), "utf8"));
 
   await mkdir(OUTPUT_DIR, { recursive: true });
+  await mkdir(EML_OUTPUT_DIR, { recursive: true });
 
   const files = [];
+  const emlFiles = [];
   for (const row of batch01) {
     files.push({ ...renderDraft(row, "batch-01"), batch: "batch-01" });
+    const emlDraft = buildEml(row, "batch-01");
+    if (emlDraft) {
+      emlFiles.push(emlDraft);
+    }
   }
   for (const row of batch02) {
     files.push({ ...renderDraft(row, "batch-02"), batch: "batch-02" });
+    const emlDraft = buildEml(row, "batch-02");
+    if (emlDraft) {
+      emlFiles.push(emlDraft);
+    }
   }
 
   for (const draft of files) {
     await writeFile(join(OUTPUT_DIR, draft.fileName), draft.body + "\n", "utf8");
+  }
+
+  for (const draft of emlFiles) {
+    await writeFile(join(EML_OUTPUT_DIR, draft.fileName), draft.body + "\n", "utf8");
   }
 
   const summary = [
@@ -260,12 +316,30 @@ async function main() {
     ``,
     `This workspace still has no approved outbound mail transport, so these drafts are ready for a human sender or email connector.`,
     ``,
+    `The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for easier manual sending.`,
+    ``,
     `## Files`,
     ``,
     ...files.map((draft) => `- ${draft.fileName}`)
   ].join("\n");
 
   await writeFile(join(OUTPUT_DIR, "README.md"), summary + "\n", "utf8");
+
+  const emlSummary = [
+    `# Validation Outreach EML Exports`,
+    ``,
+    `Generated from the prepared buyer validation CSV files.`,
+    ``,
+    `## Status`,
+    ``,
+    `Only direct-email targets are exported here. Manual-form and contact-sales targets remain in validation-outreach-drafts/ for human sending.`,
+    ``,
+    `## Files`,
+    ``,
+    ...emlFiles.map((draft) => `- ${draft.fileName} -> ${draft.recipient} (${draft.subject})`)
+  ].join("\n");
+
+  await writeFile(join(EML_OUTPUT_DIR, "README.md"), emlSummary + "\n", "utf8");
 }
 
 main().catch((error) => {

@@ -522,6 +522,17 @@
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
 
+### Buyer Validation
+
+- Extended `scripts/generate-validation-drafts.mjs` so the prepared validation CSVs now also generate RFC-style `.eml` exports for the direct-email targets.
+- Regenerated the validation outreach artifacts and confirmed `validation-outreach-eml/` now exists alongside the Markdown drafts.
+- Updated `README.md` and the validation draft README files to document the new EML export path for human sending.
+
+### Verification
+
+- Re-ran the draft generator after the script change and confirmed the direct-email targets now have mail-client-ready exports.
+- Confirmed the workspace still has no outbound SMTP, Resend, `sendmail`, or approved connector available locally, so the actual buyer-validation emails remain unsent.
+
 ### Blocker Update
 
 - Rechecked the local workspace for outbound transport and confirmed there is still no `CONTACT_SMTP_URL`, `CONTACT_RESEND_API_KEY`, or local mail command available here.

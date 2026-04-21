@@ -10,7 +10,9 @@ Generated from the prepared buyer validation CSV files.
 
 ## Status
 
-This workspace still has no approved outbound mail transport, so Codex cannot send the batch directly. The human operator can send from `hello@noticekit.tech`, and the drafts now include concrete public contact routes plus the summary reference file `BUYER-VALIDATION-CONTACT-ROUTES.md`.
+This workspace still has no approved outbound mail transport, so these drafts are ready for a human sender or email connector.
+
+The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for easier manual sending.
 
 ## Files
 
