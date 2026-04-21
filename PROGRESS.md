@@ -264,6 +264,10 @@
 - Created `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` so advisor partner prospects can be tracked manually until a form endpoint or CRM exists.
 - Seeded the partner tracker with the five advisor targets from buyer validation batch 02 while keeping them blocked on contact and checkout setup.
 - Updated README.md, BACKLOG-PREMIUM.md, changelog.html, and PROGRESS.md to record the manual partner tracker.
+- Deployed production with Vercel after adding the manual partner tracker.
+- Verified `https://race-codex.vercel.app/CONSULTANT-PARTNER-OUTREACH-TRACKER.md` returns HTTP 200 and includes the blocked contact/setup rules.
+- Verified `https://race-codex.vercel.app/consultant-partner-outreach-tracker.csv` returns HTTP 200 and parses as five rows with 15 columns.
+- Verified the live changelog includes the partner tracker entry.
 
 ### Next
 
