@@ -35,6 +35,7 @@ The first version includes:
 - `changelog.html` is the public changelog for product, content, and deployment updates.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
+- `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a form endpoint or CRM exists.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
 - `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
 - `favicon.svg` provides the browser favicon.

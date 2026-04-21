@@ -261,6 +261,9 @@
 - Verified `https://race-codex.vercel.app/noticekit-partner-preview.pdf` returns HTTP 200 as `application/pdf` with the expected 68,007-byte content length.
 - Verified live `sitemap.xml` includes `partner-preview.html`.
 - Confirmed again that `https://permitpulse.app/` still serves the unrelated PermitPulse site despite the Vercel CLI alias output. The working NoticeKit production alias remains `https://race-codex.vercel.app/`.
+- Created `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` so advisor partner prospects can be tracked manually until a form endpoint or CRM exists.
+- Seeded the partner tracker with the five advisor targets from buyer validation batch 02 while keeping them blocked on contact and checkout setup.
+- Updated README.md, BACKLOG-PREMIUM.md, changelog.html, and PROGRESS.md to record the manual partner tracker.
 
 ### Next
 

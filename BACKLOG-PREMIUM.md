@@ -21,6 +21,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 - [x] Create a customer evidence workflow that works without backend storage.
 - [x] Build consultant referral strategy, including white-label rights, coupon codes, and partner terms.
 - [x] Prepare a partner preview PDF from the Pro kit manifest.
+- [x] Create a manual consultant partner outreach tracker until a form endpoint or CRM exists.
 - [x] Define the first benchmark report methodology for reviewing 50 public subprocessor pages.
 
 ## P2
