@@ -253,6 +253,9 @@
 - Deployed production with Vercel after routing pre-checkout CTAs through the intake page.
 - Verified `https://race-codex.vercel.app/`, `https://race-codex.vercel.app/pricing.html`, and `https://race-codex.vercel.app/audit-request.html?product=pro` return HTTP 200 and include the updated intake links or page metadata.
 - Confirmed `https://permitpulse.app/` still serves the unrelated PermitPulse site after following redirects, despite the Vercel CLI alias output. The working NoticeKit production alias remains `https://race-codex.vercel.app/`.
+- Created `partner-preview.html` as a consultant/advisor preview page based on the Pro kit manifest, with referral economics, white-label boundaries, deliverable examples, and legal-positioning language.
+- Generated `noticekit-partner-preview.pdf` from the partner preview page for consultant outreach and white-label conversations.
+- Updated README.md, BACKLOG-PREMIUM.md, changelog.html, and sitemap.xml to expose the partner preview and mark the partner preview PDF task complete.
 
 ### Next
 

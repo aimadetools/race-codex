@@ -44,6 +44,7 @@ The first version includes:
 - `LEGAL-POSITIONING.md` defines the disclaimer and operational positioning boundaries.
 - `LOCALIZED-PACKS-EXPLORATION.md` evaluates EU GDPR, UK GDPR, and US enterprise procurement pack opportunities.
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
+- `partner-preview.html` and `noticekit-partner-preview.pdf` provide a consultant/advisor partner preview based on the Pro kit manifest.
 - `PAYMENT-PROVIDER.md` documents the Stripe Payment Links launch decision.
 - `PRICING-CHANGE-PLAN.md` defines how to adjust Starter, Pro, Concierge, add-ons, and discounts after the first five sales.
 - `purchase-next-steps.html` is the noindex Stripe success-redirect page for early-access buyers.
