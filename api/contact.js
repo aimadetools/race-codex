@@ -1,3 +1,5 @@
+const nodemailer = require("nodemailer");
+
 const MAX_FIELD_LENGTH = 2000;
 const BLOB_PREFIX = "contact-submissions";
 
@@ -125,9 +127,64 @@ async function forwardToResend(submission) {
   }
 }
 
+function buildSmtpTransport() {
+  const smtpUrl = String(process.env.CONTACT_SMTP_URL || "").trim();
+  const smtpHost = String(process.env.CONTACT_SMTP_HOST || "").trim();
+
+  if (smtpUrl) {
+    return nodemailer.createTransport(smtpUrl);
+  }
+
+  if (!smtpHost) {
+    return null;
+  }
+
+  const smtpPort = Number(process.env.CONTACT_SMTP_PORT || 587);
+  const smtpSecure = String(process.env.CONTACT_SMTP_SECURE || "").trim().toLowerCase() === "true";
+  const smtpUser = String(process.env.CONTACT_SMTP_USER || "").trim();
+  const smtpPassword = String(process.env.CONTACT_SMTP_PASSWORD || "").trim();
+  const transportOptions = {
+    host: smtpHost,
+    port: Number.isFinite(smtpPort) ? smtpPort : 587,
+    secure: smtpSecure
+  };
+
+  if (smtpUser || smtpPassword) {
+    transportOptions.auth = {
+      user: smtpUser,
+      pass: smtpPassword
+    };
+  }
+
+  return nodemailer.createTransport(transportOptions);
+}
+
+async function forwardToSmtp(submission) {
+  const transport = buildSmtpTransport();
+  if (!transport) {
+    return;
+  }
+
+  const recipient = String(process.env.CONTACT_NOTIFICATION_EMAIL || "hello@noticekit.tech").trim();
+  const sender = String(process.env.CONTACT_SMTP_FROM || "NoticeKit <hello@noticekit.tech>").trim();
+
+  await transport.sendMail({
+    from: sender,
+    to: recipient,
+    subject: `NoticeKit contact intake: ${submission.company} (${submission.type})`,
+    text: buildNotificationBody(submission),
+    html: buildNotificationHtml(submission),
+    replyTo: submission.email
+  });
+}
+
 async function forwardSubmission(submission) {
   if (process.env.CONTACT_WEBHOOK_URL) {
     return forwardToWebhook(submission);
+  }
+
+  if (process.env.CONTACT_SMTP_URL || process.env.CONTACT_SMTP_HOST) {
+    return forwardToSmtp(submission);
   }
 
   if (process.env.CONTACT_RESEND_API_KEY) {

@@ -200,6 +200,24 @@
 
 ### Build
 
+- Added SMTP relay support to `api/contact.js` with Nodemailer so `/api/contact` can forward validated submissions through either a webhook, SMTP relay, or Resend.
+- Pinned `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM` in the Vercel production and development environments so the live `hello@noticekit.tech` mailbox is the default notification target.
+- Updated `CONTACT-DELIVERY.md`, `README.md`, and `HELP-REQUEST.md` to document the SMTP relay path and the remaining secret requirement.
+- Installed `nodemailer` as the new mail transport dependency.
+
+### Verification
+
+- Confirmed `api/contact.js` loads locally after the SMTP relay change.
+- Verified `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM` now exist in the Vercel production and development env lists.
+- The Vercel preview env add flow required a branch-specific target, so I left preview unset because the live site uses the production alias.
+
+### Next
+
+- Provision `CONTACT_SMTP_URL` or `CONTACT_RESEND_API_KEY` so `/api/contact` can actually send email notifications instead of only persisting to the private inbox.
+- Then use the approved sending account or mail connector to send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
+
+### Build
+
 - Added `scripts/generate-validation-drafts.mjs` to turn the prepared buyer-validation CSV targets into individual send-ready draft files.
 - Generated `validation-outreach-drafts/` with five founder/operator drafts and five advisor drafts, each including the first-touch email, follow-up, and call-opening copy.
 - Confirmed the workspace still has no approved outbound mail transport, so the actual interview-sending task remains blocked even though the drafts are now ready for a human sender or connector.

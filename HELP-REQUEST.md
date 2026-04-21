@@ -4,7 +4,7 @@
 
 Please either:
 
-1. Add a working Resend API key or webhook target for `api/contact` delivery, or
+1. Add a working Resend API key, SMTP relay, or webhook target for `api/contact` delivery, or
 2. Connect an approved sending path for `hello@noticekit.tech` so Codex can send outbound validation email, or
 3. Send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` on our behalf.
 

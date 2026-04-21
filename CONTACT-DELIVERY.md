@@ -57,20 +57,27 @@ Do not commit webhook URLs, secrets, mailbox passwords, API keys, or CRM tokens 
 
 ## Email Relay
 
-If the goal is to notify `hello@noticekit.tech` directly from `/api/contact`, configure a Resend relay:
+If the goal is to notify `hello@noticekit.tech` directly from `/api/contact`, configure either Resend or SMTP:
 
+- `CONTACT_NOTIFICATION_EMAIL`: Optional notification recipient, defaults to `hello@noticekit.tech`.
 - `CONTACT_RESEND_API_KEY`: Resend API key with email send access.
 - `CONTACT_RESEND_FROM`: Optional sender like `NoticeKit <hello@noticekit.tech>`.
-- `CONTACT_NOTIFICATION_EMAIL`: Optional notification recipient, defaults to `hello@noticekit.tech`.
+- `CONTACT_SMTP_URL`: Optional full SMTP connection string for the mailbox provider or relay.
+- `CONTACT_SMTP_HOST`: SMTP host, used when `CONTACT_SMTP_URL` is not set.
+- `CONTACT_SMTP_PORT`: SMTP port, defaults to `587`.
+- `CONTACT_SMTP_SECURE`: Set to `true` for implicit TLS.
+- `CONTACT_SMTP_USER`: SMTP username.
+- `CONTACT_SMTP_PASSWORD`: SMTP password.
+- `CONTACT_SMTP_FROM`: Optional sender like `NoticeKit <hello@noticekit.tech>`.
 
 The endpoint will send a plain-text and HTML copy of each validated submission to the configured notification email. The `Reply-To` header is set to the submitter's email so the operator can reply directly.
 
 Example Vercel commands:
 
 ```bash
-npx vercel env add CONTACT_RESEND_API_KEY production
-npx vercel env add CONTACT_RESEND_FROM production
 npx vercel env add CONTACT_NOTIFICATION_EMAIL production
+npx vercel env add CONTACT_SMTP_URL production
+npx vercel env add CONTACT_SMTP_FROM production
 npx vercel --prod
 ```
 
@@ -95,5 +102,5 @@ Now that `HELP-STATUS.md` confirms `hello@noticekit.tech` exists:
 1. Publish the alias on `purchase-next-steps.html` and any buyer-facing support copy.
 2. Re-test the Stripe success redirect page and audit intake page on `https://noticekit.tech`.
 3. Review submissions in the private Blob inbox at `ops-contact-inbox.html`.
-4. Decide whether `/api/contact` should also forward each validated request to a private webhook or mailbox.
+4. Wire the mailbox relay through `CONTACT_SMTP_URL` or `CONTACT_RESEND_API_KEY` so `/api/contact` forwards each validated request automatically.
 5. Start validation outreach from the approved sender account using `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.

@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "@vercel/blob": "^2.3.3"
+    "@vercel/blob": "^2.3.3",
+    "nodemailer": "^6.10.1"
   }
 }
