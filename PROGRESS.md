@@ -212,6 +212,7 @@
 - Added the Vercel Web Analytics script to all public HTML pages.
 - Enabled Vercel Web Analytics for the linked `race-codex` project with `npx vercel project web-analytics --format json`.
 - Updated `changelog.html`, `README.md`, and `BACKLOG-CHEAP.md` to record the analytics pass.
+- Deployed production with Vercel after enabling Web Analytics.
 
 ### Verification
 
@@ -220,6 +221,8 @@
 - Verified the local changelog page includes the new checkout preparation entry.
 - Verified all public HTML pages include the Vercel Web Analytics script exactly once.
 - Verified the Vercel Web Analytics CLI response reports `enabled: true` for project `race-codex`.
+- Verified `https://race-codex.vercel.app/` includes the analytics script and `https://race-codex.vercel.app/_vercel/insights/script.js` returns HTTP 200 as JavaScript.
+- Note: the unique production deployment URL is still protected and returns HTTP 401; the working public NoticeKit URL remains `https://race-codex.vercel.app/`.
 
 ### Next
 
