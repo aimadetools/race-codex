@@ -522,6 +522,12 @@
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
 
+### Blocker Update
+
+- Rechecked the local workspace for outbound transport and confirmed there is still no `CONTACT_SMTP_URL`, `CONTACT_RESEND_API_KEY`, or local mail command available here.
+- The founder/operator validation task remains blocked on a real send path or a human sending the first five emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
+- No unblocked backlog item displaced that task as the next meaningful validation step.
+
 ### Build
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `BUYER-VALIDATION-PACKET.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and the prepared outreach batch files.
