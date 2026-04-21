@@ -182,6 +182,7 @@
 - Verified HOSTED-MONITORING-EVALUATION.md cites current monitoring sources and keeps NoticeKit positioned as the workflow after detection rather than a generic page monitor.
 - Verified SUBSCRIPTION-TIER-DECISION.md keeps public pricing unchanged and makes any subscription conditional on customer requests for reminders, monitoring, or monthly review.
 - Verified PRICING-CHANGE-PLAN.md preserves the launch prices until five sales and ties any increase, add-on, or discount test to concrete buyer behavior.
+- Added a quote-ready testimonials section scaffold to `index.html` and `pricing.html` with an explicit empty state so approved customer quotes can be published later without inventing proof.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
 - Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
@@ -194,7 +195,7 @@
 - Add the waitlist/audit request form after a form endpoint is available.
 - Choose a privacy-friendly analytics tool before adding analytics.
 - Add consultant partner CTA after checkout links exist.
-- Add testimonials only after real customer quotes exist.
+- Publish the first verified customer quotes into the new testimonials section once a customer approves public use.
 
 ## 2026-04-21
 

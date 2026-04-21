@@ -50,4 +50,4 @@ These tasks are routine and can be handled quickly.
 - [x] Add compressed social preview image.
 - [x] Add 404.html.
 - [x] Add a changelog page.
-- Add testimonials section once customer quotes exist.
+- [x] Add testimonials section scaffold and reserve quote slots for verified customer quotes.

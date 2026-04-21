@@ -317,9 +317,16 @@ textarea {
   gap: 16px;
 }
 
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .card,
 .price-card,
-.post-card {
+.post-card,
+.quote-card {
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -329,6 +336,19 @@ textarea {
 .card strong {
   display: block;
   margin-bottom: 8px;
+}
+
+.quote-card {
+  display: grid;
+  gap: 12px;
+}
+
+.quote-label {
+  color: var(--brand-2);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .icon {
@@ -579,6 +599,7 @@ tbody tr:last-child td {
   .hero,
   .grid-2,
   .grid-3,
+  .quote-grid,
   .download-band,
   .cta-band {
     grid-template-columns: 1fr;
