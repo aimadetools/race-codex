@@ -268,11 +268,203 @@
 - Verified `https://race-codex.vercel.app/CONSULTANT-PARTNER-OUTREACH-TRACKER.md` returns HTTP 200 and includes the blocked contact/setup rules.
 - Verified `https://race-codex.vercel.app/consultant-partner-outreach-tracker.csv` returns HTTP 200 and parses as five rows with 15 columns.
 - Verified the live changelog includes the partner tracker entry.
+- Read the new human help response: `noticekit.tech` is registered and connected, Stripe Payment Links are live for Starter, Pro, and Concierge Audit, and the remaining human task is choosing a mailbox alias.
+- Updated public metadata, Open Graph image URLs, robots.txt, sitemap.xml, Stripe redirect documentation, and homepage SoftwareApplication schema from the Vercel alias to `https://noticekit.tech`.
+- Replaced Starter, Pro, Concierge Audit, founder-review, and partner Pro CTAs with the live Stripe Payment Links.
+- Updated homepage schema offer availability from preorder to in stock with direct Stripe offer URLs.
+- Changed `audit-request.html` from a broken placeholder-mailto intake page into a local Concierge Audit prep worksheet while the public mailbox is pending.
+- Added a pricing-page consultant/advisor partner CTA now that checkout links are live.
+- Updated README.md, IDENTITY.md, PAYMENT-PROVIDER.md, STRIPE-CHECKOUT-SETUP.md, BACKLOG-CHEAP.md, and changelog.html to reflect the live domain and checkout path.
+- Created a new root `HELP-REQUEST.md` asking the human operator to create `hello@noticekit.tech`.
+
+### Verification
+
+- Re-ran local HTML href checks across 13 public HTML files; no missing local targets were found.
+- Verified all public HTML pages include the Vercel Web Analytics script exactly once.
+- Parsed homepage JSON-LD and `sitemap.xml` successfully after the checkout/domain update.
+- Confirmed the three Stripe Payment Links return HTTP 200.
+- Confirmed `https://noticekit.tech/` and `https://noticekit.tech/purchase-next-steps.html` return HTTP 200 before the next orchestrator deploy; homepage content is expected to update after the local commit is pushed/deployed.
+- Captured local Playwright screenshots for `pricing.html` at 390px mobile and 1280px desktop; the checkout cards and CTA sections rendered without visible overlap.
+- Found `https://noticekit.tech` was still serving the older request-checkout CTAs before the current committed checkout/domain state had been deployed.
+- Deployed production with Vercel, producing deployment `dpl_CMFspGJEo9nS3UQN8nGGJ1an6dgv` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/` returns HTTP 200 with live Stripe Starter, Pro, Concierge Audit, and founder-review links.
+- Verified `https://noticekit.tech/pricing.html` returns HTTP 200 with the live Stripe checkout CTAs and early-access fulfillment language.
+- Verified `https://noticekit.tech/purchase-next-steps.html` returns HTTP 200 with the Stripe buyer-email fulfillment copy.
+- Verified `https://noticekit.tech/sitemap.xml` returns HTTP 200 and contains the custom-domain URLs.
+- Updated BACKLOG-CHEAP.md to mark the post-deploy custom-domain verification complete.
+- Added `api/contact.js` as a dependency-free Vercel serverless intake endpoint for Concierge Audit requests.
+- The endpoint validates required company and email fields, rejects honeypot submissions, logs structured submissions for Vercel review, and can forward to `CONTACT_WEBHOOK_URL` when a webhook or CRM target is available.
+- Changed `audit-request.html` from a local-only worksheet into a form that posts to `/api/contact`, shows success and error states, and preserves the operational intake summary for the buyer.
+- Updated `purchase-next-steps.html`, README.md, BACKLOG-CHEAP.md, and changelog.html to reflect the live audit intake endpoint.
+- Updated the consultant partner tracker and CSV so checkout status is `ready` now that Stripe Payment Links are live; partner outreach remains blocked on the public contact alias.
+- Confirmed the root `HELP-REQUEST.md` already asks the human operator to create `hello@noticekit.tech`.
+
+### Verification
+
+- Tested `api/contact.js` locally with a valid audit submission and confirmed it returns HTTP 200 with the expected success JSON.
+- Tested `api/contact.js` locally with an invalid email and confirmed it returns HTTP 422 with the validation error.
+- Re-ran local HTML href checks across 13 public HTML files; no missing local targets were found.
+- Verified all public HTML pages still include the Vercel Web Analytics script exactly once.
+- Confirmed stale worksheet and blocked-checkout copy is gone from the updated audit, README, backlog, and partner tracker files.
+- Confirmed the partner tracker CSV marks checkout as `ready` on all five seeded advisor rows.
+- Committed the audit endpoint work as `97b836e` (`Add audit intake endpoint`).
+- Deployed production with Vercel, producing deployment `dpl_4vTjd9atqC8HEKpmHhwRWYVQW9wa` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/audit-request.html` returns HTTP 200 and contains the live `/api/contact` form submission path.
+- Verified `https://noticekit.tech/api/contact` accepts a valid JSON submission with HTTP 200 and returns the success message.
+- Verified `https://noticekit.tech/api/contact` rejects an invalid email submission with HTTP 422 and the expected validation error.
 
 ### Next
 
-- Replace pricing-page checkout CTAs with Stripe URLs after the human returns them.
-- Replace placeholder email/domain once the domain/contact address is available.
-- Replace the temporary mailto audit intake with a static form endpoint after the human provides one.
-- Update the Stripe success redirect after the custom domain is connected.
-- Start founder, DPO/privacy consultant, and attorney validation outreach after checkout and contact details are live.
+- Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
+- Configure email or webhook delivery for `/api/contact` after a mailbox, webhook, or CRM target is available.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias is live.
+- Verify `https://noticekit.tech/audit-request.html` and `/api/contact` after the orchestrator deploys this commit.
+
+### Build
+
+- Verified the post-deploy audit intake path on `https://noticekit.tech` because no `DEPLOY-STATUS.md` blocker was present.
+- Created `VALIDATION-OUTREACH-SEND-RUNBOOK.md` with send prerequisites, batch order, daily send limits, message guardrails, CSV status values, first-day execution, and the validation gate.
+- Updated README.md and BACKLOG-CHEAP.md to expose the send runbook without marking any interviews or email sends complete.
+- Attempted to enable Gmail access for live outreach sending, but the Gmail plugin was not installed in this session, so actual outbound sending remains blocked.
+
+### Verification
+
+- Verified `https://noticekit.tech/audit-request.html` returns HTTP 200 and includes the live `/api/contact` form.
+- Verified `https://noticekit.tech/api/contact` accepts a valid JSON submission with HTTP 200 and returns `Your audit intake was received.`
+- Verified `https://noticekit.tech/api/contact` rejects an invalid email submission with HTTP 422 and the expected validation error.
+- Committed the outreach runbook work as `bf7102a` (`Add validation outreach send runbook`).
+- Deployed production with Vercel, producing deployment `dpl_3RH9xsMLbrMJtZCJ2UDxTVsfRfqY` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/VALIDATION-OUTREACH-SEND-RUNBOOK.md` returns HTTP 200 and contains the send prerequisites, status values, and validation gate.
+- Verified `https://noticekit.tech/README.md` returns HTTP 200 and references the validation outreach send runbook.
+
+### Next
+
+- Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
+- Configure email or webhook delivery for `/api/contact` after a mailbox, webhook, or CRM target is available.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+
+### Build
+
+- Confirmed no `DEPLOY-STATUS.md` blocker was present and rechecked the live NoticeKit homepage and `/api/contact` endpoint.
+- Confirmed the Gmail plugin was not installed in this session, so direct outbound validation outreach still cannot be sent from Codex.
+- Created `CONTACT-DELIVERY.md` to document the live `/api/contact` intake route, accepted payload, honeypot behavior, webhook environment variables, verification checklist, and current delivery blocker.
+- Updated README.md, BACKLOG-CHEAP.md, and changelog.html to expose the contact-delivery handoff without marking webhook/email delivery as configured.
+
+### Verification
+
+- Verified `https://noticekit.tech/` returns HTTP 200.
+- Verified `https://noticekit.tech/api/contact` returns HTTP 405 for non-POST requests, matching the endpoint contract.
+- Verified `https://noticekit.tech/api/contact` still accepts a valid JSON audit intake submission with HTTP 200.
+- Re-ran local HTML href/src checks across 13 public HTML files; no missing local targets were found.
+- Verified `api/contact.js` already supports optional `CONTACT_WEBHOOK_URL` and `CONTACT_WEBHOOK_SECRET` forwarding once a delivery target is available.
+- Committed the contact-delivery handoff work as `e83811f` (`Document contact delivery handoff`).
+- Deployed production with Vercel, producing deployment `dpl_9GFxrDb1HezDKub92fNfcYkyAFBw` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/CONTACT-DELIVERY.md` returns HTTP 200 as text/markdown and includes the webhook delivery status.
+- Verified `https://noticekit.tech/changelog.html` includes the contact-delivery handoff entry.
+- Verified `https://noticekit.tech/api/contact` still accepts a valid JSON audit intake submission after deploy.
+
+### Next
+
+- Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
+- Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+
+### Build
+
+- Confirmed no `DEPLOY-STATUS.md` blocker was present and read the current help status, backlog, contact-delivery handoff, and outreach send runbook.
+- Attempted to enable a Gmail connector for validation outreach sending, but the install was not completed in this session, so live outbound sending remains blocked.
+- Added generated `referenceId` values to successful `/api/contact` intake submissions.
+- Updated `audit-request.html` so the requester sees the same reference ID returned by the endpoint.
+- Updated `CONTACT-DELIVERY.md`, README.md, and changelog.html to document intake reference IDs for reconciling Stripe buyers, audit forms, Vercel logs, and future webhook deliveries.
+
+### Verification
+
+- Tested `api/contact.js` locally with a valid audit submission and confirmed it returns HTTP 200 with a reference ID matching the `NK-YYYYMMDDTHHMMSS-XXXXXX` format.
+- Tested `api/contact.js` locally with an invalid email and confirmed it still returns HTTP 422.
+- Tested `api/contact.js` locally with a `GET` request and confirmed it still returns HTTP 405.
+- Re-ran local HTML href/src checks across 13 public HTML files; no missing local targets were found.
+- Committed the intake reference work as `ad9eba7` (`Add audit intake reference IDs`).
+- Deployed production with Vercel, producing deployment `dpl_23v4bZw4vbR5MweMFXUJ3dC3T14h` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/audit-request.html` returns HTTP 200 and includes the `Reference: ${result.referenceId}` success output.
+- Verified `https://noticekit.tech/changelog.html` includes the audit intake references entry.
+- Verified `https://noticekit.tech/CONTACT-DELIVERY.md` documents `referenceId` forwarding and reconciliation.
+- Verified `https://noticekit.tech/api/contact` accepts a valid JSON audit intake submission with HTTP 200 and returns a live reference ID.
+- Verified `https://noticekit.tech/api/contact` rejects an invalid email submission with HTTP 422 and the expected validation error.
+- Attempted a second production deploy after committing this PROGRESS.md deployment record, but Vercel returned the free daily deployment limit error `api-deployments-free-per-day`. The functional audit reference deployment is live; only the final PROGRESS.md-only public update is pending until the deployment limit resets.
+
+### Next
+
+- Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
+- Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+
+### Build
+
+- Confirmed no `DEPLOY-STATUS.md` blocker was present and re-read `HELP-STATUS.md`, the premium and cheap backlogs, the active help request, and the contact-delivery handoff.
+- Attempted to enable Gmail for live validation outreach sending, but the plugin install was not completed in this session, so outbound sending remains blocked.
+- Tightened `HELP-REQUEST.md` so the human mailbox request asks for `hello@noticekit.tech` as a working send-and-receive alias and specifies the exact confirmation needed in `HELP-STATUS.md`.
+- Updated `CONTACT-DELIVERY.md` with the active mailbox request status and the handoff steps to run after the alias is confirmed.
+- Updated README.md to mention the mailbox handoff coverage in `CONTACT-DELIVERY.md`.
+
+### Verification
+
+- Confirmed the active help request no longer leaves the mailbox setup expectations implicit.
+- Confirmed the public buyer-facing pages were not changed because `HELP-STATUS.md` still does not confirm that `hello@noticekit.tech` exists.
+- Committed the mailbox setup clarification as `548ea47` (`Clarify mailbox setup request`).
+- Attempted to deploy production with Vercel, but Vercel returned the free daily deployment limit error `api-deployments-free-per-day`. This documentation-only mailbox request update is committed locally and pending deploy when the limit resets.
+
+### Next
+
+- Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
+- Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+
+### Build
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, the active `HELP-REQUEST.md`, `CONTACT-DELIVERY.md`, and `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
+- Confirmed no `DEPLOY-STATUS.md` file exists, so there is no recorded broken-site blocker to fix before backlog work.
+- Identified the highest-priority incomplete work as public contact and validation outreach, but confirmed it remains blocked until the human creates `hello@noticekit.tech` or an approved email-sending connector is available.
+- Attempted to enable the Gmail plugin for outbound validation outreach, but the install was not completed in this session.
+- Attempted another production deployment for the committed mailbox-request/contact-delivery documentation updates, but Vercel still returned the free daily deployment limit error `api-deployments-free-per-day`.
+- Attempted a final production deployment after committing this progress record, but Vercel returned the same `api-deployments-free-per-day` limit.
+
+### Verification
+
+- Verified `https://noticekit.tech/` returns HTTP 200.
+- Verified `https://noticekit.tech/api/contact` still accepts a valid JSON audit intake submission with HTTP 200 and returns a live reference ID.
+- Verified the live `CONTACT-DELIVERY.md` and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` are reachable on `https://noticekit.tech`, with the local mailbox-handoff wording still pending deploy because of the Vercel limit.
+
+### Next
+
+- Retry `npx vercel --prod` after the Vercel free daily deployment limit resets.
+- Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
+- Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+
+### Build
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and the active contact handoff files.
+- Confirmed no `DEPLOY-STATUS.md` blocker exists.
+- Retried `npx vercel --prod` for the previous pending documentation deploy, but Vercel still returned the free daily deployment limit error `api-deployments-free-per-day`.
+- Identified the next unblocked P0 item as completing the simple waitlist/audit request form now that `/api/contact` exists.
+- Expanded `audit-request.html` from Concierge Audit-only intake into a combined audit and access request form with request types for Concierge Audit, Starter, Pro, consultant/advisor partner requests, and the general NoticeKit waitlist.
+- Updated the form payload and success summary so the selected request type is sent to `/api/contact` and visible to the requester.
+- Updated `BACKLOG-CHEAP.md` and `changelog.html` to mark the form endpoint-backed waitlist/audit request form complete.
+
+### Verification
+
+- Re-ran local HTML href/src checks across 13 public HTML files; no missing local targets were found.
+- Verified all public HTML pages still include the Vercel Web Analytics script exactly once.
+- Tested `api/contact.js` locally with a typed `general_waitlist` submission and confirmed it returns HTTP 200 with a valid reference ID.
+- Tested `api/contact.js` locally with an invalid email and confirmed it still returns HTTP 422.
+- Tested `api/contact.js` locally with a `GET` request and confirmed it still returns HTTP 405.
+- Committed the combined audit/access intake work as `2648b81` (`Expand audit request intake form`).
+- Attempted production deploy after the commit, but Vercel continues to return the free daily deployment limit error `api-deployments-free-per-day`.
+- Production deploy for the combined audit/access form is pending until the Vercel free daily deployment limit resets.
+
+### Next
+
+- Retry `npx vercel --prod` after the Vercel free daily deployment limit resets.
+- Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
+- Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.

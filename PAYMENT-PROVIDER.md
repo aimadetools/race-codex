@@ -37,18 +37,17 @@ Create three Stripe Payment Links with:
 - Quantity fixed to one unless Stripe requires otherwise.
 - Customer email required.
 - Billing address and tax settings configured according to the operator's Stripe account policy.
-- Success redirect URL: `https://race-codex.vercel.app/purchase-next-steps.html`
+- Success redirect URL: `https://noticekit.tech/purchase-next-steps.html`
 - Product descriptions copied from `STRIPE-CHECKOUT-SETUP.md`.
 - Fulfillment note: "Digital files and audit intake are delivered manually by email during early access. NoticeKit provides operational templates, not legal advice."
 
 ## Site Implementation Plan
 
-1. Human creates the three Stripe Payment Links.
-2. Human returns the URLs in `HELP-STATUS.md` or `HELP-REQUEST.md`.
-3. Replace pricing-page mailto checkout CTAs with the Stripe URLs.
-4. Keep audit and founder-review mailto links until a real contact address is available.
-5. Update homepage schema availability from preorder to in-stock after the links are live.
-6. Start founder validation outreach from `BUYER-VALIDATION-PACKET.md`.
+1. Human created the three Stripe Payment Links.
+2. Site CTAs now point to the live Stripe links.
+3. Homepage schema availability is now in stock.
+4. Keep the audit worksheet local until a real contact address or form endpoint is available.
+5. Start founder validation outreach from `BUYER-VALIDATION-PACKET.md` after the public contact alias is live.
 
 ## Future Revisit
 

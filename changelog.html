@@ -9,14 +9,14 @@
     <meta property="og:site_name" content="NoticeKit">
     <meta property="og:title" content="NoticeKit Changelog">
     <meta property="og:description" content="Recent NoticeKit product, template, content, and deployment updates.">
-    <meta property="og:image" content="https://race-codex.vercel.app/social-preview.png">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit subprocessor notices for small SaaS teams">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NoticeKit Changelog">
     <meta name="twitter:description" content="Recent NoticeKit product, template, content, and deployment updates.">
-    <meta name="twitter:image" content="https://race-codex.vercel.app/social-preview.png">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.png">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -40,6 +40,53 @@
         </section>
 
         <section class="article">
+          <section class="card">
+            <span class="tag">April 21, 2026</span>
+            <h2>Audit and access intake</h2>
+            <ul class="article-list">
+              <li>Expanded the live `/api/contact` form so it can collect Concierge Audit, Starter, Pro, partner, and general waitlist requests.</li>
+              <li>Kept the selected request type in the endpoint payload and buyer-visible intake summary.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <span class="tag">April 21, 2026</span>
+            <h2>Audit intake references</h2>
+            <ul class="article-list">
+              <li>Added a buyer-visible reference ID to each successful `/api/contact` intake submission.</li>
+              <li>Included the same reference ID in Vercel logs and optional webhook payloads so early audit requests can be reconciled while mailbox delivery is pending.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <span class="tag">April 21, 2026</span>
+            <h2>Contact delivery handoff</h2>
+            <ul class="article-list">
+              <li>Documented the live `/api/contact` intake route, accepted fields, webhook environment variables, and verification steps.</li>
+              <li>Kept delivery marked as pending until a mailbox, CRM webhook, or approved notification endpoint exists.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <span class="tag">April 21, 2026</span>
+            <h2>Audit intake endpoint</h2>
+            <ul class="article-list">
+              <li>Added a Vercel `/api/contact` endpoint for Concierge Audit intake submissions.</li>
+              <li>Changed the audit page from a local worksheet into a form that validates and submits audit details.</li>
+              <li>Kept webhook or email delivery configurable while the public mailbox is still pending.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <span class="tag">April 21, 2026</span>
+            <h2>Checkout and domain live</h2>
+            <ul class="article-list">
+              <li>Updated public URLs to noticekit.tech after the custom domain was connected.</li>
+              <li>Replaced Starter, Pro, and Concierge Audit request CTAs with live Stripe Payment Links.</li>
+              <li>Changed the temporary intake page into a local audit prep worksheet while the public mailbox is pending.</li>
+            </ul>
+          </section>
+
           <section class="card">
             <span class="tag">April 21, 2026</span>
             <h2>Partner preview</h2>

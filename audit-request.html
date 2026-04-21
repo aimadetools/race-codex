@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Request NoticeKit Access or Audit</title>
-    <meta name="description" content="Request early NoticeKit kit access or a concierge audit for a SaaS subprocessor change workflow.">
+    <title>NoticeKit Audit and Access Request</title>
+    <meta name="description" content="Send the facts needed for a NoticeKit concierge audit, early access question, or partner request.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NoticeKit">
-    <meta property="og:title" content="Request NoticeKit Access or Audit">
-    <meta property="og:description" content="Request early NoticeKit kit access or a concierge audit for a SaaS subprocessor change workflow.">
-    <meta property="og:image" content="https://race-codex.vercel.app/social-preview.png">
+    <meta property="og:title" content="NoticeKit Audit and Access Request">
+    <meta property="og:description" content="Send the facts needed for a NoticeKit concierge audit, early access question, or partner request.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit subprocessor notices for small SaaS teams">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Request NoticeKit Access or Audit">
-    <meta name="twitter:description" content="Request early NoticeKit kit access or a concierge audit for a SaaS subprocessor change workflow.">
-    <meta name="twitter:image" content="https://race-codex.vercel.app/social-preview.png">
+    <meta name="twitter:title" content="NoticeKit Audit and Access Request">
+    <meta name="twitter:description" content="Send the facts needed for a NoticeKit concierge audit, early access question, or partner request.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.png">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -34,17 +34,16 @@
 
       <main>
         <section class="page-hero">
-          <span class="eyebrow">Early access intake</span>
-          <h1>Request NoticeKit kit access or a 48-hour workflow review.</h1>
-          <p>Use this temporary intake while checkout and the permanent contact domain are being connected. The page builds an email draft locally; no form data is stored by NoticeKit.</p>
+          <span class="eyebrow">Audit and access request</span>
+          <h1>Send the facts for a NoticeKit follow-up.</h1>
+          <p>Use this intake before or after buying the Concierge Audit, or to ask about Starter, Pro, and partner access. NoticeKit uses the details to scope the operational review and follow up with the buyer email when payment is complete.</p>
         </section>
 
         <section class="section">
           <div class="grid-2">
             <article class="panel legal-panel">
-              <h2>What to include</h2>
+              <h2>What to prepare</h2>
               <ul class="feature-list">
-                <li>Which NoticeKit option you want: Starter, Pro, or Concierge Audit</li>
                 <li>Company name and website</li>
                 <li>Current subprocessor page URL</li>
                 <li>Vendor being added, removed, or replaced</li>
@@ -52,18 +51,20 @@
                 <li>Customer segment affected by the change</li>
                 <li>Anything counsel has already asked you to preserve</li>
               </ul>
+              <a class="button gold" href="https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07">Buy Concierge Audit</a>
               <p class="fine-print">NoticeKit will use the details to prepare an operational gap list. It does not interpret your contracts or provide legal advice.</p>
             </article>
 
             <article class="panel legal-panel">
-              <h2>Build request email</h2>
+              <h2>Send request</h2>
               <form id="audit-form" class="intake-form">
-                <label>NoticeKit option
-                  <select id="product" name="product">
-                    <option value="Starter kit">Starter kit - $29</option>
-                    <option value="Pro kit">Pro kit - $79</option>
-                    <option value="Concierge audit">Concierge audit - $249</option>
-                    <option value="Not sure yet">Not sure yet</option>
+                <label>Request type
+                  <select id="request-type" name="request-type">
+                    <option value="concierge_audit">Concierge Audit intake</option>
+                    <option value="starter_access">Starter access question</option>
+                    <option value="pro_access">Pro access question</option>
+                    <option value="partner_request">Consultant or advisor partner request</option>
+                    <option value="general_waitlist">General NoticeKit waitlist</option>
                   </select>
                 </label>
                 <label>Company
@@ -84,16 +85,20 @@
                 <label>What you need reviewed
                   <textarea id="review-need" name="review-need" placeholder="Example: Notice copy, objection-window tracker, evidence trail, and public subprocessor page."></textarea>
                 </label>
-                <button class="button gold" type="submit">Open request email</button>
+                <label class="hidden-field" aria-hidden="true">Website
+                  <input id="website" name="website" tabindex="-1" autocomplete="off">
+                </label>
+                <button id="audit-submit" class="button gold" type="submit">Send request</button>
               </form>
+              <div id="intake-summary" class="notice-output generated-request" role="status" hidden></div>
             </article>
           </div>
         </section>
 
         <section class="section">
           <div class="notice-band">
-            <strong>Temporary email intake.</strong>
-            <p>A real form endpoint and Stripe checkout links are still blocked on setup. Until then, this page keeps kit and audit requests structured and opens your own email client with the details filled in.</p>
+            <strong>Checkout and intake are live; public mailbox setup is pending.</strong>
+            <p>This form submits to NoticeKit's Vercel intake endpoint. Stripe still collects the buyer email at checkout, and early-access fulfillment remains manual.</p>
             <a href="disclaimer.html">Read the disclaimer</a>
           </div>
         </section>
@@ -107,45 +112,76 @@
 
     <script>
       const form = document.querySelector("#audit-form");
-      const product = document.querySelector("#product");
-      const productFromUrl = new URLSearchParams(window.location.search).get("product");
-      const productMap = {
-        starter: "Starter kit",
-        pro: "Pro kit",
-        audit: "Concierge audit"
-      };
-
-      if (productMap[productFromUrl]) {
-        product.value = productMap[productFromUrl];
-      }
+      const summary = document.querySelector("#intake-summary");
 
       function value(id) {
         return document.querySelector(`#${id}`).value.trim() || "Not provided";
       }
 
-      form.addEventListener("submit", (event) => {
+      const submitButton = document.querySelector("#audit-submit");
+
+      function setSummary(text, isError = false) {
+        summary.hidden = false;
+        summary.textContent = text;
+        summary.classList.toggle("form-error", isError);
+      }
+
+      form.addEventListener("submit", async (event) => {
         event.preventDefault();
-        const company = value("company");
-        const selectedProduct = value("product");
-        const body = [
-          "NoticeKit request",
-          "",
-          `Requested option: ${selectedProduct}`,
-          `Company: ${company}`,
-          `Reply email: ${value("email")}`,
-          `Subprocessor page: ${value("subprocessor-url")}`,
-          "",
-          "Vendor change:",
-          value("vendor-change"),
-          "",
-          "Customer segment and deadline:",
-          value("deadline"),
-          "",
-          "Review needed:",
-          value("review-need")
-        ].join("\n");
-        const subject = encodeURIComponent(`NoticeKit ${selectedProduct} request - ${company}`);
-        window.location.href = `mailto:hello@noticekit.example?subject=${subject}&body=${encodeURIComponent(body)}`;
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        const payload = {
+          type: value("request-type"),
+          company: value("company"),
+          email: value("email"),
+          subprocessorUrl: value("subprocessor-url"),
+          vendorChange: value("vendor-change"),
+          deadline: value("deadline"),
+          reviewNeed: value("review-need"),
+          website: value("website") === "Not provided" ? "" : value("website")
+        };
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          const result = await response.json();
+
+          if (!response.ok || !result.ok) {
+            throw new Error(result.error || "The request could not be sent.");
+          }
+
+          const body = [
+            result.message,
+            `Reference: ${result.referenceId}`,
+            "",
+            "NoticeKit request intake",
+            "",
+            `Request type: ${payload.type}`,
+            `Company: ${payload.company}`,
+            `Reply email: ${payload.email}`,
+            `Subprocessor page: ${payload.subprocessorUrl || "Not provided"}`,
+            "",
+            "Vendor change:",
+            payload.vendorChange || "Not provided",
+            "",
+            "Customer segment and deadline:",
+            payload.deadline || "Not provided",
+            "",
+            "Review needed:",
+            payload.reviewNeed || "Not provided"
+          ].join("\n");
+          setSummary(body);
+          form.reset();
+        } catch (error) {
+          setSummary(error.message, true);
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "Send request";
+        }
       });
     </script>
     <script defer src="/_vercel/insights/script.js"></script>

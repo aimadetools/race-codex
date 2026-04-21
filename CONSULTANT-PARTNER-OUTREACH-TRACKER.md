@@ -12,7 +12,7 @@ This tracker is separate from `buyer-validation-interview-log.csv`. Do not mark 
 
 - Add a prospect only after there is a public source URL or direct warm intro source.
 - Keep `outreach_status` as `blocked_contact_setup` until `HELP-STATUS.md` includes a public NoticeKit contact address.
-- Keep `checkout_status` as `blocked_checkout_links` until the three Stripe Payment Links are live on the pricing page.
+- Keep `checkout_status` as `ready` because the three Stripe Payment Links are live on the pricing page.
 - Record actual replies only after they happen.
 - Move interview scoring to `buyer-validation-interview-log.csv` only after a real conversation.
 - Preserve the non-legal-advice boundary in every message.
@@ -37,7 +37,7 @@ The CSV starts with the five advisor targets already prepared in `BUYER-VALIDATI
 4. Coto & Waddington
 5. Altum Legal
 
-They remain `blocked_contact_setup` and `blocked_checkout_links` until the human returns the public contact address and Stripe links.
+They remain `blocked_contact_setup` until the human returns the public contact address. Checkout is ready because the Stripe links are live.
 
 ## Partner-Specific Qualification
 

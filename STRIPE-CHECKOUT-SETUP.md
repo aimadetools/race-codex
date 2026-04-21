@@ -6,9 +6,9 @@ Use this file to create the first NoticeKit Stripe Payment Links without another
 
 Set every successful payment redirect to:
 
-`https://race-codex.vercel.app/purchase-next-steps.html`
+`https://noticekit.tech/purchase-next-steps.html`
 
-After a custom domain is connected, update this to the equivalent domain URL.
+The custom domain is connected, and Stripe is configured to redirect to this URL.
 
 ## Global Checkout Notes
 

@@ -4,6 +4,10 @@
 
 NoticeKit
 
+## Public URL
+
+https://noticekit.tech
+
 ## Tagline
 
 Subprocessor change notices for small SaaS teams.
@@ -113,7 +117,7 @@ Phase 3:
 - Vercel static hosting.
 - HTML, CSS, and vanilla JavaScript.
 - No customer data stored in v1.
-- Payment link handled by Stripe, Lemon Squeezy, or Gumroad after human setup.
+- Payment links handled by Stripe during early access.
 - Optional form provider for waitlist and audit requests.
 
 ## 12-Week Roadmap
@@ -175,4 +179,3 @@ Phase 3:
 ## Positioning
 
 NoticeKit is not a law firm and does not give legal advice. It provides operational templates and local tools that help teams prepare materials for attorney review and customer communications.
-

@@ -36,6 +36,7 @@ The first version includes:
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
 - `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a form endpoint or CRM exists.
+- `CONTACT-DELIVERY.md` documents `/api/contact` delivery status, intake reference IDs, webhook environment variables, mailbox handoff steps, and verification steps for connecting a mailbox, CRM, or notification endpoint.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
 - `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
 - `favicon.svg` provides the browser favicon.
@@ -54,10 +55,12 @@ The first version includes:
 - `social-preview.png` is the compressed 1200x630 social sharing image, generated from `social-preview.svg`.
 - `STRIPE-CHECKOUT-SETUP.md` gives the human operator exact Stripe product, fulfillment, and redirect instructions.
 - `SUBSCRIPTION-TIER-DECISION.md` defines when a recurring tier should be tested and keeps subscriptions off the public launch until customers ask for ongoing reminders or monitoring.
+- `VALIDATION-OUTREACH-SEND-RUNBOOK.md` defines the send order, prerequisites, tracking statuses, and guardrails for executing the prepared validation outreach once the public mailbox is live.
 - `404.html` is the static not-found page for broken routes.
 - `ANALYTICS-DECISION.md` records the Vercel Web Analytics choice and dashboard enablement step.
-- `audit-request.html` is a temporary no-backend intake page that opens a structured kit or audit request email while form and checkout setup are pending.
-- `HELP-REQUEST.md` is the current Stripe payment-link and low-cost-domain request. `HELP-STATUS.md` tracks whether the human setup is complete.
+- `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`.
+- `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` while the public contact alias is pending.
+- `HELP-REQUEST.md` asks the human operator to create the included `hello@noticekit.tech` mailbox. `HELP-STATUS.md` tracks human setup.
 
 ## Run Locally
 
