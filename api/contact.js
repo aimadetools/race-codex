@@ -28,6 +28,113 @@ function createStoragePath(submission) {
   return `${BLOB_PREFIX}/${day}/${submission.referenceId}.json`;
 }
 
+function buildNotificationBody(submission) {
+  return [
+    "NoticeKit contact intake",
+    "",
+    `Reference: ${submission.referenceId}`,
+    `Request type: ${submission.type}`,
+    `Company: ${submission.company}`,
+    `Reply email: ${submission.email}`,
+    `Submitted at: ${submission.submittedAt}`,
+    `Subprocessor page: ${submission.subprocessorUrl || "Not provided"}`,
+    "",
+    "Vendor change:",
+    submission.vendorChange || "Not provided",
+    "",
+    "Customer segment and deadline:",
+    submission.deadline || "Not provided",
+    "",
+    "Review needed:",
+    submission.reviewNeed || "Not provided"
+  ].join("\n");
+}
+
+function buildNotificationHtml(submission) {
+  const rows = [
+    ["Reference", submission.referenceId],
+    ["Request type", submission.type],
+    ["Company", submission.company],
+    ["Reply email", submission.email],
+    ["Submitted at", submission.submittedAt],
+    ["Subprocessor page", submission.subprocessorUrl || "Not provided"],
+    ["Vendor change", submission.vendorChange || "Not provided"],
+    ["Customer segment and deadline", submission.deadline || "Not provided"],
+    ["Review needed", submission.reviewNeed || "Not provided"]
+  ];
+
+  return [
+    "<p>NoticeKit contact intake</p>",
+    "<table cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;line-height:1.5;\">",
+    ...rows.map(
+      ([label, value]) =>
+        `<tr><td style=\"padding:4px 12px 4px 0;font-weight:700;vertical-align:top;\">${label}</td><td style=\"padding:4px 0;vertical-align:top;\">${String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")}</td></tr>`
+    ),
+    "</table>"
+  ].join("");
+}
+
+async function forwardToWebhook(submission) {
+  const webhookResponse = await fetch(process.env.CONTACT_WEBHOOK_URL, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      ...(process.env.CONTACT_WEBHOOK_SECRET
+        ? { authorization: `Bearer ${process.env.CONTACT_WEBHOOK_SECRET}` }
+        : {})
+    },
+    body: JSON.stringify(submission)
+  });
+
+  if (!webhookResponse.ok) {
+    throw new Error(`Webhook responded with ${webhookResponse.status}`);
+  }
+}
+
+async function forwardToResend(submission) {
+  const apiKey = String(process.env.CONTACT_RESEND_API_KEY || "").trim();
+  const recipient = String(process.env.CONTACT_NOTIFICATION_EMAIL || "hello@noticekit.tech").trim();
+  const sender = String(process.env.CONTACT_RESEND_FROM || "NoticeKit <hello@noticekit.tech>").trim();
+
+  if (!apiKey || !recipient) {
+    return;
+  }
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${apiKey}`,
+      "content-type": "application/json",
+      "idempotency-key": submission.referenceId
+    },
+    body: JSON.stringify({
+      from: sender,
+      to: [recipient],
+      subject: `NoticeKit contact intake: ${submission.company} (${submission.type})`,
+      text: buildNotificationBody(submission),
+      html: buildNotificationHtml(submission),
+      headers: {
+        "Reply-To": submission.email
+      }
+    })
+  });
+
+  if (!response.ok) {
+    const details = await response.text();
+    throw new Error(`Resend responded with ${response.status}: ${details.slice(0, 200)}`);
+  }
+}
+
+async function forwardSubmission(submission) {
+  if (process.env.CONTACT_WEBHOOK_URL) {
+    return forwardToWebhook(submission);
+  }
+
+  if (process.env.CONTACT_RESEND_API_KEY) {
+    return forwardToResend(submission);
+  }
+}
+
 let blobSdkPromise;
 
 function loadBlobSdk() {
@@ -120,35 +227,15 @@ module.exports = async function handler(request, response) {
     return;
   }
 
-  if (process.env.CONTACT_WEBHOOK_URL) {
-    try {
-      const webhookResponse = await fetch(process.env.CONTACT_WEBHOOK_URL, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          ...(process.env.CONTACT_WEBHOOK_SECRET
-            ? { authorization: `Bearer ${process.env.CONTACT_WEBHOOK_SECRET}` }
-            : {})
-        },
-        body: JSON.stringify(storagePayload)
-      });
-
-      if (!webhookResponse.ok) {
-        console.error("NoticeKit contact webhook failed", webhookResponse.status);
-        sendJson(response, 502, {
-          ok: false,
-          error: "The intake endpoint could not forward your request. Please try again."
-        });
-        return;
-      }
-    } catch (error) {
-      console.error("NoticeKit contact webhook error", error);
-      sendJson(response, 502, {
-        ok: false,
-        error: "The intake endpoint could not forward your request. Please try again."
-      });
-      return;
-    }
+  try {
+    await forwardSubmission(storagePayload);
+  } catch (error) {
+    console.error("NoticeKit contact delivery failed", error);
+    sendJson(response, 502, {
+      ok: false,
+      error: "The intake endpoint could not forward your request. Please try again."
+    });
+    return;
   }
 
   sendJson(response, 200, {

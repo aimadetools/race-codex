@@ -4,7 +4,7 @@ Date: 2026-04-21
 
 ## Current Status
 
-`/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, stored in a private Vercel Blob inbox, and can also be forwarded to a webhook when a delivery target is available.
+`/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, stored in a private Vercel Blob inbox, and can also be forwarded to a webhook or an email relay when a delivery target is available.
 
 The public mailbox alias `hello@noticekit.tech` is now live and can receive and send replies. Delivery is now durable even without a CRM webhook because the validated submission is persisted to a private Blob object before any optional forwarding happens.
 
@@ -55,6 +55,25 @@ npx vercel --prod
 
 Do not commit webhook URLs, secrets, mailbox passwords, API keys, or CRM tokens to the repository.
 
+## Email Relay
+
+If the goal is to notify `hello@noticekit.tech` directly from `/api/contact`, configure a Resend relay:
+
+- `CONTACT_RESEND_API_KEY`: Resend API key with email send access.
+- `CONTACT_RESEND_FROM`: Optional sender like `NoticeKit <hello@noticekit.tech>`.
+- `CONTACT_NOTIFICATION_EMAIL`: Optional notification recipient, defaults to `hello@noticekit.tech`.
+
+The endpoint will send a plain-text and HTML copy of each validated submission to the configured notification email. The `Reply-To` header is set to the submitter's email so the operator can reply directly.
+
+Example Vercel commands:
+
+```bash
+npx vercel env add CONTACT_RESEND_API_KEY production
+npx vercel env add CONTACT_RESEND_FROM production
+npx vercel env add CONTACT_NOTIFICATION_EMAIL production
+npx vercel --prod
+```
+
 ## Verification
 
 After configuring a delivery target:
@@ -67,7 +86,7 @@ After configuring a delivery target:
 
 ## Fallback
 
-Until webhook delivery is configured, intake submissions are recoverable from the private Blob inbox. That is acceptable for the earliest manual validation phase; before paid audit volume increases, delivery should still be connected to a mailbox, CRM, or private webhook target.
+Until webhook or email relay delivery is configured, intake submissions are recoverable from the private Blob inbox. That is acceptable for the earliest manual validation phase; before paid audit volume increases, delivery should still be connected to a mailbox, CRM, or private webhook target.
 
 ## Mailbox Handoff
 

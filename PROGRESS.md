@@ -404,6 +404,24 @@
 
 ### Build
 
+- Added webhook forwarding and a Resend email relay path to `api/contact.js` so contact intake can notify a human instead of relying only on Blob persistence.
+- Kept the private Blob inbox as the fallback when no delivery target is configured.
+- Updated `CONTACT-DELIVERY.md`, `README.md`, `HELP-REQUEST.md`, and `changelog.html` to document the new delivery options and the remaining env-var setup.
+
+### Verification
+
+- Ran `node -c api/contact.js` to confirm the updated endpoint still parses.
+- Tested the live webhook forwarding path locally with the Vercel Blob token from `.env.local` and confirmed the webhook received the stored submission payload.
+- Tested the Resend relay branch locally with a mocked `https://api.resend.com/emails` response and confirmed the email payload contains the expected recipient, subject, reply-to header, and body summary.
+
+### Next
+
+- Add real `CONTACT_WEBHOOK_URL` or `CONTACT_RESEND_API_KEY` values in Vercel when a live notification target is chosen.
+- Retry the first founder validation sends once an approved sending path is available.
+- Keep the buyer-validation and outreach tasks moving now that the contact intake has a usable notification adapter.
+
+### Build
+
 - Confirmed no `DEPLOY-STATUS.md` blocker was present and read the current help status, backlog, contact-delivery handoff, and outreach send runbook.
 - Attempted to enable a Gmail connector for validation outreach sending, but the install was not completed in this session, so live outbound sending remains blocked.
 - Added generated `referenceId` values to successful `/api/contact` intake submissions.

@@ -36,7 +36,7 @@ The first version includes:
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
 - `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a form endpoint or CRM exists.
-- `CONTACT-DELIVERY.md` documents `/api/contact` delivery status, intake reference IDs, webhook environment variables, mailbox handoff steps, and verification steps for connecting a mailbox, CRM, or notification endpoint.
+- `CONTACT-DELIVERY.md` documents `/api/contact` delivery status, intake reference IDs, webhook and email relay environment variables, mailbox handoff steps, and verification steps for connecting a mailbox, CRM, or notification endpoint.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
 - `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
 - `favicon.svg` provides the browser favicon.
@@ -60,7 +60,7 @@ The first version includes:
 - `validation-outreach-drafts/` contains the send-ready founder, consultant, and attorney outreach drafts produced from the prepared batches.
 - `404.html` is the static not-found page for broken routes.
 - `ANALYTICS-DECISION.md` records the Vercel Web Analytics choice and dashboard enablement step.
-- `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`.
+- `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL` or Resend email relay forwarding through `CONTACT_RESEND_API_KEY`.
 - `api/contact-inbox.js` and `ops-contact-inbox.html` provide a private Blob-backed inbox for validated contact submissions when webhook delivery is unavailable.
 - `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` and the public contact alias.
 - `package.json` pins the `@vercel/blob` dependency used by the private contact inbox fallback.
