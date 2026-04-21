@@ -256,6 +256,11 @@
 - Created `partner-preview.html` as a consultant/advisor preview page based on the Pro kit manifest, with referral economics, white-label boundaries, deliverable examples, and legal-positioning language.
 - Generated `noticekit-partner-preview.pdf` from the partner preview page for consultant outreach and white-label conversations.
 - Updated README.md, BACKLOG-PREMIUM.md, changelog.html, and sitemap.xml to expose the partner preview and mark the partner preview PDF task complete.
+- Deployed production with Vercel after adding the partner preview.
+- Verified `https://race-codex.vercel.app/partner-preview.html` returns HTTP 200 and includes the partner preview CTA, referral terms, and operational disclaimer.
+- Verified `https://race-codex.vercel.app/noticekit-partner-preview.pdf` returns HTTP 200 as `application/pdf` with the expected 68,007-byte content length.
+- Verified live `sitemap.xml` includes `partner-preview.html`.
+- Confirmed again that `https://permitpulse.app/` still serves the unrelated PermitPulse site despite the Vercel CLI alias output. The working NoticeKit production alias remains `https://race-codex.vercel.app/`.
 
 ### Next
 
