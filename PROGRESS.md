@@ -16,7 +16,7 @@
 - Eliminated the 5 weakest ideas.
 - Selected NoticeKit as the winner because it is static-first, specific, monetizable within 4 weeks, and has direct outreach plus SEO distribution.
 
-### Build
+### Buyer Validation
 
 - Created mandatory planning files before writing HTML:
   - DECISIONS.md
@@ -198,6 +198,18 @@
 
 ## 2026-04-21
 
+### Buyer Validation
+
+- Added concrete public contact routes to `buyer-validation-outreach-batch-01.csv` and `buyer-validation-outreach-batch-02.csv` so each prepared validation target now has a usable sender path.
+- Added `BUYER-VALIDATION-CONTACT-ROUTES.md` as a compact handoff reference for the founder/operator and advisor outreach batches.
+- Updated `scripts/generate-validation-drafts.mjs` and regenerated `validation-outreach-drafts/` so each draft now surfaces the public contact route alongside the original suggested path.
+- Updated `validation-outreach-drafts/README.md` so the send-ready packet points to the new contact-route reference.
+
+### Verification
+
+- Regenerated the buyer-validation draft files from the updated CSVs and confirmed the draft headers now include `Public contact route` and `ready_for_send` status.
+- Rechecked the workspace for outbound-mail credentials and confirmed there is still no approved mail transport in local environment variables or system mail tools, so actual outreach sending remains blocked pending a Gmail or similar connector.
+
 ### Build
 
 - Added SMTP relay support to `api/contact.js` with Nodemailer so `/api/contact` can forward validated submissions through either a webhook, SMTP relay, or Resend.
@@ -213,8 +225,8 @@
 
 ### Next
 
+- Use the approved Gmail or mail connector to send the first five founder/operator validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
 - Provision `CONTACT_SMTP_URL` or `CONTACT_RESEND_API_KEY` so `/api/contact` can actually send email notifications instead of only persisting to the private inbox.
-- Then use the approved sending account or mail connector to send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
 
 ### Build
 
@@ -510,7 +522,35 @@
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
 
+### Build
+
+- Added `api/contact-webhook.js` as an authenticated internal webhook receiver that stores forwarded contact submissions to a separate private Blob prefix.
+- Overrode `CONTACT_WEBHOOK_URL` and `CONTACT_WEBHOOK_SECRET` in Vercel production and development so `/api/contact` now points at the webhook receiver.
+- Added the webhook receiver to `README.md` and documented the delivery target in `CONTACT-DELIVERY.md`.
+
+### Verification
+
+- Verified `api/contact-webhook.js` locally with the live webhook secret and confirmed it accepts authenticated POSTs with HTTP 202 and a reference ID.
+- Attempted a production deploy after the webhook wiring, but Vercel returned `api-deployments-free-per-day` again, so the live alias is still on the previous deployment.
+
+### Next
+
+- Retry `npx vercel --prod` after the Vercel free daily deployment limit resets so the webhook receiver can go live.
+- Once the deploy window opens, confirm `/api/contact` forwards to the webhook receiver and returns a 200 on a live intake request.
+- Then move to the next unblocked backlog item, which remains the buyer validation outreach flow.
+
 ## 2026-04-21
+
+### Build
+
+- Added `scripts/build-validation-send-plan.mjs` to classify the prepared validation outreach CSVs into direct-email and manual-send targets.
+- Generated `VALIDATION-OUTREACH-SEND-PLAN.md` so the first-day send queue is explicit for the founder batch and the later advisor batch.
+- Updated `README.md` to point at the new send-plan artifact and the generator script.
+
+### Verification
+
+- Ran the send-plan generator locally and confirmed it writes `VALIDATION-OUTREACH-SEND-PLAN.md` from the prepared outreach CSVs.
+- Confirmed the send plan splits the founder batch into `direct-email` and `manual-form` targets without marking any outreach as sent.
 
 ### Build
 

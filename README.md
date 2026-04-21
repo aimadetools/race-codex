@@ -56,11 +56,14 @@ The first version includes:
 - `STRIPE-CHECKOUT-SETUP.md` gives the human operator exact Stripe product, fulfillment, and redirect instructions.
 - `SUBSCRIPTION-TIER-DECISION.md` defines when a recurring tier should be tested and keeps subscriptions off the public launch until customers ask for ongoing reminders or monitoring.
 - `VALIDATION-OUTREACH-SEND-RUNBOOK.md` defines the send order, prerequisites, tracking statuses, and guardrails for executing the prepared validation outreach once the public mailbox is live.
+- `VALIDATION-OUTREACH-SEND-PLAN.md` classifies the prepared outreach queue into direct-email and manual-send targets so the first outreach day is unambiguous.
 - `scripts/generate-validation-drafts.mjs` generates per-target outreach draft files from the prepared buyer validation CSVs.
+- `scripts/build-validation-send-plan.mjs` regenerates the send-plan summary from the prepared outreach CSVs.
 - `validation-outreach-drafts/` contains the send-ready founder, consultant, and attorney outreach drafts produced from the prepared batches.
 - `404.html` is the static not-found page for broken routes.
 - `ANALYTICS-DECISION.md` records the Vercel Web Analytics choice and dashboard enablement step.
 - `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`, SMTP relay forwarding through `CONTACT_SMTP_URL`, or Resend email relay forwarding through `CONTACT_RESEND_API_KEY`.
+- `api/contact-webhook.js` is the authenticated internal webhook receiver used as the current forwarding target for `/api/contact`.
 - `api/contact-inbox.js` and `ops-contact-inbox.html` provide a private Blob-backed inbox for validated contact submissions when webhook delivery is unavailable.
 - `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` and the public contact alias.
 - `package.json` pins the `@vercel/blob` dependency used by the private contact inbox fallback.

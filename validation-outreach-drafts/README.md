@@ -10,7 +10,7 @@ Generated from the prepared buyer validation CSV files.
 
 ## Status
 
-This workspace still has no approved outbound mail transport, so these drafts are ready for a human sender or email connector.
+This workspace still has no approved outbound mail transport, but the drafts now include concrete public contact routes and the summary reference file is `BUYER-VALIDATION-CONTACT-ROUTES.md`.
 
 ## Files
 

@@ -6,7 +6,8 @@ Segment: Fractional DPO/privacy consultant
 Source URL: https://privageo.com/fractional-services/
 Public signal: Public page offers fractional DPO and CISO services to help organizations align privacy compliance and security confidence.
 Suggested contact path: Public website contact path or fractional services inquiry.
-Status: ready_after_contact_setup
+Public contact route: https://privageo.com/contact-us/
+Status: ready_for_send
 
 ## First Touch
 

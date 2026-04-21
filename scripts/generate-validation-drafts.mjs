@@ -201,6 +201,7 @@ function renderDraft(row, batchLabel) {
       `Source URL: ${row.source_url}`,
       `Public signal: ${row.public_signal}`,
       `Suggested contact path: ${row.suggested_contact_path}`,
+      `Public contact route: ${row.public_contact_route || ""}`,
       `Status: ${row.status}`,
       ``,
       `## First Touch`,

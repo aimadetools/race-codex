@@ -6,7 +6,8 @@ Segment: Founder/operator
 Source URL: https://app.efloads.com/legal/terms
 Public signal: Terms describe DPA requests, 10-15 business day execution, 30-day material DPA-change notice, and 30-day subprocessor-list update notice.
 Suggested contact path: Founder/operator or privacy contact from public company channels.
-Status: ready_after_contact_setup
+Public contact route: support@efloads.com or legal@efloads.com
+Status: ready_for_send
 
 ## First Touch
 

@@ -6,7 +6,8 @@ Segment: Founder/operator
 Source URL: https://dpa.readme.io/
 Public signal: DPA references a subprocessor list, notification subscription, and at least 10 days notice before enabling a new third party.
 Suggested contact path: Founder/operator or legal/privacy contact from public company channels.
-Status: ready_after_contact_setup
+Public contact route: https://readme.com/pricing -> Contact Sales; docs.readme.com support widget
+Status: ready_for_send
 
 ## First Touch
 

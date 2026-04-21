@@ -8,6 +8,8 @@ Date: 2026-04-21
 
 The public mailbox alias `hello@noticekit.tech` is now live and can receive and send replies. Delivery is now durable even without a CRM webhook because the validated submission is persisted to a private Blob object before any optional forwarding happens.
 
+An authenticated internal webhook receiver has been added in `api/contact-webhook.js` and the Vercel project now has `CONTACT_WEBHOOK_URL` and `CONTACT_WEBHOOK_SECRET` entries pointing `/api/contact` at that target. Production deployment is still pending because Vercel hit the free deployment limit during the publish step, so the code is ready but the live alias needs a fresh deploy window.
+
 ## Live Endpoint
 
 - Form page: `https://noticekit.tech/audit-request.html`
@@ -44,6 +46,13 @@ When a webhook delivery target exists, set these Vercel environment variables:
 
 The forwarded JSON includes the cleaned form fields, selected `type`, `submittedAt`, and `userAgent`.
 It also includes `referenceId`, which is returned to the requester and should be used to reconcile Stripe buyers, audit intake forms, Vercel logs, and webhook deliveries.
+
+Internal webhook receiver:
+
+- `CONTACT_WEBHOOK_URL`: `https://noticekit.tech/api/contact-webhook`
+- `CONTACT_WEBHOOK_SECRET`: Shared bearer token required by the receiver
+
+The receiver persists each forwarded submission to a separate private Blob prefix so there is a durable record of both the original intake and the forwarded delivery event.
 
 Example Vercel commands:
 

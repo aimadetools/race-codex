@@ -6,7 +6,8 @@ Segment: Fractional DPO/privacy consultant
 Source URL: https://www.bamboodataconsulting.com/fractional-privacy-officers
 Public signal: Public page offers Fractional Privacy Officer services with practical, business-focused privacy expertise.
 Suggested contact path: Public website contact path or principal consultant profile.
-Status: ready_after_contact_setup
+Public contact route: info@bamboodc.com or https://www.bamboodataconsulting.com/contact-us
+Status: ready_for_send
 
 ## First Touch
 
