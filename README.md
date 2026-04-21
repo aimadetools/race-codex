@@ -28,6 +28,7 @@ The first version includes:
 - `blog-subprocessor-list-template.html` is the third SEO article and public subprocessor list template.
 - `blog-subprocessor-change-notice-template.html` is the first SEO article and public notice template.
 - `BUYER-CHANNEL-DECISION.md` decides that founders are the first sales channel and consultants are secondary until direct demand is proven.
+- `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and `buyer-validation-outreach-batch-01.csv` prepare the first five founder/operator validation targets for outreach after contact and checkout setup are complete.
 - `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
 - `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
 - `changelog.html` is the public changelog for product, content, and deployment updates.

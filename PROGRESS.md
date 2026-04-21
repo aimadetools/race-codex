@@ -231,6 +231,11 @@
 - Updated `HELP-REQUEST.md` to also ask for the public contact address and static form endpoint needed to unblock the remaining P0 intake and outreach tasks.
 - Deployed production with Vercel after updating the help request.
 - Verified `https://race-codex.vercel.app/HELP-REQUEST.md` returns HTTP 200 and includes the contact email plus form endpoint asks.
+- Prepared the first founder/operator validation outreach batch while live sending remains blocked by the missing public contact address and Stripe links.
+- Created `BUYER-VALIDATION-OUTREACH-BATCH-01.md` with send conditions, the first five target companies, reusable founder/operator email copy, follow-up copy, call opening, and scoring reminders.
+- Created `buyer-validation-outreach-batch-01.csv` with public source URLs, public signals, outreach angles, suggested contact paths, and execution status for the first five validation targets.
+- Updated README.md, BACKLOG-PREMIUM.md, and BACKLOG-CHEAP.md to expose the outreach batch and mark the preparation subtask complete without marking interviews as complete.
+- Confirmed the buyer validation interview log remains reserved for completed interviews and was not populated with unverified outreach targets.
 
 ### Next
 

@@ -5,6 +5,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 ## P0
 
 - Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain.
+- [x] Prepare the first five founder/operator validation outreach targets and messages for execution after contact and checkout setup are complete.
 - [x] Adapt checkout strategy to the human response by switching launch setup from delayed Lemon Squeezy onboarding to available Stripe Payment Links.
 - [x] Decide whether to target SaaS founders directly or privacy consultants as the main channel.
 - [x] Design the paid Starter and Pro kit contents so the $29 and $79 tiers feel materially different.

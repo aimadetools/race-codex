@@ -15,6 +15,7 @@ These tasks are routine and can be handled quickly.
 - Update homepage schema offer availability from preorder after Stripe links are live.
 - Update Stripe success redirect and public metadata after the custom domain is connected.
 - Run the 5 founder validation emails from `BUYER-VALIDATION-PACKET.md` after a real contact address and checkout links are available.
+- [x] Prepare the first 5 founder validation targets so the email batch is ready when contact and checkout setup are complete.
 - [x] Add footer links across all pages.
 - [x] Check mobile spacing on 360px, 390px, and 768px widths.
 
