@@ -51,6 +51,7 @@ The first version includes:
 - `STRIPE-CHECKOUT-SETUP.md` gives the human operator exact Stripe product, fulfillment, and redirect instructions.
 - `SUBSCRIPTION-TIER-DECISION.md` defines when a recurring tier should be tested and keeps subscriptions off the public launch until customers ask for ongoing reminders or monitoring.
 - `404.html` is the static not-found page for broken routes.
+- `ANALYTICS-DECISION.md` records the Vercel Web Analytics choice and dashboard enablement step.
 - `HELP-REQUEST.md` is the current Stripe payment-link and low-cost-domain request. `HELP-STATUS.md` tracks whether the human setup is complete.
 
 ## Run Locally

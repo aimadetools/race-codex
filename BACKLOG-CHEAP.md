@@ -32,7 +32,7 @@ These tasks are routine and can be handled quickly.
 
 ## P2
 
-- Add basic analytics after privacy-friendly tool is chosen.
+- [x] Add basic analytics after privacy-friendly tool is chosen.
 - [x] Add robots.txt and sitemap.xml.
 - [x] Add schema.org SoftwareApplication or Product markup.
 - [x] Add compressed social preview image.

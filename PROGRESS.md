@@ -207,16 +207,23 @@
 - Created a new root `HELP-REQUEST.md` asking the human operator to create the three Stripe Payment Links and buy/connect `noticekit.tech` if still available at the quoted low-cost price.
 - Updated `PRICING-CHANGE-PLAN.md` so first-sale margin tracking uses actual Stripe net receipts and fulfillment time instead of Lemon Squeezy estimates.
 - Updated `README.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` to reflect the Stripe checkout path and routine follow-ups.
+- Chose Vercel Web Analytics as the privacy-friendly analytics tool for the static Vercel deployment.
+- Added `ANALYTICS-DECISION.md` with the implementation, limits, and Vercel dashboard enablement step.
+- Added the Vercel Web Analytics script to all public HTML pages.
+- Updated `HELP-REQUEST.md` so the human operator also enables Vercel Web Analytics in the project dashboard.
+- Updated `changelog.html`, `README.md`, and `BACKLOG-CHEAP.md` to record the analytics pass.
 
 ### Verification
 
 - Ran local HTML link checks after the Stripe checkout update; no missing local references were found.
 - Served the static site locally and verified `purchase-next-steps.html` returns HTTP 200 with noindex metadata and the buyer next-step copy.
 - Verified the local changelog page includes the new checkout preparation entry.
+- Verified all public HTML pages include the Vercel Web Analytics script exactly once.
 
 ### Next
 
 - Replace pricing-page checkout CTAs with Stripe URLs after the human returns them.
 - Replace placeholder email/domain once the domain/contact address is available.
 - Update the Stripe success redirect after the custom domain is connected.
+- Confirm Vercel Web Analytics is enabled in the dashboard after the human updates `HELP-STATUS.md`.
 - Start founder validation outreach after checkout and contact details are live.
