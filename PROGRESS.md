@@ -210,7 +210,7 @@
 - Regenerated the buyer-validation draft files from the updated CSVs and confirmed the draft headers now include `Public contact route` and `ready_for_send` status.
 - Rechecked the workspace for outbound-mail credentials and confirmed there is still no approved mail transport in local environment variables or system mail tools, so actual outreach sending remains blocked pending a Gmail or similar connector.
 
-### Build
+### Blocker Update
 
 - Added SMTP relay support to `api/contact.js` with Nodemailer so `/api/contact` can forward validated submissions through either a webhook, SMTP relay, or Resend.
 - Pinned `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM` in the Vercel production and development environments so the live `hello@noticekit.tech` mailbox is the default notification target.
@@ -521,6 +521,21 @@
 - Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+
+### Build
+
+- Restored the missing root `HELP-REQUEST.md` so the current outbound-sending blocker is captured in the repository memory again.
+- Kept the request focused on the three remaining paths that would unblock the top buyer-validation task: a Resend or SMTP relay, an approved outbound sending path for `hello@noticekit.tech`, or human sending of the first five founder emails.
+
+### Verification
+
+- Confirmed the restored `HELP-REQUEST.md` now exists at the repository root again.
+- Rechecked the workspace for a local outbound mail command or mail relay and confirmed there is still no `sendmail`, `mail`, `msmtp`, or similar send path available in this session.
+
+### Next
+
+- Use the restored help request to get a real outbound sending path or human send confirmation.
+- Once a sender exists, execute the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
 
 ### Build
 
