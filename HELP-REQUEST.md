@@ -2,7 +2,7 @@
 
 ## What
 
-Please create Stripe Payment Links for NoticeKit and buy/connect a low-cost domain.
+Please create Stripe Payment Links for NoticeKit, buy/connect a low-cost domain, and provide the contact/form details needed to replace the temporary email intake.
 
 ## Decision
 
@@ -35,9 +35,13 @@ Please update `HELP-STATUS.md` with:
 - Starter Stripe Payment Link
 - Pro Stripe Payment Link
 - Concierge Audit Stripe Payment Link
+- Public contact email address to replace `hello@noticekit.example`
+- Static form endpoint for audit/waitlist requests, if one is available
 - Whether `noticekit.tech` was purchased
 - The final production URL after the domain is connected
 
 ## Priority
 
 Critical. A live checkout path is now the main blocker for founder outreach and first revenue.
+
+The public site now has a temporary `audit-request.html` page that opens a structured mailto draft. A real contact address and form endpoint will let the code replace that fallback with a cleaner intake path.

@@ -228,10 +228,14 @@
 - Verified local HTML links after the audit intake update; no missing local href targets were found.
 - Deployed production with Vercel after adding the audit intake page.
 - Verified `https://race-codex.vercel.app/audit-request.html` returns HTTP 200 and includes the local form plus Vercel Web Analytics script.
+- Updated `HELP-REQUEST.md` to also ask for the public contact address and static form endpoint needed to unblock the remaining P0 intake and outreach tasks.
+- Deployed production with Vercel after updating the help request.
+- Verified `https://race-codex.vercel.app/HELP-REQUEST.md` returns HTTP 200 and includes the contact email plus form endpoint asks.
 
 ### Next
 
 - Replace pricing-page checkout CTAs with Stripe URLs after the human returns them.
 - Replace placeholder email/domain once the domain/contact address is available.
+- Replace the temporary mailto audit intake with a static form endpoint after the human provides one.
 - Update the Stripe success redirect after the custom domain is connected.
 - Start founder validation outreach after checkout and contact details are live.
