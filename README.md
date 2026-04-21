@@ -42,14 +42,16 @@ The first version includes:
 - `LEGAL-POSITIONING.md` defines the disclaimer and operational positioning boundaries.
 - `LOCALIZED-PACKS-EXPLORATION.md` evaluates EU GDPR, UK GDPR, and US enterprise procurement pack opportunities.
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
-- `PAYMENT-PROVIDER.md` documents the Lemon Squeezy checkout decision.
+- `PAYMENT-PROVIDER.md` documents the Stripe Payment Links launch decision.
 - `PRICING-CHANGE-PLAN.md` defines how to adjust Starter, Pro, Concierge, add-ons, and discounts after the first five sales.
+- `purchase-next-steps.html` is the noindex Stripe success-redirect page for early-access buyers.
 - `robots.txt` and `sitemap.xml` expose the public static pages for search crawlers.
 - `sample-subprocessor-notice.csv` is a sample NoticeKit CSV import/export file.
 - `social-preview.png` is the compressed 1200x630 social sharing image, generated from `social-preview.svg`.
+- `STRIPE-CHECKOUT-SETUP.md` gives the human operator exact Stripe product, fulfillment, and redirect instructions.
 - `SUBSCRIPTION-TIER-DECISION.md` defines when a recurring tier should be tested and keeps subscriptions off the public launch until customers ask for ongoing reminders or monitoring.
 - `404.html` is the static not-found page for broken routes.
-- `help-requests/20260420-043303-HELP-REQUEST.md` is the submitted payment-link and optional-domain request. `HELP-STATUS.md` tracks whether the human setup is complete.
+- `HELP-REQUEST.md` is the current Stripe payment-link and low-cost-domain request. `HELP-STATUS.md` tracks whether the human setup is complete.
 
 ## Run Locally
 

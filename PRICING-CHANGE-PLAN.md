@@ -53,15 +53,15 @@ Make a pricing change only if the pattern is visible across at least three of th
 
 ## Margin Check
 
-Use Lemon Squeezy as the assumed checkout provider until the human setup changes.
+Use Stripe Payment Links for launch because the human operator already has Stripe available. Do not depend on projected fee estimates when making the first price decision; record actual Stripe net receipts, refunds, tax settings, and manual fulfillment time after each sale.
 
-Approximate net before tax and exceptional fees based on the existing provider decision:
+Track this after every purchase:
 
-| Product | Current price | Estimated Lemon Squeezy fee | Approximate net |
-|---|---:|---:|---:|
-| Starter | $29 | $1.95 | $27.05 |
-| Pro | $79 | $4.45 | $74.55 |
-| Concierge Audit | $249 | $12.95 | $236.05 |
+| Product | Current price | What to record |
+|---|---:|---|
+| Starter | $29 | Net receipt, fulfillment time, buyer support questions, upgrade interest |
+| Pro | $79 | Net receipt, fulfillment time, CSV/customer-segmentation questions, upgrade or service interest |
+| Concierge Audit | $249 | Net receipt, audit intake quality, delivery time, whether scope pressure appears |
 
 Minimum margin expectations:
 
@@ -97,4 +97,3 @@ Ask these after each sale:
 ## Recommendation
 
 Keep the launch prices stable until five sales. The first likely change is not a cheaper Starter tier; it is either a $99 Pro tier if repeated-workflow value is clear, or a $299 Concierge Audit if buyers mostly want urgent done-with-you help. Treat discounts as validation tools, not as the public pricing strategy.
-

@@ -2,58 +2,63 @@
 
 Decision date: 2026-04-20
 
+Updated: 2026-04-21 after human setup response.
+
+## Current Decision
+
+Use Stripe Payment Links for the first live checkout.
+
+The original preference was Lemon Squeezy because merchant-of-record tax handling and digital download delivery are useful for a static product. The human operator confirmed Stripe is already available, while Lemon Squeezy setup may take 1-2 days for verification. Speed to first paid validation matters more than the extra fulfillment automation right now.
+
+## Why Stripe Now
+
+NoticeKit needs a live buying path before founder outreach can convert. Stripe Payment Links are good enough for the first sales sprint because they provide:
+
+- Hosted checkout links without adding a backend.
+- One-time products for Starter, Pro, and Concierge Audit.
+- Buyer email collection through checkout.
+- Manual fulfillment while kit files are still early-access.
+- Faster launch than waiting for a new merchant-of-record account.
+
+The tradeoff is operational: NoticeKit owns delivery, refunds, tax settings, and buyer support until a merchant-of-record provider is added later. That is acceptable for the first five sales because volume is low and every buyer should be manually followed up anyway.
+
+## Products To Create
+
+| Product | Price | Type | Fulfillment |
+|---|---:|---|---|
+| NoticeKit Starter | $29 | One-time digital kit | Manual email delivery during early access |
+| NoticeKit Pro | $79 | One-time digital kit | Manual email delivery during early access |
+| NoticeKit Concierge Audit | $249 | One-time service | Manual audit intake and 48-hour workflow review |
+
+## Stripe Setup Requirements
+
+Create three Stripe Payment Links with:
+
+- Quantity fixed to one unless Stripe requires otherwise.
+- Customer email required.
+- Billing address and tax settings configured according to the operator's Stripe account policy.
+- Success redirect URL: `https://race-codex.vercel.app/purchase-next-steps.html`
+- Product descriptions copied from `STRIPE-CHECKOUT-SETUP.md`.
+- Fulfillment note: "Digital files and audit intake are delivered manually by email during early access. NoticeKit provides operational templates, not legal advice."
+
+## Site Implementation Plan
+
+1. Human creates the three Stripe Payment Links.
+2. Human returns the URLs in `HELP-STATUS.md` or `HELP-REQUEST.md`.
+3. Replace pricing-page mailto checkout CTAs with the Stripe URLs.
+4. Keep audit and founder-review mailto links until a real contact address is available.
+5. Update homepage schema availability from preorder to in-stock after the links are live.
+6. Start founder validation outreach from `BUYER-VALIDATION-PACKET.md`.
+
+## Future Revisit
+
+Reconsider Lemon Squeezy, Gumroad, or Stripe Managed Payments only after one of these happens:
+
+- Cross-border tax handling creates material operator burden.
+- Manual delivery creates support delays.
+- More than five paid kit purchases happen and buyers expect instant downloads.
+- Consultants need coupon, affiliate, or white-label delivery workflows that Stripe Payment Links cannot handle cleanly.
+
 ## Recommendation
 
-Use Lemon Squeezy for the first paid checkout links.
-
-## Why
-
-NoticeKit is selling low-priced digital downloads and one manual service before there is a backend. The checkout provider should therefore handle hosted checkout, digital file delivery, sales tax/VAT complexity, PayPal/card coverage, and simple links without engineering work.
-
-Lemon Squeezy is the best fit for the first four weeks because it provides:
-
-- Hosted no-code checkout links and checkout overlays.
-- Digital download delivery.
-- Merchant-of-record sales tax and VAT handling.
-- Coupon codes, bundles, PayPal/card support, customer emails, and basic revenue reporting.
-- $0 monthly cost.
-
-## Current Fee Notes
-
-Verified against official pricing/docs on 2026-04-20:
-
-- Lemon Squeezy: 5% + $0.50 platform fee, with possible additional fees such as +1.5% for international transactions, +1.5% for PayPal transactions, and +0.5% for subscriptions.
-- Gumroad: 10% + $0.50 for direct/profile sales, 30% for marketplace-discovered sales, and merchant-of-record tax handling.
-- Stripe Payment Links: included with standard Stripe Payments pricing, but sales tax/VAT handling, digital delivery, and fulfillment would need separate setup. Stripe Managed Payments adds merchant-of-record services at an additional percentage on top of payment fees.
-
-Sources:
-
-- https://www.lemonsqueezy.com/pricing
-- https://docs.lemonsqueezy.com/help/getting-started/fees
-- https://gumroad.com/pricing
-- https://stripe.com/us/pricing
-
-## Net Revenue Estimates
-
-Approximate direct-card checkout before any international, PayPal, refund, or payout exceptions:
-
-| Product | Price | Lemon Squeezy estimated fee | Estimated net before tax | Gumroad direct estimated fee | Gumroad estimated net before tax |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Starter | $29 | $1.95 | $27.05 | $3.40 | $25.60 |
-| Pro | $79 | $4.45 | $74.55 | $8.40 | $70.60 |
-| Concierge Audit | $249 | $12.95 | $236.05 | $25.40 | $223.60 |
-
-Stripe Payment Links would likely produce higher net revenue in simple US-card cases, but the tax, download delivery, support, and receipt workflow would be owned by NoticeKit. That is the wrong tradeoff before the first sales.
-
-## Implementation Plan
-
-1. Create a Lemon Squeezy store for NoticeKit.
-2. Create one-time products for Starter, Pro, and Concierge Audit.
-3. Attach the final download package to Starter and Pro once the files are built.
-4. For Concierge Audit, set fulfillment copy to request the current subprocessor page, upcoming vendor change, and DPA notice language if available.
-5. Send checkout URLs back through HELP-REQUEST.md.
-6. Replace the current mailto checkout CTAs with Lemon Squeezy checkout URLs.
-
-## Fallback
-
-Use Gumroad if Lemon Squeezy onboarding blocks launch for more than one business day. Use Stripe Payment Links only if the human operator wants to manage tax/delivery manually or already has Stripe Tax and a delivery workflow ready.
+Ship with Stripe now. Do not delay checkout for the ideal provider. The first objective is to learn whether founders will pay $29, $79, or $249 for this workflow when a real purchase button exists.

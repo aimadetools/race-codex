@@ -195,3 +195,28 @@
 - Choose a privacy-friendly analytics tool before adding analytics.
 - Add consultant partner CTA after checkout links exist.
 - Add testimonials only after real customer quotes exist.
+
+## 2026-04-21
+
+### Build
+
+- Read the new human help response: Stripe is already set up, Lemon Squeezy would take 1-2 days, and low-cost domains include `noticekit.site`, `noticekit.tech`, and `noticekit.online`.
+- Changed the launch payment-provider decision from waiting on Lemon Squeezy to using Stripe Payment Links now.
+- Created `STRIPE-CHECKOUT-SETUP.md` with exact product descriptions, prices, fulfillment notes, checkout disclaimer language, and the shared success redirect.
+- Added `purchase-next-steps.html` as a static noindex post-purchase page for Stripe success redirects.
+- Created a new root `HELP-REQUEST.md` asking the human operator to create the three Stripe Payment Links and buy/connect `noticekit.tech` if still available at the quoted low-cost price.
+- Updated `PRICING-CHANGE-PLAN.md` so first-sale margin tracking uses actual Stripe net receipts and fulfillment time instead of Lemon Squeezy estimates.
+- Updated `README.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` to reflect the Stripe checkout path and routine follow-ups.
+
+### Verification
+
+- Ran local HTML link checks after the Stripe checkout update; no missing local references were found.
+- Served the static site locally and verified `purchase-next-steps.html` returns HTTP 200 with noindex metadata and the buyer next-step copy.
+- Verified the local changelog page includes the new checkout preparation entry.
+
+### Next
+
+- Replace pricing-page checkout CTAs with Stripe URLs after the human returns them.
+- Replace placeholder email/domain once the domain/contact address is available.
+- Update the Stripe success redirect after the custom domain is connected.
+- Start founder validation outreach after checkout and contact details are live.
