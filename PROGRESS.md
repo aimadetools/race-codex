@@ -236,6 +236,16 @@
 - Created `buyer-validation-outreach-batch-01.csv` with public source URLs, public signals, outreach angles, suggested contact paths, and execution status for the first five validation targets.
 - Updated README.md, BACKLOG-PREMIUM.md, and BACKLOG-CHEAP.md to expose the outreach batch and mark the preparation subtask complete without marking interviews as complete.
 - Confirmed the buyer validation interview log remains reserved for completed interviews and was not populated with unverified outreach targets.
+- Prepared the fractional DPO/privacy consultant and startup attorney validation outreach batch while live sending remains blocked by the missing public contact address and Stripe links.
+- Created `BUYER-VALIDATION-OUTREACH-BATCH-02.md` with send conditions, consultant and attorney email copy, follow-up copy, call opening, and scoring reminders.
+- Created `buyer-validation-outreach-batch-02.csv` with public source URLs, public signals, outreach angles, suggested contact paths, and execution status for the three DPO/privacy consultant and two startup attorney validation targets.
+- Updated README.md, BACKLOG-PREMIUM.md, BACKLOG-CHEAP.md, and changelog.html to expose the advisor outreach batch and mark the preparation subtask complete without marking interviews as complete.
+- Confirmed again that the buyer validation interview log remains reserved for completed interviews and was not populated with unverified outreach targets.
+- Deployed production with Vercel after adding the advisor validation outreach batch.
+- Verified `https://race-codex.vercel.app/BUYER-VALIDATION-OUTREACH-BATCH-02.md` returns HTTP 200 and includes the advisor batch purpose and send conditions.
+- Verified `https://race-codex.vercel.app/buyer-validation-outreach-batch-02.csv` returns HTTP 200 and parses as six rows with nine columns.
+- Verified `https://race-codex.vercel.app/changelog.html` includes the advisor validation batch entry.
+- Note: the unique production deployment URL still returns HTTP 401; `https://permitpulse.app/` still redirects to the unrelated PermitPulse site. The working NoticeKit production alias remains `https://race-codex.vercel.app/`.
 
 ### Next
 
@@ -243,4 +253,4 @@
 - Replace placeholder email/domain once the domain/contact address is available.
 - Replace the temporary mailto audit intake with a static form endpoint after the human provides one.
 - Update the Stripe success redirect after the custom domain is connected.
-- Start founder validation outreach after checkout and contact details are live.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after checkout and contact details are live.
