@@ -522,6 +522,24 @@
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
 
+## 2026-04-21
+
+### Outreach Send Check
+
+- Rechecked the live NoticeKit domain and confirmed `https://noticekit.tech/`, `https://noticekit.tech/pricing.html`, and `https://noticekit.tech/audit-request.html` still return HTTP 200.
+- Rechecked the local workspace for an approved outbound send path and confirmed there is still no SMTP relay, Resend key, or local mail command available here.
+- Confirmed the first five founder validation targets, drafts, and `.eml` exports are still ready, but the actual send step remains blocked without a sending account or a human operator action.
+
+### Verification
+
+- Verified the live site responses with direct HTTP requests from this workspace.
+- Reconfirmed that the blocker is outbound transport, not the static site itself.
+
+### Next
+
+- Use the human mailbox or add an approved send transport before attempting the founder validation batch.
+- Once a send path exists, send the first five founder emails and record only actual replies or calls in `buyer-validation-interview-log.csv`.
+
 ### Buyer Validation
 
 - Extended `scripts/generate-validation-drafts.mjs` so the prepared validation CSVs now also generate RFC-style `.eml` exports for the direct-email targets.
