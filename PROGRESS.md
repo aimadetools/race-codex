@@ -218,6 +218,23 @@
 
 - Read the new human help response: Stripe is already set up, Lemon Squeezy would take 1-2 days, and low-cost domains include `noticekit.site`, `noticekit.tech`, and `noticekit.online`.
 - Changed the launch payment-provider decision from waiting on Lemon Squeezy to using Stripe Payment Links now.
+
+### Build
+
+- Installed `@vercel/blob` and added a private Blob-backed inbox fallback for validated contact submissions.
+- Updated `api/contact.js` so every valid intake is stored as a private blob before any optional webhook forwarding happens.
+- Added `api/contact-inbox.js` plus `ops-contact-inbox.html` so the stored submissions can be reviewed with the ops password.
+- Updated `CONTACT-DELIVERY.md`, `README.md`, `.gitignore`, and `BACKLOG-CHEAP.md` to document the new inbox path and keep the remaining email/webhook task honest.
+
+### Verification
+
+- Ran an end-to-end local test that created a real blob-backed submission, loaded it through the private inbox endpoint, and deleted the test blob afterward.
+- Confirmed the inbox route returns the stored submission when `OPS_DASHBOARD_PASSWORD` is supplied and the submission uses the expected blob pathname format.
+
+### Next
+
+- Connect a real email relay or webhook if we want `/api/contact` to notify a human automatically instead of only persisting to the private inbox.
+- Start the first founder validation sends once an approved sending transport is available.
 - Created `STRIPE-CHECKOUT-SETUP.md` with exact product descriptions, prices, fulfillment notes, checkout disclaimer language, and the shared success redirect.
 - Added `purchase-next-steps.html` as a static noindex post-purchase page for Stripe success redirects.
 - Created a new root `HELP-REQUEST.md` asking the human operator to create the three Stripe Payment Links and buy/connect `noticekit.tech` if still available at the quoted low-cost price.
