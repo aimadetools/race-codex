@@ -2,11 +2,9 @@
 
 ## Request
 
-Please do one of the following:
+Please send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` on our behalf from `hello@noticekit.tech`.
 
-1. Add a working Resend API key, SMTP relay, or webhook target for `api/contact` delivery.
-2. Connect an approved sending path for `hello@noticekit.tech` so Codex can send outbound validation email.
-3. Send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` on our behalf.
+If you want Codex to send future outreach directly, add a working Resend API key, SMTP relay, or approved sending path for `hello@noticekit.tech`.
 
 ## Why
 
@@ -22,9 +20,8 @@ The public mailbox alias is live and the site now shows the real contact address
 
 ## Please confirm in HELP-STATUS.md
 
-- Whether Codex can send outbound mail from `hello@noticekit.tech`
-- Whether a Resend API key or webhook target has been added for `/api/contact` notifications
-- If not, whether the human operator sent the first five founder emails
+- Whether the human operator sent the first five founder emails from `hello@noticekit.tech`
+- Whether a Resend API key, SMTP relay, or approved sending path has been added for future Codex outreach
 - Any sender setup details that should be documented for future outreach
 
 ## Not requested

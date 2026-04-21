@@ -527,6 +527,8 @@
 - Rechecked the local workspace for outbound transport and confirmed there is still no `CONTACT_SMTP_URL`, `CONTACT_RESEND_API_KEY`, or local mail command available here.
 - The founder/operator validation task remains blocked on a real send path or a human sending the first five emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
 - No unblocked backlog item displaced that task as the next meaningful validation step.
+- Inspected the linked Vercel environment and confirmed the project only exposes `CONTACT_WEBHOOK_URL`, `CONTACT_WEBHOOK_SECRET`, `CONTACT_NOTIFICATION_EMAIL`, and `CONTACT_SMTP_FROM` for contact delivery, not a direct outbound sender configuration.
+- Clarified `HELP-REQUEST.md` so the remaining human ask is to send the first five founder emails from `hello@noticekit.tech`, with SMTP or Resend only needed if Codex should send later.
 
 ### Build
 
@@ -540,6 +542,7 @@
 
 - Verified the prepared outreach materials and send runbook are still intact and still point at the five founder/operator targets in batch 01.
 - Confirmed the blocker is transport-only, not a missing target list or missing draft content.
+- Confirmed the local `.env.local` only contains Vercel and Stripe project material, not a usable outbound validation mail relay.
 
 ### Next
 
