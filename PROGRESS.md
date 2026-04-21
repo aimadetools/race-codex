@@ -217,12 +217,23 @@
 - Pinned `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM` in the Vercel production and development environments so the live `hello@noticekit.tech` mailbox is the default notification target.
 - Updated `CONTACT-DELIVERY.md`, `README.md`, and `HELP-REQUEST.md` to document the SMTP relay path and the remaining secret requirement.
 - Installed `nodemailer` as the new mail transport dependency.
+- Rechecked the workspace and Vercel production env for an outbound sender before the founder validation batch, and confirmed there is still no usable SMTP URL, SMTP host, Resend API key, or local mail command available in this session.
+- Confirmed with `npx vercel env ls production` and `npx vercel env ls development` that the project only exposes contact webhook, notification, Stripe, blob, and site URL variables, not an outbound mail secret.
+- The first-five founder outreach task therefore remains blocked until a Gmail connector, SMTP relay, Resend key, or human mailbox send path is available.
+
+### Validation Outreach
+
+- Re-read the prepared founder validation batch, send runbook, send plan, and RFC-style `.eml` exports for the first five founder/operator targets.
+- Verified the live project env only exposes contact intake and mailbox notification settings, not an outbound sender configuration.
+- Confirmed the local workspace still has no `sendmail`, `mail`, `msmtp`, or equivalent transport, so the first five founder emails cannot be sent from this session.
+- Retried `npx vercel --prod --yes` and Vercel still returned `api-deployments-free-per-day`, so the pending redeploy is also blocked until the daily limit resets.
 
 ### Verification
 
 - Confirmed `api/contact.js` loads locally after the SMTP relay change.
 - Verified `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM` now exist in the Vercel production and development env lists.
 - The Vercel preview env add flow required a branch-specific target, so I left preview unset because the live site uses the production alias.
+- Attempted a production deploy for the progress-log update, but Vercel returned `api-deployments-free-per-day`, so the live site could not be refreshed from this commit.
 
 ### Next
 
@@ -431,7 +442,7 @@
 
 - Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
-- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+- Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live, or have the human send the first five founder emails from `hello@noticekit.tech`.
 
 ### Build
 
@@ -522,6 +533,16 @@
 - Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+
+### Build
+
+- Removed the placeholder seed row from `buyer-validation-interview-log.csv` so the log is now header-only until a real interview is completed.
+- Kept the buyer-validation log aligned with the runbook rule that only actual conversations, calls, or specific referrals should create interview rows.
+
+### Verification
+
+- Confirmed `buyer-validation-interview-log.csv` now contains only the header line.
+- Rechecked the validation runbook and interview packet to ensure the empty log still matches the "do not score silence" rule.
 
 ## 2026-04-21
 
@@ -631,6 +652,9 @@
 - Confirmed the production project exposes only contact intake and mailbox notification settings: `CONTACT_WEBHOOK_URL`, `CONTACT_WEBHOOK_SECRET`, `CONTACT_NOTIFICATION_EMAIL`, and `CONTACT_SMTP_FROM`.
 - Confirmed there is still no `CONTACT_SMTP_URL`, `CONTACT_SMTP_HOST`, `CONTACT_RESEND_API_KEY`, `sendmail`, or other local mail transport available in this session.
 - Confirmed the prepared founder outreach drafts and EML exports are still ready, but the actual outbound send step remains blocked without a Gmail connector, SMTP relay, Resend key, or the human operator sending the messages.
+- Rechecked `HELP-STATUS.md`, `.env.local`, and `.vercel/.env.production.local` for an outbound sender path and found no usable transport credentials for Codex.
+- Confirmed `DEPLOY-STATUS.md` is not present in the repo, so there was no broken-deploy file to fix before continuing.
+- Left `buyer-validation-interview-log.csv` untouched because no actual reply or interview has happened yet.
 
 ### Build
 

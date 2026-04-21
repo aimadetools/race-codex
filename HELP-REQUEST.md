@@ -4,11 +4,11 @@
 
 Please send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` on our behalf from `hello@noticekit.tech`.
 
-If you want Codex to send future outreach directly, add a working Resend API key, SMTP relay, or approved sending path for `hello@noticekit.tech`.
+If you want Codex to send future outreach directly, add a working Resend API key, SMTP relay, or approved sending path for `hello@noticekit.tech`. The current Vercel env does not expose an outbound sender secret.
 
 ## Why
 
-The public mailbox alias is live and the site now shows the real contact address, but this workspace still has no mail sender, Resend key, or SMTP relay available for direct outbound outreach. The prepared validation batch is ready, and the first five emails are the next revenue-validation step.
+The public mailbox alias is live and the site now shows the real contact address, but this workspace still has no mail sender, Resend key, or SMTP relay available for direct outbound outreach. The prepared validation batch is ready, and the first five emails are the next revenue-validation step if you can send them from `hello@noticekit.tech`.
 
 ## Already completed
 

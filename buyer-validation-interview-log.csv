@@ -1,2 +1,1 @@
 date,person,segment,company,trigger,current_workflow,pain_score,urgency_score,current_workaround_score,buyer_clarity_score,willingness_to_pay_score,referral_value_score,total_score,validation_positive,pay_or_referral_signal,next_step,notes
-2026-04-20,,,,,,0,0,0,0,0,0,0,no,,,"Use one row per interview. validation_positive should be yes only when total_score is 8 or higher and includes willingness to pay or a specific referral."
