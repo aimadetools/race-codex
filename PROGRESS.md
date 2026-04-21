@@ -223,6 +223,11 @@
 - Verified the Vercel Web Analytics CLI response reports `enabled: true` for project `race-codex`.
 - Verified `https://race-codex.vercel.app/` includes the analytics script and `https://race-codex.vercel.app/_vercel/insights/script.js` returns HTTP 200 as JavaScript.
 - Note: the unique production deployment URL is still protected and returns HTTP 401; the working public NoticeKit URL remains `https://race-codex.vercel.app/`.
+- Added `audit-request.html` as an interim no-backend audit intake page that opens a structured email draft while Stripe links, contact domain, and a real form endpoint are pending.
+- Updated sitewide Request audit navigation, the homepage founder review CTA, pricing-page audit/manual-access CTA, README, BACKLOG-CHEAP.md, changelog, and sitemap to expose the audit intake page.
+- Verified local HTML links after the audit intake update; no missing local href targets were found.
+- Deployed production with Vercel after adding the audit intake page.
+- Verified `https://race-codex.vercel.app/audit-request.html` returns HTTP 200 and includes the local form plus Vercel Web Analytics script.
 
 ### Next
 

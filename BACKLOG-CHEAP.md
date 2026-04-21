@@ -9,6 +9,7 @@ These tasks are routine and can be handled quickly.
 - [x] Add a favicon.
 - [x] Add a free checklist download section.
 - Add a simple waitlist/audit request form once a form endpoint is available.
+- [x] Add an interim no-backend audit request intake page while the form endpoint is unavailable.
 - Replace `hello@noticekit.example` mailto links once the domain/contact address is available.
 - Replace pricing-page checkout CTAs with Stripe Payment Links once `HELP-STATUS.md` contains the three URLs.
 - Update homepage schema offer availability from preorder after Stripe links are live.

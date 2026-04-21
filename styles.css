@@ -433,6 +433,11 @@ textarea {
   padding: 28px;
 }
 
+.intake-form {
+  display: grid;
+  gap: 14px;
+}
+
 .footer {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;

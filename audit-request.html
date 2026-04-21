@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request a NoticeKit Audit</title>
+    <meta name="description" content="Request an early NoticeKit concierge audit for a SaaS subprocessor change workflow.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:title" content="Request a NoticeKit Audit">
+    <meta property="og:description" content="Request an early NoticeKit concierge audit for a SaaS subprocessor change workflow.">
+    <meta property="og:image" content="https://race-codex.vercel.app/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit subprocessor notices for small SaaS teams">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Request a NoticeKit Audit">
+    <meta name="twitter:description" content="Request an early NoticeKit concierge audit for a SaaS subprocessor change workflow.">
+    <meta name="twitter:image" content="https://race-codex.vercel.app/social-preview.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main>
+        <section class="page-hero">
+          <span class="eyebrow">Early audit intake</span>
+          <h1>Request a 48-hour subprocessor notice workflow review.</h1>
+          <p>Use this temporary intake while checkout and the permanent contact domain are being connected. The page builds an email draft locally; no form data is stored by NoticeKit.</p>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article class="panel legal-panel">
+              <h2>What to include</h2>
+              <ul class="feature-list">
+                <li>Company name and website</li>
+                <li>Current subprocessor page URL</li>
+                <li>Vendor being added, removed, or replaced</li>
+                <li>Planned effective date and customer notice window</li>
+                <li>Customer segment affected by the change</li>
+                <li>Anything counsel has already asked you to preserve</li>
+              </ul>
+              <p class="fine-print">NoticeKit will use the details to prepare an operational gap list. It does not interpret your contracts or provide legal advice.</p>
+            </article>
+
+            <article class="panel legal-panel">
+              <h2>Build request email</h2>
+              <form id="audit-form" class="intake-form">
+                <label>Company
+                  <input id="company" name="company" autocomplete="organization" required>
+                </label>
+                <label>Your email
+                  <input id="email" name="email" type="email" autocomplete="email" required>
+                </label>
+                <label>Subprocessor page URL
+                  <input id="subprocessor-url" name="subprocessor-url" type="url" placeholder="https://example.com/subprocessors">
+                </label>
+                <label>Vendor change
+                  <textarea id="vendor-change" name="vendor-change" placeholder="Example: Adding Acme Email Cloud for transactional email delivery on May 20."></textarea>
+                </label>
+                <label>Customer segment and deadline
+                  <textarea id="deadline" name="deadline" placeholder="Example: EU customers on signed DPA, 30-day notice window."></textarea>
+                </label>
+                <label>What you need reviewed
+                  <textarea id="review-need" name="review-need" placeholder="Example: Notice copy, objection-window tracker, evidence trail, and public subprocessor page."></textarea>
+                </label>
+                <button class="button gold" type="submit">Open email draft</button>
+              </form>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice-band">
+            <strong>Temporary email intake.</strong>
+            <p>A real form endpoint is still blocked on setup. Until then, this page keeps the request structured and opens your own email client with the details filled in.</p>
+            <a href="disclaimer.html">Read the disclaimer</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a></span>
+      </footer>
+    </div>
+
+    <script>
+      const form = document.querySelector("#audit-form");
+
+      function value(id) {
+        return document.querySelector(`#${id}`).value.trim() || "Not provided";
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const company = value("company");
+        const body = [
+          "NoticeKit audit request",
+          "",
+          `Company: ${company}`,
+          `Reply email: ${value("email")}`,
+          `Subprocessor page: ${value("subprocessor-url")}`,
+          "",
+          "Vendor change:",
+          value("vendor-change"),
+          "",
+          "Customer segment and deadline:",
+          value("deadline"),
+          "",
+          "Review needed:",
+          value("review-need")
+        ].join("\n");
+        const subject = encodeURIComponent(`NoticeKit audit request - ${company}`);
+        window.location.href = `mailto:hello@noticekit.example?subject=${subject}&body=${encodeURIComponent(body)}`;
+      });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>
