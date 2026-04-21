@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain.
+- Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain. Blocked in this workspace until the first founder batch is actually sent or an approved outbound sender is added.
 - [x] Prepare the first five founder/operator validation outreach targets and messages for execution after contact and checkout setup are complete.
 - [x] Prepare the three fractional DPO/privacy consultant and two startup attorney validation outreach targets and messages for execution after contact and checkout setup are complete.
 - [x] Adapt checkout strategy to the human response by switching launch setup from delayed Lemon Squeezy onboarding to available Stripe Payment Links.

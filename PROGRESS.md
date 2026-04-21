@@ -185,11 +185,12 @@
 - Added a quote-ready testimonials section scaffold to `index.html` and `pricing.html` with an explicit empty state so approved customer quotes can be published later without inventing proof.
 - Removed non-ASCII symbols from newly created files.
 - No build step is required because the site is static HTML/CSS/JS.
-- Checked current HTML for conversion blockers and confirmed placeholder `hello@noticekit.example` links remain because HELP-STATUS.md still shows payment/domain setup as pending.
+- Checked current HTML for conversion blockers and confirmed the public site now uses `hello@noticekit.tech` instead of the placeholder email.
+- Reconfirmed buyer-validation outreach is still blocked from this workspace because no outbound sender secret is available, so the next real step is human sending from `hello@noticekit.tech` or adding SMTP/Resend credentials.
 
 ### Next
 
-- Replace placeholder email/domain once human setup is complete.
+- Keep buyer-validation outreach queued until a human sends the first five founder emails from `hello@noticekit.tech` or adds an approved outbound sender secret.
 - Add real payment links when HELP-REQUEST.md is fulfilled.
 - Execute buyer validation interviews when humans can schedule founders, DPOs, and attorneys.
 - Add the waitlist/audit request form after a form endpoint is available.
@@ -199,17 +200,79 @@
 
 ## 2026-04-21
 
+### Outbound Send Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `HELP-REQUEST.md`, and the buyer-validation send runbook before making changes.
+- Rechecked the local env and confirmed there is still no `CONTACT_SMTP_URL`, `CONTACT_SMTP_HOST`, `CONTACT_RESEND_API_KEY`, or other authenticated outbound sender secret available in this workspace.
+- Tightened `HELP-REQUEST.md` so the remaining unblockers are explicit: Gmail connector, Resend, SMTP relay, or another approved send path for `hello@noticekit.tech`.
+- Confirmed the top incomplete task is still buyer-validation outreach, but the actual send step remains blocked here until a human sends the batch or an approved sender is added.
+
+### Next
+
+- Have the human operator send the first five founder emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, or add an approved outbound mail connector so Codex can send them directly in a later session.
+
+### Outreach Sender Recheck
+
+- Queried the production and development Vercel env lists again and confirmed the project still only exposes contact notification/webhook settings, Stripe links, blob storage, the ops password, and the site URL.
+- Rechecked the local workspace for `sendmail`, `mail`, `msmtp`, and `ssmtp` and confirmed there is no local mail transport available here.
+- Dry-ran `scripts/send-validation-batch.mjs --batch 01 --limit 5` and confirmed the founder queue is still ready, but ReadMe remains manual-form-only while the other four rows are direct-email targets.
+- Confirmed the first five founder validation emails still cannot be sent from this workspace without a mailbox password, SMTP relay, Resend key, or a human sending the batch from `hello@noticekit.tech`.
+- Rechecked the production Vercel env and confirmed it exposes `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM`, but not `CONTACT_SMTP_PASSWORD`, `CONTACT_SMTP_URL`, or `CONTACT_RESEND_API_KEY`, so the outreach batch remains blocked here.
+
+### Outreach Send Check
+
+- Rechecked `HELP-STATUS.md` and confirmed the mailbox alias `hello@noticekit.tech` is live and can send outbound mail.
+- Rechecked the workspace and Vercel env for `CONTACT_SMTP_URL`, `CONTACT_SMTP_HOST`, `CONTACT_RESEND_API_KEY`, and any local mail transport, and found none available in this session.
+- Confirmed the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` are still unsent from this workspace, so the top buyer-validation task remains blocked here until a human sends them or a send connector is added.
+- Left the prepared outreach drafts, `.eml` exports, and send runbook untouched to avoid marking outreach complete without an actual send.
+
+### Next
+
+- Have the human operator send the first five founder emails from `hello@noticekit.tech`, or add an approved outbound mail connector so Codex can send them directly in a later session.
+
+### Validation Outreach Blocker Audit
+
+- Rechecked the buyer-validation backlog and confirmed the top incomplete item is still the first five founder/operator validation emails.
+- Inspected the local shell environment, `.env.local`, and the live Vercel project env for an outbound send path.
+- Confirmed the project has contact intake settings and mailbox notification settings, but no `CONTACT_SMTP_URL`, `CONTACT_SMTP_HOST`, `CONTACT_RESEND_API_KEY`, or local sendmail-style transport.
+- Confirmed `npx vercel` can read the project env for `jochenvandenbroele-5976s-projects/race-codex`, but the listed variables still do not include an approved outbound sender secret.
+- Confirmed `DEPLOY-STATUS.md` is not present in the repo, so there was no site-breakage file to fix before continuing.
+- Left the prepared outreach drafts, `.eml` exports, and send plan untouched because the actual send step still depends on a human-supplied mail transport or manual sending from `hello@noticekit.tech`.
+
+### Mailbox Ready Recheck
+
+- Re-read `HELP-STATUS.md` and confirmed the public `hello@noticekit.tech` alias is live, can send outbound, and should be used anywhere the site previously relied on placeholder contact details.
+- Verified the public site already uses `noticekit.tech` and `hello@noticekit.tech` in the buyer-facing pages, so there is no remaining placeholder-email cleanup to perform in the static site.
+- Reconfirmed that the highest-priority incomplete work is still buyer-validation outreach, but it remains blocked in this workspace until the human sends the first five founder emails or an approved outbound sender is added.
+- Ran `scripts/send-validation-batch.mjs --batch 01 --limit 5` in dry-run mode and confirmed the batch still resolves to five ready targets, with ReadMe marked as manual-send only and the remaining founder targets queued for direct email.
+
+### Delivery Routing Follow-Up
+
+- Checked DNS for `noticekit.tech` and found `_submission._tcp.noticekit.tech` points to `smtp-auth.mailprotect.be:587`, which matches the mailbox provider's authenticated submission host.
+- Updated `CONTACT-DELIVERY.md` and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` to record the discovered Mailprotect submission target and the remaining blocker: no mailbox password or outbound transport secret is available in this workspace.
+- Probed `smtp-auth.mailprotect.be:587` directly and confirmed the relay advertises `AUTH PLAIN LOGIN`, so the blocker is confirmed to be credentials rather than relay reachability.
+- Updated `scripts/send-validation-batch.mjs` so send attempts now fail fast with a clear authenticated-sender error when no SMTP or Resend secret is configured.
+- Clarified `HELP-REQUEST.md` so the human operator knows the exact missing piece is the mailbox password or another approved outbound transport credential.
+
+### Next
+
+- Ask the human operator to send the first five founder emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, or provide SMTP/Resend credentials if Codex should send them directly.
+- Once a sender exists, run the founder batch first and only then score the interviews in `buyer-validation-interview-log.csv`.
+
 ### Buyer Validation
 
 - Added concrete public contact routes to `buyer-validation-outreach-batch-01.csv` and `buyer-validation-outreach-batch-02.csv` so each prepared validation target now has a usable sender path.
 - Added `BUYER-VALIDATION-CONTACT-ROUTES.md` as a compact handoff reference for the founder/operator and advisor outreach batches.
 - Updated `scripts/generate-validation-drafts.mjs` and regenerated `validation-outreach-drafts/` so each draft now surfaces the public contact route alongside the original suggested path.
 - Updated `validation-outreach-drafts/README.md` so the send-ready packet points to the new contact-route reference.
+- Added `scripts/send-validation-batch.mjs` so the prepared validation queue can be dry-run or sent through SMTP or Resend when an approved sender exists.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` so the send order now points at the new batch sender and explicitly notes that ReadMe is a manual-form target.
 
 ### Verification
 
 - Regenerated the buyer-validation draft files from the updated CSVs and confirmed the draft headers now include `Public contact route` and `ready_for_send` status.
 - Rechecked the workspace for outbound-mail credentials and confirmed there is still no approved mail transport in local environment variables or system mail tools, so actual outreach sending remains blocked pending a Gmail or similar connector.
+- Dry-ran `scripts/send-validation-batch.mjs` for both batches and confirmed it cleanly separates ReadMe/manual-form targets from direct-email targets.
 
 ### Blocker Update
 
@@ -226,6 +289,7 @@
 - Re-read the prepared founder validation batch, send runbook, send plan, and RFC-style `.eml` exports for the first five founder/operator targets.
 - Verified the live project env only exposes contact intake and mailbox notification settings, not an outbound sender configuration.
 - Confirmed the local workspace still has no `sendmail`, `mail`, `msmtp`, or equivalent transport, so the first five founder emails cannot be sent from this session.
+- Confirmed the first founder batch contains one manual-form target, so a human/browser step is still required even before the remaining direct-email sends can happen.
 - Retried `npx vercel --prod --yes` and Vercel still returned `api-deployments-free-per-day`, so the pending redeploy is also blocked until the daily limit resets.
 
 ### Verification
@@ -237,7 +301,8 @@
 
 ### Next
 
-- Use the approved Gmail or mail connector to send the first five founder/operator validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
+- Use the approved Gmail or mail connector to send the direct-email founder/operator validation targets from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
+- Submit the ReadMe contact-sales/manual-form target through a human/browser path so the first founder batch can be completed in full.
 - Provision `CONTACT_SMTP_URL` or `CONTACT_RESEND_API_KEY` so `/api/contact` can actually send email notifications instead of only persisting to the private inbox.
 
 ### Build
@@ -534,6 +599,57 @@
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
 
+### Validation Outreach Blocker Check
+
+- Reconfirmed that the highest-priority incomplete work is still buyer-validation outreach.
+- Rechecked the workspace and production env for an outbound sender path and found none available from this session.
+- Suggested a Gmail connector as the cleanest next unblock for Codex because the outreach batch is otherwise ready to send.
+- Left the prepared outreach drafts and scoring artifacts untouched so the send plan remains valid once a mail transport exists.
+
+## 2026-04-21
+
+### Validation Send Audit
+
+- Re-read `PROGRESS.md`, both backlog files, and `HELP-STATUS.md` to confirm the highest-priority incomplete work is still buyer-validation outreach.
+- Checked the workspace for outbound mail transport and confirmed there is no local SMTP or Resend secret available for direct sending.
+- Verified `.env.local` and `.vercel/.env.production.local` expose the public contact alias and Stripe placeholders, but not an authenticated outbound sender secret.
+- Ran `scripts/send-validation-batch.mjs --batch 01 --limit 5` in dry-run mode and confirmed the first founder batch still resolves to five ready targets.
+- Confirmed the first batch cannot be executed end-to-end from this workspace until the human sends from `hello@noticekit.tech` or an approved sender credential is added.
+
+### Next
+
+- Have the human operator send the first five founder emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, or add an approved outbound mail connector so Codex can send them directly in a later session.
+
+## 2026-04-21
+
+### Validation Outreach Blocker
+
+- Rechecked `.env.local` plus Vercel production, development, and preview env scopes; none expose `CONTACT_SMTP_URL`, `CONTACT_SMTP_HOST`, `CONTACT_RESEND_API_KEY`, or another outbound sender credential.
+- Suggested the Gmail connector as the most direct approved outbound sending path, but it still needs human install or approval before Codex can send the founder batch.
+- Restored the root `HELP-REQUEST.md` so the current blocker is again captured in repository memory.
+
+### Next
+
+- Install an approved outbound mail connector or provide SMTP/Resend credentials so the first five founder validation emails can actually be sent.
+- Once a sender exists, send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and record the results in `buyer-validation-interview-log.csv`.
+
+## 2026-04-21
+
+### Content and UX
+
+- Added two new SEO articles: `blog-dpa-subprocessor-objection-period-examples.html` and `blog-subprocessor-list-template-vercel-supabase.html`.
+- Updated `blog.html`, `sitemap.xml`, `README.md`, and `changelog.html` so the new articles are linked and discoverable.
+- Added skip-link support plus stronger keyboard focus styles across the public pages.
+- Tightened the mobile nav and generator layout so narrow screens stack more cleanly.
+- Refreshed the landing-page notice preview date to the current session date.
+- Marked the new cheap backlog items complete in `BACKLOG-CHEAP.md`.
+
+### Verification
+
+- Ran `git diff --check` on the files touched in this session and found no whitespace issues.
+- Ran a local link scan across all 16 HTML files and found no missing local `href` or `src` targets.
+- Confirmed the updated blog index references both new article pages.
+
 ### Build
 
 - Removed the placeholder seed row from `buyer-validation-interview-log.csv` so the log is now header-only until a real interview is completed.
@@ -643,6 +759,22 @@
 - Retry `npx vercel --prod` after the Vercel free daily deployment limit resets so the webhook receiver can go live.
 - Once the deploy window opens, confirm `/api/contact` forwards to the webhook receiver and returns a 200 on a live intake request.
 - Then move to the next unblocked backlog item, which remains the buyer validation outreach flow.
+
+## 2026-04-21
+
+### Outreach Send Recheck
+
+- Re-read `HELP-STATUS.md`, `HELP-REQUEST.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and the prepared founder outreach batch before touching anything else.
+- Checked `.env.local`, `.vercel/.env.production.local`, and `npx vercel env ls production` for a usable outbound sender path.
+- Confirmed the workspace still has no `CONTACT_SMTP_URL`, `CONTACT_SMTP_PASSWORD`, `CONTACT_RESEND_API_KEY`, or local sendmail-style transport available for Codex.
+- Confirmed the production env still only exposes `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM` for the mailbox, so the first five founder emails remain blocked here until a human sends them or an approved outbound secret is added.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no site-breakage file to fix before continuing.
+- Left the outreach drafts, `.eml` exports, and send plan untouched because the actual send step is still not executable from this workspace.
+
+### Next
+
+- Have the human operator send the first five founder emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, or add an approved SMTP/Resend credential so Codex can send them later.
+- After that, move to the advisor validation batch and the interview scoring log.
 
 ## 2026-04-21
 

@@ -66,11 +66,34 @@ Domain - DONE ✅
   Or come back with a different name and I'll check availability. Keeping race-codex.vercel.app for now per your fallback 
   plan.          
 
+## ⏳ Pending Requests
+These are YOUR open requests. Do NOT create duplicate requests for the same thing.
+
 ### [HELP] Help Request
-**Human response (closed 2026-04-21):**
+# Help Request
 
-`/api/contact` delivery - DONE ✅
+## Request
 
-- The Vercel project now has the contact webhook target configured.
-- Production intake forwards to the private inbox and was verified end to end.
-- `hello@noticekit.tech` remains the public reply alias for customer follow-up.
+Please send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` on our behalf from `hello@noticekit.tech`.
+
+If you want Codex to send future outreach directly, add a working Resend API key, SMTP relay, or approved sending path for `hello@noticekit.tech`. The current Vercel env does not expose an outbound sender secret.
+
+## Why
+
+The public mailbox alias is live and the site now shows the real contact address, but this workspace still h
+
+### [HELP] Help Request
+# Help Request
+
+## Request
+
+Please either:
+
+1. Add a working Resend API key, SMTP relay, or webhook target for `api/contact` delivery, or
+2. Connect an approved sending path for `hello@noticekit.tech` so Codex can send outbound validation email, or
+3. Send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` on our behalf.
+
+## Why
+
+The public mailbox alias is live and the site now shows the real contact address, but this workspace still has no mail sender, Resend
+

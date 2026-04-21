@@ -79,6 +79,8 @@ If the goal is to notify `hello@noticekit.tech` directly from `/api/contact`, co
 - `CONTACT_SMTP_PASSWORD`: SMTP password.
 - `CONTACT_SMTP_FROM`: Optional sender like `NoticeKit <hello@noticekit.tech>`.
 
+NoticeKit's DNS currently publishes `_submission._tcp.noticekit.tech` as an SMTP submission target at `smtp-auth.mailprotect.be:587`. A live probe confirms the relay advertises `AUTH PLAIN LOGIN`, so the remaining blocker is credentials or another approved outbound API key; the host itself is reachable, but the workspace still does not contain the mailbox password or an approved outbound secret.
+
 The endpoint will send a plain-text and HTML copy of each validated submission to the configured notification email. The `Reply-To` header is set to the submitter's email so the operator can reply directly.
 
 Example Vercel commands:

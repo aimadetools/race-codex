@@ -34,6 +34,8 @@ These tasks are routine and can be handled quickly.
 - [x] Write blog post: "Subprocessor Change Notice Template for SaaS Teams".
 - [x] Write blog post: "How to Track a DPA Objection Window".
 - [x] Write blog post: "Subprocessor List Template: What Small SaaS Teams Usually Miss".
+- [x] Write blog post: "DPA subprocessor objection period examples".
+- [x] Write blog post: "Subprocessor list template for Vercel and Supabase startups".
 - [x] Add FAQ entries about legal advice, data storage, and attorney review.
 - [x] Add sample generated notice copy to the landing page.
 - [x] Add a comparison table against spreadsheets and trust centers.
@@ -41,6 +43,7 @@ These tasks are routine and can be handled quickly.
 - [x] Add a consultant partner CTA after checkout links exist.
 - [x] Convert the interview scoring rubric into a simple Markdown or CSV log.
 - [x] Add a downloadable CSV sample.
+- [x] Add accessibility skip-link and stronger focus states.
 
 ## P2
 
@@ -51,3 +54,4 @@ These tasks are routine and can be handled quickly.
 - [x] Add 404.html.
 - [x] Add a changelog page.
 - [x] Add testimonials section scaffold and reserve quote slots for verified customer quotes.
+- [x] Improve mobile nav wrapping and generator layout on narrow screens.

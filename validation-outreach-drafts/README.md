@@ -14,6 +14,8 @@ This workspace still has no approved outbound mail transport, so these drafts ar
 
 The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for easier manual sending.
 
+When SMTP or Resend is available, `scripts/send-validation-batch.mjs` can print the queue or send the direct-email targets from the prepared CSV files.
+
 ## Files
 
 - 01-readme.md

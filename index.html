@@ -59,6 +59,7 @@
   </head>
   <body>
     <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
         <div class="nav-links">
@@ -70,7 +71,7 @@
         </div>
       </nav>
 
-      <main>
+      <main id="main-content">
         <section class="hero">
           <div>
             <span class="eyebrow">For SaaS teams under 30 people</span>
@@ -107,7 +108,7 @@
                   <input id="segment" value="EU customers on signed DPA">
                 </label>
                 <label>Notice date
-                  <input id="notice-date" type="date" value="2026-04-20">
+                  <input id="notice-date" type="date" value="2026-04-21">
                 </label>
                 <label>Effective date
                   <input id="effective" type="date" value="2026-05-20">
@@ -124,7 +125,7 @@
               <label style="margin-top:12px;">Data involved
                 <input id="data" value="customer names and email addresses">
               </label>
-              <div id="output" class="notice-output"></div>
+              <div id="output" class="notice-output" aria-live="polite"></div>
             </div>
           </div>
         </section>
@@ -149,7 +150,7 @@
           <div class="template-box">
             <p><strong>Subject:</strong> Upcoming subprocessor update</p>
             <p>We are updating our subprocessor list to add Acme Email Cloud for transactional email delivery. This vendor may process customer names and email addresses for EU customers on signed DPAs. Processing may occur in the United States and European Union.</p>
-            <p>Notice date: April 20, 2026<br>Planned effective date: May 20, 2026<br>Objection deadline: May 20, 2026</p>
+            <p>Notice date: April 21, 2026<br>Planned effective date: May 21, 2026<br>Objection deadline: May 21, 2026</p>
             <p>If your agreement includes a right to object, please send any objection within 30 days of this notice so we can review it before the change takes effect.</p>
           </div>
         </section>

@@ -41,6 +41,32 @@ a {
     var(--bg);
 }
 
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  z-index: 40;
+  transform: translateY(-160%);
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--brand-2);
+  color: #151006;
+  font-weight: 800;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--brand-2);
+  outline-offset: 3px;
+}
+
 .nav {
   position: sticky;
   top: 0;
@@ -77,6 +103,7 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 18px;
   color: var(--muted);
   font-size: 0.95rem;
@@ -630,7 +657,15 @@ tbody tr:last-child td {
   }
 
   .nav-links {
+    width: 100%;
     justify-content: flex-start;
+  }
+
+  .nav-links .button,
+  .hero-actions .button,
+  .download-actions .button,
+  .cta-band .button {
+    width: 100%;
   }
 
   .field-grid {

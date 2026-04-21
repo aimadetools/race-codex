@@ -25,7 +25,9 @@ The first version includes:
 - `BACKLOG-CHEAP.md` contains routine implementation and content tasks.
 - `BENCHMARK-REPORT-METHODOLOGY.md` defines the first 50-page public subprocessor benchmark methodology.
 - `blog-dpa-objection-window.html` is the second SEO article and objection-window workflow guide.
+- `blog-dpa-subprocessor-objection-period-examples.html` is the fourth SEO article and objection-period examples guide.
 - `blog-subprocessor-list-template.html` is the third SEO article and public subprocessor list template.
+- `blog-subprocessor-list-template-vercel-supabase.html` is the fifth SEO article and stack-specific subprocessor list template.
 - `blog-subprocessor-change-notice-template.html` is the first SEO article and public notice template.
 - `BUYER-CHANNEL-DECISION.md` decides that founders are the first sales channel and consultants are secondary until direct demand is proven.
 - `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and `buyer-validation-outreach-batch-01.csv` prepare the first five founder/operator validation targets for outreach after contact and checkout setup are complete.
@@ -58,6 +60,7 @@ The first version includes:
 - `VALIDATION-OUTREACH-SEND-RUNBOOK.md` defines the send order, prerequisites, tracking statuses, and guardrails for executing the prepared validation outreach once the public mailbox is live.
 - `VALIDATION-OUTREACH-SEND-PLAN.md` classifies the prepared outreach queue into direct-email and manual-send targets so the first outreach day is unambiguous.
 - `scripts/generate-validation-drafts.mjs` generates per-target outreach draft files from the prepared buyer validation CSVs.
+- `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue through SMTP or Resend when an approved sender is available.
 - `scripts/build-validation-send-plan.mjs` regenerates the send-plan summary from the prepared outreach CSVs.
 - `validation-outreach-drafts/` contains the send-ready founder, consultant, and attorney outreach drafts produced from the prepared batches.
 - `validation-outreach-eml/` contains RFC-style `.eml` exports for the direct-email validation targets.

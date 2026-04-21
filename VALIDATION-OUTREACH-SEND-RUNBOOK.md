@@ -13,7 +13,17 @@ Prepared batches:
 
 ## Current Status
 
-The mailbox alias `hello@noticekit.tech` is live, Stripe checkout is live, and the `https://noticekit.tech` domain is live. The Vercel `/api/contact` endpoint is live for audit intake. This workspace still needs an approved sending account or mail connector before Codex can send the batch directly.
+The mailbox alias `hello@noticekit.tech` is live, Stripe checkout is live, and the `https://noticekit.tech` domain is live. The Vercel `/api/contact` endpoint is live for audit intake. Production env currently exposes `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM`, but not `CONTACT_SMTP_PASSWORD`, `CONTACT_SMTP_URL`, or `CONTACT_RESEND_API_KEY`, so this workspace still needs an approved sending account or mail connector before Codex can send the batch directly.
+
+The domain's submission SRV record currently points at `smtp-auth.mailprotect.be:587`, and a live SMTP probe shows the relay advertises `AUTH PLAIN LOGIN`. The remaining blocker is therefore credentials, not relay reachability: this workspace still needs the mailbox password or another approved outbound transport secret.
+
+When a sender exists, use `scripts/send-validation-batch.mjs` to print the ready queue or send it through SMTP or Resend:
+
+```bash
+node scripts/send-validation-batch.mjs --batch 01 --limit 5
+node scripts/send-validation-batch.mjs --batch 01 --limit 5 --send --transport smtp
+node scripts/send-validation-batch.mjs --batch 01 --limit 5 --send --transport resend
+```
 
 ## Send Prerequisites
 
@@ -65,6 +75,8 @@ When a sending account is available, send these first:
 3. BMBerry founder/operator email from batch 01.
 
 Hold the remaining two founder emails for the next business day unless replies are already coming in cleanly.
+
+Note: ReadMe is a manual-form target, so it needs a browser submission or human sending path before the queue can be considered fully executed.
 
 ## Validation Gate
 
