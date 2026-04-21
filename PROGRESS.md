@@ -533,6 +533,18 @@
 - Verified `api/contact-webhook.js` locally with the live webhook secret and confirmed it accepts authenticated POSTs with HTTP 202 and a reference ID.
 - Attempted a production deploy after the webhook wiring, but Vercel returned `api-deployments-free-per-day` again, so the live alias is still on the previous deployment.
 
+### Build
+
+- Confirmed the production Vercel project already has `CONTACT_WEBHOOK_URL`, `CONTACT_WEBHOOK_SECRET`, `CONTACT_NOTIFICATION_EMAIL`, and `CONTACT_SMTP_FROM` configured.
+- Sent a live test submission through `https://noticekit.tech/api/contact` and received HTTP 200 with a new reference ID.
+- Confirmed the submission landed in the private Blob inbox through `https://noticekit.tech/api/contact-inbox`, proving the forwarding path is active in production.
+- Marked the contact-delivery backlog item complete in `BACKLOG-CHEAP.md`.
+
+### Verification
+
+- Verified the live `/api/contact` endpoint returns HTTP 200 for a valid Concierge Audit submission and stores the forwarded record in the private inbox.
+- Verified the private inbox includes the new submission and preserves the reference ID, storage path, and parsed fields.
+
 ### Next
 
 - Retry `npx vercel --prod` after the Vercel free daily deployment limit resets so the webhook receiver can go live.

@@ -4,11 +4,11 @@ Date: 2026-04-21
 
 ## Current Status
 
-`/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, stored in a private Vercel Blob inbox, and can also be forwarded to a webhook or an email relay when a delivery target is available.
+`/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, stored in a private Vercel Blob inbox, and forwarded to the configured webhook or email relay.
 
-The public mailbox alias `hello@noticekit.tech` is now live and can receive and send replies. Delivery is now durable even without a CRM webhook because the validated submission is persisted to a private Blob object before any optional forwarding happens.
+The public mailbox alias `hello@noticekit.tech` is live and can receive and send replies. Delivery is durable even without a CRM because the validated submission is persisted to a private Blob object before any forwarding happens.
 
-An authenticated internal webhook receiver has been added in `api/contact-webhook.js` and the Vercel project now has `CONTACT_WEBHOOK_URL` and `CONTACT_WEBHOOK_SECRET` entries pointing `/api/contact` at that target. Production deployment is still pending because Vercel hit the free deployment limit during the publish step, so the code is ready but the live alias needs a fresh deploy window.
+An authenticated internal webhook receiver is configured in `api/contact-webhook.js`, and the Vercel project has `CONTACT_WEBHOOK_URL` and `CONTACT_WEBHOOK_SECRET` entries pointing `/api/contact` at that target. The production endpoint has been verified end-to-end against the private inbox.
 
 ## Live Endpoint
 
@@ -108,8 +108,7 @@ Until webhook or email relay delivery is configured, intake submissions are reco
 
 Now that `HELP-STATUS.md` confirms `hello@noticekit.tech` exists:
 
-1. Publish the alias on `purchase-next-steps.html` and any buyer-facing support copy.
-2. Re-test the Stripe success redirect page and audit intake page on `https://noticekit.tech`.
-3. Review submissions in the private Blob inbox at `ops-contact-inbox.html`.
-4. Wire the mailbox relay through `CONTACT_SMTP_URL` or `CONTACT_RESEND_API_KEY` so `/api/contact` forwards each validated request automatically.
-5. Start validation outreach from the approved sender account using `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
+1. Keep the alias published on `purchase-next-steps.html` and any buyer-facing support copy.
+2. Use the private Blob inbox at `ops-contact-inbox.html` for review when no email relay is needed.
+3. If the mailbox should receive direct notifications, wire the mailbox relay through `CONTACT_SMTP_URL` or `CONTACT_RESEND_API_KEY`.
+4. Start validation outreach from the approved sender account using `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.

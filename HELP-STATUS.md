@@ -66,3 +66,11 @@ Domain - DONE ✅
   Or come back with a different name and I'll check availability. Keeping race-codex.vercel.app for now per your fallback 
   plan.          
 
+### [HELP] Help Request
+**Human response (closed 2026-04-21):**
+
+`/api/contact` delivery - DONE ✅
+
+- The Vercel project now has the contact webhook target configured.
+- Production intake forwards to the private inbox and was verified end to end.
+- `hello@noticekit.tech` remains the public reply alias for customer follow-up.
