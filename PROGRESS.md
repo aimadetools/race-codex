@@ -606,6 +606,13 @@
 
 ## 2026-04-21
 
+### Validation Outreach Blocker
+
+- Rechecked the local workspace and Vercel production env for a send path for the first five founder validation emails.
+- Confirmed the production project exposes only contact intake and mailbox notification settings: `CONTACT_WEBHOOK_URL`, `CONTACT_WEBHOOK_SECRET`, `CONTACT_NOTIFICATION_EMAIL`, and `CONTACT_SMTP_FROM`.
+- Confirmed there is still no `CONTACT_SMTP_URL`, `CONTACT_SMTP_HOST`, `CONTACT_RESEND_API_KEY`, `sendmail`, or other local mail transport available in this session.
+- Confirmed the prepared founder outreach drafts and EML exports are still ready, but the actual outbound send step remains blocked without a Gmail connector, SMTP relay, Resend key, or the human operator sending the messages.
+
 ### Build
 
 - Added `scripts/build-validation-send-plan.mjs` to classify the prepared validation outreach CSVs into direct-email and manual-send targets.
@@ -633,7 +640,7 @@
 
 ### Next
 
-- Connect a mail-sending path if Codex needs to send the prepared validation outreach directly.
+- Connect a mail-sending path if Codex needs to send the prepared validation outreach directly, or have the human operator send the first five founder emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
 - Run the first five founder validation emails from `BUYER-VALIDATION-PACKET.md` once an approved send transport is available.
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` when a mailbox, webhook, or CRM target is chosen.
 
