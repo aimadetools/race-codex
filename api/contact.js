@@ -1,4 +1,5 @@
 const MAX_FIELD_LENGTH = 2000;
+const BLOB_PREFIX = "contact-submissions";
 
 function sendJson(response, statusCode, payload) {
   response.writeHead(statusCode, {
@@ -20,6 +21,21 @@ function createReferenceId(date = new Date()) {
   const stamp = date.toISOString().replace(/[-:]/g, "").slice(0, 15);
   const suffix = Math.random().toString(36).slice(2, 8).toUpperCase();
   return `NK-${stamp}-${suffix}`;
+}
+
+function createStoragePath(submission) {
+  const day = submission.submittedAt.slice(0, 10);
+  return `${BLOB_PREFIX}/${day}/${submission.referenceId}.json`;
+}
+
+let blobSdkPromise;
+
+function loadBlobSdk() {
+  if (!blobSdkPromise) {
+    blobSdkPromise = import("@vercel/blob");
+  }
+
+  return blobSdkPromise;
 }
 
 async function readBody(request) {
@@ -80,7 +96,29 @@ module.exports = async function handler(request, response) {
     return;
   }
 
-  console.log("NoticeKit contact submission", JSON.stringify(submission));
+  const storagePath = createStoragePath(submission);
+  const storagePayload = {
+    ...submission,
+    storagePath,
+    storedAt: new Date().toISOString()
+  };
+
+  try {
+    const { put } = await loadBlobSdk();
+    const blob = await put(storagePath, JSON.stringify(storagePayload, null, 2), {
+      access: "private",
+      contentType: "application/json",
+      addRandomSuffix: false
+    });
+    storagePayload.storageUrl = blob.url;
+  } catch (error) {
+    console.error("NoticeKit contact blob write failed", error);
+    sendJson(response, 502, {
+      ok: false,
+      error: "The request could not be persisted. Please try again."
+    });
+    return;
+  }
 
   if (process.env.CONTACT_WEBHOOK_URL) {
     try {
@@ -92,7 +130,7 @@ module.exports = async function handler(request, response) {
             ? { authorization: `Bearer ${process.env.CONTACT_WEBHOOK_SECRET}` }
             : {})
         },
-        body: JSON.stringify(submission)
+        body: JSON.stringify(storagePayload)
       });
 
       if (!webhookResponse.ok) {

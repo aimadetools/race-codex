@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NoticeKit Ops Inbox</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="Private ops inbox for NoticeKit contact submissions.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .inbox-controls {
+        display: grid;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .inbox-controls input {
+        width: 100%;
+      }
+
+      .submission-grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .submission-meta {
+        display: grid;
+        gap: 8px;
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .submission-pre {
+        margin-top: 14px;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .ops-note {
+        background: rgba(255, 215, 102, 0.08);
+        border-color: rgba(255, 215, 102, 0.25);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <main>
+        <section class="page-hero">
+          <span class="eyebrow">Private ops tool</span>
+          <h1>Contact inbox</h1>
+          <p>Validated submissions from <code>/api/contact</code> are stored in a private Blob inbox and can be reviewed here with the ops password.</p>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article class="panel legal-panel">
+              <h2>Load submissions</h2>
+              <form id="inbox-form" class="inbox-controls">
+                <label>Ops password
+                  <input id="ops-password" type="password" autocomplete="current-password" required>
+                </label>
+                <button class="button gold" type="submit">Load inbox</button>
+              </form>
+              <p class="fine-print">The password is checked server-side against <code>OPS_DASHBOARD_PASSWORD</code>. No password is stored unless you keep it in your browser.</p>
+            </article>
+
+            <article class="panel legal-panel ops-note">
+              <h2>What this shows</h2>
+              <ul class="feature-list">
+                <li>Company, email, and request type</li>
+                <li>Subprocessor page, vendor change, and deadline details</li>
+                <li>Reference ID and submission time</li>
+                <li>The blob pathname used for storage</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div id="status" class="notice-band">
+            <strong>Ready.</strong>
+            <p>Enter the ops password to load the latest submissions.</p>
+          </div>
+          <div id="results" class="submission-grid" hidden></div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const form = document.querySelector("#inbox-form");
+      const passwordInput = document.querySelector("#ops-password");
+      const status = document.querySelector("#status");
+      const results = document.querySelector("#results");
+
+      function setStatus(title, detail, isError = false) {
+        status.hidden = false;
+        status.classList.toggle("form-error", isError);
+        status.innerHTML = `<strong>${title}</strong><p>${detail}</p>`;
+      }
+
+      function renderRecord(record) {
+        const article = document.createElement("article");
+        article.className = "panel legal-panel";
+
+        const heading = document.createElement("h2");
+        heading.textContent = record.company || "Submission";
+        article.appendChild(heading);
+
+        const meta = document.createElement("div");
+        meta.className = "submission-meta";
+        [
+          ["Reference", record.referenceId || "Unknown"],
+          ["Company", record.company || "Unknown"],
+          ["Email", record.email || "Unknown"],
+          ["Type", record.type || "Unknown"],
+          ["Submitted", record.submittedAt || record.uploadedAt || "Unknown"],
+          ["Blob", record.pathname || "Unknown"]
+        ].forEach(([label, value]) => {
+          const line = document.createElement("span");
+          const strong = document.createElement("strong");
+          strong.textContent = `${label}: `;
+          line.appendChild(strong);
+          line.appendChild(document.createTextNode(value));
+          meta.appendChild(line);
+        });
+
+        const pre = document.createElement("pre");
+        pre.className = "submission-pre";
+        pre.textContent = JSON.stringify(
+          {
+            subprocessorUrl: record.subprocessorUrl,
+            vendorChange: record.vendorChange,
+            deadline: record.deadline,
+            reviewNeed: record.reviewNeed,
+            userAgent: record.userAgent,
+            storagePath: record.storagePath
+          },
+          null,
+          2
+        );
+
+        article.appendChild(meta);
+        article.appendChild(pre);
+        return article;
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const password = passwordInput.value.trim();
+
+        try {
+          setStatus("Loading inbox...", "Fetching the latest validated submissions.");
+          results.hidden = true;
+          results.innerHTML = "";
+
+          const response = await fetch("/api/contact-inbox", {
+            headers: {
+              "x-noticekit-dashboard-password": password
+            }
+          });
+          const payload = await response.json();
+
+          if (!response.ok || !payload.ok) {
+            throw new Error(payload.error || "Unable to load the inbox.");
+          }
+
+          if (!payload.records.length) {
+            setStatus("Inbox loaded.", "No submissions have been stored yet.");
+            return;
+          }
+
+          payload.records.forEach((record) => {
+            results.appendChild(renderRecord(record));
+          });
+
+          results.hidden = false;
+          setStatus("Inbox loaded.", `Showing ${payload.count} stored submission${payload.count === 1 ? "" : "s"}.`);
+        } catch (error) {
+          setStatus("Inbox error", error.message, true);
+        }
+      });
+    </script>
+  </body>
+</html>

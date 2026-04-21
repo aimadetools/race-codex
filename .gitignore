@@ -1,3 +1,5 @@
 .vercel
 cron.log
 logs/
+node_modules/
+.env*.local

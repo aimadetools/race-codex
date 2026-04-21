@@ -4,15 +4,16 @@ Date: 2026-04-21
 
 ## Current Status
 
-`/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, logged in Vercel function logs, and can be forwarded to a webhook when a delivery target is available.
+`/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, stored in a private Vercel Blob inbox, and can also be forwarded to a webhook when a delivery target is available.
 
-The public mailbox alias `hello@noticekit.tech` is now live and can receive and send replies. Delivery is still not fully configured for `/api/contact` because no CRM webhook or approved notification endpoint has been provided, so webhook forwarding remains optional.
+The public mailbox alias `hello@noticekit.tech` is now live and can receive and send replies. Delivery is now durable even without a CRM webhook because the validated submission is persisted to a private Blob object before any optional forwarding happens.
 
 ## Live Endpoint
 
 - Form page: `https://noticekit.tech/audit-request.html`
 - API route: `https://noticekit.tech/api/contact`
-- Source file: `api/contact.js`
+- Inbox route: `https://noticekit.tech/api/contact-inbox`
+- Source files: `api/contact.js`, `api/contact-inbox.js`, `ops-contact-inbox.html`
 
 The endpoint accepts `POST` JSON only. `GET` and other methods intentionally return `405`.
 
@@ -36,7 +37,7 @@ Optional:
 
 ## Webhook Forwarding
 
-When a delivery target exists, set these Vercel environment variables:
+When a webhook delivery target exists, set these Vercel environment variables:
 
 - `CONTACT_WEBHOOK_URL`: HTTPS endpoint that should receive each validated submission.
 - `CONTACT_WEBHOOK_SECRET`: Optional bearer token sent as the `Authorization` header.
@@ -66,7 +67,7 @@ After configuring a delivery target:
 
 ## Fallback
 
-Until webhook delivery is configured, intake submissions remain recoverable from Vercel function logs. This is acceptable only for the earliest manual validation phase; before paid audit volume increases, delivery should be connected to a mailbox, CRM, or private webhook target.
+Until webhook delivery is configured, intake submissions are recoverable from the private Blob inbox. That is acceptable for the earliest manual validation phase; before paid audit volume increases, delivery should still be connected to a mailbox, CRM, or private webhook target.
 
 ## Mailbox Handoff
 
@@ -74,5 +75,6 @@ Now that `HELP-STATUS.md` confirms `hello@noticekit.tech` exists:
 
 1. Publish the alias on `purchase-next-steps.html` and any buyer-facing support copy.
 2. Re-test the Stripe success redirect page and audit intake page on `https://noticekit.tech`.
-3. Decide whether `/api/contact` should continue as log-only intake or forward each validated request to a private webhook.
-4. Start validation outreach from the approved sender account using `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
+3. Review submissions in the private Blob inbox at `ops-contact-inbox.html`.
+4. Decide whether `/api/contact` should also forward each validated request to a private webhook or mailbox.
+5. Start validation outreach from the approved sender account using `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.

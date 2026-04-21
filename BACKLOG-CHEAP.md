@@ -21,6 +21,7 @@ These tasks are routine and can be handled quickly.
 - [x] Replace the local audit worksheet with a real Vercel `/api/contact` intake endpoint.
 - [x] Document `/api/contact` webhook delivery configuration so intake forwarding can be connected once a target exists.
 - Configure email or webhook delivery for `/api/contact` after a mailbox, webhook, or CRM target is available.
+- [x] Add a private Blob-backed contact inbox fallback so validated submissions persist even before email or webhook delivery is configured.
 - Run the 5 founder validation emails from `BUYER-VALIDATION-PACKET.md` after a real contact address and checkout links are available.
 - [x] Prepare the first 5 founder validation targets so the email batch is ready when contact and checkout setup are complete.
 - [x] Prepare the 3 fractional DPO/privacy consultant and 2 startup attorney validation targets so the advisor batch is ready when contact and checkout setup are complete.
