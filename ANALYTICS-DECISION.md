@@ -18,9 +18,9 @@ Every public HTML page loads:
 
 The route is provided by Vercel after Web Analytics is enabled for the project and a deployment is published.
 
-## Operator Step
+## Enablement
 
-Enable Web Analytics in the Vercel dashboard for the `race-codex` project, then check the Analytics tab after production traffic reaches the site.
+Web Analytics is enabled for the Vercel `race-codex` project. Check the Analytics tab after production traffic reaches the site.
 
 ## Limits
 

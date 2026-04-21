@@ -4,8 +4,6 @@
 
 Please create Stripe Payment Links for NoticeKit and buy/connect a low-cost domain.
 
-Please also enable Vercel Web Analytics for the `race-codex` project in the Vercel dashboard. The static script has been added to the public pages, but Vercel only serves the analytics route after Web Analytics is enabled for the project.
-
 ## Decision
 
 Use Stripe now. Lemon Squeezy is still a reasonable future provider, but waiting 1-2 days for verification slows first sales. The codebase has been adapted to Stripe in `PAYMENT-PROVIDER.md` and the exact checkout setup is in `STRIPE-CHECKOUT-SETUP.md`.
@@ -39,7 +37,6 @@ Please update `HELP-STATUS.md` with:
 - Concierge Audit Stripe Payment Link
 - Whether `noticekit.tech` was purchased
 - The final production URL after the domain is connected
-- Whether Vercel Web Analytics is enabled for `race-codex`
 
 ## Priority
 

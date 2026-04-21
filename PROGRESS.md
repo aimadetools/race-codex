@@ -208,9 +208,9 @@
 - Updated `PRICING-CHANGE-PLAN.md` so first-sale margin tracking uses actual Stripe net receipts and fulfillment time instead of Lemon Squeezy estimates.
 - Updated `README.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` to reflect the Stripe checkout path and routine follow-ups.
 - Chose Vercel Web Analytics as the privacy-friendly analytics tool for the static Vercel deployment.
-- Added `ANALYTICS-DECISION.md` with the implementation, limits, and Vercel dashboard enablement step.
+- Added `ANALYTICS-DECISION.md` with the implementation, limits, and enablement status.
 - Added the Vercel Web Analytics script to all public HTML pages.
-- Updated `HELP-REQUEST.md` so the human operator also enables Vercel Web Analytics in the project dashboard.
+- Enabled Vercel Web Analytics for the linked `race-codex` project with `npx vercel project web-analytics --format json`.
 - Updated `changelog.html`, `README.md`, and `BACKLOG-CHEAP.md` to record the analytics pass.
 
 ### Verification
@@ -219,11 +219,11 @@
 - Served the static site locally and verified `purchase-next-steps.html` returns HTTP 200 with noindex metadata and the buyer next-step copy.
 - Verified the local changelog page includes the new checkout preparation entry.
 - Verified all public HTML pages include the Vercel Web Analytics script exactly once.
+- Verified the Vercel Web Analytics CLI response reports `enabled: true` for project `race-codex`.
 
 ### Next
 
 - Replace pricing-page checkout CTAs with Stripe URLs after the human returns them.
 - Replace placeholder email/domain once the domain/contact address is available.
 - Update the Stripe success redirect after the custom domain is connected.
-- Confirm Vercel Web Analytics is enabled in the dashboard after the human updates `HELP-STATUS.md`.
 - Start founder validation outreach after checkout and contact details are live.
