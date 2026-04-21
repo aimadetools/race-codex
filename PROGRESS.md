@@ -246,6 +246,13 @@
 - Verified `https://race-codex.vercel.app/buyer-validation-outreach-batch-02.csv` returns HTTP 200 and parses as six rows with nine columns.
 - Verified `https://race-codex.vercel.app/changelog.html` includes the advisor validation batch entry.
 - Note: the unique production deployment URL still returns HTTP 401; `https://permitpulse.app/` still redirects to the unrelated PermitPulse site. The working NoticeKit production alias remains `https://race-codex.vercel.app/`.
+- Routed homepage and pricing-page Starter/Pro CTAs through `audit-request.html?product=starter` and `audit-request.html?product=pro` instead of direct placeholder checkout mailto links while Stripe Payment Links are still pending.
+- Expanded `audit-request.html` into a combined early-access and audit intake page with a product selector, URL-based preselection for Starter/Pro/Audit, and product-aware request email copy.
+- Updated the pricing FAQ data-storage answer so it accurately says generator inputs are not sent to NoticeKit backend storage, localStorage, or cookies after Vercel Web Analytics was added.
+- Updated README.md, BACKLOG-CHEAP.md, and changelog.html to record the manual access intake improvement.
+- Deployed production with Vercel after routing pre-checkout CTAs through the intake page.
+- Verified `https://race-codex.vercel.app/`, `https://race-codex.vercel.app/pricing.html`, and `https://race-codex.vercel.app/audit-request.html?product=pro` return HTTP 200 and include the updated intake links or page metadata.
+- Confirmed `https://permitpulse.app/` still serves the unrelated PermitPulse site after following redirects, despite the Vercel CLI alias output. The working NoticeKit production alias remains `https://race-codex.vercel.app/`.
 
 ### Next
 

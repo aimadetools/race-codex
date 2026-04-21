@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Request a NoticeKit Audit</title>
-    <meta name="description" content="Request an early NoticeKit concierge audit for a SaaS subprocessor change workflow.">
+    <title>Request NoticeKit Access or Audit</title>
+    <meta name="description" content="Request early NoticeKit kit access or a concierge audit for a SaaS subprocessor change workflow.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NoticeKit">
-    <meta property="og:title" content="Request a NoticeKit Audit">
-    <meta property="og:description" content="Request an early NoticeKit concierge audit for a SaaS subprocessor change workflow.">
+    <meta property="og:title" content="Request NoticeKit Access or Audit">
+    <meta property="og:description" content="Request early NoticeKit kit access or a concierge audit for a SaaS subprocessor change workflow.">
     <meta property="og:image" content="https://race-codex.vercel.app/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit subprocessor notices for small SaaS teams">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Request a NoticeKit Audit">
-    <meta name="twitter:description" content="Request an early NoticeKit concierge audit for a SaaS subprocessor change workflow.">
+    <meta name="twitter:title" content="Request NoticeKit Access or Audit">
+    <meta name="twitter:description" content="Request early NoticeKit kit access or a concierge audit for a SaaS subprocessor change workflow.">
     <meta name="twitter:image" content="https://race-codex.vercel.app/social-preview.png">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
@@ -34,8 +34,8 @@
 
       <main>
         <section class="page-hero">
-          <span class="eyebrow">Early audit intake</span>
-          <h1>Request a 48-hour subprocessor notice workflow review.</h1>
+          <span class="eyebrow">Early access intake</span>
+          <h1>Request NoticeKit kit access or a 48-hour workflow review.</h1>
           <p>Use this temporary intake while checkout and the permanent contact domain are being connected. The page builds an email draft locally; no form data is stored by NoticeKit.</p>
         </section>
 
@@ -44,6 +44,7 @@
             <article class="panel legal-panel">
               <h2>What to include</h2>
               <ul class="feature-list">
+                <li>Which NoticeKit option you want: Starter, Pro, or Concierge Audit</li>
                 <li>Company name and website</li>
                 <li>Current subprocessor page URL</li>
                 <li>Vendor being added, removed, or replaced</li>
@@ -57,6 +58,14 @@
             <article class="panel legal-panel">
               <h2>Build request email</h2>
               <form id="audit-form" class="intake-form">
+                <label>NoticeKit option
+                  <select id="product" name="product">
+                    <option value="Starter kit">Starter kit - $29</option>
+                    <option value="Pro kit">Pro kit - $79</option>
+                    <option value="Concierge audit">Concierge audit - $249</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                </label>
                 <label>Company
                   <input id="company" name="company" autocomplete="organization" required>
                 </label>
@@ -75,7 +84,7 @@
                 <label>What you need reviewed
                   <textarea id="review-need" name="review-need" placeholder="Example: Notice copy, objection-window tracker, evidence trail, and public subprocessor page."></textarea>
                 </label>
-                <button class="button gold" type="submit">Open email draft</button>
+                <button class="button gold" type="submit">Open request email</button>
               </form>
             </article>
           </div>
@@ -84,7 +93,7 @@
         <section class="section">
           <div class="notice-band">
             <strong>Temporary email intake.</strong>
-            <p>A real form endpoint is still blocked on setup. Until then, this page keeps the request structured and opens your own email client with the details filled in.</p>
+            <p>A real form endpoint and Stripe checkout links are still blocked on setup. Until then, this page keeps kit and audit requests structured and opens your own email client with the details filled in.</p>
             <a href="disclaimer.html">Read the disclaimer</a>
           </div>
         </section>
@@ -98,6 +107,17 @@
 
     <script>
       const form = document.querySelector("#audit-form");
+      const product = document.querySelector("#product");
+      const productFromUrl = new URLSearchParams(window.location.search).get("product");
+      const productMap = {
+        starter: "Starter kit",
+        pro: "Pro kit",
+        audit: "Concierge audit"
+      };
+
+      if (productMap[productFromUrl]) {
+        product.value = productMap[productFromUrl];
+      }
 
       function value(id) {
         return document.querySelector(`#${id}`).value.trim() || "Not provided";
@@ -106,9 +126,11 @@
       form.addEventListener("submit", (event) => {
         event.preventDefault();
         const company = value("company");
+        const selectedProduct = value("product");
         const body = [
-          "NoticeKit audit request",
+          "NoticeKit request",
           "",
+          `Requested option: ${selectedProduct}`,
           `Company: ${company}`,
           `Reply email: ${value("email")}`,
           `Subprocessor page: ${value("subprocessor-url")}`,
@@ -122,7 +144,7 @@
           "Review needed:",
           value("review-need")
         ].join("\n");
-        const subject = encodeURIComponent(`NoticeKit audit request - ${company}`);
+        const subject = encodeURIComponent(`NoticeKit ${selectedProduct} request - ${company}`);
         window.location.href = `mailto:hello@noticekit.example?subject=${subject}&body=${encodeURIComponent(body)}`;
       });
     </script>
