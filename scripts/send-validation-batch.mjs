@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
 import nodemailer from "nodemailer";
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
+const EARLIEST_SEND_DATE_BY_BATCH = new Map([
+  ["02", "2026-04-23"]
+]);
 
 function parseArgs(argv) {
   const args = new Map();
@@ -77,16 +80,63 @@ function parseCsv(text) {
 
   const [header, ...dataRows] = rows;
   if (!header) {
-    return [];
+    return {
+      header: [],
+      records: []
+    };
   }
 
-  return dataRows.map((cells) => {
-    const record = {};
-    header.forEach((key, index) => {
-      record[key.trim()] = (cells[index] || "").trim();
-    });
-    return record;
-  });
+  const keys = header.map((key) => key.trim());
+  return {
+    header: keys,
+    records: dataRows.map((cells) => {
+      const record = {};
+      keys.forEach((key, index) => {
+        record[key] = (cells[index] || "").trim();
+      });
+      return record;
+    })
+  };
+}
+
+function escapeCsvCell(value) {
+  const text = String(value || "");
+  if (/[",\n\r]/.test(text)) {
+    return `"${text.replace(/"/g, '""')}"`;
+  }
+  return text;
+}
+
+function serializeCsv(header, rows) {
+  const lines = [
+    header.map(escapeCsvCell).join(","),
+    ...rows.map((row) => header.map((key) => escapeCsvCell(row[key])).join(","))
+  ];
+  return `${lines.join("\n")}\n`;
+}
+
+function utcDateString(date = new Date()) {
+  return date.toISOString().slice(0, 10);
+}
+
+function assertBatchCanSend(batch, args) {
+  const earliestDate = EARLIEST_SEND_DATE_BY_BATCH.get(batch);
+  if (!earliestDate || args.has("force-date")) {
+    return;
+  }
+
+  const today = utcDateString();
+  if (today < earliestDate) {
+    throw new Error(
+      `Batch ${batch} is held until ${earliestDate}. Re-run on or after that UTC date, or pass --force-date only after a human override.`
+    );
+  }
+}
+
+function markSent(row, transport, recipient, sentAt) {
+  row.status = "sent";
+  const sendNote = `Sent ${sentAt} via ${transport} to ${recipient}.`;
+  row.notes = row.notes ? `${row.notes} ${sendNote}` : sendNote;
 }
 
 function classifyRoute(route) {
@@ -222,9 +272,9 @@ function smtpAuthConfigured() {
 }
 
 async function sendResend({ to, subject, text, html, replyTo }) {
-  const apiKey = String(process.env.CONTACT_RESEND_API_KEY || "").trim();
+  const apiKey = String(process.env.RESEND_API_KEY || process.env.CONTACT_RESEND_API_KEY || "").trim();
   if (!apiKey) {
-    throw new Error("CONTACT_RESEND_API_KEY is not set.");
+    throw new Error("RESEND_API_KEY or CONTACT_RESEND_API_KEY is not set.");
   }
 
   const from = String(process.env.CONTACT_RESEND_FROM || "NoticeKit <hello@noticekit.tech>").trim();
@@ -281,12 +331,20 @@ async function main() {
   const limit = Math.max(1, Number(args.get("limit") || 5));
   const send = args.has("send");
   const transport = String(args.get("transport") || "auto").toLowerCase();
+  const updateCsv = send && !args.has("no-update-csv");
+
+  if (send) {
+    assertBatchCanSend(batch, args);
+  }
 
   const csvPath = join(ROOT, `buyer-validation-outreach-batch-${batch}.csv`);
-  const rows = parseCsv(await readFile(csvPath, "utf8"));
+  const { header, records: rows } = parseCsv(await readFile(csvPath, "utf8"));
   const queue = rows.filter((row) => row.status === "ready_for_send").slice(0, limit);
-  const from = "NoticeKit <hello@noticekit.tech>";
   const replyTo = "hello@noticekit.tech";
+  const persistCsv = async () => {
+    await writeFile(csvPath, serializeCsv(header, rows), "utf8");
+    console.log(`[updated] ${csvPath}`);
+  };
 
   console.log(`Batch ${batch}: ${queue.length} rows selected from ${rows.length} ready targets.`);
 
@@ -309,20 +367,28 @@ async function main() {
       continue;
     }
 
-    if (transport === "resend" || (transport === "auto" && process.env.CONTACT_RESEND_API_KEY)) {
+    if (transport === "resend" || (transport === "auto" && (process.env.RESEND_API_KEY || process.env.CONTACT_RESEND_API_KEY))) {
       await sendResend({ to: recipient, subject, text, html, replyTo });
       console.log(`[sent:resend] ${recipient} | ${subject}`);
+      if (updateCsv) {
+        markSent(row, "Resend", recipient, new Date().toISOString());
+        await persistCsv();
+      }
       continue;
     }
 
     if (transport === "smtp" || transport === "auto") {
       if (!smtpAuthConfigured()) {
         throw new Error(
-          "SMTP relay is reachable, but no authenticated sender secret is configured. Set CONTACT_SMTP_URL or both CONTACT_SMTP_USER and CONTACT_SMTP_PASSWORD, or use CONTACT_RESEND_API_KEY."
+          "SMTP relay is reachable, but no authenticated sender secret is configured. Set CONTACT_SMTP_URL or both CONTACT_SMTP_USER and CONTACT_SMTP_PASSWORD, or use RESEND_API_KEY / CONTACT_RESEND_API_KEY."
         );
       }
       await sendSmtp({ to: recipient, subject, text, html, replyTo });
       console.log(`[sent:smtp] ${recipient} | ${subject}`);
+      if (updateCsv) {
+        markSent(row, "SMTP", recipient, new Date().toISOString());
+        await persistCsv();
+      }
       continue;
     }
 

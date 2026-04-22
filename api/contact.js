@@ -94,7 +94,7 @@ async function forwardToWebhook(submission) {
 }
 
 async function forwardToResend(submission) {
-  const apiKey = String(process.env.CONTACT_RESEND_API_KEY || "").trim();
+  const apiKey = String(process.env.RESEND_API_KEY || process.env.CONTACT_RESEND_API_KEY || "").trim();
   const recipient = String(process.env.CONTACT_NOTIFICATION_EMAIL || "hello@noticekit.tech").trim();
   const sender = String(process.env.CONTACT_RESEND_FROM || "NoticeKit <hello@noticekit.tech>").trim();
 
@@ -187,7 +187,7 @@ async function forwardSubmission(submission) {
     return forwardToSmtp(submission);
   }
 
-  if (process.env.CONTACT_RESEND_API_KEY) {
+  if (process.env.RESEND_API_KEY || process.env.CONTACT_RESEND_API_KEY) {
     return forwardToResend(submission);
   }
 }

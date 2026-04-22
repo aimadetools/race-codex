@@ -22,18 +22,25 @@ These tasks are routine and can be handled quickly.
 - [x] Document `/api/contact` webhook delivery configuration so intake forwarding can be connected once a target exists.
 - [x] Configure email or webhook delivery for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - [x] Add a private Blob-backed contact inbox fallback so validated submissions persist even before email or webhook delivery is configured.
-- Run the 5 founder validation emails from `BUYER-VALIDATION-PACKET.md` after a real contact address and checkout links are available. Blocked in this workspace until a mail connector exists or the human sends the batch from `hello@noticekit.tech`.
+- [x] Run the 5 founder validation messages from `BUYER-VALIDATION-PACKET.md` after a real contact address and checkout links are available.
+- [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for founder replies and update `buyer-validation-outreach-batch-01.csv` statuses.
+- Send the three-business-day founder follow-up pass for non-responders after 2026-04-27.
+- If no founder replies by 2026-04-27, add five more founder/operator targets with public DPA or subprocessor pages.
 - [x] Convert the private paid-kit Markdown docs into Google Docs or PDF exports for first-buyer fulfillment.
 - [x] Zip the private Starter and Pro paid-kit folders after final review so fulfillment can attach one file per tier.
 - [x] Add a private first-buyer fulfillment log template that records Stripe product, delivery timestamp, files sent, and follow-up question.
 - [x] Prepare the first 5 founder validation targets so the email batch is ready when contact and checkout setup are complete.
 - [x] Prepare the 3 fractional DPO/privacy consultant and 2 startup attorney validation targets so the advisor batch is ready when contact and checkout setup are complete.
 - [x] Create the validation outreach send runbook so the prepared batches can be executed without changing the scoring rules once the mailbox is live.
+- [x] Add a send-date guard and automatic CSV status update for advisor validation direct emails.
 - [x] Add footer links across all pages.
 - [x] Check mobile spacing on 360px, 390px, and 768px widths.
 
 ## P1
 
+- [x] Prepare advisor batch 02 for sending after the founder-batch one-business-day hold, using Resend for direct-email routes and public forms for manual-form routes.
+- [x] Add a short reply-to-interview scheduling snippet to `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
+- [x] Regenerate validation outreach drafts after any CSV status or contact-route changes.
 - [x] Write blog post: "Subprocessor Change Notice Template for SaaS Teams".
 - [x] Write blog post: "Subprocessor Notice Email Template for SaaS Teams".
 - [x] Write blog post: "How to Track a DPA Objection Window".

@@ -93,9 +93,7 @@ function classifyRoute(route) {
 }
 
 function planSection(title, rows) {
-  return [
-    `## ${title}`,
-    "",
+  const lines = [
     "| Priority | Target | Segment | Route | Send method |",
     "|---:|---|---|---|---|",
     ...rows.map(
@@ -103,7 +101,13 @@ function planSection(title, rows) {
         `| ${row.priority} | ${row.target} | ${row.segment} | ${row.route} | ${row.sendMethod} |`
     ),
     ""
-  ].join("\n");
+  ];
+
+  if (title) {
+    lines.unshift("", `## ${title}`, "");
+  }
+
+  return lines.join("\n");
 }
 
 const batch01 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-01.csv"), "utf8"));
@@ -132,19 +136,22 @@ const directEmailCount = [...normalized01, ...normalized02].filter(
 const output = [
   "# NoticeKit Validation Outreach Send Plan",
   "",
-  "Date: 2026-04-21",
+  "Date: 2026-04-22",
   "",
   "This plan translates the prepared outreach batches into the first operational send queue.",
-  "It does not mark any outreach as sent.",
+  "Batch 01 is now sent; use this plan for batch 02 routing and follow-up planning.",
   "",
   `Direct-email targets identified: ${directEmailCount}`,
   "",
-  "## First-Day Priority",
+  "## Current Priority",
   "",
-  "Send the direct-email targets first when a sender is available.",
-  "Hold web-form / contact-sales targets for manual sending or browser-based follow-up.",
+  "Monitor founder replies from batch 01, then send advisor batch 02 after the one-business-day hold if founder replies are not already changing the validation questions.",
   "",
-  planSection("Batch 01", normalized01),
+  "## Batch 01",
+  "",
+  "Status: sent on 2026-04-22.",
+  "",
+  planSection("", normalized01),
   planSection("Batch 02", normalized02),
   "## Notes",
   "",

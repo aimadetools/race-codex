@@ -7,7 +7,7 @@ Source URL: https://therootcause.io/terms-of-service/
 Public signal: DPA discusses customer email notifications for security breaches and acknowledges subprocessor changes under the service terms.
 Suggested contact path: Founder/operator or legal/privacy contact from public company channels.
 Public contact route: https://therootcause.io/contact/ or dpo@bryntum.com
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

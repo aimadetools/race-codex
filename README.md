@@ -30,11 +30,11 @@ The first version includes:
 - `blog-subprocessor-list-template-vercel-supabase.html` is the fifth SEO article and stack-specific subprocessor list template.
 - `blog-subprocessor-change-notice-template.html` is the first SEO article and public notice template.
 - `BUYER-CHANNEL-DECISION.md` decides that founders are the first sales channel and consultants are secondary until direct demand is proven.
-- `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and `buyer-validation-outreach-batch-01.csv` prepare the first five founder/operator validation targets; contact and checkout are live, but outbound sending is still pending an approved sender or human send.
+- `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and `buyer-validation-outreach-batch-01.csv` track the first five founder/operator validation targets; batch 01 was sent on 2026-04-22 and is waiting for replies.
 - `BUYER-VALIDATION-OUTREACH-BATCH-02.md` and `buyer-validation-outreach-batch-02.csv` prepare the three fractional DPO/privacy consultant and two startup attorney validation targets queued after founder outreach.
 - `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
 - `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
-- `OPERATOR-FOUNDER-OUTREACH-CHECKLIST.md` gives the human sender one concise checklist for sending the first five founder validation messages from `hello@noticekit.tech`.
+- `OPERATOR-FOUNDER-OUTREACH-CHECKLIST.md` preserves the human-sender checklist used for the first founder validation batch.
 - `changelog.html` is the public changelog for product, content, and deployment updates.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
@@ -69,12 +69,12 @@ The first version includes:
 - `validation-outreach-eml/` contains RFC-style `.eml` exports for the direct-email validation targets.
 - `404.html` is the static not-found page for broken routes.
 - `ANALYTICS-DECISION.md` records the Vercel Web Analytics choice and dashboard enablement step.
-- `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`, SMTP relay forwarding through `CONTACT_SMTP_URL`, or Resend email relay forwarding through `CONTACT_RESEND_API_KEY`.
+- `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`, SMTP relay forwarding through `CONTACT_SMTP_URL`, or Resend email relay forwarding through `RESEND_API_KEY` / `CONTACT_RESEND_API_KEY`.
 - `api/contact-webhook.js` is the authenticated internal webhook receiver used as the current forwarding target for `/api/contact`.
 - `api/contact-inbox.js` and `ops-contact-inbox.html` provide a private Blob-backed inbox for validated contact submissions, independent of optional webhook or email forwarding.
 - `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` and the public contact alias.
 - `package.json` pins `@vercel/blob` for the private contact inbox fallback and `nodemailer` for optional SMTP delivery.
-- `HELP-REQUEST.md` documents the active human setup request for outbound sending or manual outreach. `HELP-STATUS.md` tracks human setup and confirms the alias is live.
+- `HELP-STATUS.md` tracks human setup and confirms the alias, domain, Stripe links, and Resend sender are live.
 
 ## Run Locally
 

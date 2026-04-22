@@ -2,9 +2,13 @@
 
 Date: 2026-04-22
 
+## Status
+
+Completed 2026-04-22. ReadMe, BMBerry, RootCause/Bryntum, and Deployable AI were sent through public contact forms; EF Loads was sent through Resend from `NoticeKit <hello@noticekit.tech>` to `support@efloads.com`.
+
 ## Purpose
 
-This is the shortest path for a human operator to send the first NoticeKit founder validation batch from `hello@noticekit.tech`.
+This preserves the shortest path for a human operator to send the first NoticeKit founder validation batch from `hello@noticekit.tech`.
 
 It does not mark outreach as sent. Update the batch CSV only after the emails or form submissions are actually completed.
 

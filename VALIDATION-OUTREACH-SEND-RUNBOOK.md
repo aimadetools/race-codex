@@ -13,17 +13,19 @@ Prepared batches:
 
 ## Current Status
 
-The mailbox alias `hello@noticekit.tech` is live, Stripe checkout is live, and the `https://noticekit.tech` domain is live. The Vercel `/api/contact` endpoint is live for audit intake. Production env currently exposes `CONTACT_NOTIFICATION_EMAIL` and `CONTACT_SMTP_FROM`, but not `CONTACT_SMTP_PASSWORD`, `CONTACT_SMTP_URL`, or `CONTACT_RESEND_API_KEY`, so this workspace still needs an approved sending account or mail connector before Codex can send the batch directly.
+The mailbox alias `hello@noticekit.tech` is live, Stripe checkout is live, and the `https://noticekit.tech` domain is live. The Vercel `/api/contact` endpoint is live for audit intake. Production env includes `RESEND_API_KEY`, and the sender domain is verified in Resend, so Codex can send direct validation emails through Resend.
 
-The domain's submission SRV record currently points at `smtp-auth.mailprotect.be:587`, and a live SMTP probe shows the relay advertises `AUTH PLAIN LOGIN`. The remaining blocker is therefore credentials, not relay reachability: this workspace still needs the mailbox password or another approved outbound transport secret.
+Founder/operator batch 01 was completed on 2026-04-22: four targets were reached through public contact forms, and the remaining EF Loads direct-email target was sent through Resend from `NoticeKit <hello@noticekit.tech>`.
 
-When a sender exists, use `scripts/send-validation-batch.mjs` to print the ready queue or send it through SMTP or Resend:
+Use `scripts/send-validation-batch.mjs` to print the ready queue or send approved future batches through SMTP or Resend:
 
 ```bash
 node scripts/send-validation-batch.mjs --batch 01 --limit 5
 node scripts/send-validation-batch.mjs --batch 01 --limit 5 --send --transport smtp
 node scripts/send-validation-batch.mjs --batch 01 --limit 5 --send --transport resend
 ```
+
+When `--send` succeeds for direct-email rows, the script marks those rows `sent` in the matching CSV and appends the UTC send timestamp plus route to `notes`. Use `--no-update-csv` only for a deliberate one-off send where status will be recorded manually.
 
 ## Send Prerequisites
 
@@ -33,11 +35,11 @@ Before sending the first message, confirm all of the following:
 - `https://noticekit.tech/pricing.html` shows live Stripe checkout links.
 - `https://noticekit.tech/audit-request.html` loads and posts to `/api/contact`.
 - `buyer-validation-interview-log.csv` is still empty except for completed interview rows.
-- A sending account, SMTP relay, or approved connector is available for Codex to send the batch.
+- A sending account, SMTP relay, or approved connector is available for Codex to send the batch. Current approved direct-email path: `RESEND_API_KEY` in Vercel production env.
 
 ## Batch Order
 
-1. Send founder/operator outreach from batch 01 first.
+1. Founder/operator outreach from batch 01 has been sent.
 2. Wait at least one business day before sending advisor outreach from batch 02.
 3. Send no more than five cold validation emails per day from a newly created mailbox.
 4. Send one follow-up after three business days if there is no response.
@@ -68,15 +70,40 @@ Only add rows to `buyer-validation-interview-log.csv` after an actual call, asyn
 
 ## First-Day Execution
 
-When a sending account is available, send these first:
+Batch 01 is already executed. Next actions are reply monitoring, one polite follow-up after three business days for non-responders, and advisor batch 02 no earlier than the next business day.
 
-1. ReadMe founder/operator email from batch 01.
-2. EF Loads founder/operator email from batch 01.
-3. BMBerry founder/operator email from batch 01.
+## Reply-to-Interview Scheduling
 
-Hold the remaining two founder emails for the next business day unless replies are already coming in cleanly.
+When a recipient replies with interest, keep the response short and move to a concrete slot request:
 
-Note: ReadMe is a manual-form target, so it needs a browser submission or human sending path before the queue can be considered fully executed.
+```text
+Thanks for the quick reply. Would either [day/time option 1] or [day/time option 2] work for a 15-minute feedback call?
+
+I will keep it focused on how you handle subprocessor/vendor-change notices today, what facts are usually missing, and whether a lightweight operational packet would save time or create risk. No confidential client details or legal review needed.
+```
+
+If the reply is async-only, send the six interview questions from `BUYER-VALIDATION-PACKET.md` and record the answers only after they include concrete workflow details.
+
+## Batch 02 Send Procedure
+
+Advisor batch 02 can be sent after the one-business-day hold from founder/operator batch 01, no earlier than 2026-04-23.
+The sender script enforces this date for `--batch 02 --send`; `--force-date` is reserved for a documented human override.
+
+Dry-run the full queue first:
+
+```bash
+node scripts/send-validation-batch.mjs --batch 02 --limit 5 --transport resend
+```
+
+Expected routing:
+
+- Bamboo Data Consulting: direct email through Resend to `info@bamboodc.com`.
+- Privageo: manual contact form at `https://privageo.com/contact-us/`.
+- ATOM: direct email through Resend to `info@theatomgroup.com`.
+- Coto & Waddington: direct email through Resend to `contact@cotowaddington.com`.
+- Altum Legal: direct email through Resend to `info@altumlegal.com`.
+
+After the direct emails are sent, confirm `buyer-validation-outreach-batch-02.csv` has the four direct-email rows marked `sent`. After the Privageo form is submitted, manually update its row from `ready_for_send` to `sent` with the exact UTC send timestamp and form route.
 
 ## Validation Gate
 

@@ -7,7 +7,7 @@ Source URL: https://bmberry.com/privacy-policy
 Public signal: Privacy policy publishes a subprocessor table and notes customers can choose main hosting region but cannot select every subprocessor.
 Suggested contact path: Founder/operator or privacy contact from public company channels.
 Public contact route: support@bmberry.com
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

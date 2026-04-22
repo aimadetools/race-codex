@@ -6,7 +6,7 @@ Date: 2026-04-21
 
 `/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, stored in a private Vercel Blob inbox, and forwarded to the configured webhook or email relay.
 
-The public mailbox alias `hello@noticekit.tech` is live and can receive and send replies. Delivery is durable even without a CRM because the validated submission is persisted to a private Blob object before any forwarding happens.
+The public mailbox alias `hello@noticekit.tech` is live and can receive and send replies. `RESEND_API_KEY` is configured in Vercel production and the domain is verified in Resend, so direct email delivery can use Resend when webhook delivery is not selected. Delivery is durable even without a CRM because the validated submission is persisted to a private Blob object before any forwarding happens.
 
 An authenticated internal webhook receiver is configured in `api/contact-webhook.js`, and the Vercel project has `CONTACT_WEBHOOK_URL` and `CONTACT_WEBHOOK_SECRET` entries pointing `/api/contact` at that target. The production endpoint has been verified end-to-end against the private inbox.
 
@@ -69,7 +69,7 @@ Do not commit webhook URLs, secrets, mailbox passwords, API keys, or CRM tokens 
 If the goal is to notify `hello@noticekit.tech` directly from `/api/contact`, configure either Resend or SMTP:
 
 - `CONTACT_NOTIFICATION_EMAIL`: Optional notification recipient, defaults to `hello@noticekit.tech`.
-- `CONTACT_RESEND_API_KEY`: Resend API key with email send access.
+- `RESEND_API_KEY` or `CONTACT_RESEND_API_KEY`: Resend API key with email send access.
 - `CONTACT_RESEND_FROM`: Optional sender like `NoticeKit <hello@noticekit.tech>`.
 - `CONTACT_SMTP_URL`: Optional full SMTP connection string for the mailbox provider or relay.
 - `CONTACT_SMTP_HOST`: SMTP host, used when `CONTACT_SMTP_URL` is not set.
@@ -79,7 +79,7 @@ If the goal is to notify `hello@noticekit.tech` directly from `/api/contact`, co
 - `CONTACT_SMTP_PASSWORD`: SMTP password.
 - `CONTACT_SMTP_FROM`: Optional sender like `NoticeKit <hello@noticekit.tech>`.
 
-NoticeKit's DNS currently publishes `_submission._tcp.noticekit.tech` as an SMTP submission target at `smtp-auth.mailprotect.be:587`. A live probe confirms the relay advertises `AUTH PLAIN LOGIN`, so the remaining blocker is credentials or another approved outbound API key; the host itself is reachable, but the workspace still does not contain the mailbox password or an approved outbound secret.
+NoticeKit's DNS currently publishes `_submission._tcp.noticekit.tech` as an SMTP submission target at `smtp-auth.mailprotect.be:587`. A live probe confirms the relay advertises `AUTH PLAIN LOGIN`; SMTP can still be used later if mailbox credentials are provided, but the approved outbound API path is currently Resend.
 
 The endpoint will send a plain-text and HTML copy of each validated submission to the configured notification email. The `Reply-To` header is set to the submitter's email so the operator can reply directly.
 
@@ -112,5 +112,5 @@ Now that `HELP-STATUS.md` confirms `hello@noticekit.tech` exists:
 
 1. Keep the alias published on `purchase-next-steps.html` and any buyer-facing support copy.
 2. Use the private Blob inbox at `ops-contact-inbox.html` for review when no email relay is needed.
-3. If the mailbox should receive direct notifications, wire the mailbox relay through `CONTACT_SMTP_URL` or `CONTACT_RESEND_API_KEY`.
+3. If the mailbox should receive direct notifications, wire the mailbox relay through `CONTACT_SMTP_URL`, `RESEND_API_KEY`, or `CONTACT_RESEND_API_KEY`.
 4. Start validation outreach from the approved sender account using `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.

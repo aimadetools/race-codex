@@ -7,7 +7,7 @@ Source URL: https://deployableai.ae/terms-and-conditions/
 Public signal: Terms include a DPA section stating subprocessors may be engaged with prior notice to the customer and equivalent data protection obligations.
 Suggested contact path: Founder/operator or privacy contact from public company channels.
 Public contact route: mbinghelaita@deployableai.ae
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

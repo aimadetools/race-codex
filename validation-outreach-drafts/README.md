@@ -10,11 +10,11 @@ Generated from the prepared buyer validation CSV files.
 
 ## Status
 
-This workspace still has no approved outbound mail transport, so these drafts are ready for a human sender or email connector.
+Resend is available for approved direct-email routes from NoticeKit <hello@noticekit.tech>. Manual-form and contact-sales routes still require the public form path listed in each draft.
 
-The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for easier manual sending.
+Founder/operator batch 01 is sent. Use these drafts for reply handling, follow-ups, and advisor batch 02 after the documented one-business-day hold.
 
-When SMTP or Resend is available, `scripts/send-validation-batch.mjs` can print the queue or send the direct-email targets from the prepared CSV files.
+The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for backup/manual sending.
 
 ## Files
 

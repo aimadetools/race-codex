@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain. Blocked in this workspace until the first founder batch is actually sent or an approved outbound sender is added.
+- Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain. First founder/operator batch sent 2026-04-22; next premium work is converting replies into interviews and deciding whether to send advisor batch 02 after the one-business-day hold.
 - [x] Build fulfillment-ready Starter and Pro paid-kit files so live Stripe purchases can be manually delivered without another product-spec pass.
 - [x] Prepare the first five founder/operator validation outreach targets and messages for execution after contact and checkout setup are complete.
 - [x] Prepare the three fractional DPO/privacy consultant and two startup attorney validation outreach targets and messages for execution after contact and checkout setup are complete.

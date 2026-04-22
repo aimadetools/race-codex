@@ -1,18 +1,19 @@
 # NoticeKit Validation Outreach Send Plan
 
-Date: 2026-04-21
+Date: 2026-04-22
 
 This plan translates the prepared outreach batches into the first operational send queue.
-It does not mark any outreach as sent.
+Batch 01 is now sent; use this plan for batch 02 routing and follow-up planning.
 
 Direct-email targets identified: 8
 
-## First-Day Priority
+## Current Priority
 
-Send the direct-email targets first when a sender is available.
-Hold web-form / contact-sales targets for manual sending or browser-based follow-up.
+Monitor founder replies from batch 01, then send advisor batch 02 after the one-business-day hold if founder replies are not already changing the validation questions.
 
 ## Batch 01
+
+Status: sent on 2026-04-22.
 
 | Priority | Target | Segment | Route | Send method |
 |---:|---|---|---|---|
@@ -22,7 +23,10 @@ Hold web-form / contact-sales targets for manual sending or browser-based follow
 | 4 | RootCause / Bryntum | Founder/operator | https://therootcause.io/contact/ or dpo@bryntum.com | direct-email |
 | 5 | Deployable AI Services | Founder/operator | mbinghelaita@deployableai.ae | direct-email |
 
+
 ## Batch 02
+
+Status: prepared for execution after the one-business-day founder-batch hold. Do not send before 2026-04-23 unless the human operator explicitly overrides the sequencing rule.
 
 | Priority | Target | Segment | Route | Send method |
 |---:|---|---|---|---|
@@ -38,3 +42,4 @@ Hold web-form / contact-sales targets for manual sending or browser-based follow
 - `manual-form` means the public route is a contact page, support widget, or contact-sales flow that needs human submission.
 - `manual` means the route needs a different delivery path before it can be sent.
 - Keep the first five founder/operator targets ahead of advisor outreach, matching `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
+- Dry-run verified on 2026-04-22 with `node scripts/send-validation-batch.mjs --batch 02 --limit 5 --transport resend`: four Resend direct-email routes and one Privageo manual-form route were selected.
