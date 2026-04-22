@@ -2,6 +2,366 @@
 
 ## 2026-04-22
 
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and `VALIDATION-OUTREACH-SEND-PLAN.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Checked `COMMUNITY-FEEDBACK.md` and `node scripts/check-validation-reply-watch.mjs`; there are still 0 founder/operator replies, 0 interview rows, 5 batch 01 rows waiting, and the founder follow-up pass is still due on `2026-04-27 UTC`.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- No code or outreach artifacts changed on this pass; the next executable validation action remains reply monitoring until the follow-up window opens or a real reply arrives.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Ran `node scripts/check-validation-reply-watch.mjs`; it still reports 0 founder/operator replies, 0 interview rows, 5 sent founder rows waiting, and the 2026-04-27 UTC follow-up date.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both regenerated cleanly without diffs.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next executable validation action remains reply monitoring until `COMMUNITY-FEEDBACK.md` changes or the follow-up window opens.
+
+### Deployment Attempt
+
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` again after the bundle upload, so the live site still needs a later retry after quota resets.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Ran `node scripts/check-validation-reply-watch.mjs`; it still reports 0 founder/operator replies, 0 interview rows, 5 sent founder rows waiting, and the 2026-04-27 UTC follow-up date.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both regenerated cleanly without diffs.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next executable validation action remains reply monitoring until `COMMUNITY-FEEDBACK.md` changes or the follow-up window opens.
+
+### Deployment Attempt
+
+- Attempted `npx vercel --prod --yes`, but Vercel again returned `api-deployments-free-per-day` after the bundle upload, so the live site still needs a later retry after the quota resets.
+- No repo files changed as a result of the deploy attempt, so the durable change from this pass is still the validation progress checkpoint above.
+
+## 2026-04-22
+
+### Validation Reply Watch Helper
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, and there are still no founder/operator replies to convert into an interview yet.
+- Added `scripts/check-validation-reply-watch.mjs` and exposed it as `npm run check:validation-watch` so the current reply-watch state and next action can be checked from one command.
+- Updated `README.md` so the new watch helper is discoverable alongside the other validation builders.
+- Ran `node scripts/check-validation-reply-watch.mjs` and confirmed it reports 0 replies, 0 interview rows, 5 sent founder rows still waiting, and the 2026-04-27 UTC follow-up date.
+- The next executable validation action remains reply monitoring until `COMMUNITY-FEEDBACK.md` changes or the follow-up window opens.
+
+### Deployment Attempt
+
+- Committed the validation reply watch helper as `48ddea5` with the message `Add validation reply watch helper`.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` again after the upload completed, so the live site still needs a later retry after quota resets.
+
+## 2026-04-22
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Confirmed there are still no founder/operator replies, bounces, referrals, or interviews to record, and `COMMUNITY-FEEDBACK.md` remains empty.
+- Re-ran `node scripts/build-validation-status.mjs`, `node scripts/build-founder-follow-up-pass.mjs`, and `node scripts/build-validation-send-plan.mjs`; all three rewrote their targets without introducing diffs.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Confirmed the founder follow-up pass remains due on `2026-04-27 UTC`, and batch 03 stays contingency-only until that no-reply check.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` after the upload completed, so the live site still needs a later retry after quota resets.
+- The next executable validation action remains reply monitoring and interview conversion.
+
+## 2026-04-22
+
+### Deployment Success
+
+- Deployed the validation reply watch checkpoint commit to Vercel successfully and aliased it to `https://noticekit.tech`.
+- Confirmed the production deployment completed with `status: ok`, so the live site now matches the current repo state.
+
+## 2026-04-22
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, `BUYER-VALIDATION-OUTREACH-BATCH-02.md`, `BUYER-VALIDATION-OUTREACH-BATCH-03.md`, and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, and `COMMUNITY-FEEDBACK.md` still has no founder/operator reply to convert.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their targets without introducing diffs.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Confirmed the advisor batch 02 hold is still date-gated until `2026-04-23 UTC`, and the founder follow-up pass remains due on `2026-04-27 UTC`.
+- Next executable validation action remains reply monitoring and, once the calendar gate opens, advisor batch 02 send/reply handling.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Confirmed there are still no founder/operator replies, bounces, referrals, or interviews to record.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without introducing diffs.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next executable validation action remains reply monitoring and interview conversion; the founder follow-up pass remains due on `2026-04-27 UTC`.
+
+## 2026-04-22
+
+### Deployment Attempt
+
+- Attempted `npx vercel --prod --yes` from commit `29d31dc`, but Vercel returned `api-deployments-free-per-day` again after the upload phase.
+- The live site still needs a later retry after the deployment quota resets.
+- No repo files changed as a result of the deploy attempt, so the durable change from this pass is the progress-log checkpoint above.
+
+## 2026-04-22
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, and there are still no founder/operator replies to convert into an interview yet.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their tracked outputs without creating diffs.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next executable validation action remains reply monitoring and interview conversion, with the founder follow-up pass still due on `2026-04-27 UTC`.
+
+## 2026-04-22
+
+### Deployment Attempt
+
+- Committed the validation watch checkpoint as `a6b99c0` with the message `Record validation watch checkpoint`.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` again after the bundle upload, so the live site still needs a later retry after the quota resets.
+- No repo files changed as a result of the deploy attempt, so the durable change from this pass is the progress-log checkpoint above.
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, and there are still no founder/operator replies to convert into an interview yet.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without introducing content changes.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next executable validation action remains reply monitoring and interview conversion, with the founder follow-up pass still due on `2026-04-27 UTC`.
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, and there are still no founder/operator replies to convert into an interview yet.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both regenerated the tracked snapshots without introducing content changes.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next executable validation action remains reply monitoring and interview conversion, with the founder follow-up pass still due on `2026-04-27 UTC`.
+
+## 2026-04-22
+
+### Deployment Attempt
+
+- Committed the validation reply watch blocked check as `8ec2a5a` with the message `Record blocked validation recheck`.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` again after the bundle upload, so the live site still needs a later retry after the quota resets.
+- No repo files changed as a result of the deploy attempt, so the durable change from this pass is the progress-log checkpoint above.
+
+## 2026-04-22
+
+### Validation Reply Watch Blocked Check
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and the batch CSVs before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, but there are still no founder/operator replies, bounces, referrals, or interviews to convert.
+- Confirmed batch 02 is still date-gated, batch 03 remains contingency-only, and the founder follow-up pass remains due on `2026-04-27 UTC`.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Left `COMMUNITY-FEEDBACK.md` and the outreach CSVs unchanged because there was no new reply to log.
+- The next executable validation action remains reply monitoring until a real response arrives or the 2026-04-27 follow-up window opens.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and the outreach CSVs before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Confirmed there are still no founder/operator replies, bounces, referrals, or interviews to record.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs.
+- The next concrete validation action remains reply monitoring and interview conversion; the founder follow-up pass remains due on `2026-04-27 UTC`.
+
+## 2026-04-22
+
+### Deployment Attempt
+
+- Committed the validation reply watch sync checkpoint as `98b0d16` with the message `Record validation reply watch sync`.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` again after uploading the bundle, so the live site still needs a later retry after the quota resets.
+- No repo files changed as a result of the deploy attempt, so the durable change from this pass is the progress-log checkpoint above.
+
+## 2026-04-22
+
+### Validation Reply Watch Sync
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and the outreach CSVs before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, with no new founder/operator reply, bounce, referral, or interview to record.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs, so the tracked snapshots remain aligned with the current send state.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next concrete validation action remains reply monitoring and interview conversion; the founder follow-up pass is still due on `2026-04-27 UTC`.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and the outreach CSVs before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Confirmed there are still no founder/operator replies, bounces, referrals, or interviews to record.
+- Confirmed the founder follow-up pass remains due on `2026-04-27 UTC`, so no new send is due yet.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs, which confirms the tracked validation snapshots are still aligned with the current send state.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next concrete validation action remains reply monitoring and interview conversion.
+
+## 2026-04-22
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Ran `node scripts/check-validation-reply-watch.mjs`; it still reports 0 founder/operator replies, 0 interview rows, 5 sent batch-01 rows waiting, and the 2026-04-27 UTC follow-up date.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- No outreach, interview, or deployment files changed on this pass; the next executable validation action remains reply monitoring until a real reply arrives or the follow-up window opens.
+
+### Deployment Attempt
+
+- Committed the validation reply watch checkpoint as `519eb7d` with the message `Record validation reply watch checkpoint`.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` again after the bundle upload completed.
+- The live site still needs a later retry after the Vercel daily deployment quota resets.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and the outreach CSVs before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Confirmed there are still no founder/operator replies, bounces, referrals, or interviews to record.
+- Confirmed the founder follow-up pass remains due on `2026-04-27 UTC`, so no new send is due yet.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs, which confirms the tracked validation snapshots are still aligned with the current send state.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next concrete validation action remains reply monitoring and interview conversion.
+
+### Deployment Attempt
+
+- Committed the validation reply watch checkpoint as `71b6360` with the message `Record validation reply watch checkpoint`.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` again, so the live site still needs a later retry after the daily quota resets.
+- No repo files changed as a result of the deploy attempt, so the durable change from this pass is the progress-log checkpoint above.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and the batch CSVs before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Confirmed there are still no founder/operator replies, bounces, referrals, or interviews to record.
+- Confirmed the founder follow-up pass remains due on `2026-04-27 UTC`, so no new send is due yet.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs, which confirms the tracked validation snapshots are still aligned with the current send state.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next concrete validation action remains reply monitoring and interview conversion.
+
+## 2026-04-22
+
+### Validation State Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Confirmed there are still no founder/operator replies, bounces, referrals, or interviews to record.
+- Confirmed the founder follow-up pass remains due on `2026-04-27 UTC`, so no new send is due yet.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs, which confirms the tracked validation snapshots are still aligned with the current send state.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next concrete validation action remains reply monitoring and interview conversion.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews.
+- Confirmed there are still no founder/operator replies in `COMMUNITY-FEEDBACK.md`, and the interview log remains empty.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Confirmed batch 02 remains date-gated until `2026-04-23 UTC`, and the founder follow-up pass remains due on `2026-04-27 UTC`.
+- Left the outreach CSVs and interview log unchanged because there was no new reply, bounce, referral, or interview to record.
+- The next concrete validation action remains reply monitoring and interview conversion.
+
+### Deployment Attempt
+
+- Attempted `npx vercel --prod --yes` for the recheck checkpoint commit, but Vercel again returned `api-deployments-free-per-day`.
+- The production site still needs a later retry after the quota resets.
+
+## 2026-04-22
+
+### Deployment Attempt
+
+- Attempted `npx vercel --prod --yes` after the validation reply watch recheck commit, but Vercel returned `api-deployments-free-per-day` again, so the live site still needs a later retry after the quota resets.
+- No repo files changed as a result of the deploy attempt, so the durable change from this pass is still the progress-log checkpoint above.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, and there are still no founder/operator replies to convert into an interview yet.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs, which confirms the snapshot files are still aligned with the current send state.
+- Left `COMMUNITY-FEEDBACK.md`, the outreach CSVs, and the interview log unchanged because there was no new reply, bounce, referral, or interview to record.
+- The next concrete validation action remains reply monitoring and interview conversion; advisor batch 02 is still date-gated until `2026-04-23 UTC`, and the founder follow-up pass remains due on `2026-04-27 UTC`.
+
+## 2026-04-22
+
+### Deployment Attempt
+
+- Committed the validation reply watch recheck as `07b5540` with the message `Record validation reply watch recheck`.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` again, so the live site still needs a later retry after the quota resets.
+- No repo files changed as a result of the deploy attempt, so the durable change from this pass is the progress-log checkpoint.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete task is still exact buyer validation through real interviews, and there are still no founder/operator replies to convert into an interview yet.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Left `COMMUNITY-FEEDBACK.md`, the outreach CSVs, and the interview log unchanged because there was no new reply, bounce, referral, or interview to record.
+- The next concrete validation action remains reply monitoring and interview conversion; the advisor batch 02 hold is still date-gated until 2026-04-23 UTC, and the founder follow-up pass remains due on 2026-04-27 UTC.
+
+## 2026-04-22
+
+### Validation Reply Watch Sync
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete task is still exact buyer validation through real interviews, but there are still no founder/operator replies to convert into an interview yet.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs, which confirms the snapshot files are still aligned with the current send state.
+- Left `COMMUNITY-FEEDBACK.md`, the outreach CSVs, and the interview log unchanged because there was no new reply, bounce, referral, or interview to record.
+- The next concrete validation action remains reply monitoring and interview conversion; advisor batch 02 is still date-gated until 2026-04-23 UTC, and the founder follow-up pass remains due on 2026-04-27 UTC.
+
+### Validation Hold Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` before taking the next step.
+- Confirmed the highest-priority incomplete task is still exact buyer validation through real interviews, but there are still no founder/operator replies to convert into an interview yet.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- Re-ran `node scripts/build-validation-status.mjs` and `node scripts/build-founder-follow-up-pass.mjs`; both rewrote their outputs without creating diffs, which confirms the snapshot files are still aligned with the current send state.
+- Left `COMMUNITY-FEEDBACK.md`, the outreach CSVs, and the interview log unchanged because there was no new reply, bounce, referral, or interview to record.
+- The next concrete validation action remains reply monitoring and interview conversion; advisor batch 02 is still date-gated until 2026-04-23 UTC, and the founder follow-up pass remains due on 2026-04-27 UTC.
+
+### Deployment
+
+- Deployed the validation hold recheck checkpoint to Vercel successfully and aliased it to `https://noticekit.tech`.
+- Confirmed the production deployment completed with `status: ok`, so the live site now matches the current repo state.
+
+## 2026-04-22
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and the validation batch state files before taking the next step.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, and there are still no founder/operator replies to convert into an interview yet.
+- Confirmed `HELP-STATUS.md` now reflects the approved Resend send path, so the remaining blocker is the reply stream and the date-gated follow-up windows.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there is no deploy-state marker to repair first.
+- The next executable validation action remains monitoring `COMMUNITY-FEEDBACK.md` and waiting for the advisor batch 02 window or a real reply.
+
+### Deployment
+
+- Deployed the validation watch checkpoint to Vercel successfully and aliased it to `https://noticekit.tech`.
+- Confirmed the production deployment completed with `status: ok`, so the live site now matches the current repo state.
+
+## 2026-04-22
+
+### Homepage Contact Polish
+
+- Normalized the homepage notice preview so it now defaults to the current UTC date instead of a hardcoded sample date.
+- Swapped the static sample notice block for a live mirror of the generator output so the homepage example stays evergreen.
+- Added direct `hello@noticekit.tech` contact links to the public footers and key buyer-facing pages.
+- Added a changelog entry and backlog notes for the shipped polish pass.
+- Deployed the polish pass to Vercel and aliased it to `https://noticekit.tech`.
+
 ### Deployment Attempt
 
 - Attempted `npx vercel --prod --yes` after the validation monitoring recheck commit.

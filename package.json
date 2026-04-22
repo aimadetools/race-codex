@@ -5,6 +5,7 @@
     "build:founder-follow-up-pass": "node scripts/build-founder-follow-up-pass.mjs",
     "build:validation-status": "node scripts/build-validation-status.mjs",
     "build:validation-send-plan": "node scripts/build-validation-send-plan.mjs",
+    "check:validation-watch": "node scripts/check-validation-reply-watch.mjs",
     "record:interview": "node scripts/append-validation-interview.mjs",
     "record:feedback": "node scripts/record-validation-feedback.mjs"
   },

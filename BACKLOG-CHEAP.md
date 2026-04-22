@@ -72,3 +72,5 @@ These tasks are routine and can be handled quickly.
 - [x] Add a changelog page.
 - [x] Add testimonials section scaffold and reserve quote slots for verified customer quotes.
 - [x] Improve mobile nav wrapping and generator layout on narrow screens.
+- [x] Make the homepage notice preview auto-fill current UTC dates and keep the sample copy evergreen.
+- [x] Add direct `hello@noticekit.tech` contact links to the public footers and key buyer-facing pages.

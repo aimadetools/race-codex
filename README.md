@@ -67,6 +67,7 @@ The first version includes:
 - `scripts/generate-validation-drafts.mjs` generates per-target outreach draft files from the prepared buyer validation CSVs.
 - `scripts/build-founder-follow-up-pass.mjs` regenerates the batch 01 non-responder follow-up queue and due date.
 - `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
+- `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and next action for the validation queue.
 - `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue through SMTP or Resend when an approved sender is available.
 - `scripts/build-validation-send-plan.mjs` regenerates the send-plan summary from the prepared outreach CSVs.
 - `scripts/build-paid-kit-fulfillment.mjs` regenerates the private paid-kit PDF exports and ZIP archives for first-buyer fulfillment.
