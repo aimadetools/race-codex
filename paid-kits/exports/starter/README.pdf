@@ -1,0 +1,119 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2334 >>
+stream
+BT
+/F1 10 Tf
+54 744 Td
+14 TL
+(NoticeKit Starter - README) Tj
+T*
+() Tj
+T*
+(Generated: 2026-04-22) Tj
+T*
+() Tj
+T*
+(NOTICEKIT STARTER) Tj
+T*
+() Tj
+T*
+(Starter is for one vendor change, one customer notice workflow, and one clean evidence trail.) Tj
+T*
+() Tj
+T*
+(Files) Tj
+T*
+() Tj
+T*
+(- subprocessor-list-template.csv: public-facing subprocessor list fields.) Tj
+T*
+(- notice-email-templates.md: short, formal, and enterprise notice variants.) Tj
+T*
+(- objection-window-tracker.csv: single-change deadline and status tracker.) Tj
+T*
+(- internal-approval-checklist.md: privacy, security, product, and counsel review checklist.) Tj
+T*
+(- evidence-log-template.csv: proof record for notices and follow-up.) Tj
+T*
+(- attorney-review-handoff-note.md: concise packet for counsel review.) Tj
+T*
+() Tj
+T*
+(Suggested Order) Tj
+T*
+() Tj
+T*
+(1. Fill out subprocessor-list-template.csv for the vendor change.) Tj
+T*
+(2. Complete the internal approval checklist before sending notice.) Tj
+T*
+(3. Pick the notice email variant that fits the customer relationship.) Tj
+T*
+(4. Track notice date, objection deadline, owner, and status in the objection tracker.) Tj
+T*
+(5. Save final notices, page screenshots, recipient evidence, and approvals in the evidence) Tj
+T*
+(log.) Tj
+T*
+(6. Send the handoff note to counsel with open questions before relying on the materials.) Tj
+T*
+() Tj
+T*
+(Disclaimer) Tj
+T*
+() Tj
+T*
+(NoticeKit provides operational templates, workflow checklists, and local tools for organizing) Tj
+T*
+(subprocessor change notices. NoticeKit is not a law firm, does not provide legal advice, and) Tj
+T*
+(does not create an attorney-client relationship. Your contracts, data protection addendum,) Tj
+T*
+(privacy notices, customer commitments, and applicable laws may require different steps or) Tj
+T*
+(wording. Have a qualified attorney review your notices, subprocessors, objection process, and) Tj
+T*
+(customer communications before relying on them.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Fulfillment disclaimer:) Tj
+T*
+(NoticeKit provides operational templates and workflow materials. It is not a law firm, does) Tj
+T*
+(not provide legal advice, and does not create an attorney-client relationship. Have qualified) Tj
+T*
+(counsel review your notices, subprocessors, objection process, and customer communications) Tj
+T*
+(before relying on them.) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000002465 00000 n
+0000002591 00000 n
+0000002648 00000 n
+trailer
+<< /Size 6 /Root 5 0 R >>
+startxref
+2697
+%%EOF

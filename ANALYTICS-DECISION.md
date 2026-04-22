@@ -24,6 +24,6 @@ Web Analytics is enabled for the Vercel `race-codex` project. Check the Analytic
 
 ## Limits
 
-- Do not add custom events yet. Page views are enough before checkout is live.
+- Do not add custom events yet. Page views are enough until there is meaningful traffic, purchases, or repeated audit-intake usage to analyze.
 - Do not track form fields, generated notice text, CSV contents, or vendor names.
 - Keep the browser-only generator free of localStorage, cookies, and backend persistence.

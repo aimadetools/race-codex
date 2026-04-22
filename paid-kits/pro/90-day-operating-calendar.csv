@@ -1,0 +1,9 @@
+calendar_date,change_id,activity,owner,status,evidence_url,notes
+2026-04-22,CHG-2026-001,Create evidence folder,Founder,planned,,Use YYYY-MM-DD_vendor-name_change-type
+2026-04-23,CHG-2026-001,Complete product security privacy review,Founder,planned,,Collect reviewer initials
+2026-04-24,CHG-2026-001,Counsel review of notice and deadline,Founder,planned,,Attach handoff note
+2026-04-25,CHG-2026-001,Update public subprocessor page draft,Founder,planned,,Save screenshot or PDF proof
+2026-04-26,CHG-2026-001,Send customer notice,Founder,planned,,Save final sent copy
+2026-05-15,CHG-2026-001,Reminder before objection deadline,Founder,planned,,Check objections and customer questions
+2026-05-22,CHG-2026-001,Objection deadline closes,Founder,planned,,Confirm no unresolved objections
+2026-05-24,CHG-2026-001,Close evidence log,Founder,planned,,Mark status closed only after follow-up complete

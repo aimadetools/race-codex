@@ -4,7 +4,7 @@ Date: 2026-04-21
 
 ## Purpose
 
-Prepare the fractional DPO/privacy consultant and startup attorney validation targets required by `BUYER-VALIDATION-PACKET.md`.
+Prepare the fractional DPO/privacy consultant and startup attorney validation targets required by `BUYER-VALIDATION-PACKET.md`. These are queued behind the first founder/operator validation batch.
 
 This does not count as completed validation. Interviews should only be scored in `buyer-validation-interview-log.csv` after a real conversation happens.
 
@@ -12,11 +12,13 @@ This does not count as completed validation. Interviews should only be scored in
 
 Send this batch only after:
 
-- `HELP-STATUS.md` includes the public NoticeKit contact email.
-- `HELP-STATUS.md` includes the Starter, Pro, and Concierge Stripe Payment Links.
-- The public pricing page has been updated so recipients can see a real buying path.
+- `HELP-STATUS.md` includes the public NoticeKit contact email. Complete: `hello@noticekit.tech`.
+- `HELP-STATUS.md` includes the Starter, Pro, and Concierge Stripe Payment Links. Complete.
+- The public pricing page has been updated so recipients can see a real buying path. Complete.
+- Founder/operator batch 01 has been sent, or the human operator explicitly pauses founder outreach.
+- An approved outbound sender is available, or the human operator sends the messages manually from `hello@noticekit.tech`.
 
-If checkout is still pending, use these targets for warm intros or research conversations only and avoid asking for a purchase.
+Do not mark any target as sent until the direct emails or manual contact-route steps are actually completed.
 
 ## Target List
 

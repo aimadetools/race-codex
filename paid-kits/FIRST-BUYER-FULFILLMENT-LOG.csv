@@ -1,0 +1,1 @@
+stripe_payment_id,stripe_customer_email,stripe_product,purchase_timestamp_utc,delivery_timestamp_utc,delivered_by,files_sent,archive_sent,delivery_method,buyer_role,company,urgency_trigger,follow_up_question,reply_due_date,next_action,notes

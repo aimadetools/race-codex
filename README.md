@@ -30,14 +30,15 @@ The first version includes:
 - `blog-subprocessor-list-template-vercel-supabase.html` is the fifth SEO article and stack-specific subprocessor list template.
 - `blog-subprocessor-change-notice-template.html` is the first SEO article and public notice template.
 - `BUYER-CHANNEL-DECISION.md` decides that founders are the first sales channel and consultants are secondary until direct demand is proven.
-- `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and `buyer-validation-outreach-batch-01.csv` prepare the first five founder/operator validation targets for outreach after contact and checkout setup are complete.
-- `BUYER-VALIDATION-OUTREACH-BATCH-02.md` and `buyer-validation-outreach-batch-02.csv` prepare the three fractional DPO/privacy consultant and two startup attorney validation targets for outreach after contact and checkout setup are complete.
+- `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and `buyer-validation-outreach-batch-01.csv` prepare the first five founder/operator validation targets; contact and checkout are live, but outbound sending is still pending an approved sender or human send.
+- `BUYER-VALIDATION-OUTREACH-BATCH-02.md` and `buyer-validation-outreach-batch-02.csv` prepare the three fractional DPO/privacy consultant and two startup attorney validation targets queued after founder outreach.
 - `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
 - `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
+- `OPERATOR-FOUNDER-OUTREACH-CHECKLIST.md` gives the human sender one concise checklist for sending the first five founder validation messages from `hello@noticekit.tech`.
 - `changelog.html` is the public changelog for product, content, and deployment updates.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
-- `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a form endpoint or CRM exists.
+- `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a lightweight CRM exists; seeded partner prospects are ready to send after the founder validation batch.
 - `CONTACT-DELIVERY.md` documents `/api/contact` delivery status, intake reference IDs, webhook and email relay environment variables, mailbox handoff steps, and verification steps for connecting a mailbox, CRM, or notification endpoint.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
 - `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
@@ -50,6 +51,7 @@ The first version includes:
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
 - `partner-preview.html` and `noticekit-partner-preview.pdf` provide a consultant/advisor partner preview based on the Pro kit manifest.
 - `PAYMENT-PROVIDER.md` documents the Stripe Payment Links launch decision.
+- `paid-kits/` contains the private early-access Starter and Pro fulfillment files, PDF exports, ZIP archives, and first-buyer fulfillment log for manual Stripe buyers; it is excluded from Vercel deployment by `.vercelignore`.
 - `PRICING-CHANGE-PLAN.md` defines how to adjust Starter, Pro, Concierge, add-ons, and discounts after the first five sales.
 - `purchase-next-steps.html` is the noindex Stripe success-redirect page for early-access buyers.
 - `robots.txt` and `sitemap.xml` expose the public static pages for search crawlers.
@@ -62,15 +64,16 @@ The first version includes:
 - `scripts/generate-validation-drafts.mjs` generates per-target outreach draft files from the prepared buyer validation CSVs.
 - `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue through SMTP or Resend when an approved sender is available.
 - `scripts/build-validation-send-plan.mjs` regenerates the send-plan summary from the prepared outreach CSVs.
+- `scripts/build-paid-kit-fulfillment.mjs` regenerates the private paid-kit PDF exports and ZIP archives for first-buyer fulfillment.
 - `validation-outreach-drafts/` contains the send-ready founder, consultant, and attorney outreach drafts produced from the prepared batches.
 - `validation-outreach-eml/` contains RFC-style `.eml` exports for the direct-email validation targets.
 - `404.html` is the static not-found page for broken routes.
 - `ANALYTICS-DECISION.md` records the Vercel Web Analytics choice and dashboard enablement step.
 - `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`, SMTP relay forwarding through `CONTACT_SMTP_URL`, or Resend email relay forwarding through `CONTACT_RESEND_API_KEY`.
 - `api/contact-webhook.js` is the authenticated internal webhook receiver used as the current forwarding target for `/api/contact`.
-- `api/contact-inbox.js` and `ops-contact-inbox.html` provide a private Blob-backed inbox for validated contact submissions when webhook delivery is unavailable.
+- `api/contact-inbox.js` and `ops-contact-inbox.html` provide a private Blob-backed inbox for validated contact submissions, independent of optional webhook or email forwarding.
 - `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` and the public contact alias.
-- `package.json` pins the `@vercel/blob` dependency used by the private contact inbox fallback.
+- `package.json` pins `@vercel/blob` for the private contact inbox fallback and `nodemailer` for optional SMTP delivery.
 - `HELP-REQUEST.md` documents the active human setup request for outbound sending or manual outreach. `HELP-STATUS.md` tracks human setup and confirms the alias is live.
 
 ## Run Locally

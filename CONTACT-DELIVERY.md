@@ -104,7 +104,7 @@ After configuring a delivery target:
 
 ## Fallback
 
-Until webhook or email relay delivery is configured, intake submissions are recoverable from the private Blob inbox. That is acceptable for the earliest manual validation phase; before paid audit volume increases, delivery should still be connected to a mailbox, CRM, or private webhook target.
+When an email relay is not configured, intake submissions are still recoverable from the private Blob inbox and forwarded through the internal webhook receiver. That is acceptable for the earliest manual validation phase; before paid audit volume increases, direct mailbox or CRM notifications should still be added if the operator needs alerts outside the private inbox.
 
 ## Mailbox Handoff
 

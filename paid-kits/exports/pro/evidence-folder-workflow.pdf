@@ -1,0 +1,233 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1629 >>
+stream
+BT
+/F1 10 Tf
+54 744 Td
+14 TL
+(NoticeKit Pro - evidence folder workflow) Tj
+T*
+() Tj
+T*
+(Generated: 2026-04-22) Tj
+T*
+() Tj
+T*
+(EVIDENCE FOLDER WORKFLOW) Tj
+T*
+() Tj
+T*
+(Use one evidence folder per vendor change. Store it in the buyer's existing workspace such as) Tj
+T*
+(Google Drive, OneDrive, Dropbox, an internal shared drive, or a ticketing system.) Tj
+T*
+() Tj
+T*
+(Folder Name) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(YYYY-MM-DD_vendor-name_change-type) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(2026-04-22_acme-email-cloud_add) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Folder Contents) Tj
+T*
+() Tj
+T*
+(- 01-change-summary.md: vendor, purpose, data categories, region, owner, planned effective) Tj
+T*
+(date.) Tj
+T*
+(- 02-review-approval.md: product, security, privacy, customer success, and counsel review) Tj
+T*
+(notes.) Tj
+T*
+(- 03-customer-notice.md: final notice copy sent to customers.) Tj
+T*
+(- 04-recipient-record.csv: customer segment, notice method, send date, and objection deadline.) Tj
+T*
+(- 05-public-page-proof.png or 05-public-page-proof.pdf: screenshot or export of the updated) Tj
+T*
+(public subprocessor page.) Tj
+T*
+(- 06-objection-log.md: objections, escalations, resolutions, and closeout date.) Tj
+T*
+() Tj
+T*
+(Change Summary Template) Tj
+T*
+() Tj
+T*
+(```markdown) Tj
+T*
+(CHANGE SUMMARY) Tj
+T*
+() Tj
+T*
+(Change ID:) Tj
+T*
+(Vendor:) Tj
+T*
+(Change type:) Tj
+T*
+(Purpose:) Tj
+T*
+(Data categories:) Tj
+T*
+(Processing region:) Tj
+T*
+(Customer segment:) Tj
+T*
+(Notice date:) Tj
+T*
+(Effective date:) Tj
+T*
+(Objection deadline:) Tj
+T*
+(Owner:) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Review Approval Template) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1290 >>
+stream
+BT
+/F1 10 Tf
+54 744 Td
+14 TL
+() Tj
+T*
+(```markdown) Tj
+T*
+(REVIEW APPROVAL) Tj
+T*
+() Tj
+T*
+(Product review:) Tj
+T*
+(Security review:) Tj
+T*
+(Privacy review:) Tj
+T*
+(Counsel review:) Tj
+T*
+(Customer segment review:) Tj
+T*
+() Tj
+T*
+(Open questions:) Tj
+T*
+() Tj
+T*
+(Decision:) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Objection Log Template) Tj
+T*
+() Tj
+T*
+(```markdown) Tj
+T*
+(OBJECTION LOG) Tj
+T*
+() Tj
+T*
+(| Date | Customer or Segment | Owner | Summary | Status | Resolution |) Tj
+T*
+(| --- | --- | --- | --- | --- | --- |) Tj
+T*
+(| |  |  |  | open / closed | |) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Closeout Checklist) Tj
+T*
+() Tj
+T*
+(- [ ] Final notice copy is archived.) Tj
+T*
+(- [ ] Recipient source is archived or linked.) Tj
+T*
+(- [ ] Public page proof is archived.) Tj
+T*
+(- [ ] Objection window is closed or escalated.) Tj
+T*
+(- [ ] Evidence log status is updated.) Tj
+T*
+(- [ ] Owner and close date are recorded.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Fulfillment disclaimer:) Tj
+T*
+(NoticeKit provides operational templates and workflow materials. It is not a law firm, does) Tj
+T*
+(not provide legal advice, and does not create an attorney-client relationship. Have qualified) Tj
+T*
+(counsel review your notices, subprocessors, objection process, and customer communications) Tj
+T*
+(before relying on them.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000001760 00000 n
+0000001886 00000 n
+0000003228 00000 n
+0000003354 00000 n
+0000003417 00000 n
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+3466
+%%EOF

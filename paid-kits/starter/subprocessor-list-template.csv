@@ -1,0 +1,2 @@
+vendor_name,vendor_purpose,change_type,processing_region,data_categories,customer_segment,notice_date,effective_date,objection_window_days,objection_deadline,notice_status,owner,evidence_url,review_notes
+Acme Email Cloud,Transactional email delivery,add,United States; European Union,Customer names; email addresses,EU customers on signed DPA,2026-04-22,2026-05-22,30,2026-05-22,draft,Founder,,Counsel to confirm notice wording before send

@@ -1,0 +1,2 @@
+change_id,vendor_name,customer_segment,notice_date,objection_window_days,objection_deadline,notice_method,notice_owner,status,follow_up_date,objection_received,objection_summary,resolution,closed_date,notes
+CHG-2026-001,Acme Email Cloud,EU customers on signed DPA,2026-04-22,30,2026-05-22,email,Founder,draft,2026-05-15,no,,,,Confirm date math against applicable DPA before send

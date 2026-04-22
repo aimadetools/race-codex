@@ -1,0 +1,125 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2392 >>
+stream
+BT
+/F1 10 Tf
+54 744 Td
+14 TL
+(NoticeKit Pro - README) Tj
+T*
+() Tj
+T*
+(Generated: 2026-04-22) Tj
+T*
+() Tj
+T*
+(NOTICEKIT PRO) Tj
+T*
+() Tj
+T*
+(Pro includes the Starter files plus repeatable workflows for multiple vendor changes, customer) Tj
+T*
+(segments, DPA terms, and evidence records.) Tj
+T*
+() Tj
+T*
+(Files) Tj
+T*
+() Tj
+T*
+(- multi-change-vendor-register.csv: register for proposed, active, replaced, and removed) Tj
+T*
+(subprocessors.) Tj
+T*
+(- customer-notice-matrix.csv: segment-level notice tracking by owner, method, deadline, and) Tj
+T*
+(status.) Tj
+T*
+(- dpa-clause-intake-worksheet.csv: structured worksheet for customer or segment notice terms.) Tj
+T*
+(- attorney-review-packet.md: reusable packet for counsel review.) Tj
+T*
+(- procurement-ready-summary.md: concise customer-facing workflow explanation.) Tj
+T*
+(- 90-day-operating-calendar.csv: operating calendar for page updates, notices, reminders, and) Tj
+T*
+(closeout.) Tj
+T*
+(- csv-import-export-guide.md: CSV rules for browser-local and spreadsheet workflows.) Tj
+T*
+(- evidence-folder-workflow.md: folder structure for preserving proof without NoticeKit) Tj
+T*
+(hosting.) Tj
+T*
+() Tj
+T*
+(Upgrade Use Case) Tj
+T*
+() Tj
+T*
+(Use Pro when different customer groups have different notice periods, owners, evidence) Tj
+T*
+(requirements, or escalation paths. The goal is to avoid running a new improvised process for) Tj
+T*
+(every vendor change.) Tj
+T*
+() Tj
+T*
+(Disclaimer) Tj
+T*
+() Tj
+T*
+(NoticeKit provides operational templates, workflow checklists, and local tools for organizing) Tj
+T*
+(subprocessor change notices. NoticeKit is not a law firm, does not provide legal advice, and) Tj
+T*
+(does not create an attorney-client relationship. Your contracts, data protection addendum,) Tj
+T*
+(privacy notices, customer commitments, and applicable laws may require different steps or) Tj
+T*
+(wording. Have a qualified attorney review your notices, subprocessors, objection process, and) Tj
+T*
+(customer communications before relying on them.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Fulfillment disclaimer:) Tj
+T*
+(NoticeKit provides operational templates and workflow materials. It is not a law firm, does) Tj
+T*
+(not provide legal advice, and does not create an attorney-client relationship. Have qualified) Tj
+T*
+(counsel review your notices, subprocessors, objection process, and customer communications) Tj
+T*
+(before relying on them.) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000002523 00000 n
+0000002649 00000 n
+0000002706 00000 n
+trailer
+<< /Size 6 /Root 5 0 R >>
+startxref
+2755
+%%EOF

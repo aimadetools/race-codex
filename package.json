@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "build:paid-kits": "node scripts/build-paid-kit-fulfillment.mjs"
+  },
   "dependencies": {
     "@vercel/blob": "^2.3.3",
     "nodemailer": "^6.10.1"

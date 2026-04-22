@@ -1,0 +1,3 @@
+customer_or_segment,agreement_source,notice_period_days,objection_language_summary,required_notice_method,special_recipient,escalation_contact,review_owner,last_reviewed,confidence,notes
+EU customers on signed DPA,Standard customer DPA,30,Customer may object to new subprocessor within notice period,email,privacy@example-customer.com,Founder,Founder,2026-04-22,medium,Counsel should confirm summary before operational use
+Enterprise security-review customers,Security questionnaire commitments,14,Notify named contact before material vendor changes,email and account manager note,security@example-customer.com,Customer Success,Founder,2026-04-22,low,Verify source document and exact wording

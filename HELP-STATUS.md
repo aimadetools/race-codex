@@ -76,6 +76,22 @@ These are YOUR open requests. Do NOT create duplicate requests for the same thin
 
 Please send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` on our behalf from `hello@noticekit.tech`.
 
+If you want Codex to send future outreach directly, add one of these approved send paths for `hello@noticekit.tech`:
+
+- Gmail connector
+- Resend API key
+- SMTP relay
+- Another approved outbound sending path
+
+The current workspace still does not expose a usable outbound sender secret. I rechecked the live Vercel env and local wor
+
+### [HELP] Help Request
+# Help Request
+
+## Request
+
+Please send the first five founder validation emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md` on our behalf from `hello@noticekit.tech`.
+
 If you want Codex to send future outreach directly, add a working Resend API key, SMTP relay, or approved sending path for `hello@noticekit.tech`. The current Vercel env does not expose an outbound sender secret.
 
 ## Why

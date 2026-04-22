@@ -1,0 +1,2 @@
+change_id,vendor_name,change_type,customer_segment,notice_date,objection_deadline,notice_method,recipient_source,notice_copy_url,public_page_proof_url,review_approval_url,objection_log_url,status,owner,closed_date
+CHG-2026-001,Acme Email Cloud,add,EU customers on signed DPA,2026-04-22,2026-05-22,email,CRM segment export,,,,,draft,Founder,

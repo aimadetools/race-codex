@@ -239,6 +239,151 @@
 - Confirmed `DEPLOY-STATUS.md` is not present in the repo, so there was no site-breakage file to fix before continuing.
 - Left the prepared outreach drafts, `.eml` exports, and send plan untouched because the actual send step still depends on a human-supplied mail transport or manual sending from `hello@noticekit.tech`.
 
+## 2026-04-22
+
+### Founder Outreach Handoff
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`; confirmed `DEPLOY-STATUS.md` is absent.
+- Confirmed the highest-priority incomplete task remains the first founder/operator validation outreach send, but there is still no approved Gmail connector, SMTP credential, Resend key, local mail transport, or human-send confirmation available in this workspace.
+- Attempted to install/enable the Gmail plugin as an approved outbound path, but the install was not completed, so no validation emails were sent.
+- Added `OPERATOR-FOUNDER-OUTREACH-CHECKLIST.md` so the human operator has one concise send checklist for the ReadMe manual-form target, the four direct-email `.eml` exports, the `hello@noticekit.tech` sender requirement, and the exact status updates to report back.
+- Updated `HELP-REQUEST.md`, `README.md`, and `changelog.html` to point at the new operator checklist while keeping outreach and interview logs unchanged.
+
+### Verification
+
+- Ran `git diff --check` successfully.
+- Re-ran local HTML href/src checks across 16 public HTML files; no missing local targets were found.
+- Confirmed `buyer-validation-outreach-batch-01.csv` still has all five founder/operator targets marked `ready_for_send`, with no outreach falsely marked as sent.
+- Committed the handoff checklist as `fe0d8ed` (`Add founder outreach operator checklist`).
+- Attempted a production deploy with Vercel, but Vercel returned the free daily deployment limit error `api-deployments-free-per-day`, so the public site has not yet been refreshed with this checklist.
+
+### Next
+
+- Retry `npx vercel --prod --yes` after the Vercel free daily deployment limit resets.
+- Have the human operator follow `OPERATOR-FOUNDER-OUTREACH-CHECKLIST.md` and report the actual send routes/timestamps in `HELP-STATUS.md`, or provide an approved SMTP/Resend/Gmail send path so Codex can execute the batch directly.
+
+### Analytics and Inbox Wording Cleanup
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, and checked for `DEPLOY-STATUS.md`; no broken-deploy file exists.
+- Confirmed the highest-priority incomplete task remains the first founder validation outreach send, but this workspace still has no approved outbound sender secret, Gmail connector, Resend key, SMTP credential, or local mail transport.
+- Picked the next unblocked cleanup: stale analytics and inbox wording that still reflected the pre-checkout or webhook-unavailable launch state.
+- Updated `ANALYTICS-DECISION.md` so the page-view-only analytics limit now applies until meaningful traffic, purchases, or repeated audit-intake usage justify more analysis.
+- Updated `README.md` so the private Blob-backed inbox is described as durable contact storage independent of optional webhook or email forwarding.
+- Added a public changelog entry for the analytics and inbox wording cleanup.
+
+### Verification
+
+- Ran `git diff --check` successfully.
+- Re-ran local HTML href/src checks across public HTML files; no missing local targets were found.
+- Confirmed the stale phrases `before checkout is live` and `webhook delivery is unavailable` are gone from the touched docs.
+- Committed the cleanup as `1c28fae` (`Update analytics and inbox wording`).
+- Deployed production with Vercel, producing deployment `dpl_ByL815gkfwwUA2kapBUPbDFGgmcg` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/` returns HTTP 200 after deployment.
+- Verified the live changelog includes the analytics and inbox wording entry.
+- Verified the live `ANALYTICS-DECISION.md` and `README.md` include the updated wording.
+- Verified `https://noticekit.tech/api/contact` still returns HTTP 405 for non-POST requests, matching the endpoint contract.
+
+### Next
+
+- Keep founder/operator validation outreach queued until the human sends the first five founder emails from `hello@noticekit.tech` or provides an approved outbound sender.
+
+### Launch State Cleanup
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and checked for `DEPLOY-STATUS.md`; no broken-deploy file exists.
+- Confirmed the highest-priority incomplete task is still the first founder/operator validation outreach send, but no SMTP, Resend, Gmail connector, local mail transport, or authenticated sender secret is available in this session.
+- Attempted to install/enable the Gmail plugin as the cleanest approved send path, but the install was not completed, so no validation emails were sent and `buyer-validation-interview-log.csv` remains untouched.
+- Picked the next unblocked cleanup: remove stale public/operator wording that still implied contact, checkout, mailbox delivery, or Stripe links were pending.
+- Updated `changelog.html` with a launch-state cleanup entry and revised older entries so they reflect the current live state: `noticekit.tech`, Stripe checkout, `/api/contact`, the public mailbox, private inbox, and webhook forwarding are live.
+- Updated `README.md`, `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, and `BUYER-VALIDATION-OUTREACH-BATCH-02.md` so validation outreach prerequisites now distinguish completed contact/checkout setup from the remaining outbound-sender blocker.
+- Updated `CONTACT-DELIVERY.md` so fallback language no longer implies webhook delivery is missing; the remaining optional gap is direct mailbox or CRM notification outside the private inbox.
+
+### Verification
+
+- Ran a targeted stale-wording search across the edited docs and public changelog; remaining matches only describe checkout links as live.
+- Ran `git diff --check` successfully.
+- Ran a local HTML `href`/`src` target scan across 16 public HTML files; no missing local targets were found.
+- Committed the cleanup as `ef7225c` (`Clean up launch state documentation`).
+- Deployed production with Vercel, producing deployment `dpl_31SsYwmBYkvr2ZKiRtNoyx9yqvSq` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/` returns HTTP 200 after deployment.
+- Verified the live changelog includes the launch-state cleanup entry and no longer contains the checked stale pending-mailbox/payment-link phrases.
+- Verified the live founder outreach batch doc says contact and checkout are live, with outbound sending as the remaining blocker.
+- Verified the live `PROGRESS.md` includes this launch-state cleanup entry.
+
+### Next
+
+- Keep founder/operator validation outreach as the next real validation step once a human sends the batch from `hello@noticekit.tech` or installs/provides an approved outbound sender.
+
+### Outreach Blocker Recheck
+
+- Re-read `PROGRESS.md`, both backlog files, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed `DEPLOY-STATUS.md` is not present, so there was no declared broken deployment to fix first.
+- Confirmed the only explicit incomplete backlog item is still the first founder validation send, and `HELP-STATUS.md` still shows the matching human request as pending.
+- Rechecked the local workspace for outbound sender environment variables and local mail transports; no `CONTACT_SMTP_URL`, `CONTACT_SMTP_HOST`, `CONTACT_RESEND_API_KEY`, `sendmail`, `mail`, `msmtp`, or `ssmtp` path is available.
+- Rechecked Vercel production env and confirmed it has contact notification, webhook, blob, Stripe, and site URL settings, but still no `CONTACT_SMTP_PASSWORD`, `CONTACT_SMTP_URL`, or `CONTACT_RESEND_API_KEY`.
+- Dry-ran `scripts/send-validation-batch.mjs` and confirmed the first founder batch remains ready: one manual-form target and four direct-email targets.
+- Restored the root `HELP-REQUEST.md` so the active human request referenced by `README.md` exists in the repo and mirrors the pending outreach blocker without creating a new duplicate request.
+- Corrected the README dependency note so it lists both `@vercel/blob` and `nodemailer`.
+- Committed the status repair as `d669de2` (`Restore active outreach help request`).
+- Deployed production with Vercel, producing deployment `dpl_E9f2P4k4nHx3MckrrKfuQhjteoNc` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/HELP-REQUEST.md` returns HTTP 200 with the active outreach sender request.
+- Verified `https://noticekit.tech/README.md` includes the corrected dependency note and active help-request reference.
+- Verified `https://noticekit.tech/` returns HTTP 200 after the deploy.
+
+### Next
+
+- Have the human operator send the first five founder validation emails from `hello@noticekit.tech`, or provide an approved sender connector/secret so Codex can run the batch directly.
+- After a send path exists, run the founder batch before advisor outreach and log real replies/interviews in `buyer-validation-interview-log.csv`.
+
+### Partner Tracker Readiness
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed `DEPLOY-STATUS.md` is not present, so there was no declared broken deployment to fix first.
+- Confirmed the top explicit validation task remains blocked in this workspace because no approved outbound sender secret, Gmail connector, or local mail transport is available.
+- Chose the next feasible operational cleanup: the manual consultant partner tracker still said contact setup was blocked even though `HELP-STATUS.md` confirms `hello@noticekit.tech` is live and Stripe checkout is ready.
+- Updated `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` so seeded partner prospects are `ready_to_send`, but remain queued behind the first founder/operator validation batch.
+- Updated `consultant-partner-outreach-tracker.csv` so all five seeded advisor prospects use `ready_to_send` and `wait_for_founder_batch` instead of stale contact-setup blocker values.
+- Updated `README.md` and `changelog.html` to reflect the partner tracker readiness cleanup.
+- Committed the tracker cleanup as `f901714` (`Update partner outreach readiness`).
+- Deployed production with Vercel, producing deployment `dpl_3s6bWWsnw9UGAQLnPEqbVknQdDoZ` and aliasing it to `https://noticekit.tech`.
+
+### Verification
+
+- Parsed `consultant-partner-outreach-tracker.csv` and confirmed all six rows have 15 columns.
+- Checked the edited partner tracker docs for stale `blocked_contact_setup` and `wait_for_contact_setup` usage; only the allowed status-value definition remains.
+- Re-ran local HTML href checks across 16 public HTML files, treating `/_vercel/insights/script.js` as a Vercel runtime asset; no missing local links were found.
+- Verified `https://noticekit.tech/CONSULTANT-PARTNER-OUTREACH-TRACKER.md` returns the 2026-04-22 tracker with `ready_to_send` and `wait_for_founder_batch`.
+- Verified the live `consultant-partner-outreach-tracker.csv` parses as five data rows with 15 columns and all seeded prospects queued behind the founder batch.
+- Verified `https://noticekit.tech/changelog.html` includes the partner tracker readiness entry.
+- Verified `https://noticekit.tech/` returns HTTP 200 after the deploy.
+
+### Next
+
+- Keep founder/operator validation outreach first; send the advisor/partner queue only after the founder batch is sent or explicitly paused by the human operator.
+
+### Paid Kit Fulfillment
+
+- Re-read `PROGRESS.md`, both backlogs, `IDENTITY.md`, `DECISIONS.md`, `HELP-STATUS.md`, and current app files before making changes.
+- Confirmed `DEPLOY-STATUS.md` is not present, so there was no declared production breakage to fix first.
+- Confirmed `HELP-STATUS.md` still leaves founder validation outreach blocked in this workspace because no approved outbound sender secret or mail connector is available.
+- Reviewed the current checkout and pricing state and identified a revenue-readiness gap: Stripe checkout is live, but the repo had the paid kit manifest rather than fulfillment-ready Starter and Pro files.
+- Created a private `paid-kits/` fulfillment package for manual early-access delivery:
+  - `paid-kits/README.md`
+  - Starter readme, subprocessor list CSV, notice email templates, objection-window tracker, approval checklist, evidence log, and attorney handoff note.
+  - Pro readme, multi-change register, customer notice matrix, DPA clause intake worksheet, attorney-review packet, procurement-ready summary, 90-day calendar, CSV guide, and evidence folder workflow.
+- Added `.vercelignore` to exclude `paid-kits/` from Vercel deployment so paid assets are not intentionally served as public static files.
+- Updated README.md and BACKLOG-PREMIUM.md to mark the fulfillment-ready paid kit task complete.
+- Added routine follow-up tasks to BACKLOG-CHEAP.md for Google Docs/PDF exports, zip packaging, and a first-buyer fulfillment log.
+
+### Verification
+
+- Parsed every paid-kit CSV with Python's `csv` module and confirmed consistent column counts.
+
+### Next
+
+- Keep buyer-validation outreach queued until the human sends the first five founder emails from `hello@noticekit.tech` or adds an approved outbound sender.
+- Convert the private paid-kit Markdown files into customer-friendly Google Docs or PDF exports before the first manual fulfillment.
+- After the orchestrator deploys this commit, verify `paid-kits/` is not publicly reachable on `https://noticekit.tech`.
+
 ### Mailbox Ready Recheck
 
 - Re-read `HELP-STATUS.md` and confirmed the public `hello@noticekit.tech` alias is live, can send outbound, and should be used anywhere the site previously relied on placeholder contact details.
@@ -846,3 +991,52 @@
 - Wait for the human to create `hello@noticekit.tech`, then publish the contact alias on the site and purchase next-steps page.
 - Configure `CONTACT_WEBHOOK_URL` or another delivery target for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - Start founder, DPO/privacy consultant, and attorney validation outreach after the public contact alias or an approved email-sending connector is live.
+
+## 2026-04-22
+
+### Paid Kit Fulfillment Packaging
+
+- Re-read `PROGRESS.md`, both backlog files, and `HELP-STATUS.md`; confirmed `DEPLOY-STATUS.md` is absent.
+- Confirmed buyer-validation outreach remains blocked in this workspace because no approved outbound sender exists and the human-send request is still pending.
+- Picked the next unblocked P0 revenue-readiness work from `BACKLOG-CHEAP.md`: first-buyer paid-kit exports, archives, and fulfillment logging.
+- Added `scripts/build-paid-kit-fulfillment.mjs` and the `npm run build:paid-kits` script to regenerate private paid-kit PDF exports and ZIP archives from the source folders.
+- Generated PDF exports for the Starter and Pro Markdown documents under `paid-kits/exports/`.
+- Generated `paid-kits/archives/noticekit-starter-early-access.zip` and `paid-kits/archives/noticekit-pro-early-access.zip`.
+- Added `paid-kits/FIRST-BUYER-FULFILLMENT-LOG.csv` with Stripe payment, product, delivery, archive, buyer, urgency, follow-up, and next-action fields.
+- Updated `paid-kits/README.md`, `README.md`, and `BACKLOG-CHEAP.md` to document the fulfillment artifacts and mark the three packaging tasks complete.
+
+### Verification
+
+- Ran `npm run build:paid-kits` successfully.
+- Verified each generated PDF starts with a valid `%PDF-` header.
+- Parsed both ZIP central directories with Node and confirmed Starter includes Starter source files plus Starter PDF exports, while Pro includes both Starter and Pro source files plus PDF exports.
+- Committed the fulfillment packaging work as `2c4d635` (`Package paid kits for first buyers`).
+- Deployed production with Vercel, producing deployment `dpl_G8dsuFyWmtwQNRDbQmNovXzmJ4Lg` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/` returns HTTP 200 after deployment.
+- Verified `https://noticekit.tech/paid-kits/archives/noticekit-starter-early-access.zip` returns HTTP 404, confirming the private paid-kit archive is excluded from the public deployment.
+- Verified live `README.md` and `PROGRESS.md` include the paid-kit fulfillment packaging update.
+
+### Next
+
+- Buyer-validation outreach remains the highest-priority incomplete task, but it still needs the human operator to send the first five founder emails from `hello@noticekit.tech` or provide an approved SMTP/Resend/Gmail send path.
+
+### Validation Outreach Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before making changes; confirmed `DEPLOY-STATUS.md` is absent.
+- Confirmed the only remaining incomplete P0 task is the first founder validation send/interview loop.
+- Rechecked local environment variables, `.env.local`, Vercel production env, and local mail commands; found no `CONTACT_SMTP_URL`, `CONTACT_SMTP_HOST`, `CONTACT_SMTP_PASSWORD`, `CONTACT_RESEND_API_KEY`, Gmail connector, `sendmail`, `mail`, `msmtp`, or `ssmtp` path available.
+- Dry-ran `node scripts/send-validation-batch.mjs --batch 01 --limit 5` and confirmed the founder batch still resolves to one manual-form target plus four direct-email targets, with no outreach marked as sent.
+- Suggested the Gmail plugin as the cleanest approved outbound path for this prepared batch, but the install was not completed in this session.
+- Left `buyer-validation-interview-log.csv` untouched because no real send, reply, referral, or interview occurred.
+- Committed the blocker recheck as `f7a2e18` (`Record validation outreach sender blocker`).
+- Deployed production with Vercel, producing deployment `dpl_9DcBRDsLXJr5ZBts9pZdLhK6Y3Kz` and aliasing it to `https://noticekit.tech`.
+
+### Verification
+
+- Verified `https://noticekit.tech/` returns HTTP 200 after the deployment.
+- Verified live `https://noticekit.tech/PROGRESS.md` includes this validation outreach recheck.
+
+### Next
+
+- Have the human operator send the first five founder emails from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, or install/provide an approved SMTP, Resend, or Gmail send path for `hello@noticekit.tech`.
+- Once a sender exists, run `node scripts/send-validation-batch.mjs --batch 01 --limit 5 --send` for the direct-email targets and submit the ReadMe manual-form target through the documented contact route.

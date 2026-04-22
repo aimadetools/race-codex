@@ -1,0 +1,179 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2230 >>
+stream
+BT
+/F1 10 Tf
+54 744 Td
+14 TL
+(NoticeKit Pro - csv import export guide) Tj
+T*
+() Tj
+T*
+(Generated: 2026-04-22) Tj
+T*
+() Tj
+T*
+(CSV IMPORT AND EXPORT GUIDE) Tj
+T*
+() Tj
+T*
+(These CSV files are designed for Google Sheets, Excel, Numbers, and browser-local workflows.) Tj
+T*
+() Tj
+T*
+(Rules) Tj
+T*
+() Tj
+T*
+(- Keep the first row as the header row.) Tj
+T*
+(- Do not rename headers.) Tj
+T*
+(- Add custom fields only after the standard columns.) Tj
+T*
+(- Use UTF-8 CSV.) Tj
+T*
+(- Use YYYY-MM-DD for dates.) Tj
+T*
+(- Use semicolons inside cells when listing multiple regions or data categories.) Tj
+T*
+(- Avoid formulas in shared CSV files.) Tj
+T*
+(- Keep status values consistent so filtering works.) Tj
+T*
+() Tj
+T*
+(Standard Notice CSV Header) Tj
+T*
+() Tj
+T*
+(```csv) Tj
+T*
+(vendor_name,vendor_purpose,change_type,processing_region,data_categories,customer_segment,notice_date,effective_date,objection_window_days,objection_deadline,notice_status,owner,evidence_url,review_notes) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Status Values) Tj
+T*
+() Tj
+T*
+(- draft: facts are still being gathered.) Tj
+T*
+(- review: waiting for product, security, privacy, or counsel review.) Tj
+T*
+(- approved: ready to send.) Tj
+T*
+(- sent: notice has been sent.) Tj
+T*
+(- objection_open: objection period is active.) Tj
+T*
+(- blocked: missing facts, review, approval, or customer routing.) Tj
+T*
+(- closed: objection window closed and evidence is archived.) Tj
+T*
+() Tj
+T*
+(Date Checks) Tj
+T*
+() Tj
+T*
+(Before sending a notice, confirm:) Tj
+T*
+() Tj
+T*
+(- notice_date is the date the customer notice will be sent.) Tj
+T*
+(- effective_date is not earlier than the notice deadline unless counsel approves the approach.) Tj
+T*
+(- objection_deadline equals notice_date plus objection_window_days.) Tj
+T*
+(- Every sent row has an evidence link or internal archive reference.) Tj
+T*
+() Tj
+T*
+(Spreadsheet Import Steps) Tj
+T*
+() Tj
+T*
+(1. Import the CSV into a new spreadsheet.) Tj
+T*
+(2. Set date columns to plain date format.) Tj
+T*
+(3. Freeze the header row.) Tj
+T*
+(4. Protect the header row if your spreadsheet tool supports it.) Tj
+T*
+(5. Filter by notice_status, owner, and objection_deadline.) Tj
+T*
+(6. Export a backup CSV after each material workflow update.) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 678 >>
+stream
+BT
+/F1 10 Tf
+54 744 Td
+14 TL
+() Tj
+T*
+(Browser-Local Generator Use) Tj
+T*
+() Tj
+T*
+(The public NoticeKit generator does not upload data. When using generated copy, paste the) Tj
+T*
+(final draft into your own document or evidence folder and update the relevant CSV evidence) Tj
+T*
+(fields.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Fulfillment disclaimer:) Tj
+T*
+(NoticeKit provides operational templates and workflow materials. It is not a law firm, does) Tj
+T*
+(not provide legal advice, and does not create an attorney-client relationship. Have qualified) Tj
+T*
+(counsel review your notices, subprocessors, objection process, and customer communications) Tj
+T*
+(before relying on them.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000002361 00000 n
+0000002487 00000 n
+0000003216 00000 n
+0000003342 00000 n
+0000003405 00000 n
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+3454
+%%EOF

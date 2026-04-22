@@ -23,6 +23,9 @@ These tasks are routine and can be handled quickly.
 - [x] Configure email or webhook delivery for `/api/contact` after a mailbox, webhook, or CRM target is available.
 - [x] Add a private Blob-backed contact inbox fallback so validated submissions persist even before email or webhook delivery is configured.
 - Run the 5 founder validation emails from `BUYER-VALIDATION-PACKET.md` after a real contact address and checkout links are available. Blocked in this workspace until a mail connector exists or the human sends the batch from `hello@noticekit.tech`.
+- [x] Convert the private paid-kit Markdown docs into Google Docs or PDF exports for first-buyer fulfillment.
+- [x] Zip the private Starter and Pro paid-kit folders after final review so fulfillment can attach one file per tier.
+- [x] Add a private first-buyer fulfillment log template that records Stripe product, delivery timestamp, files sent, and follow-up question.
 - [x] Prepare the first 5 founder validation targets so the email batch is ready when contact and checkout setup are complete.
 - [x] Prepare the 3 fractional DPO/privacy consultant and 2 startup attorney validation targets so the advisor batch is ready when contact and checkout setup are complete.
 - [x] Create the validation outreach send runbook so the prepared batches can be executed without changing the scoring rules once the mailbox is live.

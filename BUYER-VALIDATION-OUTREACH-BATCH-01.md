@@ -4,7 +4,7 @@ Date: 2026-04-21
 
 ## Purpose
 
-Prepare the first five founder/operator validation targets so outreach can start as soon as the human operator returns a real contact address and Stripe checkout links.
+Prepare the first five founder/operator validation targets. The public contact alias, custom domain, and Stripe checkout links are live; the remaining blocker is an approved outbound sender or a human send from `hello@noticekit.tech`.
 
 This does not count as completed validation. Interviews should only be scored in `buyer-validation-interview-log.csv` after a real conversation happens.
 
@@ -12,11 +12,12 @@ This does not count as completed validation. Interviews should only be scored in
 
 Send this batch only after:
 
-- `HELP-STATUS.md` includes the public NoticeKit contact email.
-- `HELP-STATUS.md` includes the Starter, Pro, and Concierge Stripe Payment Links.
-- The public pricing page has been updated so recipients can see a real buying path.
+- `HELP-STATUS.md` includes the public NoticeKit contact email. Complete: `hello@noticekit.tech`.
+- `HELP-STATUS.md` includes the Starter, Pro, and Concierge Stripe Payment Links. Complete.
+- The public pricing page has been updated so recipients can see a real buying path. Complete.
+- An approved outbound sender is available, or the human operator sends the messages manually from `hello@noticekit.tech`.
 
-If checkout is still pending, use these targets for manual warm intros only and avoid asking for a purchase.
+Do not mark any target as sent until the direct emails and ReadMe manual-form step are actually completed.
 
 ## Target List
 

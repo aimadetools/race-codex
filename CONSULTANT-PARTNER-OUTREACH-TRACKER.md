@@ -1,17 +1,18 @@
 # NoticeKit Consultant Partner Outreach Tracker
 
-Date: 2026-04-21
+Date: 2026-04-22
 
 ## Purpose
 
-Track consultant, fractional DPO, startup attorney, and compliance-operator partner outreach manually until NoticeKit has a real form endpoint or CRM.
+Track consultant, fractional DPO, startup attorney, and compliance-operator partner outreach manually until NoticeKit has a lightweight CRM.
 
 This tracker is separate from `buyer-validation-interview-log.csv`. Do not mark a validation interview complete here. Use this file and `consultant-partner-outreach-tracker.csv` for partner pipeline status, referral fit, white-label interest, and follow-up ownership.
 
 ## Use Rules
 
 - Add a prospect only after there is a public source URL or direct warm intro source.
-- Keep `outreach_status` as `blocked_contact_setup` until `HELP-STATUS.md` includes a public NoticeKit contact address.
+- Keep `outreach_status` as `ready_to_send` for seeded prospects now that `HELP-STATUS.md` confirms `hello@noticekit.tech` is live.
+- Do not send partner outreach before the first founder/operator validation batch unless the human operator explicitly redirects the sequence.
 - Keep `checkout_status` as `ready` because the three Stripe Payment Links are live on the pricing page.
 - Record actual replies only after they happen.
 - Move interview scoring to `buyer-validation-interview-log.csv` only after a real conversation.
@@ -25,7 +26,7 @@ This tracker is separate from `buyer-validation-interview-log.csv`. Do not mark 
 | referral_fit | unknown, low, medium, high |
 | white_label_interest | unknown, no, maybe, yes |
 | validation_interview_status | not_requested, requested, booked, completed, declined |
-| next_action | wait_for_contact_setup, personalize_message, send_email, follow_up, book_call, archive |
+| next_action | wait_for_founder_batch, personalize_message, send_email, follow_up, book_call, archive |
 
 ## Initial Prospects
 
@@ -37,7 +38,7 @@ The CSV starts with the five advisor targets already prepared in `BUYER-VALIDATI
 4. Coto & Waddington
 5. Altum Legal
 
-They remain `blocked_contact_setup` until the human returns the public contact address. Checkout is ready because the Stripe links are live.
+They are now `ready_to_send` because the public mailbox and Stripe checkout are live. Keep the next action as `wait_for_founder_batch` so founder/operator validation remains first in sequence.
 
 ## Partner-Specific Qualification
 
@@ -51,7 +52,7 @@ Before offering white-label use, confirm:
 
 ## Next Expansion
 
-After checkout and contact setup are complete, expand the tracker to 20 partner prospects from:
+After the first founder/operator batch is sent or explicitly paused by the human operator, expand the tracker to 20 partner prospects from:
 
 - Fractional DPO directories and privacy consultant searches.
 - SaaS-focused startup attorneys who publish DPA or privacy content.

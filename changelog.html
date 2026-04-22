@@ -42,6 +42,42 @@
 
         <section class="article">
           <section class="card">
+            <span class="tag">April 22, 2026</span>
+            <h2>Founder outreach handoff</h2>
+            <ul class="article-list">
+              <li>Added a compact operator checklist for sending the first five founder validation messages from the live NoticeKit mailbox.</li>
+              <li>Kept the outreach and interview logs unchanged until a real send or reply is confirmed.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <span class="tag">April 22, 2026</span>
+            <h2>Analytics and inbox wording</h2>
+            <ul class="article-list">
+              <li>Updated the analytics guardrail for the live-checkout launch state while keeping tracking limited to page views.</li>
+              <li>Clarified that the private contact inbox is durable storage alongside optional webhook or email forwarding.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <span class="tag">April 22, 2026</span>
+            <h2>Launch-state cleanup</h2>
+            <ul class="article-list">
+              <li>Cleaned up stale launch wording now that noticekit.tech, Stripe checkout, the public mailbox, and the contact intake endpoint are live.</li>
+              <li>Kept buyer-validation outreach marked as blocked on outbound sending only, so public docs do not imply the prepared emails were sent.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <span class="tag">April 22, 2026</span>
+            <h2>Partner tracker readiness</h2>
+            <ul class="article-list">
+              <li>Updated the manual consultant partner tracker now that the public mailbox and checkout links are live.</li>
+              <li>Kept partner outreach queued behind the first founder/operator validation batch.</li>
+            </ul>
+          </section>
+
+          <section class="card">
             <span class="tag">April 21, 2026</span>
             <h2>SEO and accessibility polish</h2>
             <ul class="article-list">
@@ -74,7 +110,7 @@
             <h2>Audit intake references</h2>
             <ul class="article-list">
               <li>Added a buyer-visible reference ID to each successful `/api/contact` intake submission.</li>
-              <li>Included the same reference ID in Vercel logs and optional webhook payloads so early audit requests can be reconciled while mailbox delivery is pending.</li>
+              <li>Included the same reference ID in Vercel logs and optional webhook payloads so early audit requests can be reconciled against the private inbox.</li>
             </ul>
           </section>
 
@@ -83,7 +119,7 @@
             <h2>Contact delivery handoff</h2>
             <ul class="article-list">
               <li>Documented the live `/api/contact` intake route, accepted fields, webhook environment variables, and verification steps.</li>
-              <li>Kept delivery marked as pending until a mailbox, CRM webhook, or approved notification endpoint exists.</li>
+              <li>Documented the private inbox and webhook forwarding path used before any optional email relay is added.</li>
             </ul>
           </section>
 
@@ -93,7 +129,7 @@
             <ul class="article-list">
               <li>Added a Vercel `/api/contact` endpoint for Concierge Audit intake submissions.</li>
               <li>Changed the audit page from a local worksheet into a form that validates and submits audit details.</li>
-              <li>Kept webhook or email delivery configurable while the public mailbox is still pending.</li>
+              <li>Kept webhook and email delivery configurable while validated submissions are persisted in the private inbox.</li>
             </ul>
           </section>
 
@@ -103,7 +139,7 @@
             <ul class="article-list">
               <li>Updated public URLs to noticekit.tech after the custom domain was connected.</li>
               <li>Replaced Starter, Pro, and Concierge Audit request CTAs with live Stripe Payment Links.</li>
-              <li>Changed the temporary intake page into a local audit prep worksheet while the public mailbox is pending.</li>
+              <li>Changed the temporary intake page into a local audit prep worksheet before the public mailbox went live.</li>
             </ul>
           </section>
 
@@ -112,7 +148,7 @@
             <h2>Partner preview</h2>
             <ul class="article-list">
               <li>Added a consultant and advisor partner preview page based on the Pro kit manifest.</li>
-              <li>Generated a downloadable PDF for referral and white-label conversations while public partner CTAs wait for checkout links.</li>
+              <li>Generated a downloadable PDF for referral and white-label conversations.</li>
               <li>Added a manual partner outreach tracker so advisor prospects can be managed separately from validation interview scoring.</li>
             </ul>
           </section>
@@ -121,8 +157,8 @@
             <span class="tag">April 21, 2026</span>
             <h2>Manual access intake</h2>
             <ul class="article-list">
-              <li>Routed Starter and Pro checkout CTAs through the structured intake page while Stripe Payment Links are pending.</li>
-              <li>Added product selection to the intake form so early access and audit requests use one temporary path.</li>
+              <li>Added product selection to the intake form so early access, partner, waitlist, and audit requests use one path.</li>
+              <li>Preserved the intake path for pre-purchase questions even after Stripe Payment Links went live.</li>
             </ul>
           </section>
 
@@ -140,7 +176,7 @@
             <h2>Audit intake page</h2>
             <ul class="article-list">
               <li>Added a temporary no-backend audit request page that opens a structured email draft.</li>
-              <li>Updated audit CTAs to use the intake page while payment links, form endpoint, and contact domain are pending.</li>
+              <li>Updated audit CTAs to use the intake page during the pre-checkout launch phase.</li>
             </ul>
           </section>
 

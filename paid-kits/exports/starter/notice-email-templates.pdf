@@ -1,0 +1,257 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1915 >>
+stream
+BT
+/F1 10 Tf
+54 744 Td
+14 TL
+(NoticeKit Starter - notice email templates) Tj
+T*
+() Tj
+T*
+(Generated: 2026-04-22) Tj
+T*
+() Tj
+T*
+(CUSTOMER NOTICE EMAIL TEMPLATES) Tj
+T*
+() Tj
+T*
+(Use these as draft operational language for attorney review. Replace bracketed fields before) Tj
+T*
+(sending.) Tj
+T*
+() Tj
+T*
+(Fields To Confirm First) Tj
+T*
+() Tj
+T*
+(- Vendor name: [vendor_name]) Tj
+T*
+(- Vendor purpose: [vendor_purpose]) Tj
+T*
+(- Data categories: [data_categories]) Tj
+T*
+(- Processing region: [processing_region]) Tj
+T*
+(- Affected customer segment: [customer_segment]) Tj
+T*
+(- Notice date: [notice_date]) Tj
+T*
+(- Planned effective date: [effective_date]) Tj
+T*
+(- Objection deadline: [objection_deadline]) Tj
+T*
+(- Contact address: [contact_email]) Tj
+T*
+() Tj
+T*
+(Short Notice) Tj
+T*
+() Tj
+T*
+(Subject: Upcoming subprocessor update) Tj
+T*
+() Tj
+T*
+(Hi [customer_name],) Tj
+T*
+() Tj
+T*
+(We are updating our subprocessor list to add [vendor_name] for [vendor_purpose].) Tj
+T*
+() Tj
+T*
+(This vendor may process [data_categories] for [customer_segment]. Processing may occur in) Tj
+T*
+([processing_region].) Tj
+T*
+() Tj
+T*
+(Notice date: [notice_date]) Tj
+T*
+(Planned effective date: [effective_date]) Tj
+T*
+(Objection deadline: [objection_deadline]) Tj
+T*
+() Tj
+T*
+(If your agreement includes a right to object, please send any objection to [contact_email] by) Tj
+T*
+(the objection deadline so we can review it before the change takes effect.) Tj
+T*
+() Tj
+T*
+(Regards,) Tj
+T*
+([sender_name]) Tj
+T*
+() Tj
+T*
+(Formal Notice) Tj
+T*
+() Tj
+T*
+(Subject: Notice of subprocessor change) Tj
+T*
+() Tj
+T*
+(Hi [customer_name],) Tj
+T*
+() Tj
+T*
+(We are providing notice of an upcoming subprocessor change for [company_name].) Tj
+T*
+() Tj
+T*
+(We plan to add [vendor_name] as a subprocessor for [vendor_purpose]. The relevant data) Tj
+T*
+(categories are [data_categories], and processing may occur in [processing_region]. The) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 2484 >>
+stream
+BT
+/F1 10 Tf
+54 744 Td
+14 TL
+(affected customer segment is [customer_segment].) Tj
+T*
+() Tj
+T*
+(We are providing this notice on [notice_date]. The planned effective date is [effective_date].) Tj
+T*
+(Based on our current workflow record, the objection deadline is [objection_deadline].) Tj
+T*
+() Tj
+T*
+(If your agreement provides an objection process for new subprocessors, please send any) Tj
+T*
+(objection or related questions to [contact_email] before the objection deadline. We will) Tj
+T*
+(review timely objections before proceeding with the change for the affected service.) Tj
+T*
+() Tj
+T*
+(Regards,) Tj
+T*
+([sender_name]) Tj
+T*
+() Tj
+T*
+(Enterprise Account Notice) Tj
+T*
+() Tj
+T*
+(Subject: Subprocessor change notice for [company_name]) Tj
+T*
+() Tj
+T*
+(Hi [customer_name],) Tj
+T*
+() Tj
+T*
+(We are sending this notice for your security, privacy, or procurement records.) Tj
+T*
+() Tj
+T*
+([company_name] plans to add [vendor_name] as a subprocessor supporting [vendor_purpose]. The) Tj
+T*
+(change may involve [data_categories] for [customer_segment]. Processing may occur in) Tj
+T*
+([processing_region].) Tj
+T*
+() Tj
+T*
+(Operational timeline:) Tj
+T*
+() Tj
+T*
+(- Notice date: [notice_date]) Tj
+T*
+(- Planned effective date: [effective_date]) Tj
+T*
+(- Objection deadline: [objection_deadline]) Tj
+T*
+(- Owner: [internal_owner]) Tj
+T*
+() Tj
+T*
+(We have recorded this change in our internal vendor and evidence workflow. If your agreement) Tj
+T*
+(includes an objection right or requires a specific review path, please send the objection or) Tj
+T*
+(routing instructions to [contact_email] before the objection deadline.) Tj
+T*
+() Tj
+T*
+(Regards,) Tj
+T*
+([sender_name]) Tj
+T*
+() Tj
+T*
+(Attorney Review Questions) Tj
+T*
+() Tj
+T*
+(- Does the agreement require notice for this customer or segment?) Tj
+T*
+(- Is the objection deadline calculated correctly?) Tj
+T*
+(- Does the notice need additional international transfer language?) Tj
+T*
+(- Should any customer segment receive a different version?) Tj
+T*
+(- Should the public subprocessor page be updated before, at the same time as, or after notice?) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Fulfillment disclaimer:) Tj
+T*
+(NoticeKit provides operational templates and workflow materials. It is not a law firm, does) Tj
+T*
+(not provide legal advice, and does not create an attorney-client relationship. Have qualified) Tj
+T*
+(counsel review your notices, subprocessors, objection process, and customer communications) Tj
+T*
+(before relying on them.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000002046 00000 n
+0000002172 00000 n
+0000004708 00000 n
+0000004834 00000 n
+0000004897 00000 n
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+4946
+%%EOF
