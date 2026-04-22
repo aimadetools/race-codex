@@ -7,7 +7,7 @@ Source URL: https://cotowaddington.com/1146-2/
 Public signal: Public tech startup counsel page references SaaS, AI, privacy/compliance, DPAs, and a sub-processor matrix example.
 Suggested contact path: Public website contact path for startup counsel.
 Public contact route: contact@cotowaddington.com or https://cotowaddington.com/contact-us/
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

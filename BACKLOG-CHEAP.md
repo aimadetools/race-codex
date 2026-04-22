@@ -55,6 +55,9 @@ These tasks are routine and can be handled quickly.
 - [x] Convert the interview scoring rubric into a simple Markdown or CSV log.
 - [x] Add a downloadable CSV sample.
 - [x] Add accessibility skip-link and stronger focus states.
+- [x] Add a subprocessor evidence log template blog post.
+- [x] Add a vendor replacement notice template blog post.
+- [x] Update the blog index, sitemap, and changelog for the new SEO pages.
 
 ## P2
 

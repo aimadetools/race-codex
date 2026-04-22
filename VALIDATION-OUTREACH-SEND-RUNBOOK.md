@@ -68,9 +68,15 @@ Update the CSV row status after each action:
 
 Only add rows to `buyer-validation-interview-log.csv` after an actual call, async interview response, or specific referral. Do not score silence, opens, clicks, or generic replies.
 
+Use `scripts/append-validation-interview.mjs --input <json>` to append a scored interview row once a real reply or call is available. The helper computes the total score and validation-positive flag from the rubric so the log stays consistent.
+
+Use `scripts/record-validation-feedback.mjs --input <json>` to log the reply in `COMMUNITY-FEEDBACK.md`, update the matching outreach CSV status, and optionally chain into `scripts/append-validation-interview.mjs` when the reply turns into a real interview.
+
 ## First-Day Execution
 
 Batch 01 is already executed. Next actions are reply monitoring, one polite follow-up after three business days for non-responders, and advisor batch 02 no earlier than the next business day.
+If no founder/operator replies have arrived by 2026-04-27, use `buyer-validation-outreach-batch-03.csv` and the matching drafts in `validation-outreach-drafts/` as the next five-target founder expansion.
+The prepared founder follow-up queue lives in `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and `node scripts/build-founder-follow-up-pass.mjs` can regenerate it from batch 01 when the queue changes.
 
 ## Reply-to-Interview Scheduling
 

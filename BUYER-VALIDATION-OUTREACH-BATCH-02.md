@@ -8,6 +8,8 @@ Prepare the fractional DPO/privacy consultant and startup attorney validation ta
 
 This does not count as completed validation. Interviews should only be scored in `buyer-validation-interview-log.csv` after a real conversation happens.
 
+Batch 02 was executed on 2026-04-22 under an explicit operator override to the sequencing hold. Keep the status records aligned with the actual send state so follow-up work is based on current information.
+
 ## Send Conditions
 
 Send this batch only after:

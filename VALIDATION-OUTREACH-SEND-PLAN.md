@@ -9,7 +9,7 @@ Direct-email targets identified: 8
 
 ## Current Priority
 
-Monitor founder replies from batch 01, then send advisor batch 02 after the one-business-day hold if founder replies are not already changing the validation questions.
+Monitor founder replies from batch 01 and keep interview conversion moving. Advisor batch 02 has now been sent on 2026-04-22 under an explicit operator override, including the Privageo public-inbox route.
 
 ## Batch 01
 
@@ -26,12 +26,12 @@ Status: sent on 2026-04-22.
 
 ## Batch 02
 
-Status: prepared for execution after the one-business-day founder-batch hold. Do not send before 2026-04-23 unless the human operator explicitly overrides the sequencing rule.
+Status: sent on 2026-04-22 under an explicit operator override to the sequencing hold.
 
 | Priority | Target | Segment | Route | Send method |
 |---:|---|---|---|---|
 | 1 | Bamboo Data Consulting | Fractional DPO/privacy consultant | info@bamboodc.com or https://www.bamboodataconsulting.com/contact-us | direct-email |
-| 2 | Privageo | Fractional DPO/privacy consultant | https://privageo.com/contact-us/ | manual-form |
+| 2 | Privageo | Fractional DPO/privacy consultant | https://privageo.com/contact-us/ | manual-form / public inbox |
 | 3 | ATOM | Fractional DPO/privacy consultant | info@theatomgroup.com or https://www.theatomgroup.com/contact | direct-email |
 | 4 | Coto & Waddington | Startup attorney/legal advisor | contact@cotowaddington.com or https://cotowaddington.com/contact-us/ | direct-email |
 | 5 | Altum Legal | Startup attorney/legal advisor | info@altumlegal.com or https://altumlegal.com/contact | direct-email |
@@ -43,3 +43,4 @@ Status: prepared for execution after the one-business-day founder-batch hold. Do
 - `manual` means the route needs a different delivery path before it can be sent.
 - Keep the first five founder/operator targets ahead of advisor outreach, matching `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
 - Dry-run verified on 2026-04-22 with `node scripts/send-validation-batch.mjs --batch 02 --limit 5 --transport resend`: four Resend direct-email routes and one Privageo manual-form route were selected.
+- Batch 02 executed on 2026-04-22: four direct-email rows were sent with Resend, and Privageo was sent to the public inbox `letschat@privageo.com` after confirming that address on the contact page.

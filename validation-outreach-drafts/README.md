@@ -7,12 +7,13 @@ Generated from the prepared buyer validation CSV files.
 1. Founder/operator batch 01.
 2. Wait one business day.
 3. Advisor batch 02.
+4. Founder/operator batch 03 if the 2026-04-27 no-reply check still needs expansion.
 
 ## Status
 
 Resend is available for approved direct-email routes from NoticeKit <hello@noticekit.tech>. Manual-form and contact-sales routes still require the public form path listed in each draft.
 
-Founder/operator batch 01 is sent. Use these drafts for reply handling, follow-ups, and advisor batch 02 after the documented one-business-day hold.
+Founder/operator batch 01 is sent. Advisor batch 02 is also sent under an explicit operator override on 2026-04-22. Use these drafts for reply handling, follow-ups, and any future batch 03 expansion after the documented hold and reply checks.
 
 The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for backup/manual sending.
 
@@ -28,3 +29,8 @@ The direct-email targets also have RFC-style .eml exports in validation-outreach
 - 03-atom.md
 - 04-coto-waddington.md
 - 05-altum-legal.md
+- 01-dromo.md
+- 02-saasync.md
+- 03-salesroom.md
+- 04-fieldguide.md
+- 05-thoropass.md

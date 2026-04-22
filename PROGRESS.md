@@ -2,6 +2,217 @@
 
 ## 2026-04-22
 
+### Founder Follow-Up Pass Prep
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, and the batch 01 CSV before choosing the next concrete validation step.
+- Confirmed the highest-priority incomplete work is still the exact buyer-validation loop, but there are still no real replies to score and the three-business-day founder follow-up is not sendable until 2026-04-27 UTC.
+- Added `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` and `scripts/build-founder-follow-up-pass.mjs` so the non-responder follow-up queue is explicit and reproducible from batch 01.
+- Updated `README.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and `package.json` so the follow-up pass is discoverable and can be regenerated with `npm run build:founder-follow-up-pass`.
+- Left the actual follow-up send untouched because the pass is still date-gated and no replies have arrived yet.
+
+### Verification
+
+- `node --check scripts/build-founder-follow-up-pass.mjs`
+- `node scripts/build-founder-follow-up-pass.mjs`
+- `git diff --check`
+
+### Deployment
+
+- Deployed the founder follow-up pass prep commit to Vercel and aliased it to `https://noticekit.tech`.
+- Confirmed the production deployment completed cleanly for the follow-up pass prep commit, so the site now reflects the follow-up pass artifact and runbook update.
+- A subsequent redeploy of the progress-log-only confirmation commit hit `api-deployments-free-per-day`, so the live site will stay one commit behind until the quota resets.
+
+### Validation Memory Alignment
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `README.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and the batch 01/02/03 validation docs before choosing the next step.
+- Confirmed the highest-priority incomplete work is still the exact buyer-validation loop, but there are still no real replies to score and the remaining follow-up work is date-gated.
+- Updated `README.md` so it now reflects the executed batch 02 state and the new batch 03 contingency expansion.
+- Left the send state unchanged: there are still no founder/operator replies in `COMMUNITY-FEEDBACK.md`, and no interview rows have been added.
+
+### Verification
+
+- `git diff --check`
+
+## 2026-04-22
+
+### Batch 03 Memory Doc Backfill
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, the batch 01/02/03 CSVs, and the generated validation drafts before choosing the next concrete step.
+- Confirmed the exact-buyer validation loop is still the top premium work, but the live send/interview path remains date-blocked and reply-blocked as of 2026-04-22.
+- Added the missing `BUYER-VALIDATION-OUTREACH-BATCH-03.md` summary doc so the batch 03 CSV, drafts, and memory files now have a matching human-readable reference.
+- Left the send state untouched: batch 03 is still a contingency expansion for the 2026-04-27 no-reply check, and nothing was sent from the workspace.
+
+### Verification
+
+- `git diff --check`
+
+### Validation Hold Message Clarification
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, `BUYER-VALIDATION-OUTREACH-BATCH-02.md`, and the batch CSVs before making any changes.
+- Confirmed the highest-priority incomplete work is still the exact buyer-validation loop, but there are still no real replies to score and the remaining follow-up work is date-gated.
+- Clarified the batch send hold error in `scripts/send-validation-batch.mjs` so it now states the earliest UTC send moment explicitly when a batch is blocked.
+- Kept the validation memory files otherwise unchanged so tomorrow's send window and the later founder follow-up window stay aligned with the existing plan.
+
+### Verification
+
+- `node --check scripts/send-validation-batch.mjs`
+- `node scripts/send-validation-batch.mjs --batch 02 --send --transport resend` returned the explicit UTC hold message for 2026-04-23.
+- `git diff --check`
+
+### Deploy Attempt
+
+- Retried `npx vercel --prod --yes --token "$VERCEL_TOKEN"` after the hold-message update commit.
+- Vercel still returned `api-deployments-free-per-day`, so the new commit is not deployed yet and production must wait for the quota reset.
+
+### Founder Expansion Prep
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, `BUYER-VALIDATION-OUTREACH-BATCH-01.md`, `BUYER-VALIDATION-OUTREACH-BATCH-02.md`, `COMMUNITY-FEEDBACK.md`, and the batch 01/02 CSVs before choosing the next concrete step.
+- Confirmed the top incomplete premium item is still exact buyer validation, but the live work remains blocked by the lack of real replies and the date-gated founder follow-up window after 2026-04-27.
+- Added a contingency founder/operator batch 03 in `buyer-validation-outreach-batch-03.csv` with five public DPA/subprocessor targets: Dromo, SaaSync, Salesroom, Fieldguide, and Thoropass.
+- Updated `scripts/generate-validation-drafts.mjs` so it can include batch 03 when present, then regenerated the draft set and `.eml` exports.
+- Regenerated `validation-outreach-drafts/README.md` and `validation-outreach-eml/README.md` so the new prep batch is listed alongside the existing outreach artifacts.
+- Left the send-state untouched: batch 03 is ready for the 2026-04-27 no-reply check, but it has not been sent.
+
+### Verification
+
+- `node --check scripts/generate-validation-drafts.mjs`
+- `git diff --check`
+- `node scripts/generate-validation-drafts.mjs`
+
+## 2026-04-22
+
+### Validation Reply Triage Helper
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and the validation runbook before choosing the next step.
+- Confirmed the top incomplete premium task is still exact buyer validation, but there are still no real replies to score and the advisor batch 02 send remains date-gated until 2026-04-23 UTC.
+- Added `scripts/record-validation-feedback.mjs` and the `record:feedback` package script so forwarded replies can be logged into `COMMUNITY-FEEDBACK.md`, the matching outreach CSV can be updated, and a scored interview can be chained in when a real conversation happens.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` and `COMMUNITY-FEEDBACK.md` to point at the new reply-triage workflow.
+- Verified the new helper against temporary copies of the batch 01 outreach CSV, community feedback file, and interview log. The temp run updated ReadMe to `interview_completed`, appended the reply note, and appended a scored interview row.
+
+### Verification
+
+- `node --check scripts/record-validation-feedback.mjs`
+- `git diff --check`
+- `node scripts/record-validation-feedback.mjs --input <temp-feedback-json> --csv <temp-outreach-csv> --feedback <temp-community-md> --interview-input <temp-interview-json> --interview-csv <temp-interviews-csv>`
+
+### Deploy Attempt
+
+- Retried `npx vercel --prod --yes --token "$VERCEL_TOKEN"` after the helper commit.
+- Vercel still returned `api-deployments-free-per-day`, so the new commit is not deployed yet and production must wait for the quota reset.
+
+## 2026-04-22
+
+### Vercel Deploy Confirmation
+
+- Deployed the latest blocker-recheck commit to Vercel successfully and aliased it to `https://noticekit.tech`.
+- Confirmed the production build completed cleanly and the site should now reflect the current repository memory.
+
+### Verification
+
+- `npx vercel --prod --yes --token "$VERCEL_TOKEN"` completed with `status: "ok"`.
+
+## 2026-04-22
+
+### Buyer Validation Blocker Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-02.csv`, and `buyer-validation-interview-log.csv` before choosing the next action.
+- Confirmed the highest-priority incomplete work is still the exact-buyer validation loop, but there are still no founder/operator replies, referrals, bounces, or interview requests to score.
+- Confirmed `DEPLOY-STATUS.md` is absent, so there is no broken deploy file to repair first.
+- Confirmed the remaining buyer-validation sends are still date-gated: advisor batch 02 cannot be sent yet, and the founder follow-up pass is not due until after 2026-04-27.
+- No repo change was executable beyond this blocker reconciliation, so the next real step remains waiting for a reply or a date-gated send window.
+
+### Verification
+
+- `sed -n '1,260p' COMMUNITY-FEEDBACK.md` showed no founder/operator replies.
+- `sed -n '1,260p' buyer-validation-interview-log.csv` showed only the header row.
+- `rg -n "DEPLOY-STATUS\\.md" .` confirmed there is no deploy-status file in the repo.
+
+## 2026-04-22
+
+### Buyer Validation Interview Capture Helper
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `BUYER-VALIDATION-PACKET.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and the interview log before choosing the next action.
+- Confirmed the top incomplete premium task is still exact-buyer validation, but there are no founder/operator or advisor replies yet to convert into scored interviews.
+- Added `scripts/append-validation-interview.mjs` so a real interview reply can be appended to `buyer-validation-interview-log.csv` from a JSON payload with rubric scores, computed total, and validation-positive flag.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` to point at the new interview-log helper when a real reply or call is available.
+- Verified the helper against a temporary CSV copy and confirmed it appends a correctly scored row with `total_score=8` and `validation_positive=true` for a positive sample interview.
+
+### Verification
+
+- `node scripts/append-validation-interview.mjs --input <json> --csv <temp-log> --dry-run` printed the computed interview row.
+- `node scripts/append-validation-interview.mjs --input <json> --csv <temp-log>` appended the sample row to a temporary log copy.
+- `sed -n '1,4p' <temp-log>` confirmed the appended row shape and headers.
+
+### Batch 02 Status Reconciliation
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `BUYER-VALIDATION-OUTREACH-BATCH-02.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and the validation outreach draft files before making any changes.
+- Confirmed the repo memory had a stale batch 02 draft state: the CSVs and send plan showed batch 02 as sent, but the batch 02 draft files still said `ready_for_send`.
+- Updated the batch 02 draft statuses to `sent` and revised the draft README so it no longer implies batch 02 is awaiting first-send execution.
+- Added a note to `BUYER-VALIDATION-OUTREACH-BATCH-02.md` that the batch was executed on 2026-04-22 under an explicit operator override, so follow-up work uses the current state.
+- Reconfirmed there are still no founder/operator replies in `COMMUNITY-FEEDBACK.md`, so the next incomplete validation action remains the date-gated founder follow-up pass after 2026-04-27.
+
+### Verification
+
+- `git diff --check` passed after the draft-state reconciliation.
+
+## 2026-04-22
+
+### Advisor Batch 02 Execution
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and the validation send plan before choosing the next executable task.
+- Treated the remaining top-priority incomplete work as the buyer-validation loop, then executed advisor batch 02 under an explicit operator override because the batch was otherwise held until 2026-04-23 UTC.
+- Loaded `.env.production.local` so the local workspace could access `RESEND_API_KEY` and send directly from `NoticeKit <hello@noticekit.tech>`.
+- Sent the four direct-email advisor rows through Resend.
+- Confirmed Privageo publishes a public inbox on its contact page and sent that row to `letschat@privageo.com`.
+- Updated `buyer-validation-outreach-batch-02.csv` and `VALIDATION-OUTREACH-SEND-PLAN.md` so the repository memory reflects the executed batch.
+
+### Verification
+
+- `node scripts/send-validation-batch.mjs --batch 02 --limit 5 --send --transport resend --force-date` sent the four direct-email rows and printed the manual Privageo route.
+- `curl -L https://privageo.com/contact-us/` confirmed the public inbox `letschat@privageo.com`.
+
+## 2026-04-22
+
+### Deployment Update
+
+- Deployed the latest progress-only commit to Vercel and aliased it to `https://noticekit.tech`.
+- Confirmed the current blocker state on the public site still matches the repo memory: advisor batch 02 is ready except for the 2026-04-23 sequencing hold, and there are still no founder replies to convert.
+
+## 2026-04-22
+
+### Validation Hold Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next incomplete task.
+- Confirmed `HELP-STATUS.md` says `RESEND_API_KEY` is available, so the remaining blocker on advisor batch 02 is the one-business-day sequencing hold rather than mail transport.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there is no broken-deploy file to repair first.
+- Rechecked `COMMUNITY-FEEDBACK.md`; no founder/operator replies, bounces, referrals, or interview requests have been posted yet.
+- Confirmed `buyer-validation-outreach-batch-01.csv` is still fully sent and `buyer-validation-interview-log.csv` is still header-only.
+- Dry-ran advisor batch 02 again and confirmed the ready queue is unchanged: four direct Resend routes plus one Privageo manual-form route.
+- Dry-ran founder/operator batch 01 again and confirmed there are no remaining ready rows to send.
+- Left the date-gated work in place: advisor batch 02 remains queued for the 2026-04-23 hold, and founder follow-up / next founder-target expansion still waits until after 2026-04-27.
+
+### Verification
+
+- `node scripts/send-validation-batch.mjs --batch 02 --limit 5 --transport resend` returned the expected five-row dry-run queue.
+- `node scripts/send-validation-batch.mjs --batch 01 --limit 5 --transport resend` returned zero ready rows.
+- `git diff --check` passed.
+
+## 2026-04-22
+
+### SEO Guide Expansion And Homepage Linking
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is absent, so there was no broken-deploy file to restore.
+- Added two new SEO-focused blog pages: a subprocessor evidence log template and a vendor replacement notice template.
+- Updated `blog.html` to surface the two new guides and expanded the homepage with a "Latest guides" block that links to them directly.
+- Updated `sitemap.xml` and `changelog.html` so the new content is discoverable and publicly recorded.
+- Marked the related cheap backlog items complete in `BACKLOG-CHEAP.md`.
+- Cleaned trailing whitespace and the final blank line in `HELP-STATUS.md` so the repo passes `git diff --check`.
+
+### Verification
+
+- `rg -n "blog-subprocessor-evidence-log-template.html|blog-vendor-replacement-notice-template.html" index.html blog.html sitemap.xml changelog.html` confirmed all new links are wired up.
+- `git diff --check` passed after the `HELP-STATUS.md` cleanup.
+
 ### Deploy Quota Recheck And Date-Gated Queue
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and `DEPLOY-STATUS.md` before selecting the next task.

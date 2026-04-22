@@ -270,26 +270,41 @@ function renderDraft(row, batchLabel) {
 }
 
 async function main() {
-  const batch01 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-01.csv"), "utf8"));
-  const batch02 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-02.csv"), "utf8"));
+  const batchFiles = [
+    { label: "batch-01", file: "buyer-validation-outreach-batch-01.csv" },
+    { label: "batch-02", file: "buyer-validation-outreach-batch-02.csv" },
+    { label: "batch-03", file: "buyer-validation-outreach-batch-03.csv" }
+  ];
 
   await mkdir(OUTPUT_DIR, { recursive: true });
   await mkdir(EML_OUTPUT_DIR, { recursive: true });
 
   const files = [];
   const emlFiles = [];
-  for (const row of batch01) {
-    files.push({ ...renderDraft(row, "batch-01"), batch: "batch-01" });
-    const emlDraft = buildEml(row, "batch-01");
-    if (emlDraft) {
-      emlFiles.push(emlDraft);
+  const loadedBatches = [];
+
+  for (const batchFile of batchFiles) {
+    try {
+      const text = await readFile(join(ROOT, batchFile.file), "utf8");
+      loadedBatches.push({
+        label: batchFile.label,
+        rows: parseCsv(text)
+      });
+    } catch (error) {
+      if (error && error.code === "ENOENT") {
+        continue;
+      }
+      throw error;
     }
   }
-  for (const row of batch02) {
-    files.push({ ...renderDraft(row, "batch-02"), batch: "batch-02" });
-    const emlDraft = buildEml(row, "batch-02");
-    if (emlDraft) {
-      emlFiles.push(emlDraft);
+
+  for (const batch of loadedBatches) {
+    for (const row of batch.rows) {
+      files.push({ ...renderDraft(row, batch.label), batch: batch.label });
+      const emlDraft = buildEml(row, batch.label);
+      if (emlDraft) {
+        emlFiles.push(emlDraft);
+      }
     }
   }
 
@@ -311,12 +326,13 @@ async function main() {
     `1. Founder/operator batch 01.`,
     `2. Wait one business day.`,
     `3. Advisor batch 02.`,
+    `4. Founder/operator batch 03 if the 2026-04-27 no-reply check still needs expansion.`,
     ``,
     `## Status`,
     ``,
     `Resend is available for approved direct-email routes from NoticeKit <hello@noticekit.tech>. Manual-form and contact-sales routes still require the public form path listed in each draft.`,
     ``,
-    `Founder/operator batch 01 is sent. Use these drafts for reply handling, follow-ups, and advisor batch 02 after the documented one-business-day hold.`,
+    `Founder/operator batch 01 is sent. Advisor batch 02 is also sent under an explicit operator override on 2026-04-22. Use these drafts for reply handling, follow-ups, and any future batch 03 expansion after the documented hold and reply checks.`,
     ``,
     `The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for backup/manual sending.`,
     ``,

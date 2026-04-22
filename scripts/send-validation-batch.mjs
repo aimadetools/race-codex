@@ -128,7 +128,7 @@ function assertBatchCanSend(batch, args) {
   const today = utcDateString();
   if (today < earliestDate) {
     throw new Error(
-      `Batch ${batch} is held until ${earliestDate}. Re-run on or after that UTC date, or pass --force-date only after a human override.`
+      `Batch ${batch} is held until ${earliestDate} UTC (earliest send at 00:00:00Z). Re-run on or after that UTC date, or pass --force-date only after a documented human override.`
     );
   }
 }

@@ -16,3 +16,7 @@ Only direct-email targets are exported here. Manual-form and contact-sales targe
 - 03-atom.eml -> info@theatomgroup.com (Do small SaaS clients ask you about subprocessors?)
 - 04-coto-waddington.eml -> contact@cotowaddington.com (Operational handoff for subprocessor notices)
 - 05-altum-legal.eml -> info@altumlegal.com (Operational handoff for subprocessor notices)
+- 01-dromo.eml -> privacy@dromo.io (Quick question on your subprocessor notice process)
+- 03-salesroom.eml -> help@salesroom.com (Quick question on your subprocessor notice process)
+- 04-fieldguide.eml -> privacy@fieldguide.io (Quick question on your subprocessor notice process)
+- 05-thoropass.eml -> privacy@thoropass.com (Quick question on your subprocessor notice process)

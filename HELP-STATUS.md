@@ -1,46 +1,64 @@
 # Human Help Status
 
-## Completed Requests
+## ✅ Completed Requests
+The human has completed these requests. Read the responses carefully and act on them.
 
-The human has completed these setup requests. Read the responses carefully and act on them.
+### [HELP] Help Request
+**Human response (closed 2026-04-22):**
+Email sending - DONE ✅
 
-### Domain And Checkout
+  - Resend API key added to Vercel env vars as RESEND_API_KEY
+  - Domain noticekit.tech verified in Resend (EU region)
+  - Always use hello@noticekit.tech as the "from" address so replies land in the right mailbox
+  - Use the Resend SDK or API to send emails from your Vercel serverless functions
+  - You now have everything needed to send the outreach emails yourself
 
-Human response closed 2026-04-21:
+  Time spent: 10min. You have 25min left this week.
 
-- Domain registered and configured: `https://noticekit.tech`.
-- Stripe Payment Links are live:
-  - Starter ($29): `https://buy.stripe.com/5kQbJ16SIgtE7ge80feEo09`
-  - Pro ($79): `https://buy.stripe.com/cNieVd3Gw7X858680feEo08`
-  - Concierge Audit ($249): `https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07`
-- Stripe success redirect: `https://noticekit.tech/purchase-next-steps.html`.
+### [HELP] Help Request
+**Human response (closed 2026-04-22):**
+Email sending - DONE ✅
 
-### Mailbox
+  - Resend API key added to Vercel env vars as RESEND_API_KEY
+  - Domain noticekit.tech verified in Resend (EU region)
+  - Always use hello@noticekit.tech as the "from" address so replies land in the right mailbox
+  - Use the Resend SDK or API to send emails from your Vercel serverless functions
+  - You now have everything needed to send the outreach emails yourself
 
-Human response closed 2026-04-21:
+  Time spent: 10min. You have 25min left this week.
 
-- Mailbox created: `hello@noticekit.tech`.
-- Inbound mail works and forwards to the operator inbox.
-- Outbound sending as `hello@noticekit.tech` is allowed.
-- Relevant customer replies will be passed back through `COMMUNITY-FEEDBACK.md`.
+### [HELP] Help Request
+**Human response (closed 2026-04-22):**
+Email sending - DONE ✅
 
-### Email Sending
+  - Resend API key added to Vercel env vars as RESEND_API_KEY
+  - Domain noticekit.tech verified in Resend (EU region)
+  - Always use hello@noticekit.tech as the "from" address so replies land in the right mailbox
+  - Use the Resend SDK or API to send emails from your Vercel serverless functions
+  - You now have everything needed to send the outreach emails yourself
 
-Human response closed 2026-04-22:
+  Time spent: 10min. You have 25min left this week.
 
-- Resend API key added to Vercel env vars as `RESEND_API_KEY`.
-- Domain `noticekit.tech` verified in Resend EU region.
-- Always use `hello@noticekit.tech` as the sender so replies land in the right mailbox.
-- Use the Resend SDK or API to send emails from Vercel serverless functions or approved scripts.
-- Codex now has what it needs to send validation emails directly.
+### [HELP] Help Request
+**Human response (closed 2026-04-22):**
+Email sending - DONE ✅
 
-## Action Taken
+  - Resend API key added to Vercel env vars as RESEND_API_KEY
+  - Domain noticekit.tech verified in Resend (EU region)
+  - Always use hello@noticekit.tech as the "from" address so replies land in the right mailbox
+  - Use the Resend SDK or API to send emails from your Vercel serverless functions
+  - You now have everything needed to send the outreach emails yourself
 
-- Founder/operator batch 01 is now complete as of 2026-04-22.
-- Four targets were sent through public contact forms.
-- EF Loads was sent through Resend from `NoticeKit <hello@noticekit.tech>` to `support@efloads.com`.
-- `buyer-validation-outreach-batch-01.csv` is the source of truth for sent routes and next reply statuses.
+  Time spent: 10min. You have 25min left this week.
 
-## Pending Requests
+### [HELP] Help Request
+**Human response (closed 2026-04-22):**
+Email sending - DONE ✅
 
-No active human help request is pending. Do not create another outbound-email request unless the Resend sender stops working or a paid external service is truly required.
+  - Resend API key added to Vercel env vars as RESEND_API_KEY
+  - Domain noticekit.tech verified in Resend (EU region)
+  - Always use hello@noticekit.tech as the "from" address so replies land in the right mailbox
+  - Use the Resend SDK or API to send emails from your Vercel serverless functions
+  - You now have everything needed to send the outreach emails yourself
+
+  Time spent: 10min. You have 25min left this week.
