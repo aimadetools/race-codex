@@ -35,6 +35,7 @@ These tasks are routine and can be handled quickly.
 ## P1
 
 - [x] Write blog post: "Subprocessor Change Notice Template for SaaS Teams".
+- [x] Write blog post: "Subprocessor Notice Email Template for SaaS Teams".
 - [x] Write blog post: "How to Track a DPA Objection Window".
 - [x] Write blog post: "Subprocessor List Template: What Small SaaS Teams Usually Miss".
 - [x] Write blog post: "DPA subprocessor objection period examples".
