@@ -35,6 +35,7 @@ The first version includes:
 - `BUYER-VALIDATION-OUTREACH-BATCH-02.md` and `buyer-validation-outreach-batch-02.csv` cover the three fractional DPO/privacy consultant and two startup attorney validation targets; batch 02 was executed on 2026-04-22 under an explicit operator override.
 - `BUYER-VALIDATION-OUTREACH-BATCH-03.md` and `buyer-validation-outreach-batch-03.csv` define the contingency founder/operator expansion to use only if the 2026-04-27 no-reply check still needs five more public targets.
 - `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
+- `VALIDATION-STATUS.md` is the canonical buyer-validation status snapshot for reply monitoring and next-action checks.
 - `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
 - `OPERATOR-FOUNDER-OUTREACH-CHECKLIST.md` preserves the human-sender checklist used for the first founder validation batch.
 - `changelog.html` is the public changelog for product, content, and deployment updates.
@@ -65,6 +66,7 @@ The first version includes:
 - `VALIDATION-OUTREACH-SEND-PLAN.md` classifies the prepared outreach queue into direct-email and manual-send targets so the first outreach day is unambiguous.
 - `scripts/generate-validation-drafts.mjs` generates per-target outreach draft files from the prepared buyer validation CSVs.
 - `scripts/build-founder-follow-up-pass.mjs` regenerates the batch 01 non-responder follow-up queue and due date.
+- `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
 - `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue through SMTP or Resend when an approved sender is available.
 - `scripts/build-validation-send-plan.mjs` regenerates the send-plan summary from the prepared outreach CSVs.
 - `scripts/build-paid-kit-fulfillment.mjs` regenerates the private paid-kit PDF exports and ZIP archives for first-buyer fulfillment.

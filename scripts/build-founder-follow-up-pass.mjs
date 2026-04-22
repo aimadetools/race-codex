@@ -169,7 +169,7 @@ const output = [
   "",
   "## Send Guardrails",
   "",
-  "- Do not send before 2026-04-27 UTC.",
+  `- Do not send before ${followUpDate} UTC.`,
   "- Do not send to any target that has already replied or bounced.",
   "- Keep advisor outreach and any future batch expansion separate from this pass.",
   ""

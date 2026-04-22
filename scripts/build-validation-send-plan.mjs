@@ -112,6 +112,15 @@ function planSection(title, rows) {
 
 const batch01 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-01.csv"), "utf8"));
 const batch02 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-02.csv"), "utf8"));
+let batch03 = [];
+
+try {
+  batch03 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-03.csv"), "utf8"));
+} catch (error) {
+  if (!error || error.code !== "ENOENT") {
+    throw error;
+  }
+}
 
 const normalized01 = batch01.map((row) => ({
   priority: row.priority,
@@ -129,9 +138,27 @@ const normalized02 = batch02.map((row) => ({
   sendMethod: classifyRoute(row.public_contact_route)
 }));
 
+const normalized03 = batch03.map((row) => ({
+  priority: row.priority,
+  target: row.company,
+  segment: row.segment,
+  route: row.public_contact_route,
+  sendMethod: classifyRoute(row.public_contact_route)
+}));
+
 const directEmailCount = [...normalized01, ...normalized02].filter(
   (row) => row.sendMethod === "direct-email"
 ).length;
+
+const batch03Section = normalized03.length
+  ? [
+      "## Batch 03 contingency",
+      "",
+      "Status: prepared for the 2026-04-27 no-reply check; not part of the active send queue yet.",
+      "",
+      planSection("", normalized03)
+    ].join("\n")
+  : "";
 
 const output = [
   "# NoticeKit Validation Outreach Send Plan",
@@ -139,26 +166,34 @@ const output = [
   "Date: 2026-04-22",
   "",
   "This plan translates the prepared outreach batches into the first operational send queue.",
-  "Batch 01 is now sent; use this plan for batch 02 routing and follow-up planning.",
+  "Batch 01 and batch 02 are now sent; use this plan for reply handling, interview conversion, and the batch 03 contingency check.",
   "",
   `Direct-email targets identified: ${directEmailCount}`,
   "",
   "## Current Priority",
   "",
-  "Monitor founder replies from batch 01, then send advisor batch 02 after the one-business-day hold if founder replies are not already changing the validation questions.",
+  "Monitor founder replies from batch 01, convert real replies into scored interviews, and keep batch 03 reserved for the 2026-04-27 no-reply check.",
   "",
   "## Batch 01",
   "",
   "Status: sent on 2026-04-22.",
   "",
   planSection("", normalized01),
-  planSection("Batch 02", normalized02),
+  [
+    "## Batch 02",
+    "",
+    "Status: sent on 2026-04-22 under an explicit operator override to the sequencing hold.",
+    "",
+    planSection("", normalized02)
+  ].join("\n"),
+  batch03Section,
   "## Notes",
   "",
   "- `direct-email` means the public route is a real email address or `mailto:` link.",
   "- `manual-form` means the public route is a contact page, support widget, or contact-sales flow that needs human submission.",
   "- `manual` means the route needs a different delivery path before it can be sent.",
   "- Keep the first five founder/operator targets ahead of advisor outreach, matching `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.",
+  "- Batch 03 is a contingency expansion and stays out of the active send queue until the 2026-04-27 no-reply check says more founder/operator targets are needed.",
   ""
 ].join("\n");
 

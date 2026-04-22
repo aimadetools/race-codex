@@ -58,6 +58,9 @@ These tasks are routine and can be handled quickly.
 - [x] Add a subprocessor evidence log template blog post.
 - [x] Add a vendor replacement notice template blog post.
 - [x] Update the blog index, sitemap, and changelog for the new SEO pages.
+- [x] Add a subprocessor notice checklist blog post.
+- [x] Add a subprocessor objection response template blog post.
+- [x] Update the homepage, blog index, sitemap, and changelog for the new checklist and response template.
 
 ## P2
 

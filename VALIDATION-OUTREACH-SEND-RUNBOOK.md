@@ -17,6 +17,8 @@ The mailbox alias `hello@noticekit.tech` is live, Stripe checkout is live, and t
 
 Founder/operator batch 01 was completed on 2026-04-22: four targets were reached through public contact forms, and the remaining EF Loads direct-email target was sent through Resend from `NoticeKit <hello@noticekit.tech>`.
 
+Advisor batch 02 was also completed on 2026-04-22 under an explicit operator override to the sequencing hold. The next active validation task is reply monitoring and interview conversion, with batch 03 reserved for the 2026-04-27 no-reply check.
+
 Use `scripts/send-validation-batch.mjs` to print the ready queue or send approved future batches through SMTP or Resend:
 
 ```bash
@@ -40,7 +42,7 @@ Before sending the first message, confirm all of the following:
 ## Batch Order
 
 1. Founder/operator outreach from batch 01 has been sent.
-2. Wait at least one business day before sending advisor outreach from batch 02.
+2. Wait at least one business day before sending advisor outreach from batch 02, unless an explicit operator override already handled it.
 3. Send no more than five cold validation emails per day from a newly created mailbox.
 4. Send one follow-up after three business days if there is no response.
 5. Stop outreach to any recipient who declines, unsubscribes, or redirects the request.
@@ -74,7 +76,7 @@ Use `scripts/record-validation-feedback.mjs --input <json>` to log the reply in 
 
 ## First-Day Execution
 
-Batch 01 is already executed. Next actions are reply monitoring, one polite follow-up after three business days for non-responders, and advisor batch 02 no earlier than the next business day.
+Batch 01 and batch 02 are already executed. Next actions are reply monitoring, one polite follow-up after three business days for non-responders, and interview conversion for any real replies.
 If no founder/operator replies have arrived by 2026-04-27, use `buyer-validation-outreach-batch-03.csv` and the matching drafts in `validation-outreach-drafts/` as the next five-target founder expansion.
 The prepared founder follow-up queue lives in `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and `node scripts/build-founder-follow-up-pass.mjs` can regenerate it from batch 01 when the queue changes.
 
