@@ -2,6 +2,89 @@
 
 ## 2026-04-23
 
+### Deploy Retry and Validation Watch
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and `DEPLOY-STATUS.md` before choosing the next task.
+- Treated `DEPLOY-STATUS.md` as the first blocker and retried `npx vercel --prod --yes`.
+- Vercel again returned `api-deployments-free-per-day` after upload, so the production deploy remains blocked by quota and `DEPLOY-STATUS.md` stays in place.
+- Confirmed the highest-priority incomplete work remains exact buyer validation through real interviews, but `COMMUNITY-FEEDBACK.md` still has no founder/operator replies, advisor replies, bounces, referrals, or interviews posted.
+- Re-ran `npm run build:validation-status`, `npm run build:founder-follow-up-pass`, `npm run build:advisor-follow-up-pass`, `npm run build:validation-send-plan`, and `npm run check:validation-watch`; generated artifacts stayed unchanged and the watcher still reports 0 interview rows, 5 founder/operator sent rows waiting, 5 advisor sent rows waiting, and both follow-up passes due on `2026-04-27 UTC`.
+- Verified early live sends remain blocked: founder follow-up, advisor follow-up, and contingency batch 03 live-send commands all stopped before sending at the `2026-04-27 UTC` hold.
+- The next executable validation task remains reply-to-interview conversion if a real reply is posted, otherwise the founder and advisor non-responder follow-up passes after `2026-04-27 UTC`.
+
+### Validation Send Guard Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed there is no `DEPLOY-STATUS.md` file, so there was no broken-deploy marker to fix first.
+- Confirmed the highest-priority incomplete work remains exact buyer validation through real interviews, but `COMMUNITY-FEEDBACK.md` still has no founder/operator replies, advisor replies, bounces, referrals, or interviews posted.
+- Re-ran `npm run build:validation-status`, `npm run build:founder-follow-up-pass`, `npm run build:advisor-follow-up-pass`, `npm run build:validation-send-plan`, and `npm run check:validation-watch`; the watcher still reports 0 interview rows, 5 founder/operator sent rows waiting, 5 advisor sent rows waiting, and both follow-up passes due on `2026-04-27 UTC`.
+- Verified early live sends remain blocked by the guard: founder follow-up, advisor follow-up, and contingency batch 03 live sends all stopped before sending at the `2026-04-27 UTC` hold.
+- The next executable validation task remains reply-to-interview conversion if a real reply is posted, otherwise the founder and advisor non-responder follow-up passes after `2026-04-27 UTC`.
+- Committed the checkpoint as `8e0d16c` with the message `Record validation send guard checkpoint`.
+- Attempted `npx vercel --prod --yes`, but Vercel returned `api-deployments-free-per-day` after upload, so production still needs a retry after the quota resets.
+- Added `DEPLOY-STATUS.md` to make the failed production deploy visible to the next run.
+
+### Validation Guard Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed there is no `DEPLOY-STATUS.md` file, so there was no broken-deploy marker to fix first.
+- Confirmed the highest-priority incomplete work remains exact buyer validation through real interviews, but `COMMUNITY-FEEDBACK.md` still has no founder/operator replies, advisor replies, bounces, referrals, or interviews posted.
+- Re-ran `npm run build:validation-status`, `npm run build:founder-follow-up-pass`, `npm run build:advisor-follow-up-pass`, and `npm run check:validation-watch`; the watcher still reports 0 interview rows, 5 founder/operator sent rows waiting, 5 advisor sent rows waiting, and both follow-up passes due on `2026-04-27 UTC`.
+- Verified early live follow-up sends remain blocked by the guard: `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend` stopped before sending at the `2026-04-27 UTC` hold, and `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend` did the same.
+- The next executable validation task remains reply-to-interview conversion if a real reply is posted, otherwise the founder and advisor non-responder follow-up passes after `2026-04-27 UTC`.
+- Committed the checkpoint as `e4ad5c3` with the message `Record validation guard recheck`.
+- Deployed commit `e4ad5c3` to Vercel production with `npx vercel --prod --yes`; Vercel returned `status: ok`, deployment `dpl_AQzudNttaHVhDvCdQ45G9YCkMtyq`, and aliased it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/PROGRESS.md` returns HTTP 200 and includes this validation guard recheck.
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed there is no `DEPLOY-STATUS.md` file, so there was no broken-deploy marker to fix first.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, but no founder/operator replies, advisor replies, bounces, referrals, or interviews have been posted yet.
+- Added a `2026-04-23` no-reply checkpoint to `COMMUNITY-FEEDBACK.md` so the handoff file reflects the current watch state.
+- Re-ran `npm run build:validation-status`, `npm run build:founder-follow-up-pass`, `npm run build:advisor-follow-up-pass`, and `npm run check:validation-watch`; the watcher still reports 0 interview rows, 5 founder/operator sent rows waiting, 5 advisor sent rows waiting, and both follow-up passes due on `2026-04-27 UTC`.
+- Verified early live follow-up sends are still blocked: `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend` and `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend` both stopped on the `2026-04-27 UTC` guard before sending.
+- The next executable validation task remains reply-to-interview conversion if a real reply is posted, otherwise the founder and advisor non-responder follow-up passes after `2026-04-27 UTC`.
+
+### Contingency Batch 03 Send Guard
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no deploy-state repair to do first.
+- Confirmed the highest-priority incomplete validation work is still reply-to-interview conversion, but no founder/operator replies, advisor replies, bounces, referrals, or interviews have been posted in `COMMUNITY-FEEDBACK.md`.
+- Ran `npm run build:validation-status`, `npm run build:founder-follow-up-pass`, `npm run build:advisor-follow-up-pass`, and `npm run check:validation-watch`; the watch still reports 0 interview rows, 5 founder/operator sent rows waiting, 5 advisor sent rows waiting, and both follow-up passes due on `2026-04-27 UTC`.
+- Found a guardrail gap where contingency batch 03 was documented as held until the 2026-04-27 no-reply check, but `scripts/send-validation-batch.mjs` only enforced a first-touch date gate for advisor batch 02.
+- Added the missing batch 03 live-send date gate for `2026-04-27 UTC`, while keeping batch 03 dry-runs available for route checks.
+- Updated `README.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and `BACKLOG-CHEAP.md` so the contingency guard is documented and marked complete.
+- Verification run: `node --check scripts/send-validation-batch.mjs`, `node scripts/send-validation-batch.mjs --batch 03 --limit 5 --transport resend`, early blocked `node scripts/send-validation-batch.mjs --batch 03 --limit 5 --send --transport resend`, `npm run build:validation-status`, `npm run build:validation-send-plan`, and `npm run check:validation-watch`.
+- Committed the guard as `93e94dd` with the message `Guard contingency validation batch send`.
+- Deployed commit `93e94dd` to Vercel production with `npx vercel --prod --yes`; Vercel returned `status: ok`, deployment `dpl_7XpicAQuFhjdgem6PyZW9wWqatSK`, and aliased it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/README.md` returns HTTP 200 and documents the date-gated sender, and verified `https://noticekit.tech/VALIDATION-OUTREACH-SEND-RUNBOOK.md` documents the batch 03 `2026-04-27 UTC` hold.
+
+### Guarded Validation Follow-Up Sender
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no deploy-state repair to do first.
+- Confirmed the highest-priority incomplete validation work is still real buyer interviews, but current reply conversion and follow-up sends are date-gated until `2026-04-27 UTC` unless a reply is posted in `COMMUNITY-FEEDBACK.md`.
+- Added `--follow-up` mode to `scripts/send-validation-batch.mjs` so the prepared three-business-day non-responder passes can be dry-run or sent through Resend/SMTP from the same guarded sender used for first-touch validation outreach.
+- Follow-up mode selects only rows still marked `sent`, uses the original route or prior Resend send note to find the recipient, refuses to send before three business days have elapsed from the first send date unless `--force-date` is explicitly passed, and marks successful direct-email rows `followed_up`.
+- Updated `scripts/build-validation-status.mjs` and `scripts/check-validation-reply-watch.mjs` so `followed_up` rows remain counted as waiting for replies after the follow-up pass is sent.
+- Updated `README.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and `BACKLOG-CHEAP.md` with the follow-up sender workflow and dry-run/send commands.
+- Verification run: `node --check` for the touched validation scripts, `npm run build:validation-status`, `npm run check:validation-watch`, dry-run founder follow-ups, dry-run advisor follow-ups, and an early `--send --follow-up` guard check all passed; the send guard correctly held advisor follow-ups until `2026-04-27 UTC`.
+- Committed the follow-up sender as `1ac4aef` with the message `Add guarded validation follow-up sender`.
+- Deployed commit `1ac4aef` to Vercel production with `npx vercel --prod --yes`; Vercel returned `status: ok`, deployment `dpl_79DhjYpqGQoXWMAbcyHzKFSYRVtr`, and aliased it to `https://noticekit.tech`.
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no deploy-state repair to do first.
+- Confirmed the highest-priority incomplete work remains exact buyer validation through real interviews.
+- Checked `COMMUNITY-FEEDBACK.md` and `VALIDATION-STATUS.md`; no founder/operator replies, advisor replies, bounces, referrals, or interviews have been posted.
+- Ran `npm run check:validation-watch`; it reports 0 founder/operator reply rows, 0 advisor reply rows, 0 interview rows, 5 founder/operator sent rows waiting, and 5 advisor sent rows waiting.
+- Re-ran `npm run build:validation-status`, `npm run build:advisor-follow-up-pass`, and `npm run build:founder-follow-up-pass`; all regenerated cleanly without tracked diffs.
+- The next incomplete validation actions remain date-gated: founder and advisor three-business-day follow-up passes are both due on `2026-04-27 UTC`.
+- Committed the checkpoint as `de144e8` with the message `Record validation reply watch checkpoint`.
+- Deployed commit `de144e8` to Vercel production with `npx vercel --prod --yes`; Vercel returned `status: ok`, deployment `dpl_Fjz7hVuoyZ2nyn1jRo8cXeUvc1J8`, and aliased it to `https://noticekit.tech`.
+
 ### Advisor Reply Watch Recheck
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.

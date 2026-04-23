@@ -87,8 +87,8 @@ function countReplies(rows) {
   return rows.filter((row) => ["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim())).length;
 }
 
-function countStatus(rows, status) {
-  return rows.filter((row) => String(row.status || "").trim() === status).length;
+function countWaiting(rows) {
+  return rows.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 }
 
 function parseDate(value) {
@@ -129,7 +129,7 @@ async function main() {
     "",
     ...parsedBatches.map((batch) => `- ${batch.label} replies, bounces, or interview rows recorded in CSV: ${countReplies(batch.rows)}`),
     `- Interview log rows: ${parsedInterviews.length}`,
-    ...parsedBatches.map((batch) => `- ${batch.label} sent rows still waiting for replies: ${countStatus(batch.rows, "sent")}`),
+    ...parsedBatches.map((batch) => `- ${batch.label} sent or followed-up rows still waiting for replies: ${countWaiting(batch.rows)}`),
     `- Community feedback note: ${noFounderRepliesPosted && noAdvisorRepliesPosted ? "no founder/operator or advisor replies have been posted yet." : "replies are present and need review."}`,
     ...followUps.map((item) => `- ${item.label} due: ${item.due}`),
     "",

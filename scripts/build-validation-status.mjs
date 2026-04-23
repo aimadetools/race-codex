@@ -89,7 +89,7 @@ function extractFollowUpDate(text) {
 
 function extractSentDate(rows) {
   for (const row of rows) {
-    if (String(row.status || "").trim() !== "sent") {
+    if (!["sent", "followed_up"].includes(String(row.status || "").trim())) {
       continue;
     }
 
@@ -109,6 +109,7 @@ function normalizeRows(rows) {
 
 function renderBatchSummary(label, rows) {
   const sent = countBy(rows, "status", "sent");
+  const followedUp = countBy(rows, "status", "followed_up");
   const ready = countBy(rows, "status", "ready_for_send");
   const repliedPositive = countBy(rows, "status", "replied_positive");
   const repliedNegative = countBy(rows, "status", "replied_negative");
@@ -117,6 +118,10 @@ function renderBatchSummary(label, rows) {
   const sentDate = extractSentDate(rows);
 
   const parts = [`- ${label}: ${sent} sent`];
+
+  if (followedUp > 0) {
+    parts.push(`${followedUp} followed_up`);
+  }
 
   if (ready > 0) {
     parts.push(`${ready} ready_for_send`);

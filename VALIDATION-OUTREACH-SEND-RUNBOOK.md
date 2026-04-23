@@ -25,9 +25,24 @@ Use `scripts/send-validation-batch.mjs` to print the ready queue or send approve
 node scripts/send-validation-batch.mjs --batch 01 --limit 5
 node scripts/send-validation-batch.mjs --batch 01 --limit 5 --send --transport smtp
 node scripts/send-validation-batch.mjs --batch 01 --limit 5 --send --transport resend
+node scripts/send-validation-batch.mjs --batch 03 --limit 5 --transport resend
+node scripts/send-validation-batch.mjs --batch 03 --limit 5 --send --transport resend
 ```
 
 When `--send` succeeds for direct-email rows, the script marks those rows `sent` in the matching CSV and appends the UTC send timestamp plus route to `notes`. Use `--no-update-csv` only for a deliberate one-off send where status will be recorded manually.
+
+The sender enforces the current first-touch date gates: batch 02 cannot be sent before 2026-04-23 UTC, and contingency batch 03 cannot be sent before the 2026-04-27 no-reply check. Use `--force-date` only after a documented operator override.
+
+Use `--follow-up` for the three-business-day non-responder pass:
+
+```bash
+node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend
+node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend
+node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend
+node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend
+```
+
+Follow-up mode selects only rows still marked `sent`, refuses to send before three business days have elapsed from the first send date in `notes`, and marks successful direct-email rows `followed_up`. Use `--force-date` only after a documented operator override.
 
 ## Send Prerequisites
 
@@ -78,8 +93,10 @@ Use `scripts/record-validation-feedback.mjs --input <json>` to log the reply in 
 
 Batch 01 and batch 02 are already executed. Next actions are reply monitoring, one polite follow-up after three business days for non-responders, and interview conversion for any real replies.
 If no founder/operator replies have arrived by 2026-04-27, use `buyer-validation-outreach-batch-03.csv` and the matching drafts in `validation-outreach-drafts/` as the next five-target founder expansion.
+The sender enforces the batch 03 hold for live sends before 2026-04-27 UTC, but dry-runs remain available for route checks.
 The prepared founder follow-up queue lives in `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and `node scripts/build-founder-follow-up-pass.mjs` can regenerate it from batch 01 when the queue changes.
 The prepared advisor follow-up queue lives in `BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md`, and `node scripts/build-advisor-follow-up-pass.mjs` can regenerate it from batch 02 when the queue changes.
+Use `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend` and `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend` to dry-run the exact due follow-up queues before sending them.
 
 ## Reply-to-Interview Scheduling
 

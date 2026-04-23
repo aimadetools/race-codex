@@ -70,7 +70,7 @@ The first version includes:
 - `scripts/build-advisor-follow-up-pass.mjs` regenerates the batch 02 non-responder follow-up queue and due date.
 - `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
 - `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and next action for the validation queue.
-- `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue through SMTP or Resend when an approved sender is available.
+- `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue and guarded non-responder follow-ups through SMTP or Resend when an approved sender is available; live sends are date-gated for advisor batch 02, contingency batch 03, and three-business-day follow-ups.
 - `scripts/build-validation-send-plan.mjs` regenerates the send-plan summary from the prepared outreach CSVs.
 - `scripts/build-paid-kit-fulfillment.mjs` regenerates the private paid-kit PDF exports and ZIP archives for first-buyer fulfillment.
 - `validation-outreach-drafts/` contains the send-ready founder, consultant, and attorney outreach drafts produced from the prepared batches.

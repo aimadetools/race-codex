@@ -27,6 +27,7 @@ These tasks are routine and can be handled quickly.
 - Send the three-business-day founder follow-up pass for non-responders after 2026-04-27.
 - [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for advisor replies and update `buyer-validation-outreach-batch-02.csv` statuses.
 - Send the three-business-day advisor follow-up pass for non-responders after 2026-04-27.
+- [x] Add guarded Resend/SMTP follow-up sending mode for the three-business-day validation non-responder passes.
 - Regenerate `VALIDATION-STATUS.md` and run `npm run check:validation-watch` after any batch reply, bounce, or follow-up status change.
 - If no founder replies by 2026-04-27, add five more founder/operator targets with public DPA or subprocessor pages.
 - [x] Convert the private paid-kit Markdown docs into Google Docs or PDF exports for first-buyer fulfillment.
@@ -36,6 +37,7 @@ These tasks are routine and can be handled quickly.
 - [x] Prepare the 3 fractional DPO/privacy consultant and 2 startup attorney validation targets so the advisor batch is ready when contact and checkout setup are complete.
 - [x] Create the validation outreach send runbook so the prepared batches can be executed without changing the scoring rules once the mailbox is live.
 - [x] Add a send-date guard and automatic CSV status update for advisor validation direct emails.
+- [x] Add a send-date guard for contingency batch 03 so the five-founder expansion cannot be sent before the 2026-04-27 no-reply check.
 - [x] Add footer links across all pages.
 - [x] Check mobile spacing on 360px, 390px, and 768px widths.
 

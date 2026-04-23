@@ -6,7 +6,8 @@ import { join } from "node:path";
 
 const ROOT = process.cwd();
 const EARLIEST_SEND_DATE_BY_BATCH = new Map([
-  ["02", "2026-04-23"]
+  ["02", "2026-04-23"],
+  ["03", "2026-04-27"]
 ]);
 
 function parseArgs(argv) {
@@ -139,6 +140,12 @@ function markSent(row, transport, recipient, sentAt) {
   row.notes = row.notes ? `${row.notes} ${sendNote}` : sendNote;
 }
 
+function markFollowedUp(row, transport, recipient, sentAt) {
+  row.status = "followed_up";
+  const sendNote = `Followed up ${sentAt} via ${transport} to ${recipient}.`;
+  row.notes = row.notes ? `${row.notes} ${sendNote}` : sendNote;
+}
+
 function classifyRoute(route) {
   const value = String(route || "").trim();
   if (!value) {
@@ -169,11 +176,77 @@ function extractRecipient(route) {
   return match ? match[0] : "";
 }
 
-function bodyForRow(row) {
+function extractPriorSendRecipient(row) {
+  const notes = String(row.notes || "");
+  const matches = [...notes.matchAll(/\bto\s+([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})/gi)];
+  return matches.length ? matches[matches.length - 1][1] : "";
+}
+
+function extractSentDate(row) {
+  const notes = String(row.notes || "");
+  const match = notes.match(/Sent\s+(\d{4}-\d{2}-\d{2})(?:T|\s|$)/);
+  return match ? match[1] : "";
+}
+
+function addBusinessDays(isoDate, businessDays) {
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  let added = 0;
+
+  while (added < businessDays) {
+    date.setUTCDate(date.getUTCDate() + 1);
+    const day = date.getUTCDay();
+    if (day === 0 || day === 6) {
+      continue;
+    }
+    added += 1;
+  }
+
+  return date.toISOString().slice(0, 10);
+}
+
+function assertFollowUpCanSend(row, args) {
+  if (args.has("force-date")) {
+    return;
+  }
+
+  const sentDate = extractSentDate(row);
+  if (!sentDate) {
+    throw new Error(`Cannot find a first-send date in notes for ${row.company || row.organization}.`);
+  }
+
+  const followUpDate = addBusinessDays(sentDate, 3);
+  const today = utcDateString();
+  if (today < followUpDate) {
+    throw new Error(
+      `${row.company || row.organization} follow-up is held until ${followUpDate} UTC. Re-run on or after that UTC date, or pass --force-date only after a documented human override.`
+    );
+  }
+}
+
+function bodyForRow(row, mode = "first-touch") {
   const segment = row.segment || "";
   const company = row.company || row.organization || "";
 
   if (segment === "Founder/operator") {
+    if (mode === "follow-up") {
+      return {
+        subject: "Re: Quick question on your subprocessor notice process",
+        firstTouch: [
+          `Hi there,`,
+          ``,
+          `Quick follow-up. I am looking for blunt operator feedback, not a sales call.`,
+          ``,
+          `The specific question is whether a one-change subprocessor notice kit would save time when a SaaS team needs to update its list, notify customers, and keep evidence of what happened.`,
+          ``,
+          `Worth a 15-minute feedback call, or is this owned by someone else at ${company}?`,
+          ``,
+          `Best,`,
+          `NoticeKit`
+        ].join("\n"),
+        manualFollowUp: row.public_contact_route
+      };
+    }
+
     return {
       subject: "Quick question on your subprocessor notice process",
       firstTouch: [
@@ -184,6 +257,25 @@ function bodyForRow(row) {
         `I am validating NoticeKit, a small operational kit for SaaS teams that need notice copy, objection-window tracking, and an evidence log before they are ready for a full trust center. I am not offering legal advice; I am trying to understand the workflow.`,
         ``,
         `Could I ask you 6 questions about how you handle vendor changes today?`,
+        ``,
+        `Best,`,
+        `NoticeKit`
+      ].join("\n"),
+      manualFollowUp: row.public_contact_route
+    };
+  }
+
+  if (mode === "follow-up") {
+    return {
+      subject: "Re: Subprocessor notice workflow feedback",
+      firstTouch: [
+        `Hi there,`,
+        ``,
+        `Quick follow-up. I am looking for blunt feedback, not a sales call.`,
+        ``,
+        `The specific question is whether a small structured packet for vendor changes would reduce back-and-forth before privacy or legal review, or whether the positioning needs to be narrower.`,
+        ``,
+        `Worth a 15-minute feedback call, or is there someone else who sees this workflow more often?`,
         ``,
         `Best,`,
         `NoticeKit`
@@ -330,28 +422,34 @@ async function main() {
   const batch = String(args.get("batch") || "01").padStart(2, "0");
   const limit = Math.max(1, Number(args.get("limit") || 5));
   const send = args.has("send");
+  const followUp = args.has("follow-up");
   const transport = String(args.get("transport") || "auto").toLowerCase();
   const updateCsv = send && !args.has("no-update-csv");
 
-  if (send) {
+  if (send && !followUp) {
     assertBatchCanSend(batch, args);
   }
 
   const csvPath = join(ROOT, `buyer-validation-outreach-batch-${batch}.csv`);
   const { header, records: rows } = parseCsv(await readFile(csvPath, "utf8"));
-  const queue = rows.filter((row) => row.status === "ready_for_send").slice(0, limit);
+  const queue = rows
+    .filter((row) => row.status === (followUp ? "sent" : "ready_for_send"))
+    .slice(0, limit);
   const replyTo = "hello@noticekit.tech";
   const persistCsv = async () => {
     await writeFile(csvPath, serializeCsv(header, rows), "utf8");
     console.log(`[updated] ${csvPath}`);
   };
 
-  console.log(`Batch ${batch}: ${queue.length} rows selected from ${rows.length} ready targets.`);
+  console.log(`Batch ${batch}: ${queue.length} rows selected from ${rows.length} ${followUp ? "follow-up" : "ready"} targets.`);
 
   for (const row of queue) {
-    const recipient = extractRecipient(row.public_contact_route);
-    const signal = bodyForRow(row);
-    const routeType = classifyRoute(row.public_contact_route);
+    const priorRecipient = extractPriorSendRecipient(row);
+    const recipient = followUp
+      ? priorRecipient || extractRecipient(row.public_contact_route)
+      : extractRecipient(row.public_contact_route);
+    const signal = bodyForRow(row, followUp ? "follow-up" : "first-touch");
+    const routeType = followUp && priorRecipient ? "direct-email" : classifyRoute(row.public_contact_route);
 
     if (!recipient || routeType !== "direct-email") {
       console.log(`[manual] ${row.company || row.organization}: ${signal.manualFollowUp}`);
@@ -363,15 +461,23 @@ async function main() {
     const html = renderHtml(subject, text);
 
     if (!send) {
-      console.log(`[dry-run] ${recipient} | ${subject}`);
+      console.log(`[dry-run${followUp ? ":follow-up" : ""}] ${recipient} | ${subject}`);
       continue;
+    }
+
+    if (followUp) {
+      assertFollowUpCanSend(row, args);
     }
 
     if (transport === "resend" || (transport === "auto" && (process.env.RESEND_API_KEY || process.env.CONTACT_RESEND_API_KEY))) {
       await sendResend({ to: recipient, subject, text, html, replyTo });
       console.log(`[sent:resend] ${recipient} | ${subject}`);
       if (updateCsv) {
-        markSent(row, "Resend", recipient, new Date().toISOString());
+        if (followUp) {
+          markFollowedUp(row, "Resend", recipient, new Date().toISOString());
+        } else {
+          markSent(row, "Resend", recipient, new Date().toISOString());
+        }
         await persistCsv();
       }
       continue;
@@ -386,7 +492,11 @@ async function main() {
       await sendSmtp({ to: recipient, subject, text, html, replyTo });
       console.log(`[sent:smtp] ${recipient} | ${subject}`);
       if (updateCsv) {
-        markSent(row, "SMTP", recipient, new Date().toISOString());
+        if (followUp) {
+          markFollowedUp(row, "SMTP", recipient, new Date().toISOString());
+        } else {
+          markSent(row, "SMTP", recipient, new Date().toISOString());
+        }
         await persistCsv();
       }
       continue;
