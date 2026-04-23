@@ -36,6 +36,7 @@ The first version includes:
 - `BUYER-VALIDATION-OUTREACH-BATCH-02.md` and `buyer-validation-outreach-batch-02.csv` cover the three fractional DPO/privacy consultant and two startup attorney validation targets; batch 02 was executed on 2026-04-22 under an explicit operator override.
 - `BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md` captures the three-business-day advisor follow-up queue for batch 02 non-responders.
 - `BUYER-VALIDATION-OUTREACH-BATCH-03.md` and `buyer-validation-outreach-batch-03.csv` define the contingency founder/operator expansion to use only if the 2026-04-27 no-reply check still needs five more public targets.
+- `BUYER-VALIDATION-OUTREACH-BATCH-04.md` and `buyer-validation-outreach-batch-04.csv` define the second founder/operator contingency expansion to use only if batch 03 still leaves the queue short after the same no-reply check.
 - `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
 - `VALIDATION-STATUS.md` is the canonical buyer-validation status snapshot for reply monitoring and next-action checks.
 - `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
@@ -72,7 +73,7 @@ The first version includes:
 - `scripts/build-advisor-follow-up-pass.mjs` regenerates the batch 02 non-responder follow-up queue and due date.
 - `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
 - `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and next action for the validation queue.
-- `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue and guarded non-responder follow-ups through SMTP or Resend when an approved sender is available; live sends are date-gated for advisor batch 02, contingency batch 03, and three-business-day follow-ups.
+- `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue and guarded non-responder follow-ups through SMTP or Resend when an approved sender is available; live sends are date-gated for advisor batch 02, contingency batch 03, and later contingency batches plus three-business-day follow-ups.
 - `scripts/build-validation-send-plan.mjs` regenerates the send-plan summary from the prepared outreach CSVs.
 - `scripts/build-paid-kit-fulfillment.mjs` regenerates the private paid-kit PDF exports and ZIP archives for first-buyer fulfillment.
 - `validation-outreach-drafts/` contains the send-ready founder, consultant, and attorney outreach drafts produced from the prepared batches.

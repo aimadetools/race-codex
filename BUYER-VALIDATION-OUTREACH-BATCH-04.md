@@ -1,35 +1,35 @@
-# NoticeKit Buyer Validation Outreach Batch 01
+# NoticeKit Buyer Validation Outreach Batch 04
 
-Date: 2026-04-21
+Date: 2026-04-23
 
 ## Purpose
 
-Prepare the first five founder/operator validation targets. The public contact alias, custom domain, and Stripe checkout links are live; the remaining blocker is an approved outbound sender or a human send from `hello@noticekit.tech`.
+Prepare the next five founder/operator validation targets if the 2026-04-27 no-reply check still needs another expansion. This batch is a contingency follow-on to batches 01, 02, and 03, not completed validation.
 
-This does not count as completed validation. Interviews should only be scored in `buyer-validation-interview-log.csv` after a real conversation happens.
+Interviews should only be scored in `buyer-validation-interview-log.csv` after a real conversation happens.
 
 ## Send Conditions
 
 Send this batch only after:
 
-- `HELP-STATUS.md` includes the public NoticeKit contact email. Complete: `hello@noticekit.tech`.
-- `HELP-STATUS.md` includes the Starter, Pro, and Concierge Stripe Payment Links. Complete.
-- The public pricing page has been updated so recipients can see a real buying path. Complete.
+- Founder/operator batch 01 has been sent.
+- Advisor batch 02 has been sent or otherwise handled under the documented sequencing rules.
+- The 2026-04-27 no-reply check confirms that five more public founder/operator targets are still needed after batch 03.
 - An approved outbound sender is available, or the human operator sends the messages manually from `hello@noticekit.tech`.
 
-Do not mark any target as sent until the direct emails and ReadMe manual-form step are actually completed.
+Do not mark any target as sent until the direct emails or manual contact-route steps are actually completed.
 
 ## Target List
 
-The execution CSV is `buyer-validation-outreach-batch-01.csv`.
+The execution CSV is `buyer-validation-outreach-batch-04.csv`.
 
-| Priority | Company | Why it fits |
-|---:|---|---|
-| 1 | ReadMe | Public DPA language includes a subprocessor list, update notifications, and a 10-day notice window for new third parties. |
-| 2 | EF Loads | Terms describe DPA request handling and 30-day subprocessor-list update notice. |
-| 3 | BMBerry | Privacy policy publishes subprocessors and mentions customer hosting-region choice. |
-| 4 | RootCause / Bryntum | Public DPA terms discuss customer notifications and subprocessor changes. |
-| 5 | Deployable AI Services | Terms include prior customer notice before engaging subprocessors. |
+| Priority | Company | Segment | Why it fits |
+|---:|---|---|---|
+| 1 | Actionable.co | Founder/operator | Public sub-processor list is updated regularly and gives a privacy officer contact for questions. |
+| 2 | SwarmSync | Founder/operator | Subprocessor page says DPAs are in place and links a direct privacy contact for DPA or rights requests. |
+| 3 | Edexia | Founder/operator | Public subprocessor list directs future-change questions to the privacy officer contact. |
+| 4 | Ultimo | Founder/operator | SaaS subprocessor page lists common customer-data vendors and exposes a public business contact route. |
+| 5 | aPriori | Founder/operator | Public data-subprocessor list covers cloud, support, email, and analytics vendors with transfer safeguards. |
 
 ## Founder/Operator Email
 
@@ -55,8 +55,6 @@ Hi {{first_name}},
 Quick follow-up. I am looking for blunt operator feedback, not a sales call.
 
 The specific question is whether a one-change subprocessor notice kit would save time when a SaaS team needs to update its list, notify customers, and keep evidence of what happened.
-
-If it helps, the readiness self-audit is here: https://noticekit.tech/self-audit.html.
 
 Worth a 15-minute feedback call, or is this owned by someone else at {{company}}?
 

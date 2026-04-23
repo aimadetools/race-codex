@@ -27,8 +27,9 @@ These tasks are routine and can be handled quickly.
 - Send the three-business-day founder follow-up pass for non-responders after 2026-04-27.
 - [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for advisor replies and update `buyer-validation-outreach-batch-02.csv` statuses.
 - Send the three-business-day advisor follow-up pass for non-responders after 2026-04-27.
-- Add the `self-audit.html` link to the founder and advisor follow-up draft copy after the 2026-04-27 gate opens.
+- [x] Add the `self-audit.html` link to the founder and advisor follow-up draft copy after the 2026-04-27 gate opens.
 - [x] Add guarded Resend/SMTP follow-up sending mode for the three-business-day validation non-responder passes.
+- [x] Publish a worked subprocessor notice example page with real dates and an objection deadline, then link it through the homepage, blog index, sitemap, and changelog.
 - Regenerate `VALIDATION-STATUS.md` and run `npm run check:validation-watch` after any batch reply, bounce, or follow-up status change.
 - If no founder replies by 2026-04-27, add five more founder/operator targets with public DPA or subprocessor pages.
 - [x] Convert the private paid-kit Markdown docs into Google Docs or PDF exports for first-buyer fulfillment.

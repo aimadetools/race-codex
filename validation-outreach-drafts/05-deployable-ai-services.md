@@ -34,6 +34,8 @@ Quick follow-up. I am looking for blunt operator feedback, not a sales call.
 
 The specific question is whether a one-change subprocessor notice kit would save time when a SaaS team needs to update its list, notify customers, and keep evidence of what happened.
 
+If it helps, the readiness self-audit is here: https://noticekit.tech/self-audit.html.
+
 Worth a 15-minute feedback call, or is this owned by someone else at Deployable AI Services?
 
 Best,

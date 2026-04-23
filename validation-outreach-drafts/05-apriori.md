@@ -1,13 +1,13 @@
-# BMBerry
+# aPriori
 
-Batch: batch-01
-Priority: 3
+Batch: batch-04
+Priority: 5
 Segment: Founder/operator
-Source URL: https://bmberry.com/privacy-policy
-Public signal: Privacy policy publishes a subprocessor table and notes customers can choose main hosting region but cannot select every subprocessor.
-Suggested contact path: Founder/operator or privacy contact from public company channels.
-Public contact route: support@bmberry.com
-Status: sent
+Source URL: https://www.apriori.com/data-subprocessors/
+Public signal: Public subprocessor list names cloud, support, email, and analytics vendors and includes SCC/DPF transfer mechanisms.
+Suggested contact path: Public contact route from the contact page or info@apriori.com.
+Public contact route: info@apriori.com
+Status: ready_for_send
 
 ## First Touch
 
@@ -15,7 +15,7 @@ Subject: Quick question on your subprocessor notice process
 
 Hi there,
 
-I noticed BMBerry has public DPA, privacy, or subprocessor language, but I could not tell how the operational side works when the vendor list changes.
+I noticed aPriori has public DPA, privacy, or subprocessor language, but I could not tell how the operational side works when the vendor list changes.
 
 I am validating NoticeKit, a small operational kit for SaaS teams that need notice copy, objection-window tracking, and an evidence log before they are ready for a full trust center. I am not offering legal advice; I am trying to understand the workflow.
 
@@ -34,9 +34,7 @@ Quick follow-up. I am looking for blunt operator feedback, not a sales call.
 
 The specific question is whether a one-change subprocessor notice kit would save time when a SaaS team needs to update its list, notify customers, and keep evidence of what happened.
 
-If it helps, the readiness self-audit is here: https://noticekit.tech/self-audit.html.
-
-Worth a 15-minute feedback call, or is this owned by someone else at BMBerry?
+Worth a 15-minute feedback call, or is this owned by someone else at aPriori?
 
 Best,
 NoticeKit

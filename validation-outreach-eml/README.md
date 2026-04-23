@@ -20,3 +20,8 @@ Only direct-email targets are exported here. Manual-form and contact-sales targe
 - 03-salesroom.eml -> help@salesroom.com (Quick question on your subprocessor notice process)
 - 04-fieldguide.eml -> privacy@fieldguide.io (Quick question on your subprocessor notice process)
 - 05-thoropass.eml -> privacy@thoropass.com (Quick question on your subprocessor notice process)
+- 01-actionable-co.eml -> privacy@actionable.co (Quick question on your subprocessor notice process)
+- 02-swarmsync.eml -> privacy@swarmsync.ai (Quick question on your subprocessor notice process)
+- 03-edexia.eml -> admin@edexia.ai (Quick question on your subprocessor notice process)
+- 04-ultimo.eml -> info@ultimo.com (Quick question on your subprocessor notice process)
+- 05-apriori.eml -> info@apriori.com (Quick question on your subprocessor notice process)
