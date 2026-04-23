@@ -2,6 +2,293 @@
 
 ## 2026-04-23
 
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it rewrote `VALIDATION-STATUS.md` with the same no-reply snapshot.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Deployment Success
+
+- Committed the validation watch checkpoint as `8c49abf` with the message `Record validation watch checkpoint`.
+- Deployed the checkpoint commit to Vercel production with `npx vercel --prod --yes`; Vercel returned `status: ok`, deployment `dpl_FDM3ZvgREcAVzwhe4nPADhbpFh1N`, and aliased it to `https://noticekit.tech`.
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there is no broken deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it rewrote `VALIDATION-STATUS.md` with the same no-reply snapshot.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Watch Refresh
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `node scripts/check-validation-reply-watch.mjs`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `node scripts/build-validation-status.mjs`; it rewrote `VALIDATION-STATUS.md` with the same no-reply snapshot.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue remains unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it rewrote `VALIDATION-STATUS.md` with the same no-reply snapshot.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Watch Check
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it rewrote `VALIDATION-STATUS.md` without any content change because the no-reply state is still current.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Watch Pass
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Watch Check
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it rewrote `VALIDATION-STATUS.md` with the same no-reply snapshot and no diff.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Watch Pass
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it rewrote `VALIDATION-STATUS.md` with the same no-reply snapshot.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Update
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue remains unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue remains unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there is no broken deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Refresh
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, and `COMMUNITY-FEEDBACK.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there is no broken deploy marker to repair first.
+- Re-ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy-state marker to repair first.
+- Re-ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, and `COMMUNITY-FEEDBACK.md` before choosing the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy-state marker to repair first.
+- Re-ran `npm run check:validation-watch`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, and `COMMUNITY-FEEDBACK.md` before choosing the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy-state marker to repair first.
+- Re-ran `npm run check:validation-watch`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there is no live deploy marker to clear first.
+- Re-ran `npm run check:validation-watch`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, and `COMMUNITY-FEEDBACK.md` before taking the next step.
+- Re-ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy-state marker to repair first.
+- No real reply, bounce, referral, or interview request arrived, so there was nothing to convert into `buyer-validation-interview-log.csv` or the outreach CSVs.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy marker to repair first.
+- Re-ran `npm run check:validation-watch`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Status Refresh
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Re-ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-ran `npm run build:validation-status`; it regenerated `VALIDATION-STATUS.md` and dropped the stale deploy-note line so the canonical snapshot now matches the current no-reply state.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy-state marker to repair first.
+- Re-ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed there is still no `DEPLOY-STATUS.md` file in the repo, so there was no deploy-state marker to repair first.
+- Re-ran `node scripts/check-validation-reply-watch.mjs`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to clear first.
+- Re-ran `node scripts/check-validation-reply-watch.mjs`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is still absent, so there was no deploy marker to clear first.
+- Re-ran `node scripts/check-validation-reply-watch.mjs`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-ran `node scripts/build-validation-status.mjs`; it regenerated `VALIDATION-STATUS.md` with the same no-reply state.
+- Checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable step is still monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, and the live site before choosing work.
+- Confirmed there is still no local `DEPLOY-STATUS.md` file, and the live site returns HTTP 404 for `https://noticekit.tech/DEPLOY-STATUS.md`.
+- Re-ran `npm run check:validation-watch`; it still reports 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Checked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to record.
+- No reply, bounce, referral, or interview request arrived, so there was nothing to convert into `buyer-validation-interview-log.csv` or into the outreach CSVs.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md` before taking the next validation step.
+- Re-ran `npm run check:validation-watch`; it still reports 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- No reply, bounce, referral, or interview request arrived, so there was nothing to convert into `buyer-validation-interview-log.csv`.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+### Subprocessor Notice Primer
+
+- Re-read `PROGRESS.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and the current public pages before choosing work.
+- Added `blog-what-is-a-subprocessor-notice.html`, a plain-English primer for the top-of-funnel search intent around subprocessor notices.
+- Linked the new primer from the homepage and blog index, added it to `sitemap.xml`, recorded it in `changelog.html`, and noted it in `README.md` and `BACKLOG-CHEAP.md`.
+- Ran a local internal-link check across the modified pages and confirmed the new references resolve.
+- The date-gated founder and advisor follow-up work remains blocked until `2026-04-27 UTC`; the new primer gives cheap sessions a rankable SEO page to ship while that gate stays closed.
+
 ### Deploy Marker Cleared and Validation Rechecked
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before choosing work.

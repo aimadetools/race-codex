@@ -47,6 +47,7 @@ These tasks are routine and can be handled quickly.
 - [x] Prepare advisor batch 02 for sending after the founder-batch one-business-day hold, using Resend for direct-email routes and public forms for manual-form routes.
 - [x] Add a short reply-to-interview scheduling snippet to `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
 - [x] Regenerate validation outreach drafts after any CSV status or contact-route changes.
+- [x] Publish a plain-English primer for "what is a subprocessor notice?" and link it into the homepage, blog index, sitemap, and changelog.
 - [x] Write blog post: "Subprocessor Change Notice Template for SaaS Teams".
 - [x] Write blog post: "Subprocessor Notice Email Template for SaaS Teams".
 - [x] Write blog post: "How to Track a DPA Objection Window".
