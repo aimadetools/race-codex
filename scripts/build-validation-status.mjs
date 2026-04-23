@@ -8,7 +8,8 @@ const OUTPUT = join(ROOT, "VALIDATION-STATUS.md");
 const BATCH_FILES = [
   { label: "Founder/operator batch 01", path: join(ROOT, "buyer-validation-outreach-batch-01.csv") },
   { label: "Advisor batch 02", path: join(ROOT, "buyer-validation-outreach-batch-02.csv") },
-  { label: "Contingency batch 03", path: join(ROOT, "buyer-validation-outreach-batch-03.csv") }
+  { label: "Contingency batch 03", path: join(ROOT, "buyer-validation-outreach-batch-03.csv") },
+  { label: "Contingency batch 04", path: join(ROOT, "buyer-validation-outreach-batch-04.csv") }
 ];
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const FOLLOW_UP_FILE = join(ROOT, "BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md");
@@ -142,6 +143,7 @@ const now = new Date().toISOString().slice(0, 10);
 const founderBatchRows = parseCsv(await readFile(BATCH_FILES[0].path, "utf8"));
 const advisorBatchRows = parseCsv(await readFile(BATCH_FILES[1].path, "utf8"));
 const contingencyRows = parseCsv(await readFile(BATCH_FILES[2].path, "utf8"));
+const contingencyTwoRows = parseCsv(await readFile(BATCH_FILES[3].path, "utf8"));
 const feedbackText = await readFile(FEEDBACK_FILE, "utf8");
 const followUpText = await readFile(FOLLOW_UP_FILE, "utf8");
 const advisorFollowUpText = await readFile(ADVISOR_FOLLOW_UP_FILE, "utf8");
@@ -165,12 +167,14 @@ const output = [
   `- Founder follow-up pass due: ${followUpDate}.`,
   `- Advisor follow-up pass due: ${advisorFollowUpDate}.`,
   "- Batch 03 remains contingency-only until the 2026-04-27 no-reply check.",
+  "- Batch 04 remains a second contingency expansion until batch 03 is exhausted after the same check.",
   "",
   "## Batch Snapshot",
   "",
   renderBatchSummary(BATCH_FILES[0].label, founderBatchRows),
   renderBatchSummary(BATCH_FILES[1].label, advisorBatchRows),
   renderBatchSummary(BATCH_FILES[2].label, contingencyRows),
+  renderBatchSummary(BATCH_FILES[3].label, contingencyTwoRows),
   "",
   "## Reply Watch",
   "",

@@ -9,12 +9,14 @@ Date: 2026-04-23
 - Founder follow-up pass due: 2026-04-27 UTC.
 - Advisor follow-up pass due: 2026-04-27 UTC.
 - Batch 03 remains contingency-only until the 2026-04-27 no-reply check.
+- Batch 04 remains a second contingency expansion until batch 03 is exhausted after the same check.
 
 ## Batch Snapshot
 
 - Founder/operator batch 01: 5 sent, first sent on 2026-04-22
 - Advisor batch 02: 5 sent, first sent on 2026-04-22
 - Contingency batch 03: 0 sent, 5 ready_for_send
+- Contingency batch 04: 0 sent, 5 ready_for_send
 
 ## Reply Watch
 

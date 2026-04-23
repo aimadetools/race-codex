@@ -11,7 +11,9 @@ const FOLLOW_UP_FILES = [
 ];
 const BATCH_FILES = [
   { label: "Founder/operator batch 01", path: join(ROOT, "buyer-validation-outreach-batch-01.csv") },
-  { label: "Advisor batch 02", path: join(ROOT, "buyer-validation-outreach-batch-02.csv") }
+  { label: "Advisor batch 02", path: join(ROOT, "buyer-validation-outreach-batch-02.csv") },
+  { label: "Contingency batch 03", path: join(ROOT, "buyer-validation-outreach-batch-03.csv") },
+  { label: "Contingency batch 04", path: join(ROOT, "buyer-validation-outreach-batch-04.csv") }
 ];
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
 

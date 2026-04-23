@@ -86,3 +86,4 @@ These tasks are routine and can be handled quickly.
 - [x] Improve mobile nav wrapping and generator layout on narrow screens.
 - [x] Make the homepage notice preview auto-fill current UTC dates and keep the sample copy evergreen.
 - [x] Add direct `hello@noticekit.tech` contact links to the public footers and key buyer-facing pages.
+- [x] Publish a "Subprocessor Notice Mistakes SaaS Teams Make" article and wire it into the homepage, blog index, sitemap, and changelog.

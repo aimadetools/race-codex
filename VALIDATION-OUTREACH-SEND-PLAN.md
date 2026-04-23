@@ -3,13 +3,13 @@
 Date: 2026-04-22
 
 This plan translates the prepared outreach batches into the first operational send queue.
-Batch 01 and batch 02 are now sent; use this plan for reply handling, interview conversion, and the batch 03 contingency check.
+Batch 01 and batch 02 are now sent; use this plan for reply handling, interview conversion, and the batch 03 and batch 04 contingency checks.
 
-Direct-email targets identified: 8
+Prepared direct-email targets identified: 17
 
 ## Current Priority
 
-Monitor founder replies from batch 01, convert real replies into scored interviews, and keep batch 03 reserved for the 2026-04-27 no-reply check.
+Monitor founder replies from batch 01, convert real replies into scored interviews, and keep batch 03 reserved for the 2026-04-27 no-reply check while batch 04 stays behind batch 03.
 
 ## Batch 01
 
@@ -47,6 +47,18 @@ Status: prepared for the 2026-04-27 no-reply check; not part of the active send 
 | 4 | Fieldguide | Founder/operator | privacy@fieldguide.io | direct-email |
 | 5 | Thoropass | Founder/operator | privacy@thoropass.com | direct-email |
 
+## Batch 04 contingency
+
+Status: prepared as a second founder/operator contingency expansion; keep it out of the active send queue until batch 03 is exhausted after the 2026-04-27 check.
+
+| Priority | Target | Segment | Route | Send method |
+|---:|---|---|---|---|
+| 1 | Actionable.co | Founder/operator | privacy@actionable.co | direct-email |
+| 2 | SwarmSync | Founder/operator | privacy@swarmsync.ai | direct-email |
+| 3 | Edexia | Founder/operator | admin@edexia.ai | direct-email |
+| 4 | Ultimo | Founder/operator | info@ultimo.com | direct-email |
+| 5 | aPriori | Founder/operator | info@apriori.com | direct-email |
+
 ## Notes
 
 - `direct-email` means the public route is a real email address or `mailto:` link.
@@ -54,3 +66,4 @@ Status: prepared for the 2026-04-27 no-reply check; not part of the active send 
 - `manual` means the route needs a different delivery path before it can be sent.
 - Keep the first five founder/operator targets ahead of advisor outreach, matching `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
 - Batch 03 is a contingency expansion and stays out of the active send queue until the 2026-04-27 no-reply check says more founder/operator targets are needed.
+- Batch 04 is a second contingency expansion and stays out of the active send queue until batch 03 is exhausted after the same check.
