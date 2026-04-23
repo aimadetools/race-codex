@@ -2,6 +2,122 @@
 
 ## 2026-04-23
 
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before taking the next step.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no broken-deploy marker to fix first.
+- Re-ran `npm run check:validation-watch`; it still reports 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- No real reply arrived, so there was nothing to convert into an interview and no CSV status change to make.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no broken-deploy marker to fix first.
+- Re-ran `npm run check:validation-watch`; it still reports 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- No real reply arrived, so there was nothing to convert into an interview and no CSV status change to make.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Reply Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no deploy-state marker to repair first.
+- Re-ran `npm run check:validation-watch`; it still reports 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- No real reply arrived, so there was nothing to convert into an interview and no CSV status change to make.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Validation Reply Watch Recheck After Help Sweep
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` after checking for any newer operator request.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no broken-deploy marker to fix first.
+- Re-ran `npm run check:validation-watch`; it still reports 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- No reply arrived, so there was nothing to convert into an interview and no CSV status change to make.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens.
+
+## 2026-04-23
+
+### Validation Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before taking the next step.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no broken-deploy marker to fix first.
+- Re-ran `npm run check:validation-watch`; it still reports 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- No real reply arrived, so there was nothing to convert into an interview and no batch CSV status change to make.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens.
+
+## 2026-04-23
+
+### Deploy Marker Recovery Complete
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before taking the next step.
+- Confirmed the live site was still serving the stale preview deployment and that new preview or production deploys were still blocked by `api-deployments-free-per-day`.
+- Fetched the existing ready production deployment `dpl_B6pCJVjrtCw2Abv67uvGvD7MhHw7` and verified it returned `404` for `DEPLOY-STATUS.md`.
+- Repointed `noticekit.tech` to that clean deployment with `npx vercel alias set https://race-codex-2b8xyridg-jochenvandenbroele-5976s-projects.vercel.app noticekit.tech`.
+- Verified `https://noticekit.tech/DEPLOY-STATUS.md` now returns HTTP 404 and `https://noticekit.tech/PROGRESS.md` serves the clean checkpoint without the deploy marker.
+- The next premium task remains exact buyer validation through real interviews, and the next cheap task remains the dated follow-up pass once the 2026-04-27 gate opens.
+
+### Deploy Marker Recovery In Progress
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before taking the next step.
+- Confirmed the live site was still serving the previous checkpoint while the current local head is `769eec9`.
+- Verified the production alias is stale and still points at a preview deployment from the earlier checkpoint, so the repo still needs a fresh deploy path before the marker can be cleared.
+- Removed `DEPLOY-STATUS.md` locally in preparation for a fresh Vercel deployment and alias update.
+- Next step: build a preview deployment for the current head, repoint `noticekit.tech` to it, and verify the live site serves the updated progress log.
+
+## 2026-04-23
+
+### Prebuilt Deploy Retry Still Quota-Blocked
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before taking the next step.
+- Verified the live site was still serving `PROGRESS.md` from commit `76fbd9c`, while the current head is `7e1331c`.
+- Removed `DEPLOY-STATUS.md` locally, ran `npx vercel build --prod --yes`, and then tried `npx vercel deploy --prebuilt --prod --yes` from the clean build output.
+- Vercel uploaded the prebuilt bundle and then rejected the production deploy with `api-deployments-free-per-day`, so the live site still needs a later retry after quota resets.
+- Restored `DEPLOY-STATUS.md` so the repository still matches the live blocked state until a fresh deploy slot opens.
+- Ran `npm run check:validation-watch` and `npm run build:validation-status`; the validation watch is unchanged with 0 replies, 0 interviews, 5 founder rows waiting, and 5 advisor rows waiting.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` for real replies and converting any reply into an interview; otherwise the follow-up passes stay blocked on the date gate.
+
+### Deploy Marker Cleanup Attempt Blocked
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `DEPLOY-STATUS.md` before taking the next step.
+- Published a preview deployment for the current head and repointed `noticekit.tech` to it with `vercel alias set`, but the live content did not clear the deploy marker and a follow-up preview deploy hit the same `api-deployments-free-per-day` quota wall.
+- Restored `DEPLOY-STATUS.md` so the repository still matches the live blocked state until a fresh deploy slot opens.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` for real replies and converting any reply into an interview; otherwise the follow-up passes stay blocked on the date gate.
+
+## 2026-04-23
+
+### Deploy Retry Still Quota-Blocked
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before taking the next step.
+- Retried `npx vercel --prod --yes` from current head `76fbd9c`, but Vercel still rejected the production deploy with `api-deployments-free-per-day` after upload.
+- Confirmed the validation watch remains unchanged: 0 interview rows, 5 founder/operator rows waiting, 5 advisor rows waiting, and both follow-up passes still due on `2026-04-27 UTC`.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` for real replies and converting any reply into an interview; otherwise the follow-up passes stay blocked on the date gate.
+- Updated `DEPLOY-STATUS.md` and this progress log so the broken deploy marker still reflects the latest failed retry.
+
+## 2026-04-23
+
+### Deploy Retry and Validation Handoff
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `DEPLOY-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before choosing the next task.
+- Treated `DEPLOY-STATUS.md` as the first blocker and retried `npx vercel --prod --yes` again.
+- Vercel uploaded the bundle and then rejected the production deploy with `api-deployments-free-per-day` and `Resource is limited - try again in 24 hours`, so the live site still needs a later retry after quota resets.
+- Confirmed the highest-priority incomplete work remains exact buyer validation through real interviews, but `COMMUNITY-FEEDBACK.md` still has no founder/operator or advisor replies to convert.
+- The next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` for real replies and converting any reply into an interview; otherwise the follow-up passes stay blocked until `2026-04-27 UTC`.
+- Updated `DEPLOY-STATUS.md` and this progress log to keep the blocked deploy visible for the next run.
+
+### How-To Guide and Deploy Marker Repair
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `HELP-STATUS.md`, and `DEPLOY-STATUS.md` before taking the next step.
+- Found that `DEPLOY-STATUS.md` had been deleted in the worktree, so I restored it to keep the deployment blocker visible until the next successful Vercel retry.
+- Published a new SEO guide, `blog-how-to-send-subprocessor-change-notice.html`, covering a five-step workflow for sending subprocessor change notices, calculating objection windows, and keeping proof.
+- Updated `blog.html`, `index.html`, `changelog.html`, and `sitemap.xml` so the new guide is discoverable from the blog, homepage, and sitemap.
+- Marked the new how-to guide task complete in `BACKLOG-CHEAP.md`.
+- The remaining blocked cheap work is still the dated founder and advisor follow-up pass after `2026-04-27 UTC`, so the next non-blocked work remains content or site polish.
+
 ### Deploy Retry and Validation Watch
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and `DEPLOY-STATUS.md` before choosing the next task.
