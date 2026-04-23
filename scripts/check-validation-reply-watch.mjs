@@ -117,6 +117,7 @@ async function main() {
   }));
   const totalReplyRows = parsedBatches.reduce((total, batch) => total + countReplies(batch.rows), 0);
   const noFounderRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
+  const noAdvisorRepliesPosted = feedbackText.includes("No advisor replies have been posted here yet.");
   const today = new Date().toISOString().slice(0, 10);
   const dueFollowUps = followUps.filter((item) => {
     const dueDate = parseDate(item.due);
@@ -129,7 +130,7 @@ async function main() {
     ...parsedBatches.map((batch) => `- ${batch.label} replies, bounces, or interview rows recorded in CSV: ${countReplies(batch.rows)}`),
     `- Interview log rows: ${parsedInterviews.length}`,
     ...parsedBatches.map((batch) => `- ${batch.label} sent rows still waiting for replies: ${countStatus(batch.rows, "sent")}`),
-    `- Community feedback note: ${noFounderRepliesPosted ? "no founder/operator replies have been posted yet." : "replies are present and need review."}`,
+    `- Community feedback note: ${noFounderRepliesPosted && noAdvisorRepliesPosted ? "no founder/operator or advisor replies have been posted yet." : "replies are present and need review."}`,
     ...followUps.map((item) => `- ${item.label} due: ${item.due}`),
     "",
     "## Next Action",

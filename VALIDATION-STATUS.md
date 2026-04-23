@@ -18,7 +18,7 @@ Date: 2026-04-23
 
 ## Reply Watch
 
-- `COMMUNITY-FEEDBACK.md` currently says: no founder/operator replies have been posted yet.
+- `COMMUNITY-FEEDBACK.md` currently says: no founder/operator or advisor replies have been posted yet.
 - Interview log rows: 0
 - Founder batch reply or bounce rows recorded in CSV: 0
 - Advisor batch reply or bounce rows recorded in CSV: 0

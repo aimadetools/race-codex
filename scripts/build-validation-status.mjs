@@ -145,7 +145,8 @@ const founderReplies = founderBatchRows.filter((row) => ["replied_positive", "re
 const advisorReplies = advisorBatchRows.filter((row) => ["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim())).length;
 const followUpDate = extractFollowUpDate(followUpText);
 const advisorFollowUpDate = extractFollowUpDate(advisorFollowUpText);
-const noRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
+const noFounderRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
+const noAdvisorRepliesPosted = feedbackText.includes("No advisor replies have been posted here yet.");
 
 const output = [
   "# NoticeKit Validation Status",
@@ -168,7 +169,7 @@ const output = [
   "",
   "## Reply Watch",
   "",
-  `- ` + "`COMMUNITY-FEEDBACK.md`" + ` currently says: ${noRepliesPosted ? "no founder/operator replies have been posted yet." : "replies are present and need review."}`,
+  `- ` + "`COMMUNITY-FEEDBACK.md`" + ` currently says: ${noFounderRepliesPosted && noAdvisorRepliesPosted ? "no founder/operator or advisor replies have been posted yet." : "replies are present and need review."}`,
   `- Interview log rows: ${interviewRows.length}`,
   `- Founder batch reply or bounce rows recorded in CSV: ${founderReplies}`,
   `- Advisor batch reply or bounce rows recorded in CSV: ${advisorReplies}`,

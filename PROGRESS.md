@@ -2,6 +2,16 @@
 
 ## 2026-04-23
 
+### Advisor Reply Watch Coverage
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` before choosing the next task.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no deploy-state repair to do first.
+- Ran `npm run check:validation-watch`; it reports 0 founder/operator reply rows, 0 advisor reply rows, 0 interview rows, 5 founder/operator sent rows waiting, and 5 advisor sent rows waiting.
+- Completed the currently executable advisor reply check by adding an explicit no-advisor-replies note to `COMMUNITY-FEEDBACK.md` and keeping `buyer-validation-outreach-batch-02.csv` unchanged because there is no specific reply, bounce, referral, or interview to record.
+- Updated `scripts/check-validation-reply-watch.mjs` and `scripts/build-validation-status.mjs` so their feedback summaries require both founder/operator and advisor no-reply markers before reporting a clean no-reply state.
+- Regenerated `VALIDATION-STATUS.md`; the reply watch now says no founder/operator or advisor replies have been posted yet.
+- Verification run: `npm run build:validation-status`, `npm run check:validation-watch`, and `node --check` for the touched validation scripts all passed.
+
 ### Validation Follow-Up Control Plane
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `DECISIONS.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` before choosing the next task.
