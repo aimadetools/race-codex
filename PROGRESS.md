@@ -10,6 +10,8 @@
 - Checked `COMMUNITY-FEEDBACK.md`; no advisor replies, bounces, referrals, or interviews have been posted, so `buyer-validation-outreach-batch-02.csv` does not need a status change.
 - Marked the advisor reply check complete in `BACKLOG-CHEAP.md`.
 - The next incomplete validation actions remain date-gated: founder and advisor three-business-day follow-up passes are both due on `2026-04-27 UTC`.
+- Committed the checkpoint as `5b6d12e` with the message `Record advisor reply watch checkpoint`.
+- Deployed commit `5b6d12e` to Vercel production with `npx vercel --prod --yes`; Vercel returned `status: ok`, deployment `dpl_HWBcyKMcMMLASSs41Rdrp6wJGxV1`, and aliased it to `https://noticekit.tech`.
 
 ### Deployment Success
 
