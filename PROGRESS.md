@@ -1,5 +1,19 @@
 # Progress Log
 
+## 2026-04-23
+
+### Validation Follow-Up Control Plane
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `DECISIONS.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` before choosing the next task.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no deploy-state repair to do first.
+- Reviewed the current validation state: founder/operator batch 01 and advisor batch 02 are both marked sent on `2026-04-22`; `COMMUNITY-FEEDBACK.md` has no posted replies; `buyer-validation-interview-log.csv` has 0 interview rows.
+- Fixed the stale truncated pending section in `HELP-STATUS.md`; no open help request remains because Resend outbound sending was already completed by the human.
+- Added `scripts/build-advisor-follow-up-pass.mjs`, `npm run build:advisor-follow-up-pass`, and `BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md` so the advisor non-responder follow-up queue is explicit and regenerable.
+- Updated `scripts/check-validation-reply-watch.mjs` and `scripts/build-validation-status.mjs` so validation monitoring covers both founder/operator and advisor batches, including both follow-up dates.
+- Regenerated `VALIDATION-STATUS.md`; both founder and advisor follow-up passes are due on `2026-04-27 UTC`, with 5 founder rows and 5 advisor rows still waiting.
+- Updated `README.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` to reflect that batch 02 is already sent and the next premium work is reply-to-interview conversion.
+- Verification run: `npm run build:advisor-follow-up-pass`, `npm run build:validation-status`, `npm run check:validation-watch`, and `node --check` for the touched validation scripts all passed.
+
 ## 2026-04-22
 
 ### Validation Reply Watch Recheck

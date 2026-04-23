@@ -3,6 +3,7 @@
   "scripts": {
     "build:paid-kits": "node scripts/build-paid-kit-fulfillment.mjs",
     "build:founder-follow-up-pass": "node scripts/build-founder-follow-up-pass.mjs",
+    "build:advisor-follow-up-pass": "node scripts/build-advisor-follow-up-pass.mjs",
     "build:validation-status": "node scripts/build-validation-status.mjs",
     "build:validation-send-plan": "node scripts/build-validation-send-plan.mjs",
     "check:validation-watch": "node scripts/check-validation-reply-watch.mjs",

@@ -33,6 +33,7 @@ The first version includes:
 - `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and `buyer-validation-outreach-batch-01.csv` track the first five founder/operator validation targets; batch 01 was sent on 2026-04-22 and is waiting for replies.
 - `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` captures the three-business-day founder follow-up queue for batch 01 non-responders.
 - `BUYER-VALIDATION-OUTREACH-BATCH-02.md` and `buyer-validation-outreach-batch-02.csv` cover the three fractional DPO/privacy consultant and two startup attorney validation targets; batch 02 was executed on 2026-04-22 under an explicit operator override.
+- `BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md` captures the three-business-day advisor follow-up queue for batch 02 non-responders.
 - `BUYER-VALIDATION-OUTREACH-BATCH-03.md` and `buyer-validation-outreach-batch-03.csv` define the contingency founder/operator expansion to use only if the 2026-04-27 no-reply check still needs five more public targets.
 - `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
 - `VALIDATION-STATUS.md` is the canonical buyer-validation status snapshot for reply monitoring and next-action checks.
@@ -66,6 +67,7 @@ The first version includes:
 - `VALIDATION-OUTREACH-SEND-PLAN.md` classifies the prepared outreach queue into direct-email and manual-send targets so the first outreach day is unambiguous.
 - `scripts/generate-validation-drafts.mjs` generates per-target outreach draft files from the prepared buyer validation CSVs.
 - `scripts/build-founder-follow-up-pass.mjs` regenerates the batch 01 non-responder follow-up queue and due date.
+- `scripts/build-advisor-follow-up-pass.mjs` regenerates the batch 02 non-responder follow-up queue and due date.
 - `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
 - `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and next action for the validation queue.
 - `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue through SMTP or Resend when an approved sender is available.

@@ -1,12 +1,13 @@
 # NoticeKit Validation Status
 
-Date: 2026-04-22
+Date: 2026-04-23
 
 ## Current Read
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` for replies and convert any real reply into an interview.
 - Founder follow-up pass due: 2026-04-27 UTC.
+- Advisor follow-up pass due: 2026-04-27 UTC.
 - Batch 03 remains contingency-only until the 2026-04-27 no-reply check.
 
 ## Batch Snapshot
@@ -20,6 +21,7 @@ Date: 2026-04-22
 - `COMMUNITY-FEEDBACK.md` currently says: no founder/operator replies have been posted yet.
 - Interview log rows: 0
 - Founder batch reply or bounce rows recorded in CSV: 0
+- Advisor batch reply or bounce rows recorded in CSV: 0
 
 ## Notes
 

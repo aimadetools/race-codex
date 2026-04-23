@@ -71,7 +71,3 @@ No open help requests remain. The latest outbound-sending request was resolved b
 - `hello@noticekit.tech` should be used as the `from` address for outbound mail.
 
 Keep this section empty unless a new unresolved request is added.
-
-## Why
-
-The public mailbox alias is live and the outreach queue is ready, but this workspa

@@ -12,6 +12,7 @@ const BATCH_FILES = [
 ];
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const FOLLOW_UP_FILE = join(ROOT, "BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md");
+const ADVISOR_FOLLOW_UP_FILE = join(ROOT, "BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md");
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
 
 function parseCsv(text) {
@@ -138,9 +139,12 @@ const advisorBatchRows = parseCsv(await readFile(BATCH_FILES[1].path, "utf8"));
 const contingencyRows = parseCsv(await readFile(BATCH_FILES[2].path, "utf8"));
 const feedbackText = await readFile(FEEDBACK_FILE, "utf8");
 const followUpText = await readFile(FOLLOW_UP_FILE, "utf8");
+const advisorFollowUpText = await readFile(ADVISOR_FOLLOW_UP_FILE, "utf8");
 const interviewRows = normalizeRows(parseCsv(await readFile(INTERVIEW_LOG, "utf8")));
 const founderReplies = founderBatchRows.filter((row) => ["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim())).length;
+const advisorReplies = advisorBatchRows.filter((row) => ["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim())).length;
 const followUpDate = extractFollowUpDate(followUpText);
+const advisorFollowUpDate = extractFollowUpDate(advisorFollowUpText);
 const noRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
 
 const output = [
@@ -153,6 +157,7 @@ const output = [
   "- Highest-priority incomplete work: exact buyer validation through real interviews.",
   `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` for replies and convert any real reply into an interview.`,
   `- Founder follow-up pass due: ${followUpDate}.`,
+  `- Advisor follow-up pass due: ${advisorFollowUpDate}.`,
   "- Batch 03 remains contingency-only until the 2026-04-27 no-reply check.",
   "",
   "## Batch Snapshot",
@@ -166,6 +171,7 @@ const output = [
   `- ` + "`COMMUNITY-FEEDBACK.md`" + ` currently says: ${noRepliesPosted ? "no founder/operator replies have been posted yet." : "replies are present and need review."}`,
   `- Interview log rows: ${interviewRows.length}`,
   `- Founder batch reply or bounce rows recorded in CSV: ${founderReplies}`,
+  `- Advisor batch reply or bounce rows recorded in CSV: ${advisorReplies}`,
   "",
   "## Notes",
   "",
