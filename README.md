@@ -53,6 +53,7 @@ The first version includes:
 - `LEGAL-POSITIONING.md` defines the disclaimer and operational positioning boundaries.
 - `LOCALIZED-PACKS-EXPLORATION.md` evaluates EU GDPR, UK GDPR, and US enterprise procurement pack opportunities.
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
+- `noticekit-self-audit-worksheet.md` is the downloadable Markdown worksheet version of the public readiness self-audit.
 - `partner-preview.html` and `noticekit-partner-preview.pdf` provide a consultant/advisor partner preview based on the Pro kit manifest.
 - `PAYMENT-PROVIDER.md` documents the Stripe Payment Links launch decision.
 - `paid-kits/` contains the private early-access Starter and Pro fulfillment files, PDF exports, ZIP archives, and first-buyer fulfillment log for manual Stripe buyers; it is excluded from Vercel deployment by `.vercelignore`.

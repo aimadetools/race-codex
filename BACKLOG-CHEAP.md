@@ -27,6 +27,7 @@ These tasks are routine and can be handled quickly.
 - Send the three-business-day founder follow-up pass for non-responders after 2026-04-27.
 - [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for advisor replies and update `buyer-validation-outreach-batch-02.csv` statuses.
 - Send the three-business-day advisor follow-up pass for non-responders after 2026-04-27.
+- Add the `self-audit.html` link to the founder and advisor follow-up draft copy after the 2026-04-27 gate opens.
 - [x] Add guarded Resend/SMTP follow-up sending mode for the three-business-day validation non-responder passes.
 - Regenerate `VALIDATION-STATUS.md` and run `npm run check:validation-watch` after any batch reply, bounce, or follow-up status change.
 - If no founder replies by 2026-04-27, add five more founder/operator targets with public DPA or subprocessor pages.
@@ -67,6 +68,9 @@ These tasks are routine and can be handled quickly.
 - [x] Add a subprocessor notice checklist blog post.
 - [x] Add a subprocessor objection response template blog post.
 - [x] Update the homepage, blog index, sitemap, and changelog for the new checklist and response template.
+- [x] Add score-specific Starter vs Pro copy to the self-audit result panel.
+- [x] Add a downloadable Markdown worksheet version of the self-audit for founders who want to share it with counsel.
+- [x] Add an internal event-name note for tracking self-audit page visits once Vercel Web Analytics data is reviewed.
 
 ## P2
 

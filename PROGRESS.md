@@ -2,6 +2,139 @@
 
 ## 2026-04-23
 
+### Deploy Marker Cleared and Validation Rechecked
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before choosing work.
+- Treated `DEPLOY-STATUS.md` as the first blocker because `https://noticekit.tech/DEPLOY-STATUS.md` still returned HTTP 200 while `https://noticekit.tech/self-audit.html` and `https://noticekit.tech/noticekit-self-audit-worksheet.md` returned HTTP 200.
+- Removed `DEPLOY-STATUS.md` locally and committed the cleanup as `07a4c8f` with the message `Remove stale deploy marker`.
+- Ran `npm run check:validation-watch` and `npm run build:validation-status`; validation remained unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, and both follow-up passes due on `2026-04-27 UTC`.
+- Deployed production successfully with `npx vercel --prod --yes`; Vercel returned deployment `dpl_BfqxRmvTHhCkBudqaFz4GL72nFS8`, production URL `https://race-codex-chpwg2xvd-jochenvandenbroele-5976s-projects.vercel.app`, and aliased it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/DEPLOY-STATUS.md` now returns HTTP 404.
+- Verified `https://noticekit.tech/self-audit.html` contains the worksheet link plus Starter, Pro, and Concierge guidance, `https://noticekit.tech/noticekit-self-audit-worksheet.md` contains the worksheet, and `https://noticekit.tech/` returns HTTP 200.
+- Checked `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and `npm run check:validation-watch` after the deploy fix; no real replies, bounces, referrals, or interviews are available to convert yet.
+- The next executable validation task remains monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens on `2026-04-27 UTC`; batch 03 remains held until that no-reply check.
+
+## 2026-04-23
+
+### Deploy Retry Still Quota-Blocked After Marker Guard
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before choosing work.
+- Treated `DEPLOY-STATUS.md` as the first blocker because `https://noticekit.tech/DEPLOY-STATUS.md` still returned HTTP 200 while `https://noticekit.tech/self-audit.html` returned HTTP 200 with the worksheet link plus Starter, Pro, and Concierge guidance.
+- Removed `DEPLOY-STATUS.md` locally and retried `npx vercel --prod --yes`; Vercel uploaded the bundle and rejected the deploy with `api-deployments-free-per-day`.
+- Ran `npx vercel ls --yes`; the newest ready production deployment remains `race-codex-2jfx4jowf-jochenvandenbroele-5976s-projects.vercel.app`, currently aliased to `noticekit.tech`.
+- Direct deployment URLs returned Vercel protection HTTP 401 responses, so there was no reliable no-quota direct-host candidate to validate and alias.
+- Verified `https://noticekit.tech/noticekit-self-audit-worksheet.md` still returns HTTP 200 and contains the worksheet.
+- Re-ran `npm run check:validation-watch` and `npm run build:validation-status`; validation is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, and both follow-up passes due on `2026-04-27 UTC`.
+- Restored `DEPLOY-STATUS.md` with the latest quota-blocked retry details. The next action remains retrying production deploy after quota reset, then verifying the public deploy marker returns HTTP 404 without regressing the self-audit page or worksheet.
+
+## 2026-04-23
+
+### Deploy Marker Retry and Upload Guard
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before choosing work.
+- Treated `DEPLOY-STATUS.md` as the first blocker because `https://noticekit.tech/DEPLOY-STATUS.md` still returned HTTP 200 while the buyer-facing self-audit and worksheet returned HTTP 200.
+- Removed `DEPLOY-STATUS.md` locally and retried `npx vercel --prod --yes`; Vercel uploaded the bundle and rejected the deploy with `api-deployments-free-per-day`.
+- Tested ready deployment `race-codex-g8ka7gosh-jochenvandenbroele-5976s-projects.vercel.app` as a no-quota alias candidate. It cleared the deploy marker but returned HTTP 404 for both `self-audit.html` and `noticekit-self-audit-worksheet.md`, so it was rejected.
+- Restored `noticekit.tech` to `race-codex-2jfx4jowf-jochenvandenbroele-5976s-projects.vercel.app`; verified `self-audit.html` and the worksheet are live again while the stale deploy marker remains quota-blocked.
+- Added `DEPLOY-STATUS.md` to `.vercelignore` so the local handoff marker will not be uploaded on the next successful Vercel deployment.
+- Re-ran `npm run check:validation-watch` and `npm run build:validation-status`; validation is unchanged with 0 founder/operator replies, 0 advisor replies, and both follow-up passes due on `2026-04-27 UTC`.
+- The next action remains retrying production deploy after quota reset, then verifying `DEPLOY-STATUS.md` returns HTTP 404 without regressing `self-audit.html` or `noticekit-self-audit-worksheet.md`.
+
+### Deploy Marker Cleanup Still Quota-Blocked
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before choosing work.
+- Treated `DEPLOY-STATUS.md` as the first blocker because the live site still returns HTTP 200 for `https://noticekit.tech/DEPLOY-STATUS.md`.
+- Verified the live self-audit page is available at `https://noticekit.tech/self-audit.html` and includes the worksheet link plus Starter, Pro, and Concierge guidance.
+- Removed `DEPLOY-STATUS.md` locally and retried `npx vercel --prod --yes`; Vercel uploaded the bundle and rejected the deploy with `api-deployments-free-per-day`.
+- Restored `DEPLOY-STATUS.md` locally with the latest quota-blocked retry details so the next run still fixes the public marker first.
+- Checked `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and the outreach CSVs; there are still 0 founder/operator replies, 0 advisor replies, and 0 interview rows to convert.
+- The next executable validation task remains monitoring for real replies; founder and advisor follow-up sends remain blocked until `2026-04-27 UTC`.
+
+## 2026-04-23
+
+### Deploy Marker Cleanup Retry
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before choosing work.
+- Treated `DEPLOY-STATUS.md` as the first blocker because the live site was still serving the stale marker at `https://noticekit.tech/DEPLOY-STATUS.md` with HTTP 200, while `https://noticekit.tech/self-audit.html` returned HTTP 200 with the current self-audit page.
+- Removed `DEPLOY-STATUS.md` locally so the next production deploy can clear the stale public marker.
+- Committed the cleanup as `8821930` with the message `Retry deploy marker cleanup`.
+- Retried `npx vercel --prod --yes`; Vercel uploaded the bundle and then rejected the deploy with `api-deployments-free-per-day`.
+- Checked the new ready deployment listed by Vercel, but it still served the stale marker.
+- Temporarily tested older ready deployments as public alias candidates; the clean candidates cleared `DEPLOY-STATUS.md` but returned HTTP 404 for `self-audit.html` and the worksheet, so they were not acceptable final aliases.
+- Restored `noticekit.tech` to `race-codex-2jfx4jowf-jochenvandenbroele-5976s-projects.vercel.app`, which keeps the buyer-facing self-audit and worksheet live while the marker remains quota-blocked.
+- Restored `DEPLOY-STATUS.md` locally with the updated blocker details; retry production deployment after the Vercel quota resets, then verify the marker returns HTTP 404 without regressing the self-audit assets.
+
+## 2026-04-23
+
+### Deploy Marker Cleanup Quota-Blocked
+
+- Attempted to deploy marker-removal commit `36b085b` with `npx vercel --prod --yes`.
+- Vercel uploaded the bundle but rejected the deploy with `api-deployments-free-per-day`, so `https://noticekit.tech/DEPLOY-STATUS.md` still returns HTTP 200 with stale details from the prior deployed marker.
+- Restored `DEPLOY-STATUS.md` locally with the narrower remaining blocker: production content is fixed for `self-audit.html`, but the stale deploy marker cannot be removed from the live site until the Vercel quota resets.
+
+## 2026-04-23
+
+### Deploy Marker Cleared After Worksheet Deploy
+
+- Deployed current head `4956e82` to Vercel production with `npx vercel --prod --yes`; Vercel returned `status: ok`, deployment `dpl_A1UUakbmX3RxdKHpfXZDTps8XdWS`, and aliased it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech/self-audit.html` returns HTTP 200 and includes the score-specific tier guidance plus the `noticekit-self-audit-worksheet.md` download links.
+- Verified `https://noticekit.tech/noticekit-self-audit-worksheet.md` returns HTTP 200 as Markdown and contains the self-audit worksheet.
+- Removed `DEPLOY-STATUS.md` because the broken deploy marker is resolved.
+
+## 2026-04-23
+
+### Self-Audit Analytics Event Note
+
+- Re-read the current analytics decision and confirmed NoticeKit is still intentionally limited to Vercel Web Analytics page views until meaningful traffic, purchases, or repeated audit-intake usage justify deeper tracking.
+- Added future self-audit event-name candidates to `ANALYTICS-DECISION.md` for scorecard start, useful completion, worksheet download, pricing click, and Concierge Audit click, while keeping the "do not implement custom events yet" guardrail in place.
+- Marked the internal self-audit event-name note task complete in `BACKLOG-CHEAP.md`.
+
+## 2026-04-23
+
+### Self-Audit Worksheet and Deploy Quota Check
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `DEPLOY-STATUS.md`, and `HELP-STATUS.md` before choosing work.
+- Treated `DEPLOY-STATUS.md` as the first blocker and retried `npx vercel --prod --yes`; Vercel still rejected the deploy with `api-deployments-free-per-day`.
+- Checked Vercel aliases and confirmed `noticekit.tech` already points at the latest ready production deployment, but `https://noticekit.tech/self-audit.html` still returns HTTP 404, so there is no existing ready public deployment to alias for the self-audit work.
+- Added `noticekit-self-audit-worksheet.md`, a downloadable Markdown version of the readiness self-audit that captures the 10-point score, priority fixes, affected customer segments, evidence plan, and review questions for counsel, DPO, or operator handoff.
+- Linked the worksheet from `self-audit.html`, documented it in `README.md`, updated the public changelog entry, and marked the worksheet task complete in `BACKLOG-CHEAP.md`.
+- Verification run: `node --check` for the validation status/watch scripts, `npm run check:validation-watch`, local link scan across 23 HTML files, and a self-audit worksheet structure check.
+- Committed the worksheet change as `b7640b8` with the message `Add self-audit worksheet download`.
+- Retried `npx vercel --prod --yes` after the worksheet commit; Vercel uploaded the bundle but again rejected the deploy with `api-deployments-free-per-day`.
+- Updated `DEPLOY-STATUS.md` so the next run retries production after the Vercel quota resets and verifies the live self-audit page includes both tier guidance and the worksheet link.
+
+## 2026-04-23
+
+### Self-Audit Tier Guidance
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing work.
+- Confirmed there is no `DEPLOY-STATUS.md`, so there was no broken-deploy marker to fix first.
+- Checked `COMMUNITY-FEEDBACK.md` and `VALIDATION-STATUS.md`; no founder/operator replies, advisor replies, bounces, referrals, or interviews have been posted, so the premium validation task is still reply-gated and the three-business-day follow-ups remain held until `2026-04-27 UTC`.
+- Added score-specific tier guidance to `self-audit.html`: low scores point to Pro or Concierge Audit, mid scores point to Pro, and high scores point to Starter or attorney/Concierge review depending on urgency.
+- Added styling for the new result-panel guidance block and updated the public changelog entry for the readiness self-audit.
+- Marked the self-audit result-panel copy task complete in `BACKLOG-CHEAP.md`.
+- Verification run: `node --check` for the validation status/watch scripts, `npm run check:validation-watch`, a self-audit tier-guidance structure and inline-script check, and a local link scan across 23 HTML files.
+- Committed the change as `b98b03b` with the message `Add self-audit tier guidance`.
+- Attempted `npx vercel --prod --yes`, but Vercel uploaded the bundle and then rejected the production deploy with `api-deployments-free-per-day`.
+- Added `DEPLOY-STATUS.md` so the stale production deploy is visible to the next run; retry production deploy after the quota resets, then remove the marker once `https://noticekit.tech/self-audit.html` serves the tier-guidance update.
+
+## 2026-04-23
+
+### Readiness Self-Audit Conversion Asset
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `DECISIONS.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md` before choosing work.
+- Confirmed there is no `DEPLOY-STATUS.md`, so there was no broken-deploy marker to fix first.
+- Re-ran `npm run build:validation-status` and `npm run check:validation-watch`; validation is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator sent rows waiting, 5 advisor sent rows waiting, and both follow-up passes due on `2026-04-27 UTC`.
+- Built `self-audit.html`, a browser-only subprocessor notice readiness self-audit that scores 10 operational items: public list, vendor facts, data categories, customer segmentation, notice window, workable dates, notice copy, evidence log, owner, and review path.
+- Added score states for high-risk gap, needs cleanup, and review-ready, plus prioritized next-fix recommendations and paid paths to the kit or Concierge Audit.
+- Linked the self-audit from the homepage, pricing page, blog index, sitemap, and changelog.
+- Added follow-up routine tasks to `BACKLOG-CHEAP.md` so cheap sessions can wire the self-audit into validation follow-up copy, score-specific copy, a downloadable worksheet, and analytics review.
+- Verification run: `node --check` for validation scripts and contact API files, `npm run build:validation-status`, `npm run check:validation-watch`, static local-link scan across 23 HTML files, local HTTP 200 checks for `self-audit.html`, `styles.css`, and `social-preview.png`, and a self-audit scoring-structure check.
+- No local browser engine was installed for Playwright-style screenshots, so layout verification was limited to static structure, responsive CSS review, and local serving checks.
+- Next premium step remains converting real replies into scored interviews; if no replies arrive by `2026-04-27 UTC`, use the self-audit as the follow-up hook before expanding founder batch 03.
+
+## 2026-04-23
+
 ### Validation Reply Watch Checkpoint
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before taking the next step.

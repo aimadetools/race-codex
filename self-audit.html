@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subprocessor Notice Readiness Self-Audit | NoticeKit</title>
+    <meta name="description" content="Score your subprocessor change notice workflow before adding or replacing a SaaS vendor. Local-only readiness check for founders.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:title" content="Subprocessor Notice Readiness Self-Audit | NoticeKit">
+    <meta property="og:description" content="Score your subprocessor change notice workflow before adding or replacing a SaaS vendor.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit subprocessor notices for small SaaS teams">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Subprocessor Notice Readiness Self-Audit | NoticeKit">
+    <meta name="twitter:description" content="Score your subprocessor change notice workflow before adding or replacing a SaaS vendor.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="self-audit.html">Self-audit</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <span class="eyebrow">Local readiness check</span>
+          <h1>Score your subprocessor notice workflow before the vendor goes live.</h1>
+          <p>Use this browser-only self-audit to find missing facts, dates, customer segments, and proof records before you send a customer notice or ask counsel to review it.</p>
+        </section>
+
+        <section class="section audit-layout">
+          <form class="audit-card" id="readiness-form">
+            <div class="section-head compact-head">
+              <h2>Readiness questions</h2>
+              <p>Check every item that is already true for the vendor change you are planning.</p>
+            </div>
+
+            <div class="option-grid">
+              <label class="check-card">
+                <input type="checkbox" value="page">
+                <span>
+                  <strong>Public list exists</strong>
+                  <small>Your current subprocessor page or list is published and reachable.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="vendor">
+                <span>
+                  <strong>Vendor facts are complete</strong>
+                  <small>Name, purpose, service owner, processing region, and source links are captured.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="data">
+                <span>
+                  <strong>Data categories are clear</strong>
+                  <small>The notice can say what customer or user data the vendor may process.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="segments">
+                <span>
+                  <strong>Affected customers are segmented</strong>
+                  <small>You know which customers, DPA versions, or regions receive the notice.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="window">
+                <span>
+                  <strong>Notice window is known</strong>
+                  <small>The objection period or advance notice timing is mapped from your agreements.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="dates">
+                <span>
+                  <strong>Dates are workable</strong>
+                  <small>The planned effective date leaves enough time for the applicable notice window.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="copy">
+                <span>
+                  <strong>Notice copy is drafted</strong>
+                  <small>The draft includes vendor purpose, data, dates, objection path, and contact route.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="proof">
+                <span>
+                  <strong>Evidence log is ready</strong>
+                  <small>You have a place to save sent time, recipients, proof links, objections, and outcome.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="owner">
+                <span>
+                  <strong>Owner is assigned</strong>
+                  <small>Someone is responsible for sending, logging, answering objections, and closing the loop.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input type="checkbox" value="review">
+                <span>
+                  <strong>Review path exists</strong>
+                  <small>Counsel, DPO, or the accountable operator has a final review step before send.</small>
+                </span>
+              </label>
+            </div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Readiness score</span>
+            <div class="score-row">
+              <strong id="score-value">0/10</strong>
+              <span id="score-label">High-risk gap</span>
+            </div>
+            <div class="score-meter" aria-hidden="true"><span id="score-bar"></span></div>
+            <p id="score-summary">Start by identifying the vendor facts, affected customers, notice window, and evidence owner.</p>
+            <div class="tier-guidance" id="tier-guidance">
+              <strong id="tier-title">Best fit: Pro cleanup</strong>
+              <p id="tier-copy">Use Pro if several dates, customer segments, or proof records still need to be organized before a notice can be reviewed.</p>
+            </div>
+            <div class="result-list">
+              <strong>Next fixes</strong>
+              <ul id="recommendations"></ul>
+            </div>
+            <div class="result-actions">
+              <a class="button" href="pricing.html">Get the kit</a>
+              <a class="button secondary" href="noticekit-self-audit-worksheet.md" download>Worksheet</a>
+              <a class="button gold" href="https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07">Buy audit</a>
+            </div>
+            <p class="fine-print">This self-audit runs in your browser and does not submit form data to NoticeKit.</p>
+          </aside>
+        </section>
+
+        <section class="band">
+          <div class="section">
+            <div class="section-head">
+              <h2>What the score means</h2>
+              <p>A high score does not decide whether a notice is legally required. It shows whether the operational packet is organized enough for a clean send and review.</p>
+            </div>
+            <div class="grid-3">
+              <article class="card"><span class="status-pill danger">0-4</span><h3>High-risk gap</h3><p>Do not send from memory. Build the vendor facts, customer segment, timing, and proof record first.</p></article>
+              <article class="card"><span class="status-pill warn">5-7</span><h3>Needs cleanup</h3><p>The workflow is close, but missing fields can create deadline confusion or weak evidence later.</p></article>
+              <article class="card"><span class="status-pill ready">8-10</span><h3>Review-ready</h3><p>The operational record is ready for final attorney, DPO, or accountable operator review before sending.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="download-band">
+            <div>
+              <span class="eyebrow">Shareable worksheet</span>
+              <h2>Take the self-audit to counsel or your DPO.</h2>
+              <p>Download the Markdown worksheet to capture the same 10-point score, priority fixes, affected customer segments, and evidence plan in your own workspace.</p>
+            </div>
+            <div class="download-actions">
+              <a class="button gold" href="noticekit-self-audit-worksheet.md" download>Download worksheet</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <h2>Missing more than two items?</h2>
+              <p>The Pro kit covers segmentation, evidence logs, DPA intake fields, and repeated vendor-change records. The Concierge Audit is for teams with an urgent change or enterprise review.</p>
+            </div>
+            <a class="button gold" href="https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07">Buy concierge audit</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
+      </footer>
+    </div>
+
+    <script>
+      const checks = Array.from(document.querySelectorAll("#readiness-form input[type='checkbox']"));
+      const scoreValue = document.querySelector("#score-value");
+      const scoreLabel = document.querySelector("#score-label");
+      const scoreBar = document.querySelector("#score-bar");
+      const scoreSummary = document.querySelector("#score-summary");
+      const tierTitle = document.querySelector("#tier-title");
+      const tierCopy = document.querySelector("#tier-copy");
+      const recommendations = document.querySelector("#recommendations");
+
+      const advice = {
+        page: "Publish or update the current subprocessor list before drafting customer-specific notices.",
+        vendor: "Collect vendor name, purpose, service owner, region, and source links in one row.",
+        data: "Name the data categories in plain language before legal or customer review.",
+        segments: "Map which customers, regions, or DPA versions are affected by this change.",
+        window: "Confirm the applicable notice or objection period from your DPA language.",
+        dates: "Move the effective date or send date if the objection window cannot run cleanly.",
+        copy: "Draft the customer notice with dates, vendor purpose, data categories, and objection route.",
+        proof: "Create an evidence log for send proof, recipients, deadline, objections, and resolution.",
+        owner: "Assign one accountable owner for send, follow-up, and evidence closeout.",
+        review: "Route the packet to counsel, DPO, or the accountable operator before sending."
+      };
+
+      function renderScore() {
+        const selected = checks.filter((item) => item.checked).map((item) => item.value);
+        const score = selected.length;
+        const missing = checks.map((item) => item.value).filter((value) => !selected.includes(value));
+        const percent = `${score * 10}%`;
+        let label = "High-risk gap";
+        let summary = "Start by identifying the vendor facts, affected customers, notice window, and evidence owner.";
+        let tierHeading = "Best fit: Pro cleanup";
+        let tierText = "Use Pro if several dates, customer segments, or proof records still need to be organized before a notice can be reviewed.";
+
+        if (score >= 8) {
+          label = "Review-ready";
+          summary = "The operational packet is mostly complete. Run final review, save proof, and watch the objection deadline.";
+          tierHeading = "Best fit: Starter or attorney review";
+          tierText = "Starter is enough for a single vendor change when facts, dates, copy, proof, and review are already in place. Use Concierge Audit if an enterprise customer or counsel needs a second-pass operational review.";
+        } else if (score >= 5) {
+          label = "Needs cleanup";
+          summary = "The basics are present, but missing details could create customer confusion or weak evidence later.";
+          tierHeading = "Best fit: Pro";
+          tierText = "Pro fits when the remaining work is customer segmentation, DPA timing, evidence logging, or repeatable owner handoff across more than one account group.";
+        } else {
+          tierHeading = "Best fit: Pro or Concierge Audit";
+          tierText = "Pro gives you the operating worksheets to rebuild the packet. Choose Concierge Audit when the vendor change is urgent, customer-facing, or already tied to an enterprise review.";
+        }
+
+        scoreValue.textContent = `${score}/10`;
+        scoreLabel.textContent = label;
+        scoreBar.style.width = percent;
+        scoreSummary.textContent = summary;
+        tierTitle.textContent = tierHeading;
+        tierCopy.textContent = tierText;
+
+        recommendations.innerHTML = "";
+        missing.slice(0, 4).forEach((key) => {
+          const item = document.createElement("li");
+          item.textContent = advice[key];
+          recommendations.appendChild(item);
+        });
+
+        if (missing.length === 0) {
+          const item = document.createElement("li");
+          item.textContent = "Export or save the final packet in your own workspace before the notice goes out.";
+          recommendations.appendChild(item);
+        }
+      }
+
+      checks.forEach((item) => item.addEventListener("change", renderScore));
+      renderScore();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>

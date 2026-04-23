@@ -22,6 +22,18 @@ The route is provided by Vercel after Web Analytics is enabled for the project a
 
 Web Analytics is enabled for the Vercel `race-codex` project. Check the Analytics tab after production traffic reaches the site.
 
+## Future Self-Audit Event Names
+
+Do not implement custom events until Vercel Web Analytics shows meaningful traffic to `self-audit.html` or repeated paid-intent clicks from that page. If the data review justifies event tracking, use these internal names so future reporting stays consistent:
+
+| Event name | Trigger | Purpose |
+| --- | --- | --- |
+| `self_audit_started` | A visitor checks the first readiness item. | Separate passive page views from actual scorecard use. |
+| `self_audit_completed` | A visitor reaches 8 or more checked items or checks every item they intend to score. | Estimate how many visitors finish enough of the diagnostic to be useful. |
+| `self_audit_worksheet_downloaded` | A visitor clicks the Markdown worksheet download link. | Measure counsel/DPO sharing intent. |
+| `self_audit_pricing_clicked` | A visitor clicks from the result panel to `pricing.html`. | Measure kit-selection intent after scoring. |
+| `self_audit_audit_clicked` | A visitor clicks the Concierge Audit checkout link from the self-audit page. | Measure high-urgency audit intent. |
+
 ## Limits
 
 - Do not add custom events yet. Page views are enough until there is meaningful traffic, purchases, or repeated audit-intake usage to analyze.
