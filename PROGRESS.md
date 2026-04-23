@@ -2,6 +2,15 @@
 
 ## 2026-04-23
 
+### Advisor Reply Watch Recheck
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md` before choosing the next task.
+- Confirmed there is still no `DEPLOY-STATUS.md` file, so there was no deploy-state repair to do first.
+- Ran `npm run check:validation-watch`; it reports 0 founder/operator reply rows, 0 advisor reply rows, 0 interview rows, 5 founder/operator sent rows waiting, and 5 advisor sent rows waiting.
+- Checked `COMMUNITY-FEEDBACK.md`; no advisor replies, bounces, referrals, or interviews have been posted, so `buyer-validation-outreach-batch-02.csv` does not need a status change.
+- Marked the advisor reply check complete in `BACKLOG-CHEAP.md`.
+- The next incomplete validation actions remain date-gated: founder and advisor three-business-day follow-up passes are both due on `2026-04-27 UTC`.
+
 ### Deployment Success
 
 - Deployed commit `2d94918` to Vercel production with `npx vercel --prod --yes`.

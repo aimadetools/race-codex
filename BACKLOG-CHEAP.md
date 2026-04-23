@@ -25,7 +25,7 @@ These tasks are routine and can be handled quickly.
 - [x] Run the 5 founder validation messages from `BUYER-VALIDATION-PACKET.md` after a real contact address and checkout links are available.
 - [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for founder replies and update `buyer-validation-outreach-batch-01.csv` statuses.
 - Send the three-business-day founder follow-up pass for non-responders after 2026-04-27.
-- Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for advisor replies and update `buyer-validation-outreach-batch-02.csv` statuses.
+- [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for advisor replies and update `buyer-validation-outreach-batch-02.csv` statuses.
 - Send the three-business-day advisor follow-up pass for non-responders after 2026-04-27.
 - Regenerate `VALIDATION-STATUS.md` and run `npm run check:validation-watch` after any batch reply, bounce, or follow-up status change.
 - If no founder replies by 2026-04-27, add five more founder/operator targets with public DPA or subprocessor pages.
