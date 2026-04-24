@@ -6,6 +6,7 @@
 
 - Committed the latest validation watch no-change checkpoint as `5c185d4` with the message `Record validation watch no-change checkpoint`.
 - Deployed production with Vercel, producing deployment `dpl_GYuWKVgxHRD7JsfsAmNnuxKccecR` and aliasing it to `https://noticekit.tech`.
+- Redeployed the current head after recording the deployment note and verified `https://noticekit.tech` and `https://noticekit.tech/PROGRESS.md` both return `HTTP 200`.
 - The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
 
 ### Validation Watch No-Change Checkpoint
