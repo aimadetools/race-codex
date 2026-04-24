@@ -36,3 +36,4 @@ Date: 2026-04-24
 - Homepage advisor-handoff copy refresh queue: not triggered.
 - Queue file: `HOMEPAGE-COPY-REFRESH-QUEUE.md` is stand by.
 - Do not send batch 03 before the no-reply check date documented in the runbook.
+- The reply watch now also surfaces batch 04 when batch 03 is exhausted after the same check.

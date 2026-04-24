@@ -77,6 +77,7 @@ These tasks are routine and can be handled quickly.
 - [x] Add score-specific Starter vs Pro copy to the self-audit result panel.
 - [x] Add a downloadable Markdown worksheet version of the self-audit for founders who want to share it with counsel.
 - [x] Add an internal event-name note for tracking self-audit page visits once Vercel Web Analytics data is reviewed.
+- [x] Publish a subprocessor notice FAQ article and wire it into the homepage, blog index, sitemap, and changelog.
 
 ## P2
 

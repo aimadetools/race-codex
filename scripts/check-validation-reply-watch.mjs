@@ -132,6 +132,7 @@ async function main() {
   const founderReplies = countReplies(parsedBatches[0].rows);
   const advisorReplies = countReplies(parsedBatches[1].rows);
   const contingencyReady = parsedBatches[2].rows.filter((row) => String(row.status || "").trim() === "ready_for_send").length;
+  const contingencyTwoReady = parsedBatches[3].rows.filter((row) => String(row.status || "").trim() === "ready_for_send").length;
   const noFounderRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
   const noAdvisorRepliesPosted = feedbackText.includes("No advisor replies have been posted here yet.");
   const signals = extractSignals(feedbackText);
@@ -162,6 +163,8 @@ async function main() {
     lines.push(`- Send due non-responder follow-ups for: ${dueFollowUps.map((item) => item.label).join(", ")}.`);
   } else if (today >= GATE_DATE && founderReplies === 0 && contingencyReady > 0) {
     lines.push(`- Founder batch 03 is now unlocked because no founder/operator replies are recorded; ${contingencyReady} contingency targets are ready.`);
+  } else if (today >= GATE_DATE && founderReplies === 0 && contingencyReady === 0 && contingencyTwoReady > 0) {
+    lines.push(`- Founder batch 04 is now unlocked because batch 03 is exhausted and no founder/operator replies are recorded; ${contingencyTwoReady} contingency targets are ready.`);
   } else if (today >= GATE_DATE && signals.advisorOwnership > signals.founderOwnership && signals.advisorOwnership > 0) {
     lines.push("- Advisor ownership signals are stronger than founder signals; queue the homepage advisor-handoff copy refresh.");
   } else {

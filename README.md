@@ -29,6 +29,7 @@ The first version includes:
 - `blog-subprocessor-list-template.html` is the third SEO article and public subprocessor list template.
 - `blog-subprocessor-list-template-vercel-supabase.html` is the fifth SEO article and stack-specific subprocessor list template.
 - `blog-what-is-a-subprocessor-notice.html` is the plain-English primer for new visitors who need the subprocessor notice definition before choosing a workflow.
+- `blog-subprocessor-notice-faq.html` is the FAQ article that answers the most common notice timing, proof, and segmentation questions.
 - `blog-subprocessor-change-notice-template.html` is the first SEO article and public notice template.
 - `BUYER-CHANNEL-DECISION.md` decides that founders are the first sales channel and consultants are secondary until direct demand is proven.
 - `BUYER-VALIDATION-OUTREACH-BATCH-01.md` and `buyer-validation-outreach-batch-01.csv` track the first five founder/operator validation targets; batch 01 was sent on 2026-04-22 and is waiting for replies.

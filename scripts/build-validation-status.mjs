@@ -237,6 +237,7 @@ const output = [
   `- Homepage advisor-handoff copy refresh queue: ${shouldQueueAdvisorCopyRefresh ? "queue it now based on logged ownership signals." : "not triggered."}`,
   `- Queue file: ${homepageQueueState === "unknown" ? "missing; run \`npm run build:homepage-copy-refresh-queue\`." : `\`HOMEPAGE-COPY-REFRESH-QUEUE.md\` is ${homepageQueueState}.`}`,
   "- Do not send batch 03 before the no-reply check date documented in the runbook.",
+  "- The reply watch now also surfaces batch 04 when batch 03 is exhausted after the same check.",
   ""
 ].join("\n");
 
