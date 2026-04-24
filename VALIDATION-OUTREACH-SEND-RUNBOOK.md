@@ -31,7 +31,7 @@ node scripts/send-validation-batch.mjs --batch 03 --limit 5 --send --transport r
 
 When `--send` succeeds for direct-email rows, the script marks those rows `sent` in the matching CSV and appends the UTC send timestamp plus route to `notes`. Use `--no-update-csv` only for a deliberate one-off send where status will be recorded manually.
 
-The sender enforces the current first-touch date gates: batch 02 cannot be sent before 2026-04-23 UTC, and contingency batch 03 cannot be sent before the 2026-04-27 no-reply check. Use `--force-date` only after a documented operator override.
+The sender enforces the current first-touch date gates: batch 02 cannot be sent before 2026-04-23 UTC, and contingency batches 03 and 04 cannot be sent before the 2026-04-27 no-reply check. Batch 04 also stays blocked until batch 03 has no `ready_for_send` rows left and founder/operator reply rows are still zero. Use `--force-date` only after a documented operator override; it does not bypass the batch 04 prerequisite check.
 
 Use `--follow-up` for the three-business-day non-responder pass:
 
@@ -43,6 +43,7 @@ node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send -
 ```
 
 Follow-up mode selects only rows still marked `sent`, refuses to send before three business days have elapsed from the first send date in `notes`, and marks successful direct-email rows `followed_up`. Use `--force-date` only after a documented operator override.
+The generated follow-up pass files prefer the actual inbox recorded in CSV `notes` when the first send already discovered a direct-email route, so re-read those files before the 2026-04-27 window instead of assuming the broader public contact path is still the best follow-up route.
 
 Before sending either follow-up pass, run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` shows the founder desktop and advisor mobile tagged paths both passing. That keeps the score-summary mailto path and copy-summary fallback verified right before the 2026-04-27 window.
 
@@ -92,7 +93,8 @@ Use `scripts/append-validation-interview.mjs --input <json>` to append a scored 
 Use `scripts/record-validation-feedback.mjs --input <json>` to log the reply in `COMMUNITY-FEEDBACK.md`, update the matching outreach CSV status, and optionally chain into `scripts/append-validation-interview.mjs` when the reply turns into a real interview.
 When the reply came from the tagged self-audit follow-up path, include `source_tag`, `score_band` or `score`, and `ownership_signal` so the feedback log captures the founder-vs-advisor signal before the outreach CSV moves forward.
 `record-validation-feedback.mjs`, `append-validation-interview.mjs`, and `send-validation-batch.mjs` now auto-run `npm run sync:validation-artifacts` after any non-dry-run CSV or status update, so the follow-up queues, homepage pivot queue, validation status, and validation watch stay synchronized without a separate rebuild step.
-That sync now also refreshes `VALIDATION-DECISION-BRIEF.md`, which is the single generated readout for the 2026-04-27 window: whether follow-ups are due, whether founder batch 03 is unlocked, and whether advisor ownership is strong enough to queue the homepage pivot.
+That sync now also refreshes `VALIDATION-POSITIONING-BRIEF.md` and `VALIDATION-DECISION-BRIEF.md`, so the 2026-04-27 window has both an evidence-backed founder-vs-advisor positioning read and the immediate execution queue for follow-ups, batch 03, batch 04, and homepage-pivot checks.
+`VALIDATION-REPLY-WATCH.md` is the checked-in monitoring artifact from that sync; read it first when the goal is only to know whether replies, due follow-ups, or batch-unlock conditions changed, and use the listed commands when the queue opens.
 
 Example self-audit async reply payload:
 
@@ -122,6 +124,7 @@ The prepared advisor follow-up queue lives in `BUYER-VALIDATION-ADVISOR-FOLLOW-U
 Use `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend` and `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend` to dry-run the exact due follow-up queues before sending them.
 On or after 2026-04-27 UTC, run `npm run build:validation-decision-brief` or `npm run sync:validation-artifacts` first and read `VALIDATION-DECISION-BRIEF.md` before sending follow-ups or unlocking batch 03.
 Use `npm run sync:validation-artifacts` only when you need to force a rebuild without recording a send, reply, bounce, or interview.
+Use `npm run build:validation-watch` when you only need a fresh `VALIDATION-REPLY-WATCH.md` snapshot without rebuilding the rest of the validation artifacts.
 
 ## Reply-to-Interview Scheduling
 

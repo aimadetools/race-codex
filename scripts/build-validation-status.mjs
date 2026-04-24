@@ -14,6 +14,7 @@ const BATCH_FILES = [
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const HOMEPAGE_QUEUE_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
 const DECISION_BRIEF_FILE = join(ROOT, "VALIDATION-DECISION-BRIEF.md");
+const POSITIONING_BRIEF_FILE = join(ROOT, "VALIDATION-POSITIONING-BRIEF.md");
 const FOLLOW_UP_FILE = join(ROOT, "BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md");
 const ADVISOR_FOLLOW_UP_FILE = join(ROOT, "BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md");
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
@@ -145,6 +146,11 @@ function extractDecisionHeadline(text) {
   return match ? match[1].trim() : "unknown";
 }
 
+function extractPositioningHeadline(text) {
+  const match = text.match(/Recommended headline:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
 function renderBatchSummary(label, rows) {
   const sent = countBy(rows, "status", "sent");
   const followedUp = countBy(rows, "status", "followed_up");
@@ -184,6 +190,7 @@ const contingencyTwoRows = parseCsv(await readFile(BATCH_FILES[3].path, "utf8"))
 const feedbackText = await readFile(FEEDBACK_FILE, "utf8");
 const homepageQueueText = await readFile(HOMEPAGE_QUEUE_FILE, "utf8").catch(() => "");
 const decisionBriefText = await readFile(DECISION_BRIEF_FILE, "utf8").catch(() => "");
+const positioningBriefText = await readFile(POSITIONING_BRIEF_FILE, "utf8").catch(() => "");
 const followUpText = await readFile(FOLLOW_UP_FILE, "utf8");
 const advisorFollowUpText = await readFile(ADVISOR_FOLLOW_UP_FILE, "utf8");
 const interviewRows = normalizeRows(parseCsv(await readFile(INTERVIEW_LOG, "utf8")));
@@ -197,6 +204,7 @@ const feedbackSignals = extractFeedbackSignals(feedbackText);
 const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
 const homepageQueueState = extractQueueState(homepageQueueText);
 const decisionHeadline = extractDecisionHeadline(decisionBriefText);
+const positioningHeadline = extractPositioningHeadline(positioningBriefText);
 
 const output = [
   "# NoticeKit Validation Status",
@@ -234,6 +242,7 @@ const output = [
   "- Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.",
   "- Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.",
   `- Decision brief: ${decisionHeadline === "unknown" ? "missing; run \`npm run build:validation-decision-brief\`." : `\`VALIDATION-DECISION-BRIEF.md\` says: ${decisionHeadline}`}`,
+  `- Positioning brief: ${positioningHeadline === "unknown" ? "missing; run \`node scripts/build-validation-positioning-brief.mjs\`." : `\`VALIDATION-POSITIONING-BRIEF.md\` says: ${positioningHeadline}`}`,
   `- Homepage advisor-handoff copy refresh queue: ${shouldQueueAdvisorCopyRefresh ? "queue it now based on logged ownership signals." : "not triggered."}`,
   `- Queue file: ${homepageQueueState === "unknown" ? "missing; run \`npm run build:homepage-copy-refresh-queue\`." : `\`HOMEPAGE-COPY-REFRESH-QUEUE.md\` is ${homepageQueueState}.`}`,
   "- Do not send batch 03 before the no-reply check date documented in the runbook.",

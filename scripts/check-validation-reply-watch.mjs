@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
+const OUTPUT_FILE = join(ROOT, "VALIDATION-REPLY-WATCH.md");
 const FOLLOW_UP_FILES = [
   { label: "Founder follow-up pass", path: join(ROOT, "BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md") },
   { label: "Advisor follow-up pass", path: join(ROOT, "BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md") }
@@ -109,7 +110,67 @@ function extractSignals(text) {
   };
 }
 
+function buildActionQueue({
+  totalReplyRows,
+  parsedInterviews,
+  followUps,
+  dueFollowUps,
+  today,
+  founderReplies,
+  contingencyReady,
+  contingencyTwoReady,
+  signals
+}) {
+  const actions = [];
+
+  if (totalReplyRows > 0 || parsedInterviews.length > 0) {
+    actions.push("Review `COMMUNITY-FEEDBACK.md` and convert any real reply into an interview.");
+    return actions;
+  }
+
+  if (followUps.some((item) => item.due === "unknown")) {
+    actions.push("Rebuild the follow-up passes because at least one due date could not be parsed.");
+    return actions;
+  }
+
+  if (dueFollowUps.length > 0) {
+    const founderDue = dueFollowUps.some((item) => item.label === "Founder follow-up pass");
+    const advisorDue = dueFollowUps.some((item) => item.label === "Advisor follow-up pass");
+
+    actions.push("Run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` is passing before any non-responder follow-up send.");
+
+    if (founderDue) {
+      actions.push("Dry-run the founder follow-up queue with `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend`.");
+      actions.push("Send the founder follow-up queue with `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend`.");
+    }
+
+    if (advisorDue) {
+      actions.push("Dry-run the advisor follow-up queue with `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend`.");
+      actions.push("Send the advisor follow-up queue with `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend`.");
+    }
+  }
+
+  if (today >= GATE_DATE && founderReplies === 0 && contingencyReady > 0) {
+    actions.push(`Founder batch 03 is unlocked; ${contingencyReady} contingency targets are ready after the no-reply check.`);
+    actions.push("Dry-run founder batch 03 with `node scripts/send-validation-batch.mjs --batch 03 --limit 5 --transport resend`.");
+  } else if (today >= GATE_DATE && founderReplies === 0 && contingencyReady === 0 && contingencyTwoReady > 0) {
+    actions.push(`Founder batch 04 is unlocked; ${contingencyTwoReady} contingency targets are ready because batch 03 is exhausted and founder replies are still zero.`);
+    actions.push("Dry-run founder batch 04 with `node scripts/send-validation-batch.mjs --batch 04 --limit 5 --transport resend`.");
+  }
+
+  if (today >= GATE_DATE && signals.advisorOwnership > signals.founderOwnership && signals.advisorOwnership > 0) {
+    actions.push("Advisor ownership signals are stronger than founder signals; queue the homepage advisor-handoff copy refresh.");
+  }
+
+  if (actions.length === 0) {
+    actions.push("- Keep monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens.");
+  }
+
+  return actions;
+}
+
 async function main() {
+  const args = new Set(process.argv.slice(2));
   const [feedbackText, interviewRows, ...texts] = await Promise.all([
     readFile(FEEDBACK_FILE, "utf8"),
     readFile(INTERVIEW_LOG, "utf8"),
@@ -155,23 +216,27 @@ async function main() {
     ""
   ];
 
-  if (totalReplyRows > 0 || parsedInterviews.length > 0) {
-    lines.push("- Review `COMMUNITY-FEEDBACK.md` and convert any real reply into an interview.");
-  } else if (followUps.some((item) => item.due === "unknown")) {
-    lines.push("- Rebuild the follow-up passes because at least one due date could not be parsed.");
-  } else if (dueFollowUps.length > 0) {
-    lines.push(`- Send due non-responder follow-ups for: ${dueFollowUps.map((item) => item.label).join(", ")}.`);
-  } else if (today >= GATE_DATE && founderReplies === 0 && contingencyReady > 0) {
-    lines.push(`- Founder batch 03 is now unlocked because no founder/operator replies are recorded; ${contingencyReady} contingency targets are ready.`);
-  } else if (today >= GATE_DATE && founderReplies === 0 && contingencyReady === 0 && contingencyTwoReady > 0) {
-    lines.push(`- Founder batch 04 is now unlocked because batch 03 is exhausted and no founder/operator replies are recorded; ${contingencyTwoReady} contingency targets are ready.`);
-  } else if (today >= GATE_DATE && signals.advisorOwnership > signals.founderOwnership && signals.advisorOwnership > 0) {
-    lines.push("- Advisor ownership signals are stronger than founder signals; queue the homepage advisor-handoff copy refresh.");
-  } else {
-    lines.push("- Keep monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens.");
+  const actionQueue = buildActionQueue({
+    totalReplyRows,
+    parsedInterviews,
+    followUps,
+    dueFollowUps,
+    today,
+    founderReplies,
+    contingencyReady,
+    contingencyTwoReady,
+    signals
+  });
+
+  lines.push(...actionQueue.map((action) => action.startsWith("- ") ? action : `- ${action}`));
+
+  const output = `${lines.join("\n")}\n`;
+
+  if (args.has("--write")) {
+    await writeFile(OUTPUT_FILE, output, "utf8");
   }
 
-  process.stdout.write(`${lines.join("\n")}\n`);
+  process.stdout.write(output);
 }
 
 main().catch((error) => {

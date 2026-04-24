@@ -27,11 +27,14 @@ These tasks are routine and can be handled quickly.
 - Send the three-business-day founder follow-up pass for non-responders after 2026-04-27.
 - [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for advisor replies and update `buyer-validation-outreach-batch-02.csv` statuses.
 - Send the three-business-day advisor follow-up pass for non-responders after 2026-04-27.
+- When the first scored interview lands, confirm `VALIDATION-POSITIONING-BRIEF.md` classified the segment correctly before acting on the branch recommendation.
 - [x] Add the `self-audit.html` link to the founder and advisor follow-up draft copy after the 2026-04-27 gate opens.
 - [x] Add guarded Resend/SMTP follow-up sending mode for the three-business-day validation non-responder passes.
 - [x] Before the 2026-04-27 send window, click-test the tagged self-audit follow-up links and confirm the mailto summary prefill works on desktop and mobile.
 - When a tagged self-audit reply lands, record the source tag and score band in `COMMUNITY-FEEDBACK.md` before updating the outreach CSV.
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
+- If `VALIDATION-POSITIONING-BRIEF.md` flips to `advisor-first handoff`, update the homepage hero and pricing page opening copy from `HOMEPAGE-COPY-REFRESH-QUEUE.md`.
+- If `VALIDATION-POSITIONING-BRIEF.md` flips to `vendor-change review packet`, refresh homepage and core CTA copy to broaden the product framing while keeping subprocessor-notice SEO pages intact.
 - [x] Generate a single validation decision brief for the 2026-04-27 follow-up window so follow-ups, batch 03 unlocks, and advisor-pivot checks do not depend on manual file reading.
 - [x] Publish a worked subprocessor notice example page with real dates and an objection deadline, then link it through the homepage, blog index, sitemap, and changelog.
 - [x] Regenerate `VALIDATION-STATUS.md` and run `npm run check:validation-watch` after any batch reply, bounce, or follow-up status change.

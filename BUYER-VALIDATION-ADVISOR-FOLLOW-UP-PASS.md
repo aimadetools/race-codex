@@ -17,15 +17,16 @@ Batch 02 currently has 5 sent rows and no recorded replies in the outreach CSV.
 
 | Priority | Target | Segment | Original route | Follow-up route | Send method |
 |---:|---|---|---|---|---|
-| 1 | Bamboo Data Consulting | Fractional DPO/privacy consultant | info@bamboodc.com or https://www.bamboodataconsulting.com/contact-us | info@bamboodc.com or https://www.bamboodataconsulting.com/contact-us | direct-email |
-| 2 | Privageo | Fractional DPO/privacy consultant | https://privageo.com/contact-us/ | https://privageo.com/contact-us/ | manual-form |
-| 3 | ATOM | Fractional DPO/privacy consultant | info@theatomgroup.com or https://www.theatomgroup.com/contact | info@theatomgroup.com or https://www.theatomgroup.com/contact | direct-email |
-| 4 | Coto & Waddington | Startup attorney/legal advisor | contact@cotowaddington.com or https://cotowaddington.com/contact-us/ | contact@cotowaddington.com or https://cotowaddington.com/contact-us/ | direct-email |
-| 5 | Altum Legal | Startup attorney/legal advisor | info@altumlegal.com or https://altumlegal.com/contact | info@altumlegal.com or https://altumlegal.com/contact | direct-email |
+| 1 | Bamboo Data Consulting | Fractional DPO/privacy consultant | info@bamboodc.com or https://www.bamboodataconsulting.com/contact-us | info@bamboodc.com | direct-email |
+| 2 | Privageo | Fractional DPO/privacy consultant | https://privageo.com/contact-us/ | letschat@privageo.com | direct-email |
+| 3 | ATOM | Fractional DPO/privacy consultant | info@theatomgroup.com or https://www.theatomgroup.com/contact | info@theatomgroup.com | direct-email |
+| 4 | Coto & Waddington | Startup attorney/legal advisor | contact@cotowaddington.com or https://cotowaddington.com/contact-us/ | contact@cotowaddington.com | direct-email |
+| 5 | Altum Legal | Startup attorney/legal advisor | info@altumlegal.com or https://altumlegal.com/contact | info@altumlegal.com | direct-email |
 
 ## Follow-Up Copy
 
 Use the consultant and attorney follow-up subjects and bodies from `BUYER-VALIDATION-OUTREACH-BATCH-02.md`.
+When the first send already recorded a direct-email inbox in CSV notes, use that inbox as the follow-up route instead of falling back to the broader public contact path.
 If it helps, include `https://noticekit.tech/self-audit.html?source=advisor-follow-up` as a quick self-check hook before asking for blunt feedback.
 Ask recipients to reply with the score and top two gaps if they do not want a call.
 Keep the message short, avoid product pitching, and keep the non-legal-advice boundary intact.

@@ -86,6 +86,12 @@ function classifyRoute(route) {
   return "manual";
 }
 
+function extractPriorSendRecipient(row) {
+  const notes = String(row.notes || "");
+  const matches = [...notes.matchAll(/\bto\s+([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})/gi)];
+  return matches.length ? matches[matches.length - 1][1] : "";
+}
+
 function escapeTableCell(value) {
   return String(value || "").replace(/\|/g, "\\|");
 }
@@ -126,14 +132,19 @@ const rows = parseCsv(await readFile(BATCH_CSV, "utf8"));
 const followUpRows = rows
   .filter((row) => String(row.status || "").trim() === "sent")
   .sort((a, b) => Number(a.priority || 0) - Number(b.priority || 0))
-  .map((row) => ({
-    priority: row.priority,
-    target: row.organization,
-    segment: row.segment,
-    originalRoute: row.public_contact_route,
-    followUpRoute: row.public_contact_route,
-    sendMethod: classifyRoute(row.public_contact_route)
-  }));
+  .map((row) => {
+    const priorRecipient = extractPriorSendRecipient(row);
+    const followUpRoute = priorRecipient || row.public_contact_route;
+
+    return {
+      priority: row.priority,
+      target: row.organization,
+      segment: row.segment,
+      originalRoute: row.public_contact_route,
+      followUpRoute,
+      sendMethod: priorRecipient ? "direct-email" : classifyRoute(followUpRoute)
+    };
+  });
 
 const sentDate = extractSentDate(rows);
 const followUpDate = addBusinessDays(sentDate, 3);
@@ -166,6 +177,7 @@ const output = [
   "## Follow-Up Copy",
   "",
   "Use the consultant and attorney follow-up subjects and bodies from `BUYER-VALIDATION-OUTREACH-BATCH-02.md`.",
+  "When the first send already recorded a direct-email inbox in CSV notes, use that inbox as the follow-up route instead of falling back to the broader public contact path.",
   `If it helps, include \`${SELF_AUDIT_URL}\` as a quick self-check hook before asking for blunt feedback.`,
   "Ask recipients to reply with the score and top two gaps if they do not want a call.",
   "Keep the message short, avoid product pitching, and keep the non-legal-advice boundary intact.",

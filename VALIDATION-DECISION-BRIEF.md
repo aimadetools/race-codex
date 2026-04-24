@@ -22,6 +22,10 @@ Recommended action headline: Stand by until 2026-04-27 UTC; keep monitoring `COM
 
 - Stand by until 2026-04-27 UTC; keep monitoring `COMMUNITY-FEEDBACK.md` and convert any real reply into an interview.
 
+## Execution Queue
+
+1. Keep monitoring `COMMUNITY-FEEDBACK.md` until 2026-04-27 UTC.
+
 ## Positioning Read
 
 - Founder-first remains the default until real replies or score-tagged async feedback say otherwise.

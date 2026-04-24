@@ -6,9 +6,15 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
+const REPLY_OR_TERMINAL_STATUSES = ["replied_positive", "replied_negative", "bounced", "interview_completed"];
+const BATCH_FILE_BY_ID = new Map([
+  ["01", join(ROOT, "buyer-validation-outreach-batch-01.csv")],
+  ["03", join(ROOT, "buyer-validation-outreach-batch-03.csv")]
+]);
 const EARLIEST_SEND_DATE_BY_BATCH = new Map([
   ["02", "2026-04-23"],
-  ["03", "2026-04-27"]
+  ["03", "2026-04-27"],
+  ["04", "2026-04-27"]
 ]);
 
 function parseArgs(argv) {
@@ -121,9 +127,40 @@ function utcDateString(date = new Date()) {
   return date.toISOString().slice(0, 10);
 }
 
-function assertBatchCanSend(batch, args) {
+function countByStatuses(rows, statuses) {
+  return rows.filter((row) => statuses.includes(String(row.status || "").trim())).length;
+}
+
+async function assertBatch04CanSend() {
+  const [founderBatchText, batch03Text] = await Promise.all([
+    readFile(BATCH_FILE_BY_ID.get("01"), "utf8"),
+    readFile(BATCH_FILE_BY_ID.get("03"), "utf8")
+  ]);
+  const founderRows = parseCsv(founderBatchText).records;
+  const batch03Rows = parseCsv(batch03Text).records;
+  const founderReplyRows = countByStatuses(founderRows, REPLY_OR_TERMINAL_STATUSES);
+  const batch03ReplyRows = countByStatuses(batch03Rows, REPLY_OR_TERMINAL_STATUSES);
+  const batch03Ready = countByStatuses(batch03Rows, ["ready_for_send"]);
+
+  if (founderReplyRows + batch03ReplyRows > 0) {
+    throw new Error(
+      "Batch 04 is blocked because founder/operator replies, bounces, or interviews are already recorded in batch 01 or batch 03."
+    );
+  }
+
+  if (batch03Ready > 0) {
+    throw new Error(
+      `Batch 04 is blocked because batch 03 still has ${batch03Ready} ready_for_send target(s). Send or retire batch 03 before unlocking batch 04.`
+    );
+  }
+}
+
+async function assertBatchCanSend(batch, args) {
   const earliestDate = EARLIEST_SEND_DATE_BY_BATCH.get(batch);
   if (!earliestDate || args.has("force-date")) {
+    if (batch === "04") {
+      await assertBatch04CanSend();
+    }
     return;
   }
 
@@ -132,6 +169,10 @@ function assertBatchCanSend(batch, args) {
     throw new Error(
       `Batch ${batch} is held until ${earliestDate} UTC (earliest send at 00:00:00Z). Re-run on or after that UTC date, or pass --force-date only after a documented human override.`
     );
+  }
+
+  if (batch === "04") {
+    await assertBatch04CanSend();
   }
 }
 
@@ -446,7 +487,7 @@ async function main() {
   const updateCsv = send && !args.has("no-update-csv");
 
   if (send && !followUp) {
-    assertBatchCanSend(batch, args);
+    await assertBatchCanSend(batch, args);
   }
 
   const csvPath = join(ROOT, `buyer-validation-outreach-batch-${batch}.csv`);

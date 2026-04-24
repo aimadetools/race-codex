@@ -13,10 +13,12 @@ const FOLLOW_UP_FILES = {
 const BATCH_FILES = {
   founder: join(ROOT, "buyer-validation-outreach-batch-01.csv"),
   advisor: join(ROOT, "buyer-validation-outreach-batch-02.csv"),
-  batch03: join(ROOT, "buyer-validation-outreach-batch-03.csv")
+  batch03: join(ROOT, "buyer-validation-outreach-batch-03.csv"),
+  batch04: join(ROOT, "buyer-validation-outreach-batch-04.csv")
 };
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
+const POSITIONING_BRIEF_FILE = join(ROOT, "VALIDATION-POSITIONING-BRIEF.md");
 
 function parseCsv(text) {
   const rows = [];
@@ -99,6 +101,16 @@ function normalizeRows(rows) {
   return rows.filter((row) => Object.values(row).some((value) => String(value || "").trim() !== ""));
 }
 
+function extractPositioningHeadline(text) {
+  const match = text.match(/Recommended headline:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
+function extractPositioningBranch(text) {
+  const match = text.match(/Recommended branch:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
 function extractSignals(text) {
   const sourceTagMatches = [...text.matchAll(/Source tag:\s*([^\n|]+)/g)];
   const ownershipMatches = [...text.matchAll(/Ownership:\s*([^\n|]+)/g)];
@@ -128,23 +140,28 @@ const [
   founderBatchText,
   advisorBatchText,
   batch03Text,
+  batch04Text,
   founderFollowUpText,
   advisorFollowUpText,
   feedbackText,
-  interviewText
+  interviewText,
+  positioningBriefText
 ] = await Promise.all([
   readFile(BATCH_FILES.founder, "utf8"),
   readFile(BATCH_FILES.advisor, "utf8"),
   readFile(BATCH_FILES.batch03, "utf8"),
+  readFile(BATCH_FILES.batch04, "utf8"),
   readFile(FOLLOW_UP_FILES.founder, "utf8"),
   readFile(FOLLOW_UP_FILES.advisor, "utf8"),
   readFile(FEEDBACK_FILE, "utf8"),
-  readFile(INTERVIEW_LOG, "utf8")
+  readFile(INTERVIEW_LOG, "utf8"),
+  readFile(POSITIONING_BRIEF_FILE, "utf8").catch(() => "")
 ]);
 
 const founderRows = parseCsv(founderBatchText);
 const advisorRows = parseCsv(advisorBatchText);
 const batch03Rows = parseCsv(batch03Text);
+const batch04Rows = parseCsv(batch04Text);
 const interviewRows = normalizeRows(parseCsv(interviewText));
 const founderFollowUpDate = extractFollowUpDate(founderFollowUpText);
 const advisorFollowUpDate = extractFollowUpDate(advisorFollowUpText);
@@ -157,33 +174,59 @@ const advisorReplies = countByStatus(advisorRows, ["replied_positive", "replied_
 const founderFollowedUp = countByStatus(founderRows, ["followed_up"]);
 const advisorFollowedUp = countByStatus(advisorRows, ["followed_up"]);
 const batch03Ready = countByStatus(batch03Rows, ["ready_for_send"]);
+const batch04Ready = countByStatus(batch04Rows, ["ready_for_send"]);
 const signals = extractSignals(feedbackText);
 const gateOpen = today >= GATE_DATE;
 const shouldQueueAdvisorPivot = signals.advisorOwnership > signals.founderOwnership && signals.advisorOwnership > 0;
+const positioningHeadline = extractPositioningHeadline(positioningBriefText);
+const positioningBranch = extractPositioningBranch(positioningBriefText);
 
 const recommendedActions = [];
+const executionQueue = [];
 let triggerState = "stand by";
 let positioningRead = "Founder-first remains the default until real replies or score-tagged async feedback say otherwise.";
 
 if (!gateOpen) {
   recommendedActions.push(`Stand by until ${GATE_DATE} UTC; keep monitoring \`COMMUNITY-FEEDBACK.md\` and convert any real reply into an interview.`);
+  executionQueue.push(`Keep monitoring \`COMMUNITY-FEEDBACK.md\` until ${GATE_DATE} UTC.`);
 } else {
   triggerState = "decision window open";
 
   if (founderFollowUpDue && founderWaiting > 0) {
     recommendedActions.push(`Send the founder non-responder follow-up pass for ${pluralize(founderWaiting, "remaining batch 01 contact")}.`);
+    executionQueue.push("Run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` is passing before any follow-up send.");
+    executionQueue.push("Dry-run the founder follow-up queue with `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend`.");
+    executionQueue.push("Send the founder follow-up queue with `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend`.");
   }
 
   if (advisorFollowUpDue && advisorWaiting > 0) {
     recommendedActions.push(`Send the advisor non-responder follow-up pass for ${pluralize(advisorWaiting, "remaining batch 02 contact")}.`);
+    if (!executionQueue.includes("Run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` is passing before any follow-up send.")) {
+      executionQueue.push("Run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` is passing before any follow-up send.");
+    }
+    executionQueue.push("Dry-run the advisor follow-up queue with `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend`.");
+    executionQueue.push("Send the advisor follow-up queue with `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend`.");
   }
 
   if (founderReplies === 0 && batch03Ready > 0) {
     recommendedActions.push(`Unlock founder batch 03 because founder/operator replies are still zero; ${pluralize(batch03Ready, "contingency target")} are ready.`);
+    executionQueue.push("Dry-run founder batch 03 with `node scripts/send-validation-batch.mjs --batch 03 --limit 5 --transport resend`.");
+    executionQueue.push("Send founder batch 03 with `node scripts/send-validation-batch.mjs --batch 03 --limit 5 --send --transport resend` if the follow-up pass lands with no founder reply.");
+  }
+
+  if (founderReplies === 0 && batch03Ready === 0 && batch04Ready > 0) {
+    recommendedActions.push(`Unlock founder batch 04 because batch 03 is exhausted and founder/operator replies are still zero; ${pluralize(batch04Ready, "contingency target")} are ready.`);
+    executionQueue.push("Dry-run founder batch 04 with `node scripts/send-validation-batch.mjs --batch 04 --limit 5 --transport resend`.");
+    executionQueue.push("Send founder batch 04 with `node scripts/send-validation-batch.mjs --batch 04 --limit 5 --send --transport resend` only after batch 03 is exhausted and founder replies are still zero.");
   }
 
   if (shouldQueueAdvisorPivot) {
     recommendedActions.push("Queue the advisor-handoff homepage copy refresh because consultant/attorney ownership signals exceed founder/operator ownership signals.");
+    executionQueue.push("Use `HOMEPAGE-COPY-REFRESH-QUEUE.md` to update the homepage before more founder expansion.");
+  }
+
+  if (positioningBranch !== "unknown" && positioningBranch !== "founder-first hold") {
+    recommendedActions.push(`Use \`VALIDATION-POSITIONING-BRIEF.md\` as the positioning tie-breaker: ${positioningHeadline}`);
   }
 
   if (signals.founderFollowUpReplies === 0 && signals.advisorFollowUpReplies === 0 && founderReplies === 0 && advisorReplies === 0) {
@@ -194,10 +237,18 @@ if (!gateOpen) {
   } else if (signals.lowScores > 0 || founderReplies > 0) {
     positioningRead = "Founder pain remains plausible. Keep the founder-first positioning unless later tagged replies flip ownership toward advisors.";
   }
+
+  if (positioningHeadline !== "unknown") {
+    positioningRead = `${positioningRead} Positioning brief read: ${positioningHeadline}`;
+  }
 }
 
 if (recommendedActions.length === 0) {
   recommendedActions.push("No new action unlocked. Keep monitoring replies and keep the current positioning.");
+}
+
+if (executionQueue.length === 0) {
+  executionQueue.push("No execution step is unlocked yet. Keep monitoring replies and keep the current positioning.");
 }
 
 const output = [
@@ -224,6 +275,10 @@ const output = [
   "## Recommended Actions",
   "",
   ...recommendedActions.map((action) => `- ${action}`),
+  "",
+  "## Execution Queue",
+  "",
+  ...executionQueue.map((action, index) => `${index + 1}. ${action}`),
   "",
   "## Positioning Read",
   "",

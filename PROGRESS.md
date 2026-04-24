@@ -2,6 +2,153 @@
 
 ## 2026-04-24
 
+### Follow-Up Route Accuracy Deploy
+
+- Committed the follow-up route accuracy fix as `7d555f6` with the message `Use actual inboxes in follow-up passes`.
+- Deployed production with Vercel, producing deployment `dpl_22KXrPfkTUS63srzZz6aXGzNquFu` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech` returns `HTTP 200` after deployment.
+- Verified `https://noticekit.tech/BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md` returns `HTTP 200` after deployment.
+- Verified `https://noticekit.tech/BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md` returns `HTTP 200` after deployment.
+- Verified `https://noticekit.tech/VALIDATION-DECISION-BRIEF.md` returns `HTTP 200` after deployment.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Follow-Up Route Accuracy
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Found a real validation-ops bug under the top buyer-validation task: the generated founder and advisor follow-up passes reused the broad public contact path instead of the actual inbox already recorded in outreach CSV `notes`, which left the 2026-04-27 queue inaccurate for direct-email follow-ups such as Privageo.
+- Updated `scripts/build-founder-follow-up-pass.mjs` and `scripts/build-advisor-follow-up-pass.mjs` so follow-up routes now prefer the actual inbox used on the first send when that inbox is present in CSV notes, then documented the rule in `README.md` and `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
+- Regenerated the follow-up pass artifacts with `npm run sync:validation-artifacts`; the advisor pass now resolves Privageo to `letschat@privageo.com`, and the founder pass narrows EF Loads to `support@efloads.com`.
+- Verified the change with `node --check scripts/build-founder-follow-up-pass.mjs`, `node --check scripts/build-advisor-follow-up-pass.mjs`, `npm run sync:validation-artifacts`, `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend`, and `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend`.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Follow-Up QA Queue Guard Deploy
+
+- Committed the follow-up QA queue guard as `52f0464` with the message `Guard follow-up QA in validation queues`.
+- Deployed production with Vercel, producing deployment `dpl_CZTpNBTgxHBYGX1pFMjnNrGgjMSS` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech` returns `HTTP 200` after deployment.
+- Verified `https://noticekit.tech/VALIDATION-DECISION-BRIEF.md` returns `HTTP 200` after deployment.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Follow-Up QA Queue Guard
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Confirmed the strategic top task is still buyer validation, but the highest-priority executable gap underneath it was operator safety in the `2026-04-27 UTC` follow-up window: the runbook required a tagged self-audit QA check before any non-responder follow-up send, while the generated decision brief and reply watch did not surface that prerequisite.
+- Updated `scripts/build-validation-decision-brief.mjs` and `scripts/check-validation-reply-watch.mjs` so once the follow-up window opens, both generated execution queues instruct the operator to run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` before any founder or advisor follow-up send.
+- Verified the change with `node --check scripts/check-validation-reply-watch.mjs`, `node --check scripts/build-validation-decision-brief.mjs`, and `npm run sync:validation-artifacts`.
+- The generated artifacts did not change today because the gate is still closed on `2026-04-24 UTC`, but the `2026-04-27 UTC` queue will now include the required QA step automatically.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Batch 04 Send Guard Deploy
+
+- Committed the batch 04 send guard as `caf3b69` with the message `Guard contingency batch 04 sends`.
+- Deployed production with Vercel, producing deployment `dpl_GVzDu7LgL4y5VvMD8jxTi3LynRAs` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech` returns `HTTP 200` after deployment.
+- Verified `https://noticekit.tech/VALIDATION-DECISION-BRIEF.md` returns `HTTP 200` after deployment.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Batch 04 Send Guard
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Found an actual validation-ops gap instead of another no-change checkpoint: `scripts/send-validation-batch.mjs` blocked batch 03 before `2026-04-27 UTC`, but batch 04 could still be sent early and without proving batch 03 was exhausted.
+- Updated `scripts/send-validation-batch.mjs` so live sends now date-gate batch 04 as well, and batch 04 stays blocked until batch 03 has no `ready_for_send` rows left and founder/operator reply, bounce, and interview rows remain zero across the earlier founder batches.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` and `README.md` so the documented sender behavior matches the enforced batch 04 contingency rule.
+- Verified the change with `node --check scripts/send-validation-batch.mjs`, `node scripts/send-validation-batch.mjs --batch 04 --limit 5 --send --force-date --transport resend`, and `npm run sync:validation-artifacts`.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Validation Queue Execution Deploy
+
+- Committed the validation queue execution upgrade as `dfab50b` with the message `Add validation execution queues`.
+- Deployed production with Vercel, producing deployment `dpl_9bMkwcrLewDK1zLTfXKjps7bpgdV` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech` returns `HTTP 200` after deployment.
+- Verified `https://noticekit.tech/VALIDATION-DECISION-BRIEF.md` returns `HTTP 200` and now serves the execution-queue version of the decision brief.
+- Verified `https://noticekit.tech/VALIDATION-REPLY-WATCH.md` returns `HTTP 200` and now serves the ordered next-action queue artifact.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Validation Queue Execution Upgrade
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, `VALIDATION-DECISION-BRIEF.md`, and `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Confirmed the top incomplete work is still exact buyer validation, but the highest-priority executable gap underneath that work was operator ambiguity on the `2026-04-27 UTC` window: the repo could say what mattered, but not emit the exact ordered commands once follow-ups, batch unlocks, and positioning checks converged.
+- Updated `scripts/build-validation-decision-brief.mjs` so the generated decision brief now includes an `Execution Queue`, explicit follow-up dry-run/send commands, founder batch 03 and batch 04 escalation paths, and the homepage-copy pivot step when advisor ownership signals win.
+- Updated `scripts/check-validation-reply-watch.mjs` so the watch artifact now emits the same ordered next-action queue instead of collapsing all unlocked work into a single coarse sentence.
+- Updated `README.md` and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` so repo memory now points operators to the new execution queue and batch 04 coverage.
+- Verified the change with `node --check scripts/build-validation-decision-brief.mjs`, `node --check scripts/check-validation-reply-watch.mjs`, and `npm run sync:validation-artifacts`.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Validation Reply Watch Artifact
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and `VALIDATION-DECISION-BRIEF.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Confirmed the highest-priority incomplete work is still exact buyer validation through real interviews, but the active executable step between now and the `2026-04-27 UTC` follow-up window is reply monitoring rather than another send.
+- Added write mode to `scripts/check-validation-reply-watch.mjs` so the watch command can persist a checked-in `VALIDATION-REPLY-WATCH.md` artifact instead of only printing transient CLI output.
+- Added `npm run build:validation-watch`, wired `scripts/sync-validation-artifacts.mjs` to regenerate the watch artifact automatically, and documented the new file and command in `README.md` and `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
+- Generated `VALIDATION-REPLY-WATCH.md`, which now captures the current watch state in repo memory: 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder rows waiting, 5 advisor rows waiting, and both follow-up passes due on `2026-04-27 UTC`.
+- Verified the change with `node --check scripts/check-validation-reply-watch.mjs`, `npm run build:validation-watch`, and `npm run sync:validation-artifacts`.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Validation Reply Watch Deploy
+
+- Committed the watchboard change as `7a2b6e6` with the message `Persist validation reply watch artifact`.
+- Deployed production with Vercel, producing deployment `dpl_4tF9GBZ58SgXsk6hbUrsUVvGkhLK` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech` returns `HTTP 200` after deployment.
+- Verified `https://noticekit.tech/VALIDATION-REPLY-WATCH.md` returns `HTTP 200` and serves the generated monitoring snapshot.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+### Validation Watch No-Change Deploy
+
+- Committed the validation watch no-change checkpoint as `52177b1` with the message `Record validation watch no-change checkpoint`.
+- Deployed production with Vercel, producing deployment `dpl_5Xvcu1epqqwRipNQLaeFdmmNTLue` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech` returns `HTTP 200` after deployment.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the 2026-04-27 follow-up window opens.
+
+### Validation Watch No-Change Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies or bounces, 0 advisor replies or bounces, 0 contingency replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run sync:validation-artifacts`; it rewrote the generated validation artifacts but produced no file diff because the no-reply state is unchanged.
+- Rechecked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the 2026-04-27 follow-up window opens.
+
+### Validation Watch No-Change Deploy
+
+- Committed the validation watch no-change checkpoint as `6b2380b` with the message `Record validation watch no-change checkpoint`.
+- Deployed production with Vercel, producing deployment `dpl_26J5CUozce8rjZY8eXscSuC6Nokr` and aliasing it to `https://noticekit.tech`.
+- Verified `https://noticekit.tech` returns `HTTP 200` after deployment.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the 2026-04-27 follow-up window opens.
+
+### Validation Watch No-Change Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator reply or bounce rows, 0 advisor reply or bounce rows, 0 contingency reply rows, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `npm run sync:validation-artifacts`; it rewrote the generated validation artifacts but produced no file diff because the no-reply state is unchanged.
+- Rechecked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the 2026-04-27 follow-up window opens.
+
+### Validation Watch Deploy
+
+- Committed the validation watch checkpoint as `b66c8d4` with the message `Record validation watch checkpoint`.
+- Deployed production with Vercel, producing deployment `dpl_9E2foEV7cfMiu2WukiYeHdV4ESyJ` and aliasing it to `https://noticekit.tech`.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the 2026-04-27 follow-up window opens.
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, `VALIDATION-STATUS.md`, and `VALIDATION-DECISION-BRIEF.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Re-ran `npm run check:validation-watch`; the queue still shows 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-ran `npm run sync:validation-artifacts`; it regenerated `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, `BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md`, `HOMEPAGE-COPY-REFRESH-QUEUE.md`, `VALIDATION-POSITIONING-BRIEF.md`, `VALIDATION-DECISION-BRIEF.md`, and `VALIDATION-STATUS.md` without any reply-triggered state change.
+- Rechecked `COMMUNITY-FEEDBACK.md`; there are still no founder/operator or advisor replies to convert into interviews or outreach status changes.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the 2026-04-27 follow-up window opens.
+
+### Validation Positioning Brief
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
+- Reviewed the current validation stack and found a strategic gap: the repo could count replies, but it could not make a defensible founder-vs-advisor positioning call from scored interview evidence.
+- Added `scripts/build-validation-positioning-brief.mjs` and generated `VALIDATION-POSITIONING-BRIEF.md` so the 2026-04-27 branch decision now weighs founder/operator interviews, advisor interviews, tagged async self-audit replies, and broader handoff/procurement language.
+- Wired the new positioning brief into `scripts/sync-validation-artifacts.mjs`, `scripts/build-validation-decision-brief.mjs`, and `scripts/build-validation-status.mjs` so reply logging and interview logging automatically refresh the founder-vs-advisor readout alongside the follow-up queue and decision brief.
+- Updated `package.json`, `README.md`, and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` so the new artifact is part of the documented operator workflow, then reprioritized the backlogs with the completed premium task and the next cheap follow-ons for advisor-first or broader-packet pivots.
+- Verified the change with `node --check scripts/build-validation-positioning-brief.mjs`, `node --check scripts/build-validation-decision-brief.mjs`, `node --check scripts/build-validation-status.mjs`, `node --check scripts/sync-validation-artifacts.mjs`, and `npm run sync:validation-artifacts`.
+- Committed the implementation as `432f70b` with the message `Add validation positioning brief`.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the 2026-04-27 follow-up window opens.
+
+## 2026-04-24
+
 ### Validation Watch Deploy
 
 - Committed the validation watch recheck as `7d4c305` with the message `Record validation watch recheck`.

@@ -33,6 +33,7 @@ Date: 2026-04-24
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.
 - Decision brief: `VALIDATION-DECISION-BRIEF.md` says: Stand by until 2026-04-27 UTC; keep monitoring `COMMUNITY-FEEDBACK.md` and convert any real reply into an interview.
+- Positioning brief: `VALIDATION-POSITIONING-BRIEF.md` says: Stand by until 2026-04-27 UTC; wait for scored replies or interviews before changing positioning.
 - Homepage advisor-handoff copy refresh queue: not triggered.
 - Queue file: `HOMEPAGE-COPY-REFRESH-QUEUE.md` is stand by.
 - Do not send batch 03 before the no-reply check date documented in the runbook.

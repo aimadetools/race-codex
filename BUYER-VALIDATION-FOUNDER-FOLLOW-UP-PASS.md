@@ -18,7 +18,7 @@ Batch 01 currently has 5 sent rows and no recorded replies in the outreach CSV.
 | Priority | Target | Segment | Original route | Follow-up route | Send method |
 |---:|---|---|---|---|---|
 | 1 | ReadMe | Founder/operator | https://readme.com/pricing -> Contact Sales; docs.readme.com support widget | https://readme.com/pricing -> Contact Sales; docs.readme.com support widget | manual-form |
-| 2 | EF Loads | Founder/operator | support@efloads.com or legal@efloads.com | support@efloads.com or legal@efloads.com | direct-email |
+| 2 | EF Loads | Founder/operator | support@efloads.com or legal@efloads.com | support@efloads.com | direct-email |
 | 3 | BMBerry | Founder/operator | support@bmberry.com | support@bmberry.com | direct-email |
 | 4 | RootCause / Bryntum | Founder/operator | https://therootcause.io/contact/ or dpo@bryntum.com | https://therootcause.io/contact/ or dpo@bryntum.com | direct-email |
 | 5 | Deployable AI Services | Founder/operator | mbinghelaita@deployableai.ae | mbinghelaita@deployableai.ae | direct-email |
@@ -26,6 +26,7 @@ Batch 01 currently has 5 sent rows and no recorded replies in the outreach CSV.
 ## Follow-Up Copy
 
 Use the follow-up subject and body from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
+When the first send already recorded a direct-email inbox in CSV notes, use that inbox as the follow-up route instead of falling back to the broader public contact path.
 If it helps, include `https://noticekit.tech/self-audit.html?source=founder-follow-up` as a quick self-check hook before asking for blunt feedback.
 Ask recipients to reply with the score and top two gaps if they do not want a call.
 Keep the message short, avoid product pitching, and keep the non-legal-advice line intact.
