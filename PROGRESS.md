@@ -2,6 +2,12 @@
 
 ## 2026-04-24
 
+### Subject Line Examples Guide
+
+- Published a new SEO article, `blog-subprocessor-notice-subject-line-examples.html`, covering clear subprocessor notice subject lines for routine updates, new vendors, vendor replacements, and segmented customer messages.
+- Linked the new guide from the homepage and blog index so buyers can reach it from the main content cluster.
+- Added a changelog entry and sitemap URL so the page is discoverable and tracked consistently with the rest of the site.
+
 ### Follow-Up Route Accuracy Deploy
 
 - Committed the follow-up route accuracy fix as `7d555f6` with the message `Use actual inboxes in follow-up passes`.
