@@ -26,7 +26,8 @@ Batch 02 currently has 5 sent rows and no recorded replies in the outreach CSV.
 ## Follow-Up Copy
 
 Use the consultant and attorney follow-up subjects and bodies from `BUYER-VALIDATION-OUTREACH-BATCH-02.md`.
-If it helps, include `https://noticekit.tech/self-audit.html` as a quick self-check hook before asking for blunt feedback.
+If it helps, include `https://noticekit.tech/self-audit.html?source=advisor-follow-up` as a quick self-check hook before asking for blunt feedback.
+Ask recipients to reply with the score and top two gaps if they do not want a call.
 Keep the message short, avoid product pitching, and keep the non-legal-advice boundary intact.
 
 ## Send Guardrails

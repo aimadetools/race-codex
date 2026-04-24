@@ -134,6 +134,15 @@
               <strong id="tier-title">Best fit: Pro cleanup</strong>
               <p id="tier-copy">Use Pro if several dates, customer segments, or proof records still need to be organized before a notice can be reviewed.</p>
             </div>
+            <div class="share-card">
+              <strong>Send the score, not a vague reply</strong>
+              <p id="share-copy">If you came here from a validation follow-up, email the score and top gaps. Async feedback is enough.</p>
+              <div class="result-actions">
+                <a class="button secondary" id="email-score-link" href="mailto:hello@noticekit.tech">Email this score</a>
+                <button class="button secondary" id="copy-score-button" type="button">Copy summary</button>
+              </div>
+              <p class="fine-print" id="copy-status" aria-live="polite"></p>
+            </div>
             <div class="result-list">
               <strong>Next fixes</strong>
               <ul id="recommendations"></ul>
@@ -200,6 +209,17 @@
       const tierTitle = document.querySelector("#tier-title");
       const tierCopy = document.querySelector("#tier-copy");
       const recommendations = document.querySelector("#recommendations");
+      const emailScoreLink = document.querySelector("#email-score-link");
+      const copyScoreButton = document.querySelector("#copy-score-button");
+      const copyStatus = document.querySelector("#copy-status");
+      const shareCopy = document.querySelector("#share-copy");
+      const pageSource = new URLSearchParams(window.location.search).get("source") || "";
+      const sourceLabelMap = {
+        "founder-follow-up": "founder follow-up",
+        "advisor-follow-up": "advisor follow-up",
+        "founder-batch-03": "founder batch 03",
+        "founder-batch-04": "founder batch 04"
+      };
 
       const advice = {
         page: "Publish or update the current subprocessor list before drafting customer-specific notices.",
@@ -213,6 +233,45 @@
         owner: "Assign one accountable owner for send, follow-up, and evidence closeout.",
         review: "Route the packet to counsel, DPO, or the accountable operator before sending."
       };
+
+      function sourceLabel() {
+        return sourceLabelMap[pageSource] || pageSource.replace(/[-_]+/g, " ").trim();
+      }
+
+      function buildSummary(score, label, missing) {
+        return [
+          `Self-audit score: ${score}/10 (${label})`,
+          `Top gaps: ${missing.length ? missing.slice(0, 4).map((key) => advice[key]).join(" | ") : "No checklist gaps left."}`,
+          `Source: ${sourceLabel() || "direct site visit"}`,
+          "",
+          "Optional context:",
+          "- Who owns subprocessor notices today?",
+          "- Is this painful enough to pay for, refer, or ignore?"
+        ].join("\n");
+      }
+
+      async function copySummary(text) {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+            copyStatus.textContent = "Summary copied.";
+            return;
+          }
+        } catch (error) {
+          // Fall through to the execCommand fallback.
+        }
+
+        const helper = document.createElement("textarea");
+        helper.value = text;
+        helper.setAttribute("readonly", "");
+        helper.style.position = "absolute";
+        helper.style.left = "-9999px";
+        document.body.appendChild(helper);
+        helper.select();
+        const copied = document.execCommand("copy");
+        document.body.removeChild(helper);
+        copyStatus.textContent = copied ? "Summary copied." : "Copy failed. Use the email button instead.";
+      }
 
       function renderScore() {
         const selected = checks.filter((item) => item.checked).map((item) => item.value);
@@ -258,6 +317,18 @@
           item.textContent = "Export or save the final packet in your own workspace before the notice goes out.";
           recommendations.appendChild(item);
         }
+
+        const source = sourceLabel();
+        shareCopy.textContent = source
+          ? `If you came here from the ${source}, email the score and top gaps. Async feedback is enough.`
+          : "Email the score and top gaps if you want blunt feedback without a call.";
+        copyStatus.textContent = "";
+
+        const emailSummary = buildSummary(score, label, missing);
+        const subject = encodeURIComponent(`Self-audit feedback: ${score}/10 ${label}`);
+        const body = encodeURIComponent(`${emailSummary}\n`);
+        emailScoreLink.href = `mailto:hello@noticekit.tech?subject=${subject}&body=${body}`;
+        copyScoreButton.onclick = () => copySummary(emailSummary);
       }
 
       checks.forEach((item) => item.addEventListener("change", renderScore));

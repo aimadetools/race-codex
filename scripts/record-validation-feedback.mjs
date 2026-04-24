@@ -185,6 +185,36 @@ function appendNotes(existing, additions) {
   return parts.filter(Boolean).join(" ");
 }
 
+function normalizeScoreBand(payload) {
+  const band = pickValue(payload, ["score_band", "scoreBand", "self_audit_score_band", "selfAuditScoreBand"]);
+  const rawScore = pickValue(payload, ["score", "self_audit_score", "selfAuditScore"]);
+
+  if (band) {
+    const normalized = band.replace(/\s+/g, "").replace(/\/10$/i, "");
+    if (["0-4", "5-7", "8-10"].includes(normalized)) {
+      return normalized;
+    }
+    throw new Error(`Unsupported score band: ${band}`);
+  }
+
+  if (rawScore) {
+    const numericScore = Number(rawScore);
+    if (!Number.isFinite(numericScore) || numericScore < 0 || numericScore > 10) {
+      throw new Error(`Unsupported score value: ${rawScore}`);
+    }
+
+    if (numericScore <= 4) {
+      return "0-4";
+    }
+    if (numericScore <= 7) {
+      return "5-7";
+    }
+    return "8-10";
+  }
+
+  return "";
+}
+
 function formatFeedbackLine(entry) {
   const segments = [
     entry.date,
@@ -204,6 +234,22 @@ function formatFeedbackLine(entry) {
 
   if (entry.source) {
     segments.push(`Source: ${entry.source}`);
+  }
+
+  if (entry.sourceTag) {
+    segments.push(`Source tag: ${entry.sourceTag}`);
+  }
+
+  if (entry.scoreBand) {
+    segments.push(`Score band: ${entry.scoreBand}`);
+  }
+
+  if (entry.ownershipSignal) {
+    segments.push(`Ownership: ${entry.ownershipSignal}`);
+  }
+
+  if (entry.signal) {
+    segments.push(`Signal: ${entry.signal}`);
   }
 
   return `- ${segments.filter(Boolean).join(" | ")}`;
@@ -247,6 +293,8 @@ function runInterviewAppender(interviewInput, interviewCsv, dryRun) {
     args.push("--csv", interviewCsv);
   }
 
+  args.push("--skip-sync");
+
   if (dryRun) {
     args.push("--dry-run");
   }
@@ -258,6 +306,17 @@ function runInterviewAppender(interviewInput, interviewCsv, dryRun) {
 
   if (result.status !== 0) {
     throw new Error("Interview log update failed.");
+  }
+}
+
+function syncValidationArtifacts() {
+  const result = spawnSync("node", [join(ROOT, "scripts", "sync-validation-artifacts.mjs")], {
+    cwd: ROOT,
+    stdio: "inherit"
+  });
+
+  if (result.status !== 0) {
+    throw new Error("Validation artifact sync failed.");
   }
 }
 
@@ -287,6 +346,10 @@ async function main() {
   const date = pickValue(payload, ["date"], utcDateString());
   const details = pickValue(payload, ["details", "body", "reply_body"]);
   const source = pickValue(payload, ["source", "route", "via"]);
+  const sourceTag = pickValue(payload, ["source_tag", "sourceTag", "self_audit_source_tag", "selfAuditSourceTag"]);
+  const scoreBand = normalizeScoreBand(payload);
+  const ownershipSignal = pickValue(payload, ["ownership_signal", "ownershipSignal", "owner_role", "ownerRole"]);
+  const signal = pickValue(payload, ["signal", "intent_signal", "intentSignal", "outcome_signal", "outcomeSignal"]);
   const nextStep = pickValue(payload, ["next_step", "nextStep"]);
   const feedbackLabel = replyType === "positive" ? "replied_positive" : replyType === "negative" ? "replied_negative" : "bounced";
 
@@ -307,6 +370,10 @@ async function main() {
     `Summary: ${summary}`,
     details ? `Details: ${details}` : "",
     source ? `Source: ${source}` : "",
+    sourceTag ? `Source tag: ${sourceTag}` : "",
+    scoreBand ? `Score band: ${scoreBand}` : "",
+    ownershipSignal ? `Ownership: ${ownershipSignal}` : "",
+    signal ? `Signal: ${signal}` : "",
     nextStep ? `Next step: ${nextStep}` : ""
   ]);
 
@@ -321,7 +388,11 @@ async function main() {
     summary,
     details,
     nextStep,
-    source
+    source,
+    sourceTag,
+    scoreBand,
+    ownershipSignal,
+    signal
   };
 
   const feedbackOutput = upsertFeedbackText(await readFile(feedbackPath, "utf8"), feedbackEntry);
@@ -370,6 +441,8 @@ async function main() {
   if (interviewInput) {
     runInterviewAppender(interviewInput, interviewCsv, false);
   }
+
+  syncValidationArtifacts();
 }
 
 main().catch((error) => {

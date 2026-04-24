@@ -708,6 +708,24 @@ textarea {
   color: var(--muted);
 }
 
+.share-card {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid rgba(244, 201, 93, 0.28);
+  border-radius: 8px;
+  background: rgba(244, 201, 93, 0.08);
+}
+
+.share-card strong {
+  color: var(--text);
+}
+
+.share-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .result-list ul {
   display: grid;
   gap: 8px;
@@ -720,6 +738,11 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.result-actions button {
+  font: inherit;
+  cursor: pointer;
 }
 
 .status-pill {

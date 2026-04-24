@@ -1,17 +1,22 @@
 {
   "private": true,
   "scripts": {
+    "build:validation-decision-brief": "node scripts/build-validation-decision-brief.mjs",
     "build:paid-kits": "node scripts/build-paid-kit-fulfillment.mjs",
     "build:founder-follow-up-pass": "node scripts/build-founder-follow-up-pass.mjs",
     "build:advisor-follow-up-pass": "node scripts/build-advisor-follow-up-pass.mjs",
+    "build:homepage-copy-refresh-queue": "node scripts/build-homepage-copy-refresh-queue.mjs",
     "build:validation-status": "node scripts/build-validation-status.mjs",
     "build:validation-send-plan": "node scripts/build-validation-send-plan.mjs",
+    "check:self-audit-follow-up": "node scripts/check-self-audit-follow-up-links.mjs",
     "check:validation-watch": "node scripts/check-validation-reply-watch.mjs",
+    "sync:validation-artifacts": "node scripts/sync-validation-artifacts.mjs",
     "record:interview": "node scripts/append-validation-interview.mjs",
     "record:feedback": "node scripts/record-validation-feedback.mjs"
   },
   "dependencies": {
     "@vercel/blob": "^2.3.3",
+    "jsdom": "^26.1.0",
     "nodemailer": "^6.10.1"
   }
 }

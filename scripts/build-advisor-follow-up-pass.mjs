@@ -4,6 +4,7 @@ import { join } from "node:path";
 const ROOT = process.cwd();
 const BATCH_CSV = join(ROOT, "buyer-validation-outreach-batch-02.csv");
 const OUTPUT = join(ROOT, "BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md");
+const SELF_AUDIT_URL = "https://noticekit.tech/self-audit.html?source=advisor-follow-up";
 
 function parseCsv(text) {
   const rows = [];
@@ -165,7 +166,8 @@ const output = [
   "## Follow-Up Copy",
   "",
   "Use the consultant and attorney follow-up subjects and bodies from `BUYER-VALIDATION-OUTREACH-BATCH-02.md`.",
-  "If it helps, include `https://noticekit.tech/self-audit.html` as a quick self-check hook before asking for blunt feedback.",
+  `If it helps, include \`${SELF_AUDIT_URL}\` as a quick self-check hook before asking for blunt feedback.`,
+  "Ask recipients to reply with the score and top two gaps if they do not want a call.",
   "Keep the message short, avoid product pitching, and keep the non-legal-advice boundary intact.",
   "",
   "## Send Guardrails",

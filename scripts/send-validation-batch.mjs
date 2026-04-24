@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import nodemailer from "nodemailer";
+import { spawnSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
@@ -226,6 +227,9 @@ function assertFollowUpCanSend(row, args) {
 function bodyForRow(row, mode = "first-touch") {
   const segment = row.segment || "";
   const company = row.company || row.organization || "";
+  const selfAuditUrl = segment === "Founder/operator"
+    ? "https://noticekit.tech/self-audit.html?source=founder-follow-up"
+    : "https://noticekit.tech/self-audit.html?source=advisor-follow-up";
 
   if (segment === "Founder/operator") {
     if (mode === "follow-up") {
@@ -237,6 +241,8 @@ function bodyForRow(row, mode = "first-touch") {
           `Quick follow-up. I am looking for blunt operator feedback, not a sales call.`,
           ``,
           `The specific question is whether a one-change subprocessor notice kit would save time when a SaaS team needs to update its list, notify customers, and keep evidence of what happened.`,
+          ``,
+          `If it helps, the readiness self-audit is here: ${selfAuditUrl}.`,
           ``,
           `Worth a 15-minute feedback call, or is this owned by someone else at ${company}?`,
           ``,
@@ -274,6 +280,8 @@ function bodyForRow(row, mode = "first-touch") {
         `Quick follow-up. I am looking for blunt feedback, not a sales call.`,
         ``,
         `The specific question is whether a small structured packet for vendor changes would reduce back-and-forth before privacy or legal review, or whether the positioning needs to be narrower.`,
+        ``,
+        `If it helps, the readiness self-audit is here: ${selfAuditUrl}.`,
         ``,
         `Worth a 15-minute feedback call, or is there someone else who sees this workflow more often?`,
         ``,
@@ -417,6 +425,17 @@ function renderHtml(subject, text) {
   return `<p><strong>${subject}</strong></p><p>${escaped}</p>`;
 }
 
+function syncValidationArtifacts() {
+  const result = spawnSync("node", [join(ROOT, "scripts", "sync-validation-artifacts.mjs")], {
+    cwd: ROOT,
+    stdio: "inherit"
+  });
+
+  if (result.status !== 0) {
+    throw new Error("Validation artifact sync failed.");
+  }
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const batch = String(args.get("batch") || "01").padStart(2, "0");
@@ -436,8 +455,10 @@ async function main() {
     .filter((row) => row.status === (followUp ? "sent" : "ready_for_send"))
     .slice(0, limit);
   const replyTo = "hello@noticekit.tech";
+  let csvUpdated = false;
   const persistCsv = async () => {
     await writeFile(csvPath, serializeCsv(header, rows), "utf8");
+    csvUpdated = true;
     console.log(`[updated] ${csvPath}`);
   };
 
@@ -503,6 +524,10 @@ async function main() {
     }
 
     throw new Error(`Unknown transport "${transport}". Use auto, smtp, or resend.`);
+  }
+
+  if (csvUpdated) {
+    syncValidationArtifacts();
   }
 }
 

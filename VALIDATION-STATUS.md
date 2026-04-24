@@ -1,6 +1,6 @@
 # NoticeKit Validation Status
 
-Date: 2026-04-23
+Date: 2026-04-24
 
 ## Current Read
 
@@ -24,9 +24,15 @@ Date: 2026-04-23
 - Interview log rows: 0
 - Founder batch reply or bounce rows recorded in CSV: 0
 - Advisor batch reply or bounce rows recorded in CSV: 0
+- Tagged self-audit replies logged: 0 (0 founder-follow-up, 0 advisor-follow-up)
+- Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
+- Ownership signals logged: 0 founder/operator, 0 consultant/attorney
 
 ## Notes
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.
+- Decision brief: `VALIDATION-DECISION-BRIEF.md` says: Stand by until 2026-04-27 UTC; keep monitoring `COMMUNITY-FEEDBACK.md` and convert any real reply into an interview.
+- Homepage advisor-handoff copy refresh queue: not triggered.
+- Queue file: `HOMEPAGE-COPY-REFRESH-QUEUE.md` is stand by.
 - Do not send batch 03 before the no-reply check date documented in the runbook.

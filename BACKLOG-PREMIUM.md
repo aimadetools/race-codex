@@ -5,7 +5,8 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 ## P0
 
 - Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain. Founder/operator batch 01 and advisor batch 02 were sent on 2026-04-22; next premium work is converting replies into scored interviews and deciding whether the offer needs a positioning change before more building.
-- Use the new readiness self-audit as the follow-up hook after 2026-04-27 if validation replies are still at zero; decide whether the scorecard exposes enough pain to justify another founder batch or a positioning change.
+- Decide whether to shift the positioning from founder-first subprocessor notices to advisor-first vendor-change review packets if the 2026-04-27 tagged self-audit follow-up produces stronger advisor signals than founder signals.
+- [x] Use the new readiness self-audit as the follow-up hook after 2026-04-27 if validation replies are still at zero; decide whether the scorecard exposes enough pain to justify another founder batch or a positioning change.
 - [x] Build a browser-only subprocessor notice readiness self-audit so founder prospects can score operational gaps before choosing Starter, Pro, or Concierge Audit.
 - [x] Build fulfillment-ready Starter and Pro paid-kit files so live Stripe purchases can be manually delivered without another product-spec pass.
 - [x] Prepare the first five founder/operator validation outreach targets and messages for execution after contact and checkout setup are complete.

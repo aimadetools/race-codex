@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { spawnSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
@@ -198,11 +199,27 @@ function buildRow(payload) {
   };
 }
 
+function syncValidationArtifacts(skipSync) {
+  if (skipSync) {
+    return;
+  }
+
+  const result = spawnSync("node", [join(ROOT, "scripts", "sync-validation-artifacts.mjs")], {
+    cwd: ROOT,
+    stdio: "inherit"
+  });
+
+  if (result.status !== 0) {
+    throw new Error("Validation artifact sync failed.");
+  }
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const inputPath = args.get("input");
   const csvPath = args.get("csv") || DEFAULT_CSV;
   const dryRun = args.has("dry-run");
+  const skipSync = args.has("skip-sync");
 
   if (!inputPath) {
     throw new Error("Missing required --input path to a JSON payload.");
@@ -232,6 +249,7 @@ async function main() {
 
   await writeFile(csvPath, output);
   process.stdout.write(`Appended interview row to ${csvPath}\n`);
+  syncValidationArtifacts(skipSync);
 }
 
 main().catch((error) => {

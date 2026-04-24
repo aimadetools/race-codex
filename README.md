@@ -38,6 +38,7 @@ The first version includes:
 - `BUYER-VALIDATION-OUTREACH-BATCH-03.md` and `buyer-validation-outreach-batch-03.csv` define the contingency founder/operator expansion to use only if the 2026-04-27 no-reply check still needs five more public targets.
 - `BUYER-VALIDATION-OUTREACH-BATCH-04.md` and `buyer-validation-outreach-batch-04.csv` define the second founder/operator contingency expansion to use only if batch 03 still leaves the queue short after the same no-reply check.
 - `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
+- `VALIDATION-DECISION-BRIEF.md` is the generated 2026-04-27 decision snapshot for follow-ups, batch 03 unlocks, and founder-vs-advisor positioning calls.
 - `VALIDATION-STATUS.md` is the canonical buyer-validation status snapshot for reply monitoring and next-action checks.
 - `BUYER-VALIDATION-PACKET.md` contains the interview scripts, scoring rubric, decision gates, and outreach templates for buyer validation.
 - `OPERATOR-FOUNDER-OUTREACH-CHECKLIST.md` preserves the human-sender checklist used for the first founder validation batch.
@@ -71,7 +72,10 @@ The first version includes:
 - `scripts/generate-validation-drafts.mjs` generates per-target outreach draft files from the prepared buyer validation CSVs.
 - `scripts/build-founder-follow-up-pass.mjs` regenerates the batch 01 non-responder follow-up queue and due date.
 - `scripts/build-advisor-follow-up-pass.mjs` regenerates the batch 02 non-responder follow-up queue and due date.
+- `scripts/build-homepage-copy-refresh-queue.mjs` regenerates the advisor-handoff homepage refresh queue from tagged self-audit ownership signals.
+- `scripts/build-validation-decision-brief.mjs` regenerates the current validation decision brief for the follow-up window, batch 03 unlock, and positioning branch.
 - `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
+- `scripts/sync-validation-artifacts.mjs` rebuilds the follow-up passes, homepage copy refresh queue, validation decision brief, validation status, and validation watch output after any send, reply, bounce, or interview update.
 - `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and next action for the validation queue.
 - `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue and guarded non-responder follow-ups through SMTP or Resend when an approved sender is available; live sends are date-gated for advisor batch 02, contingency batch 03, and later contingency batches plus three-business-day follow-ups.
 - `scripts/build-validation-send-plan.mjs` regenerates the send-plan summary from the prepared outreach CSVs.
@@ -86,6 +90,7 @@ The first version includes:
 - `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` and the public contact alias.
 - `package.json` pins `@vercel/blob` for the private contact inbox fallback and `nodemailer` for optional SMTP delivery.
 - `HELP-STATUS.md` tracks human setup and confirms the alias, domain, Stripe links, and Resend sender are live.
+- `HOMEPAGE-COPY-REFRESH-QUEUE.md` is the generated advisor-handoff homepage pivot brief that only activates when tagged self-audit ownership signals lean consultant/attorney over founder/operator.
 
 ## Run Locally
 

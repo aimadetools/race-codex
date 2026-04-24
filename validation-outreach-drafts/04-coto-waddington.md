@@ -32,7 +32,7 @@ Quick follow-up. I am looking for blunt feedback, not a sales call.
 
 The specific question is whether a small structured packet for vendor changes would reduce back-and-forth before privacy or legal review, or whether the positioning needs to be narrower.
 
-If it helps, the readiness self-audit is here: https://noticekit.tech/self-audit.html.
+If it helps, the readiness self-audit is here: https://noticekit.tech/self-audit.html?source=advisor-follow-up.
 
 Worth a 15-minute feedback call, or is there someone else who sees this workflow more often?
 

@@ -16,6 +16,7 @@ const BATCH_FILES = [
   { label: "Contingency batch 04", path: join(ROOT, "buyer-validation-outreach-batch-04.csv") }
 ];
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
+const GATE_DATE = "2026-04-27";
 
 function parseCsv(text) {
   const rows = [];
@@ -98,6 +99,16 @@ function parseDate(value) {
   return match ? match[0] : "";
 }
 
+function extractSignals(text) {
+  const ownershipMatches = [...text.matchAll(/Ownership:\s*([^\n|]+)/g)];
+  const ownershipSignals = ownershipMatches.map((match) => match[1].trim().toLowerCase());
+
+  return {
+    founderOwnership: ownershipSignals.filter((value) => ["founder", "operator", "ops"].includes(value)).length,
+    advisorOwnership: ownershipSignals.filter((value) => ["privacy consultant", "consultant", "fractional dpo", "dpo", "attorney", "lawyer"].includes(value)).length
+  };
+}
+
 async function main() {
   const [feedbackText, interviewRows, ...texts] = await Promise.all([
     readFile(FEEDBACK_FILE, "utf8"),
@@ -118,8 +129,12 @@ async function main() {
     due: extractFollowUpDate(text)
   }));
   const totalReplyRows = parsedBatches.reduce((total, batch) => total + countReplies(batch.rows), 0);
+  const founderReplies = countReplies(parsedBatches[0].rows);
+  const advisorReplies = countReplies(parsedBatches[1].rows);
+  const contingencyReady = parsedBatches[2].rows.filter((row) => String(row.status || "").trim() === "ready_for_send").length;
   const noFounderRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
   const noAdvisorRepliesPosted = feedbackText.includes("No advisor replies have been posted here yet.");
+  const signals = extractSignals(feedbackText);
   const today = new Date().toISOString().slice(0, 10);
   const dueFollowUps = followUps.filter((item) => {
     const dueDate = parseDate(item.due);
@@ -145,6 +160,10 @@ async function main() {
     lines.push("- Rebuild the follow-up passes because at least one due date could not be parsed.");
   } else if (dueFollowUps.length > 0) {
     lines.push(`- Send due non-responder follow-ups for: ${dueFollowUps.map((item) => item.label).join(", ")}.`);
+  } else if (today >= GATE_DATE && founderReplies === 0 && contingencyReady > 0) {
+    lines.push(`- Founder batch 03 is now unlocked because no founder/operator replies are recorded; ${contingencyReady} contingency targets are ready.`);
+  } else if (today >= GATE_DATE && signals.advisorOwnership > signals.founderOwnership && signals.advisorOwnership > 0) {
+    lines.push("- Advisor ownership signals are stronger than founder signals; queue the homepage advisor-handoff copy refresh.");
   } else {
     lines.push("- Keep monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens.");
   }

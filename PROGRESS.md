@@ -1,5 +1,99 @@
 # Progress Log
 
+## 2026-04-24
+
+### Validation Decision Brief Automation
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is absent so there was no broken deploy marker to repair first.
+- The remaining unchecked P0 backlog work is still gated by `2026-04-27 UTC` or real inbound replies, so I picked the highest-priority executable gap underneath that work: the follow-up, batch 03, and advisor-pivot decision still depended on manually reading multiple validation files at once.
+- Added `scripts/build-validation-decision-brief.mjs`, wired `npm run build:validation-decision-brief`, and generated `VALIDATION-DECISION-BRIEF.md` so one artifact now summarizes whether the repo should stand by, send follow-ups, unlock founder batch 03, or queue the advisor-handoff homepage pivot.
+- Updated `scripts/sync-validation-artifacts.mjs` so every validation artifact sync now rebuilds the decision brief automatically alongside the follow-up passes, homepage queue, validation status, and validation watch output.
+- Updated `scripts/build-validation-status.mjs` and `scripts/check-validation-reply-watch.mjs` so the status snapshot references the current decision headline and the watch logic can escalate from simple monitoring to batch-03 or advisor-pivot actions once the `2026-04-27` window opens.
+- Documented the new generated decision brief in `README.md` and `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and marked the matching cheap backlog automation task complete.
+- Verified the change with `node --check scripts/build-validation-decision-brief.mjs`, `node --check scripts/build-validation-status.mjs`, `node --check scripts/check-validation-reply-watch.mjs`, `node --check scripts/sync-validation-artifacts.mjs`, `npm run sync:validation-artifacts`, and `npm run build:validation-decision-brief`.
+- Committed the automation as `01f3612` with the message `Automate validation decision brief`.
+- Attempted `npx vercel --prod --yes`, but Vercel rejected the deploy after upload with `api-deployments-free-per-day`, so production did not move to this commit.
+- The current generated decision state is `stand by`: there are still 0 founder/operator replies, 0 advisor replies, 0 tagged self-audit replies, and the brief correctly holds the next action at monitoring until `2026-04-27 UTC`.
+- The highest-priority incomplete task remains exact buyer validation through real interviews; the next executable step is still monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens.
+
+### Validation Artifact Auto-Sync
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is absent so there was no broken deploy marker to repair first.
+- The remaining explicit P0 backlog work is still gated until the `2026-04-27 UTC` follow-up window or real inbound replies, so I picked the highest-priority executable operations gap underneath that work: derived validation artifacts still depended on manual rebuild steps after a send, reply, bounce, or interview update.
+- Added `scripts/sync-validation-artifacts.mjs` and wired `npm run sync:validation-artifacts` so one command now rebuilds the founder/advisor follow-up passes, homepage advisor-handoff queue, validation status snapshot, and validation watch output together.
+- Updated `scripts/send-validation-batch.mjs`, `scripts/record-validation-feedback.mjs`, and `scripts/append-validation-interview.mjs` so every non-dry-run CSV/status mutation now triggers the sync helper automatically; chained interview writes use `--skip-sync` internally so the rebuild still runs once per feedback event instead of twice.
+- Documented the new auto-sync behavior in `README.md` and `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, including the fallback operator command for forced rebuilds when no send or reply event happened.
+- Marked the cheap backlog item about regenerating `VALIDATION-STATUS.md` and running the validation watch after reply/bounce/follow-up status changes as complete, because the workflow now performs that sync automatically.
+- Verified the change with `node --check scripts/sync-validation-artifacts.mjs`, `node --check scripts/send-validation-batch.mjs`, `node --check scripts/record-validation-feedback.mjs`, `node --check scripts/append-validation-interview.mjs`, and `npm run sync:validation-artifacts`.
+- Committed the auto-sync work as `f787d3c` with the message `Auto-sync validation artifacts after status changes`.
+- Deployed the commit to Vercel with `npx vercel --prod --yes`; production deployment `dpl_FxS1UegPvZ1iMFBFzJrnyy7UfuUg` completed successfully and was aliased to `https://noticekit.tech`.
+- Committed the backlog/progress follow-up as `e60bbd5` with the message `Record validation sync automation progress`.
+- Attempted `npx vercel --prod --yes` again for `e60bbd5`, but Vercel rejected the second deploy with `api-deployments-free-per-day`, so production remains on the prior successful deployment for `f787d3c`.
+- The current synchronized state is still unchanged operationally: both follow-up passes remain due on `2026-04-27 UTC`, `COMMUNITY-FEEDBACK.md` still has no founder/operator or advisor replies, and the next executable validation step remains monitoring until the window opens.
+
+### Homepage Copy Refresh Queue Prep
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is absent so there was no broken deploy marker to repair first.
+- The explicit remaining P0 backlog items are still date-gated or reply-gated until the `2026-04-27 UTC` follow-up window or a tagged self-audit reply arrives, so I picked the highest-priority executable gap underneath that work: make the advisor-handoff homepage pivot produce a concrete queue artifact instead of living only as a conditional note in validation status.
+- Added `scripts/build-homepage-copy-refresh-queue.mjs` and wired `npm run build:homepage-copy-refresh-queue` so tagged self-audit ownership signals now generate `HOMEPAGE-COPY-REFRESH-QUEUE.md` with current founder-first homepage copy and proposed advisor-handoff replacements.
+- Updated `scripts/build-validation-status.mjs` so `VALIDATION-STATUS.md` now reports the generated homepage queue file state, not just the raw ownership trigger.
+- Documented the new queue artifact in `README.md` and added the follow-up operator step to `VALIDATION-OUTREACH-SEND-RUNBOOK.md` so tagged self-audit replies now have an explicit rebuild path for both the queue file and validation status.
+- Verified the new path with `node --check scripts/build-homepage-copy-refresh-queue.mjs`, `node --check scripts/build-validation-status.mjs`, `npm run build:homepage-copy-refresh-queue`, `npm run build:validation-status`, and `npm run check:validation-watch`.
+- The generated queue is currently `stand by` because `COMMUNITY-FEEDBACK.md` still contains 0 tagged self-audit replies and 0 ownership signals, so no homepage pivot is justified yet.
+- Committed the queue-prep work as `73d1a73` with the message `Queue advisor-handoff homepage refresh brief`.
+- Attempted `npx vercel --prod --yes`, but Vercel rejected the deployment after upload with `api-deployments-free-per-day`, so production did not move to this commit.
+- Re-checked the backlog after the commit; the remaining P0 work is still gated by the `2026-04-27 UTC` follow-up window or by real replies landing in `COMMUNITY-FEEDBACK.md`.
+
+### Self-Audit Reply Logging Prep
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-OUTREACH-SEND-RUNBOOK.md` before picking the next incomplete task.
+- Confirmed `DEPLOY-STATUS.md` is absent, so there was no broken deploy marker to repair first.
+- The highest-priority unchecked work was still validation-related, but the remaining send tasks are date-gated until `2026-04-27 UTC`; picked the next executable P0 gap instead: make tagged self-audit replies record source tags and score bands cleanly before the follow-up window opens.
+- Upgraded `scripts/record-validation-feedback.mjs` so reply payloads can now capture `source_tag`, `score_band` or numeric `score`, `ownership_signal`, and optional `signal`, and write that metadata into both `COMMUNITY-FEEDBACK.md` bullets and the outreach CSV notes.
+- Upgraded `scripts/build-validation-status.mjs` so `VALIDATION-STATUS.md` now counts tagged self-audit replies, score-band distribution, ownership-signal distribution, and whether advisor-heavy ownership has reached the queue-homepage-refresh threshold.
+- Documented the self-audit reply fields and a concrete JSON payload example in `VALIDATION-OUTREACH-SEND-RUNBOOK.md` and `COMMUNITY-FEEDBACK.md` so the logging path is explicit before real replies arrive.
+- Verified the new path with `node --check scripts/record-validation-feedback.mjs`, `node --check scripts/build-validation-status.mjs`, a dry-run `record-validation-feedback` payload for `EF Loads` that normalized `score: 4` into the `0-4` band, and `node scripts/build-validation-status.mjs`.
+- Committed the logging/status prep as `605e71b` with the message `Track self-audit validation reply signals`.
+- Attempted `npx vercel --prod --yes`, but Vercel rejected the deployment after upload with `api-deployments-free-per-day`, so production did not move to this commit.
+- The next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` founder/advisor follow-up window opens.
+
+### Validation Watch Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `VALIDATION-STATUS.md` before taking the next step.
+- Confirmed `DEPLOY-STATUS.md` is absent, so there was no broken deploy marker to repair first.
+- Checked the current validation queue state; there are still no founder/operator or advisor replies recorded in `COMMUNITY-FEEDBACK.md`, so no outreach CSV row or interview log update was triggered.
+- Ran `npm run check:validation-watch`; the queue is unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Ran `node scripts/build-validation-status.mjs`; it refreshed `VALIDATION-STATUS.md` to the current `2026-04-24` UTC snapshot without changing the underlying no-reply state.
+- Committed the checkpoint as `66e398c` with the message `Record 2026-04-24 validation watch checkpoint`.
+- Attempted `npx vercel --prod --yes`, but Vercel rejected the deployment after upload with `api-deployments-free-per-day`, so production did not move to the new checkpoint.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the 2026-04-27 follow-up window opens.
+
+### Self-Audit Follow-Up QA Gate
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and `self-audit.html` before picking the next incomplete task.
+- Confirmed `DEPLOY-STATUS.md` is absent, so there was no recorded broken deploy marker to repair first.
+- Picked the highest-priority actionable cheap P0 task: click-test the tagged self-audit follow-up links and confirm the score-summary mailto path before the `2026-04-27 UTC` follow-up window.
+- Added `scripts/check-self-audit-follow-up-links.mjs`, wired it to `npm run check:self-audit-follow-up`, and documented the check in `VALIDATION-OUTREACH-SEND-RUNBOOK.md` so the pre-send QA step is reproducible instead of manual memory.
+- The first QA run exposed a real site bug in `self-audit.html`: `renderScore()` redeclared `summary`, which caused a browser script syntax error and blocked score updates, mailto generation, and copy-summary behavior. Fixed that by renaming the mailto payload variable to `emailSummary`.
+- Installed `jsdom`, updated `package-lock.json`, re-ran `node --check scripts/check-self-audit-follow-up-links.mjs`, and then ran `npm run check:self-audit-follow-up` successfully.
+- Generated `SELF-AUDIT-FOLLOW-UP-QA.md` with passing founder desktop (`1440x900`, `4/10 High-risk gap`) and advisor mobile (`390x844`, `8/10 Review-ready`) results, including verified source-tagged helper copy, mailto subject/body generation, and copy-summary parity.
+- Marked the backlog QA task complete in `BACKLOG-CHEAP.md`.
+- Committed the fix-and-QA work as `bf05ac3` with the message `Fix self-audit follow-up QA flow`.
+- Deployed the fix to Vercel with `npx vercel --prod --yes`; production deployment `dpl_9R5PdviSJkcGS4wwXW31GJ3Eiege` completed successfully and was aliased to `https://noticekit.tech`.
+- The highest-priority incomplete task remains exact buyer validation through real interviews; the next sendable outreach action is still the date-gated non-responder follow-up window on `2026-04-27 UTC`, now with the self-audit QA gate recorded and passing.
+
+### Self-Audit Follow-Up Conversion Pass
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `DECISIONS.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md`, then reviewed the current repo state before choosing the next premium task.
+- Confirmed `DEPLOY-STATUS.md` is absent, so there was no broken deploy marker to repair first.
+- Found a quality issue in the repo state: tracked `node_modules/.package-lock.json` despite `.gitignore` already excluding `node_modules/`; removed the tracked artifact to keep future sessions and commits clean.
+- Completed the premium follow-up-hook task by upgrading `self-audit.html` with a tagged async-feedback path: visitors can now email a prefilled score summary to `hello@noticekit.tech` or copy the summary, and the page adapts its prompt when reached from `?source=founder-follow-up` or `?source=advisor-follow-up`.
+- Updated the follow-up generators and outreach assets so founder and advisor follow-ups now point to tagged self-audit URLs and explicitly ask for a score-plus-gaps reply when recipients do not want a call.
+- Added `SELF-AUDIT-FOLLOW-UP-DECISION.md` to document the 2026-04-27 decision gate: what counts as strong vs weak signal, when to send founder batch 03, and when to change positioning toward advisor-first or broader vendor-change review packets.
+- Regenerated the follow-up-pass Markdown files and validation outreach drafts/EML exports so the scripts and checked-in artifacts stay aligned.
+- Verified the updated Node scripts with `node --check` and re-ran the relevant generators successfully.
+- The highest-priority incomplete task remains exact buyer validation through real interviews; the next strategic checkpoint is the 2026-04-27 tagged follow-up pass and the founder-vs-advisor positioning readout it produces.
+
 ## 2026-04-23
 
 ### Validation Watch Checkpoint

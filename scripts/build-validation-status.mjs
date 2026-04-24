@@ -12,6 +12,8 @@ const BATCH_FILES = [
   { label: "Contingency batch 04", path: join(ROOT, "buyer-validation-outreach-batch-04.csv") }
 ];
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
+const HOMEPAGE_QUEUE_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
+const DECISION_BRIEF_FILE = join(ROOT, "VALIDATION-DECISION-BRIEF.md");
 const FOLLOW_UP_FILE = join(ROOT, "BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md");
 const ADVISOR_FOLLOW_UP_FILE = join(ROOT, "BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md");
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
@@ -108,6 +110,41 @@ function normalizeRows(rows) {
   return rows.filter((row) => Object.values(row).some((value) => String(value || "").trim() !== ""));
 }
 
+function extractFeedbackSignals(text) {
+  const sourceTagMatches = [...text.matchAll(/Source tag:\s*([^\n|]+)/g)];
+  const scoreBandMatches = [...text.matchAll(/Score band:\s*([^\n|]+)/g)];
+  const ownershipMatches = [...text.matchAll(/Ownership:\s*([^\n|]+)/g)];
+
+  const sourceTags = sourceTagMatches.map((match) => match[1].trim());
+  const scoreBands = scoreBandMatches.map((match) => match[1].trim());
+  const ownershipSignals = ownershipMatches.map((match) => match[1].trim().toLowerCase());
+
+  const founderOwnership = ownershipSignals.filter((value) => ["founder", "operator", "ops"].includes(value)).length;
+  const advisorOwnership = ownershipSignals.filter((value) => ["privacy consultant", "consultant", "fractional dpo", "dpo", "attorney", "lawyer"].includes(value)).length;
+
+  return {
+    sourceTags,
+    scoreBands,
+    founderFollowUpReplies: sourceTags.filter((value) => value === "founder-follow-up").length,
+    advisorFollowUpReplies: sourceTags.filter((value) => value === "advisor-follow-up").length,
+    founderOwnership,
+    advisorOwnership,
+    lowScoreBands: scoreBands.filter((value) => value === "0-4").length,
+    mediumScoreBands: scoreBands.filter((value) => value === "5-7").length,
+    highScoreBands: scoreBands.filter((value) => value === "8-10").length
+  };
+}
+
+function extractQueueState(text) {
+  const match = text.match(/Trigger state:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
+function extractDecisionHeadline(text) {
+  const match = text.match(/Recommended action headline:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
 function renderBatchSummary(label, rows) {
   const sent = countBy(rows, "status", "sent");
   const followedUp = countBy(rows, "status", "followed_up");
@@ -145,6 +182,8 @@ const advisorBatchRows = parseCsv(await readFile(BATCH_FILES[1].path, "utf8"));
 const contingencyRows = parseCsv(await readFile(BATCH_FILES[2].path, "utf8"));
 const contingencyTwoRows = parseCsv(await readFile(BATCH_FILES[3].path, "utf8"));
 const feedbackText = await readFile(FEEDBACK_FILE, "utf8");
+const homepageQueueText = await readFile(HOMEPAGE_QUEUE_FILE, "utf8").catch(() => "");
+const decisionBriefText = await readFile(DECISION_BRIEF_FILE, "utf8").catch(() => "");
 const followUpText = await readFile(FOLLOW_UP_FILE, "utf8");
 const advisorFollowUpText = await readFile(ADVISOR_FOLLOW_UP_FILE, "utf8");
 const interviewRows = normalizeRows(parseCsv(await readFile(INTERVIEW_LOG, "utf8")));
@@ -154,6 +193,10 @@ const followUpDate = extractFollowUpDate(followUpText);
 const advisorFollowUpDate = extractFollowUpDate(advisorFollowUpText);
 const noFounderRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
 const noAdvisorRepliesPosted = feedbackText.includes("No advisor replies have been posted here yet.");
+const feedbackSignals = extractFeedbackSignals(feedbackText);
+const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
+const homepageQueueState = extractQueueState(homepageQueueText);
+const decisionHeadline = extractDecisionHeadline(decisionBriefText);
 
 const output = [
   "# NoticeKit Validation Status",
@@ -182,11 +225,17 @@ const output = [
   `- Interview log rows: ${interviewRows.length}`,
   `- Founder batch reply or bounce rows recorded in CSV: ${founderReplies}`,
   `- Advisor batch reply or bounce rows recorded in CSV: ${advisorReplies}`,
+  `- Tagged self-audit replies logged: ${feedbackSignals.sourceTags.length} (${feedbackSignals.founderFollowUpReplies} founder-follow-up, ${feedbackSignals.advisorFollowUpReplies} advisor-follow-up)`,
+  `- Self-audit score bands logged: ${feedbackSignals.lowScoreBands} low (0-4), ${feedbackSignals.mediumScoreBands} medium (5-7), ${feedbackSignals.highScoreBands} high (8-10)`,
+  `- Ownership signals logged: ${feedbackSignals.founderOwnership} founder/operator, ${feedbackSignals.advisorOwnership} consultant/attorney`,
   "",
   "## Notes",
   "",
   "- Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.",
   "- Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.",
+  `- Decision brief: ${decisionHeadline === "unknown" ? "missing; run \`npm run build:validation-decision-brief\`." : `\`VALIDATION-DECISION-BRIEF.md\` says: ${decisionHeadline}`}`,
+  `- Homepage advisor-handoff copy refresh queue: ${shouldQueueAdvisorCopyRefresh ? "queue it now based on logged ownership signals." : "not triggered."}`,
+  `- Queue file: ${homepageQueueState === "unknown" ? "missing; run \`npm run build:homepage-copy-refresh-queue\`." : `\`HOMEPAGE-COPY-REFRESH-QUEUE.md\` is ${homepageQueueState}.`}`,
   "- Do not send batch 03 before the no-reply check date documented in the runbook.",
   ""
 ].join("\n");

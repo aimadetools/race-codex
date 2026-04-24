@@ -83,6 +83,9 @@ function parseCsv(text) {
 function bodyForRow(row) {
   const segment = row.segment || "";
   const company = row.company || row.organization || "";
+  const selfAuditUrl = segment === "Founder/operator"
+    ? "https://noticekit.tech/self-audit.html?source=founder-follow-up"
+    : "https://noticekit.tech/self-audit.html?source=advisor-follow-up";
 
   if (segment === "Founder/operator") {
     return {
@@ -105,6 +108,8 @@ function bodyForRow(row) {
         `Quick follow-up. I am looking for blunt operator feedback, not a sales call.`,
         ``,
         `The specific question is whether a one-change subprocessor notice kit would save time when a SaaS team needs to update its list, notify customers, and keep evidence of what happened.`,
+        ``,
+        `If it helps, the readiness self-audit is here: ${selfAuditUrl}.`,
         ``,
         `Worth a 15-minute feedback call, or is this owned by someone else at ${company}?`,
         ``,
@@ -141,6 +146,8 @@ function bodyForRow(row) {
         ``,
         `The specific question is whether a small structured packet for vendor changes would reduce back-and-forth before privacy or legal review, or whether the positioning needs to be narrower.`,
         ``,
+        `If it helps, the readiness self-audit is here: ${selfAuditUrl}.`,
+        ``,
         `Worth a 15-minute feedback call, or is there someone else who sees this workflow more often?`,
         ``,
         `Best,`,
@@ -172,6 +179,8 @@ function bodyForRow(row) {
       `Quick follow-up. I am looking for blunt feedback, not a sales call.`,
       ``,
       `The specific question is whether a small structured packet for vendor changes would reduce back-and-forth before privacy or legal review, or whether the positioning needs to be narrower.`,
+      ``,
+      `If it helps, the readiness self-audit is here: ${selfAuditUrl}.`,
       ``,
       `Worth a 15-minute feedback call, or is there someone else who sees this workflow more often?`,
       ``,
@@ -273,7 +282,8 @@ async function main() {
   const batchFiles = [
     { label: "batch-01", file: "buyer-validation-outreach-batch-01.csv" },
     { label: "batch-02", file: "buyer-validation-outreach-batch-02.csv" },
-    { label: "batch-03", file: "buyer-validation-outreach-batch-03.csv" }
+    { label: "batch-03", file: "buyer-validation-outreach-batch-03.csv" },
+    { label: "batch-04", file: "buyer-validation-outreach-batch-04.csv" }
   ];
 
   await mkdir(OUTPUT_DIR, { recursive: true });
@@ -327,12 +337,14 @@ async function main() {
     `2. Wait one business day.`,
     `3. Advisor batch 02.`,
     `4. Founder/operator batch 03 if the 2026-04-27 no-reply check still needs expansion.`,
+    `5. Founder/operator batch 04 if batch 03 still leaves the queue short after the same no-reply check.`,
     ``,
     `## Status`,
     ``,
     `Resend is available for approved direct-email routes from NoticeKit <hello@noticekit.tech>. Manual-form and contact-sales routes still require the public form path listed in each draft.`,
     ``,
     `Founder/operator batch 01 is sent. Advisor batch 02 is also sent under an explicit operator override on 2026-04-22. Use these drafts for reply handling, follow-ups, and any future batch 03 expansion after the documented hold and reply checks.`,
+    `Batch 04 is prepared as a second founder/operator contingency expansion and stays out of the active send queue until batch 03 has also been exhausted after the 2026-04-27 check.`,
     ``,
     `The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for backup/manual sending.`,
     ``,
