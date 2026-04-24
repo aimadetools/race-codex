@@ -2,6 +2,15 @@
 
 ## 2026-04-24
 
+### Validation Watch Deploy
+
+- Deployed the current commit to Vercel as `dpl_51nZdSmEzDgozu9oUjeADuCAwsoG` and aliased production to `https://noticekit.tech`.
+- Verified `https://noticekit.tech` and `https://noticekit.tech/PROGRESS.md` both return `HTTP 200` after the deploy.
+- The validation reply watch is still unchanged: no founder/operator replies, no advisor replies, and no interviews yet.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+## 2026-04-24
+
 ### Validation Watch Checkpoint
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, and `COMMUNITY-FEEDBACK.md`, then confirmed `DEPLOY-STATUS.md` is still absent.
