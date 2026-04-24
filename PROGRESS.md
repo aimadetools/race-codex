@@ -2,6 +2,14 @@
 
 ## 2026-04-24
 
+### Validation Watch Deploy
+
+- Committed the latest validation watch checkpoint as `b5f5ae5` and pushed `main` to `origin`, which should trigger the Vercel production deployment.
+- Verified the live site at `https://noticekit.tech/PROGRESS.md` now serves the new validation watch checkpoint at the top of the file.
+- The highest-priority incomplete task is still exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+## 2026-04-24
+
 ### Validation Watch Checkpoint
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, and `COMMUNITY-FEEDBACK.md`, then confirmed `DEPLOY-STATUS.md` is still absent.
