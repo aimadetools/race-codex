@@ -96,3 +96,4 @@ These tasks are routine and can be handled quickly.
 - [x] Add direct `hello@noticekit.tech` contact links to the public footers and key buyer-facing pages.
 - [x] Publish a "Subprocessor Notice Mistakes SaaS Teams Make" article and wire it into the homepage, blog index, sitemap, and changelog.
 - [x] Publish subprocessor notice subject line examples and wire the page into the homepage, blog index, sitemap, and changelog.
+- [x] Publish a subprocessor review packet checklist for startup attorneys and wire it into the homepage, blog index, sitemap, and changelog.

@@ -2,6 +2,13 @@
 
 ## 2026-04-24
 
+### Advisor Content Refresh Checkpoint
+
+- Published `blog-subprocessor-review-packet-checklist.html`, a new advisor-facing checklist for startup attorneys and fractional DPOs who need a compact subprocessor review packet.
+- Wired the new page into the homepage, blog index, sitemap, and changelog so the advisor content cluster stays discoverable from the main public surfaces.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
 ### Validation Watch Checkpoint
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, then confirmed `DEPLOY-STATUS.md` is still absent so there was no broken deploy marker to repair first.
