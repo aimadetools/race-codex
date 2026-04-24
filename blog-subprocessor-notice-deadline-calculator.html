@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subprocessor Notice Deadline Calculator | NoticeKit</title>
+    <meta name="description" content="Calculate a subprocessor notice deadline from a notice date and objection window, then check whether the planned effective date leaves enough time.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:title" content="Subprocessor Notice Deadline Calculator">
+    <meta property="og:description" content="Calculate a notice deadline from a notice date and objection window, then check the planned effective date against the deadline.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit subprocessor notices for small SaaS teams">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Subprocessor Notice Deadline Calculator">
+    <meta name="twitter:description" content="Calculate a notice deadline from a notice date and objection window, then check the planned effective date against the deadline.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="self-audit.html">Self-audit</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <article class="article">
+          <header class="article-header">
+            <span class="eyebrow">Calculator</span>
+            <h1>Subprocessor notice deadline calculator</h1>
+            <p>Use this browser-only tool to calculate a notice deadline from the notice date and objection window, then check whether the planned effective date leaves enough time.</p>
+          </header>
+
+          <div class="notice-band">
+            <strong>Operational calculator, not legal advice.</strong>
+            <p>Your DPA, customer agreement, delivery method, and counsel determine the real deadline rules. Treat this as a draft calculation and confirm the controlling language before you send anything.</p>
+          </div>
+
+          <section>
+            <h2>Calculate the deadline</h2>
+            <div class="grid-2">
+              <article class="card">
+                <div class="field-grid">
+                  <label>Notice date
+                    <input id="notice-date" type="date">
+                  </label>
+                  <label>Objection window
+                    <select id="window">
+                      <option value="7">7 days</option>
+                      <option value="14">14 days</option>
+                      <option value="30" selected>30 days</option>
+                      <option value="45">45 days</option>
+                    </select>
+                  </label>
+                  <label>Planned effective date
+                    <input id="effective-date" type="date">
+                  </label>
+                  <label>Customer segment
+                    <input id="segment" value="EU customers on signed DPA">
+                  </label>
+                  <label>Delivery method
+                    <input id="delivery" value="email plus public subprocessor page update">
+                  </label>
+                </div>
+              </article>
+              <article class="card">
+                <strong>Calculated result</strong>
+                <div id="calculator-output" class="template-box" aria-live="polite"></div>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2>When the deadline looks wrong</h2>
+            <ul class="article-list">
+              <li>If the effective date is earlier than the calculated deadline, move the change date or send the notice sooner.</li>
+              <li>If different customer segments use different notice periods, calculate each segment separately instead of sharing one deadline.</li>
+              <li>If your agreement uses business days, receipt dates, or portal delivery rules, flag the segment for manual review.</li>
+              <li>If the notice method changes, save proof of the delivery channel alongside the deadline math.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Quick examples</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Notice date</th>
+                    <th>Window</th>
+                    <th>Deadline</th>
+                    <th>Effective date</th>
+                    <th>Check</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2026-04-24</td>
+                    <td>7 days</td>
+                    <td>2026-05-01</td>
+                    <td>2026-05-08</td>
+                    <td>Leaves time</td>
+                  </tr>
+                  <tr>
+                    <td>2026-04-24</td>
+                    <td>14 days</td>
+                    <td>2026-05-08</td>
+                    <td>2026-05-08</td>
+                    <td>Tight but aligned</td>
+                  </tr>
+                  <tr>
+                    <td>2026-04-24</td>
+                    <td>30 days</td>
+                    <td>2026-05-24</td>
+                    <td>2026-05-20</td>
+                    <td>Move effective date</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <div class="cta-band">
+              <div>
+                <h2>Need the template set too?</h2>
+                <p>Starter includes notice email variants, a subprocessor list sheet, an objection-window tracker, and an evidence log. Pro adds CSV workflows and customer segmentation.</p>
+              </div>
+              <a class="button gold" href="pricing.html">See pricing</a>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
+      </footer>
+    </div>
+    <script>
+      const noticeDateInput = document.querySelector("#notice-date");
+      const effectiveDateInput = document.querySelector("#effective-date");
+      const windowInput = document.querySelector("#window");
+      const segmentInput = document.querySelector("#segment");
+      const deliveryInput = document.querySelector("#delivery");
+      const output = document.querySelector("#calculator-output");
+
+      function utcDateString(offsetDays = 0) {
+        const date = new Date();
+        date.setUTCHours(0, 0, 0, 0);
+        date.setUTCDate(date.getUTCDate() + Number(offsetDays));
+        return date.toISOString().slice(0, 10);
+      }
+
+      function formatDate(value) {
+        if (!value) return "[date not set]";
+        return new Date(`${value}T00:00:00Z`).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        });
+      }
+
+      function addDays(value, days) {
+        if (!value) return "";
+        const date = new Date(`${value}T00:00:00Z`);
+        date.setUTCDate(date.getUTCDate() + Number(days || 0));
+        return date.toISOString().slice(0, 10);
+      }
+
+      function renderCalculator() {
+        const noticeDate = noticeDateInput.value;
+        const effectiveDate = effectiveDateInput.value;
+        const windowDays = Number(windowInput.value || 0);
+        const segment = segmentInput.value.trim() || "this segment";
+        const delivery = deliveryInput.value.trim() || "the intended channel";
+        const deadline = addDays(noticeDate, windowDays);
+        const effectiveBeforeDeadline = effectiveDate && deadline && effectiveDate < deadline;
+        const deadlineText = formatDate(deadline);
+        const effectiveText = effectiveDate ? formatDate(effectiveDate) : "[not set]";
+        const statusLine = effectiveBeforeDeadline
+          ? "Warning: the planned effective date is before the objection deadline. Move the effective date or send the notice earlier."
+          : "The planned effective date leaves enough time for the objection window, assuming the agreement uses calendar days and this delivery method counts as notice.";
+
+        output.textContent = [
+          `Segment: ${segment}`,
+          `Delivery method: ${delivery}`,
+          `Notice date: ${formatDate(noticeDate)}`,
+          `Objection window: ${windowDays} days`,
+          `Objection deadline: ${deadlineText}`,
+          `Planned effective date: ${effectiveText}`,
+          statusLine
+        ].join("\n");
+        output.classList.toggle("form-error", effectiveBeforeDeadline);
+      }
+
+      noticeDateInput.value = utcDateString(0);
+      effectiveDateInput.value = utcDateString(30);
+
+      [noticeDateInput, effectiveDateInput, windowInput, segmentInput, deliveryInput].forEach((input) => {
+        input.addEventListener("input", renderCalculator);
+      });
+
+      renderCalculator();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>

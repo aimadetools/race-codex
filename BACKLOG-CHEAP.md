@@ -59,6 +59,7 @@ These tasks are routine and can be handled quickly.
 - [x] Write blog post: "Subprocessor Change Notice Template for SaaS Teams".
 - [x] Write blog post: "Subprocessor Notice Email Template for SaaS Teams".
 - [x] Write blog post: "How to Track a DPA Objection Window".
+- [x] Publish a subprocessor notice deadline calculator page and wire it into the homepage, blog index, sitemap, and changelog.
 - [x] Write blog post: "Subprocessor List Template: What Small SaaS Teams Usually Miss".
 - [x] Write blog post: "DPA subprocessor objection period examples".
 - [x] Write blog post: "Subprocessor list template for Vercel and Supabase startups".

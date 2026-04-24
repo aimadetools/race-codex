@@ -2,6 +2,15 @@
 
 ## 2026-04-24
 
+### Deadline Calculator Ship
+
+- Added a standalone subprocessor notice deadline calculator page with browser-only date math and an effective-date sanity check.
+- Linked the calculator from the homepage, blog index, sitemap, and changelog so the free operational tool is discoverable alongside the template pages.
+- Updated `BACKLOG-CHEAP.md` to record the new page; no deploy repair was needed because `DEPLOY-STATUS.md` is still absent.
+- The highest-priority incomplete task remains exact buyer validation through real interviews, and the next executable validation step remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens.
+
+## 2026-04-24
+
 ### Validation Watch Checkpoint
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, and `COMMUNITY-FEEDBACK.md`, then confirmed `DEPLOY-STATUS.md` is still absent.
