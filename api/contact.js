@@ -251,10 +251,6 @@ async function readBody(request) {
   return Buffer.concat(chunks).toString("utf8");
 }
 
-function serializeSubmission(payload) {
-  return JSON.stringify(payload, null, 2);
-}
-
 module.exports = async function handler(request, response) {
   if (request.method === "OPTIONS") {
     response.writeHead(204, {
@@ -334,19 +330,12 @@ module.exports = async function handler(request, response) {
 
   try {
     const { put } = await loadBlobSdk();
-    const blob = await put(storagePath, serializeSubmission(storagePayload), {
+    const blob = await put(storagePath, JSON.stringify(storagePayload, null, 2), {
       access: "private",
       contentType: "application/json",
       addRandomSuffix: false
     });
-    if (blob?.url) {
-      storagePayload.storageUrl = blob.url;
-      await put(storagePath, serializeSubmission(storagePayload), {
-        access: "private",
-        contentType: "application/json",
-        addRandomSuffix: false
-      });
-    }
+    storagePayload.storageUrl = blob.url;
   } catch (error) {
     console.error("NoticeKit contact blob write failed", error);
     sendJson(response, 502, {

@@ -191,7 +191,6 @@ function verifyRecord(submission, stored) {
   assert(record.summary === submission.summary, `${submission.name}: Blob summary mismatch.`);
   assert(record.reviewNeed === submission.reviewNeed, `${submission.name}: Blob reviewNeed mismatch.`);
   assert(record.storagePath === stored.pathname, `${submission.name}: Blob storagePath mismatch.`);
-  assert(record.storageUrl, `${submission.name}: Blob storageUrl missing.`);
 }
 
 function buildReport(results) {
