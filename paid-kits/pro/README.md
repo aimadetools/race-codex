@@ -12,6 +12,7 @@ Pro includes the Starter files plus repeatable workflows for multiple vendor cha
 - `90-day-operating-calendar.csv`: operating calendar for page updates, notices, reminders, and closeout.
 - `csv-import-export-guide.md`: CSV rules for browser-local and spreadsheet workflows.
 - `evidence-folder-workflow.md`: folder structure for preserving proof without NoticeKit hosting.
+- `07-closeout-note.md`: archive summary for the final proof set after the objection window closes.
 
 ## Upgrade Use Case
 

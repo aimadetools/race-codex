@@ -22,6 +22,7 @@ Example:
 - `04-recipient-record.csv`: customer segment, notice method, send date, and objection deadline.
 - `05-public-page-proof.png` or `05-public-page-proof.pdf`: screenshot or export of the updated public subprocessor page.
 - `06-objection-log.md`: objections, escalations, resolutions, and closeout date.
+- `07-closeout-note.md`: archive summary with final status, close date, and proof locations.
 
 ## Change Summary Template
 
@@ -75,3 +76,4 @@ Decision:
 - [ ] Objection window is closed or escalated.
 - [ ] Evidence log status is updated.
 - [ ] Owner and close date are recorded.
+- [ ] Closeout note is saved with links to the archived proof set.

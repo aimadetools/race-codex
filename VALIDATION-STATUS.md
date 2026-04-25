@@ -25,6 +25,7 @@ Date: 2026-04-25
 - Founder batch reply or bounce rows recorded in CSV: 0
 - Advisor batch reply or bounce rows recorded in CSV: 0
 - Tagged self-audit replies logged: 0 (0 founder-follow-up, 0 advisor-follow-up)
+- Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
 

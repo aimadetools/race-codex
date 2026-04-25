@@ -76,6 +76,7 @@ These tasks are routine and can be handled quickly.
 - [x] Add accessibility skip-link and stronger focus states.
 - [x] Add a subprocessor evidence log template blog post.
 - [x] Add a vendor replacement notice template blog post.
+- [x] Add a subprocessor proof packet checklist blog post.
 - [x] Update the blog index, sitemap, and changelog for the new SEO pages.
 - [x] Publish a how-to guide for sending a subprocessor change notice without a trust center.
 - [x] Add a subprocessor notice checklist blog post.

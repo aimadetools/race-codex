@@ -3,7 +3,7 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1629 >>
+<< /Length 1695 >>
 stream
 BT
 /F1 10 Tf
@@ -13,7 +13,7 @@ BT
 T*
 () Tj
 T*
-(Generated: 2026-04-22) Tj
+(Generated: 2026-04-25) Tj
 T*
 () Tj
 T*
@@ -73,6 +73,8 @@ T*
 T*
 (- 06-objection-log.md: objections, escalations, resolutions, and closeout date.) Tj
 T*
+(- 07-closeout-note.md: archive summary with final status, close date, and proof locations.) Tj
+T*
 () Tj
 T*
 (Change Summary Template) Tj
@@ -110,8 +112,6 @@ T*
 (```) Tj
 T*
 () Tj
-T*
-(Review Approval Template) Tj
 ET
 endstream
 endobj
@@ -119,12 +119,14 @@ endobj
 << /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
 endobj
 4 0 obj
-<< /Length 1290 >>
+<< /Length 1398 >>
 stream
 BT
 /F1 10 Tf
 54 744 Td
 14 TL
+(Review Approval Template) Tj
+T*
 () Tj
 T*
 (```markdown) Tj
@@ -191,6 +193,8 @@ T*
 T*
 (- [ ] Owner and close date are recorded.) Tj
 T*
+(- [ ] Closeout note is saved with links to the archived proof set.) Tj
+T*
 () Tj
 T*
 () Tj
@@ -221,13 +225,13 @@ xref
 0000000000 65535 f
 0000000009 00000 n
 0000000079 00000 n
-0000001760 00000 n
-0000001886 00000 n
-0000003228 00000 n
-0000003354 00000 n
-0000003417 00000 n
+0000001826 00000 n
+0000001952 00000 n
+0000003402 00000 n
+0000003528 00000 n
+0000003591 00000 n
 trailer
 << /Size 8 /Root 7 0 R >>
 startxref
-3466
+3640
 %%EOF

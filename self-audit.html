@@ -268,11 +268,12 @@
         return sourceLabelMap[pageSource] || pageSource.replace(/[-_]+/g, " ").trim();
       }
 
-      function buildSummary(score, label, missing) {
+      function buildSummary(score, label, missing, channel = "mailto") {
         return [
           `Self-audit score: ${score}/10 (${label})`,
           `Top gaps: ${missing.length ? missing.slice(0, 4).map((key) => advice[key]).join(" | ") : "No checklist gaps left."}`,
           `Source: ${sourceLabel() || "direct site visit"}`,
+          `Channel: ${channel}`,
           "",
           "Optional context:",
           "- Who owns subprocessor notices today?",
@@ -311,7 +312,8 @@
           scoreBand: scoreBand(score),
           selected: selectedValues(),
           missing: missingValues(),
-          sourceTag: pageSource || "site"
+          sourceTag: pageSource || "site",
+          submissionChannel: "in-page-form"
         };
       }
 
@@ -389,7 +391,7 @@
           : "Email the score and top gaps if you want blunt feedback without a call.";
         copyStatus.textContent = "";
 
-        const emailSummary = buildSummary(score, label, missing);
+        const emailSummary = buildSummary(score, label, missing, "mailto");
         const subject = encodeURIComponent(`Self-audit feedback: ${score}/10 ${label}`);
         const body = encodeURIComponent(`${emailSummary}\n`);
         emailScoreLink.href = `mailto:hello@noticekit.tech?subject=${subject}&body=${body}`;
@@ -419,13 +421,14 @@
           email: feedbackValue("feedback-email"),
           ownershipSignal: feedbackValue("feedback-role") || "unknown",
           sourceTag: state.sourceTag,
+          submissionChannel: state.submissionChannel,
           score: state.score,
           scoreLabel: state.label,
           scoreBand: state.scoreBand,
           selectedChecks: state.selected,
           topGaps: state.missing.slice(0, 4),
           reviewNeed: feedbackValue("feedback-note"),
-          summary: buildSummary(state.score, state.label, state.missing),
+          summary: buildSummary(state.score, state.label, state.missing, state.submissionChannel),
           website: feedbackValue("feedback-website")
         };
 
@@ -448,6 +451,7 @@
             "",
             `Score: ${state.score}/10 (${state.label})`,
             `Source: ${state.sourceTag}`,
+            `Channel: ${state.submissionChannel}`,
             `Role: ${payload.ownershipSignal}`,
             `Top gaps: ${topGapCopy}`,
             "",

@@ -38,7 +38,7 @@ Hi,
 Thanks for buying NoticeKit. Your early-access files are attached or linked here:
 
 - Starter files: subprocessor list, notice templates, objection tracker, approval checklist, evidence log, and attorney handoff note
-- Pro files, when purchased: multi-change register, customer notice matrix, DPA intake worksheet, attorney packet, procurement summary, 90-day calendar, CSV guide, and evidence folder workflow
+- Pro files, when purchased: multi-change register, customer notice matrix, DPA intake worksheet, attorney packet, procurement summary, 90-day calendar, CSV guide, evidence folder workflow, and closeout note
 
 Use these as operational preparation materials for your team and attorney. They do not replace legal advice or contract review.
 

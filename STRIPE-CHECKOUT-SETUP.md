@@ -47,7 +47,7 @@ Repeated vendor changes, segmented customer notices, and attorney-ready operatin
 
 Long description:
 
-NoticeKit Pro includes everything in Starter plus a multi-change vendor register, CSV import/export guide, customer notice matrix, DPA clause intake worksheet, attorney-review packet, procurement-ready summary, 90-day operating calendar, and evidence folder workflow.
+NoticeKit Pro includes everything in Starter plus a multi-change vendor register, CSV import/export guide, customer notice matrix, DPA clause intake worksheet, attorney-review packet, procurement-ready summary, 90-day operating calendar, evidence folder workflow, and closeout note.
 
 Fulfillment note:
 

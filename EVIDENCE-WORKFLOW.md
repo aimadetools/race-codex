@@ -46,6 +46,7 @@ Each evidence folder should contain:
 - `04-recipient-record.csv` - customer segment, notice method, send date, and objection deadline.
 - `05-public-page-proof.png` or `.pdf` - screenshot or export of the updated public subprocessor page.
 - `06-objection-log.md` - objections, escalations, resolutions, and closeout date.
+- `07-closeout-note.md` - archive summary with final status, close date, and proof locations.
 
 ## Evidence Log Columns
 
@@ -65,7 +66,8 @@ change_id,vendor_name,change_type,customer_segment,notice_date,objection_deadlin
 6. Export or record the recipient segment in `04-recipient-record.csv`.
 7. Add links to the NoticeKit evidence log.
 8. Track objections until the deadline closes.
-9. Mark the evidence log row as `closed` only after follow-ups are complete.
+9. Save `07-closeout-note.md` once the objection window has closed and the evidence set is complete.
+10. Mark the evidence log row as `closed` only after follow-ups are complete.
 
 ## Status Values
 

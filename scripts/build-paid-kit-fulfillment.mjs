@@ -16,6 +16,7 @@ const markdownExports = [
   ['pro', 'procurement-ready-summary.md'],
   ['pro', 'csv-import-export-guide.md'],
   ['pro', 'evidence-folder-workflow.md'],
+  ['pro', '07-closeout-note.md'],
 ];
 
 const disclaimer =

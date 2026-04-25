@@ -113,21 +113,28 @@ function normalizeRows(rows) {
 
 function extractFeedbackSignals(text) {
   const sourceTagMatches = [...text.matchAll(/Source tag:\s*([^\n|]+)/g)];
+  const channelMatches = [...text.matchAll(/Channel:\s*([^\n|]+)/g)];
   const scoreBandMatches = [...text.matchAll(/Score band:\s*([^\n|]+)/g)];
   const ownershipMatches = [...text.matchAll(/Ownership:\s*([^\n|]+)/g)];
 
   const sourceTags = sourceTagMatches.map((match) => match[1].trim());
+  const channels = channelMatches.map((match) => match[1].trim().toLowerCase());
   const scoreBands = scoreBandMatches.map((match) => match[1].trim());
   const ownershipSignals = ownershipMatches.map((match) => match[1].trim().toLowerCase());
+  const inPageFormChannels = channels.filter((value) => ["in-page-form", "inline-form", "self-audit-form", "form"].includes(value)).length;
+  const mailtoChannels = channels.filter((value) => ["mailto", "email", "mail-forward", "email-forward", "forwarded-email"].includes(value)).length;
 
   const founderOwnership = ownershipSignals.filter((value) => ["founder", "operator", "ops"].includes(value)).length;
   const advisorOwnership = ownershipSignals.filter((value) => ["privacy consultant", "consultant", "fractional dpo", "dpo", "attorney", "lawyer"].includes(value)).length;
 
   return {
     sourceTags,
+    channels,
     scoreBands,
     founderFollowUpReplies: sourceTags.filter((value) => value === "founder-follow-up").length,
     advisorFollowUpReplies: sourceTags.filter((value) => value === "advisor-follow-up").length,
+    inPageFormChannels,
+    mailtoChannels,
     founderOwnership,
     advisorOwnership,
     lowScoreBands: scoreBands.filter((value) => value === "0-4").length,
@@ -241,6 +248,7 @@ const output = [
   `- Founder batch reply or bounce rows recorded in CSV: ${founderReplies}`,
   `- Advisor batch reply or bounce rows recorded in CSV: ${advisorReplies}`,
   `- Tagged self-audit replies logged: ${feedbackSignals.sourceTags.length} (${feedbackSignals.founderFollowUpReplies} founder-follow-up, ${feedbackSignals.advisorFollowUpReplies} advisor-follow-up)`,
+  `- Self-audit channels logged: ${feedbackSignals.channels.length} (${feedbackSignals.inPageFormChannels} in-page-form, ${feedbackSignals.mailtoChannels} mailto)`,
   `- Self-audit score bands logged: ${feedbackSignals.lowScoreBands} low (0-4), ${feedbackSignals.mediumScoreBands} medium (5-7), ${feedbackSignals.highScoreBands} high (8-10)`,
   `- Ownership signals logged: ${feedbackSignals.founderOwnership} founder/operator, ${feedbackSignals.advisorOwnership} consultant/attorney`,
   "",

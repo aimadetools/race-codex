@@ -14,6 +14,7 @@ Recommended action headline: Stand by until 2026-04-27 UTC; keep monitoring `COM
 - Founder follow-ups already sent: 0
 - Advisor follow-ups already sent: 0
 - Tagged self-audit replies: 0 (0 founder-follow-up, 0 advisor-follow-up)
+- Self-audit channels: 0 (0 in-page-form, 0 mailto)
 - Score bands: 0 low, 0 medium, 0 high
 - Ownership signals: 0 founder/operator, 0 consultant/attorney
 - Interview log rows: 0

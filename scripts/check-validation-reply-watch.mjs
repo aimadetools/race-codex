@@ -101,10 +101,15 @@ function parseDate(value) {
 }
 
 function extractSignals(text) {
+  const channelMatches = [...text.matchAll(/Channel:\s*([^\n|]+)/g)];
   const ownershipMatches = [...text.matchAll(/Ownership:\s*([^\n|]+)/g)];
   const ownershipSignals = ownershipMatches.map((match) => match[1].trim().toLowerCase());
+  const channels = channelMatches.map((match) => match[1].trim().toLowerCase());
 
   return {
+    channels,
+    inPageFormChannels: channels.filter((value) => ["in-page-form", "inline-form", "self-audit-form", "form"].includes(value)).length,
+    mailtoChannels: channels.filter((value) => ["mailto", "email", "mail-forward", "email-forward", "forwarded-email"].includes(value)).length,
     founderOwnership: ownershipSignals.filter((value) => ["founder", "operator", "ops"].includes(value)).length,
     advisorOwnership: ownershipSignals.filter((value) => ["privacy consultant", "consultant", "fractional dpo", "dpo", "attorney", "lawyer"].includes(value)).length
   };
@@ -230,6 +235,10 @@ function buildUpcomingQueue({
     upcoming.push(`If advisor ownership stays ahead through ${GATE_DATE} UTC, queue the homepage advisor-handoff copy refresh after the follow-up pass.`);
   }
 
+  if (signals.inPageFormChannels > signals.mailtoChannels) {
+    upcoming.push("The in-page self-audit form now outperforms mailto; prefer the on-page form in founder/advisor follow-up copy and keep email as fallback.");
+  }
+
   return upcoming;
 }
 
@@ -276,6 +285,7 @@ async function main() {
     `- Interview log rows: ${parsedInterviews.length}`,
     ...parsedBatches.map((batch) => `- ${batch.label} sent or followed-up rows still waiting for replies: ${countWaiting(batch.rows)}`),
     `- Community feedback note: ${noFounderRepliesPosted && noAdvisorRepliesPosted ? "no founder/operator or advisor replies have been posted yet." : "replies are present and need review."}`,
+    `- Self-audit channels logged: ${signals.channels.length} (${signals.inPageFormChannels} in-page-form, ${signals.mailtoChannels} mailto)`,
     ...followUps.map((item) => `- ${item.label} due: ${item.due}`),
     "",
     "## Next Action",

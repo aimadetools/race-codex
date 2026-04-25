@@ -35,6 +35,7 @@ Optional:
 - `reviewNeed`
 - `ownershipSignal`
 - `sourceTag`
+- `submissionChannel`
 - `score`
 - `scoreLabel`
 - `scoreBand`
@@ -55,7 +56,7 @@ When a webhook delivery target exists, set these Vercel environment variables:
 The forwarded JSON includes the cleaned form fields, selected `type`, `submittedAt`, and `userAgent`.
 It also includes `referenceId`, which is returned to the requester and should be used to reconcile Stripe buyers, audit intake forms, Vercel logs, and webhook deliveries.
 
-For `self_audit_feedback`, the payload also carries the source tag, ownership signal, score, score band, selected checks, top gaps, and the generated async summary so founder-vs-advisor validation signals can be reviewed without depending on `mailto` replies alone.
+For `self_audit_feedback`, the payload also carries the source tag, submission channel, ownership signal, score, score band, selected checks, top gaps, and the generated async summary so founder-vs-advisor validation signals can be reviewed without depending on `mailto` replies alone.
 
 Internal webhook receiver:
 

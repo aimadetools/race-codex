@@ -24,7 +24,7 @@ const CASES = [
     selectedChecks: ["page", "vendor", "data", "owner"],
     topGaps: ["segments", "window", "proof"],
     summary:
-      "Self-audit score: 4/10 (High-risk gap). Source: founder follow-up. Missing segmentation, notice window, and proof logging.",
+      "Self-audit score: 4/10 (High-risk gap). Source: founder follow-up. Channel: in-page-form. Missing segmentation, notice window, and proof logging.",
     reviewNeed: "Production verification test. No follow-up needed."
   },
   {
@@ -39,7 +39,7 @@ const CASES = [
     selectedChecks: ["page", "vendor", "data", "segments", "window", "dates", "copy", "proof"],
     topGaps: ["owner", "review"],
     summary:
-      "Self-audit score: 8/10 (Review-ready). Source: advisor follow-up. Only owner assignment and final review remain open.",
+      "Self-audit score: 8/10 (Review-ready). Source: advisor follow-up. Channel: in-page-form. Only owner assignment and final review remain open.",
     reviewNeed: "Production verification test. No follow-up needed."
   }
 ];
@@ -119,6 +119,7 @@ async function submitCase(testCase) {
       company: testCase.company,
       email: testCase.email,
       sourceTag: testCase.sourceTag,
+      submissionChannel: "in-page-form",
       ownershipSignal: testCase.ownershipSignal,
       score: testCase.score,
       scoreLabel: testCase.scoreLabel,
@@ -173,6 +174,7 @@ function verifyRecord(submission, stored) {
   assert(record.company === submission.company, `${submission.name}: Blob company mismatch.`);
   assert(record.email === submission.email, `${submission.name}: Blob email mismatch.`);
   assert(record.sourceTag === submission.sourceTag, `${submission.name}: Blob sourceTag mismatch.`);
+  assert(record.submissionChannel === "in-page-form", `${submission.name}: Blob submissionChannel mismatch.`);
   assert(
     record.ownershipSignal === submission.ownershipSignal,
     `${submission.name}: Blob ownershipSignal mismatch.`
@@ -207,7 +209,7 @@ function buildReport(results) {
     "- Submitted one founder-tagged `self_audit_feedback` payload to `https://noticekit.tech/api/contact`.",
     "- Submitted one advisor-tagged `self_audit_feedback` payload to `https://noticekit.tech/api/contact`.",
     "- Verified the production API returned success and a unique `referenceId` for each submit.",
-    "- Verified the private Blob inbox stored the exact `sourceTag`, `ownershipSignal`, `score`, `scoreBand`, `selectedChecks`, `topGaps`, and summary fields for each submit.",
+    "- Verified the private Blob inbox stored the exact `sourceTag`, `submissionChannel`, `ownershipSignal`, `score`, `scoreBand`, `selectedChecks`, `topGaps`, and summary fields for each submit.",
     "",
     "## Results",
     "",

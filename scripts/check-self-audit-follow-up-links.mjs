@@ -120,6 +120,7 @@ async function runCase(testCase) {
   assert(subject.includes(label), `${testCase.name}: mailto subject is missing the label.`);
   assert(body.includes(`Self-audit score: ${score} (${label})`), `${testCase.name}: mailto body is missing the score line.`);
   assert(body.includes(testCase.expectedSource), `${testCase.name}: mailto body is missing the source tag.`);
+  assert(body.includes("Channel: mailto"), `${testCase.name}: mailto body is missing the channel line.`);
 
   document.querySelector("#copy-score-button")?.click();
   await nextTick();
@@ -141,9 +142,11 @@ async function runCase(testCase) {
   assert(fetchCall.url === "/api/contact", `${testCase.name}: feedback form posted to unexpected URL ${fetchCall.url}.`);
   assert(fetchCall.body?.type === "self_audit_feedback", `${testCase.name}: feedback payload missing self_audit_feedback type.`);
   assert(fetchCall.body?.sourceTag === expectedSourceTag, `${testCase.name}: feedback payload source tag mismatch.`);
+  assert(fetchCall.body?.submissionChannel === "in-page-form", `${testCase.name}: feedback payload submission channel mismatch.`);
   assert(fetchCall.body?.score === Number.parseInt(testCase.expectedScore, 10), `${testCase.name}: feedback payload score mismatch.`);
   assert(feedbackStatus.includes("Your self-audit feedback was received."), `${testCase.name}: feedback status did not render success message.`);
   assert(feedbackStatus.includes("Reference: NK-TEST-REF"), `${testCase.name}: feedback status missing reference.`);
+  assert(feedbackStatus.includes("Channel: in-page-form"), `${testCase.name}: feedback status missing channel line.`);
 
   dom.window.close();
 
@@ -175,7 +178,7 @@ const output = [
   "",
   "- Founder follow-up tagged path on a desktop-sized viewport.",
   "- Advisor follow-up tagged path on a mobile-sized viewport.",
-  "- Score recompute after clicks, source-specific helper copy, mailto subject/body generation, copy-summary parity, and in-page async feedback submit.",
+  "- Score recompute after clicks, source-specific helper copy, mailto subject/body generation, copy-summary parity, channel capture, and in-page async feedback submit.",
   "",
   "## Results",
   "",
@@ -186,6 +189,7 @@ const output = [
     `- Score after click test: ${result.score} (${result.label})`,
     `- Share prompt: ${result.shareCopy}`,
     `- Mailto subject: ${result.subject}`,
+    `- Feedback channel: in-page-form / mailto copy`,
     `- Copy status: ${result.copyStatus}`,
     `- Feedback submit: ${result.feedbackStatus.split("\n")[0]}`,
     ""

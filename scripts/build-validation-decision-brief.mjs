@@ -113,16 +113,23 @@ function extractPositioningBranch(text) {
 
 function extractSignals(text) {
   const sourceTagMatches = [...text.matchAll(/Source tag:\s*([^\n|]+)/g)];
+  const channelMatches = [...text.matchAll(/Channel:\s*([^\n|]+)/g)];
   const ownershipMatches = [...text.matchAll(/Ownership:\s*([^\n|]+)/g)];
   const scoreBandMatches = [...text.matchAll(/Score band:\s*([^\n|]+)/g)];
 
   const sourceTags = sourceTagMatches.map((match) => match[1].trim());
+  const channels = channelMatches.map((match) => match[1].trim().toLowerCase());
   const ownershipSignals = ownershipMatches.map((match) => match[1].trim().toLowerCase());
   const scoreBands = scoreBandMatches.map((match) => match[1].trim());
+  const inPageFormChannels = channels.filter((value) => ["in-page-form", "inline-form", "self-audit-form", "form"].includes(value)).length;
+  const mailtoChannels = channels.filter((value) => ["mailto", "email", "mail-forward", "email-forward", "forwarded-email"].includes(value)).length;
 
   return {
     founderFollowUpReplies: sourceTags.filter((value) => value === "founder-follow-up").length,
     advisorFollowUpReplies: sourceTags.filter((value) => value === "advisor-follow-up").length,
+    channels,
+    inPageFormChannels,
+    mailtoChannels,
     founderOwnership: ownershipSignals.filter((value) => ["founder", "operator", "ops"].includes(value)).length,
     advisorOwnership: ownershipSignals.filter((value) => ["privacy consultant", "consultant", "fractional dpo", "dpo", "attorney", "lawyer"].includes(value)).length,
     lowScores: scoreBands.filter((value) => value === "0-4").length,
@@ -178,6 +185,7 @@ const batch04Ready = countByStatus(batch04Rows, ["ready_for_send"]);
 const signals = extractSignals(feedbackText);
 const gateOpen = today >= GATE_DATE;
 const shouldQueueAdvisorPivot = signals.advisorOwnership > signals.founderOwnership && signals.advisorOwnership > 0;
+const selfAuditFormOutsellsMailto = signals.inPageFormChannels > signals.mailtoChannels;
 const positioningHeadline = extractPositioningHeadline(positioningBriefText);
 const positioningBranch = extractPositioningBranch(positioningBriefText);
 
@@ -238,6 +246,10 @@ if (!gateOpen) {
     positioningRead = "Founder pain remains plausible. Keep the founder-first positioning unless later tagged replies flip ownership toward advisors.";
   }
 
+  if (selfAuditFormOutsellsMailto) {
+    recommendedActions.push("The in-page self-audit form now outperforms mailto; update founder and advisor follow-up copy to prefer the on-page form and keep email as fallback.");
+  }
+
   if (positioningHeadline !== "unknown") {
     positioningRead = `${positioningRead} Positioning brief read: ${positioningHeadline}`;
   }
@@ -268,6 +280,7 @@ const output = [
   `- Founder follow-ups already sent: ${founderFollowedUp}`,
   `- Advisor follow-ups already sent: ${advisorFollowedUp}`,
   `- Tagged self-audit replies: ${signals.founderFollowUpReplies + signals.advisorFollowUpReplies} (${signals.founderFollowUpReplies} founder-follow-up, ${signals.advisorFollowUpReplies} advisor-follow-up)`,
+  `- Self-audit channels: ${signals.channels.length} (${signals.inPageFormChannels} in-page-form, ${signals.mailtoChannels} mailto)`,
   `- Score bands: ${signals.lowScores} low, ${signals.mediumScores} medium, ${signals.highScores} high`,
   `- Ownership signals: ${signals.founderOwnership} founder/operator, ${signals.advisorOwnership} consultant/attorney`,
   `- Interview log rows: ${interviewRows.length}`,

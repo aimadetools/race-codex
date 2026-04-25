@@ -240,6 +240,10 @@ function formatFeedbackLine(entry) {
     segments.push(`Source tag: ${entry.sourceTag}`);
   }
 
+  if (entry.channel) {
+    segments.push(`Channel: ${entry.channel}`);
+  }
+
   if (entry.scoreBand) {
     segments.push(`Score band: ${entry.scoreBand}`);
   }
@@ -280,6 +284,24 @@ function upsertFeedbackText(existing, entry) {
   ];
 
   return `${updated.join("\n").replace(/\n{3,}/g, "\n\n").trimEnd()}\n`;
+}
+
+function normalizeChannel(value) {
+  const raw = String(value || "").trim().toLowerCase();
+
+  if (!raw) {
+    return "";
+  }
+
+  if (["mailto", "email", "email-forward", "mail", "mail-forward", "forwarded-email"].includes(raw)) {
+    return "mailto";
+  }
+
+  if (["in-page-form", "inline-form", "self-audit-form", "self_audit_form", "form"].includes(raw)) {
+    return "in-page-form";
+  }
+
+  return raw;
 }
 
 function runInterviewAppender(interviewInput, interviewCsv, dryRun) {
@@ -347,6 +369,15 @@ async function main() {
   const details = pickValue(payload, ["details", "body", "reply_body"]);
   const source = pickValue(payload, ["source", "route", "via"]);
   const sourceTag = pickValue(payload, ["source_tag", "sourceTag", "self_audit_source_tag", "selfAuditSourceTag"]);
+  const channel = normalizeChannel(pickValue(payload, [
+    "channel",
+    "submission_channel",
+    "submissionChannel",
+    "source_channel",
+    "sourceChannel",
+    "self_audit_channel",
+    "selfAuditChannel"
+  ]));
   const scoreBand = normalizeScoreBand(payload);
   const ownershipSignal = pickValue(payload, ["ownership_signal", "ownershipSignal", "owner_role", "ownerRole"]);
   const signal = pickValue(payload, ["signal", "intent_signal", "intentSignal", "outcome_signal", "outcomeSignal"]);
@@ -371,6 +402,7 @@ async function main() {
     details ? `Details: ${details}` : "",
     source ? `Source: ${source}` : "",
     sourceTag ? `Source tag: ${sourceTag}` : "",
+    channel ? `Channel: ${channel}` : "",
     scoreBand ? `Score band: ${scoreBand}` : "",
     ownershipSignal ? `Ownership: ${ownershipSignal}` : "",
     signal ? `Signal: ${signal}` : "",
@@ -390,6 +422,7 @@ async function main() {
     nextStep,
     source,
     sourceTag,
+    channel,
     scoreBand,
     ownershipSignal,
     signal

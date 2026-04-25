@@ -10,6 +10,7 @@
 - Contingency batch 03 sent or followed-up rows still waiting for replies: 0
 - Contingency batch 04 sent or followed-up rows still waiting for replies: 0
 - Community feedback note: no founder/operator or advisor replies have been posted yet.
+- Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Founder follow-up pass due: 2026-04-27 UTC
 - Advisor follow-up pass due: 2026-04-27 UTC
 
