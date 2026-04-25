@@ -4,7 +4,7 @@ Date: 2026-04-21
 
 ## Current Status
 
-`/api/contact` is live on Vercel and accepts audit, access, partner, and waitlist intake submissions. Submissions are validated, assigned a `referenceId`, stored in a private Vercel Blob inbox, and forwarded to the configured webhook or email relay.
+`/api/contact` is live on Vercel and accepts audit, access, partner, waitlist, and self-audit feedback submissions. Submissions are validated, assigned a `referenceId`, stored in a private Vercel Blob inbox, and forwarded to the configured webhook or email relay.
 
 The public mailbox alias `hello@noticekit.tech` is live and can receive and send replies. `RESEND_API_KEY` is configured in Vercel production and the domain is verified in Resend, so direct email delivery can use Resend when webhook delivery is not selected. Delivery is durable even without a CRM because the validated submission is persisted to a private Blob object before any forwarding happens.
 
@@ -33,6 +33,14 @@ Optional:
 - `vendorChange`
 - `deadline`
 - `reviewNeed`
+- `ownershipSignal`
+- `sourceTag`
+- `score`
+- `scoreLabel`
+- `scoreBand`
+- `summary`
+- `topGaps`
+- `selectedChecks`
 - `website`
 
 `website` is the honeypot field. If it has a value, the endpoint returns a quiet success and does not process the submission.
@@ -46,6 +54,8 @@ When a webhook delivery target exists, set these Vercel environment variables:
 
 The forwarded JSON includes the cleaned form fields, selected `type`, `submittedAt`, and `userAgent`.
 It also includes `referenceId`, which is returned to the requester and should be used to reconcile Stripe buyers, audit intake forms, Vercel logs, and webhook deliveries.
+
+For `self_audit_feedback`, the payload also carries the source tag, ownership signal, score, score band, selected checks, top gaps, and the generated async summary so founder-vs-advisor validation signals can be reviewed without depending on `mailto` replies alone.
 
 Internal webhook receiver:
 

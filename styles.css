@@ -726,6 +726,35 @@ textarea {
   color: var(--muted);
 }
 
+.inline-feedback-form {
+  display: grid;
+  gap: 12px;
+}
+
+.inline-feedback-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.inline-feedback-form input,
+.inline-feedback-form select,
+.inline-feedback-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(10, 17, 24, 0.72);
+  color: var(--text);
+  font: inherit;
+}
+
+.inline-feedback-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
 .result-list ul {
   display: grid;
   gap: 8px;

@@ -31,7 +31,9 @@ These tasks are routine and can be handled quickly.
 - [x] Add the `self-audit.html` link to the founder and advisor follow-up draft copy after the 2026-04-27 gate opens.
 - [x] Add guarded Resend/SMTP follow-up sending mode for the three-business-day validation non-responder passes.
 - [x] Before the 2026-04-27 send window, click-test the tagged self-audit follow-up links and confirm the mailto summary prefill works on desktop and mobile.
+- After the next production deploy, submit one founder-tagged and one advisor-tagged self-audit feedback test through `self-audit.html` and verify `/api/contact` stores the source tag, ownership signal, score, and top gaps in the inbox.
 - When a tagged self-audit reply lands, record the source tag and score band in `COMMUNITY-FEEDBACK.md` before updating the outreach CSV.
+- When the first in-page self-audit feedback arrives, run `scripts/record-validation-feedback.mjs` with the exact `source_tag`, `score_band`, and `ownership_signal` from the intake payload instead of paraphrasing the note manually.
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `advisor-first handoff`, update the homepage hero and pricing page opening copy from `HOMEPAGE-COPY-REFRESH-QUEUE.md`.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `vendor-change review packet`, refresh homepage and core CTA copy to broaden the product framing while keeping subprocessor-notice SEO pages intact.
@@ -52,6 +54,7 @@ These tasks are routine and can be handled quickly.
 
 ## P1
 
+- If the in-page self-audit submit path produces more responses than `mailto`, update founder and advisor follow-up copy to prefer the on-page form and keep email as the fallback.
 - [x] Prepare advisor batch 02 for sending after the founder-batch one-business-day hold, using Resend for direct-email routes and public forms for manual-form routes.
 - [x] Add a short reply-to-interview scheduling snippet to `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
 - [x] Regenerate validation outreach drafts after any CSV status or contact-route changes.

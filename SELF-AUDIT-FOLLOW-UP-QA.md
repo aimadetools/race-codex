@@ -1,6 +1,6 @@
 # Self-Audit Follow-Up QA
 
-Date: 2026-04-24 UTC
+Date: 2026-04-25 UTC
 
 This check validates the tagged self-audit follow-up entry points before the 2026-04-27 non-responder send window.
 
@@ -8,7 +8,7 @@ This check validates the tagged self-audit follow-up entry points before the 202
 
 - Founder follow-up tagged path on a desktop-sized viewport.
 - Advisor follow-up tagged path on a mobile-sized viewport.
-- Score recompute after clicks, source-specific helper copy, mailto subject/body generation, and copy-summary parity.
+- Score recompute after clicks, source-specific helper copy, mailto subject/body generation, copy-summary parity, and in-page async feedback submit.
 
 ## Results
 
@@ -19,6 +19,7 @@ This check validates the tagged self-audit follow-up entry points before the 202
 - Share prompt: If you came here from the founder follow-up, email the score and top gaps. Async feedback is enough.
 - Mailto subject: Self-audit feedback: 4/10 High-risk gap
 - Copy status: Summary copied.
+- Feedback submit: Your self-audit feedback was received.
 
 ### Advisor follow-up mobile
 
@@ -27,6 +28,7 @@ This check validates the tagged self-audit follow-up entry points before the 202
 - Share prompt: If you came here from the advisor follow-up, email the score and top gaps. Async feedback is enough.
 - Mailto subject: Self-audit feedback: 8/10 Review-ready
 - Copy status: Summary copied.
+- Feedback submit: Your self-audit feedback was received.
 
 ## Run Command
 

@@ -31,14 +31,38 @@ function createStoragePath(submission) {
 }
 
 function buildNotificationBody(submission) {
-  return [
-    "NoticeKit contact intake",
-    "",
+  const details = [
     `Reference: ${submission.referenceId}`,
     `Request type: ${submission.type}`,
     `Company: ${submission.company}`,
     `Reply email: ${submission.email}`,
-    `Submitted at: ${submission.submittedAt}`,
+    `Submitted at: ${submission.submittedAt}`
+  ];
+
+  if (submission.type === "self_audit_feedback") {
+    return [
+      "NoticeKit self-audit feedback",
+      "",
+      ...details,
+      `Source tag: ${submission.sourceTag || "site"}`,
+      `Ownership: ${submission.ownershipSignal || "unknown"}`,
+      `Score: ${submission.scoreDisplay || "Not provided"}`,
+      `Score band: ${submission.scoreBand || "Not provided"}`,
+      `Selected checks: ${(submission.selectedChecks || []).join(", ") || "Not provided"}`,
+      `Top gaps: ${(submission.topGaps || []).join(", ") || "None"}`,
+      "",
+      "Optional note:",
+      submission.reviewNeed || "Not provided",
+      "",
+      "Summary:",
+      submission.summary || "Not provided"
+    ].join("\n");
+  }
+
+  return [
+    "NoticeKit contact intake",
+    "",
+    ...details,
     `Subprocessor page: ${submission.subprocessorUrl || "Not provided"}`,
     "",
     "Vendor change:",
@@ -53,20 +77,37 @@ function buildNotificationBody(submission) {
 }
 
 function buildNotificationHtml(submission) {
-  const rows = [
-    ["Reference", submission.referenceId],
-    ["Request type", submission.type],
-    ["Company", submission.company],
-    ["Reply email", submission.email],
-    ["Submitted at", submission.submittedAt],
-    ["Subprocessor page", submission.subprocessorUrl || "Not provided"],
-    ["Vendor change", submission.vendorChange || "Not provided"],
-    ["Customer segment and deadline", submission.deadline || "Not provided"],
-    ["Review needed", submission.reviewNeed || "Not provided"]
-  ];
+  const rows =
+    submission.type === "self_audit_feedback"
+      ? [
+          ["Reference", submission.referenceId],
+          ["Request type", submission.type],
+          ["Company", submission.company],
+          ["Reply email", submission.email],
+          ["Submitted at", submission.submittedAt],
+          ["Source tag", submission.sourceTag || "site"],
+          ["Ownership", submission.ownershipSignal || "unknown"],
+          ["Score", submission.scoreDisplay || "Not provided"],
+          ["Score band", submission.scoreBand || "Not provided"],
+          ["Selected checks", (submission.selectedChecks || []).join(", ") || "Not provided"],
+          ["Top gaps", (submission.topGaps || []).join(", ") || "None"],
+          ["Optional note", submission.reviewNeed || "Not provided"],
+          ["Summary", submission.summary || "Not provided"]
+        ]
+      : [
+          ["Reference", submission.referenceId],
+          ["Request type", submission.type],
+          ["Company", submission.company],
+          ["Reply email", submission.email],
+          ["Submitted at", submission.submittedAt],
+          ["Subprocessor page", submission.subprocessorUrl || "Not provided"],
+          ["Vendor change", submission.vendorChange || "Not provided"],
+          ["Customer segment and deadline", submission.deadline || "Not provided"],
+          ["Review needed", submission.reviewNeed || "Not provided"]
+        ];
 
   return [
-    "<p>NoticeKit contact intake</p>",
+    `<p>${submission.type === "self_audit_feedback" ? "NoticeKit self-audit feedback" : "NoticeKit contact intake"}</p>`,
     "<table cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;line-height:1.5;\">",
     ...rows.map(
       ([label, value]) =>
@@ -248,9 +289,29 @@ module.exports = async function handler(request, response) {
     vendorChange: clean(payload.vendorChange),
     deadline: clean(payload.deadline),
     reviewNeed: clean(payload.reviewNeed),
+    ownershipSignal: clean(payload.ownershipSignal),
+    sourceTag: clean(payload.sourceTag),
+    scoreLabel: clean(payload.scoreLabel),
+    scoreBand: clean(payload.scoreBand),
+    summary: clean(payload.summary),
     submittedAt: new Date().toISOString(),
     userAgent: clean(request.headers["user-agent"])
   };
+
+  const parsedScore = Number.parseInt(String(payload.score || ""), 10);
+  submission.score = Number.isFinite(parsedScore) ? Math.max(0, Math.min(parsedScore, 10)) : null;
+  submission.scoreDisplay =
+    submission.score !== null && submission.scoreLabel
+      ? `${submission.score}/10 (${submission.scoreLabel})`
+      : submission.score !== null
+        ? `${submission.score}/10`
+        : "";
+  submission.topGaps = Array.isArray(payload.topGaps)
+    ? payload.topGaps.map((value) => clean(value)).filter(Boolean).slice(0, 4)
+    : [];
+  submission.selectedChecks = Array.isArray(payload.selectedChecks)
+    ? payload.selectedChecks.map((value) => clean(value)).filter(Boolean).slice(0, 10)
+    : [];
 
   if (!submission.company || !isEmail(submission.email)) {
     sendJson(response, 422, {
@@ -297,7 +358,7 @@ module.exports = async function handler(request, response) {
 
   sendJson(response, 200, {
     ok: true,
-    message: "Your audit intake was received.",
+    message: submission.type === "self_audit_feedback" ? "Your self-audit feedback was received." : "Your audit intake was received.",
     referenceId: submission.referenceId
   });
 };

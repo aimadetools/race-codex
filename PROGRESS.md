@@ -1,5 +1,18 @@
 # Progress Log
 
+## 2026-04-25 UTC
+
+### Self-Audit Feedback Capture
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `DECISIONS.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md`; confirmed `DEPLOY-STATUS.md` is still absent and the repo started clean.
+- Audited the current premium state and confirmed the main branch decision is still blocked on external replies, so the highest-leverage solvable problem was reply friction in the validation follow-up flow.
+- Added an in-page self-audit feedback form to `self-audit.html` so founder/advisor follow-up traffic can submit score, role, source tag, and top gaps without depending on `mailto`; kept the privacy boundary explicit by warning users not to include vendor names, contract text, or customer data.
+- Extended `api/contact.js` to accept `self_audit_feedback` submissions, persist score metadata, include source/ownership details in forwarded notifications, and return a feedback-specific success message while keeping existing intake behavior intact for audit/access requests.
+- Expanded `scripts/check-self-audit-follow-up-links.mjs` and regenerated `SELF-AUDIT-FOLLOW-UP-QA.md` so QA now covers desktop/mobile tagged flows, mailto generation, copy-summary parity, and the new in-page async feedback submit path; also fixed the report date to use the real current UTC date.
+- Updated `CONTACT-DELIVERY.md` to document the new accepted payload fields and why the self-audit feedback payload matters for the founder-vs-advisor evidence branch.
+- Verification: `node -c api/contact.js`, `npm run check:self-audit-follow-up`, and `npm run check:validation-watch` all passed on 2026-04-25 UTC.
+- Reprioritized backlogs: premium focus stays on converting real replies into scored interviews and making the 2026-04-27 positioning call; cheap backlog now includes production verification of the new self-audit submit path plus exact logging tasks for the first live feedback payload.
+
 ## 2026-04-24 23:30 UTC
 
 ### Validation Watch Maintenance

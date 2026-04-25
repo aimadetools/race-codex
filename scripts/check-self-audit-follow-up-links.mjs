@@ -6,6 +6,7 @@ const ROOT = process.cwd();
 const INPUT = join(ROOT, "self-audit.html");
 const OUTPUT = join(ROOT, "SELF-AUDIT-FOLLOW-UP-QA.md");
 const html = await readFile(INPUT, "utf8");
+const TODAY = new Date().toISOString().slice(0, 10);
 
 const CASES = [
   {
@@ -42,6 +43,7 @@ async function nextTick() {
 
 async function runCase(testCase) {
   let copiedSummary = "";
+  let fetchCall = null;
   const dom = new JSDOM(html, {
     url: testCase.url,
     runScripts: "dangerously",
@@ -58,6 +60,23 @@ async function runCase(testCase) {
         async writeText(text) {
           copiedSummary = text;
         }
+      };
+      window.fetch = async (url, options = {}) => {
+        fetchCall = {
+          url,
+          options,
+          body: options.body ? JSON.parse(options.body) : null
+        };
+        return {
+          ok: true,
+          async json() {
+            return {
+              ok: true,
+              message: "Your self-audit feedback was received.",
+              referenceId: "NK-TEST-REF"
+            };
+          }
+        };
       };
       window.document.execCommand = () => true;
     }
@@ -109,6 +128,23 @@ async function runCase(testCase) {
   assert(copyStatus === "Summary copied.", `${testCase.name}: unexpected copy status ${copyStatus}.`);
   assert(copiedSummary === body.trimEnd(), `${testCase.name}: copied summary does not match the mailto body.`);
 
+  document.querySelector("#feedback-company").value = testCase.name.includes("Founder") ? "Acme SaaS" : "Privacy Fractional Practice";
+  document.querySelector("#feedback-email").value = testCase.name.includes("Founder") ? "founder@example.com" : "advisor@example.com";
+  document.querySelector("#feedback-role").value = testCase.name.includes("Founder") ? "founder" : "privacy consultant";
+  document.querySelector("#feedback-note").value = "Async score test.";
+  document.querySelector("#feedback-form")?.dispatchEvent(new dom.window.Event("submit", { bubbles: true, cancelable: true }));
+  await nextTick();
+
+  const feedbackStatus = document.querySelector("#feedback-status")?.textContent?.trim() || "";
+  const expectedSourceTag = testCase.expectedSource.includes("founder") ? "founder-follow-up" : "advisor-follow-up";
+  assert(fetchCall, `${testCase.name}: feedback form did not call fetch.`);
+  assert(fetchCall.url === "/api/contact", `${testCase.name}: feedback form posted to unexpected URL ${fetchCall.url}.`);
+  assert(fetchCall.body?.type === "self_audit_feedback", `${testCase.name}: feedback payload missing self_audit_feedback type.`);
+  assert(fetchCall.body?.sourceTag === expectedSourceTag, `${testCase.name}: feedback payload source tag mismatch.`);
+  assert(fetchCall.body?.score === Number.parseInt(testCase.expectedScore, 10), `${testCase.name}: feedback payload score mismatch.`);
+  assert(feedbackStatus.includes("Your self-audit feedback was received."), `${testCase.name}: feedback status did not render success message.`);
+  assert(feedbackStatus.includes("Reference: NK-TEST-REF"), `${testCase.name}: feedback status missing reference.`);
+
   dom.window.close();
 
   return {
@@ -118,7 +154,8 @@ async function runCase(testCase) {
     label,
     shareCopy,
     subject,
-    copyStatus
+    copyStatus,
+    feedbackStatus
   };
 }
 
@@ -130,7 +167,7 @@ for (const testCase of CASES) {
 const output = [
   "# Self-Audit Follow-Up QA",
   "",
-  "Date: 2026-04-24 UTC",
+  `Date: ${TODAY} UTC`,
   "",
   "This check validates the tagged self-audit follow-up entry points before the 2026-04-27 non-responder send window.",
   "",
@@ -138,7 +175,7 @@ const output = [
   "",
   "- Founder follow-up tagged path on a desktop-sized viewport.",
   "- Advisor follow-up tagged path on a mobile-sized viewport.",
-  "- Score recompute after clicks, source-specific helper copy, mailto subject/body generation, and copy-summary parity.",
+  "- Score recompute after clicks, source-specific helper copy, mailto subject/body generation, copy-summary parity, and in-page async feedback submit.",
   "",
   "## Results",
   "",
@@ -150,6 +187,7 @@ const output = [
     `- Share prompt: ${result.shareCopy}`,
     `- Mailto subject: ${result.subject}`,
     `- Copy status: ${result.copyStatus}`,
+    `- Feedback submit: ${result.feedbackStatus.split("\n")[0]}`,
     ""
   ]),
   "## Run Command",
