@@ -93,9 +93,22 @@ Use `scripts/append-validation-interview.mjs --input <json>` to append a scored 
 Use `scripts/record-validation-feedback.mjs --input <json>` to log the reply in `COMMUNITY-FEEDBACK.md`, update the matching outreach CSV status, and optionally chain into `scripts/append-validation-interview.mjs` when the reply turns into a real interview.
 When the reply came from the tagged self-audit follow-up path, include `source_tag`, `score_band` or `score`, and `ownership_signal` so the feedback log captures the founder-vs-advisor signal before the outreach CSV moves forward.
 Use `npm run log:validation-no-reply-check` for a no-reply checkpoint so the current UTC recheck is recorded without hand-editing duplicate founder/advisor notes into `COMMUNITY-FEEDBACK.md`.
+Use `npm run run:validation-maintenance` for the routine no-reply monitoring pass. It runs the watch, self-audit QA, artifact sync, and no-reply logger together, and it automatically uses a non-regressive UTC checkpoint if repo memory is temporarily ahead of the local system clock.
 `record-validation-feedback.mjs`, `append-validation-interview.mjs`, and `send-validation-batch.mjs` now auto-run `npm run sync:validation-artifacts` after any non-dry-run CSV or status update, so the follow-up queues, homepage pivot queue, validation status, and validation watch stay synchronized without a separate rebuild step.
 That sync now also refreshes `VALIDATION-POSITIONING-BRIEF.md` and `VALIDATION-DECISION-BRIEF.md`, so the 2026-04-27 window has both an evidence-backed founder-vs-advisor positioning read and the immediate execution queue for follow-ups, batch 03, batch 04, and homepage-pivot checks.
 `VALIDATION-REPLY-WATCH.md` is the checked-in monitoring artifact from that sync; read it first when the goal is only to know whether replies, due follow-ups, or batch-unlock conditions changed, and use the listed commands when the queue opens.
+
+## Tagged Self-Audit Triage
+
+Use `ops-contact-inbox.html` before hand-editing `COMMUNITY-FEEDBACK.md` when a tagged self-audit reply lands:
+
+1. Load the inbox with the ops password and set the filter to `Tagged validation replies only` when the reply came from a founder or advisor follow-up link.
+2. Confirm the record shows the expected `source tag`, `submission channel`, `ownership`, `score`, `score band`, and `top gaps` so the async signal is classified before any outreach CSV status changes.
+3. Copy the generated `Community feedback draft` line from the record instead of paraphrasing the reply manually.
+4. If the reply needs direct follow-up, use the `Reply by email` action or mirror its subject line when answering from `hello@noticekit.tech`.
+5. Run `node scripts/record-validation-feedback.mjs --input <json>` with the exact `source_tag`, `score` or `score_band`, and `ownership_signal` from the inbox record so the feedback log, outreach CSV, and derived validation artifacts stay aligned.
+
+If the inbox draft ever drops a field used by `VALIDATION-POSITIONING-BRIEF.md` or `VALIDATION-DECISION-BRIEF.md`, tighten the draft formatter in `ops-contact-inbox.html` before logging more tagged replies.
 
 Example self-audit async reply payload:
 

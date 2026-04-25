@@ -22,6 +22,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P1
 
+- [x] Build a first-buyer ops view that can reconcile Stripe buyer emails, contact inbox submissions, and manual fulfillment log rows once the first paid customer or tagged self-audit reply lands.
 - [x] Design the local notice generator data model: vendors, purpose, processing region, data categories, effective date, notice date, objection deadline, and customer segment.
 - [x] Design CSV import/export format that can survive user edits in Google Sheets and Excel.
 - [x] Create a customer evidence workflow that works without backend storage.

@@ -1,5 +1,128 @@
 # Progress Log
 
+## 2026-04-25 12:59 UTC
+
+### Validation Maintenance Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Confirmed the highest-priority incomplete backlog work is still the founder and advisor three-business-day follow-up sends, and both remain explicitly blocked until `2026-04-27 UTC`.
+- Ran `node --check scripts/run-validation-maintenance.mjs` and `npm run run:validation-maintenance` as the highest-priority unblocked task available before that gate.
+- The maintenance runner again detected that repo memory is ahead of the current system clock, reused the safe `2026-04-25 13:45 UTC` checkpoint from `COMMUNITY-FEEDBACK.md`, refreshed the validation watch / self-audit QA / derived artifacts, and correctly skipped the duplicate no-reply checkpoint write.
+- Validation state is still unchanged: 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, 5 advisor rows waiting, and both follow-up passes remain due on `2026-04-27 UTC`.
+- Verification: `node --check scripts/run-validation-maintenance.mjs`, `npm run run:validation-maintenance`, `git diff --check`, and `git status --short`.
+- No deploy was needed because no site or API files changed; after this commit, there is still no further executable backlog work until `2026-04-27 UTC` unless a real reply lands first.
+
+## 2026-04-25 12:58 UTC
+
+### Validation Maintenance Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Audited the remaining incomplete backlog items again and confirmed the open P0/P1 work is still blocked on either real inbound replies or the explicit founder/advisor follow-up window on `2026-04-27 UTC`.
+- Ran `node --check scripts/run-validation-maintenance.mjs` and `npm run run:validation-maintenance` as the highest-priority executable task available right now.
+- The maintenance runner detected the existing same-day clock skew, reused the safe `2026-04-25 13:45 UTC` checkpoint from `COMMUNITY-FEEDBACK.md`, refreshed the validation watch / self-audit QA / derived artifacts, and correctly skipped writing a regressive no-reply checkpoint.
+- Validation state is still unchanged: 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, 5 advisor rows waiting, and both follow-up passes due on `2026-04-27 UTC`.
+- Verification: `node --check scripts/run-validation-maintenance.mjs`, `npm run run:validation-maintenance`, `git diff --check`, and `git status --short` confirmed the pass completed cleanly and produced no repo-content diffs beyond this progress log entry.
+- No deploy was needed because no site or API files changed; the next executable backlog action remains the founder/advisor follow-up window on `2026-04-27 UTC`, unless a real reply lands first.
+
+## 2026-04-25 12:56 UTC
+
+### Guarded Validation Maintenance Runner
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, confirmed `DEPLOY-STATUS.md` is still absent, and verified `https://noticekit.tech/ops-reconcile.html` is already live with HTTP 200, so there was no broken deploy state to repair first.
+- Confirmed the current system clock is `2026-04-25 12:55 UTC`, while the latest stored no-reply checkpoint in `COMMUNITY-FEEDBACK.md` is `2026-04-25 13:45 UTC`; that meant another manual maintenance pass could only create regressive repo-memory timestamps on the same UTC date.
+- Added `scripts/run-validation-maintenance.mjs` plus the `npm run run:validation-maintenance` script so the routine validation loop now runs the watch check, self-audit QA, artifact sync, and no-reply logger in order while automatically selecting a non-regressive effective UTC checkpoint from `COMMUNITY-FEEDBACK.md`.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` to document the new single-command maintenance flow and the clock-skew guard.
+- Ran `npm run run:validation-maintenance`; it detected the clock skew, reused the safe `2026-04-25 13:45 UTC` checkpoint, refreshed the validation artifacts, and intentionally skipped writing an older no-reply checkpoint into `COMMUNITY-FEEDBACK.md`.
+- Verification: `node --check scripts/run-validation-maintenance.mjs`, `npm run run:validation-maintenance`, and `git diff --check`.
+- No deploy was needed because this change only affects repo-maintenance tooling and operator docs; the next unblocked execution step is still the founder/advisor follow-up window on `2026-04-27 UTC` unless a real reply lands first.
+
+## 2026-04-25 12:51 UTC
+
+### Validation Checkpoint Regression Guard
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, and `COMMUNITY-FEEDBACK.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Re-ran the highest-priority executable validation maintenance loop with `npm run check:validation-watch`, `npm run check:self-audit-follow-up`, and `npm run sync:validation-artifacts`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting before the `2026-04-27 UTC` gate.
+- Attempting `npm run log:validation-no-reply-check -- --timestamp '2026-04-25 12:51 UTC'` exposed a repo-memory bug: the logger could overwrite a newer same-day checkpoint in `COMMUNITY-FEEDBACK.md` when the requested timestamp was older than the latest recorded recheck.
+- Updated `scripts/log-validation-no-reply-check.mjs` to parse existing `Rechecked on ... UTC` lines, compare UTC timestamps within the same date section, and skip writes when the requested checkpoint is older than or equal to the latest stored checkpoint.
+- Restored the latest same-day checkpoint with `npm run log:validation-no-reply-check -- --timestamp '2026-04-25 13:45 UTC'`, then verified the fix by rerunning the older `2026-04-25 12:51 UTC` command and confirming it now exits with a skip message while leaving `COMMUNITY-FEEDBACK.md` at the newer `2026-04-25 13:45 UTC` entry.
+- Verification: `node --check scripts/log-validation-no-reply-check.mjs`, `npm run check:validation-watch`, `npm run check:self-audit-follow-up`, `npm run sync:validation-artifacts`, and both `log:validation-no-reply-check` timestamp scenarios described above.
+- No deploy was needed because this change only hardens repo-maintenance tooling; the next executable backlog work remains monitoring for real replies until the explicit founder/advisor follow-up window on `2026-04-27 UTC`.
+
+## 2026-04-25 13:45 UTC
+
+### Validation Watch Maintenance
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Picked the highest-priority executable incomplete work still available before the `2026-04-27 UTC` follow-up gate: rerun the validation maintenance loop and refresh the no-reply checkpoint.
+- Ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 contingency replies, 0 interview rows, 5 founder/operator rows waiting, 5 advisor rows waiting, and 0 self-audit channels logged.
+- Ran `npm run check:self-audit-follow-up`; it rewrote `SELF-AUDIT-FOLLOW-UP-QA.md` cleanly and the tagged founder/advisor follow-up checks still pass.
+- Ran `npm run sync:validation-artifacts`; the generated follow-up pass docs, briefs, and status files rewrote to the same stand-by branch because there are still no replies to convert.
+- Logged a fresh deduplicated no-reply checkpoint with `npm run log:validation-no-reply-check -- --timestamp '2026-04-25 13:45 UTC'`, which updated `COMMUNITY-FEEDBACK.md` for both founder and advisor batches.
+- No deploy was needed because no site or API code changed and `https://noticekit.tech/ops-reconcile.html` had already been verified live earlier today.
+- After this pass, the remaining backlog is still blocked on either real inbound replies or the explicit `2026-04-27 UTC` founder/advisor follow-up window.
+
+## 2026-04-25 12:49 UTC
+
+### Validation Watch Maintenance
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Verified `https://noticekit.tech/ops-reconcile.html` returns HTTP 200, which closes the stale note from the prior progress entry that said the reconciliation view still needed deploy follow-through.
+- Re-ran `npm run check:validation-watch`; the queue is still unchanged with 0 founder/operator replies, 0 advisor replies, 0 contingency replies, 0 interview rows, 5 founder/operator rows waiting, and 5 advisor rows waiting.
+- Re-ran `npm run check:self-audit-follow-up`; the tagged self-audit follow-up QA rewrote cleanly and still passes.
+- Re-ran `npm run sync:validation-artifacts`; the generated validation briefs and watch files rewrote to the same standby state because there are still no replies to convert.
+- Logged a fresh deduplicated no-reply checkpoint with `npm run log:validation-no-reply-check -- --timestamp '2026-04-25 12:49 UTC'`, which updated `COMMUNITY-FEEDBACK.md` for both founder and advisor batches.
+- No deploy was needed because the site is healthy, the private reconciliation page is already live, and this maintenance pass only updated repo memory.
+- The next executable backlog work remains monitoring `COMMUNITY-FEEDBACK.md` until the `2026-04-27 UTC` follow-up window opens, unless a real reply lands first.
+
+## 2026-04-25 12:48 UTC
+
+### Production Self-Audit Inbox Verification
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` was still absent before starting the next task.
+- Picked the highest-priority executable incomplete task from `BACKLOG-CHEAP.md`: submit tagged self-audit feedback through production and verify the private inbox UI exposes the stored source tag, channel, score band, top gaps, and copyable feedback draft.
+- Expanded `scripts/verify-self-audit-production.mjs` and added `npm run check:self-audit-production` so the production check now submits founder/advisor-tagged payloads, verifies Blob persistence, fetches the live private inbox with the ops password, and asserts `ops-contact-inbox.html` renders the tagged-validation filter state correctly in `jsdom`.
+- The first live verification uncovered a real production bug: `api/contact-inbox.js` only listed 20 Blob records before sorting, which could exclude the newest self-audit submissions from the ops inbox once older records accumulated.
+- Increased the contact inbox fetch window from 20 to 200 records, redeployed `https://noticekit.tech` twice through Vercel during verification, and reran the production check until the live inbox/API/UI path passed end to end.
+- Wrote the successful verification record to `SELF-AUDIT-PRODUCTION-VERIFY.md` with the founder/advisor reference IDs and Blob paths from the passing production run.
+- Marked the production self-audit inbox verification task complete in `BACKLOG-CHEAP.md`.
+- Verification: `node --check scripts/verify-self-audit-production.mjs`, `node --check api/contact-inbox.js`, `git diff --check`, successful `npm run check:self-audit-production`, and a passing production deploy on `https://noticekit.tech`.
+
+## 2026-04-25 13:28 UTC
+
+### First-Buyer Reconciliation View
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Picked the next highest-priority incomplete task from `BACKLOG-PREMIUM.md`: build a first-buyer ops view that can reconcile Stripe buyers, contact inbox submissions, and the manual fulfillment log.
+- Added `ops-reconcile.html`, a private static ops page that reuses the contact inbox password gate, accepts local Stripe export and fulfillment log CSV uploads, parses both client-side, and matches them against `/api/contact` records by payment ID, buyer email, and company name.
+- The new view highlights matched Stripe-to-contact and Stripe-to-fulfillment rows, keeps unmatched tagged self-audit replies visible for review, and preserves `/api/contact` reference IDs in the reconciliation output so support and fulfillment can trace activity back to the inbox.
+- Updated `README.md`, `CONTACT-DELIVERY.md`, and `paid-kits/README.md` so the reconciliation workflow is documented alongside the private inbox and fulfillment log.
+- Marked the first-buyer ops-view task complete in `BACKLOG-PREMIUM.md`.
+- Verification: `node --check api/contact-inbox.js`, a `jsdom` smoke test against sample Stripe/contact/fulfillment data for `ops-reconcile.html`, and `git diff --check` passed.
+- No deploy was attempted yet; this step changed a private ops page and supporting docs, so the next action is to commit it cleanly first.
+
+## 2026-04-25 13:05 UTC
+
+### Self-Audit Triage Runbook Note
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Picked the highest-priority executable incomplete task from `BACKLOG-CHEAP.md`: add an ops runbook note for using the private inbox filters and copied feedback draft during tagged self-audit reply triage.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` with a concrete five-step tagged self-audit triage procedure covering the `Tagged validation replies only` filter, required signal fields, the copied `COMMUNITY-FEEDBACK.md` draft line, reply handling, and exact `record-validation-feedback.mjs` field usage.
+- Marked the runbook-note task complete in `BACKLOG-CHEAP.md`.
+- No deploy was needed because this step only changed repo memory and operator documentation.
+
+## 2026-04-25 12:33 UTC
+
+### Validation Inbox Triage Upgrade
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md`; confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Reviewed the recent validation-maintenance commits and found a real operator gap: tagged self-audit feedback persisted through `/api/contact`, but the private inbox still forced raw JSON reading and hid the source/channel/score data needed for quick branch decisions.
+- Updated `api/contact-inbox.js` to derive `isSelfAuditFeedback`, `isTaggedValidation`, and a `segmentGuess` from stored submissions so the private inbox can classify validation signals without manual parsing.
+- Upgraded `ops-contact-inbox.html` with record filters, self-audit signal sections, tagged-validation highlighting, and a copyable `COMMUNITY-FEEDBACK.md` draft line so async score replies can be triaged faster when the 2026-04-27 follow-up window opens.
+- Fixed `self-audit.html` copy that incorrectly implied NoticeKit never receives form data; the page now states that the checklist is local but the optional feedback form sends only the score summary, role, and top gaps.
+- Updated `CONTACT-DELIVERY.md` to document the richer private inbox behavior, and refreshed `BACKLOG-PREMIUM.md` / `BACKLOG-CHEAP.md` with follow-up tasks around production verification, draft-vs-script parity, and broader buyer-ops reconciliation.
+- Verification: `node --check api/contact.js`, `node --check api/contact-inbox.js`, and `npm run check:validation-watch` passed. `npm run check:self-audit-follow-up` also regenerated cleanly after the self-audit copy update.
+- Strategic next step remains the same: wait for real founder/advisor replies or tagged self-audit submissions, then use the improved inbox to convert evidence into positioning and follow-up decisions quickly instead of doing another no-op monitoring pass.
+
 ## 2026-04-25 08:30 UTC
 
 ### Validation Watch Maintenance

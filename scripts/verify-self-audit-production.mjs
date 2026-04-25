@@ -4,12 +4,16 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { get, list } from "@vercel/blob";
+import { JSDOM } from "jsdom";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const ROOT = join(__dirname, "..");
 const DEFAULT_ENV_FILE = join(ROOT, ".env.production.local");
+const FALLBACK_ENV_FILE = join(ROOT, ".env.local");
 const REPORT_PATH = join(ROOT, "SELF-AUDIT-PRODUCTION-VERIFY.md");
 const API_URL = "https://noticekit.tech/api/contact";
+const INBOX_API_URL = "https://noticekit.tech/api/contact-inbox";
+const INBOX_PAGE_PATH = join(ROOT, "ops-contact-inbox.html");
 
 const CASES = [
   {
@@ -65,6 +69,10 @@ function parseArgs(argv) {
 }
 
 async function loadEnvFile(envPath) {
+  if (!envPath) {
+    return {};
+  }
+
   const content = await readFile(envPath, "utf8");
   const entries = {};
 
@@ -91,6 +99,17 @@ async function loadEnvFile(envPath) {
   }
 
   return entries;
+}
+
+function pickEnvValue(key, ...sources) {
+  for (const source of sources) {
+    const value = String(source?.[key] || "").trim();
+    if (value) {
+      return value;
+    }
+  }
+
+  return "";
 }
 
 function assert(condition, message) {
@@ -143,8 +162,25 @@ async function submitCase(testCase) {
 
   return {
     ...testCase,
+    submissionChannel: "in-page-form",
     referenceId: data.referenceId
   };
+}
+
+async function waitFor(assertion, message, { timeoutMs = 20000, intervalMs = 1000 } = {}) {
+  const start = Date.now();
+  let lastError = null;
+
+  while (Date.now() - start < timeoutMs) {
+    try {
+      return await assertion();
+    } catch (error) {
+      lastError = error;
+      await new Promise((resolve) => setTimeout(resolve, intervalMs));
+    }
+  }
+
+  throw new Error(`${message}${lastError ? ` Last error: ${lastError.message}` : ""}`);
 }
 
 async function loadStoredRecord(token, submission) {
@@ -195,6 +231,140 @@ function verifyRecord(submission, stored) {
   assert(record.storagePath === stored.pathname, `${submission.name}: Blob storagePath mismatch.`);
 }
 
+async function fetchInbox(password) {
+  const response = await fetch(INBOX_API_URL, {
+    headers: {
+      "x-noticekit-dashboard-password": password,
+      "user-agent": "noticekit-production-verifier"
+    }
+  });
+  const payload = await response.json().catch(() => ({}));
+
+  assert(response.ok, `Inbox fetch failed with ${response.status}.`);
+  assert(payload.ok === true, "Inbox fetch did not return ok=true.");
+  assert(Array.isArray(payload.records), "Inbox payload is missing records.");
+
+  return payload;
+}
+
+function findInboxRecord(payload, submission) {
+  const record = payload.records.find((entry) => entry.referenceId === submission.referenceId);
+  assert(record, `${submission.name}: record was not returned by production inbox.`);
+  return record;
+}
+
+function verifyInboxRecord(submission, record) {
+  assert(record.isSelfAuditFeedback === true, `${submission.name}: inbox did not classify self-audit feedback.`);
+  assert(record.isTaggedValidation === true, `${submission.name}: inbox did not classify tagged validation.`);
+  assert(record.referenceId === submission.referenceId, `${submission.name}: inbox referenceId mismatch.`);
+  assert(record.sourceTag === submission.sourceTag, `${submission.name}: inbox sourceTag mismatch.`);
+  assert(
+    record.submissionChannel === submission.submissionChannel,
+    `${submission.name}: inbox submissionChannel mismatch.`
+  );
+  assert(
+    record.ownershipSignal === submission.ownershipSignal,
+    `${submission.name}: inbox ownershipSignal mismatch.`
+  );
+  assert(record.score === submission.score, `${submission.name}: inbox score mismatch.`);
+  assert(record.scoreBand === submission.scoreBand, `${submission.name}: inbox scoreBand mismatch.`);
+  assert(
+    JSON.stringify(record.topGaps) === JSON.stringify(submission.topGaps),
+    `${submission.name}: inbox topGaps mismatch.`
+  );
+}
+
+async function verifyInboxRendering(payload, submissions) {
+  const html = await readFile(INBOX_PAGE_PATH, "utf8");
+  const fetchCalls = [];
+  const clipboardWrites = [];
+  const dom = new JSDOM(html, {
+    runScripts: "dangerously",
+    url: "https://noticekit.tech/ops-contact-inbox.html",
+    beforeParse(window) {
+      window.fetch = async (url, options = {}) => {
+        fetchCalls.push({ url, options });
+        return {
+          ok: true,
+          json: async () => payload
+        };
+      };
+
+      window.navigator.clipboard = {
+        writeText: async (text) => {
+          clipboardWrites.push(text);
+        }
+      };
+    }
+  });
+
+  const { window } = dom;
+  const passwordInput = window.document.querySelector("#ops-password");
+  const filterSelect = window.document.querySelector("#record-filter");
+  const form = window.document.querySelector("#inbox-form");
+  const results = window.document.querySelector("#results");
+
+  passwordInput.value = "ops-password-present";
+  filterSelect.value = "tagged_validation";
+  form.dispatchEvent(new window.Event("submit", { bubbles: true, cancelable: true }));
+
+  await waitFor(() => {
+    if (results.hidden || results.children.length < submissions.length) {
+      throw new Error("Inbox UI has not rendered the tagged validation records yet.");
+    }
+    return true;
+  }, "Inbox UI did not render tagged validation results.");
+
+  assert(fetchCalls.length === 1, `Expected one inbox fetch from UI, saw ${fetchCalls.length}.`);
+  assert(fetchCalls[0].url === "/api/contact-inbox", `Unexpected inbox fetch URL ${fetchCalls[0].url}.`);
+
+  const renderedText = results.textContent || "";
+  for (const submission of submissions) {
+    const sourceLabel = submission.sourceTag.replace(/[-_]+/g, " ");
+    assert(renderedText.includes(submission.company), `${submission.name}: company not rendered in inbox UI.`);
+    assert(renderedText.includes(sourceLabel), `${submission.name}: source tag label not rendered in inbox UI.`);
+    assert(
+      renderedText.includes(submission.submissionChannel),
+      `${submission.name}: submission channel not rendered in inbox UI.`
+    );
+    assert(renderedText.includes(submission.scoreBand), `${submission.name}: score band not rendered in inbox UI.`);
+    for (const gap of submission.topGaps) {
+      assert(renderedText.includes(gap), `${submission.name}: top gap ${gap} not rendered in inbox UI.`);
+    }
+  }
+
+  const copyButtons = [...results.querySelectorAll("button")].filter((button) =>
+    button.textContent.includes("Copy feedback draft")
+  );
+  assert(copyButtons.length >= submissions.length, "Expected copy buttons for tagged self-audit records.");
+  for (const button of copyButtons.slice(0, submissions.length)) {
+    button.click();
+  }
+  await waitFor(() => {
+    if (clipboardWrites.length < submissions.length) {
+      throw new Error("Clipboard writes not observed for each copy action.");
+    }
+    return true;
+  }, "Copy feedback draft action did not write to clipboard.");
+
+  for (const submission of submissions) {
+    const matchingDraft = clipboardWrites.find((text) => text.includes(submission.referenceId) || text.includes(submission.company));
+    assert(matchingDraft, `${submission.name}: feedback draft was not copyable from inbox UI.`);
+    assert(
+      matchingDraft.includes(`Source tag: ${submission.sourceTag}`),
+      `${submission.name}: feedback draft omitted source tag.`
+    );
+    assert(
+      matchingDraft.includes(`Channel: ${submission.submissionChannel}`),
+      `${submission.name}: feedback draft omitted channel.`
+    );
+    assert(
+      matchingDraft.includes(`Score band: ${submission.scoreBand}`),
+      `${submission.name}: feedback draft omitted score band.`
+    );
+  }
+}
+
 function buildReport(results) {
   const date = new Date().toISOString().slice(0, 10);
   return [
@@ -210,6 +380,8 @@ function buildReport(results) {
     "- Submitted one advisor-tagged `self_audit_feedback` payload to `https://noticekit.tech/api/contact`.",
     "- Verified the production API returned success and a unique `referenceId` for each submit.",
     "- Verified the private Blob inbox stored the exact `sourceTag`, `submissionChannel`, `ownershipSignal`, `score`, `scoreBand`, `selectedChecks`, `topGaps`, and summary fields for each submit.",
+    "- Verified `https://noticekit.tech/api/contact-inbox` returned both stored records when queried with the ops password.",
+    "- Verified `ops-contact-inbox.html` rendered the tagged-validation filter view with the source tag, channel, score band, top gaps, and copyable feedback draft for the live records.",
     "",
     "## Results",
     "",
@@ -230,22 +402,48 @@ function buildReport(results) {
 const args = parseArgs(process.argv);
 const envPath = args.get("env-file") || DEFAULT_ENV_FILE;
 const env = await loadEnvFile(envPath);
-const blobToken = String(process.env.BLOB_READ_WRITE_TOKEN || env.BLOB_READ_WRITE_TOKEN || "").trim();
+const fallbackEnv = envPath === FALLBACK_ENV_FILE ? {} : await loadEnvFile(FALLBACK_ENV_FILE);
+const blobToken = pickEnvValue("BLOB_READ_WRITE_TOKEN", process.env, env, fallbackEnv);
+const opsPassword = pickEnvValue("OPS_DASHBOARD_PASSWORD", process.env, env, fallbackEnv);
 
 if (!blobToken) {
   throw new Error(`Missing BLOB_READ_WRITE_TOKEN. Checked process env and ${envPath}.`);
 }
 
+if (!opsPassword) {
+  throw new Error(`Missing OPS_DASHBOARD_PASSWORD. Checked process env and ${envPath}.`);
+}
+
 const results = [];
 for (const testCase of CASES) {
   const submitted = await submitCase(testCase);
-  const stored = await loadStoredRecord(blobToken, submitted);
+  const stored = await waitFor(
+    () => loadStoredRecord(blobToken, submitted),
+    `${submitted.name}: stored Blob record did not appear in time.`
+  );
   verifyRecord(submitted, stored);
   results.push({
     ...submitted,
     pathname: stored.pathname
   });
 }
+
+const inboxPayload = await waitFor(
+  async () => {
+    const payload = await fetchInbox(opsPassword);
+    for (const submission of results) {
+      findInboxRecord(payload, submission);
+    }
+    return payload;
+  },
+  "Production inbox did not return the submitted records in time."
+);
+
+for (const submission of results) {
+  verifyInboxRecord(submission, findInboxRecord(inboxPayload, submission));
+}
+
+await verifyInboxRendering(inboxPayload, results);
 
 await writeFile(REPORT_PATH, buildReport(results));
 console.log(`Wrote ${REPORT_PATH}`);

@@ -12,6 +12,7 @@ const BATCH_FILES = [
 ];
 const FOUNDER_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no founder\/operator replies have been posted here yet\.[^\n]*/i;
 const ADVISOR_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no advisor replies have been posted here yet\.[^\n]*/i;
+const RECHECK_TIMESTAMP_PATTERN = /^Rechecked on (.+? UTC):/i;
 
 function parseArgs(argv) {
   const args = new Map();
@@ -124,6 +125,55 @@ function extractDateFromTimestamp(timestamp) {
   return match[0];
 }
 
+function parseUtcTimestamp(value) {
+  const text = String(value || "").trim();
+  let match = text.match(/^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}) UTC$/);
+  if (match) {
+    const [, year, month, day, hour, minute] = match;
+    return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), Number(hour), Number(minute)));
+  }
+
+  match = text.match(/^(\d{4})-(\d{2})-(\d{2}) UTC$/);
+  if (match) {
+    const [, year, month, day] = match;
+    return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), 0, 0));
+  }
+
+  return null;
+}
+
+function extractRecheckTimestamp(line) {
+  const match = String(line || "").match(RECHECK_TIMESTAMP_PATTERN);
+  if (!match) {
+    return null;
+  }
+  return match[1].trim();
+}
+
+function findLatestSectionCheckpoint(lines) {
+  let latestText = null;
+  let latestDate = null;
+
+  for (const line of lines) {
+    if (!FOUNDER_NOTE_PATTERN.test(line) && !ADVISOR_NOTE_PATTERN.test(line)) {
+      continue;
+    }
+
+    const timestamp = extractRecheckTimestamp(line);
+    const parsed = parseUtcTimestamp(timestamp);
+    if (!timestamp || !parsed) {
+      continue;
+    }
+
+    if (!latestDate || parsed > latestDate) {
+      latestDate = parsed;
+      latestText = timestamp;
+    }
+  }
+
+  return latestText;
+}
+
 function buildNote(timestamp, segment) {
   if (segment === "founder") {
     return `Rechecked on ${timestamp}: no founder/operator replies have been posted here yet. Keep \`buyer-validation-outreach-batch-01.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
@@ -211,7 +261,19 @@ async function main() {
     while (sectionEnd < lines.length && !lines[sectionEnd].startsWith("## ")) {
       sectionEnd += 1;
     }
-    preservedSectionLines = cleanSectionLines(lines.slice(headingIndex + 1, sectionEnd));
+    const existingSectionLines = lines.slice(headingIndex + 1, sectionEnd);
+    const latestCheckpoint = findLatestSectionCheckpoint(existingSectionLines);
+    const latestCheckpointDate = parseUtcTimestamp(latestCheckpoint);
+    const requestedCheckpointDate = parseUtcTimestamp(timestamp);
+
+    if (latestCheckpointDate && requestedCheckpointDate && requestedCheckpointDate <= latestCheckpointDate) {
+      console.log(
+        `Skipped ${feedbackPath}: existing ${sectionDate} no-reply checkpoint (${latestCheckpoint}) is newer than or equal to requested ${timestamp}`
+      );
+      return;
+    }
+
+    preservedSectionLines = cleanSectionLines(existingSectionLines);
   }
 
   const sectionBody = [

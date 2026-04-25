@@ -34,6 +34,8 @@ These tasks are routine and can be handled quickly.
 - [x] After the next production deploy, submit one founder-tagged and one advisor-tagged self-audit feedback test through `self-audit.html` and verify `/api/contact` stores the source tag, ownership signal, score, and top gaps in the inbox.
 - When a tagged self-audit reply lands, record the source tag and score band in `COMMUNITY-FEEDBACK.md` before updating the outreach CSV.
 - When the first in-page self-audit feedback arrives, run `scripts/record-validation-feedback.mjs` with the exact `source_tag`, `score_band`, and `ownership_signal` from the intake payload instead of paraphrasing the note manually.
+- [x] Submit one tagged self-audit through production and verify `ops-contact-inbox.html` shows the source tag, channel, score band, top gaps, and copyable feedback draft under the new filter views.
+- When the first tagged self-audit reply lands, compare the ops inbox feedback draft against `scripts/record-validation-feedback.mjs` output and tighten the draft format if it drops any field used in the decision brief.
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `advisor-first handoff`, update the homepage hero and pricing page opening copy from `HOMEPAGE-COPY-REFRESH-QUEUE.md`.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `vendor-change review packet`, refresh homepage and core CTA copy to broaden the product framing while keeping subprocessor-notice SEO pages intact.
@@ -58,6 +60,7 @@ These tasks are routine and can be handled quickly.
 - [x] Prepare advisor batch 02 for sending after the founder-batch one-business-day hold, using Resend for direct-email routes and public forms for manual-form routes.
 - [x] Add a short reply-to-interview scheduling snippet to `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
 - [x] Regenerate validation outreach drafts after any CSV status or contact-route changes.
+- [x] Add a short ops runbook note for using the private inbox filters and copied feedback draft during self-audit reply triage.
 - [x] Publish a plain-English primer for "what is a subprocessor notice?" and link it into the homepage, blog index, sitemap, and changelog.
 - [x] Write blog post: "Subprocessor Change Notice Template for SaaS Teams".
 - [x] Write blog post: "Subprocessor Notice Email Template for SaaS Teams".

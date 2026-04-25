@@ -19,6 +19,9 @@ An authenticated internal webhook receiver is configured in `api/contact-webhook
 
 The endpoint accepts `POST` JSON only. `GET` and other methods intentionally return `405`.
 
+The private inbox now highlights self-audit reply metadata for operator review. Tagged validation submissions show the source tag, submission channel, ownership signal, score, score band, top gaps, and a copyable `COMMUNITY-FEEDBACK.md` draft line so async self-audit replies can be triaged faster than reading raw JSON blobs.
+`ops-reconcile.html` now uses the same authenticated inbox feed to match those submissions against Stripe export rows and the manual fulfillment log, so first-buyer support can reconcile buyer email, intake reference IDs, and delivery status in one private view.
+
 ## Accepted Payload
 
 Required:

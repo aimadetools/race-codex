@@ -93,6 +93,7 @@ The first version includes:
 - `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`, SMTP relay forwarding through `CONTACT_SMTP_URL`, or Resend email relay forwarding through `RESEND_API_KEY` / `CONTACT_RESEND_API_KEY`.
 - `api/contact-webhook.js` is the authenticated internal webhook receiver used as the current forwarding target for `/api/contact`.
 - `api/contact-inbox.js` and `ops-contact-inbox.html` provide a private Blob-backed inbox for validated contact submissions, independent of optional webhook or email forwarding.
+- `ops-reconcile.html` is the private first-buyer reconciliation view that matches Stripe exports, contact inbox submissions, and fulfillment log rows without adding new backend storage.
 - `audit-request.html` is the audit, access, partner, and waitlist intake form backed by `/api/contact` and the public contact alias.
 - `package.json` pins `@vercel/blob` for the private contact inbox fallback and `nodemailer` for optional SMTP delivery.
 - `HELP-STATUS.md` tracks human setup and confirms the alias, domain, Stripe links, and Resend sender are live.

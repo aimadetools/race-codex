@@ -11,6 +11,7 @@ They are intentionally excluded from Vercel deployment through `.vercelignore` s
 - For faster first-buyer fulfillment, attach `archives/noticekit-starter-early-access.zip` for Starter buyers and `archives/noticekit-pro-early-access.zip` for Pro buyers.
 - The generated PDF versions of Markdown files live in `exports/` and are included in each archive under `pdf-exports/`.
 - Record each manual delivery in `FIRST-BUYER-FULFILLMENT-LOG.csv`.
+- Use `ops-reconcile.html` with a Stripe CSV export, the private contact inbox, and `FIRST-BUYER-FULFILLMENT-LOG.csv` when the first paid buyer or tagged self-audit reply needs reconciliation before fulfillment.
 - Send Concierge Audit buyers the audit intake form link and request the current subprocessor page, upcoming vendor change, notice deadline, and any draft notice.
 - Include the legal disclaimer in every fulfillment email.
 - Record fulfillment time, buyer role, urgency trigger, and follow-up question in a private copy of `buyer-validation-interview-log.csv`.

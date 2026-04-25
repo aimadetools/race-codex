@@ -1,4 +1,4 @@
-const MAX_SUBMISSIONS = 20;
+const MAX_SUBMISSIONS = 200;
 const BLOB_PREFIX = "contact-submissions/";
 
 function sendJson(response, statusCode, payload) {
@@ -38,12 +38,16 @@ async function readStream(stream) {
 
 function parseRecord(blob, content) {
   try {
+    const record = JSON.parse(content);
     return {
-      ...JSON.parse(content),
+      ...record,
       pathname: blob.pathname,
       uploadedAt: blob.uploadedAt,
       size: blob.size,
-      contentType: blob.contentType
+      contentType: blob.contentType,
+      isSelfAuditFeedback: String(record.type || "").trim() === "self_audit_feedback",
+      isTaggedValidation: isTaggedValidation(record.sourceTag),
+      segmentGuess: deriveSegmentGuess(record.ownershipSignal, record.sourceTag)
     };
   } catch (error) {
     return {
@@ -54,6 +58,34 @@ function parseRecord(blob, content) {
       parseError: "Unable to parse submission JSON."
     };
   }
+}
+
+function isTaggedValidation(sourceTag) {
+  const raw = String(sourceTag || "").trim().toLowerCase();
+  return ["founder-follow-up", "advisor-follow-up", "founder-batch-03", "founder-batch-04"].includes(raw);
+}
+
+function deriveSegmentGuess(ownershipSignal, sourceTag) {
+  const role = String(ownershipSignal || "").trim().toLowerCase();
+  const source = String(sourceTag || "").trim().toLowerCase();
+
+  if (["founder", "operator", "ops", "operations"].includes(role)) {
+    return "founder/operator";
+  }
+
+  if (["privacy consultant", "consultant", "fractional dpo", "dpo", "attorney", "lawyer"].includes(role)) {
+    return "advisor";
+  }
+
+  if (source.startsWith("founder-")) {
+    return "founder/operator";
+  }
+
+  if (source.startsWith("advisor-")) {
+    return "advisor";
+  }
+
+  return "unknown";
 }
 
 module.exports = async function handler(request, response) {

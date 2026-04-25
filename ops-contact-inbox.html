@@ -43,6 +43,30 @@
         background: rgba(255, 215, 102, 0.08);
         border-color: rgba(255, 215, 102, 0.25);
       }
+
+      .submission-section {
+        margin-top: 16px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .submission-section strong {
+        display: block;
+      }
+
+      .submission-code {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        font-size: 0.92rem;
+      }
+
+      .submission-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 8px;
+      }
     </style>
   </head>
   <body>
@@ -62,6 +86,14 @@
                 <label>Ops password
                   <input id="ops-password" type="password" autocomplete="current-password" required>
                 </label>
+                <label>Filter
+                  <select id="record-filter">
+                    <option value="all">All submissions</option>
+                    <option value="self_audit_feedback">Self-audit feedback only</option>
+                    <option value="tagged_validation">Tagged validation replies only</option>
+                    <option value="concierge_audit">Audit requests only</option>
+                  </select>
+                </label>
                 <button class="button gold" type="submit">Load inbox</button>
               </form>
               <p class="fine-print">The password is checked server-side against <code>OPS_DASHBOARD_PASSWORD</code>. No password is stored unless you keep it in your browser.</p>
@@ -72,6 +104,8 @@
               <ul class="feature-list">
                 <li>Company, email, and request type</li>
                 <li>Subprocessor page, vendor change, and deadline details</li>
+                <li>Self-audit source tag, channel, score, role, and top gaps</li>
+                <li>Tagged validation replies called out separately from normal intake</li>
                 <li>Reference ID and submission time</li>
                 <li>The blob pathname used for storage</li>
               </ul>
@@ -92,8 +126,85 @@
     <script>
       const form = document.querySelector("#inbox-form");
       const passwordInput = document.querySelector("#ops-password");
+      const filterSelect = document.querySelector("#record-filter");
       const status = document.querySelector("#status");
       const results = document.querySelector("#results");
+
+      function inferValidationSourceLabel(sourceTag) {
+        const raw = String(sourceTag || "").trim();
+        if (!raw) {
+          return "direct site visit";
+        }
+
+        return raw.replace(/[-_]+/g, " ");
+      }
+
+      function feedbackDraft(record) {
+        const score = record.scoreDisplay || (record.score != null ? `${record.score}/10` : "Not provided");
+        const topGaps = Array.isArray(record.topGaps) && record.topGaps.length
+          ? record.topGaps.join(", ")
+          : "None";
+        const optionalNote = record.reviewNeed ? ` | Details: ${record.reviewNeed}` : "";
+        const summary = record.summary || `Self-audit feedback received from ${record.company}.`;
+
+        return [
+          `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | self-audit reply | ${record.company} | ${record.segmentGuess || "unknown"} | Summary: ${summary}${optionalNote} | Source tag: ${record.sourceTag || "site"} | Channel: ${record.submissionChannel || "unknown"} | Score band: ${record.scoreBand || "Not provided"} | Ownership: ${record.ownershipSignal || "unknown"} | Signal: score ${score}; top gaps ${topGaps}`
+        ].join("");
+      }
+
+      async function copyText(text, button) {
+        const original = button.textContent;
+
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+            button.textContent = "Copied";
+          } else {
+            throw new Error("Clipboard unavailable");
+          }
+        } catch (error) {
+          button.textContent = "Copy failed";
+        }
+
+        window.setTimeout(() => {
+          button.textContent = original;
+        }, 1200);
+      }
+
+      function renderLines(article, headingText, pairs) {
+        const section = document.createElement("section");
+        section.className = "submission-section";
+
+        const heading = document.createElement("strong");
+        heading.textContent = headingText;
+        section.appendChild(heading);
+
+        pairs.forEach(([label, value]) => {
+          if (!value && value !== 0) {
+            return;
+          }
+          const line = document.createElement("div");
+          const strong = document.createElement("strong");
+          strong.textContent = `${label}: `;
+          line.appendChild(strong);
+          line.appendChild(document.createTextNode(Array.isArray(value) ? value.join(", ") : String(value)));
+          section.appendChild(line);
+        });
+
+        article.appendChild(section);
+      }
+
+      function recordMatchesFilter(record, filterValue) {
+        if (filterValue === "all") {
+          return true;
+        }
+
+        if (filterValue === "tagged_validation") {
+          return Boolean(record.isTaggedValidation);
+        }
+
+        return String(record.type || "") === filterValue;
+      }
 
       function setStatus(title, detail, isError = false) {
         status.hidden = false;
@@ -117,7 +228,8 @@
           ["Email", record.email || "Unknown"],
           ["Type", record.type || "Unknown"],
           ["Submitted", record.submittedAt || record.uploadedAt || "Unknown"],
-          ["Blob", record.pathname || "Unknown"]
+          ["Blob", record.pathname || "Unknown"],
+          ["Segment guess", record.segmentGuess || "unknown"]
         ].forEach(([label, value]) => {
           const line = document.createElement("span");
           const strong = document.createElement("strong");
@@ -143,6 +255,60 @@
         );
 
         article.appendChild(meta);
+
+        if (record.isTaggedValidation) {
+          renderLines(article, "Validation signal", [
+            ["Source tag", inferValidationSourceLabel(record.sourceTag)],
+            ["Submission channel", record.submissionChannel || "unknown"],
+            ["Ownership", record.ownershipSignal || "unknown"],
+            ["Score", record.scoreDisplay || (record.score != null ? `${record.score}/10` : "Not provided")],
+            ["Score band", record.scoreBand || "Not provided"]
+          ]);
+        }
+
+        if (record.isSelfAuditFeedback) {
+          renderLines(article, "Self-audit fields", [
+            ["Selected checks", record.selectedChecks || []],
+            ["Top gaps", record.topGaps || []],
+            ["Optional note", record.reviewNeed || ""],
+            ["Summary", record.summary || ""]
+          ]);
+
+          const draft = feedbackDraft(record);
+          const draftSection = document.createElement("section");
+          draftSection.className = "submission-section";
+
+          const draftHeading = document.createElement("strong");
+          draftHeading.textContent = "Community feedback draft";
+          draftSection.appendChild(draftHeading);
+
+          const draftPre = document.createElement("pre");
+          draftPre.className = "submission-code";
+          draftPre.textContent = draft;
+          draftSection.appendChild(draftPre);
+
+          const actions = document.createElement("div");
+          actions.className = "submission-actions";
+
+          const copyDraft = document.createElement("button");
+          copyDraft.type = "button";
+          copyDraft.className = "button secondary";
+          copyDraft.textContent = "Copy feedback draft";
+          copyDraft.addEventListener("click", () => copyText(draft, copyDraft));
+          actions.appendChild(copyDraft);
+
+          if (record.email) {
+            const replyLink = document.createElement("a");
+            replyLink.className = "button secondary";
+            replyLink.href = `mailto:${encodeURIComponent(record.email)}?subject=${encodeURIComponent(`Re: NoticeKit self-audit ${record.scoreDisplay || ""}`.trim())}`;
+            replyLink.textContent = "Reply by email";
+            actions.appendChild(replyLink);
+          }
+
+          draftSection.appendChild(actions);
+          article.appendChild(draftSection);
+        }
+
         article.appendChild(pre);
         return article;
       }
@@ -167,17 +333,19 @@
             throw new Error(payload.error || "Unable to load the inbox.");
           }
 
-          if (!payload.records.length) {
+          const visibleRecords = payload.records.filter((record) => recordMatchesFilter(record, filterSelect.value));
+
+          if (!visibleRecords.length) {
             setStatus("Inbox loaded.", "No submissions have been stored yet.");
             return;
           }
 
-          payload.records.forEach((record) => {
+          visibleRecords.forEach((record) => {
             results.appendChild(renderRecord(record));
           });
 
           results.hidden = false;
-          setStatus("Inbox loaded.", `Showing ${payload.count} stored submission${payload.count === 1 ? "" : "s"}.`);
+          setStatus("Inbox loaded.", `Showing ${visibleRecords.length} of ${payload.count} stored submission${payload.count === 1 ? "" : "s"}.`);
         } catch (error) {
           setStatus("Inbox error", error.message, true);
         }
