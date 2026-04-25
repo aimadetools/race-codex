@@ -2,6 +2,16 @@
 
 ## 2026-04-25 UTC
 
+### Production Self-Audit Verification
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and `CONTACT-DELIVERY.md`; confirmed `DEPLOY-STATUS.md` is still absent, then picked the highest-priority executable cheap P0 task under the reply-gated validation work: production verification of the new tagged self-audit async submit path.
+- Added `scripts/verify-self-audit-production.mjs` and `SELF-AUDIT-PRODUCTION-VERIFY.md` so founder-tagged and advisor-tagged production checks can be re-run against `https://noticekit.tech/api/contact` and validated directly against the private Blob inbox instead of relying on manual ops inspection.
+- Found live production drift immediately: `self-audit.html` was current on `noticekit.tech`, but `POST /api/contact` still returned the old generic intake success message. Deployed the current repo to Vercel so the live function matched the checked-in `self_audit_feedback` response behavior.
+- While tightening Blob verification, briefly introduced a regression by attempting a second Blob write to persist `storageUrl`; fresh production submissions started returning `502` with `The request could not be persisted.` I reverted that approach, redeployed immediately, and confirmed production submission success was restored before proceeding.
+- Ran the production verifier successfully after the restore deploy; it submitted one founder-tagged test payload and one advisor-tagged test payload, then confirmed the Blob inbox stored the exact `sourceTag`, `ownershipSignal`, `score`, `scoreBand`, `selectedChecks`, `topGaps`, and summary fields for both live references. The report is saved in `SELF-AUDIT-PRODUCTION-VERIFY.md`.
+- Regenerated `SELF-AUDIT-FOLLOW-UP-QA.md` and re-ran `npm run check:validation-watch` after the production work; the validation queue is still unchanged with 0 replies and the next operational send window is still `2026-04-27 UTC`.
+- Updated `BACKLOG-CHEAP.md` to mark the production self-audit verification task complete. The remaining unchecked P0 work is still gated by `2026-04-27 UTC` or by real tagged replies arriving in `COMMUNITY-FEEDBACK.md`.
+
 ### Self-Audit Feedback Capture
 
 - Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `DECISIONS.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md`; confirmed `DEPLOY-STATUS.md` is still absent and the repo started clean.

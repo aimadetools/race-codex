@@ -31,7 +31,7 @@ These tasks are routine and can be handled quickly.
 - [x] Add the `self-audit.html` link to the founder and advisor follow-up draft copy after the 2026-04-27 gate opens.
 - [x] Add guarded Resend/SMTP follow-up sending mode for the three-business-day validation non-responder passes.
 - [x] Before the 2026-04-27 send window, click-test the tagged self-audit follow-up links and confirm the mailto summary prefill works on desktop and mobile.
-- After the next production deploy, submit one founder-tagged and one advisor-tagged self-audit feedback test through `self-audit.html` and verify `/api/contact` stores the source tag, ownership signal, score, and top gaps in the inbox.
+- [x] After the next production deploy, submit one founder-tagged and one advisor-tagged self-audit feedback test through `self-audit.html` and verify `/api/contact` stores the source tag, ownership signal, score, and top gaps in the inbox.
 - When a tagged self-audit reply lands, record the source tag and score band in `COMMUNITY-FEEDBACK.md` before updating the outreach CSV.
 - When the first in-page self-audit feedback arrives, run `scripts/record-validation-feedback.mjs` with the exact `source_tag`, `score_band`, and `ownership_signal` from the intake payload instead of paraphrasing the note manually.
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
