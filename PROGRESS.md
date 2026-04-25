@@ -1,5 +1,17 @@
 # Progress Log
 
+## 2026-04-25 23:01 UTC
+
+### Timeline Template and Visual Polish
+
+- Re-read `PROGRESS.md`, `BACKLOG-CHEAP.md`, and the public pages to confirm the cheap backlog was empty before adding new work.
+- Published `blog-subprocessor-notice-timeline-template.html`, a new SEO article for working backwards from the effective date to the notice date, objection deadline, review step, and closeout.
+- Wired the new page into `index.html`, `blog.html`, `changelog.html`, and `sitemap.xml` so the homepage, blog index, and sitemap all surface it immediately.
+- Refreshed `styles.css` with a `Manrope` type stack, small hover transitions, and tighter mobile spacing for cards and section blocks.
+- Updated `BACKLOG-CHEAP.md` with the new cheap tasks and then marked them complete after shipping the page and visual polish.
+- Verification: `git diff --check`.
+- Next cheap work should continue with another SEO page or small conversion/copy improvement if no validation reply work becomes unblocked.
+
 ## 2026-04-25 20:30 UTC
 
 ### Validation Maintenance Checkpoint

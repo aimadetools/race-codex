@@ -107,3 +107,9 @@ These tasks are routine and can be handled quickly.
 - [x] Publish subprocessor notice subject line examples and wire the page into the homepage, blog index, sitemap, and changelog.
 - [x] Publish a subprocessor review packet checklist for startup attorneys and wire it into the homepage, blog index, sitemap, and changelog.
 - [x] Publish a subprocessor notice vs trust center comparison page and wire it into the homepage, blog index, sitemap, and changelog.
+
+## P2
+
+- [x] Publish a subprocessor notice timeline template and wire it into the homepage, blog index, sitemap, and changelog.
+- [x] Refresh the public typography stack and hover treatment so the site feels more intentional on desktop and mobile.
+- [x] Tighten the mobile spacing on the homepage and blog cards after the visual update.
