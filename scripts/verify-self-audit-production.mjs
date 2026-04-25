@@ -3,7 +3,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { get } from "@vercel/blob";
+import { get, list } from "@vercel/blob";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -93,15 +93,18 @@ async function loadEnvFile(envPath) {
   return entries;
 }
 
-function createStoragePath(referenceId, submittedAt) {
-  const day = submittedAt.slice(0, 10);
-  return `contact-submissions/${day}/${referenceId}.json`;
-}
-
 function assert(condition, message) {
   if (!condition) {
     throw new Error(message);
   }
+}
+
+async function readStream(stream) {
+  const chunks = [];
+  for await (const chunk of stream) {
+    chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+  }
+  return Buffer.concat(chunks).toString("utf8");
 }
 
 async function submitCase(testCase) {
@@ -144,35 +147,23 @@ async function submitCase(testCase) {
 }
 
 async function loadStoredRecord(token, submission) {
-  const todayPath = createStoragePath(submission.referenceId, new Date().toISOString());
-  const fallbackPath = `contact-submissions/${submission.referenceId}.json`;
-  const candidates = [todayPath, fallbackPath];
-  let lastError;
+  const lookup = await list({
+    prefix: `contact-submissions/`,
+    limit: 100,
+    token
+  });
 
-  for (const pathname of candidates) {
-    try {
-      const blob = await get(pathname, {
-        access: "private",
-        token
-      });
+  const target = lookup.blobs.find((blob) => blob.pathname.endsWith(`/${submission.referenceId}.json`));
+  assert(target, `${submission.name}: stored record was not found in Blob list.`);
 
-      if (!blob?.url) {
-        continue;
-      }
+  const result = await get(target.pathname, {
+    access: "private",
+    token
+  });
+  assert(result?.statusCode === 200 && result.stream, `${submission.name}: Blob fetch failed.`);
 
-      const response = await fetch(blob.url);
-      if (!response.ok) {
-        continue;
-      }
-
-      const record = await response.json();
-      return { pathname, record };
-    } catch (error) {
-      lastError = error;
-    }
-  }
-
-  throw lastError || new Error(`${submission.name}: stored record was not found in Blob.`);
+  const record = JSON.parse(await readStream(result.stream));
+  return { pathname: target.pathname, record };
 }
 
 function verifyRecord(submission, stored) {
