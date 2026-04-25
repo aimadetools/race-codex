@@ -80,7 +80,7 @@ The first version includes:
 - `scripts/build-validation-positioning-brief.mjs` regenerates the founder-vs-advisor positioning readout from interview scores plus tagged async feedback.
 - `scripts/build-validation-decision-brief.mjs` regenerates the current validation decision brief for the follow-up window, batch 03 and batch 04 unlocks, and the positioning branch.
 - `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
-- `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and can write `VALIDATION-REPLY-WATCH.md` for repo memory.
+- `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and can write `VALIDATION-REPLY-WATCH.md` for repo memory, including the queued follow-up and contingency commands that become active when the next gate date opens.
 - `scripts/sync-validation-artifacts.mjs` rebuilds the follow-up passes, homepage copy refresh queue, validation positioning brief, validation decision brief, validation status, and validation watch output after any send, reply, bounce, or interview update.
 - `npm run build:validation-watch` writes the current validation watchboard to `VALIDATION-REPLY-WATCH.md`.
 - `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue and guarded non-responder follow-ups through SMTP or Resend when an approved sender is available; live sends are date-gated for advisor batch 02, contingency batches 03 and 04, and later contingency batches plus three-business-day follow-ups, with batch 04 additionally blocked until batch 03 is exhausted and founder replies are still zero.

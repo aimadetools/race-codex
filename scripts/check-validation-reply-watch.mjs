@@ -110,6 +110,13 @@ function extractSignals(text) {
   };
 }
 
+function hasNoReplyNote(text, segment) {
+  const pattern = segment === "founder"
+    ? /no founder\/operator replies have been posted here yet\./i
+    : /no advisor replies have been posted here yet\./i;
+  return pattern.test(text);
+}
+
 function buildActionQueue({
   totalReplyRows,
   parsedInterviews,
@@ -169,6 +176,63 @@ function buildActionQueue({
   return actions;
 }
 
+function buildUpcomingQueue({
+  totalReplyRows,
+  parsedInterviews,
+  followUps,
+  today,
+  founderWaiting,
+  advisorWaiting,
+  founderReplies,
+  contingencyReady,
+  contingencyTwoReady,
+  signals
+}) {
+  if (totalReplyRows > 0 || parsedInterviews.length > 0) {
+    return [];
+  }
+
+  const upcoming = [];
+  const futureFollowUps = followUps.filter((item) => {
+    const dueDate = parseDate(item.due);
+    return dueDate && today < dueDate;
+  });
+
+  if (futureFollowUps.length > 0) {
+    upcoming.push("Before the next due follow-up window, keep `SELF-AUDIT-FOLLOW-UP-QA.md` current with `npm run check:self-audit-follow-up`.");
+
+    const founderDue = futureFollowUps.some((item) => item.label === "Founder follow-up pass");
+    const advisorDue = futureFollowUps.some((item) => item.label === "Advisor follow-up pass");
+
+    if (founderDue && founderWaiting > 0) {
+      const dueDate = futureFollowUps.find((item) => item.label === "Founder follow-up pass")?.due || "the due date";
+      upcoming.push(`On ${dueDate}, dry-run founder follow-ups with \`node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend\`.`);
+      upcoming.push(`On ${dueDate}, send founder follow-ups with \`node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
+    }
+
+    if (advisorDue && advisorWaiting > 0) {
+      const dueDate = futureFollowUps.find((item) => item.label === "Advisor follow-up pass")?.due || "the due date";
+      upcoming.push(`On ${dueDate}, dry-run advisor follow-ups with \`node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend\`.`);
+      upcoming.push(`On ${dueDate}, send advisor follow-ups with \`node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
+    }
+  }
+
+  if (today < GATE_DATE && founderReplies === 0 && contingencyReady > 0) {
+    upcoming.push(`If founder replies are still zero on ${GATE_DATE} UTC, founder batch 03 unlocks with ${contingencyReady} ready target(s).`);
+    upcoming.push("When that gate opens, dry-run founder batch 03 with `node scripts/send-validation-batch.mjs --batch 03 --limit 5 --transport resend`.");
+  }
+
+  if (today < GATE_DATE && founderReplies === 0 && contingencyTwoReady > 0) {
+    upcoming.push(`Batch 04 remains a second contingency queue with ${contingencyTwoReady} ready target(s), but only after batch 03 is exhausted and founder replies are still zero.`);
+  }
+
+  if (today < GATE_DATE && signals.advisorOwnership > signals.founderOwnership && signals.advisorOwnership > 0) {
+    upcoming.push(`If advisor ownership stays ahead through ${GATE_DATE} UTC, queue the homepage advisor-handoff copy refresh after the follow-up pass.`);
+  }
+
+  return upcoming;
+}
+
 async function main() {
   const args = new Set(process.argv.slice(2));
   const [feedbackText, interviewRows, ...texts] = await Promise.all([
@@ -194,14 +258,16 @@ async function main() {
   const advisorReplies = countReplies(parsedBatches[1].rows);
   const contingencyReady = parsedBatches[2].rows.filter((row) => String(row.status || "").trim() === "ready_for_send").length;
   const contingencyTwoReady = parsedBatches[3].rows.filter((row) => String(row.status || "").trim() === "ready_for_send").length;
-  const noFounderRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
-  const noAdvisorRepliesPosted = feedbackText.includes("No advisor replies have been posted here yet.");
+  const noFounderRepliesPosted = hasNoReplyNote(feedbackText, "founder");
+  const noAdvisorRepliesPosted = hasNoReplyNote(feedbackText, "advisor");
   const signals = extractSignals(feedbackText);
   const today = new Date().toISOString().slice(0, 10);
   const dueFollowUps = followUps.filter((item) => {
     const dueDate = parseDate(item.due);
     return dueDate && today >= dueDate;
   });
+  const founderWaiting = countWaiting(parsedBatches[0].rows);
+  const advisorWaiting = countWaiting(parsedBatches[1].rows);
 
   const lines = [
     "# Validation Reply Watch",
@@ -229,6 +295,24 @@ async function main() {
   });
 
   lines.push(...actionQueue.map((action) => action.startsWith("- ") ? action : `- ${action}`));
+
+  const upcomingQueue = buildUpcomingQueue({
+    totalReplyRows,
+    parsedInterviews,
+    followUps,
+    today,
+    founderWaiting,
+    advisorWaiting,
+    founderReplies,
+    contingencyReady,
+    contingencyTwoReady,
+    signals
+  });
+
+  if (upcomingQueue.length > 0) {
+    lines.push("", "## Upcoming Queue", "");
+    lines.push(...upcomingQueue.map((action) => action.startsWith("- ") ? action : `- ${action}`));
+  }
 
   const output = `${lines.join("\n")}\n`;
 

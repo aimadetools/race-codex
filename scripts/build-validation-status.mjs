@@ -136,6 +136,13 @@ function extractFeedbackSignals(text) {
   };
 }
 
+function hasNoReplyNote(text, segment) {
+  const pattern = segment === "founder"
+    ? /no founder\/operator replies have been posted here yet\./i
+    : /no advisor replies have been posted here yet\./i;
+  return pattern.test(text);
+}
+
 function extractQueueState(text) {
   const match = text.match(/Trigger state:\s*([^\n]+)/i);
   return match ? match[1].trim() : "unknown";
@@ -198,8 +205,8 @@ const founderReplies = founderBatchRows.filter((row) => ["replied_positive", "re
 const advisorReplies = advisorBatchRows.filter((row) => ["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim())).length;
 const followUpDate = extractFollowUpDate(followUpText);
 const advisorFollowUpDate = extractFollowUpDate(advisorFollowUpText);
-const noFounderRepliesPosted = feedbackText.includes("No founder/operator replies have been posted here yet.");
-const noAdvisorRepliesPosted = feedbackText.includes("No advisor replies have been posted here yet.");
+const noFounderRepliesPosted = hasNoReplyNote(feedbackText, "founder");
+const noAdvisorRepliesPosted = hasNoReplyNote(feedbackText, "advisor");
 const feedbackSignals = extractFeedbackSignals(feedbackText);
 const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
 const homepageQueueState = extractQueueState(homepageQueueText);
