@@ -41,6 +41,7 @@ These tasks are routine and can be handled quickly.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `vendor-change review packet`, refresh homepage and core CTA copy to broaden the product framing while keeping subprocessor-notice SEO pages intact.
 - [x] Generate a single validation decision brief for the 2026-04-27 follow-up window so follow-ups, batch 03 unlocks, and advisor-pivot checks do not depend on manual file reading.
 - [x] Publish a worked subprocessor notice example page with real dates and an objection deadline, then link it through the homepage, blog index, sitemap, and changelog.
+- [x] Publish a spreadsheet guide for tracking subprocessor objections and wire it into the homepage, blog index, sitemap, and changelog.
 - [x] Regenerate `VALIDATION-STATUS.md` and run `npm run check:validation-watch` after any batch reply, bounce, or follow-up status change.
 - If no founder replies by 2026-04-27, add five more founder/operator targets with public DPA or subprocessor pages.
 - [x] Convert the private paid-kit Markdown docs into Google Docs or PDF exports for first-buyer fulfillment.
