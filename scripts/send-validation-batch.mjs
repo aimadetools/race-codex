@@ -9,7 +9,9 @@ const ROOT = process.cwd();
 const REPLY_OR_TERMINAL_STATUSES = ["replied_positive", "replied_negative", "bounced", "interview_completed"];
 const BATCH_FILE_BY_ID = new Map([
   ["01", join(ROOT, "buyer-validation-outreach-batch-01.csv")],
-  ["03", join(ROOT, "buyer-validation-outreach-batch-03.csv")]
+  ["02", join(ROOT, "buyer-validation-outreach-batch-02.csv")],
+  ["03", join(ROOT, "buyer-validation-outreach-batch-03.csv")],
+  ["04", join(ROOT, "buyer-validation-outreach-batch-04.csv")]
 ]);
 const EARLIEST_SEND_DATE_BY_BATCH = new Map([
   ["02", "2026-04-23"],
@@ -155,9 +157,24 @@ async function assertBatch04CanSend() {
   }
 }
 
+async function assertBatch03CanSend() {
+  const founderBatchText = await readFile(BATCH_FILE_BY_ID.get("01"), "utf8");
+  const founderRows = parseCsv(founderBatchText).records;
+  const founderReplyRows = countByStatuses(founderRows, REPLY_OR_TERMINAL_STATUSES);
+
+  if (founderReplyRows > 0) {
+    throw new Error(
+      "Batch 03 is blocked because founder/operator replies, bounces, or interviews are already recorded in batch 01."
+    );
+  }
+}
+
 async function assertBatchCanSend(batch, args) {
   const earliestDate = EARLIEST_SEND_DATE_BY_BATCH.get(batch);
   if (!earliestDate || args.has("force-date")) {
+    if (batch === "03") {
+      await assertBatch03CanSend();
+    }
     if (batch === "04") {
       await assertBatch04CanSend();
     }
@@ -169,6 +186,10 @@ async function assertBatchCanSend(batch, args) {
     throw new Error(
       `Batch ${batch} is held until ${earliestDate} UTC (earliest send at 00:00:00Z). Re-run on or after that UTC date, or pass --force-date only after a documented human override.`
     );
+  }
+
+  if (batch === "03") {
+    await assertBatch03CanSend();
   }
 
   if (batch === "04") {

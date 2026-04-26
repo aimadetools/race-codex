@@ -44,6 +44,8 @@ node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send -
 
 Follow-up mode selects only rows still marked `sent`, refuses to send before three business days have elapsed from the first send date in `notes`, and marks successful direct-email rows `followed_up`. Use `--force-date` only after a documented operator override.
 The generated follow-up pass files prefer the actual inbox recorded in CSV `notes` when the first send already discovered a direct-email route, so re-read those files before the 2026-04-27 window instead of assuming the broader public contact path is still the best follow-up route.
+Batch 03 now also refuses to send if founder/operator replies, bounces, or interviews already exist in batch 01, so the contingency expansion cannot accidentally override a real founder signal after the no-reply gate date.
+For manual-form sends or follow-ups, use `npm run update:validation-outreach-status -- --batch <id> --company "<name>" --status sent|followed_up --transport manual --route "<form URL or path>" --timestamp "<ISO timestamp>"` instead of hand-editing the CSV; the helper appends the note and syncs the validation artifacts automatically.
 
 Before sending either follow-up pass, run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` shows the founder desktop and advisor mobile tagged paths both passing. That keeps the score-summary mailto path and copy-summary fallback verified right before the 2026-04-27 window.
 
@@ -95,6 +97,7 @@ When the reply came from the tagged self-audit follow-up path, include `source_t
 Use `npm run log:validation-no-reply-check` for a no-reply checkpoint so the current UTC recheck is recorded without hand-editing duplicate founder/advisor notes into `COMMUNITY-FEEDBACK.md`.
 Use `npm run run:validation-maintenance` for the routine no-reply monitoring pass. It runs the watch, self-audit QA, artifact sync, and no-reply logger together, and it automatically uses a non-regressive UTC checkpoint if repo memory is temporarily ahead of the local system clock.
 `record-validation-feedback.mjs`, `append-validation-interview.mjs`, and `send-validation-batch.mjs` now auto-run `npm run sync:validation-artifacts` after any non-dry-run CSV or status update, so the follow-up queues, homepage pivot queue, validation status, and validation watch stay synchronized without a separate rebuild step.
+`update-validation-outreach-status.mjs` uses the same sync path for manual-route status changes, so manual contact-form sends and follow-ups do not need a separate rebuild pass.
 That sync now also refreshes `VALIDATION-POSITIONING-BRIEF.md` and `VALIDATION-DECISION-BRIEF.md`, so the 2026-04-27 window has both an evidence-backed founder-vs-advisor positioning read and the immediate execution queue for follow-ups, batch 03, batch 04, and homepage-pivot checks.
 `VALIDATION-REPLY-WATCH.md` is the checked-in monitoring artifact from that sync; read it first when the goal is only to know whether replies, due follow-ups, or batch-unlock conditions changed, and use the listed commands when the queue opens.
 
@@ -137,6 +140,8 @@ The prepared founder follow-up queue lives in `BUYER-VALIDATION-FOUNDER-FOLLOW-U
 The prepared advisor follow-up queue lives in `BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md`, and `node scripts/build-advisor-follow-up-pass.mjs` can regenerate it from batch 02 when the queue changes.
 Use `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend` and `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend` to dry-run the exact due follow-up queues before sending them.
 On or after 2026-04-27 UTC, run `npm run build:validation-decision-brief` or `npm run sync:validation-artifacts` first and read `VALIDATION-DECISION-BRIEF.md` before sending follow-ups or unlocking batch 03.
+For the gate-day operational pass, use `npm run run:validation-gate -- --transport resend` to sync artifacts, print the current queue, and dry-run any due follow-ups. Add `--send` to execute the due follow-up batches, add `--include-batch03` when the founder no-reply contingency should be evaluated in the same pass, and add `--include-batch04` only after batch 03 is exhausted and founder replies are still zero.
+After any manual-form send or follow-up during that pass, record it immediately with `npm run update:validation-outreach-status -- --batch <id> --company "<name>" --status sent|followed_up --transport manual --route "<form URL or path>" --timestamp "<ISO timestamp>"` so `VALIDATION-REPLY-WATCH.md` and `VALIDATION-STATUS.md` stay current.
 Use `npm run sync:validation-artifacts` only when you need to force a rebuild without recording a send, reply, bounce, or interview.
 Use `npm run build:validation-watch` when you only need a fresh `VALIDATION-REPLY-WATCH.md` snapshot without rebuilding the rest of the validation artifacts.
 

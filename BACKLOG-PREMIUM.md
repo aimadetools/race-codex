@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain. Founder/operator batch 01 and advisor batch 02 were sent on 2026-04-22; next premium work is converting replies into scored interviews and deciding whether the offer needs a positioning change before more building.
+- Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain. Founder/operator batch 01 and advisor batch 02 were sent on 2026-04-22; next premium work is converting replies into scored interviews and, on or after 2026-04-27 UTC, using `npm run run:validation-gate -- --transport resend` plus the decision briefs to decide whether the offer needs a positioning change before more building.
 - Decide whether to shift the positioning from founder-first subprocessor notices to advisor-first vendor-change review packets if the 2026-04-27 tagged self-audit follow-up produces stronger advisor signals than founder signals.
 - [x] Reduce validation reply friction by adding an in-page self-audit feedback submit path that captures source tag, ownership signal, score band, and top gaps without relying on `mailto`.
 - [x] Automate an evidence-backed founder-vs-advisor positioning brief so the 2026-04-27 branch decision uses scored interviews and tagged async replies instead of manual synthesis.

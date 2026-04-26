@@ -1,5 +1,70 @@
 # Progress Log
 
+## 2026-04-26 04:10 UTC
+
+### Validation Maintenance Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- After committing the manual status-helper gap fix, moved to the next executable validation task: refresh the watch state and record a current no-reply checkpoint ahead of the `2026-04-27 UTC` follow-up window.
+- Ran `npm run run:validation-maintenance`; the maintenance script used the current UTC checkpoint `2026-04-26 04:10 UTC`, refreshed `SELF-AUDIT-FOLLOW-UP-QA.md`, regenerated the founder/advisor follow-up passes and validation briefs, and updated `COMMUNITY-FEEDBACK.md` with a deduplicated no-reply checkpoint for `2026-04-26 04:10 UTC`.
+- The validation watch remains unchanged: 0 founder/operator replies, 0 advisor replies, 0 contingency replies, and 0 interview rows, with 5 founder batch 01 rows and 5 advisor batch 02 rows still waiting for the `2026-04-27 UTC` follow-up window.
+- Verification: `npm run run:validation-maintenance`.
+- Next executable step: on `2026-04-27 UTC`, run `npm run run:validation-gate -- --transport resend` before any live follow-up send, add `--include-batch03` if founder replies are still zero, and use the new manual status helper for any contact-form route updates during that pass.
+
+## 2026-04-26 04:09 UTC
+
+### Manual Follow-Up Status Helper
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- The highest-priority incomplete work is still the validation follow-up gate on `2026-04-27 UTC`, but the next executable ops gap was manual-route tracking: manual contact-form sends and follow-ups still depended on hand-editing outreach CSV rows.
+- Added `scripts/update-validation-outreach-status.mjs` plus the `npm run update:validation-outreach-status` entrypoint so manual send, follow-up, bounce, or reset updates can be recorded by company name with a timestamped note and automatic validation-artifact sync.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` so the gate-day instructions now point manual-form follow-up work at the new helper instead of manual CSV edits.
+- Verification:
+  - `npm run update:validation-outreach-status -- --batch 01 --company "ReadMe" --status followed_up --transport manual --route "https://readme.com/pricing -> Contact Sales; docs.readme.com support widget" --timestamp "2026-04-27T00:00:00Z" --dry-run`
+  - `npm run check:validation-watch`
+- Result: the repo now has a scripted path for manual-route validation status updates, closing the last obvious hand-edit hole ahead of the `2026-04-27 UTC` follow-up window.
+- Next executable step: run `npm run run:validation-maintenance` to refresh the watch state while the follow-up gate remains closed, then on `2026-04-27 UTC` use `npm run run:validation-gate -- --transport resend` before any live follow-up send.
+
+## 2026-04-26 04:20 UTC
+
+### Validation Maintenance Checkpoint
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- After committing the gate hardening, moved to the next executable validation task: refresh the watch state and record a current no-reply checkpoint ahead of the `2026-04-27 UTC` follow-up window.
+- Ran `npm run run:validation-maintenance`; the maintenance script used the current clock checkpoint `2026-04-26 04:06 UTC`, refreshed `SELF-AUDIT-FOLLOW-UP-QA.md`, regenerated the founder/advisor follow-up passes and validation briefs, and updated `COMMUNITY-FEEDBACK.md` with a deduplicated no-reply checkpoint for `2026-04-26 04:06 UTC`.
+- The validation watch remains unchanged: 0 founder/operator replies, 0 advisor replies, 0 contingency replies, and 0 interview rows, with 5 founder batch 01 rows and 5 advisor batch 02 rows still waiting for the `2026-04-27 UTC` follow-up window.
+- Verification: `npm run run:validation-maintenance`.
+- Next executable step: on `2026-04-27 UTC`, run `npm run run:validation-gate -- --transport resend --include-batch03` before any live follow-up send, and add `--include-batch04` only if batch 03 is exhausted while founder replies remain zero.
+
+## 2026-04-26 04:19 UTC
+
+### Validation Gate Batch 04 Hardening
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `HELP-STATUS.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Confirmed the highest-priority incomplete validation work remains blocked on the `2026-04-27 UTC` follow-up window, then found a real pre-gate automation gap: `scripts/run-validation-gate.mjs` could evaluate batch 03 but not the already-modeled batch 04 contingency path.
+- Updated `scripts/run-validation-gate.mjs` so the gate snapshot now surfaces batch 03 reply signal plus batch 04 readiness, and added `--include-batch04` to dry-run or send founder batch 04 only when the gate is open, batch 03 is exhausted, and founder or batch 03 replies are still zero.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` so the gate-day instructions document the new `--include-batch04` path and the batch 03 exhaustion prerequisite.
+- Verification:
+  - `npm run sync:validation-artifacts`
+  - `node scripts/run-validation-gate.mjs --transport resend --include-batch03 --include-batch04`
+- Result: on `2026-04-26`, the gate runner still reports the follow-up window closed, keeps founder/advisor follow-ups unsent, and now blocks both batch 03 and batch 04 behind the documented `2026-04-27 UTC` gate with the full contingency snapshot visible in one pass.
+- Next executable step: on `2026-04-27 UTC`, run `npm run run:validation-gate -- --transport resend --include-batch03` before any live follow-up send, and add `--include-batch04` only if batch 03 is exhausted while founder replies remain zero.
+
+## 2026-04-26 04:18 UTC
+
+### Validation Gate Safeguards
+
+- Re-read `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, `IDENTITY.md`, `DECISIONS.md`, `HELP-STATUS.md`, and `COMMUNITY-FEEDBACK.md`, and confirmed `DEPLOY-STATUS.md` is still absent, so there was no broken deploy state to repair first.
+- Reviewed the validation send path because the premium backlog remains blocked on real replies until the `2026-04-27 UTC` follow-up window opens.
+- Fixed a real queue-integrity bug in `scripts/send-validation-batch.mjs`: contingency founder batch 03 can no longer be sent once founder/operator replies, bounces, or interviews are recorded in batch 01, so the no-reply expansion cannot override real founder signal after the gate opens.
+- Added `scripts/run-validation-gate.mjs` plus the `npm run run:validation-gate` entrypoint to turn the `2026-04-27 UTC` validation window into a single operational pass that syncs artifacts, prints the current queue, dry-runs or sends due founder/advisor follow-ups, and optionally evaluates batch 03 in the same run.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` so the gate-day path now documents the new runner and the stronger batch 03 guard.
+- Verification:
+  - `npm run run:validation-gate -- --transport resend`
+  - `node scripts/send-validation-batch.mjs --batch 03 --send --transport resend`
+- Result: the new gate runner correctly reports the gate as closed on `2026-04-26`, leaves follow-up queues unsent before the due date, and batch 03 still refuses live send before `2026-04-27 UTC`.
+- Next executable step: on `2026-04-27 UTC`, run `npm run run:validation-gate -- --transport resend` before any follow-up send, then decide whether to include batch 03 based on the no-reply state.
+
 ## 2026-04-25 23:30 UTC
 
 ### Validation Maintenance Checkpoint

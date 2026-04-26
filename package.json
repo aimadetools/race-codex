@@ -14,10 +14,12 @@
     "check:self-audit-follow-up": "node scripts/check-self-audit-follow-up-links.mjs",
     "check:validation-watch": "node scripts/check-validation-reply-watch.mjs",
     "run:validation-maintenance": "node scripts/run-validation-maintenance.mjs",
+    "run:validation-gate": "node scripts/run-validation-gate.mjs",
     "log:validation-no-reply-check": "node scripts/log-validation-no-reply-check.mjs",
     "sync:validation-artifacts": "node scripts/sync-validation-artifacts.mjs",
     "record:interview": "node scripts/append-validation-interview.mjs",
-    "record:feedback": "node scripts/record-validation-feedback.mjs"
+    "record:feedback": "node scripts/record-validation-feedback.mjs",
+    "update:validation-outreach-status": "node scripts/update-validation-outreach-status.mjs"
   },
   "dependencies": {
     "@vercel/blob": "^2.3.3",

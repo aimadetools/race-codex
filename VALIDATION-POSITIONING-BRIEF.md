@@ -1,6 +1,6 @@
 # Validation Positioning Brief
 
-Date: 2026-04-25
+Date: 2026-04-26
 Decision window opens: 2026-04-27 UTC
 Trigger state: stand by
 Recommended branch: founder-first hold
