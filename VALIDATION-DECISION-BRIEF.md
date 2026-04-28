@@ -24,7 +24,7 @@ Recommended action headline: Use `VALIDATION-POSITIONING-BRIEF.md` as the positi
 ## Recommended Actions
 
 - Use `VALIDATION-POSITIONING-BRIEF.md` as the positioning tie-breaker: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
-- If the follow-up pass also produces no replies, pause further expansion and reassess the buyer before more build work.
+- All follow-ups and both contingency batches are already live with no replies yet; pause further expansion and reassess the buyer before more build work.
 
 ## Execution Queue
 
@@ -32,4 +32,4 @@ Recommended action headline: Use `VALIDATION-POSITIONING-BRIEF.md` as the positi
 
 ## Positioning Read
 
-- No meaningful signal yet. Follow-up replies, not more product work, should decide the next branch. Positioning brief read: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
+- No meaningful signal yet. Reply capture, not more product work or list expansion, should decide the next branch. Positioning brief read: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.

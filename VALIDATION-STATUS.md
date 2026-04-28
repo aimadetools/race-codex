@@ -6,8 +6,8 @@ Date: 2026-04-28
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` for replies and convert any real reply into an interview.
-- Founder follow-up pass due: 2026-04-27 UTC.
-- Advisor follow-up pass due: 2026-04-27 UTC.
+- Founder follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
+- Advisor follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
 - Batch 03 has already been sent and is now waiting on replies (5 sent, 0 followed_up, 0 terminal row(s)).
 - Batch 04 has already been sent and is now waiting on replies (5 sent, 0 followed_up, 0 terminal row(s)).
 

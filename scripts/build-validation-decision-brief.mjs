@@ -240,8 +240,13 @@ if (!gateOpen) {
   }
 
   if (signals.founderFollowUpReplies === 0 && signals.advisorFollowUpReplies === 0 && founderReplies === 0 && advisorReplies === 0) {
-    recommendedActions.push("If the follow-up pass also produces no replies, pause further expansion and reassess the buyer before more build work.");
-    positioningRead = "No meaningful signal yet. Follow-up replies, not more product work, should decide the next branch.";
+    if (founderWaiting === 0 && advisorWaiting === 0 && founderFollowedUp > 0 && advisorFollowedUp > 0 && batch03Sent > 0 && batch04Sent > 0) {
+      recommendedActions.push("All follow-ups and both contingency batches are already live with no replies yet; pause further expansion and reassess the buyer before more build work.");
+      positioningRead = "No meaningful signal yet. Reply capture, not more product work or list expansion, should decide the next branch.";
+    } else {
+      recommendedActions.push("If the follow-up pass also produces no replies, pause further expansion and reassess the buyer before more build work.");
+      positioningRead = "No meaningful signal yet. Follow-up replies, not more product work, should decide the next branch.";
+    }
   } else if (shouldQueueAdvisorPivot) {
     positioningRead = "Advisor ownership is currently stronger than founder ownership. Prepare the advisor-first handoff branch before more founder expansion.";
   } else if (signals.lowScores > 0 || founderReplies > 0) {

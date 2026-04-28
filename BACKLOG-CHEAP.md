@@ -4,7 +4,7 @@ These tasks are routine and can be handled quickly.
 
 ## P0
 
-- Check `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, and the outreach CSVs for the first real founder or advisor reply; update the matching row immediately.
+- Check `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, and all four outreach CSVs for the first real founder or advisor reply; update the matching row immediately.
 - When the first tagged self-audit reply lands, run `npm run record:feedback -- --input <json>` with exact `source_tag`, `channel`, `score_band`, and `ownership_signal` fields from the intake payload.
 - When the first scored interview lands, confirm `VALIDATION-POSITIONING-BRIEF.md` classified the segment correctly before acting on the branch recommendation.
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
@@ -21,4 +21,4 @@ These tasks are routine and can be handled quickly.
 ## P2
 
 - Keep a lightweight weekly validation-memory cleanup pass so `PROGRESS.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` do not bloat again with no-op monitoring entries.
-- ✅ Completed polish summary: analytics, crawl basics, metadata, error page, changelog, testimonial scaffold, evergreen preview copy, footer/contact polish, supporting pages, and visual refresh.
+- ✅ Completed polish summary: analytics, crawl basics, metadata, error page, changelog, testimonial scaffold, evergreen preview copy, footer/contact polish, supporting pages, visual refresh, and completed-task backlog collapsing.

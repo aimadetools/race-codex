@@ -11,7 +11,7 @@ Prepared rows: 5
 
 ## Current Status
 
-Batch 01 currently has 5 sent rows and no recorded replies in the outreach CSV.
+Batch 01 follow-up has already been sent for 5 row(s), and no recorded replies are in the outreach CSV yet.
 
 ## Follow-Up Queue
 

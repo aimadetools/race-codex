@@ -43,3 +43,11 @@
 - Regenerated `validation-outreach-drafts/README.md` and verified the docs now show all 20 rows as active outbound with the correct next priority: monitor replies and convert the first real response into scored feedback.
 - Cleaned project memory so older dates stay summarized while the last three days remain detailed.
 - Next executable step: keep monitoring replies across all 20 active outbound rows and convert the first real evidence into a scored interview immediately.
+
+### Validation Status Freshness
+
+- Rechecked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, all four outreach CSVs, and `buyer-validation-interview-log.csv`; the validation state remains 20 active outbound rows, 0 replies, and 0 interviews as of 2026-04-28 UTC.
+- Fixed a second stale-memory gap in the validation generators: follow-up passes, `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, and `VALIDATION-DECISION-BRIEF.md` no longer describe founder/advisor follow-ups as merely "due" after they have already been sent.
+- Updated `scripts/build-founder-follow-up-pass.mjs`, `scripts/build-advisor-follow-up-pass.mjs`, `scripts/build-validation-status.mjs`, `scripts/check-validation-reply-watch.mjs`, and `scripts/build-validation-decision-brief.mjs` so completed follow-up queues render as completed and the no-reply branch falls back to monitoring/pause instead of future-tense follow-up instructions.
+- Verification: `npm run sync:validation-artifacts` and `npm run check:validation-watch`.
+- Result: checked-in validation memory now matches the real post-follow-up state, reducing the risk of sending duplicate work or misreading the next action.

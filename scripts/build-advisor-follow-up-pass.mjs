@@ -96,6 +96,10 @@ function escapeTableCell(value) {
   return String(value || "").replace(/\|/g, "\\|");
 }
 
+function countByStatus(rows, status) {
+  return rows.filter((row) => String(row.status || "").trim() === status).length;
+}
+
 function extractSentDate(rows) {
   for (const row of rows) {
     const status = String(row.status || "").trim();
@@ -149,6 +153,13 @@ const followUpRows = rows
 
 const sentDate = extractSentDate(rows);
 const followUpDate = addBusinessDays(sentDate, 3);
+const sentCount = countByStatus(rows, "sent");
+const followedUpCount = countByStatus(rows, "followed_up");
+const currentStatusLine = followedUpCount > 0 && sentCount === 0
+  ? `Batch 02 follow-up has already been sent for ${followedUpCount} row(s), and no recorded replies are in the outreach CSV yet.`
+  : followedUpCount > 0
+    ? `Batch 02 currently has ${sentCount} sent row(s) still pending follow-up, ${followedUpCount} followed-up row(s), and no recorded replies in the outreach CSV.`
+    : `Batch 02 currently has ${followUpRows.length} sent row(s) and no recorded replies in the outreach CSV.`;
 
 const output = [
   "# NoticeKit Advisor Follow-Up Pass",
@@ -164,7 +175,7 @@ const output = [
   "",
   "## Current Status",
   "",
-  `Batch 02 currently has ${followUpRows.length} sent rows and no recorded replies in the outreach CSV.`,
+  currentStatusLine,
   "",
   "## Follow-Up Queue",
   "",

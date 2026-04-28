@@ -91,6 +91,21 @@ function extractFollowUpDate(text) {
   return match ? match[1].trim() : "unknown";
 }
 
+function describeFollowUpState(label, dueDate, rows) {
+  const sent = countBy(rows, "status", "sent");
+  const followedUp = countBy(rows, "status", "followed_up");
+
+  if (followedUp > 0 && sent === 0) {
+    return `- ${label}: completed; due was ${dueDate} and ${followedUp} row(s) are now waiting on replies.`;
+  }
+
+  if (sent > 0) {
+    return `- ${label}: due ${dueDate}; ${sent} row(s) still need the non-responder follow-up pass.`;
+  }
+
+  return `- ${label}: ${dueDate === "unknown" ? "status unknown." : `due ${dueDate}, with no active follow-up rows remaining.`}`;
+}
+
 function extractSentDate(rows) {
   for (const row of rows) {
     if (!["sent", "followed_up"].includes(String(row.status || "").trim())) {
@@ -272,8 +287,8 @@ const output = [
   "",
   "- Highest-priority incomplete work: exact buyer validation through real interviews.",
   `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` for replies and convert any real reply into an interview.`,
-  `- Founder follow-up pass due: ${followUpDate}.`,
-  `- Advisor follow-up pass due: ${advisorFollowUpDate}.`,
+  describeFollowUpState("Founder follow-up pass", followUpDate, founderBatchRows),
+  describeFollowUpState("Advisor follow-up pass", advisorFollowUpDate, advisorBatchRows),
   describeBatchPosition("Batch 03", contingencyRows),
   describeBatchPosition("Batch 04", contingencyTwoRows),
   "",

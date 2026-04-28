@@ -99,9 +99,25 @@ function countPendingFollowUps(rows) {
   return rows.filter((row) => String(row.status || "").trim() === "sent").length;
 }
 
+function countByStatus(rows, statuses) {
+  return rows.filter((row) => statuses.includes(String(row.status || "").trim())).length;
+}
+
 function parseDate(value) {
   const match = String(value || "").match(/\d{4}-\d{2}-\d{2}/);
   return match ? match[0] : "";
+}
+
+function describeFollowUpStatus(label, due, pending, followedUp) {
+  if (followedUp > 0 && pending === 0) {
+    return `- ${label}: completed; due was ${due}`;
+  }
+
+  if (pending > 0) {
+    return `- ${label}: due ${due}; ${pending} row(s) still pending follow-up`;
+  }
+
+  return `- ${label}: ${due === "unknown" ? "status unknown" : `due ${due}; no active follow-up rows remain`}`;
 }
 
 function extractSignals(text) {
@@ -289,6 +305,8 @@ async function main() {
   const advisorWaiting = countWaiting(parsedBatches[1].rows);
   const founderPendingFollowUps = countPendingFollowUps(parsedBatches[0].rows);
   const advisorPendingFollowUps = countPendingFollowUps(parsedBatches[1].rows);
+  const founderFollowedUp = countByStatus(parsedBatches[0].rows, ["followed_up"]);
+  const advisorFollowedUp = countByStatus(parsedBatches[1].rows, ["followed_up"]);
 
   const lines = [
     "# Validation Reply Watch",
@@ -298,7 +316,8 @@ async function main() {
     ...parsedBatches.map((batch) => `- ${batch.label} sent or followed-up rows still waiting for replies: ${countWaiting(batch.rows)}`),
     `- Community feedback note: ${noFounderRepliesPosted && noAdvisorRepliesPosted ? "no founder/operator or advisor replies have been posted yet." : "replies are present and need review."}`,
     `- Self-audit channels logged: ${signals.channels.length} (${signals.inPageFormChannels} in-page-form, ${signals.mailtoChannels} mailto)`,
-    ...followUps.map((item) => `- ${item.label} due: ${item.due}`),
+    describeFollowUpStatus(followUps[0].label, followUps[0].due, founderPendingFollowUps, founderFollowedUp),
+    describeFollowUpStatus(followUps[1].label, followUps[1].due, advisorPendingFollowUps, advisorFollowedUp),
     "",
     "## Next Action",
     ""
