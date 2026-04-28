@@ -46,6 +46,12 @@
 - Advanced the reply-watch checkpoint to 2026-04-28 20:17 UTC and kept the active outreach state unchanged: 20 outbound rows still waiting, 0 replies, 0 bounces, 0 interviews.
 - Result: the next executable task remains monitoring `COMMUNITY-FEEDBACK.md` and the ops inbox for the first real buyer reply.
 
+### Reply Watch Refresh
+
+- Re-ran the validation maintenance pass at 2026-04-28 20:18 UTC and deduplicated the no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Confirmed the live reply-watch state is still unchanged after the refresh: 20 outbound rows waiting, 0 replies, 0 bounces, 0 interviews, and no deploy-status issue to resolve.
+- Result: reply monitoring remains the top-priority incomplete task until the first real buyer evidence lands.
+
 ### Memory Cleanup
 
 - Cleaned project memory so older dates stay summarized, the last three days remain detailed, and the backlog files keep only live tasks under each priority with completed work collapsed into short summary sections.
