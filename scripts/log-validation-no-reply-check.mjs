@@ -8,7 +8,9 @@ const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
 const BATCH_FILES = [
   join(ROOT, "buyer-validation-outreach-batch-01.csv"),
-  join(ROOT, "buyer-validation-outreach-batch-02.csv")
+  join(ROOT, "buyer-validation-outreach-batch-02.csv"),
+  join(ROOT, "buyer-validation-outreach-batch-03.csv"),
+  join(ROOT, "buyer-validation-outreach-batch-04.csv")
 ];
 const FOUNDER_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no founder\/operator replies have been posted here yet\.[^\n]*/i;
 const ADVISOR_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no advisor replies have been posted here yet\.[^\n]*/i;
@@ -242,13 +244,15 @@ async function main() {
     ...BATCH_FILES.map((path) => readFile(path, "utf8"))
   ]);
 
-  const [founderRows, advisorRows] = batchTexts.map((text) => parseCsv(text));
+  const parsedBatchRows = batchTexts.map((text) => parseCsv(text));
+  const [founderRows, advisorRows] = parsedBatchRows;
   const founderReplies = countReplyRows(founderRows);
   const advisorReplies = countReplyRows(advisorRows);
+  const totalReplyRows = parsedBatchRows.reduce((total, rows) => total + countReplyRows(rows), 0);
   const interviewRows = countInterviewRows(parseCsv(interviewText));
 
-  if (founderReplies > 0 || advisorReplies > 0 || interviewRows > 0) {
-    throw new Error("No-reply checkpoint is blocked because replies, bounces, or interview rows already exist.");
+  if (totalReplyRows > 0 || interviewRows > 0) {
+    throw new Error("No-reply checkpoint is blocked because replies, bounces, or interview rows already exist in the active outreach batches.");
   }
 
   const lines = feedbackText.replace(/\s+$/, "").split("\n");

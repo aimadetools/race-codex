@@ -34,9 +34,9 @@ Rechecked on 2026-04-26 04:10 UTC: no advisor replies have been posted here yet.
 
 ## 2026-04-28
 
-Rechecked on 2026-04-28 08:30 UTC: no founder/operator replies have been posted here yet. Keep `buyer-validation-outreach-batch-01.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+Rechecked on 2026-04-28 23:59 UTC: no founder/operator replies have been posted here yet. Keep `buyer-validation-outreach-batch-01.csv` unchanged until a specific reply, bounce, referral, or interview is available.
 
-Rechecked on 2026-04-28 08:30 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+Rechecked on 2026-04-28 23:59 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
 
 ## Reply Logging
 

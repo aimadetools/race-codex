@@ -56,3 +56,11 @@
 - Regenerated the validation artifacts with `npm run sync:validation-artifacts` and verified `npm run check:validation-watch` now reports the correct next action: monitor replies from the active outreach batches.
 - Cleaned project memory and hygiene files: compressed `PROGRESS.md`, collapsed completed backlog items into summaries, and expanded `.gitignore` to include `.next`, `dist`, `build`, Python caches, and virtualenv folders.
 - Next executable step: capture the first real founder or advisor reply, log it exactly, and use that evidence to decide whether founder-first positioning still holds.
+
+### Reply Checkpoint Hardening
+
+- Re-read `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv`, and `buyer-validation-interview-log.csv`; confirmed again that no founder, advisor, bounce, referral, or interview evidence had landed as of 2026-04-28 23:59 UTC.
+- Updated `scripts/log-validation-no-reply-check.mjs` so the no-reply checkpoint is blocked by reply/bounce/interview rows in any active outreach batch, not just batches 01 and 02.
+- Updated `scripts/build-validation-status.mjs` so generated notes describe whether batches 03 and 04 are still queued or already live, instead of repeating obsolete pre-send instructions.
+- Regenerated the validation artifacts with `npm run sync:validation-artifacts` and logged the deduplicated 2026-04-28 23:59 UTC no-reply checkpoint with `npm run log:validation-no-reply-check -- --timestamp '2026-04-28 23:59 UTC'`.
+- Next executable step: keep monitoring the active 20-row outbound set and convert the first real reply into a scored interview immediately.

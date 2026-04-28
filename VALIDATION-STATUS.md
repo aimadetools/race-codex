@@ -37,5 +37,5 @@ Date: 2026-04-28
 - Positioning brief: `VALIDATION-POSITIONING-BRIEF.md` says: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
 - Homepage advisor-handoff copy refresh queue: not triggered.
 - Queue file: `HOMEPAGE-COPY-REFRESH-QUEUE.md` is stand by.
-- Do not send batch 03 before the no-reply check date documented in the runbook.
-- The reply watch now also surfaces batch 04 when batch 03 is exhausted after the same check.
+- Batch 03 is already live outbound, so the immediate job is reply capture rather than more founder-list expansion.
+- Batch 04 is already live outbound too; keep monitoring replies across all 20 active rows before expanding further.

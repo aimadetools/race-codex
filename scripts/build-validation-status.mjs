@@ -216,6 +216,28 @@ function describeBatchPosition(label, rows) {
   return `- ${label} has no active rows yet.`;
 }
 
+function describeContingencyNotes(batch03Rows, batch04Rows) {
+  const batch03Ready = countBy(batch03Rows, "status", "ready_for_send");
+  const batch03Active = countBy(batch03Rows, "status", "sent") + countBy(batch03Rows, "status", "followed_up");
+  const batch04Ready = countBy(batch04Rows, "status", "ready_for_send");
+  const batch04Active = countBy(batch04Rows, "status", "sent") + countBy(batch04Rows, "status", "followed_up");
+  const notes = [];
+
+  if (batch03Ready > 0) {
+    notes.push("- Batch 03 remains queued until the validation gate or new evidence changes the send plan.");
+  } else if (batch03Active > 0) {
+    notes.push("- Batch 03 is already live outbound, so the immediate job is reply capture rather than more founder-list expansion.");
+  }
+
+  if (batch04Ready > 0) {
+    notes.push("- Batch 04 stays as reserve contingency inventory until batch 03 is exhausted or the evidence plan changes.");
+  } else if (batch04Active > 0) {
+    notes.push("- Batch 04 is already live outbound too; keep monitoring replies across all 20 active rows before expanding further.");
+  }
+
+  return notes;
+}
+
 const now = new Date().toISOString().slice(0, 10);
 const founderBatchRows = parseCsv(await readFile(BATCH_FILES[0].path, "utf8"));
 const advisorBatchRows = parseCsv(await readFile(BATCH_FILES[1].path, "utf8"));
@@ -239,6 +261,7 @@ const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbac
 const homepageQueueState = extractQueueState(homepageQueueText);
 const decisionHeadline = extractDecisionHeadline(decisionBriefText);
 const positioningHeadline = extractPositioningHeadline(positioningBriefText);
+const contingencyNotes = describeContingencyNotes(contingencyRows, contingencyTwoRows);
 
 const output = [
   "# NoticeKit Validation Status",
@@ -280,8 +303,7 @@ const output = [
   `- Positioning brief: ${positioningHeadline === "unknown" ? "missing; run \`node scripts/build-validation-positioning-brief.mjs\`." : `\`VALIDATION-POSITIONING-BRIEF.md\` says: ${positioningHeadline}`}`,
   `- Homepage advisor-handoff copy refresh queue: ${shouldQueueAdvisorCopyRefresh ? "queue it now based on logged ownership signals." : "not triggered."}`,
   `- Queue file: ${homepageQueueState === "unknown" ? "missing; run \`npm run build:homepage-copy-refresh-queue\`." : `\`HOMEPAGE-COPY-REFRESH-QUEUE.md\` is ${homepageQueueState}.`}`,
-  "- Do not send batch 03 before the no-reply check date documented in the runbook.",
-  "- The reply watch now also surfaces batch 04 when batch 03 is exhausted after the same check.",
+  ...contingencyNotes,
   ""
 ].join("\n");
 
