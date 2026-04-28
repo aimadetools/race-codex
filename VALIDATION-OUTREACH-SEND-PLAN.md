@@ -1,19 +1,19 @@
 # NoticeKit Validation Outreach Send Plan
 
-Date: 2026-04-22
+Date: 2026-04-28
 
-This plan translates the prepared outreach batches into the first operational send queue.
-Batch 01 and batch 02 are now sent; use this plan for reply handling, interview conversion, and the batch 03 and batch 04 contingency checks.
+This plan translates the current outreach CSV state into the active send and reply-handling queue.
+Use it to see which batches are live, which are still queued, and what should happen next when evidence arrives.
 
-Prepared direct-email targets identified: 18
+Direct-email targets identified across all prepared batches: 18
 
 ## Current Priority
 
-Monitor founder replies from batch 01, convert real replies into scored interviews, and keep batch 03 reserved for the 2026-04-27 no-reply check while batch 04 stays behind batch 03.
+Monitor replies across the 20 active outbound row(s); no additional expansion is unlocked until evidence lands.
 
 ## Batch 01
 
-Status: sent on 2026-04-22.
+Status: active outbound on 2026-04-22; 0 sent, 5 followed_up, 0 terminal row(s).
 
 | Priority | Target | Segment | Route | Send method |
 |---:|---|---|---|---|
@@ -25,7 +25,7 @@ Status: sent on 2026-04-22.
 
 ## Batch 02
 
-Status: sent on 2026-04-22 under an explicit operator override to the sequencing hold.
+Status: active outbound on 2026-04-22; 0 sent, 5 followed_up, 0 terminal row(s).
 
 | Priority | Target | Segment | Route | Send method |
 |---:|---|---|---|---|
@@ -37,7 +37,7 @@ Status: sent on 2026-04-22 under an explicit operator override to the sequencing
 
 ## Batch 03 contingency
 
-Status: prepared for the 2026-04-27 no-reply check; not part of the active send queue yet.
+Status: active outbound on 2026-04-28; 5 sent, 0 followed_up, 0 terminal row(s).
 
 | Priority | Target | Segment | Route | Send method |
 |---:|---|---|---|---|
@@ -49,7 +49,7 @@ Status: prepared for the 2026-04-27 no-reply check; not part of the active send 
 
 ## Batch 04 contingency
 
-Status: prepared as a second founder/operator contingency expansion; keep it out of the active send queue until batch 03 is exhausted after the 2026-04-27 check.
+Status: active outbound on 2026-04-28; 5 sent, 0 followed_up, 0 terminal row(s).
 
 | Priority | Target | Segment | Route | Send method |
 |---:|---|---|---|---|
@@ -64,6 +64,5 @@ Status: prepared as a second founder/operator contingency expansion; keep it out
 - `direct-email` means the public route is a real email address or `mailto:` link.
 - `manual-form` means the public route is a contact page, support widget, or contact-sales flow that needs human submission.
 - `manual` means the route needs a different delivery path before it can be sent.
-- Keep the first five founder/operator targets ahead of advisor outreach, matching `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.
-- Batch 03 is a contingency expansion and stays out of the active send queue until the 2026-04-27 no-reply check says more founder/operator targets are needed.
-- Batch 04 is a second contingency expansion and stays out of the active send queue until batch 03 is exhausted after the same check.
+- Total reply, bounce, or interview rows already recorded across all batches: 0.
+- Convert any real reply into repo evidence before changing positioning or expanding the list again.

@@ -64,3 +64,11 @@
 - Updated `scripts/build-validation-status.mjs` so generated notes describe whether batches 03 and 04 are still queued or already live, instead of repeating obsolete pre-send instructions.
 - Regenerated the validation artifacts with `npm run sync:validation-artifacts` and logged the deduplicated 2026-04-28 23:59 UTC no-reply checkpoint with `npm run log:validation-no-reply-check -- --timestamp '2026-04-28 23:59 UTC'`.
 - Next executable step: keep monitoring the active 20-row outbound set and convert the first real reply into a scored interview immediately.
+
+### Validation Send Plan Sync Repair
+
+- Re-checked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, the four outreach CSVs, and `buyer-validation-interview-log.csv`; confirmed again that no real reply, bounce, referral, or interview evidence exists yet, so no outreach row status changed.
+- Fixed `scripts/build-validation-send-plan.mjs` so `VALIDATION-OUTREACH-SEND-PLAN.md` is generated from actual CSV row state instead of stale pre-send assumptions.
+- Added the send-plan rebuild to `scripts/sync-validation-artifacts.mjs` so future artifact syncs cannot leave `VALIDATION-OUTREACH-SEND-PLAN.md` behind.
+- Regenerated validation artifacts with `npm run sync:validation-artifacts` and verified the send plan now reports batches 03 and 04 as active outbound on 2026-04-28 rather than queued contingencies.
+- Next executable step: keep monitoring replies across all 20 active outbound rows and convert the first real evidence into a scored interview immediately.

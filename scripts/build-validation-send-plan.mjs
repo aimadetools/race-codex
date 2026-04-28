@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const ROOT = process.cwd();
 const OUTPUT = join(ROOT, "VALIDATION-OUTREACH-SEND-PLAN.md");
+const TODAY = new Date().toISOString().slice(0, 10);
 
 function parseCsv(text) {
   const rows = [];
@@ -92,6 +93,72 @@ function classifyRoute(route) {
   return "manual";
 }
 
+function countStatuses(rows) {
+  return rows.reduce((counts, row) => {
+    const status = String(row.status || "").trim() || "unknown";
+    counts[status] = (counts[status] || 0) + 1;
+    return counts;
+  }, {});
+}
+
+function extractFirstEventDate(rows) {
+  const sentDates = [];
+  const followUpDates = [];
+  const anyDates = [];
+
+  for (const row of rows) {
+    const notes = String(row.notes || "");
+
+    for (const match of notes.matchAll(/Sent\s+(20\d{2}-\d{2}-\d{2})/g)) {
+      sentDates.push(match[1]);
+    }
+
+    for (const match of notes.matchAll(/Followed up\s+(20\d{2}-\d{2}-\d{2})/g)) {
+      followUpDates.push(match[1]);
+    }
+
+    for (const match of notes.matchAll(/\b(20\d{2}-\d{2}-\d{2})\b/g)) {
+      anyDates.push(match[1]);
+    }
+  }
+
+  const preferred = sentDates.length > 0 ? sentDates : followUpDates.length > 0 ? followUpDates : anyDates;
+  if (preferred.length === 0) {
+    return "unknown";
+  }
+
+  return preferred.sort()[0];
+}
+
+function describeBatchStatus(rows, { contingencyLabel = "" } = {}) {
+  const counts = countStatuses(rows);
+  const ready = counts.ready_for_send || 0;
+  const sent = counts.sent || 0;
+  const followedUp = counts.followed_up || 0;
+  const terminal = (counts.replied_positive || 0) + (counts.replied_negative || 0) + (counts.bounced || 0) + (counts.interview_completed || 0);
+  const firstEventDate = extractFirstEventDate(rows);
+  const waiting = sent + followedUp;
+
+  if (waiting > 0) {
+    return `Status: active outbound on ${firstEventDate}; ${sent} sent, ${followedUp} followed_up, ${terminal} terminal row(s).`;
+  }
+
+  if (ready > 0) {
+    const prefix = contingencyLabel
+      ? `${contingencyLabel} remains queued`
+      : "Prepared but not yet sent";
+    return `Status: ${prefix}; ${ready} ready_for_send row(s), ${terminal} terminal row(s).`;
+  }
+
+  return `Status: no active send rows; ${terminal} terminal row(s).`;
+}
+
+function countReplyRows(rows) {
+  return rows.filter((row) =>
+    ["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim())
+  ).length;
+}
+
 function planSection(title, rows) {
   const lines = [
     "| Priority | Target | Segment | Route | Send method |",
@@ -167,11 +234,24 @@ const directEmailCount = [...normalized01, ...normalized02, ...normalized03, ...
   (row) => row.sendMethod === "direct-email"
 ).length;
 
+const allRows = [batch01, batch02, batch03, batch04].flat();
+const totalWaitingForReplies = allRows.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
+const totalReplyRows = allRows.reduce((total, row) => {
+  return total + (["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim()) ? 1 : 0);
+}, 0);
+
+let currentPriority = "Monitor the active outreach queue for the first real reply and convert any real reply into a scored interview immediately.";
+if (totalReplyRows > 0) {
+  currentPriority = "Review the recorded reply rows, log the exact evidence, and convert any real conversation or referral into a scored interview.";
+} else if (totalWaitingForReplies > 0) {
+  currentPriority = `Monitor replies across the ${totalWaitingForReplies} active outbound row(s); no additional expansion is unlocked until evidence lands.`;
+}
+
 const batch03Section = normalized03.length
   ? [
       "## Batch 03 contingency",
       "",
-      "Status: prepared for the 2026-04-27 no-reply check; not part of the active send queue yet.",
+      describeBatchStatus(batch03, { contingencyLabel: "Batch 03 contingency" }),
       "",
       planSection("", normalized03)
     ].join("\n")
@@ -181,7 +261,7 @@ const batch04Section = normalized04.length
   ? [
       "## Batch 04 contingency",
       "",
-      "Status: prepared as a second founder/operator contingency expansion; keep it out of the active send queue until batch 03 is exhausted after the 2026-04-27 check.",
+      describeBatchStatus(batch04, { contingencyLabel: "Batch 04 contingency" }),
       "",
       planSection("", normalized04)
     ].join("\n")
@@ -190,26 +270,26 @@ const batch04Section = normalized04.length
 const output = [
   "# NoticeKit Validation Outreach Send Plan",
   "",
-  "Date: 2026-04-22",
+  `Date: ${TODAY}`,
   "",
-  "This plan translates the prepared outreach batches into the first operational send queue.",
-  "Batch 01 and batch 02 are now sent; use this plan for reply handling, interview conversion, and the batch 03 and batch 04 contingency checks.",
+  "This plan translates the current outreach CSV state into the active send and reply-handling queue.",
+  "Use it to see which batches are live, which are still queued, and what should happen next when evidence arrives.",
   "",
-  `Prepared direct-email targets identified: ${directEmailCount}`,
+  `Direct-email targets identified across all prepared batches: ${directEmailCount}`,
   "",
   "## Current Priority",
   "",
-  "Monitor founder replies from batch 01, convert real replies into scored interviews, and keep batch 03 reserved for the 2026-04-27 no-reply check while batch 04 stays behind batch 03.",
+  currentPriority,
   "",
   "## Batch 01",
   "",
-  "Status: sent on 2026-04-22.",
+  describeBatchStatus(batch01),
   "",
   planSection("", normalized01),
   [
     "## Batch 02",
     "",
-    "Status: sent on 2026-04-22 under an explicit operator override to the sequencing hold.",
+    describeBatchStatus(batch02),
     "",
     planSection("", normalized02)
   ].join("\n"),
@@ -220,9 +300,8 @@ const output = [
   "- `direct-email` means the public route is a real email address or `mailto:` link.",
   "- `manual-form` means the public route is a contact page, support widget, or contact-sales flow that needs human submission.",
   "- `manual` means the route needs a different delivery path before it can be sent.",
-  "- Keep the first five founder/operator targets ahead of advisor outreach, matching `VALIDATION-OUTREACH-SEND-RUNBOOK.md`.",
-  "- Batch 03 is a contingency expansion and stays out of the active send queue until the 2026-04-27 no-reply check says more founder/operator targets are needed.",
-  "- Batch 04 is a second contingency expansion and stays out of the active send queue until batch 03 is exhausted after the same check.",
+  `- Total reply, bounce, or interview rows already recorded across all batches: ${countReplyRows(batch01) + countReplyRows(batch02) + countReplyRows(batch03) + countReplyRows(batch04)}.`,
+  "- Convert any real reply into repo evidence before changing positioning or expanding the list again.",
   ""
 ].join("\n");
 

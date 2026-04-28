@@ -7,6 +7,7 @@ const ROOT = process.cwd();
 const TASKS = [
   { label: "Founder follow-up pass", script: "build-founder-follow-up-pass.mjs" },
   { label: "Advisor follow-up pass", script: "build-advisor-follow-up-pass.mjs" },
+  { label: "Validation send plan", script: "build-validation-send-plan.mjs" },
   { label: "Homepage copy refresh queue", script: "build-homepage-copy-refresh-queue.mjs" },
   { label: "Validation positioning brief", script: "build-validation-positioning-brief.mjs" },
   { label: "Validation decision brief", script: "build-validation-decision-brief.mjs" },
