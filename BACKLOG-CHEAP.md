@@ -20,6 +20,8 @@ These tasks are routine and can be handled quickly.
 
 - Keep a lightweight weekly validation-memory cleanup pass so `PROGRESS.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` do not bloat again with no-op monitoring entries.
 
+Completed work is collapsed below so only live tasks stay in P0-P2.
+
 ## Completed Summary
 
 - Foundation complete: site launch, checkout, intake/inbox persistence, follow-up automation, validation artifact/send-plan generation, outreach through batch 04, fulfillment exports, SEO, and mobile polish.

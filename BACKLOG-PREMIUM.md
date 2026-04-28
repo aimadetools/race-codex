@@ -15,6 +15,8 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 - Reassess hosted monitoring, localization packs, subscription tiers, and pricing changes only after real buyers or partners request them.
 
+Completed work is collapsed below so only live tasks stay in P0-P2.
+
 ## Completed Summary
 
 - Launch foundation complete: pricing/checkout, legal positioning, competitor matrix, paid-kit contents, outreach packets, self-audit follow-up loop, positioning brief generation, and contingency prep/sends.
