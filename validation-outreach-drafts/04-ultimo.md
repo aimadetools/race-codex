@@ -7,7 +7,7 @@ Source URL: https://www.ultimo.com/policies/privacy/subprocessors
 Public signal: Subprocessor page lists SaaS tools such as HubSpot, OpenAI, and Vanta and the site exposes info@ultimo.com as a public contact route.
 Suggested contact path: Public contact address from the site footer/contact area.
 Public contact route: info@ultimo.com
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

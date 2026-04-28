@@ -7,7 +7,7 @@ Source URL: https://dromo.io/legal/subprocessors
 Public signal: Public subprocessor list details service providers, and the privacy policy says SCC copies can be requested by email.
 Suggested contact path: Privacy contact or quote path from the public site.
 Public contact route: privacy@dromo.io
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

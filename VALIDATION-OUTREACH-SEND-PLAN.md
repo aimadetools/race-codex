@@ -5,7 +5,7 @@ Date: 2026-04-22
 This plan translates the prepared outreach batches into the first operational send queue.
 Batch 01 and batch 02 are now sent; use this plan for reply handling, interview conversion, and the batch 03 and batch 04 contingency checks.
 
-Prepared direct-email targets identified: 17
+Prepared direct-email targets identified: 18
 
 ## Current Priority
 
@@ -42,7 +42,7 @@ Status: prepared for the 2026-04-27 no-reply check; not part of the active send 
 | Priority | Target | Segment | Route | Send method |
 |---:|---|---|---|---|
 | 1 | Dromo | Founder/operator | privacy@dromo.io | direct-email |
-| 2 | SaaSync | Founder/operator | https://www.saasync.com/ -> Contact Us | manual-form |
+| 2 | Sense | Founder/operator | support@sensehq.com | direct-email |
 | 3 | Salesroom | Founder/operator | help@salesroom.com | direct-email |
 | 4 | Fieldguide | Founder/operator | privacy@fieldguide.io | direct-email |
 | 5 | Thoropass | Founder/operator | privacy@thoropass.com | direct-email |

@@ -7,7 +7,7 @@ Source URL: https://swarmsync.ai/legal/subprocessors
 Public signal: Page says SwarmSync enters DPAs with subprocessors, links a full DPA page, and routes questions to privacy@swarmsync.ai.
 Suggested contact path: Privacy email listed on the subprocessor page.
 Public contact route: privacy@swarmsync.ai
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

@@ -7,7 +7,7 @@ Source URL: https://www.fieldguide.io/privacy-policy
 Public signal: Privacy policy says customers may contact privacy@fieldguide.io to sign a DPA and points to a public subprocessor page.
 Suggested contact path: Privacy contact listed in the policy.
 Public contact route: privacy@fieldguide.io
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

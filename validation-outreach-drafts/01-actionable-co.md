@@ -7,7 +7,7 @@ Source URL: https://actionable.co/trust/subprocessor-list/
 Public signal: Sub-processor list is updated regularly, and the page gives a privacy officer contact at privacy@actionable.co.
 Suggested contact path: Privacy officer listed on the sub-processor page.
 Public contact route: privacy@actionable.co
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

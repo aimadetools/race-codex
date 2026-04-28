@@ -7,7 +7,7 @@ Source URL: https://www.salesroom.com/subprocessors
 Public signal: Subprocessors page says customers are informed when a subprocessor is added and some vendors require Contact Us before a DPA can be shared.
 Suggested contact path: Contact-us page or support email from the public site.
 Public contact route: help@salesroom.com
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

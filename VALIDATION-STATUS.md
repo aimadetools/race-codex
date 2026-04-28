@@ -1,6 +1,6 @@
 # NoticeKit Validation Status
 
-Date: 2026-04-26
+Date: 2026-04-28
 
 ## Current Read
 
@@ -13,10 +13,10 @@ Date: 2026-04-26
 
 ## Batch Snapshot
 
-- Founder/operator batch 01: 5 sent, first sent on 2026-04-22
-- Advisor batch 02: 5 sent, first sent on 2026-04-22
-- Contingency batch 03: 0 sent, 5 ready_for_send
-- Contingency batch 04: 0 sent, 5 ready_for_send
+- Founder/operator batch 01: 0 sent, 5 followed_up, first sent on 2026-04-22
+- Advisor batch 02: 0 sent, 5 followed_up, first sent on 2026-04-22
+- Contingency batch 03: 5 sent, first sent on 2026-04-28
+- Contingency batch 04: 5 sent, first sent on 2026-04-28
 
 ## Reply Watch
 
@@ -33,8 +33,8 @@ Date: 2026-04-26
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.
-- Decision brief: `VALIDATION-DECISION-BRIEF.md` says: Stand by until 2026-04-27 UTC; keep monitoring `COMMUNITY-FEEDBACK.md` and convert any real reply into an interview.
-- Positioning brief: `VALIDATION-POSITIONING-BRIEF.md` says: Stand by until 2026-04-27 UTC; wait for scored replies or interviews before changing positioning.
+- Decision brief: `VALIDATION-DECISION-BRIEF.md` says: Use `VALIDATION-POSITIONING-BRIEF.md` as the positioning tie-breaker: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
+- Positioning brief: `VALIDATION-POSITIONING-BRIEF.md` says: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
 - Homepage advisor-handoff copy refresh queue: not triggered.
 - Queue file: `HOMEPAGE-COPY-REFRESH-QUEUE.md` is stand by.
 - Do not send batch 03 before the no-reply check date documented in the runbook.

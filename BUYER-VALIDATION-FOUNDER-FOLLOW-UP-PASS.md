@@ -20,7 +20,7 @@ Batch 01 currently has 5 sent rows and no recorded replies in the outreach CSV.
 | 1 | ReadMe | Founder/operator | https://readme.com/pricing -> Contact Sales; docs.readme.com support widget | https://readme.com/pricing -> Contact Sales; docs.readme.com support widget | manual-form |
 | 2 | EF Loads | Founder/operator | support@efloads.com or legal@efloads.com | support@efloads.com | direct-email |
 | 3 | BMBerry | Founder/operator | support@bmberry.com | support@bmberry.com | direct-email |
-| 4 | RootCause / Bryntum | Founder/operator | https://therootcause.io/contact/ or dpo@bryntum.com | https://therootcause.io/contact/ or dpo@bryntum.com | direct-email |
+| 4 | RootCause / Bryntum | Founder/operator | https://therootcause.io/contact/ or dpo@bryntum.com | dpo@bryntum.com | direct-email |
 | 5 | Deployable AI Services | Founder/operator | mbinghelaita@deployableai.ae | mbinghelaita@deployableai.ae | direct-email |
 
 ## Follow-Up Copy

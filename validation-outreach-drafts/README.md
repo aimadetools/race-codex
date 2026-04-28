@@ -32,7 +32,7 @@ The direct-email targets also have RFC-style .eml exports in validation-outreach
 - 04-coto-waddington.md
 - 05-altum-legal.md
 - 01-dromo.md
-- 02-saasync.md
+- 02-sense.md
 - 03-salesroom.md
 - 04-fieldguide.md
 - 05-thoropass.md

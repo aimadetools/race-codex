@@ -7,7 +7,7 @@ Source URL: https://thoropass.com/trust-center/
 Public signal: Trust center and privacy policy expose a public trust-center access flow plus a privacy contact for privacy/security questions.
 Suggested contact path: Trust center access request or privacy contact from the public site.
 Public contact route: privacy@thoropass.com
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

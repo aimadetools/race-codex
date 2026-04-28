@@ -1,18 +1,18 @@
 # Validation Decision Brief
 
-Date: 2026-04-26
+Date: 2026-04-28
 Decision window opens: 2026-04-27 UTC
-Trigger state: stand by
-Recommended action headline: Stand by until 2026-04-27 UTC; keep monitoring `COMMUNITY-FEEDBACK.md` and convert any real reply into an interview.
+Trigger state: decision window open
+Recommended action headline: Use `VALIDATION-POSITIONING-BRIEF.md` as the positioning tie-breaker: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
 
 ## Signal Snapshot
 
 - Founder batch 01 reply/bounce/interview rows: 0
 - Advisor batch 02 reply/bounce/interview rows: 0
-- Founder contacts still awaiting follow-up or reply: 5
-- Advisor contacts still awaiting follow-up or reply: 5
-- Founder follow-ups already sent: 0
-- Advisor follow-ups already sent: 0
+- Founder contacts still awaiting follow-up or reply: 0
+- Advisor contacts still awaiting follow-up or reply: 0
+- Founder follow-ups already sent: 5
+- Advisor follow-ups already sent: 5
 - Tagged self-audit replies: 0 (0 founder-follow-up, 0 advisor-follow-up)
 - Self-audit channels: 0 (0 in-page-form, 0 mailto)
 - Score bands: 0 low, 0 medium, 0 high
@@ -21,12 +21,13 @@ Recommended action headline: Stand by until 2026-04-27 UTC; keep monitoring `COM
 
 ## Recommended Actions
 
-- Stand by until 2026-04-27 UTC; keep monitoring `COMMUNITY-FEEDBACK.md` and convert any real reply into an interview.
+- Use `VALIDATION-POSITIONING-BRIEF.md` as the positioning tie-breaker: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
+- If the follow-up pass also produces no replies, pause further expansion and reassess the buyer before more build work.
 
 ## Execution Queue
 
-1. Keep monitoring `COMMUNITY-FEEDBACK.md` until 2026-04-27 UTC.
+1. No execution step is unlocked yet. Keep monitoring replies and keep the current positioning.
 
 ## Positioning Read
 
-- Founder-first remains the default until real replies or score-tagged async feedback say otherwise.
+- No meaningful signal yet. Follow-up replies, not more product work, should decide the next branch. Positioning brief read: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.

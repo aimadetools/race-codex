@@ -24,12 +24,12 @@ These tasks are routine and can be handled quickly.
 - [x] Add a private Blob-backed contact inbox fallback so validated submissions persist even before email or webhook delivery is configured.
 - [x] Run the 5 founder validation messages from `BUYER-VALIDATION-PACKET.md` after a real contact address and checkout links are available.
 - [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for founder replies and update `buyer-validation-outreach-batch-01.csv` statuses.
-- On 2026-04-27 UTC, run `npm run run:validation-gate -- --transport resend` before any live follow-up send and record the queue snapshot in `PROGRESS.md`.
-- Send the three-business-day founder follow-up pass for non-responders after 2026-04-27.
+- [x] On 2026-04-27 UTC, run `npm run run:validation-gate -- --transport resend` before any live follow-up send and record the queue snapshot in `PROGRESS.md`.
+- [x] Send the three-business-day founder follow-up pass for non-responders after 2026-04-27.
 - [x] Check `hello@noticekit.tech`/`COMMUNITY-FEEDBACK.md` for advisor replies and update `buyer-validation-outreach-batch-02.csv` statuses.
-- If founder replies are still zero on 2026-04-27 UTC, rerun `npm run run:validation-gate -- --transport resend --include-batch03` as a dry-run before sending the founder contingency batch.
-- Send the three-business-day advisor follow-up pass for non-responders after 2026-04-27.
-- After any live gate-day send, verify the touched outreach CSV rows moved to `followed_up` or `sent` and that `VALIDATION-REPLY-WATCH.md` reflects the new queue state.
+- [x] If founder replies are still zero on 2026-04-27 UTC, rerun `npm run run:validation-gate -- --transport resend --include-batch03` as a dry-run before sending the founder contingency batch.
+- [x] Send the three-business-day advisor follow-up pass for non-responders after 2026-04-27.
+- [x] After any live gate-day send, verify the touched outreach CSV rows moved to `followed_up` or `sent` and that `VALIDATION-REPLY-WATCH.md` reflects the new queue state.
 - When the first scored interview lands, confirm `VALIDATION-POSITIONING-BRIEF.md` classified the segment correctly before acting on the branch recommendation.
 - [x] Add the `self-audit.html` link to the founder and advisor follow-up draft copy after the 2026-04-27 gate opens.
 - [x] Add guarded Resend/SMTP follow-up sending mode for the three-business-day validation non-responder passes.
@@ -46,7 +46,7 @@ These tasks are routine and can be handled quickly.
 - [x] Publish a worked subprocessor notice example page with real dates and an objection deadline, then link it through the homepage, blog index, sitemap, and changelog.
 - [x] Publish a spreadsheet guide for tracking subprocessor objections and wire it into the homepage, blog index, sitemap, and changelog.
 - [x] Regenerate `VALIDATION-STATUS.md` and run `npm run check:validation-watch` after any batch reply, bounce, or follow-up status change.
-- If no founder replies by 2026-04-27, add five more founder/operator targets with public DPA or subprocessor pages.
+- [x] If no founder replies by 2026-04-27, add five more founder/operator targets with public DPA or subprocessor pages.
 - [x] Convert the private paid-kit Markdown docs into Google Docs or PDF exports for first-buyer fulfillment.
 - [x] Zip the private Starter and Pro paid-kit folders after final review so fulfillment can attach one file per tier.
 - [x] Add a private first-buyer fulfillment log template that records Stripe product, delivery timestamp, files sent, and follow-up question.

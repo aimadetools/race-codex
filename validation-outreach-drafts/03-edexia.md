@@ -7,7 +7,7 @@ Source URL: https://edexia.com/privacy/subprocessor-list
 Public signal: Subprocessor list invites future-change questions through the privacy officer contact at admin@edexia.ai.
 Suggested contact path: Privacy officer contact listed on the page.
 Public contact route: admin@edexia.ai
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

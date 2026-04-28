@@ -26,7 +26,7 @@ The execution CSV is `buyer-validation-outreach-batch-03.csv`.
 | Priority | Company | Segment | Why it fits |
 |---:|---|---|---|
 | 1 | Dromo | Founder/operator | Public subprocessor list details service providers, and the privacy policy says SCC copies can be requested by email. |
-| 2 | SaaSync | Founder/operator | Public subprocessor list and privacy policy say SaaSync can enter a DPA with SCCs by contacting the address listed in the policy. |
+| 2 | Sense | Founder/operator | Public subprocessor page lists current subprocessors and says questions about subprocessors or data handling can be sent to support@sensehq.com. |
 | 3 | Salesroom | Founder/operator | Subprocessors page says customers are informed when a subprocessor is added and some vendors require Contact Us before a DPA can be shared. |
 | 4 | Fieldguide | Founder/operator | Privacy policy says customers may contact privacy@fieldguide.io to sign a DPA and points to a public subprocessor page. |
 | 5 | Thoropass | Founder/operator | Trust center and privacy policy expose a public trust-center access flow plus a privacy contact for privacy/security questions. |

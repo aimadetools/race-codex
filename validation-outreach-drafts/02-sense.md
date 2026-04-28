@@ -1,13 +1,13 @@
-# SaaSync
+# Sense
 
 Batch: batch-03
 Priority: 2
 Segment: Founder/operator
-Source URL: https://www.saasync.com/subprocessor-list/
-Public signal: Public subprocessor list and privacy policy say SaaSync can enter a DPA with SCCs by contacting the address listed in the policy.
-Suggested contact path: Website Contact Us button or support center from the public site.
-Public contact route: https://www.saasync.com/ -> Contact Us
-Status: ready_for_send
+Source URL: https://www.sensehq.com/legal/subprocessors
+Public signal: Public subprocessor page lists current subprocessors and says questions about subprocessors or data handling can be sent to support@sensehq.com.
+Suggested contact path: Subprocessor contact email on the public page.
+Public contact route: support@sensehq.com
+Status: sent
 
 ## First Touch
 
@@ -15,7 +15,7 @@ Subject: Quick question on your subprocessor notice process
 
 Hi there,
 
-I noticed SaaSync has public DPA, privacy, or subprocessor language, but I could not tell how the operational side works when the vendor list changes.
+I noticed Sense has public DPA, privacy, or subprocessor language, but I could not tell how the operational side works when the vendor list changes.
 
 I am validating NoticeKit, a small operational kit for SaaS teams that need notice copy, objection-window tracking, and an evidence log before they are ready for a full trust center. I am not offering legal advice; I am trying to understand the workflow.
 
@@ -36,7 +36,7 @@ The specific question is whether a one-change subprocessor notice kit would save
 
 If it helps, the readiness self-audit is here: https://noticekit.tech/self-audit.html?source=founder-follow-up.
 
-Worth a 15-minute feedback call, or is this owned by someone else at SaaSync?
+Worth a 15-minute feedback call, or is this owned by someone else at Sense?
 
 Best,
 NoticeKit

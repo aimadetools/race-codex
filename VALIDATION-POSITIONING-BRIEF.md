@@ -1,10 +1,10 @@
 # Validation Positioning Brief
 
-Date: 2026-04-26
+Date: 2026-04-28
 Decision window opens: 2026-04-27 UTC
-Trigger state: stand by
-Recommended branch: founder-first hold
-Recommended headline: Stand by until 2026-04-27 UTC; wait for scored replies or interviews before changing positioning.
+Trigger state: pause and reassess
+Recommended branch: pause expansion
+Recommended headline: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
 
 ## Segment Scorecard
 
@@ -33,6 +33,6 @@ Recommended headline: Stand by until 2026-04-27 UTC; wait for scored replies or 
 
 ## Recommendation
 
-- Stand by until 2026-04-27 UTC; wait for scored replies or interviews before changing positioning.
-- There is not enough direct evidence yet to move away from the current founder-first message.
+- Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
+- Silence is not a positioning win for either segment, so more build or list expansion would be low-signal.
 - Rebuild this brief after every recorded reply or interview so the founder-vs-advisor call stays evidence-backed.

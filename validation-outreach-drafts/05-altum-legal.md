@@ -7,7 +7,7 @@ Source URL: https://www.altumlegal.com/the-data-processing-addendum
 Public signal: Public startup-oriented DPA guidance explains vendor DPAs and includes clear no-attorney-client disclaimer positioning.
 Suggested contact path: Public website contact path or startup legal inquiry.
 Public contact route: info@altumlegal.com or https://altumlegal.com/contact
-Status: sent
+Status: followed_up
 
 ## First Touch
 

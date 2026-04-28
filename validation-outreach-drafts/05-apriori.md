@@ -7,7 +7,7 @@ Source URL: https://www.apriori.com/data-subprocessors/
 Public signal: Public subprocessor list names cloud, support, email, and analytics vendors and includes SCC/DPF transfer mechanisms.
 Suggested contact path: Public contact route from the contact page or info@apriori.com.
 Public contact route: info@apriori.com
-Status: ready_for_send
+Status: sent
 
 ## First Touch
 

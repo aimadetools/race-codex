@@ -98,7 +98,8 @@ function escapeTableCell(value) {
 
 function extractSentDate(rows) {
   for (const row of rows) {
-    if (String(row.status || "").trim() !== "sent") {
+    const status = String(row.status || "").trim();
+    if (!["sent", "followed_up"].includes(status)) {
       continue;
     }
 
@@ -130,7 +131,7 @@ function addBusinessDays(isoDate, businessDays) {
 
 const rows = parseCsv(await readFile(BATCH_CSV, "utf8"));
 const followUpRows = rows
-  .filter((row) => String(row.status || "").trim() === "sent")
+  .filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim()))
   .sort((a, b) => Number(a.priority || 0) - Number(b.priority || 0))
   .map((row) => {
     const priorRecipient = extractPriorSendRecipient(row);
