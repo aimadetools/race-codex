@@ -24,4 +24,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, checkout, intake/inbox, follow-up, validation, outreach through batch 04, fulfillment, SEO, mobile, ops, accessibility, analytics, supporting pages, and visual refresh work.
+- Completed launch, checkout, intake/inbox, follow-up, validation, outreach through batch 04, fulfillment, SEO, mobile, ops, accessibility, analytics, supporting pages, visual refresh, and maintenance work.
