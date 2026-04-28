@@ -19,4 +19,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch foundation, ops groundwork, and option-analysis work are complete: pricing/checkout, legal positioning, competitor matrix, paid-kit contents, outreach packets, self-audit follow-up loop, positioning brief generation, contingency prep/sends, first-buyer reconciliation view, generator model, CSV format, evidence workflow, consultant referral strategy, partner preview PDF, outreach tracker, benchmark methodology, hosted monitoring evaluation, localized pack exploration, subscription-tier decision, and pricing-change plan.
+- Completed launch foundation, ops groundwork, and option-analysis work: pricing, legal positioning, outreach packets, follow-up loop, positioning briefs, contingency prep/sends, reconciliation view, generator model, evidence workflow, partner tooling, monitoring evaluation, localized packs, subscription tiers, and pricing-change planning.

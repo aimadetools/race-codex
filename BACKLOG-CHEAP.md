@@ -24,4 +24,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Foundation, support, and polish work are complete: site launch, checkout, intake/inbox persistence, follow-up automation, validation artifact/send-plan generation, outreach through batch 04, fulfillment exports, SEO, mobile polish, advisor batch prep, reply-to-interview ops notes, validation draft regeneration, self-audit ops guidance, SEO/accessibility improvements, self-audit result refinements, analytics, crawl basics, metadata, error page, changelog, testimonial scaffold, evergreen preview copy, footer/contact polish, supporting pages, and visual refresh.
+- Completed foundation, support, and polish work: launch, checkout, intake/inbox persistence, follow-up automation, validation artifacts, outreach through batch 04, fulfillment exports, SEO, mobile polish, ops notes, accessibility, analytics, supporting pages, and visual refresh.
