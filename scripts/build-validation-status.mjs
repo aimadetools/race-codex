@@ -196,6 +196,26 @@ function renderBatchSummary(label, rows) {
   return parts.join(", ");
 }
 
+function describeBatchPosition(label, rows) {
+  const ready = countBy(rows, "status", "ready_for_send");
+  const sent = countBy(rows, "status", "sent");
+  const followedUp = countBy(rows, "status", "followed_up");
+  const terminal = countBy(rows, "status", "replied_positive")
+    + countBy(rows, "status", "replied_negative")
+    + countBy(rows, "status", "bounced")
+    + countBy(rows, "status", "interview_completed");
+
+  if (ready > 0) {
+    return `- ${label} is still queued as contingency with ${ready} ready_for_send row(s).`;
+  }
+
+  if (sent + followedUp > 0) {
+    return `- ${label} has already been sent and is now waiting on replies (${sent} sent, ${followedUp} followed_up, ${terminal} terminal row(s)).`;
+  }
+
+  return `- ${label} has no active rows yet.`;
+}
+
 const now = new Date().toISOString().slice(0, 10);
 const founderBatchRows = parseCsv(await readFile(BATCH_FILES[0].path, "utf8"));
 const advisorBatchRows = parseCsv(await readFile(BATCH_FILES[1].path, "utf8"));
@@ -231,8 +251,8 @@ const output = [
   `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` for replies and convert any real reply into an interview.`,
   `- Founder follow-up pass due: ${followUpDate}.`,
   `- Advisor follow-up pass due: ${advisorFollowUpDate}.`,
-  "- Batch 03 remains contingency-only until the 2026-04-27 no-reply check.",
-  "- Batch 04 remains a second contingency expansion until batch 03 is exhausted after the same check.",
+  describeBatchPosition("Batch 03", contingencyRows),
+  describeBatchPosition("Batch 04", contingencyTwoRows),
   "",
   "## Batch Snapshot",
   "",

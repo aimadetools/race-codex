@@ -95,6 +95,10 @@ function countWaiting(rows) {
   return rows.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 }
 
+function countPendingFollowUps(rows) {
+  return rows.filter((row) => String(row.status || "").trim() === "sent").length;
+}
+
 function parseDate(value) {
   const match = String(value || "").match(/\d{4}-\d{2}-\d{2}/);
   return match ? match[0] : "";
@@ -129,6 +133,8 @@ function buildActionQueue({
   dueFollowUps,
   today,
   founderReplies,
+  founderPendingFollowUps,
+  advisorPendingFollowUps,
   contingencyReady,
   contingencyTwoReady,
   signals
@@ -146,10 +152,12 @@ function buildActionQueue({
   }
 
   if (dueFollowUps.length > 0) {
-    const founderDue = dueFollowUps.some((item) => item.label === "Founder follow-up pass");
-    const advisorDue = dueFollowUps.some((item) => item.label === "Advisor follow-up pass");
+    const founderDue = dueFollowUps.some((item) => item.label === "Founder follow-up pass") && founderPendingFollowUps > 0;
+    const advisorDue = dueFollowUps.some((item) => item.label === "Advisor follow-up pass") && advisorPendingFollowUps > 0;
 
-    actions.push("Run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` is passing before any non-responder follow-up send.");
+    if (founderDue || advisorDue) {
+      actions.push("Run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` is passing before any non-responder follow-up send.");
+    }
 
     if (founderDue) {
       actions.push("Dry-run the founder follow-up queue with `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend`.");
@@ -175,7 +183,7 @@ function buildActionQueue({
   }
 
   if (actions.length === 0) {
-    actions.push("- Keep monitoring `COMMUNITY-FEEDBACK.md` until the follow-up window opens.");
+    actions.push("Keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for replies from the active outreach batches.");
   }
 
   return actions;
@@ -189,6 +197,8 @@ function buildUpcomingQueue({
   founderWaiting,
   advisorWaiting,
   founderReplies,
+  founderPendingFollowUps,
+  advisorPendingFollowUps,
   contingencyReady,
   contingencyTwoReady,
   signals
@@ -209,13 +219,13 @@ function buildUpcomingQueue({
     const founderDue = futureFollowUps.some((item) => item.label === "Founder follow-up pass");
     const advisorDue = futureFollowUps.some((item) => item.label === "Advisor follow-up pass");
 
-    if (founderDue && founderWaiting > 0) {
+    if (founderDue && founderPendingFollowUps > 0) {
       const dueDate = futureFollowUps.find((item) => item.label === "Founder follow-up pass")?.due || "the due date";
       upcoming.push(`On ${dueDate}, dry-run founder follow-ups with \`node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend\`.`);
       upcoming.push(`On ${dueDate}, send founder follow-ups with \`node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
     }
 
-    if (advisorDue && advisorWaiting > 0) {
+    if (advisorDue && advisorPendingFollowUps > 0) {
       const dueDate = futureFollowUps.find((item) => item.label === "Advisor follow-up pass")?.due || "the due date";
       upcoming.push(`On ${dueDate}, dry-run advisor follow-ups with \`node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend\`.`);
       upcoming.push(`On ${dueDate}, send advisor follow-ups with \`node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
@@ -277,6 +287,8 @@ async function main() {
   });
   const founderWaiting = countWaiting(parsedBatches[0].rows);
   const advisorWaiting = countWaiting(parsedBatches[1].rows);
+  const founderPendingFollowUps = countPendingFollowUps(parsedBatches[0].rows);
+  const advisorPendingFollowUps = countPendingFollowUps(parsedBatches[1].rows);
 
   const lines = [
     "# Validation Reply Watch",
@@ -299,6 +311,8 @@ async function main() {
     dueFollowUps,
     today,
     founderReplies,
+    founderPendingFollowUps,
+    advisorPendingFollowUps,
     contingencyReady,
     contingencyTwoReady,
     signals
@@ -314,6 +328,8 @@ async function main() {
     founderWaiting,
     advisorWaiting,
     founderReplies,
+    founderPendingFollowUps,
+    advisorPendingFollowUps,
     contingencyReady,
     contingencyTwoReady,
     signals

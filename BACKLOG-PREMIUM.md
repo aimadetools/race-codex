@@ -4,37 +4,16 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer: interview 5 SaaS founders, 3 fractional DPOs, and 2 startup attorneys about subprocessor notice pain. Founder/operator batch 01 and advisor batch 02 were sent on 2026-04-22; next premium work is converting replies into scored interviews and, on or after 2026-04-27 UTC, using `npm run run:validation-gate -- --transport resend` plus the decision briefs to decide whether the offer needs a positioning change before more building.
-- Decide whether to shift the positioning from founder-first subprocessor notices to advisor-first vendor-change review packets if the 2026-04-27 tagged self-audit follow-up produces stronger advisor signals than founder signals.
-- [x] Resolve or replace the remaining manual SaaSync contingency target in batch 03 so the last founder expansion row can be sent without guessing at the HelpScout widget flow from the shell.
-- [x] Reduce validation reply friction by adding an in-page self-audit feedback submit path that captures source tag, ownership signal, score band, and top gaps without relying on `mailto`.
-- [x] Automate an evidence-backed founder-vs-advisor positioning brief so the 2026-04-27 branch decision uses scored interviews and tagged async replies instead of manual synthesis.
-- [x] Use the new readiness self-audit as the follow-up hook after 2026-04-27 if validation replies are still at zero; decide whether the scorecard exposes enough pain to justify another founder batch or a positioning change.
-- [x] Build a browser-only subprocessor notice readiness self-audit so founder prospects can score operational gaps before choosing Starter, Pro, or Concierge Audit.
-- [x] Build fulfillment-ready Starter and Pro paid-kit files so live Stripe purchases can be manually delivered without another product-spec pass.
-- [x] Prepare the first five founder/operator validation outreach targets and messages for execution after contact and checkout setup are complete.
-- [x] Prepare the three fractional DPO/privacy consultant and two startup attorney validation outreach targets and messages for execution after contact and checkout setup are complete.
-- [x] Adapt checkout strategy to the human response by switching launch setup from delayed Lemon Squeezy onboarding to available Stripe Payment Links.
-- [x] Decide whether to target SaaS founders directly or privacy consultants as the main channel.
-- [x] Design the paid Starter and Pro kit contents so the $29 and $79 tiers feel materially different.
-- [x] Decide payment provider based on country support, checkout friction, fees, and digital download handling.
-- [x] Draft legal disclaimers and positioning language that avoids implying legal advice.
-- [x] Create a competitor matrix against Visualping, generic DPA templates, trust centers, and manual spreadsheets.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-04-28: batch 01 founder follow-ups sent, batch 02 advisor follow-ups sent, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 replies/interviews logged.
+- Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
+- ✅ Core launch foundation: pricing and checkout path, legal positioning, competitor matrix, paid-kit contents, founder/advisor outreach packets, self-audit follow-up loop, positioning brief generation, and contingency batch prep/sends.
 
 ## P1
 
-- [x] Build a first-buyer ops view that can reconcile Stripe buyer emails, contact inbox submissions, and manual fulfillment log rows once the first paid customer or tagged self-audit reply lands.
-- [x] Design the local notice generator data model: vendors, purpose, processing region, data categories, effective date, notice date, objection deadline, and customer segment.
-- [x] Design CSV import/export format that can survive user edits in Google Sheets and Excel.
-- [x] Create a customer evidence workflow that works without backend storage.
-- [x] Build consultant referral strategy, including white-label rights, coupon codes, and partner terms.
-- [x] Prepare a partner preview PDF from the Pro kit manifest.
-- [x] Create a manual consultant partner outreach tracker until a form endpoint or CRM exists.
-- [x] Define the first benchmark report methodology for reviewing 50 public subprocessor pages.
+- Prepare the first benchmark report only after at least one reply clarifies whether founders or advisors are the sharper wedge for public teardown content.
+- ✅ Ops and partner groundwork: first-buyer reconciliation view, generator data model, CSV format, evidence workflow, consultant referral strategy, partner preview PDF, outreach tracker, and benchmark methodology.
 
 ## P2
 
-- [x] Evaluate whether hosted monitoring is worth building after the first 10 paid customers.
-- [x] Explore localized packs for UK GDPR, EU GDPR, and US enterprise procurement workflows.
-- [x] Design a recurring subscription tier only if customers explicitly ask for reminders or hosted notices.
-- [x] Write a defensible pricing-change plan after the first five sales.
+- Reassess hosted monitoring, localization packs, subscription tiers, and pricing changes only after real buyers or partners request them.
+- ✅ Longer-range option analysis: hosted monitoring evaluation, localized pack exploration, subscription-tier decision, and pricing-change plan.

@@ -13,6 +13,8 @@ Recommended action headline: Use `VALIDATION-POSITIONING-BRIEF.md` as the positi
 - Advisor contacts still awaiting follow-up or reply: 0
 - Founder follow-ups already sent: 5
 - Advisor follow-ups already sent: 5
+- Batch 03 active outbound rows: 5
+- Batch 04 active outbound rows: 5
 - Tagged self-audit replies: 0 (0 founder-follow-up, 0 advisor-follow-up)
 - Self-audit channels: 0 (0 in-page-form, 0 mailto)
 - Score bands: 0 low, 0 medium, 0 high

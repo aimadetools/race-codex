@@ -16,8 +16,4 @@
 
 ## Next Action
 
-- Run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` is passing before any non-responder follow-up send.
-- Dry-run the founder follow-up queue with `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend`.
-- Send the founder follow-up queue with `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend`.
-- Dry-run the advisor follow-up queue with `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend`.
-- Send the advisor follow-up queue with `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend`.
+- Keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for replies from the active outreach batches.

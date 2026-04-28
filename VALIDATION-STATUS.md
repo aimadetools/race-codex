@@ -8,8 +8,8 @@ Date: 2026-04-28
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` for replies and convert any real reply into an interview.
 - Founder follow-up pass due: 2026-04-27 UTC.
 - Advisor follow-up pass due: 2026-04-27 UTC.
-- Batch 03 remains contingency-only until the 2026-04-27 no-reply check.
-- Batch 04 remains a second contingency expansion until batch 03 is exhausted after the same check.
+- Batch 03 has already been sent and is now waiting on replies (5 sent, 0 followed_up, 0 terminal row(s)).
+- Batch 04 has already been sent and is now waiting on replies (5 sent, 0 followed_up, 0 terminal row(s)).
 
 ## Batch Snapshot
 

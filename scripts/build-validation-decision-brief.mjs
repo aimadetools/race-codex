@@ -182,6 +182,8 @@ const founderFollowedUp = countByStatus(founderRows, ["followed_up"]);
 const advisorFollowedUp = countByStatus(advisorRows, ["followed_up"]);
 const batch03Ready = countByStatus(batch03Rows, ["ready_for_send"]);
 const batch04Ready = countByStatus(batch04Rows, ["ready_for_send"]);
+const batch03Sent = countByStatus(batch03Rows, ["sent", "followed_up"]);
+const batch04Sent = countByStatus(batch04Rows, ["sent", "followed_up"]);
 const signals = extractSignals(feedbackText);
 const gateOpen = today >= GATE_DATE;
 const shouldQueueAdvisorPivot = signals.advisorOwnership > signals.founderOwnership && signals.advisorOwnership > 0;
@@ -279,6 +281,8 @@ const output = [
   `- Advisor contacts still awaiting follow-up or reply: ${advisorWaiting}`,
   `- Founder follow-ups already sent: ${founderFollowedUp}`,
   `- Advisor follow-ups already sent: ${advisorFollowedUp}`,
+  `- Batch 03 active outbound rows: ${batch03Sent}`,
+  `- Batch 04 active outbound rows: ${batch04Sent}`,
   `- Tagged self-audit replies: ${signals.founderFollowUpReplies + signals.advisorFollowUpReplies} (${signals.founderFollowUpReplies} founder-follow-up, ${signals.advisorFollowUpReplies} advisor-follow-up)`,
   `- Self-audit channels: ${signals.channels.length} (${signals.inPageFormChannels} in-page-form, ${signals.mailtoChannels} mailto)`,
   `- Score bands: ${signals.lowScores} low, ${signals.mediumScores} medium, ${signals.highScores} high`,
