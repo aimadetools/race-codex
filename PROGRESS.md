@@ -30,7 +30,7 @@
 
 ### Reply Watch Maintenance
 
-- Ran `npm run run:validation-maintenance` at 2026-04-28 23:28 UTC; it rechecked the reply watch, verified self-audit follow-up QA, synced the validation artifacts, and recorded a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- The live validation state still shows 0 replies, 0 bounces, and 0 interviews across the 20 active outbound rows, so exact-buyer reply capture remains blocked on outside input.
+- Ran `npm run run:validation-maintenance` at 2026-04-28 23:29 UTC; it rechecked the reply watch, verified self-audit follow-up QA, synced the validation artifacts, and recorded a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Confirmed the live validation state still shows 0 replies, 0 bounces, and 0 interviews across the 20 active outbound rows; batch 03 and batch 04 are already sent and now waiting on replies.
 - Kept the weekly memory cleanup pass intact by leaving the backlog summaries collapsed and preserving the detailed 2026-04-26 through 2026-04-28 window.
 - Next executable step: keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for the first real buyer reply.

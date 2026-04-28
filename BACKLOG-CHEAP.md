@@ -24,4 +24,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, checkout, intake, follow-up, validation, outreach, fulfillment, SEO, ops, accessibility, analytics, pages, visual refresh, maintenance, and memory cleanup work.
+- Completed launch, checkout, intake, follow-up, validation, outreach, fulfillment, SEO, ops, accessibility, analytics, pages, visual refresh, maintenance, and memory cleanup; live work is now reply capture and interview conversion.
