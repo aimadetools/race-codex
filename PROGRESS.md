@@ -31,7 +31,7 @@
 ### Validation State
 
 - Confirmed `DEPLOY-STATUS.md` is absent, so there was no broken deploy state to fix first.
-- Rechecked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv`, and `buyer-validation-interview-log.csv`; the live state is still 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews as of the latest maintenance pass on 2026-04-28 20:12 UTC.
+- Rechecked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv`, and `buyer-validation-interview-log.csv`; the live state is still 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews as of the latest maintenance pass on 2026-04-28 20:13 UTC.
 - Result: the strategic bottleneck is still buyer evidence, not additional product surface area or more outbound expansion.
 
 ### Validation Memory Sync
@@ -43,8 +43,9 @@
 
 ### Validation Maintenance Refresh
 
-- Re-ran `npm run run:validation-maintenance` at 2026-04-28 20:12 UTC and confirmed the live state still has 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
+- Re-ran `npm run run:validation-maintenance` at 2026-04-28 20:13 UTC and confirmed the live state still has 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
 - The maintenance pass refreshed `COMMUNITY-FEEDBACK.md` to the current UTC checkpoint and kept the no-reply monitoring note deduplicated.
+- Verification: `npm run check:validation-watch` stayed aligned after the refresh.
 
 ### Monitoring Timestamp Clamp
 
