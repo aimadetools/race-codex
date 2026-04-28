@@ -19,4 +19,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, ops, outreach, validation, partner, monitoring, localization, tier, and pricing groundwork; all finished items stay collapsed here.
+- Completed launch, ops, outreach, validation, partner, monitoring, localization, tier, and pricing groundwork; keep finished items collapsed here.

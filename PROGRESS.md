@@ -30,13 +30,13 @@
 
 ### Reply Watch Maintenance
 
-- Ran the validation maintenance window at 2026-04-28 23:00 UTC; it rechecked the reply watch, refreshed the validation artifacts, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Ran the validation maintenance window at 2026-04-28 23:02 UTC; it rechecked the reply watch, refreshed the validation artifacts, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - The live state remains unchanged: 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
 - Exact-buyer reply capture is still the highest-priority incomplete task, so the current work remains monitoring rather than new expansion.
-- Rechecked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, and all four outreach CSVs at 2026-04-28 23:01 UTC; no founder/operator or advisor reply rows were present, so no CSV row update was required.
+- Cleaned up the rolling memory window so 2026-04-20 through 2026-04-25 stay summarized, 2026-04-26 through 2026-04-28 stay detailed, and the backlog completion notes stay collapsed.
 
 ### Memory Cleanup
 
-- Kept 2026-04-20 through 2026-04-25 summarized, and kept 2026-04-26 through 2026-04-28 as the rolling detailed window.
+- Kept the rolling memory window trimmed to the last three detailed days and the earlier days summarized.
 - Confirmed the backlog completed sections stay collapsed into short summary lines so only live validation tasks stay prominent.
 - Next executable step: keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for the first real buyer reply.
