@@ -31,6 +31,7 @@
 ### Reply Watch Maintenance
 
 - Ran `npm run run:validation-maintenance` at 2026-04-28 23:13 UTC; it rechecked the reply watch, verified the self-audit follow-up QA, synced the validation artifacts, and confirmed there was still no reply evidence to convert.
-- The no-reply logger skipped writing a duplicate checkpoint because `COMMUNITY-FEEDBACK.md` already had the same UTC-minute checkpoint, and the live state stayed at 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
+- Ran `npm run log:validation-no-reply-check` at 2026-04-28 23:14 UTC after the minute advanced, which wrote a fresh no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
+- The live state stayed at 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews, so exact-buyer reply capture is still the highest-priority incomplete task.
 - Kept `PROGRESS.md` compact so 2026-04-20 through 2026-04-25 stay summarized while 2026-04-26 through 2026-04-28 stay detailed.
 - Next executable step: keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for the first real buyer reply.
