@@ -12,8 +12,8 @@ const BATCH_FILES = [
   join(ROOT, "buyer-validation-outreach-batch-03.csv"),
   join(ROOT, "buyer-validation-outreach-batch-04.csv")
 ];
-const FOUNDER_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no founder\/operator replies have been posted here yet\.[^\n]*/i;
-const ADVISOR_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no advisor replies have been posted here yet\.[^\n]*/i;
+const FOUNDER_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no founder\/operator replies have been posted here yet(?:[^\n.]*)\.[^\n]*/i;
+const ADVISOR_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no advisor replies have been posted here yet(?:[^\n.]*)\.[^\n]*/i;
 const RECHECK_TIMESTAMP_PATTERN = /^Rechecked on (.+? UTC):/i;
 
 function parseArgs(argv) {
@@ -125,6 +125,13 @@ function extractDateFromTimestamp(timestamp) {
     throw new Error(`Could not parse UTC date from timestamp: ${timestamp}`);
   }
   return match[0];
+}
+
+function formatUtcDateKey(date) {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
 }
 
 function parseUtcTimestamp(value) {
@@ -269,8 +276,20 @@ async function main() {
     const latestCheckpoint = findLatestSectionCheckpoint(existingSectionLines);
     const latestCheckpointDate = parseUtcTimestamp(latestCheckpoint);
     const requestedCheckpointDate = parseUtcTimestamp(timestamp);
+    const latestCheckpointDateKey = latestCheckpointDate ? formatUtcDateKey(latestCheckpointDate) : "";
+    const requestedCheckpointDateKey = requestedCheckpointDate ? formatUtcDateKey(requestedCheckpointDate) : "";
 
-    if (latestCheckpointDate && requestedCheckpointDate && requestedCheckpointDate <= latestCheckpointDate) {
+    const shouldNormalizeSameDayFutureCheckpoint =
+      latestCheckpointDate &&
+      requestedCheckpointDate &&
+      latestCheckpointDate > requestedCheckpointDate &&
+      latestCheckpointDateKey === requestedCheckpointDateKey;
+
+    if (shouldNormalizeSameDayFutureCheckpoint) {
+      console.log(
+        `Normalizing same-day future checkpoint in ${feedbackPath} from ${latestCheckpoint} to ${timestamp}`
+      );
+    } else if (latestCheckpointDate && requestedCheckpointDate && requestedCheckpointDate <= latestCheckpointDate) {
       console.log(
         `Skipped ${feedbackPath}: existing ${sectionDate} no-reply checkpoint (${latestCheckpoint}) is newer than or equal to requested ${timestamp}`
       );
