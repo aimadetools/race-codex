@@ -17,6 +17,13 @@ function formatUtcTimestamp(date) {
   return `${year}-${month}-${day} ${hour}:${minute} UTC`;
 }
 
+function formatUtcDateKey(date) {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 function parseUtcTimestamp(value) {
   const text = String(value || "").trim();
   let match = text.match(/^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}) UTC$/);
@@ -86,11 +93,15 @@ async function main() {
   const { latestDate, latestText } = extractLatestCheckpoint(feedbackText);
   const now = new Date();
   const nowText = formatUtcTimestamp(now);
-  const effectiveDate = latestDate && latestDate > now ? latestDate : now;
+  const nowDateKey = formatUtcDateKey(now);
+  const latestDateKey = latestDate ? formatUtcDateKey(latestDate) : "";
+  const effectiveDate = latestDate && latestDate > now && latestDateKey > nowDateKey ? latestDate : now;
   const effectiveText = formatUtcTimestamp(effectiveDate);
 
-  if (latestDate && latestDate > now) {
+  if (latestDate && latestDate > now && latestDateKey > nowDateKey) {
     console.log(`Repo memory is ahead of the current system clock. Using safe checkpoint timestamp ${effectiveText} from COMMUNITY-FEEDBACK.md instead of ${nowText}.`);
+  } else if (latestDate && latestDate > now && latestDateKey === nowDateKey) {
+    console.log(`Latest checkpoint ${latestText} is later today than the current system clock ${nowText}. Clamping this maintenance pass to the current UTC timestamp.`);
   } else {
     console.log(`Using current UTC checkpoint timestamp ${effectiveText}.`);
   }

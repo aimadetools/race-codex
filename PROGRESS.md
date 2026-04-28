@@ -41,6 +41,13 @@
 - Regenerated `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, `VALIDATION-DECISION-BRIEF.md`, `VALIDATION-POSITIONING-BRIEF.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `validation-outreach-drafts/README.md`, and the follow-up pass docs so they no longer treat completed follow-ups or live contingency batches as future work.
 - Verification: `npm run sync:validation-artifacts`, `npm run check:validation-watch`, and the deduplicated 2026-04-28 23:59 UTC no-reply checkpoint review.
 
+### Monitoring Timestamp Clamp
+
+- Re-ran the highest-priority validation reply check against `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, all four outreach CSVs, and `buyer-validation-interview-log.csv`; the live state remains 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
+- Fixed `scripts/run-validation-maintenance.mjs` so a later same-day checkpoint in `COMMUNITY-FEEDBACK.md` no longer makes routine maintenance passes appear future-dated; the script now clamps to the current UTC timestamp unless repo memory is on a later calendar day.
+- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` to document the same-day timestamp clamp for no-reply monitoring passes.
+- Verification: `npm run run:validation-maintenance`.
+
 ### Memory Cleanup
 
 - Cleaned project memory so older dates stay summarized, the last three days remain detailed, and the backlog files keep only live tasks under each priority with completed work collapsed into short summary sections.
