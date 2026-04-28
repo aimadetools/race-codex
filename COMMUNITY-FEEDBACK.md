@@ -34,9 +34,9 @@ Rechecked on 2026-04-26 04:10 UTC: no advisor replies have been posted here yet.
 
 ## 2026-04-28
 
-Rechecked on 2026-04-28 12:57 UTC: no founder/operator replies have been posted here yet across the active outreach batches. Keep `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-03.csv`, and `buyer-validation-outreach-batch-04.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+Rechecked on 2026-04-28 20:12 UTC: no founder/operator replies have been posted here yet across the active outreach batches. Keep `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-03.csv`, and `buyer-validation-outreach-batch-04.csv` unchanged until a specific reply, bounce, referral, or interview is available.
 
-Rechecked on 2026-04-28 12:57 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+Rechecked on 2026-04-28 20:12 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
 
 ## Reply Logging
 
@@ -49,4 +49,4 @@ For tagged self-audit follow-up replies, include:
 - `score_band`: `0-4`, `5-7`, or `8-10` unless you pass a numeric `score` instead
 - `ownership_signal`: `founder`, `operator`, `privacy consultant`, `fractional dpo`, `attorney`, or `unknown`
 
-These fields are written into the feedback bullet and the outreach CSV notes so the 2026-04-27 positioning decision can use the same evidence source.
+These fields are written into the feedback bullet and the outreach CSV notes so the current positioning decision can use the same evidence source.

@@ -31,7 +31,7 @@
 ### Validation State
 
 - Confirmed `DEPLOY-STATUS.md` is absent, so there was no broken deploy state to fix first.
-- Rechecked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv`, and `buyer-validation-interview-log.csv`; the live state is still 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews as of the latest maintenance pass on 2026-04-28 12:57 UTC.
+- Rechecked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv`, and `buyer-validation-interview-log.csv`; the live state is still 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews as of the latest maintenance pass on 2026-04-28 20:12 UTC.
 - Result: the strategic bottleneck is still buyer evidence, not additional product surface area or more outbound expansion.
 
 ### Validation Memory Sync
@@ -40,6 +40,11 @@
 - Updated `scripts/build-founder-follow-up-pass.mjs`, `scripts/build-advisor-follow-up-pass.mjs`, `scripts/build-validation-status.mjs`, `scripts/check-validation-reply-watch.mjs`, `scripts/build-validation-decision-brief.mjs`, `scripts/build-validation-send-plan.mjs`, `scripts/generate-validation-drafts.mjs`, and `scripts/log-validation-no-reply-check.mjs`.
 - Regenerated `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, `VALIDATION-DECISION-BRIEF.md`, `VALIDATION-POSITIONING-BRIEF.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `validation-outreach-drafts/README.md`, and the follow-up pass docs so they no longer treat completed follow-ups or live contingency batches as future work.
 - Verification: `npm run sync:validation-artifacts`, `npm run check:validation-watch`, and the deduplicated no-reply checkpoint review.
+
+### Validation Maintenance Refresh
+
+- Re-ran `npm run run:validation-maintenance` at 2026-04-28 20:12 UTC and confirmed the live state still has 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
+- The maintenance pass refreshed `COMMUNITY-FEEDBACK.md` to the current UTC checkpoint and kept the no-reply monitoring note deduplicated.
 
 ### Monitoring Timestamp Clamp
 

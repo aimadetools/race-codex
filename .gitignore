@@ -11,3 +11,13 @@ __pycache__/
 .venv/
 venv/
 .env*.local
+.cache/
+.turbo/
+.DS_Store
+*.log
+*.tmp
+*.swp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
