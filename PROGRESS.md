@@ -34,6 +34,12 @@
 - Rechecked `check:validation-watch`; the live state remains 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews, with no `DEPLOY-STATUS.md` file present to fix first.
 - Result: the highest-priority incomplete task is still reply monitoring until a real response lands.
 
+### Reply Watch Refresh
+
+- Ran `npm run run:validation-maintenance` again at 2026-04-28 20:19 UTC to capture a fresh no-reply checkpoint and keep the inbox memory current.
+- The generated validation artifacts stayed aligned with the live state; only `COMMUNITY-FEEDBACK.md` changed because the maintenance pass deduplicated the new checkpoint.
+- Result: there is still no buyer evidence to score, so reply monitoring remains the highest-priority incomplete task.
+
 ### Validation Memory Sync
 
 - Fixed generator and repo-memory drift so follow-up passes, validation status views, send-plan outputs, and no-reply checkpoints all derive from the real CSV state after batches 03 and 04 went live.
