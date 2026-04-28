@@ -30,42 +30,16 @@
 
 ### Reply Watch Maintenance
 
-- Ran `npm run run:validation-maintenance` at 2026-04-28 20:15 UTC.
-- Confirmed the live reply state is still 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews; `COMMUNITY-FEEDBACK.md` was refreshed to the current UTC checkpoint.
-- Result: the highest-priority incomplete task remains reply monitoring until a real response lands.
-
-### Validation State
-
-- Confirmed `DEPLOY-STATUS.md` is absent, so there was no broken deploy state to fix first.
-- Rechecked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv`, and `buyer-validation-interview-log.csv`; the live state is still 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews as of the latest maintenance pass on 2026-04-28 20:15 UTC.
-- Result: the strategic bottleneck is still buyer evidence, not additional product surface area or more outbound expansion.
+- Ran `npm run run:validation-maintenance` at 2026-04-28 20:16 UTC and refreshed `COMMUNITY-FEEDBACK.md` to the latest no-reply checkpoint.
+- Rechecked `check:validation-watch`; the live state remains 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews, with no `DEPLOY-STATUS.md` file present to fix first.
+- Result: the highest-priority incomplete task is still reply monitoring until a real response lands.
 
 ### Validation Memory Sync
 
 - Fixed generator and repo-memory drift so follow-up passes, validation status views, send-plan outputs, and no-reply checkpoints all derive from the real CSV state after batches 03 and 04 went live.
 - Updated `scripts/build-founder-follow-up-pass.mjs`, `scripts/build-advisor-follow-up-pass.mjs`, `scripts/build-validation-status.mjs`, `scripts/check-validation-reply-watch.mjs`, `scripts/build-validation-decision-brief.mjs`, `scripts/build-validation-send-plan.mjs`, `scripts/generate-validation-drafts.mjs`, and `scripts/log-validation-no-reply-check.mjs`.
-- Regenerated `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, `VALIDATION-DECISION-BRIEF.md`, `VALIDATION-POSITIONING-BRIEF.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `validation-outreach-drafts/README.md`, and the follow-up pass docs so they no longer treat completed follow-ups or live contingency batches as future work.
-- Verification: `npm run sync:validation-artifacts`, `npm run check:validation-watch`, and the deduplicated no-reply checkpoint review.
-
-### Validation Maintenance Refresh
-
-- Re-ran `npm run run:validation-maintenance` at 2026-04-28 20:15 UTC and confirmed the live state still has 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
-- The maintenance pass refreshed `COMMUNITY-FEEDBACK.md` to the current UTC checkpoint and kept the no-reply monitoring note deduplicated.
-- Verification: `npm run check:validation-watch` stayed aligned after the refresh.
-
-### Monitoring Timestamp Clamp
-
-- Re-ran the highest-priority validation reply check against `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, all four outreach CSVs, and `buyer-validation-interview-log.csv`; the live state remains 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
-- Fixed `scripts/run-validation-maintenance.mjs` so a later same-day checkpoint in `COMMUNITY-FEEDBACK.md` no longer makes routine maintenance passes appear future-dated; the script now clamps to the current UTC timestamp unless repo memory is on a later calendar day.
-- Updated `VALIDATION-OUTREACH-SEND-RUNBOOK.md` to document the same-day timestamp clamp for no-reply monitoring passes.
-- Verification: `npm run run:validation-maintenance`.
-
-### No-Reply Checkpoint Normalization
-
-- Fixed `scripts/log-validation-no-reply-check.mjs` so a same-day future checkpoint is normalized back to the requested current UTC time instead of being treated as permanently newer repo memory.
-- Broadened the founder/advisor note matchers so the dedupe pass catches both the legacy `yet.` wording and the newer `yet across the active outreach batches.` wording.
-- Re-ran `npm run run:validation-maintenance`, which rewrote `COMMUNITY-FEEDBACK.md` from the stale 2026-04-28 23:59 UTC checkpoint to the actual 2026-04-28 12:57 UTC maintenance time with no reply-state changes.
-- Result: no-reply monitoring now self-corrects same-day timestamp drift instead of leaving future-dated memory behind.
+- Regenerated `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, `VALIDATION-DECISION-BRIEF.md`, `VALIDATION-POSITIONING-BRIEF.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `validation-outreach-drafts/README.md`, and the follow-up pass docs so they continue to reflect the live batch state.
+- Verification: `npm run sync:validation-artifacts` and `npm run check:validation-watch`.
 
 ### Memory Cleanup
 
