@@ -178,7 +178,7 @@ function findLatestSectionCheckpoint(lines) {
 
 function buildNote(timestamp, segment) {
   if (segment === "founder") {
-    return `Rechecked on ${timestamp}: no founder/operator replies have been posted here yet. Keep \`buyer-validation-outreach-batch-01.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
+    return `Rechecked on ${timestamp}: no founder/operator replies have been posted here yet across the active outreach batches. Keep \`buyer-validation-outreach-batch-01.csv\`, \`buyer-validation-outreach-batch-03.csv\`, and \`buyer-validation-outreach-batch-04.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
   }
 
   return `Rechecked on ${timestamp}: no advisor replies have been posted here yet. Keep \`buyer-validation-outreach-batch-02.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;

@@ -137,7 +137,7 @@ function extractSignals(text) {
 
 function hasNoReplyNote(text, segment) {
   const pattern = segment === "founder"
-    ? /no founder\/operator replies have been posted here yet\./i
+    ? /no founder\/operator replies have been posted here yet(?: across the active outreach batches)?\./i
     : /no advisor replies have been posted here yet\./i;
   return pattern.test(text);
 }
@@ -295,6 +295,7 @@ async function main() {
   const contingencyTwoReady = parsedBatches[3].rows.filter((row) => String(row.status || "").trim() === "ready_for_send").length;
   const noFounderRepliesPosted = hasNoReplyNote(feedbackText, "founder");
   const noAdvisorRepliesPosted = hasNoReplyNote(feedbackText, "advisor");
+  const noRepliesPosted = noFounderRepliesPosted && noAdvisorRepliesPosted;
   const signals = extractSignals(feedbackText);
   const today = new Date().toISOString().slice(0, 10);
   const dueFollowUps = followUps.filter((item) => {
@@ -314,7 +315,7 @@ async function main() {
     ...parsedBatches.map((batch) => `- ${batch.label} replies, bounces, or interview rows recorded in CSV: ${countReplies(batch.rows)}`),
     `- Interview log rows: ${parsedInterviews.length}`,
     ...parsedBatches.map((batch) => `- ${batch.label} sent or followed-up rows still waiting for replies: ${countWaiting(batch.rows)}`),
-    `- Community feedback note: ${noFounderRepliesPosted && noAdvisorRepliesPosted ? "no founder/operator or advisor replies have been posted yet." : "replies are present and need review."}`,
+    `- Community feedback note: ${noRepliesPosted ? "no replies from the active outreach batches have been posted yet." : "replies are present and need review."}`,
     `- Self-audit channels logged: ${signals.channels.length} (${signals.inPageFormChannels} in-page-form, ${signals.mailtoChannels} mailto)`,
     describeFollowUpStatus(followUps[0].label, followUps[0].due, founderPendingFollowUps, founderFollowedUp),
     describeFollowUpStatus(followUps[1].label, followUps[1].due, advisorPendingFollowUps, advisorFollowedUp),

@@ -160,7 +160,7 @@ function extractFeedbackSignals(text) {
 
 function hasNoReplyNote(text, segment) {
   const pattern = segment === "founder"
-    ? /no founder\/operator replies have been posted here yet\./i
+    ? /no founder\/operator replies have been posted here yet(?: across the active outreach batches)?\./i
     : /no advisor replies have been posted here yet\./i;
   return pattern.test(text);
 }
@@ -271,6 +271,7 @@ const followUpDate = extractFollowUpDate(followUpText);
 const advisorFollowUpDate = extractFollowUpDate(advisorFollowUpText);
 const noFounderRepliesPosted = hasNoReplyNote(feedbackText, "founder");
 const noAdvisorRepliesPosted = hasNoReplyNote(feedbackText, "advisor");
+const noRepliesPosted = noFounderRepliesPosted && noAdvisorRepliesPosted;
 const feedbackSignals = extractFeedbackSignals(feedbackText);
 const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
 const homepageQueueState = extractQueueState(homepageQueueText);
@@ -301,7 +302,7 @@ const output = [
   "",
   "## Reply Watch",
   "",
-  `- ` + "`COMMUNITY-FEEDBACK.md`" + ` currently says: ${noFounderRepliesPosted && noAdvisorRepliesPosted ? "no founder/operator or advisor replies have been posted yet." : "replies are present and need review."}`,
+  `- ` + "`COMMUNITY-FEEDBACK.md`" + ` currently says: ${noRepliesPosted ? "no replies from the active outreach batches have been posted yet." : "replies are present and need review."}`,
   `- Interview log rows: ${interviewRows.length}`,
   `- Founder batch reply or bounce rows recorded in CSV: ${founderReplies}`,
   `- Advisor batch reply or bounce rows recorded in CSV: ${advisorReplies}`,
