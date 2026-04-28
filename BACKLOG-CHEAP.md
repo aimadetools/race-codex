@@ -24,4 +24,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed foundation and support work: launch, checkout, intake/inbox persistence, follow-up automation, validation artifacts, outreach through batch 04, fulfillment exports, SEO, mobile polish, ops notes, accessibility, analytics, supporting pages, and visual refresh.
+- Completed launch, checkout, intake/inbox, follow-up, validation, outreach through batch 04, fulfillment, SEO, mobile, ops, accessibility, analytics, supporting pages, and visual refresh groundwork; all finished items stay collapsed here.
