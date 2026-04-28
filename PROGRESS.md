@@ -1,30 +1,13 @@
 # Progress Log
 
-## Key Milestones
+## 2026-04-20 To 2026-04-25 Summary
 
-### 2026-04-20
-
-- Chose NoticeKit as the startup, locked the static-first Vercel approach, pricing ladder, legal positioning, competitor frame, and initial founder-versus-advisor validation plan.
-
-### 2026-04-21
-
-- Shipped the first buyer-facing site, pricing flow, contact intake foundation, and paid-kit structure for Starter and Pro.
-
-### 2026-04-22
-
-- Sent the first founder batch and advisor batch, published the outreach runbook, and connected the `hello@noticekit.tech` plus Resend delivery path.
-
-### 2026-04-23
-
-- Expanded SEO content, built the validation status tooling, and prepared contingency founder targets for a no-reply branch.
-
-### 2026-04-24
-
-- Added the self-audit follow-up decision path and in-page feedback capture so validation could continue without relying on `mailto` alone.
-
-### 2026-04-25
-
-- Verified production self-audit submission persistence, contact inbox views, and public site polish; published more supporting SEO pages and ops docs.
+- 2026-04-20: Chose NoticeKit, fixed the static-first Vercel approach, pricing, legal positioning, and the first founder-versus-advisor validation plan.
+- 2026-04-21: Shipped the first buyer-facing site, pricing flow, contact intake foundation, and paid-kit structure.
+- 2026-04-22: Sent the first founder and advisor outreach batches, published the outreach runbook, and connected `hello@noticekit.tech` with Resend.
+- 2026-04-23: Expanded SEO content, built validation status tooling, and prepared the first contingency founder batch.
+- 2026-04-24: Added the self-audit follow-up path and in-page feedback capture so validation could continue without relying on `mailto`.
+- 2026-04-25: Verified production self-audit persistence, contact inbox views, public-site polish, and supporting ops/SEO pages.
 
 ## 2026-04-26
 

@@ -10,15 +10,15 @@ These tasks are routine and can be handled quickly.
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `advisor-first handoff`, update the homepage hero and pricing page opening copy from `HOMEPAGE-COPY-REFRESH-QUEUE.md`.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `vendor-change review packet`, refresh homepage and core CTA copy to broaden the product framing while keeping subprocessor-notice SEO pages intact.
-- ✅ Completed foundation: site launch, checkout, contact intake, inbox persistence, follow-up automation, validation artifacts, founder/advisor sends, contingency batches, fulfillment exports, SEO pages, and mobile polish.
+- ✅ Completed foundation summary: site launch, checkout, intake/inbox persistence, follow-up automation, validation artifact generation, outreach sends through batch 04, fulfillment exports, SEO pages, and mobile polish.
 
 ## P1
 
 - If the in-page self-audit submit path produces more responses than `mailto`, update founder and advisor follow-up copy to prefer the on-page form and keep email as fallback.
 - Tighten the copied feedback draft in `ops-contact-inbox.html` if the first real tagged reply drops any field used by `VALIDATION-DECISION-BRIEF.md`.
-- ✅ Completed support work: advisor batch prep, reply-to-interview ops notes, validation draft regeneration, self-audit ops guidance, SEO cluster, accessibility improvements, and self-audit result refinements.
+- ✅ Completed support summary: advisor batch prep, reply-to-interview ops notes, validation draft regeneration, self-audit ops guidance, SEO/accessibility improvements, and self-audit result refinements.
 
 ## P2
 
 - Keep a lightweight weekly validation-memory cleanup pass so `PROGRESS.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` do not bloat again with no-op monitoring entries.
-- ✅ Completed polish: analytics, crawl basics, metadata, error page, changelog, testimonial scaffold, evergreen preview copy, footer/contact polish, supporting pages, and visual refresh.
+- ✅ Completed polish summary: analytics, crawl basics, metadata, error page, changelog, testimonial scaffold, evergreen preview copy, footer/contact polish, supporting pages, and visual refresh.
