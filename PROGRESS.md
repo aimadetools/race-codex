@@ -30,23 +30,11 @@
 
 ### Reply Watch Maintenance
 
-- Ran `npm run run:validation-maintenance` at 2026-04-28 20:29 UTC; it rechecked the reply watch, refreshed the validation artifacts, and appended a deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
-- Current live state remains unchanged: 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
-- Result: reply monitoring remains the highest-priority incomplete task until a real response lands.
-
-- Ran a second maintenance pass at 2026-04-28 20:30 UTC; it confirmed the same no-reply state, regenerated `SELF-AUDIT-FOLLOW-UP-QA.md`, refreshed the validation briefs, and logged the new checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Current live task remains exact buyer validation through a real reply or interview; no branch change is justified yet.
-
-- Ran a third maintenance pass at 2026-04-28 20:31 UTC after the clock advanced; it preserved the same no-reply state and wrote the newest deduplicated checkpoint into `COMMUNITY-FEEDBACK.md`.
-- The active validation task is still reply capture, with no evidence to trigger a positioning or homepage copy change.
-
-- Ran a fourth maintenance pass at 2026-04-28 20:32 UTC; it rechecked the reply watch, refreshed the validation artifacts, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Current live state remains unchanged: 0 replies, 0 bounces, 0 interviews, and no reason to change positioning yet.
-
-- Ran a fifth maintenance pass at 2026-04-28 20:33 UTC; it rechecked the reply watch, refreshed the validation artifacts again, and logged another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Current live state remains unchanged: 0 replies, 0 bounces, 0 interviews, and the exact-buyer validation task is still waiting on the first real reply.
+- Ran `npm run run:validation-maintenance` at 2026-04-28 20:34 UTC; it rechecked the reply watch, refreshed the validation artifacts, and logged a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- The 2026-04-28 maintenance passes all confirmed the same live state: 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews.
+- Result: exact-buyer reply capture remains the highest-priority incomplete task until a real response lands.
 
 ### Memory Cleanup
 
-- Kept 2026-04-20 through 2026-04-25 summarized, preserved 2026-04-26 through 2026-04-28 as the detailed section, and kept backlog completed work collapsed into summary lines.
+- Kept 2026-04-20 through 2026-04-25 summarized, and kept 2026-04-26 through 2026-04-28 as the rolling detailed window.
 - Next executable step: keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for the first real buyer reply.
