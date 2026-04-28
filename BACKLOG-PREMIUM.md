@@ -19,4 +19,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, outreach, validation, ops, and maintenance work.
+- Completed launch, outreach, validation, ops, maintenance, and memory cleanup work.
