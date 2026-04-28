@@ -30,7 +30,7 @@
 
 ### Reply Watch Maintenance
 
-- Ran the validation maintenance window at 2026-04-28 23:09 UTC; it rechecked the reply watch, refreshed the validation artifacts, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Ran the validation maintenance window at 2026-04-28 23:10 UTC; it rechecked the reply watch, refreshed the validation artifacts, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - The live state remains unchanged at 20 active outbound rows, 0 replies, 0 bounces, and 0 interviews, so exact-buyer reply capture is still the highest-priority incomplete task.
-- Kept `PROGRESS.md` compact so 2026-04-20 through 2026-04-25 stay summarized, 2026-04-26 through 2026-04-28 stay detailed, and completed backlog items remain collapsed.
+- Kept `PROGRESS.md` compact so 2026-04-20 through 2026-04-25 stay summarized while 2026-04-26 through 2026-04-28 stay detailed.
 - Next executable step: keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for the first real buyer reply.
