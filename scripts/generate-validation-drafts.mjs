@@ -278,6 +278,48 @@ function renderDraft(row, batchLabel) {
   };
 }
 
+function countBy(rows, status) {
+  return rows.filter((row) => String(row.status || "").trim() === status).length;
+}
+
+function extractFirstSentDate(rows) {
+  for (const row of rows) {
+    const notes = String(row.notes || "");
+    const match = notes.match(/Sent (\d{4}-\d{2}-\d{2})/);
+    if (match) {
+      return match[1];
+    }
+  }
+
+  return "unknown";
+}
+
+function describeBatchState(batch) {
+  const sent = countBy(batch.rows, "sent");
+  const followedUp = countBy(batch.rows, "followed_up");
+  const ready = countBy(batch.rows, "ready_for_send");
+  const terminal = countBy(batch.rows, "replied_positive")
+    + countBy(batch.rows, "replied_negative")
+    + countBy(batch.rows, "bounced")
+    + countBy(batch.rows, "interview_completed");
+  const firstSentDate = extractFirstSentDate(batch.rows);
+
+  if (sent + followedUp > 0) {
+    const parts = [`${batch.label} is active outbound`];
+    if (firstSentDate !== "unknown") {
+      parts.push(`first sent on ${firstSentDate}`);
+    }
+    parts.push(`${sent} sent`, `${followedUp} followed_up`, `${terminal} terminal row(s)`);
+    return `- ${parts.join("; ")}.`;
+  }
+
+  if (ready > 0) {
+    return `- ${batch.label} remains queued with ${ready} ready_for_send row(s).`;
+  }
+
+  return `- ${batch.label} has no ready or active rows.`;
+}
+
 async function main() {
   const batchFiles = [
     { label: "batch-01", file: "buyer-validation-outreach-batch-01.csv" },
@@ -333,18 +375,18 @@ async function main() {
     ``,
     `## Send Order`,
     ``,
-    `1. Founder/operator batch 01.`,
-    `2. Wait one business day.`,
-    `3. Advisor batch 02.`,
-    `4. Founder/operator batch 03 if the 2026-04-27 no-reply check still needs expansion.`,
-    `5. Founder/operator batch 04 if batch 03 still leaves the queue short after the same no-reply check.`,
+    `1. Founder/operator batch 01 initial outreach.`,
+    `2. Advisor batch 02 after the one-business-day hold or an explicit operator override.`,
+    `3. Founder/operator batches 03 and 04 only after the 2026-04-27 no-reply gate when founder replies are still zero.`,
+    `4. Once a batch is active, use these drafts for reply handling, follow-ups, and interview conversion rather than treating it as unsent inventory.`,
     ``,
     `## Status`,
     ``,
     `Resend is available for approved direct-email routes from NoticeKit <hello@noticekit.tech>. Manual-form and contact-sales routes still require the public form path listed in each draft.`,
     ``,
-    `Founder/operator batch 01 is sent. Advisor batch 02 is also sent under an explicit operator override on 2026-04-22. Use these drafts for reply handling, follow-ups, and any future batch 03 expansion after the documented hold and reply checks.`,
-    `Batch 04 is prepared as a second founder/operator contingency expansion and stays out of the active send queue until batch 03 has also been exhausted after the 2026-04-27 check.`,
+    ...loadedBatches.map((batch) => describeBatchState(batch)),
+    ``,
+    `Current priority: monitor replies across every active outbound row and convert the first real founder, advisor, or attorney response into scored feedback immediately.`,
     ``,
     `The direct-email targets also have RFC-style .eml exports in validation-outreach-eml/ for backup/manual sending.`,
     ``,

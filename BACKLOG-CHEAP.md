@@ -10,7 +10,7 @@ These tasks are routine and can be handled quickly.
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `advisor-first handoff`, update the homepage hero and pricing page opening copy from `HOMEPAGE-COPY-REFRESH-QUEUE.md`.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `vendor-change review packet`, refresh homepage and core CTA copy to broaden the product framing while keeping subprocessor-notice SEO pages intact.
-- ✅ Completed foundation summary: site launch, checkout, intake/inbox persistence, follow-up automation, validation artifact generation, outreach sends through batch 04, fulfillment exports, SEO pages, and mobile polish.
+- ✅ Completed foundation summary: site launch, checkout, intake/inbox persistence, follow-up automation, validation artifact/send-plan generation, outreach sends through batch 04, fulfillment exports, SEO pages, and mobile polish.
 
 ## P1
 

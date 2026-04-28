@@ -17,7 +17,7 @@ The mailbox alias `hello@noticekit.tech` is live, Stripe checkout is live, and t
 
 Founder/operator batch 01 was completed on 2026-04-22: four targets were reached through public contact forms, and the remaining EF Loads direct-email target was sent through Resend from `NoticeKit <hello@noticekit.tech>`.
 
-Advisor batch 02 was also completed on 2026-04-22 under an explicit operator override to the sequencing hold. The next active validation task is reply monitoring and interview conversion, with batch 03 reserved for the 2026-04-27 no-reply check.
+Advisor batch 02 was also completed on 2026-04-22 under an explicit operator override to the sequencing hold. Founder contingency batches 03 and 04 were sent on 2026-04-28 after the no-reply gate opened, so the live validation job is now reply monitoring and interview conversion across all 20 outbound rows.
 
 Use `scripts/send-validation-batch.mjs` to print the ready queue or send approved future batches through SMTP or Resend:
 
@@ -63,7 +63,7 @@ Before sending the first message, confirm all of the following:
 
 1. Founder/operator outreach from batch 01 has been sent.
 2. Wait at least one business day before sending advisor outreach from batch 02, unless an explicit operator override already handled it.
-3. Send no more than five cold validation emails per day from a newly created mailbox.
+3. Founder contingency batches 03 and 04 have also been sent, so do not unlock more cold outreach unless new evidence changes the plan.
 4. Send one follow-up after three business days if there is no response.
 5. Stop outreach to any recipient who declines, unsubscribes, or redirects the request.
 
@@ -133,13 +133,12 @@ Example self-audit async reply payload:
 
 ## First-Day Execution
 
-Batch 01 and batch 02 are already executed. Next actions are reply monitoring, one polite follow-up after three business days for non-responders, and interview conversion for any real replies.
-If no founder/operator replies have arrived by 2026-04-27, use `buyer-validation-outreach-batch-03.csv` and the matching drafts in `validation-outreach-drafts/` as the next five-target founder expansion.
-The sender enforces the batch 03 hold for live sends before 2026-04-27 UTC, but dry-runs remain available for route checks.
+Batches 01 through 04 are already executed. Next actions are reply monitoring, one polite follow-up after three business days for non-responders, and interview conversion for any real replies.
+Do not treat batch 03 or batch 04 as pending inventory anymore; they are already live outbound and should only move forward through reply, bounce, follow-up, or interview status updates.
 The prepared founder follow-up queue lives in `BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md`, and `node scripts/build-founder-follow-up-pass.mjs` can regenerate it from batch 01 when the queue changes.
 The prepared advisor follow-up queue lives in `BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md`, and `node scripts/build-advisor-follow-up-pass.mjs` can regenerate it from batch 02 when the queue changes.
 Use `node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend` and `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend` to dry-run the exact due follow-up queues before sending them.
-On or after 2026-04-27 UTC, run `npm run build:validation-decision-brief` or `npm run sync:validation-artifacts` first and read `VALIDATION-DECISION-BRIEF.md` before sending follow-ups or unlocking batch 03.
+Run `npm run build:validation-decision-brief` or `npm run sync:validation-artifacts` first and read `VALIDATION-DECISION-BRIEF.md` before sending any additional follow-up or making a positioning change.
 For the gate-day operational pass, use `npm run run:validation-gate -- --transport resend` to sync artifacts, print the current queue, and dry-run any due follow-ups. Add `--send` to execute the due follow-up batches, add `--include-batch03` when the founder no-reply contingency should be evaluated in the same pass, and add `--include-batch04` only after batch 03 is exhausted and founder replies are still zero.
 After any manual-form send or follow-up during that pass, record it immediately with `npm run update:validation-outreach-status -- --batch <id> --company "<name>" --status sent|followed_up --transport manual --route "<form URL or path>" --timestamp "<ISO timestamp>"` so `VALIDATION-REPLY-WATCH.md` and `VALIDATION-STATUS.md` stay current.
 Use `npm run sync:validation-artifacts` only when you need to force a rebuild without recording a send, reply, bounce, or interview.

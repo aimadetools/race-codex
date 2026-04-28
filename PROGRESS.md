@@ -28,30 +28,18 @@
 
 ## 2026-04-28
 
-### Outreach State And Repo Memory Repair
+### Validation Memory Repairs
 
-- Confirmed `DEPLOY-STATUS.md` is absent, so there was no broken deploy state to fix first. The git worktree was clean before changes.
-- Verified the active validation state: founder batch 01 follow-ups sent, advisor batch 02 follow-ups sent, contingency founder batches 03 and 04 sent, 20 active outbound rows total, and 0 replies/interviews logged in `COMMUNITY-FEEDBACK.md` and `buyer-validation-interview-log.csv`.
-- Found a repo-memory bug: `VALIDATION-REPLY-WATCH.md` still recommended sending follow-ups even though every batch 01/02 row was already `followed_up`, and `VALIDATION-STATUS.md` still described batches 03/04 as future contingencies after they had already been sent.
-- Updated `scripts/check-validation-reply-watch.mjs` to distinguish pending follow-up sends from rows that are only waiting on replies after a follow-up.
-- Updated `scripts/build-validation-status.mjs` so the status file describes whether contingency batches are still queued or already active outbound.
-- Updated `scripts/build-validation-decision-brief.mjs` so the brief exposes active outbound counts for batches 03/04 and no longer implies more follow-up sending work is unlocked when it is not.
-- Regenerated the validation artifacts with `npm run sync:validation-artifacts` and verified `npm run check:validation-watch` now reports the correct next action: monitor replies from the active outreach batches.
-- Cleaned project memory and hygiene files: compressed `PROGRESS.md`, collapsed completed backlog items into summaries, and expanded `.gitignore` to include `.next`, `dist`, `build`, Python caches, and virtualenv folders.
-- Next executable step: capture the first real founder or advisor reply, log it exactly, and use that evidence to decide whether founder-first positioning still holds.
-
-### Reply Checkpoint Hardening
-
+- Confirmed `DEPLOY-STATUS.md` is absent, so there was no broken deploy state to fix first.
 - Re-read `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv`, and `buyer-validation-interview-log.csv`; confirmed again that no founder, advisor, bounce, referral, or interview evidence had landed as of 2026-04-28 23:59 UTC.
-- Updated `scripts/log-validation-no-reply-check.mjs` so the no-reply checkpoint is blocked by reply/bounce/interview rows in any active outreach batch, not just batches 01 and 02.
-- Updated `scripts/build-validation-status.mjs` so generated notes describe whether batches 03 and 04 are still queued or already live, instead of repeating obsolete pre-send instructions.
-- Regenerated the validation artifacts with `npm run sync:validation-artifacts` and logged the deduplicated 2026-04-28 23:59 UTC no-reply checkpoint with `npm run log:validation-no-reply-check -- --timestamp '2026-04-28 23:59 UTC'`.
-- Next executable step: keep monitoring the active 20-row outbound set and convert the first real reply into a scored interview immediately.
+- Fixed validation repo-memory drift in the generated artifacts: `scripts/check-validation-reply-watch.mjs`, `scripts/build-validation-status.mjs`, `scripts/build-validation-decision-brief.mjs`, and `scripts/build-validation-send-plan.mjs` now derive the active queue from real CSV state instead of stale pre-send assumptions.
+- Hardened `scripts/log-validation-no-reply-check.mjs` so the no-reply checkpoint is blocked by reply, bounce, or interview rows in any active outreach batch, not just batches 01 and 02.
+- Regenerated validation artifacts with `npm run sync:validation-artifacts` and logged the deduplicated 2026-04-28 23:59 UTC no-reply checkpoint with `npm run log:validation-no-reply-check -- --timestamp '2026-04-28 23:59 UTC'`.
 
-### Validation Send Plan Sync Repair
+### Outreach Ops Doc Sync
 
-- Re-checked `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, the four outreach CSVs, and `buyer-validation-interview-log.csv`; confirmed again that no real reply, bounce, referral, or interview evidence exists yet, so no outreach row status changed.
-- Fixed `scripts/build-validation-send-plan.mjs` so `VALIDATION-OUTREACH-SEND-PLAN.md` is generated from actual CSV row state instead of stale pre-send assumptions.
-- Added the send-plan rebuild to `scripts/sync-validation-artifacts.mjs` so future artifact syncs cannot leave `VALIDATION-OUTREACH-SEND-PLAN.md` behind.
-- Regenerated validation artifacts with `npm run sync:validation-artifacts` and verified the send plan now reports batches 03 and 04 as active outbound on 2026-04-28 rather than queued contingencies.
+- Found a second repo-memory bug: `validation-outreach-drafts/README.md`, `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and the top-level `README.md` still described batches 03 and 04 as future contingencies even though both were sent on 2026-04-28.
+- Updated `scripts/generate-validation-drafts.mjs` so the draft index status is generated from actual CSV row states and no longer treats active batches as unsent inventory.
+- Regenerated `validation-outreach-drafts/README.md` and verified the docs now show all 20 rows as active outbound with the correct next priority: monitor replies and convert the first real response into scored feedback.
+- Cleaned project memory so older dates stay summarized while the last three days remain detailed.
 - Next executable step: keep monitoring replies across all 20 active outbound rows and convert the first real evidence into a scored interview immediately.

@@ -37,8 +37,8 @@ The first version includes:
 - `BUYER-VALIDATION-OUTREACH-BATCH-02.md` and `buyer-validation-outreach-batch-02.csv` cover the three fractional DPO/privacy consultant and two startup attorney validation targets; batch 02 was executed on 2026-04-22 under an explicit operator override.
 - `BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md` captures the three-business-day advisor follow-up queue for batch 02 non-responders.
 - The follow-up pass generators prefer the actual inbox recorded in outreach CSV `notes` when a first send uncovered a direct-email route, so the queued follow-up route can be narrower than the original public contact path.
-- `BUYER-VALIDATION-OUTREACH-BATCH-03.md` and `buyer-validation-outreach-batch-03.csv` define the contingency founder/operator expansion to use only if the 2026-04-27 no-reply check still needs five more public targets.
-- `BUYER-VALIDATION-OUTREACH-BATCH-04.md` and `buyer-validation-outreach-batch-04.csv` define the second founder/operator contingency expansion to use only if batch 03 still leaves the queue short after the same no-reply check.
+- `BUYER-VALIDATION-OUTREACH-BATCH-03.md` and `buyer-validation-outreach-batch-03.csv` define the first founder/operator contingency expansion; batch 03 was sent on 2026-04-28 and is now part of the active outbound reply queue.
+- `BUYER-VALIDATION-OUTREACH-BATCH-04.md` and `buyer-validation-outreach-batch-04.csv` define the second founder/operator contingency expansion; batch 04 was also sent on 2026-04-28 and is likewise waiting on replies.
 - `buyer-validation-interview-log.csv` is the simple scoring log for founder, consultant, and attorney validation interviews.
 - `VALIDATION-POSITIONING-BRIEF.md` is the generated founder-vs-advisor synthesis that weighs scored interviews and tagged async feedback before a positioning change.
 - `VALIDATION-DECISION-BRIEF.md` is the generated 2026-04-27 decision snapshot for follow-ups, batch 03 and batch 04 unlocks, and founder-vs-advisor positioning calls; use its execution queue for the exact next commands.
