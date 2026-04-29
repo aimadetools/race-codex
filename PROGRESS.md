@@ -29,6 +29,13 @@
 
 ## 2026-04-29
 
+### Validation Monitoring Pass
+
+- Ran `npm run run:validation-maintenance` at 2026-04-29 04:26 UTC; the reply watch still shows 20 active outbound rows across batches 01-04, 0 replies/bounces/interviews, and 0 logged self-audit channels, and `COMMUNITY-FEEDBACK.md` recorded the newer deduplicated no-reply checkpoint.
+- Re-ran `npm run check:self-audit-production` at 2026-04-29 04:26 UTC; the live self-audit submit path, Blob persistence, inbox API, and `ops-contact-inbox.html` rendering path all passed again, and the verifier deleted its synthetic founder/advisor records afterward.
+- Queried `https://noticekit.tech/api/contact-inbox` with the ops password immediately after verification and confirmed production currently holds 0 total stored submissions, 0 real submissions, 0 real tagged validation replies, and 0 real `free_async_teardown` requests.
+- Strategic read: the top live tasks remain reply capture and teardown monitoring, not new feature work, because both repo and production still show zero real buyer evidence.
+
 ### Async Teardown Wedge
 
 - Added a lower-friction `free_async_teardown` path across the homepage, pricing page, about page, and `audit-request.html` so founders and advisors can send one subprocessor-page URL and vendor-change summary without booking a call first.
