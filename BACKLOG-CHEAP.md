@@ -22,12 +22,8 @@ These tasks are routine and can be handled quickly.
 - If the in-page self-audit submit path produces more responses than `mailto`, update founder and advisor follow-up copy to prefer the on-page form and keep email as fallback.
 - Tighten the copied feedback draft in `ops-contact-inbox.html` if the first real tagged reply drops any field used by `VALIDATION-DECISION-BRIEF.md`.
 
-## P2
-
-- Keep a lightweight weekly validation-memory cleanup pass so `PROGRESS.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` do not bloat again with no-op monitoring entries.
-
 Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, automated status logging, and homepage/pricing/intake copy refreshes are done; routine no-reply watch passes now live in `PROGRESS.md`.
+- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, automated status logging, homepage/pricing/intake copy refreshes, and the weekly validation-memory cleanup pass are done; routine no-reply watch passes now live in `PROGRESS.md`.

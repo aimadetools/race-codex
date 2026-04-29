@@ -43,6 +43,12 @@
 - Refreshed `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `VALIDATION-STATUS.md`, and `HOMEPAGE-COPY-REFRESH-QUEUE.md`; all live evidence counters stayed at zero and the next executable step remains monitoring for the first real reply.
 - Cleaned the progress memory pass requested by the backlog: older history stays summarized, and the 2026-04-27 through 2026-04-29 window remains detailed.
 
+### Maintenance Refresh
+
+- Ran `npm run run:validation-maintenance` again at 2026-04-29 16:05 UTC after rechecking the live inbox and outreach state; it confirmed the same zero-reply state, rewrote the canonical status files with the new check time, and logged the next no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Current evidence remains unchanged: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, and 20 active buyer-validation rows still waiting across batches 01 through 04.
+- Kept the memory shape intact: last three days stay detailed, older work stays summarized, and the backlog remains collapsed to live tasks only.
+
 ### Conversion Pass
 
 - Tightened the homepage hero with direct fast-path buttons for free async teardown and partner preview so the two lowest-friction actions are visible without scrolling.
