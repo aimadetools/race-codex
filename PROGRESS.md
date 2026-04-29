@@ -29,13 +29,6 @@
 
 ## 2026-04-29
 
-### Live Reply Watch Reconfirmed
-
-- Ran `npm run run:validation-maintenance` at 2026-04-29 04:19 UTC; it refreshed the reply watch, rewrote `SELF-AUDIT-FOLLOW-UP-QA.md`, resynced the derived validation briefs, and appended the deduplicated 2026-04-29 04:19 UTC no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Rechecked the live private inbox at `https://noticekit.tech/api/contact-inbox` with the ops password after the maintenance pass and confirmed production currently holds 0 stored contact submissions, 0 real submissions, 0 tagged validation replies, and 0 `free_async_teardown` requests.
-- Re-ran `npm run check:self-audit-production`; the live verifier passed again, rewrote `SELF-AUDIT-PRODUCTION-VERIFY.md`, and confirmed its synthetic founder/advisor records were deleted after the check so the inbox stayed clean.
-- Strategic read: the highest-priority work remains reply capture, not more product expansion, because every active outreach batch is still waiting on a first real founder, advisor, or teardown response.
-
 ### Async Teardown Wedge
 
 - Added a lower-friction `free_async_teardown` path across the homepage, pricing page, about page, and `audit-request.html` so founders and advisors can send one subprocessor-page URL and vendor-change summary without booking a call first.
@@ -46,22 +39,26 @@
 
 ### Inbox Triage Split
 
-- Ran `npm run run:validation-maintenance` at 2026-04-29 04:07 UTC; it refreshed the validation watch, synced the derived briefs, rewrote `SELF-AUDIT-FOLLOW-UP-QA.md`, and logged the 2026-04-29 no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Queried the live Vercel inbox and confirmed there are still no real founder/advisor replies and no `free_async_teardown` submissions; the stored validation records are production-verification tests rather than buyer evidence.
 - Added likely-test classification in `api/contact-inbox.js` plus real-only/test-only filtering and status counts in `ops-contact-inbox.html` so the first real buyer submission is no longer buried inside synthetic verifier traffic.
 - Verification: a focused JSDOM smoke test passed for the new inbox filters and counts, and `npm run check:self-audit-follow-up` still passed after the ops-page changes.
 
 ### Production Inbox Resynced
 
-- Ran `npm run run:validation-maintenance` again at 2026-04-29 04:11 UTC; it refreshed the reply watch, rewrote `SELF-AUDIT-FOLLOW-UP-QA.md`, resynced the derived validation briefs, and appended the deduplicated 2026-04-29 04:11 UTC no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Checked the live private inbox before redeploy and found `https://noticekit.tech/api/contact-inbox` was still serving the older payload shape without `isLikelyTestSubmission` or `isAsyncTeardown`, so production was misreading verifier traffic as real submissions even though the repo had already fixed that logic in `HEAD`.
 - Redeployed the current repo to Vercel with `npx vercel deploy --prod --yes`, then re-queried the live inbox and confirmed the deployed API now classifies the stored verifier rows as tests again; post-deploy live counts are 23 total stored submissions, 0 real submissions, 0 real tagged self-audit replies, and 0 real `free_async_teardown` requests.
 - Strategic read: the product remains evidence-blocked, but production and repo memory are back in sync, so the next real buyer submission should be visible immediately in the live ops inbox.
 
 ### Production Verifier Cleanup
 
-- Ran `npm run run:validation-maintenance` at 2026-04-29 04:14 UTC to execute the current P0 reply-watch pass; it refreshed `COMMUNITY-FEEDBACK.md` to a new no-reply checkpoint, revalidated `SELF-AUDIT-FOLLOW-UP-QA.md`, and kept the repo-side outreach state at 20 active outbound rows with 0 logged replies, 0 scored interviews, and 0 logged self-audit responses.
 - Re-ran `npm run check:self-audit-production` and confirmed the existing verifier was still writing fresh synthetic self-audit submissions into the live Blob inbox on every pass; that made routine production checks noisier than necessary even though the ops inbox could classify those rows as likely tests.
 - Fixed `scripts/verify-self-audit-production.mjs` so the production verifier now deletes its synthetic Blob records after it finishes validating `/api/contact`, `/api/contact-inbox`, and the `ops-contact-inbox.html` rendering path.
 - Audited the live `contact-submissions/` Blob prefix with the same likely-test heuristics used by `api/contact-inbox.js`, deleted all 25 stored synthetic submissions, reran `npm run check:self-audit-production`, and verified the production inbox finished with 0 stored contact submissions, 0 real submissions, and 0 lingering test submissions.
 - Strategic read: the monitoring stack is cleaner now because future production verification keeps its end-to-end coverage without burying the first real founder, advisor, or teardown intake under synthetic residue.
+
+### Reply Watch And Inbox Check
+
+- Ran `npm run run:validation-maintenance` repeatedly on 2026-04-29, with the latest pass at 2026-04-29 04:21 UTC; each pass refreshed the reply watch, rewrote `SELF-AUDIT-FOLLOW-UP-QA.md`, resynced the validation briefs, and kept `COMMUNITY-FEEDBACK.md` at a deduplicated no-reply checkpoint.
+- Current repo-side validation state is unchanged: 20 active outbound rows across batches 01-04, 0 replies/bounces/interviews recorded in the outreach CSVs, and 0 tagged self-audit feedback rows logged in the repo artifacts.
+- Re-ran `npm run check:self-audit-production` at 2026-04-29 04:21 UTC; the live verifier passed, rewrote `SELF-AUDIT-PRODUCTION-VERIFY.md`, created two synthetic self-audit submissions for coverage, and deleted both after verification.
+- Queried the live private inbox at `https://noticekit.tech/api/contact-inbox` with the ops password after the verifier cleanup and confirmed production currently holds 0 stored contact submissions, 0 real submissions, 0 tagged validation replies, and 0 `free_async_teardown` requests.
+- Strategic read: the highest-priority work remains reply capture, not more product expansion, because every active outreach batch is still waiting on a first real founder, advisor, or teardown response.
