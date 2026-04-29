@@ -13,6 +13,7 @@ const BATCH_FILES = [
 ];
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const CONTACT_INBOX_STATUS_FILE = join(ROOT, "CONTACT-INBOX-STATUS.md");
+const HELP_REQUEST_STATUS_FILE = join(ROOT, "HELP-REQUEST-STATUS.md");
 const HOMEPAGE_QUEUE_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
 const DECISION_BRIEF_FILE = join(ROOT, "VALIDATION-DECISION-BRIEF.md");
 const POSITIONING_BRIEF_FILE = join(ROOT, "VALIDATION-POSITIONING-BRIEF.md");
@@ -182,6 +183,21 @@ function extractInboxCheckedAt(text) {
   return match ? match[1].trim() : "unknown";
 }
 
+function extractHelpRequestStatus(text) {
+  const match = text.match(/- Status:\s*([^\n]+)/i);
+  return match ? match[1].trim().toLowerCase() : "unknown";
+}
+
+function extractHelpRequestWhat(text) {
+  const match = text.match(/- What:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
+function extractHelpRequestCheckedAt(text) {
+  const match = text.match(/Checked at:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
 function hasRealInboxSubmission(text) {
   return /- No real submissions are stored in the inbox yet\./i.test(text) ? false : /## Latest Real Submission/i.test(text);
 }
@@ -276,6 +292,7 @@ const contingencyRows = parseCsv(await readFile(BATCH_FILES[2].path, "utf8"));
 const contingencyTwoRows = parseCsv(await readFile(BATCH_FILES[3].path, "utf8"));
 const feedbackText = await readFile(FEEDBACK_FILE, "utf8");
 const contactInboxStatusText = await readFile(CONTACT_INBOX_STATUS_FILE, "utf8").catch(() => "");
+const helpRequestStatusText = await readFile(HELP_REQUEST_STATUS_FILE, "utf8").catch(() => "");
 const homepageQueueText = await readFile(HOMEPAGE_QUEUE_FILE, "utf8").catch(() => "");
 const decisionBriefText = await readFile(DECISION_BRIEF_FILE, "utf8").catch(() => "");
 const positioningBriefText = await readFile(POSITIONING_BRIEF_FILE, "utf8").catch(() => "");
@@ -296,6 +313,9 @@ const inboxTeardowns = extractInboxMetric(contactInboxStatusText, "Real free asy
 const inboxPartnerRequests = extractInboxMetric(contactInboxStatusText, "Real partner requests");
 const inboxTaggedValidation = extractInboxMetric(contactInboxStatusText, "Real tagged validation replies");
 const inboxHasRealSubmissions = hasRealInboxSubmission(contactInboxStatusText);
+const helpRequestStatus = extractHelpRequestStatus(helpRequestStatusText);
+const helpRequestWhat = extractHelpRequestWhat(helpRequestStatusText);
+const helpRequestCheckedAt = extractHelpRequestCheckedAt(helpRequestStatusText);
 const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
 const homepageQueueState = extractQueueState(homepageQueueText);
 const decisionHeadline = extractDecisionHeadline(decisionBriefText);
@@ -311,6 +331,7 @@ const output = [
   "",
   "- Highest-priority incomplete work: exact buyer validation through real interviews.",
   `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` and ` + "`CONTACT-INBOX-STATUS.md`" + ` for the first real reply or intake, then convert it into the right evidence log.`,
+  `- Human-help request state: ${helpRequestStatus === "open" ? `open as of ${helpRequestCheckedAt}` : helpRequestStatus === "completed" ? `completed as of ${helpRequestCheckedAt}` : "missing or unknown"}.`,
   describeFollowUpState("Founder follow-up pass", followUpDate, founderBatchRows),
   describeFollowUpState("Advisor follow-up pass", advisorFollowUpDate, advisorBatchRows),
   describeBatchPosition("Batch 03", contingencyRows),
@@ -334,6 +355,7 @@ const output = [
   `- Self-audit score bands logged: ${feedbackSignals.lowScoreBands} low (0-4), ${feedbackSignals.mediumScoreBands} medium (5-7), ${feedbackSignals.highScoreBands} high (8-10)`,
   `- Ownership signals logged: ${feedbackSignals.founderOwnership} founder/operator, ${feedbackSignals.advisorOwnership} consultant/attorney`,
   `- Contact inbox check: ${inboxCheckedAt === "unknown" ? "missing; run \`npm run build:contact-inbox-status\`." : `last checked ${inboxCheckedAt}`}`,
+  `- Human-help request check: ${helpRequestCheckedAt === "unknown" ? "missing; run \`npm run build:help-request-status\`." : `last checked ${helpRequestCheckedAt}`}`,
   `- Real inbox submissions: ${inboxRealSubmissions == null ? "unknown" : inboxRealSubmissions}`,
   `- Real free async teardown submissions: ${inboxTeardowns == null ? "unknown" : inboxTeardowns}`,
   `- Real partner requests: ${inboxPartnerRequests == null ? "unknown" : inboxPartnerRequests}`,
@@ -343,6 +365,7 @@ const output = [
   "",
   "- Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.",
   "- Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.",
+  `- Human help: ${helpRequestStatus === "open" ? `\`HELP-REQUEST-STATUS.md\` still shows an open request for "${helpRequestWhat}".` : helpRequestStatus === "completed" ? `\`HELP-REQUEST-STATUS.md\` shows the current request as completed.` : "help-request status snapshot missing or empty."}`,
   "- Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.",
   `- Decision brief: ${decisionHeadline === "unknown" ? "missing; run \`npm run build:validation-decision-brief\`." : `\`VALIDATION-DECISION-BRIEF.md\` says: ${decisionHeadline}`}`,
   `- Positioning brief: ${positioningHeadline === "unknown" ? "missing; run \`node scripts/build-validation-positioning-brief.mjs\`." : `\`VALIDATION-POSITIONING-BRIEF.md\` says: ${positioningHeadline}`}`,

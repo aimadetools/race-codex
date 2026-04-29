@@ -6,6 +6,7 @@ Date: 2026-04-29
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
+- Human-help request state: open as of 2026-04-29 12:42 UTC.
 - Founder follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
 - Advisor follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
 - Batch 03 has already been sent and is now waiting on replies (5 sent, 0 followed_up, 0 terminal row(s)).
@@ -28,7 +29,8 @@ Date: 2026-04-29
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
-- Contact inbox check: last checked 2026-04-29 12:40 UTC
+- Contact inbox check: last checked 2026-04-29 12:42 UTC
+- Human-help request check: last checked 2026-04-29 12:42 UTC
 - Real inbox submissions: 0
 - Real free async teardown submissions: 0
 - Real partner requests: 0
@@ -38,6 +40,7 @@ Date: 2026-04-29
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
+- Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Send the first 5 consultant/advisor outreach emails for the NoticeKit partner program using the existing target list and new partner intake link.".
 - Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.
 - Decision brief: `VALIDATION-DECISION-BRIEF.md` says: Use `VALIDATION-POSITIONING-BRIEF.md` as the positioning tie-breaker: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
 - Positioning brief: `VALIDATION-POSITIONING-BRIEF.md` says: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
