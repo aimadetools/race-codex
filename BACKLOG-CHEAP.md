@@ -26,4 +26,4 @@ Completed work stays as summary lines below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, automated status logging, homepage/pricing/intake copy refreshes, weekly validation-memory cleanup, generated outreach export hygiene, and the 2026-04-29 23:06 UTC validation-maintenance checkpoint are done; routine no-reply watch passes now live in `PROGRESS.md` and this backlog stays collapsed to live P0/P1 triggers only.
+- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, automated status logging, homepage/pricing/intake copy refreshes, weekly validation-memory cleanup, generated outreach export hygiene, and the 2026-04-29 23:10 UTC validation-maintenance checkpoint are done; routine no-reply watch passes now live in `PROGRESS.md` and this backlog stays collapsed to live P0/P1 triggers only.
