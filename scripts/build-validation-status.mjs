@@ -12,6 +12,7 @@ const BATCH_FILES = [
   { label: "Contingency batch 04", path: join(ROOT, "buyer-validation-outreach-batch-04.csv") }
 ];
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
+const CONTACT_INBOX_STATUS_FILE = join(ROOT, "CONTACT-INBOX-STATUS.md");
 const HOMEPAGE_QUEUE_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
 const DECISION_BRIEF_FILE = join(ROOT, "VALIDATION-DECISION-BRIEF.md");
 const POSITIONING_BRIEF_FILE = join(ROOT, "VALIDATION-POSITIONING-BRIEF.md");
@@ -170,6 +171,21 @@ function extractQueueState(text) {
   return match ? match[1].trim() : "unknown";
 }
 
+function extractInboxMetric(text, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = text.match(new RegExp(`- ${escaped}: (\\d+)`, "i"));
+  return match ? Number(match[1]) : null;
+}
+
+function extractInboxCheckedAt(text) {
+  const match = text.match(/Checked at:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
+function hasRealInboxSubmission(text) {
+  return /- No real submissions are stored in the inbox yet\./i.test(text) ? false : /## Latest Real Submission/i.test(text);
+}
+
 function extractDecisionHeadline(text) {
   const match = text.match(/Recommended action headline:\s*([^\n]+)/i);
   return match ? match[1].trim() : "unknown";
@@ -259,6 +275,7 @@ const advisorBatchRows = parseCsv(await readFile(BATCH_FILES[1].path, "utf8"));
 const contingencyRows = parseCsv(await readFile(BATCH_FILES[2].path, "utf8"));
 const contingencyTwoRows = parseCsv(await readFile(BATCH_FILES[3].path, "utf8"));
 const feedbackText = await readFile(FEEDBACK_FILE, "utf8");
+const contactInboxStatusText = await readFile(CONTACT_INBOX_STATUS_FILE, "utf8").catch(() => "");
 const homepageQueueText = await readFile(HOMEPAGE_QUEUE_FILE, "utf8").catch(() => "");
 const decisionBriefText = await readFile(DECISION_BRIEF_FILE, "utf8").catch(() => "");
 const positioningBriefText = await readFile(POSITIONING_BRIEF_FILE, "utf8").catch(() => "");
@@ -273,6 +290,12 @@ const noFounderRepliesPosted = hasNoReplyNote(feedbackText, "founder");
 const noAdvisorRepliesPosted = hasNoReplyNote(feedbackText, "advisor");
 const noRepliesPosted = noFounderRepliesPosted && noAdvisorRepliesPosted;
 const feedbackSignals = extractFeedbackSignals(feedbackText);
+const inboxCheckedAt = extractInboxCheckedAt(contactInboxStatusText);
+const inboxRealSubmissions = extractInboxMetric(contactInboxStatusText, "Real submissions");
+const inboxTeardowns = extractInboxMetric(contactInboxStatusText, "Real free async teardown submissions");
+const inboxPartnerRequests = extractInboxMetric(contactInboxStatusText, "Real partner requests");
+const inboxTaggedValidation = extractInboxMetric(contactInboxStatusText, "Real tagged validation replies");
+const inboxHasRealSubmissions = hasRealInboxSubmission(contactInboxStatusText);
 const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
 const homepageQueueState = extractQueueState(homepageQueueText);
 const decisionHeadline = extractDecisionHeadline(decisionBriefText);
@@ -287,7 +310,7 @@ const output = [
   "## Current Read",
   "",
   "- Highest-priority incomplete work: exact buyer validation through real interviews.",
-  `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` for replies and convert any real reply into an interview.`,
+  `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` and ` + "`CONTACT-INBOX-STATUS.md`" + ` for the first real reply or intake, then convert it into the right evidence log.`,
   describeFollowUpState("Founder follow-up pass", followUpDate, founderBatchRows),
   describeFollowUpState("Advisor follow-up pass", advisorFollowUpDate, advisorBatchRows),
   describeBatchPosition("Batch 03", contingencyRows),
@@ -310,15 +333,22 @@ const output = [
   `- Self-audit channels logged: ${feedbackSignals.channels.length} (${feedbackSignals.inPageFormChannels} in-page-form, ${feedbackSignals.mailtoChannels} mailto)`,
   `- Self-audit score bands logged: ${feedbackSignals.lowScoreBands} low (0-4), ${feedbackSignals.mediumScoreBands} medium (5-7), ${feedbackSignals.highScoreBands} high (8-10)`,
   `- Ownership signals logged: ${feedbackSignals.founderOwnership} founder/operator, ${feedbackSignals.advisorOwnership} consultant/attorney`,
+  `- Contact inbox check: ${inboxCheckedAt === "unknown" ? "missing; run \`npm run build:contact-inbox-status\`." : `last checked ${inboxCheckedAt}`}`,
+  `- Real inbox submissions: ${inboxRealSubmissions == null ? "unknown" : inboxRealSubmissions}`,
+  `- Real free async teardown submissions: ${inboxTeardowns == null ? "unknown" : inboxTeardowns}`,
+  `- Real partner requests: ${inboxPartnerRequests == null ? "unknown" : inboxPartnerRequests}`,
+  `- Real tagged validation replies in inbox: ${inboxTaggedValidation == null ? "unknown" : inboxTaggedValidation}`,
   "",
   "## Notes",
   "",
   "- Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.",
+  "- Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.",
   "- Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.",
   `- Decision brief: ${decisionHeadline === "unknown" ? "missing; run \`npm run build:validation-decision-brief\`." : `\`VALIDATION-DECISION-BRIEF.md\` says: ${decisionHeadline}`}`,
   `- Positioning brief: ${positioningHeadline === "unknown" ? "missing; run \`node scripts/build-validation-positioning-brief.mjs\`." : `\`VALIDATION-POSITIONING-BRIEF.md\` says: ${positioningHeadline}`}`,
   `- Homepage advisor-handoff copy refresh queue: ${shouldQueueAdvisorCopyRefresh ? "queue it now based on logged ownership signals." : "not triggered."}`,
   `- Queue file: ${homepageQueueState === "unknown" ? "missing; run \`npm run build:homepage-copy-refresh-queue\`." : `\`HOMEPAGE-COPY-REFRESH-QUEUE.md\` is ${homepageQueueState}.`}`,
+  `- Inbox evidence read: ${contactInboxStatusText ? (inboxHasRealSubmissions ? "real intake exists and needs manual triage." : "no real intake is stored in Blob yet.") : "inbox snapshot missing."}`,
   ...contingencyNotes,
   ""
 ].join("\n");

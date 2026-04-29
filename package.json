@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "build:contact-inbox-status": "node scripts/build-contact-inbox-status.mjs",
     "build:validation-decision-brief": "node scripts/build-validation-decision-brief.mjs",
     "build:validation-positioning-brief": "node scripts/build-validation-positioning-brief.mjs",
     "build:paid-kits": "node scripts/build-paid-kit-fulfillment.mjs",

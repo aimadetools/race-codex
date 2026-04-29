@@ -31,7 +31,7 @@ Date: 2026-04-29
 - Bottom CTA headline: present
   Current: "Founder with a vendor change this month?"
   Proposed: "Advisor or operator cleaning up a vendor change this month?"
-- Bottom CTA copy: present
+- Bottom CTA copy: missing
   Current: "Send the vendor name, your current subprocessor page, and the customer segment affected. NoticeKit is prioritizing founder/operator workflows before consultant channels."
   Proposed: "Send the vendor name, current subprocessor page, and affected customer segment. NoticeKit can package the facts, notice draft, and evidence trail before counsel or client review."
 - Bottom CTA button: present

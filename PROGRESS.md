@@ -48,3 +48,9 @@
 - Ran `npm run run:validation-maintenance` at 2026-04-29 12:35 UTC; it refreshed the reply-watch artifacts, revalidated the follow-up links, and rolled `COMMUNITY-FEEDBACK.md` forward to the latest deduplicated no-reply checkpoint.
 - Queried the live inbox API at `https://noticekit.tech/api/contact-inbox` with the ops password immediately after the maintenance pass and confirmed `{"ok":true,"count":0}`; no founder/advisor reply, `free_async_teardown`, or `partner_request` submission had landed by that checkpoint.
 - Confirmed the repo still points to evidence capture, not expansion: all 20 outbound rows remain in `sent` or `followed_up`, `HELP-STATUS.md` still contains no completion note for the newer partner-email request, and no outreach CSV status changed during this pass.
+
+### Inbox Monitoring Automation
+
+- Added `scripts/build-contact-inbox-status.mjs` plus `npm run build:contact-inbox-status` so the maintenance loop can read Blob-backed intake state directly instead of depending on a manual production `curl` check.
+- Folded that inbox snapshot into `scripts/sync-validation-artifacts.mjs` and `VALIDATION-STATUS.md`, so the main validation readout now reports the latest Blob check time plus real counts for total inbox submissions, `free_async_teardown`, `partner_request`, and tagged validation replies.
+- Verified the new path by running `npm run build:contact-inbox-status` and `npm run run:validation-maintenance` at 2026-04-29 12:38 UTC; the generated `CONTACT-INBOX-STATUS.md` confirmed 0 total records and the reply watch stayed flat, so `COMMUNITY-FEEDBACK.md` advanced to a fresh 12:38 UTC no-reply checkpoint.

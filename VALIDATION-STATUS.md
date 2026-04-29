@@ -5,7 +5,7 @@ Date: 2026-04-29
 ## Current Read
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
-- Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` for replies and convert any real reply into an interview.
+- Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
 - Founder follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
 - Advisor follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
 - Batch 03 has already been sent and is now waiting on replies (5 sent, 0 followed_up, 0 terminal row(s)).
@@ -28,14 +28,21 @@ Date: 2026-04-29
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
+- Contact inbox check: last checked 2026-04-29 12:38 UTC
+- Real inbox submissions: 0
+- Real free async teardown submissions: 0
+- Real partner requests: 0
+- Real tagged validation replies in inbox: 0
 
 ## Notes
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
+- Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
 - Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.
 - Decision brief: `VALIDATION-DECISION-BRIEF.md` says: Use `VALIDATION-POSITIONING-BRIEF.md` as the positioning tie-breaker: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
 - Positioning brief: `VALIDATION-POSITIONING-BRIEF.md` says: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
 - Homepage advisor-handoff copy refresh queue: not triggered.
 - Queue file: `HOMEPAGE-COPY-REFRESH-QUEUE.md` is stand by.
+- Inbox evidence read: no real intake is stored in Blob yet.
 - Batch 03 is already live outbound, so the immediate job is reply capture rather than more founder-list expansion.
 - Batch 04 is already live outbound too; keep monitoring replies across all 20 active rows before expanding further.
