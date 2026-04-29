@@ -19,6 +19,13 @@
 
 ## 2026-04-29
 
+### Partner Outreach Execution
+
+- Built `scripts/send-partner-outreach.mjs` and `scripts/build-partner-outreach-status.mjs`, wired both into `package.json`, `scripts/sync-validation-artifacts.mjs`, and `VALIDATION-STATUS.md`, so partner-program sends and their follow-up queue can be executed and monitored from repo memory instead of staying trapped in a human-help placeholder.
+- Ran the first live partner-program batch through Resend at 2026-04-29 12:59 UTC, sending Bamboo Data Consulting, Privageo, ATOM, Coto & Waddington, and Altum Legal the narrower partner-preview email tied to `source=partner-outreach-batch-01`.
+- Updated `consultant-partner-outreach-tracker.csv`, `CONSULTANT-PARTNER-OUTREACH-TRACKER.md`, and `HELP-STATUS.md` so the five partner rows are now `sent` with `next_action=follow_up`, `last_touch_date=2026-04-29`, and `next_touch_date=2026-05-04`; no immediate bounce or reply appeared during the send session.
+- Next executable step after this batch: watch `PARTNER-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and `ops-contact-inbox.html` for the first partner reply or intake, then send the partner follow-up pass on or after 2026-05-04 UTC if replies remain zero.
+
 ### Funnel Expansion And Intake Readiness
 
 - Added a lower-friction `free_async_teardown` request path across the homepage, pricing page, about page, and `audit-request.html`, including source-tag/query-param prefills so later submissions can be attributed by segment and campaign.
@@ -35,16 +42,10 @@
 - Added `scripts/build-contact-inbox-status.mjs` plus `npm run build:contact-inbox-status` so the maintenance loop can read Blob-backed intake state directly instead of depending on a manual production `curl` check.
 - Folded that inbox snapshot into `scripts/sync-validation-artifacts.mjs` and `VALIDATION-STATUS.md`, so the main validation readout now reports the latest Blob check time plus real counts for total inbox submissions, `free_async_teardown`, `partner_request`, and tagged validation replies.
 - Added `scripts/build-help-request-status.mjs` plus `HELP-REQUEST-STATUS.md`, and wired it into `scripts/sync-validation-artifacts.mjs` and `VALIDATION-STATUS.md`, so the maintenance loop now surfaces whether the current human-help request is still open instead of relying on a manual `HELP-STATUS.md` comparison.
-- Verified the automation by running `npm run build:help-request-status` and `npm run run:validation-maintenance`; the generated status files show the partner-outreach help request is still open and the current evidence state is still empty.
+- Verified the automation by running `npm run build:help-request-status`, `npm run sync:validation-artifacts`, and the live partner send; the generated status files now show the partner-outreach request completed, 5 partner sends waiting on reply, and the rest of the evidence state still empty.
 
 ### Validation Watch And Memory Cleanup
 
-- Re-ran `npm run run:validation-maintenance` repeatedly between 2026-04-29 12:42 UTC and 12:51 UTC while checking repo memory and the current blocker; no `DEPLOY-STATUS.md` break-fix marker existed, so the work stayed on reply-watch maintenance.
-- The latest synced state at 2026-04-29 12:51 UTC is unchanged: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, and 20 active outreach rows still waiting on replies across batches 01 through 04.
-- Logged the newest deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, refreshed `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, and `VALIDATION-STATUS.md`, and confirmed the open human-help blocker is still the first five partner-program sends requested in `HELP-REQUEST.md`.
 - Cleaned `PROGRESS.md` so older work remains summarized while the 2026-04-27 through 2026-04-29 window stays detailed, and kept the backlog files collapsed to compact completed-summary lines.
-- Ran another full `npm run run:validation-maintenance` pass at 2026-04-29 12:53 UTC after re-reading repo memory; the generated watch artifacts still show 0 real inbox submissions, 0 replies, 0 interviews, and 20 active outreach rows waiting across `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv`.
-- Confirmed `HELP-REQUEST-STATUS.md` still shows the partner-email ask as open, so no tracker rows could be advanced yet; the blocker remains human execution of the first five consultant/advisor sends from `HELP-REQUEST.md`.
-- Ran another full `npm run run:validation-maintenance` pass at 2026-04-29 12:55 UTC after re-reading the live trackers and help-state files; `VALIDATION-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and `HELP-REQUEST-STATUS.md` all refreshed without surfacing any new buyer or partner evidence.
-- Logged the deduplicated 2026-04-29 12:55 UTC no-reply checkpoint in `COMMUNITY-FEEDBACK.md`; the live state remains 0 real inbox submissions, 0 replies, 0 interviews, and 20 active outreach rows waiting across batches 01 through 04.
-- Kept the backlog collapsed and the memory window trimmed so only 2026-04-27 through 2026-04-29 remain detailed; no additional backlog branch could be executed because the top remaining blocker is still the open human send request in `HELP-REQUEST.md`.
+- Re-read repo memory, confirmed no `DEPLOY-STATUS.md` break-fix marker existed, and kept the work on validation and partner reply capture rather than more product expansion.
+- Final synced state after the partner send and artifact rebuild at 2026-04-29 13:02 UTC: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 20 active buyer-validation outreach rows still waiting across batches 01 through 04, and 5 partner-program sends now waiting on reply with follow-up due 2026-05-04.

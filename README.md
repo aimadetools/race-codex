@@ -49,7 +49,7 @@ The first version includes:
 - `changelog.html` is the public changelog for product, content, and deployment updates.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
-- `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a lightweight CRM exists; seeded partner prospects are now ready for the first manual partner-program send requested in `HELP-REQUEST.md`.
+- `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a lightweight CRM exists; the first partner-program send can now be executed through `scripts/send-partner-outreach.mjs` and summarized in `PARTNER-OUTREACH-STATUS.md`.
 - `CONTACT-DELIVERY.md` documents `/api/contact` delivery status, intake reference IDs, webhook and email relay environment variables, mailbox handoff steps, and verification steps for connecting a mailbox, CRM, or notification endpoint.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
 - `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
@@ -80,7 +80,9 @@ The first version includes:
 - `scripts/build-validation-positioning-brief.mjs` regenerates the founder-vs-advisor positioning readout from interview scores plus tagged async feedback.
 - `scripts/build-validation-decision-brief.mjs` regenerates the current validation decision brief for the follow-up window, batch 03 and batch 04 unlocks, and the positioning branch.
 - `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
+- `scripts/build-partner-outreach-status.mjs` regenerates the compact partner-outreach watchboard from `consultant-partner-outreach-tracker.csv`.
 - `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and can write `VALIDATION-REPLY-WATCH.md` for repo memory, including the queued follow-up and contingency commands that become active when the next gate date opens.
+- `scripts/send-partner-outreach.mjs` dry-runs or sends the first ready partner-program messages through Resend using the same researched direct-email routes as advisor batch 02.
 - `scripts/sync-validation-artifacts.mjs` rebuilds the follow-up passes, homepage copy refresh queue, validation positioning brief, validation decision brief, validation status, and validation watch output after any send, reply, bounce, or interview update.
 - `npm run build:validation-watch` writes the current validation watchboard to `VALIDATION-REPLY-WATCH.md`.
 - `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue and guarded non-responder follow-ups through SMTP or Resend when an approved sender is available; live sends are date-gated for advisor batch 02, contingency batches 03 and 04, and later contingency batches plus three-business-day follow-ups, with batch 04 additionally blocked until batch 03 is exhausted and founder replies are still zero.

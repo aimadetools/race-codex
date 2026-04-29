@@ -4,8 +4,8 @@ These tasks are routine and can be handled quickly.
 
 ## P0
 
-- Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `ops-contact-inbox.html`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or completion of the partner-outreach help request; update the matching CSV or tracker immediately.
-- If the human sent the first 5 partner emails, update `consultant-partner-outreach-tracker.csv` with send dates, switch those rows out of `ready_to_send`, and set the next follow-up date.
+- Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or partner-program reply; update the matching CSV or tracker immediately.
+- On or after `2026-05-04` UTC, if the five partner-program sends still show zero replies, send the first partner follow-up pass and log it in `consultant-partner-outreach-tracker.csv`.
 - If the first real `free_async_teardown` lands, record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link before replying.
 - If the first real `partner_request` lands from `partner-preview-hero`, `partner-preview-cta`, or `partner-outreach-batch-01`, log the qualification outcome in `consultant-partner-outreach-tracker.csv`.
 - When the first real `partner_request` lands, send a short approve / clarify / decline reply from `hello@noticekit.tech` and log whether it points to referral-only, client-delivery, or white-label demand.
@@ -30,4 +30,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, and automated status logging are done; routine no-reply watch passes now live in `PROGRESS.md`.
+- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, and automated status logging are done; routine no-reply watch passes now live in `PROGRESS.md`.

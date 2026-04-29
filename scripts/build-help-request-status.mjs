@@ -60,6 +60,12 @@ let matchingEntry = null;
 
 if (normalizedRequestWhat) {
   matchingEntry = completedEntries.find((entry) => normalize(entry.body).includes(normalizedRequestWhat)) || null;
+  if (!matchingEntry && normalize(helpStatusText).includes(normalizedRequestWhat)) {
+    matchingEntry = {
+      heading: "Matched completed note in HELP-STATUS.md",
+      body: helpStatusText
+    };
+  }
 }
 
 const status = matchingEntry ? "completed" : requestWhat ? "open" : "missing";

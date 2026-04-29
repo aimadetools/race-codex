@@ -14,6 +14,7 @@ const BATCH_FILES = [
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const CONTACT_INBOX_STATUS_FILE = join(ROOT, "CONTACT-INBOX-STATUS.md");
 const HELP_REQUEST_STATUS_FILE = join(ROOT, "HELP-REQUEST-STATUS.md");
+const PARTNER_OUTREACH_STATUS_FILE = join(ROOT, "PARTNER-OUTREACH-STATUS.md");
 const HOMEPAGE_QUEUE_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
 const DECISION_BRIEF_FILE = join(ROOT, "VALIDATION-DECISION-BRIEF.md");
 const POSITIONING_BRIEF_FILE = join(ROOT, "VALIDATION-POSITIONING-BRIEF.md");
@@ -198,6 +199,22 @@ function extractHelpRequestCheckedAt(text) {
   return match ? match[1].trim() : "unknown";
 }
 
+function extractPartnerMetric(text, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = text.match(new RegExp(`- ${escaped}: (\\d+)`, "i"));
+  return match ? Number(match[1]) : null;
+}
+
+function extractPartnerAction(text) {
+  const match = text.match(/- Next partner action:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
+function extractPartnerCheckedAt(text) {
+  const match = text.match(/Checked at:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
 function hasRealInboxSubmission(text) {
   return /- No real submissions are stored in the inbox yet\./i.test(text) ? false : /## Latest Real Submission/i.test(text);
 }
@@ -293,6 +310,7 @@ const contingencyTwoRows = parseCsv(await readFile(BATCH_FILES[3].path, "utf8"))
 const feedbackText = await readFile(FEEDBACK_FILE, "utf8");
 const contactInboxStatusText = await readFile(CONTACT_INBOX_STATUS_FILE, "utf8").catch(() => "");
 const helpRequestStatusText = await readFile(HELP_REQUEST_STATUS_FILE, "utf8").catch(() => "");
+const partnerOutreachStatusText = await readFile(PARTNER_OUTREACH_STATUS_FILE, "utf8").catch(() => "");
 const homepageQueueText = await readFile(HOMEPAGE_QUEUE_FILE, "utf8").catch(() => "");
 const decisionBriefText = await readFile(DECISION_BRIEF_FILE, "utf8").catch(() => "");
 const positioningBriefText = await readFile(POSITIONING_BRIEF_FILE, "utf8").catch(() => "");
@@ -316,6 +334,11 @@ const inboxHasRealSubmissions = hasRealInboxSubmission(contactInboxStatusText);
 const helpRequestStatus = extractHelpRequestStatus(helpRequestStatusText);
 const helpRequestWhat = extractHelpRequestWhat(helpRequestStatusText);
 const helpRequestCheckedAt = extractHelpRequestCheckedAt(helpRequestStatusText);
+const partnerOutreachCheckedAt = extractPartnerCheckedAt(partnerOutreachStatusText);
+const partnerReadyToSend = extractPartnerMetric(partnerOutreachStatusText, "Ready to send");
+const partnerSentWaiting = extractPartnerMetric(partnerOutreachStatusText, "Sent and waiting on reply");
+const partnerReplied = extractPartnerMetric(partnerOutreachStatusText, "Replied");
+const partnerNextAction = extractPartnerAction(partnerOutreachStatusText);
 const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
 const homepageQueueState = extractQueueState(homepageQueueText);
 const decisionHeadline = extractDecisionHeadline(decisionBriefText);
@@ -332,6 +355,7 @@ const output = [
   "- Highest-priority incomplete work: exact buyer validation through real interviews.",
   `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` and ` + "`CONTACT-INBOX-STATUS.md`" + ` for the first real reply or intake, then convert it into the right evidence log.`,
   `- Human-help request state: ${helpRequestStatus === "open" ? `open as of ${helpRequestCheckedAt}` : helpRequestStatus === "completed" ? `completed as of ${helpRequestCheckedAt}` : "missing or unknown"}.`,
+  `- Partner outreach state: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}; ${partnerReadyToSend == null ? "unknown" : partnerReadyToSend} ready, ${partnerSentWaiting == null ? "unknown" : partnerSentWaiting} sent/waiting, ${partnerReplied == null ? "unknown" : partnerReplied} replied.`}`,
   describeFollowUpState("Founder follow-up pass", followUpDate, founderBatchRows),
   describeFollowUpState("Advisor follow-up pass", advisorFollowUpDate, advisorBatchRows),
   describeBatchPosition("Batch 03", contingencyRows),
@@ -356,6 +380,7 @@ const output = [
   `- Ownership signals logged: ${feedbackSignals.founderOwnership} founder/operator, ${feedbackSignals.advisorOwnership} consultant/attorney`,
   `- Contact inbox check: ${inboxCheckedAt === "unknown" ? "missing; run \`npm run build:contact-inbox-status\`." : `last checked ${inboxCheckedAt}`}`,
   `- Human-help request check: ${helpRequestCheckedAt === "unknown" ? "missing; run \`npm run build:help-request-status\`." : `last checked ${helpRequestCheckedAt}`}`,
+  `- Partner-outreach check: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}`}`,
   `- Real inbox submissions: ${inboxRealSubmissions == null ? "unknown" : inboxRealSubmissions}`,
   `- Real free async teardown submissions: ${inboxTeardowns == null ? "unknown" : inboxTeardowns}`,
   `- Real partner requests: ${inboxPartnerRequests == null ? "unknown" : inboxPartnerRequests}`,
@@ -366,6 +391,7 @@ const output = [
   "- Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.",
   "- Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.",
   `- Human help: ${helpRequestStatus === "open" ? `\`HELP-REQUEST-STATUS.md\` still shows an open request for "${helpRequestWhat}".` : helpRequestStatus === "completed" ? `\`HELP-REQUEST-STATUS.md\` shows the current request as completed.` : "help-request status snapshot missing or empty."}`,
+  `- Partner outreach: ${partnerNextAction === "unknown" ? "status snapshot missing or empty." : `\`PARTNER-OUTREACH-STATUS.md\` says the next action is to ${partnerNextAction}`}`,
   "- Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.",
   `- Decision brief: ${decisionHeadline === "unknown" ? "missing; run \`npm run build:validation-decision-brief\`." : `\`VALIDATION-DECISION-BRIEF.md\` says: ${decisionHeadline}`}`,
   `- Positioning brief: ${positioningHeadline === "unknown" ? "missing; run \`node scripts/build-validation-positioning-brief.mjs\`." : `\`VALIDATION-POSITIONING-BRIEF.md\` says: ${positioningHeadline}`}`,

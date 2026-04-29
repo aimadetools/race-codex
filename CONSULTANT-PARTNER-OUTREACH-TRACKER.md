@@ -11,8 +11,8 @@ This tracker is separate from `buyer-validation-interview-log.csv`. Do not mark 
 ## Use Rules
 
 - Add a prospect only after there is a public source URL or direct warm intro source.
-- Keep `outreach_status` as `ready_to_send` for seeded prospects once the mailbox is live and the partner-program copy is finalized.
-- After founder/operator validation batches and follow-ups are complete, switch seeded prospects to `next_action=send_email` and treat the open human help request as the active blocker.
+- Keep `outreach_status` as `ready_to_send` for seeded prospects until the partner send is actually completed.
+- After a live send, switch the row to `outreach_status=sent`, set `next_action=follow_up`, and schedule the next touch date.
 - Keep `checkout_status` as `ready` because the three Stripe Payment Links are live on the pricing page.
 - Record actual replies only after they happen.
 - Move interview scoring to `buyer-validation-interview-log.csv` only after a real conversation.
@@ -38,7 +38,7 @@ The CSV starts with the five advisor targets already prepared in `BUYER-VALIDATI
 4. Coto & Waddington
 5. Altum Legal
 
-They are now `ready_to_send` because the public mailbox and Stripe checkout are live. Founder/operator validation batches and follow-ups are already complete, so the current blocker is the open human help request to send the first five partner-program emails.
+The first five seeded prospects were sent the partner-program email on 2026-04-29 through Resend. They now sit in `consultant-partner-outreach-tracker.csv` as `sent` with a `2026-05-04` follow-up date unless a reply arrives first.
 
 ## Partner-Specific Qualification
 
@@ -52,7 +52,7 @@ Before offering white-label use, confirm:
 
 ## Next Expansion
 
-After the first five partner-program emails are sent or explicitly paused by the human operator, expand the tracker to 20 partner prospects from:
+After the first five partner-program emails either reply, go cold after follow-up, or are explicitly paused, expand the tracker to 20 partner prospects from:
 
 - Fractional DPO directories and privacy consultant searches.
 - SaaS-focused startup attorneys who publish DPA or privacy content.
