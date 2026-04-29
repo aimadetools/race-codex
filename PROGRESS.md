@@ -29,24 +29,6 @@
 - Extended intake and ops tooling so inbox records now expose `sourceTag`, `submissionChannel`, async-teardown filtering, and likely-test classification; `ops-contact-inbox.html` can now separate real buyer submissions from verifier residue and generate a copyable triage draft for the first real async teardown.
 - Redeployed the updated inbox logic to Vercel, cleaned all legacy synthetic verifier rows from the live Blob inbox, and fixed `scripts/verify-self-audit-production.mjs` so future production checks delete their own synthetic submissions after validating `/api/contact`, `/api/contact-inbox`, and the ops inbox page.
 - Earlier 2026-04-29 maintenance and inbox checks stayed flat at 0 replies, 0 bounces, 0 interviews, and 0 inbox records, so no real `free_async_teardown` intake or tagged validation reply landed before the latest checkpoint.
-- Ran `npm run run:validation-maintenance` at 2026-04-29 08:22 UTC; it re-ran the watch check, refreshed `SELF-AUDIT-FOLLOW-UP-QA.md` and the follow-up pass artifacts, and logged another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Ran `npm run check:self-audit-production` immediately after that maintenance pass; it regenerated `SELF-AUDIT-PRODUCTION-VERIFY.md` with fresh production reference IDs and again confirmed the live inbox cleared its synthetic verifier rows after the smoke check.
+- Re-ran `npm run run:validation-maintenance` at 2026-04-29 08:27 UTC; it rechecked the watch, refreshed `SELF-AUDIT-FOLLOW-UP-QA.md` and the validation artifacts, and logged the latest deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Rebuilt the positioning, decision, status, follow-up-pass, send-plan, and homepage-refresh artifacts so the repo memory stayed aligned with the still-empty inbox and the 20 active outbound rows.
 - Strategic read: the product is still evidence-blocked; the highest-priority live work remains watching for the first real founder, advisor, or teardown response rather than expanding scope again.
-
-### 2026-04-29 08:24 UTC Maintenance Pass
-
-- Re-ran `npm run run:validation-maintenance`; it advanced the no-reply checkpoint in `COMMUNITY-FEEDBACK.md` to 2026-04-29 08:24 UTC and confirmed the active outreach state still shows 0 replies, 0 bounces, 0 interviews, and 0 inbox records.
-- Checked the teardown intake path immediately after that pass; no real `free_async_teardown` submission was waiting in the inbox, so there was no row to promote or triage.
-- The next live task remains the same monitoring loop: wait for the first real founder, advisor, or teardown response before changing positioning or outreach.
-
-### 2026-04-29 08:25 UTC Maintenance Pass
-
-- Re-ran `npm run run:validation-maintenance`; it advanced the no-reply checkpoint in `COMMUNITY-FEEDBACK.md` to 2026-04-29 08:25 UTC and again confirmed there were still 0 replies, 0 bounces, 0 interviews, and 0 inbox records across the active outreach rows.
-- The reply watch, self-audit QA, and validation artifact sync all remained green, so there was still no real row to triage or escalate.
-- Next step stayed unchanged: keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox until the first real buyer reply lands.
-
-### 2026-04-29 08:26 UTC Maintenance Pass
-
-- Re-ran `npm run run:validation-maintenance`; it advanced the no-reply checkpoint in `COMMUNITY-FEEDBACK.md` to 2026-04-29 08:26 UTC and kept the active outreach state at 0 replies, 0 bounces, 0 interviews, and 0 inbox records.
-- The script also refreshed the validation watch, self-audit follow-up QA, follow-up pass artifacts, positioning brief, decision brief, status snapshot, and send plan so the repo memory stayed in sync with the latest no-reply checkpoint.
-- No real reply or `free_async_teardown` intake landed during the pass, so the live task remains reply monitoring rather than follow-up conversion.
