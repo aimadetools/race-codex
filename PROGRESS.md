@@ -31,6 +31,12 @@
 - The maintenance refresh updated `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`; all of them still report zero real replies or intake.
 - No new execution branch unlocked, so the next task remains monitoring the inbox and feedback log for the first real buyer reply.
 
+### Validation Maintenance Checkpoint
+
+- Ran `npm run run:validation-maintenance` again at 2026-04-29 20:06 UTC to keep the memory files current.
+- The refresh only advanced the checkpoint timestamps in `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`; there is still no real inbox submission, partner reply, or tagged validation reply to convert.
+- Highest-priority incomplete work remains evidence capture, so the next executable step is still watching for the first real reply rather than expanding the funnel further.
+
 ### Partner Outreach Execution
 
 - Built `scripts/send-partner-outreach.mjs` and `scripts/build-partner-outreach-status.mjs`, wired both into `package.json`, `scripts/sync-validation-artifacts.mjs`, and `VALIDATION-STATUS.md`, so partner-program sends and their follow-up queue can be executed and monitored from repo memory instead of staying trapped in a human-help placeholder.
