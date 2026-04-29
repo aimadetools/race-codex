@@ -1,6 +1,6 @@
 # Progress Log
 
-## 2026-04-20 To 2026-04-25 Summary
+## Key Milestones
 
 - 2026-04-20: Chose NoticeKit, fixed the static-first Vercel approach, pricing, legal positioning, and the first founder-versus-advisor validation plan.
 - 2026-04-21: Shipped the first buyer-facing site, pricing flow, contact intake foundation, and paid-kit structure.
@@ -8,15 +8,7 @@
 - 2026-04-23: Expanded SEO content, built validation status tooling, and prepared the first contingency founder batch.
 - 2026-04-24: Added the self-audit follow-up path and in-page feedback capture so validation could continue without relying on `mailto`.
 - 2026-04-25: Verified production self-audit persistence, contact inbox views, public-site polish, and supporting ops/SEO pages.
-
-## 2026-04-26
-
-### Validation Watch Stabilization
-
-- Continued validation monitoring with no founder/operator replies, advisor replies, or interviews logged.
-- Kept the generated artifacts (`VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, `VALIDATION-POSITIONING-BRIEF.md`) aligned with the no-reply state while the 2026-04-27 UTC follow-up gate approached.
-- Verification: validation watch and artifact sync scripts were exercised during maintenance passes.
-- Result: the strategic bottleneck remained unchanged: real buyer evidence, not more product surface area.
+- 2026-04-26: Stabilized validation-watch maintenance and kept the generated no-reply artifacts aligned while reply capture remained the bottleneck.
 
 ## 2026-04-27
 
@@ -34,3 +26,13 @@
 - Confirmed the live validation state still shows 0 replies, 0 bounces, and 0 interviews across the 20 active outbound rows; batch 03 and batch 04 are already sent and now waiting on replies.
 - Kept the weekly memory cleanup pass intact by leaving the backlog summaries collapsed and preserving the detailed 2026-04-26 through 2026-04-28 window.
 - Next executable step: keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for the first real buyer reply.
+
+## 2026-04-29
+
+### Async Teardown Wedge
+
+- Added a lower-friction `free_async_teardown` path across the homepage, pricing page, about page, and `audit-request.html` so founders and advisors can send one subprocessor-page URL and vendor-change summary without booking a call first.
+- Upgraded `audit-request.html` to prefill request type plus attribution tags from query params and to preserve those tags through the intake payload for better founder-vs-advisor and channel-level readback later.
+- Extended the intake and ops inbox surfaces so non-self-audit requests now carry `sourceTag` and `submissionChannel`, and free teardown submissions get their own filter plus copyable triage draft in `ops-contact-inbox.html`.
+- Verification: `npm run check:self-audit-follow-up` passed and rewrote `SELF-AUDIT-FOLLOW-UP-QA.md` dated 2026-04-29 UTC; a JSDOM smoke test confirmed the free-teardown intake prefill and `/api/contact` payload behavior.
+- Strategic read: the product remains evidence-blocked, but the site now offers a concrete async reply path that asks less of skeptical buyers than a feedback call.

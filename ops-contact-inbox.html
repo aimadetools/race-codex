@@ -89,6 +89,7 @@
                 <label>Filter
                   <select id="record-filter">
                     <option value="all">All submissions</option>
+                    <option value="free_async_teardown">Free async teardowns only</option>
                     <option value="self_audit_feedback">Self-audit feedback only</option>
                     <option value="tagged_validation">Tagged validation replies only</option>
                     <option value="concierge_audit">Audit requests only</option>
@@ -103,6 +104,7 @@
               <h2>What this shows</h2>
               <ul class="feature-list">
                 <li>Company, email, and request type</li>
+                <li>Source tags for outreach, homepage, pricing, and blog entry points</li>
                 <li>Subprocessor page, vendor change, and deadline details</li>
                 <li>Self-audit source tag, channel, score, role, and top gaps</li>
                 <li>Tagged validation replies called out separately from normal intake</li>
@@ -150,6 +152,11 @@
         return [
           `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | self-audit reply | ${record.company} | ${record.segmentGuess || "unknown"} | Summary: ${summary}${optionalNote} | Source tag: ${record.sourceTag || "site"} | Channel: ${record.submissionChannel || "unknown"} | Score band: ${record.scoreBand || "Not provided"} | Ownership: ${record.ownershipSignal || "unknown"} | Signal: score ${score}; top gaps ${topGaps}`
         ].join("");
+      }
+
+      function teardownDraft(record) {
+        const details = record.reviewNeed ? ` | Need: ${record.reviewNeed}` : "";
+        return `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | teardown request | ${record.company} | ${record.segmentGuess || "unknown"} | Page: ${record.subprocessorUrl || "Not provided"} | Vendor change: ${record.vendorChange || "Not provided"} | Customer segment/deadline: ${record.deadline || "Not provided"}${details} | Source tag: ${record.sourceTag || "site"} | Channel: ${record.submissionChannel || "unknown"}`;
       }
 
       async function copyText(text, button) {
@@ -229,6 +236,8 @@
           ["Type", record.type || "Unknown"],
           ["Submitted", record.submittedAt || record.uploadedAt || "Unknown"],
           ["Blob", record.pathname || "Unknown"],
+          ["Source tag", inferValidationSourceLabel(record.sourceTag)],
+          ["Submission channel", record.submissionChannel || "unknown"],
           ["Segment guess", record.segmentGuess || "unknown"]
         ].forEach(([label, value]) => {
           const line = document.createElement("span");
@@ -301,6 +310,42 @@
             const replyLink = document.createElement("a");
             replyLink.className = "button secondary";
             replyLink.href = `mailto:${encodeURIComponent(record.email)}?subject=${encodeURIComponent(`Re: NoticeKit self-audit ${record.scoreDisplay || ""}`.trim())}`;
+            replyLink.textContent = "Reply by email";
+            actions.appendChild(replyLink);
+          }
+
+          draftSection.appendChild(actions);
+          article.appendChild(draftSection);
+        }
+
+        if (record.isAsyncTeardown) {
+          const draft = teardownDraft(record);
+          const draftSection = document.createElement("section");
+          draftSection.className = "submission-section";
+
+          const draftHeading = document.createElement("strong");
+          draftHeading.textContent = "Teardown triage draft";
+          draftSection.appendChild(draftHeading);
+
+          const draftPre = document.createElement("pre");
+          draftPre.className = "submission-code";
+          draftPre.textContent = draft;
+          draftSection.appendChild(draftPre);
+
+          const actions = document.createElement("div");
+          actions.className = "submission-actions";
+
+          const copyDraft = document.createElement("button");
+          copyDraft.type = "button";
+          copyDraft.className = "button secondary";
+          copyDraft.textContent = "Copy triage draft";
+          copyDraft.addEventListener("click", () => copyText(draft, copyDraft));
+          actions.appendChild(copyDraft);
+
+          if (record.email) {
+            const replyLink = document.createElement("a");
+            replyLink.className = "button secondary";
+            replyLink.href = `mailto:${encodeURIComponent(record.email)}?subject=${encodeURIComponent(`Re: NoticeKit teardown request for ${record.company || "your workflow"}`)}`;
             replyLink.textContent = "Reply by email";
             actions.appendChild(replyLink);
           }

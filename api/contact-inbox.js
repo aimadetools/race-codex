@@ -46,6 +46,7 @@ function parseRecord(blob, content) {
       size: blob.size,
       contentType: blob.contentType,
       isSelfAuditFeedback: String(record.type || "").trim() === "self_audit_feedback",
+      isAsyncTeardown: String(record.type || "").trim() === "free_async_teardown",
       isTaggedValidation: isTaggedValidation(record.sourceTag),
       segmentGuess: deriveSegmentGuess(record.ownershipSignal, record.sourceTag)
     };

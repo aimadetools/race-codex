@@ -36,7 +36,9 @@ function buildNotificationBody(submission) {
     `Request type: ${submission.type}`,
     `Company: ${submission.company}`,
     `Reply email: ${submission.email}`,
-    `Submitted at: ${submission.submittedAt}`
+    `Submitted at: ${submission.submittedAt}`,
+    `Source tag: ${submission.sourceTag || "site"}`,
+    `Submission channel: ${submission.submissionChannel || "unknown"}`
   ];
 
   if (submission.type === "self_audit_feedback") {
@@ -102,6 +104,8 @@ function buildNotificationHtml(submission) {
           ["Company", submission.company],
           ["Reply email", submission.email],
           ["Submitted at", submission.submittedAt],
+          ["Source tag", submission.sourceTag || "site"],
+          ["Submission channel", submission.submissionChannel || "unknown"],
           ["Subprocessor page", submission.subprocessorUrl || "Not provided"],
           ["Vendor change", submission.vendorChange || "Not provided"],
           ["Customer segment and deadline", submission.deadline || "Not provided"],
@@ -361,7 +365,12 @@ module.exports = async function handler(request, response) {
 
   sendJson(response, 200, {
     ok: true,
-    message: submission.type === "self_audit_feedback" ? "Your self-audit feedback was received." : "Your audit intake was received.",
+    message:
+      submission.type === "self_audit_feedback"
+        ? "Your self-audit feedback was received."
+        : submission.type === "free_async_teardown"
+          ? "Your teardown request was received."
+          : "Your audit intake was received.",
     referenceId: submission.referenceId
   });
 };

@@ -36,13 +36,20 @@
       <main id="main-content">
         <section class="page-hero">
           <span class="eyebrow">Audit and access request</span>
-          <h1>Send the facts for a NoticeKit follow-up.</h1>
-          <p>Use this intake before or after buying the Concierge Audit, or to ask about Starter, Pro, and partner access. NoticeKit uses the details to scope the operational review and follow up with the buyer email when payment is complete.</p>
+          <h1>Send one vendor-change URL and get a blunt async read.</h1>
+          <p>Use this intake to request a free async teardown, prepare a paid Concierge Audit, or ask about Starter, Pro, and partner access. NoticeKit uses the details to scope the next step and reply by email.</p>
         </section>
 
         <section class="section">
           <div class="grid-2">
             <article class="panel legal-panel">
+              <h2>Best low-friction ask</h2>
+              <p>Not ready to buy or book a call? Send the current subprocessor page URL, the planned vendor change, and the affected customer segment. NoticeKit can reply with a short async gap read instead of a meeting request.</p>
+              <ul class="feature-list">
+                <li>Free async teardown: one URL, one vendor change, one blunt gap note</li>
+                <li>Paid audit: prioritized fix plan for an urgent or customer-facing change</li>
+                <li>Partner request: consultant and advisor workflow fit check</li>
+              </ul>
               <h2>What to prepare</h2>
               <ul class="feature-list">
                 <li>Company name and website</li>
@@ -57,10 +64,12 @@
             </article>
 
             <article class="panel legal-panel">
-              <h2>Send request</h2>
+              <h2 id="request-panel-title">Send request</h2>
+              <p id="request-panel-copy" class="fine-print">Choose the path that fits. The free async teardown is the fastest way to get a specific reply without a call.</p>
               <form id="audit-form" class="intake-form">
                 <label>Request type
                   <select id="request-type" name="request-type">
+                    <option value="free_async_teardown">Free async teardown</option>
                     <option value="concierge_audit">Concierge Audit intake</option>
                     <option value="starter_access">Starter access question</option>
                     <option value="pro_access">Pro access question</option>
@@ -86,6 +95,8 @@
                 <label>What you need reviewed
                   <textarea id="review-need" name="review-need" placeholder="Example: Notice copy, objection-window tracker, evidence trail, and public subprocessor page."></textarea>
                 </label>
+                <input id="source-tag" name="source-tag" type="hidden">
+                <input id="submission-channel" name="submission-channel" type="hidden" value="audit-request-form">
                 <label class="hidden-field" aria-hidden="true">Website
                   <input id="website" name="website" tabindex="-1" autocomplete="off">
                 </label>
@@ -99,7 +110,7 @@
         <section class="section">
           <div class="notice-band">
             <strong>Checkout, intake, and the public mailbox are live.</strong>
-            <p>This form submits to NoticeKit's Vercel intake endpoint. Stripe still collects the buyer email at checkout, and early-access fulfillment remains manual. For non-form questions, email <a href="mailto:hello@noticekit.tech">hello@noticekit.tech</a>.</p>
+            <p>This form submits to NoticeKit's Vercel intake endpoint. Stripe still collects the buyer email at checkout, and early-access fulfillment remains manual. For non-form questions, email <a href="mailto:hello@noticekit.tech">hello@noticekit.tech</a>. For outreach and blog links, query tags can prefill the intake so reply sources stay attributable.</p>
             <a href="disclaimer.html">Read the disclaimer</a>
           </div>
         </section>
@@ -114,12 +125,67 @@
     <script>
       const form = document.querySelector("#audit-form");
       const summary = document.querySelector("#intake-summary");
+      const requestType = document.querySelector("#request-type");
+      const panelTitle = document.querySelector("#request-panel-title");
+      const panelCopy = document.querySelector("#request-panel-copy");
+      const sourceTagInput = document.querySelector("#source-tag");
+      const submissionChannelInput = document.querySelector("#submission-channel");
+      const query = new URLSearchParams(window.location.search);
+      const requestTypeMeta = {
+        free_async_teardown: {
+          title: "Request a free async teardown",
+          copy: "Best for founders, operators, consultants, or attorneys who prefer a short email read over a call.",
+          button: "Request free teardown"
+        },
+        concierge_audit: {
+          title: "Send Concierge Audit intake",
+          copy: "Best for an urgent change, customer review, or paid operational cleanup pass.",
+          button: "Send audit intake"
+        },
+        starter_access: {
+          title: "Ask about Starter",
+          copy: "Best for one vendor change and one clean notice workflow.",
+          button: "Send Starter question"
+        },
+        pro_access: {
+          title: "Ask about Pro",
+          copy: "Best for repeated vendor changes, customer segments, and attorney-ready operating records.",
+          button: "Send Pro question"
+        },
+        partner_request: {
+          title: "Ask about partner access",
+          copy: "Best for consultants, fractional DPOs, and attorneys evaluating referral or workflow fit.",
+          button: "Send partner request"
+        },
+        general_waitlist: {
+          title: "Join the waitlist",
+          copy: "Best for general interest when you do not need a specific teardown or audit yet.",
+          button: "Join waitlist"
+        }
+      };
 
       function value(id) {
         return document.querySelector(`#${id}`).value.trim() || "Not provided";
       }
 
       const submitButton = document.querySelector("#audit-submit");
+
+      function syncRequestTypeUi() {
+        const meta = requestTypeMeta[requestType.value] || requestTypeMeta.general_waitlist;
+        panelTitle.textContent = meta.title;
+        panelCopy.textContent = meta.copy;
+        submitButton.textContent = meta.button;
+      }
+
+      const initialType = query.get("type");
+      if (initialType && requestTypeMeta[initialType]) {
+        requestType.value = initialType;
+      }
+
+      sourceTagInput.value = query.get("source") || "site";
+      submissionChannelInput.value = query.get("channel") || submissionChannelInput.value;
+      syncRequestTypeUi();
+      requestType.addEventListener("change", syncRequestTypeUi);
 
       function setSummary(text, isError = false) {
         summary.hidden = false;
@@ -140,6 +206,8 @@
           vendorChange: value("vendor-change"),
           deadline: value("deadline"),
           reviewNeed: value("review-need"),
+          sourceTag: value("source-tag") === "Not provided" ? "site" : value("source-tag"),
+          submissionChannel: value("submission-channel") === "Not provided" ? "audit-request-form" : value("submission-channel"),
           website: value("website") === "Not provided" ? "" : value("website")
         };
 
@@ -165,6 +233,8 @@
             `Company: ${payload.company}`,
             `Reply email: ${payload.email}`,
             `Subprocessor page: ${payload.subprocessorUrl || "Not provided"}`,
+            `Source tag: ${payload.sourceTag}`,
+            `Submission channel: ${payload.submissionChannel}`,
             "",
             "Vendor change:",
             payload.vendorChange || "Not provided",
@@ -181,7 +251,7 @@
           setSummary(error.message, true);
         } finally {
           submitButton.disabled = false;
-          submitButton.textContent = "Send request";
+          syncRequestTypeUi();
         }
       });
     </script>
