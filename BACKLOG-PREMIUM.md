@@ -21,4 +21,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, production smoke verification, and generated status tooling. Live premium work is now evidence capture, partner qualification, and buyer decisioning.
+- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, production smoke verification, and status tooling are done; remaining premium work is evidence capture and channel decisioning once real replies arrive.

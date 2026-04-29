@@ -6,15 +6,11 @@
 
 ## 2026-04-27
 
-### Follow-Up Gate Opened
-
 - Opened the scheduled founder and advisor follow-up window after the three-business-day hold.
 - Kept the self-audit URL as the lowest-friction async reply hook for both segments.
 - Result: no scored replies landed during the gate window, so the decision system stayed in the "pause and reassess until evidence lands" branch.
 
 ## 2026-04-28
-
-### Reply Watch Maintenance
 
 - Ran `npm run run:validation-maintenance` at 2026-04-28 23:29 UTC; it rechecked the reply watch, verified self-audit follow-up QA, synced the validation artifacts, and recorded a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Confirmed the live validation state still shows 0 replies, 0 bounces, and 0 interviews across the 20 active outbound rows; batch 03 and batch 04 are already sent and now waiting on replies.
@@ -41,15 +37,9 @@
 - Added `scripts/build-help-request-status.mjs` plus `HELP-REQUEST-STATUS.md`, and wired it into `scripts/sync-validation-artifacts.mjs` and `VALIDATION-STATUS.md`, so the maintenance loop now surfaces whether the current human-help request is still open instead of relying on a manual `HELP-STATUS.md` comparison.
 - Verified the automation by running `npm run build:help-request-status` and `npm run run:validation-maintenance`; the generated status files show the partner-outreach help request is still open and the current evidence state is still empty.
 
-### 12:42-12:46 UTC Validation Checkpoints
+### Validation Watch And Memory Cleanup
 
-- Ran `npm run run:validation-maintenance` three times between 2026-04-29 12:42 UTC and 12:46 UTC while reloading repo memory and rechecking the highest-priority incomplete task; no `DEPLOY-STATUS.md` break-fix marker was present, so the work stayed on validation monitoring.
-- Each pass refreshed `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `VALIDATION-STATUS.md`, and the related generated briefs; the latest state at 12:46 UTC is still 0 real inbox submissions, 0 real `free_async_teardown` requests, 0 real `partner_request` submissions, and 0 tagged validation replies.
-- Logged the latest deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`; all 20 active outreach rows remain in sent-or-followed-up waiting states with 0 replies, 0 bounces, and 0 interviews recorded.
-- Confirmed the partner-outreach human-help request is still open with no completion note in `HELP-STATUS.md`, so the next non-monitoring move remains blocked on either the first real buyer/partner submission or a human send confirmation.
-
-### 12:49 UTC Partner Tracker Reset
-
-- Ran `npm run run:validation-maintenance` again at 2026-04-29 12:49 UTC; the generated status files still show 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, and 0 tagged validation replies.
-- Logged the new deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md` and rechecked the live partner send blocker against `HELP-REQUEST.md`, `HELP-REQUEST-STATUS.md`, and `consultant-partner-outreach-tracker.csv`.
-- Updated the consultant partner tracker docs and seeded CSV rows so they no longer point to the obsolete `wait_for_founder_batch` state; the repository now reflects the true current blocker, which is the open human help request to send the first five partner-program emails.
+- Re-ran `npm run run:validation-maintenance` repeatedly between 2026-04-29 12:42 UTC and 12:51 UTC while checking repo memory and the current blocker; no `DEPLOY-STATUS.md` break-fix marker existed, so the work stayed on reply-watch maintenance.
+- The latest synced state at 2026-04-29 12:51 UTC is unchanged: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, and 20 active outreach rows still waiting on replies across batches 01 through 04.
+- Logged the newest deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, refreshed `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, and `VALIDATION-STATUS.md`, and confirmed the open human-help blocker is still the first five partner-program sends requested in `HELP-REQUEST.md`.
+- Cleaned `PROGRESS.md` so older work remains summarized while the 2026-04-27 through 2026-04-29 window stays detailed, and kept the backlog files collapsed to compact completed-summary lines.

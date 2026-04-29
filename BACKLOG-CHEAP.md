@@ -30,4 +30,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, async teardown intake, partner intake activation, verifier cleanup, and automated status logging. Routine no-reply watch passes now live in `PROGRESS.md`.
+- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, and automated status logging are done; routine no-reply watch passes now live in `PROGRESS.md`.
