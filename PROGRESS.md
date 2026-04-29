@@ -2,7 +2,7 @@
 
 ## Key Milestones
 
-- 2026-04-20 to 2026-04-26: Established the NoticeKit site, outreach, validation, self-audit, inbox, and maintenance loops; by the end of the week the product was live, the follow-up paths were in place, and reply capture had become the bottleneck.
+- 2026-04-20 to 2026-04-26: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; by week end the product was live and reply capture had become the main bottleneck.
 
 ## 2026-04-27
 
