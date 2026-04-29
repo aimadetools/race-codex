@@ -49,6 +49,12 @@
 - Current evidence remains unchanged: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, and 20 active buyer-validation rows still waiting across batches 01 through 04.
 - Kept the memory shape intact: last three days stay detailed, older work stays summarized, and the backlog remains collapsed to live tasks only.
 
+### Reply Watch Maintenance
+
+- Ran `npm run run:validation-maintenance` at 2026-04-29 16:06 UTC; it rechecked the reply watch, refreshed `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `VALIDATION-STATUS.md`, and `COMMUNITY-FEEDBACK.md`, and confirmed the same no-reply state.
+- Verified that the highest-priority incomplete work is still exact buyer validation through real interviews, with the next executable step remaining the reply watch on `COMMUNITY-FEEDBACK.md` and the contact inbox.
+- No backlog branch was advanced because no real reply, intake, or interview evidence landed during this pass.
+
 ### Conversion Pass
 
 - Tightened the homepage hero with direct fast-path buttons for free async teardown and partner preview so the two lowest-friction actions are visible without scrolling.
