@@ -31,3 +31,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 ## Completed Summary
 
 - Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, and automated status logging are done; routine no-reply watch passes now live in `PROGRESS.md`.
+- ✅ Homepage hero, pricing intro, and async intake copy refreshed to make the free teardown and partner preview paths more obvious without changing the positioning trigger.

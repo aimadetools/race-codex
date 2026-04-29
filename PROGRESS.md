@@ -37,6 +37,12 @@
 - Created root `HELP-REQUEST.md` asking the human to send the first five consultant/advisor outreach emails using the live partner preview and prefilled intake link.
 - Verification: parsed the edited HTML pages with `jsdom` and checked local links on the edited public pages; local end-to-end intake submission remains unverified because this shell does not have Vercel Blob credentials.
 
+### Conversion Pass
+
+- Tightened the homepage hero with direct fast-path buttons for free async teardown and partner preview so the two lowest-friction actions are visible without scrolling.
+- Clarified the audit-request flow with a short "what happens next" section and sharper request-type copy so the async intake feels less ambiguous before submission.
+- Refreshed the pricing intro to point buyers to the free teardown first when they want a specific answer before checkout.
+
 ### Monitoring Automation
 
 - Added `scripts/build-contact-inbox-status.mjs` plus `npm run build:contact-inbox-status` so the maintenance loop can read Blob-backed intake state directly instead of depending on a manual production `curl` check.

@@ -182,6 +182,13 @@ textarea:focus-visible {
   align-items: center;
 }
 
+.hero-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
 .eyebrow {
   display: inline-flex;
   width: fit-content;
