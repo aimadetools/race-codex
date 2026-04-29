@@ -22,7 +22,7 @@ Date: 2026-04-29
 - Hero headline: present
   Current: "Ship subprocessor change notices without a trust center."
   Proposed: "Prepare vendor-change review packets before counsel review."
-- Hero copy: present
+- Hero copy: missing
   Current: "NoticeKit turns vendor changes into customer-ready notice copy, objection-window tracking, and an evidence log your attorney can review."
   Proposed: "NoticeKit turns vendor changes into review-ready notice packets, objection-window tracking, and evidence logs privacy advisors can hand off cleanly."
 - Comparison row: present

@@ -37,6 +37,12 @@
 - Created root `HELP-REQUEST.md` asking the human to send the first five consultant/advisor outreach emails using the live partner preview and prefilled intake link.
 - Verification: parsed the edited HTML pages with `jsdom` and checked local links on the edited public pages; local end-to-end intake submission remains unverified because this shell does not have Vercel Blob credentials.
 
+### Maintenance Pass
+
+- Ran `npm run run:validation-maintenance` at 2026-04-29 16:03 UTC; it rechecked the validation watch, verified self-audit follow-up QA, rebuilt the derived status files, and appended a deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
+- Refreshed `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `VALIDATION-STATUS.md`, and `HOMEPAGE-COPY-REFRESH-QUEUE.md`; all live evidence counters stayed at zero and the next executable step remains monitoring for the first real reply.
+- Cleaned the progress memory pass requested by the backlog: older history stays summarized, and the 2026-04-27 through 2026-04-29 window remains detailed.
+
 ### Conversion Pass
 
 - Tightened the homepage hero with direct fast-path buttons for free async teardown and partner preview so the two lowest-friction actions are visible without scrolling.
