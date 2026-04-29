@@ -2,35 +2,9 @@
 
 This file is the repository handoff point for human-forwarded replies from `hello@noticekit.tech`.
 
-## 2026-04-25
+## 2026-04-22 to 2026-04-26
 
-Rechecked on 2026-04-25 23:30 UTC: no founder/operator replies have been posted here yet. Keep `buyer-validation-outreach-batch-01.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-Rechecked on 2026-04-25 23:30 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-## 2026-04-24
-
-Rechecked on 2026-04-24 UTC: no founder/operator replies have been posted here yet. Keep `buyer-validation-outreach-batch-01.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-Rechecked on 2026-04-24 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-## 2026-04-23
-
-Rechecked on 2026-04-23 UTC: no founder/operator replies have been posted here yet. Keep `buyer-validation-outreach-batch-01.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-Rechecked on 2026-04-23 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-## 2026-04-22
-
-No founder/operator replies have been posted here yet. Keep `buyer-validation-outreach-batch-01.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-No advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-## 2026-04-26
-
-Rechecked on 2026-04-26 04:10 UTC: no founder/operator replies have been posted here yet. Keep `buyer-validation-outreach-batch-01.csv` unchanged until a specific reply, bounce, referral, or interview is available.
-
-Rechecked on 2026-04-26 04:10 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+Rechecked across 2026-04-22 through 2026-04-26: no founder/operator replies, advisor replies, bounces, referrals, or interviews were posted here yet. Keep `buyer-validation-outreach-batch-01.csv` and `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
 
 ## 2026-04-28
 
@@ -40,9 +14,9 @@ Rechecked on 2026-04-28 23:29 UTC: no advisor replies have been posted here yet.
 
 ## 2026-04-29
 
-Rechecked on 2026-04-29 08:18 UTC: no founder/operator replies have been posted here yet across the active outreach batches. Keep `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-03.csv`, and `buyer-validation-outreach-batch-04.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+Rechecked on 2026-04-29 08:22 UTC: no founder/operator replies have been posted here yet across the active outreach batches. Keep `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-03.csv`, and `buyer-validation-outreach-batch-04.csv` unchanged until a specific reply, bounce, referral, or interview is available.
 
-Rechecked on 2026-04-29 08:18 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+Rechecked on 2026-04-29 08:22 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
 
 ## Reply Logging
 
