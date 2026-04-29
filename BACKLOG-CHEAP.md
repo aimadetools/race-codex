@@ -26,4 +26,4 @@ Completed work stays as summary lines below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, automated status logging, homepage/pricing/intake copy refreshes, and weekly validation-memory cleanup are done; routine no-reply watch passes now live in `PROGRESS.md`.
+- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, automated status logging, homepage/pricing/intake copy refreshes, weekly validation-memory cleanup, and generated outreach export hygiene are done; routine no-reply watch passes now live in `PROGRESS.md`.

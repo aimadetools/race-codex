@@ -25,6 +25,7 @@
 - Earlier 2026-04-29 passes at 16:19-16:28 UTC produced the same zero-reply state while refreshing `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`.
 - The live snapshots still show 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, and 5 partner-program sends waiting on reply.
 - No new evidence landed, so the next executable step remains monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox; the partner follow-up window is still queued for 2026-05-04 UTC if reply counts stay zero.
+- Refreshed the generated status snapshots again at 2026-04-29 20:00 UTC; the inbox, help-request, and partner-outreach checks still show zero real submissions or replies, so the working state did not change.
 
 ### Partner Outreach Execution
 
@@ -67,3 +68,4 @@
 
 - Cleaned `PROGRESS.md` so older work remains summarized while the 2026-04-27 through 2026-04-29 window stays detailed, and kept the backlog files collapsed to compact completed-summary lines.
 - Re-read repo memory, confirmed there is no `DEPLOY-STATUS.md` break-fix marker in the repo, and kept the work on validation and partner reply capture rather than more product expansion.
+- Added generated outreach export folders to `.gitignore` so future bulk mail artifacts stay out of the repository.
