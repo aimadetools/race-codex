@@ -48,6 +48,7 @@ function parseRecord(blob, content) {
       isSelfAuditFeedback: String(record.type || "").trim() === "self_audit_feedback",
       isAsyncTeardown: String(record.type || "").trim() === "free_async_teardown",
       isTaggedValidation: isTaggedValidation(record.sourceTag),
+      isLikelyTestSubmission: isLikelyTestSubmission(record),
       segmentGuess: deriveSegmentGuess(record.ownershipSignal, record.sourceTag)
     };
   } catch (error) {
@@ -87,6 +88,37 @@ function deriveSegmentGuess(ownershipSignal, sourceTag) {
   }
 
   return "unknown";
+}
+
+function isLikelyTestSubmission(record) {
+  const company = String(record.company || "").trim().toLowerCase();
+  const email = String(record.email || "").trim().toLowerCase();
+  const sourceTag = String(record.sourceTag || "").trim().toLowerCase();
+  const summary = String(record.summary || "").trim().toLowerCase();
+  const reviewNeed = String(record.reviewNeed || "").trim().toLowerCase();
+  const vendorChange = String(record.vendorChange || "").trim().toLowerCase();
+
+  const text = [company, sourceTag, summary, reviewNeed, vendorChange].join(" ");
+  const emailDomain = email.includes("@") ? email.split("@").pop() : "";
+  const placeholderDomain = emailDomain === "example.com" ||
+    emailDomain === "example.org" ||
+    emailDomain === "example.net" ||
+    emailDomain.endsWith(".test") ||
+    emailDomain.includes(".example");
+
+  if (placeholderDomain) {
+    return true;
+  }
+
+  if (/(^|\b)(testco|acme saas|beta labs|codex validation test)(\b|$)/.test(company)) {
+    return true;
+  }
+
+  if (text.includes("noticekit") && /(test|check|verification|post-deploy|restore)/.test(text)) {
+    return true;
+  }
+
+  return false;
 }
 
 module.exports = async function handler(request, response) {

@@ -89,6 +89,8 @@
                 <label>Filter
                   <select id="record-filter">
                     <option value="all">All submissions</option>
+                    <option value="real_only">Real submissions only</option>
+                    <option value="test_only">Likely test submissions only</option>
                     <option value="free_async_teardown">Free async teardowns only</option>
                     <option value="self_audit_feedback">Self-audit feedback only</option>
                     <option value="tagged_validation">Tagged validation replies only</option>
@@ -105,6 +107,7 @@
               <ul class="feature-list">
                 <li>Company, email, and request type</li>
                 <li>Source tags for outreach, homepage, pricing, and blog entry points</li>
+                <li>Likely test-vs-real classification to separate verification traffic from buyer evidence</li>
                 <li>Subprocessor page, vendor change, and deadline details</li>
                 <li>Self-audit source tag, channel, score, role, and top gaps</li>
                 <li>Tagged validation replies called out separately from normal intake</li>
@@ -206,6 +209,14 @@
           return true;
         }
 
+        if (filterValue === "real_only") {
+          return !record.isLikelyTestSubmission;
+        }
+
+        if (filterValue === "test_only") {
+          return Boolean(record.isLikelyTestSubmission);
+        }
+
         if (filterValue === "tagged_validation") {
           return Boolean(record.isTaggedValidation);
         }
@@ -238,7 +249,8 @@
           ["Blob", record.pathname || "Unknown"],
           ["Source tag", inferValidationSourceLabel(record.sourceTag)],
           ["Submission channel", record.submissionChannel || "unknown"],
-          ["Segment guess", record.segmentGuess || "unknown"]
+          ["Segment guess", record.segmentGuess || "unknown"],
+          ["Submission class", record.isLikelyTestSubmission ? "likely test" : "likely real"]
         ].forEach(([label, value]) => {
           const line = document.createElement("span");
           const strong = document.createElement("strong");
@@ -379,9 +391,14 @@
           }
 
           const visibleRecords = payload.records.filter((record) => recordMatchesFilter(record, filterSelect.value));
+          const realCount = payload.records.filter((record) => !record.isLikelyTestSubmission).length;
+          const testCount = payload.records.filter((record) => record.isLikelyTestSubmission).length;
 
           if (!visibleRecords.length) {
-            setStatus("Inbox loaded.", "No submissions have been stored yet.");
+            setStatus(
+              "Inbox loaded.",
+              `No submissions matched this filter. Total stored: ${payload.count}. Likely real: ${realCount}. Likely test: ${testCount}.`
+            );
             return;
           }
 
@@ -390,7 +407,10 @@
           });
 
           results.hidden = false;
-          setStatus("Inbox loaded.", `Showing ${visibleRecords.length} of ${payload.count} stored submission${payload.count === 1 ? "" : "s"}.`);
+          setStatus(
+            "Inbox loaded.",
+            `Showing ${visibleRecords.length} of ${payload.count} stored submission${payload.count === 1 ? "" : "s"}. Likely real: ${realCount}. Likely test: ${testCount}.`
+          );
         } catch (error) {
           setStatus("Inbox error", error.message, true);
         }

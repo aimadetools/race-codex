@@ -256,6 +256,7 @@ function findInboxRecord(payload, submission) {
 function verifyInboxRecord(submission, record) {
   assert(record.isSelfAuditFeedback === true, `${submission.name}: inbox did not classify self-audit feedback.`);
   assert(record.isTaggedValidation === true, `${submission.name}: inbox did not classify tagged validation.`);
+  assert(record.isLikelyTestSubmission === true, `${submission.name}: inbox did not classify verifier traffic as a likely test submission.`);
   assert(record.referenceId === submission.referenceId, `${submission.name}: inbox referenceId mismatch.`);
   assert(record.sourceTag === submission.sourceTag, `${submission.name}: inbox sourceTag mismatch.`);
   assert(
@@ -305,15 +306,15 @@ async function verifyInboxRendering(payload, submissions) {
   const results = window.document.querySelector("#results");
 
   passwordInput.value = "ops-password-present";
-  filterSelect.value = "tagged_validation";
+  filterSelect.value = "test_only";
   form.dispatchEvent(new window.Event("submit", { bubbles: true, cancelable: true }));
 
   await waitFor(() => {
     if (results.hidden || results.children.length < submissions.length) {
-      throw new Error("Inbox UI has not rendered the tagged validation records yet.");
+      throw new Error("Inbox UI has not rendered the likely test records yet.");
     }
     return true;
-  }, "Inbox UI did not render tagged validation results.");
+  }, "Inbox UI did not render likely test results.");
 
   assert(fetchCalls.length === 1, `Expected one inbox fetch from UI, saw ${fetchCalls.length}.`);
   assert(fetchCalls[0].url === "/api/contact-inbox", `Unexpected inbox fetch URL ${fetchCalls[0].url}.`);
@@ -323,6 +324,7 @@ async function verifyInboxRendering(payload, submissions) {
     const sourceLabel = submission.sourceTag.replace(/[-_]+/g, " ");
     assert(renderedText.includes(submission.company), `${submission.name}: company not rendered in inbox UI.`);
     assert(renderedText.includes(sourceLabel), `${submission.name}: source tag label not rendered in inbox UI.`);
+    assert(renderedText.includes("likely test"), `${submission.name}: likely-test label not rendered in inbox UI.`);
     assert(
       renderedText.includes(submission.submissionChannel),
       `${submission.name}: submission channel not rendered in inbox UI.`
@@ -381,7 +383,7 @@ function buildReport(results) {
     "- Verified the production API returned success and a unique `referenceId` for each submit.",
     "- Verified the private Blob inbox stored the exact `sourceTag`, `submissionChannel`, `ownershipSignal`, `score`, `scoreBand`, `selectedChecks`, `topGaps`, and summary fields for each submit.",
     "- Verified `https://noticekit.tech/api/contact-inbox` returned both stored records when queried with the ops password.",
-    "- Verified `ops-contact-inbox.html` rendered the tagged-validation filter view with the source tag, channel, score band, top gaps, and copyable feedback draft for the live records.",
+    "- Verified `ops-contact-inbox.html` rendered the likely-test filter view with the source tag, channel, score band, top gaps, likely-test label, and copyable feedback draft for the live records.",
     "",
     "## Results",
     "",

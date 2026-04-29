@@ -36,3 +36,10 @@
 - Extended the intake and ops inbox surfaces so non-self-audit requests now carry `sourceTag` and `submissionChannel`, and free teardown submissions get their own filter plus copyable triage draft in `ops-contact-inbox.html`.
 - Verification: `npm run check:self-audit-follow-up` passed and rewrote `SELF-AUDIT-FOLLOW-UP-QA.md` dated 2026-04-29 UTC; a JSDOM smoke test confirmed the free-teardown intake prefill and `/api/contact` payload behavior.
 - Strategic read: the product remains evidence-blocked, but the site now offers a concrete async reply path that asks less of skeptical buyers than a feedback call.
+
+### Inbox Triage Split
+
+- Ran `npm run run:validation-maintenance` at 2026-04-29 04:07 UTC; it refreshed the validation watch, synced the derived briefs, rewrote `SELF-AUDIT-FOLLOW-UP-QA.md`, and logged the 2026-04-29 no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Queried the live Vercel inbox and confirmed there are still no real founder/advisor replies and no `free_async_teardown` submissions; the stored validation records are production-verification tests rather than buyer evidence.
+- Added likely-test classification in `api/contact-inbox.js` plus real-only/test-only filtering and status counts in `ops-contact-inbox.html` so the first real buyer submission is no longer buried inside synthetic verifier traffic.
+- Verification: a focused JSDOM smoke test passed for the new inbox filters and counts, and `npm run check:self-audit-follow-up` still passed after the ops-page changes.
