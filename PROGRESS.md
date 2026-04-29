@@ -34,3 +34,11 @@
 - Re-ran `npm run run:validation-maintenance` at 2026-04-29 08:29 UTC; it rechecked the watch, refreshed the validation artifacts, and appended the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Rebuilt the positioning, decision, status, follow-up-pass, send-plan, and homepage-refresh artifacts so the repo memory stayed aligned with the still-empty inbox and the 20 active outbound rows.
 - Strategic read: the product is still evidence-blocked; the highest-priority live work remains watching for the first real founder, advisor, or teardown response rather than expanding scope again.
+
+### Partner Funnel Activation
+
+- Broke the recent monitoring-only loop by upgrading the advisor path into a real intake funnel: `partner-preview.html` now pushes directly into a prefilled `partner_request` flow instead of only offering a brochure or checkout link.
+- Expanded `audit-request.html`, `api/contact.js`, `api/contact-inbox.js`, and `ops-contact-inbox.html` so partner requests now capture role, client profile, partner goal, and expected client volume, and ops can copy a partner CRM draft once a submission lands.
+- Added a partner CTA to the homepage so consultants, fractional DPOs, and startup attorneys have a visible path from the main funnel instead of only an indirect pricing-page mention.
+- Created root `HELP-REQUEST.md` asking the human to send the first five consultant/advisor outreach emails using the live partner preview and prefilled intake link.
+- Verification: parsed the edited HTML pages with `jsdom` and checked local links on the edited public pages; local end-to-end intake submission remains unverified because this shell does not have Vercel Blob credentials.

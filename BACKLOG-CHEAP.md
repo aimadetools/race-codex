@@ -6,6 +6,9 @@ These tasks are routine and can be handled quickly.
 
 - Check `COMMUNITY-FEEDBACK.md`, `ops-contact-inbox.html`, and all four outreach CSVs for the first real founder or advisor reply; update the matching row immediately.
 - Check `/api/contact-inbox` and `ops-contact-inbox.html` for the first `free_async_teardown` intake; record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link.
+- Check `HELP-STATUS.md` for completion of `HELP-REQUEST.md`; if the human sent the first 5 partner emails, update `consultant-partner-outreach-tracker.csv` with send dates and set the next follow-up date.
+- Check `/api/contact-inbox` and `ops-contact-inbox.html` for the first `partner_request` submission from `partner-preview-hero`, `partner-preview-cta`, or `partner-outreach-batch-01`; log the qualification outcome in `consultant-partner-outreach-tracker.csv`.
+- When the first real `partner_request` lands, send a short approve / clarify / decline reply from `hello@noticekit.tech` and log whether it points to referral-only, client-delivery, or white-label demand.
 - When the first real `free_async_teardown` request lands, send a 3-bullet async gap reply from `hello@noticekit.tech` and log the outcome in `COMMUNITY-FEEDBACK.md`.
 - When the first tagged self-audit reply lands, run `npm run record:feedback -- --input <json>` with exact `source_tag`, `channel`, `score_band`, and `ownership_signal` fields from the intake payload.
 - When the first scored interview lands, confirm `VALIDATION-POSITIONING-BRIEF.md` classified the segment correctly before acting on the branch recommendation.

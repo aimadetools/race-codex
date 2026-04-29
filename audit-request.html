@@ -95,6 +95,33 @@
                 <label>What you need reviewed
                   <textarea id="review-need" name="review-need" placeholder="Example: Notice copy, objection-window tracker, evidence trail, and public subprocessor page."></textarea>
                 </label>
+                <div id="partner-fields" hidden>
+                  <label>Your role
+                    <select id="partner-role" name="partner-role">
+                      <option value="">Select role</option>
+                      <option value="fractional_dpo">Fractional DPO</option>
+                      <option value="privacy_consultant">Privacy consultant</option>
+                      <option value="startup_attorney">Startup attorney</option>
+                      <option value="compliance_operator">Compliance operator</option>
+                      <option value="other_partner">Other advisor</option>
+                    </select>
+                  </label>
+                  <label>Client profile
+                    <textarea id="client-profile" name="client-profile" placeholder="Example: B2B SaaS clients with 10-80 employees, EU customers, and light procurement pressure."></textarea>
+                  </label>
+                  <label>What do you want from NoticeKit?
+                    <select id="partner-goal" name="partner-goal">
+                      <option value="">Select goal</option>
+                      <option value="referrals_only">Referral relationship only</option>
+                      <option value="client_delivery">Use Pro in client delivery</option>
+                      <option value="white_label">White-label client workflow</option>
+                      <option value="co_marketing">Co-marketing or content</option>
+                    </select>
+                  </label>
+                  <label>Expected client volume
+                    <input id="partner-volume" name="partner-volume" placeholder="Example: 2-3 client notice reviews per quarter.">
+                  </label>
+                </div>
                 <input id="source-tag" name="source-tag" type="hidden">
                 <input id="submission-channel" name="submission-channel" type="hidden" value="audit-request-form">
                 <label class="hidden-field" aria-hidden="true">Website
@@ -128,6 +155,7 @@
       const requestType = document.querySelector("#request-type");
       const panelTitle = document.querySelector("#request-panel-title");
       const panelCopy = document.querySelector("#request-panel-copy");
+      const partnerFields = document.querySelector("#partner-fields");
       const sourceTagInput = document.querySelector("#source-tag");
       const submissionChannelInput = document.querySelector("#submission-channel");
       const query = new URLSearchParams(window.location.search);
@@ -175,6 +203,7 @@
         panelTitle.textContent = meta.title;
         panelCopy.textContent = meta.copy;
         submitButton.textContent = meta.button;
+        partnerFields.hidden = requestType.value !== "partner_request";
       }
 
       const initialType = query.get("type");
@@ -206,6 +235,10 @@
           vendorChange: value("vendor-change"),
           deadline: value("deadline"),
           reviewNeed: value("review-need"),
+          partnerRole: value("partner-role"),
+          clientProfile: value("client-profile"),
+          partnerGoal: value("partner-goal"),
+          partnerVolume: value("partner-volume"),
           sourceTag: value("source-tag") === "Not provided" ? "site" : value("source-tag"),
           submissionChannel: value("submission-channel") === "Not provided" ? "audit-request-form" : value("submission-channel"),
           website: value("website") === "Not provided" ? "" : value("website")
@@ -235,6 +268,9 @@
             `Subprocessor page: ${payload.subprocessorUrl || "Not provided"}`,
             `Source tag: ${payload.sourceTag}`,
             `Submission channel: ${payload.submissionChannel}`,
+            payload.type === "partner_request" ? `Partner role: ${payload.partnerRole || "Not provided"}` : null,
+            payload.type === "partner_request" ? `Partner goal: ${payload.partnerGoal || "Not provided"}` : null,
+            payload.type === "partner_request" ? `Expected client volume: ${payload.partnerVolume || "Not provided"}` : null,
             "",
             "Vendor change:",
             payload.vendorChange || "Not provided",
@@ -243,10 +279,15 @@
             payload.deadline || "Not provided",
             "",
             "Review needed:",
-            payload.reviewNeed || "Not provided"
-          ].join("\n");
+            payload.reviewNeed || "Not provided",
+            payload.type === "partner_request" ? "" : null,
+            payload.type === "partner_request" ? "Client profile:" : null,
+            payload.type === "partner_request" ? (payload.clientProfile || "Not provided") : null
+          ].filter(Boolean).join("\n");
           setSummary(body);
           form.reset();
+          sourceTagInput.value = query.get("source") || "site";
+          submissionChannelInput.value = query.get("channel") || "audit-request-form";
         } catch (error) {
           setSummary(error.message, true);
         } finally {

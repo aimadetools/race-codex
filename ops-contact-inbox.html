@@ -162,6 +162,10 @@
         return `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | teardown request | ${record.company} | ${record.segmentGuess || "unknown"} | Page: ${record.subprocessorUrl || "Not provided"} | Vendor change: ${record.vendorChange || "Not provided"} | Customer segment/deadline: ${record.deadline || "Not provided"}${details} | Source tag: ${record.sourceTag || "site"} | Channel: ${record.submissionChannel || "unknown"}`;
       }
 
+      function partnerDraft(record) {
+        return `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | partner lead | ${record.company} | ${record.partnerRole || "unknown role"} | Goal: ${record.partnerGoal || "Not provided"} | Volume: ${record.partnerVolume || "Not provided"} | Client profile: ${record.clientProfile || "Not provided"} | Need: ${record.reviewNeed || "Not provided"} | Source tag: ${record.sourceTag || "site"} | Channel: ${record.submissionChannel || "unknown"}`;
+      }
+
       async function copyText(text, button) {
         const original = button.textContent;
 
@@ -268,6 +272,10 @@
             vendorChange: record.vendorChange,
             deadline: record.deadline,
             reviewNeed: record.reviewNeed,
+            partnerRole: record.partnerRole,
+            partnerGoal: record.partnerGoal,
+            partnerVolume: record.partnerVolume,
+            clientProfile: record.clientProfile,
             userAgent: record.userAgent,
             storagePath: record.storagePath
           },
@@ -322,6 +330,49 @@
             const replyLink = document.createElement("a");
             replyLink.className = "button secondary";
             replyLink.href = `mailto:${encodeURIComponent(record.email)}?subject=${encodeURIComponent(`Re: NoticeKit self-audit ${record.scoreDisplay || ""}`.trim())}`;
+            replyLink.textContent = "Reply by email";
+            actions.appendChild(replyLink);
+          }
+
+          draftSection.appendChild(actions);
+          article.appendChild(draftSection);
+        }
+
+        if (record.type === "partner_request") {
+          renderLines(article, "Partner qualification", [
+            ["Partner role", record.partnerRole || ""],
+            ["Partner goal", record.partnerGoal || ""],
+            ["Expected client volume", record.partnerVolume || ""],
+            ["Client profile", record.clientProfile || ""]
+          ]);
+
+          const draft = partnerDraft(record);
+          const draftSection = document.createElement("section");
+          draftSection.className = "submission-section";
+
+          const draftHeading = document.createElement("strong");
+          draftHeading.textContent = "Partner CRM draft";
+          draftSection.appendChild(draftHeading);
+
+          const draftPre = document.createElement("pre");
+          draftPre.className = "submission-code";
+          draftPre.textContent = draft;
+          draftSection.appendChild(draftPre);
+
+          const actions = document.createElement("div");
+          actions.className = "submission-actions";
+
+          const copyDraft = document.createElement("button");
+          copyDraft.type = "button";
+          copyDraft.className = "button secondary";
+          copyDraft.textContent = "Copy partner draft";
+          copyDraft.addEventListener("click", () => copyText(draft, copyDraft));
+          actions.appendChild(copyDraft);
+
+          if (record.email) {
+            const replyLink = document.createElement("a");
+            replyLink.className = "button secondary";
+            replyLink.href = `mailto:${encodeURIComponent(record.email)}?subject=${encodeURIComponent(`Re: NoticeKit partner request from ${record.company || "your team"}`)}`;
             replyLink.textContent = "Reply by email";
             actions.appendChild(replyLink);
           }

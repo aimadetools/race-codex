@@ -49,7 +49,7 @@ function parseRecord(blob, content) {
       isAsyncTeardown: String(record.type || "").trim() === "free_async_teardown",
       isTaggedValidation: isTaggedValidation(record.sourceTag),
       isLikelyTestSubmission: isLikelyTestSubmission(record),
-      segmentGuess: deriveSegmentGuess(record.ownershipSignal, record.sourceTag)
+      segmentGuess: deriveSegmentGuess(record.ownershipSignal, record.sourceTag, record.partnerRole, record.type)
     };
   } catch (error) {
     return {
@@ -67,9 +67,11 @@ function isTaggedValidation(sourceTag) {
   return ["founder-follow-up", "advisor-follow-up", "founder-batch-03", "founder-batch-04"].includes(raw);
 }
 
-function deriveSegmentGuess(ownershipSignal, sourceTag) {
+function deriveSegmentGuess(ownershipSignal, sourceTag, partnerRole, type) {
   const role = String(ownershipSignal || "").trim().toLowerCase();
   const source = String(sourceTag || "").trim().toLowerCase();
+  const partner = String(partnerRole || "").trim().toLowerCase();
+  const requestType = String(type || "").trim().toLowerCase();
 
   if (["founder", "operator", "ops", "operations"].includes(role)) {
     return "founder/operator";
@@ -79,11 +81,19 @@ function deriveSegmentGuess(ownershipSignal, sourceTag) {
     return "advisor";
   }
 
+  if (["fractional_dpo", "privacy_consultant", "startup_attorney", "compliance_operator", "other_partner"].includes(partner)) {
+    return "advisor";
+  }
+
   if (source.startsWith("founder-")) {
     return "founder/operator";
   }
 
   if (source.startsWith("advisor-")) {
+    return "advisor";
+  }
+
+  if (requestType === "partner_request") {
     return "advisor";
   }
 

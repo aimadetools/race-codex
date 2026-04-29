@@ -62,6 +62,30 @@ function buildNotificationBody(submission) {
     ].join("\n");
   }
 
+  if (submission.type === "partner_request") {
+    return [
+      "NoticeKit partner intake",
+      "",
+      ...details,
+      `Partner role: ${submission.partnerRole || "Not provided"}`,
+      `Partner goal: ${submission.partnerGoal || "Not provided"}`,
+      `Expected client volume: ${submission.partnerVolume || "Not provided"}`,
+      `Subprocessor page: ${submission.subprocessorUrl || "Not provided"}`,
+      "",
+      "Client profile:",
+      submission.clientProfile || "Not provided",
+      "",
+      "Vendor change:",
+      submission.vendorChange || "Not provided",
+      "",
+      "Customer segment and deadline:",
+      submission.deadline || "Not provided",
+      "",
+      "Review needed:",
+      submission.reviewNeed || "Not provided"
+    ].join("\n");
+  }
+
   return [
     "NoticeKit contact intake",
     "",
@@ -98,7 +122,25 @@ function buildNotificationHtml(submission) {
           ["Optional note", submission.reviewNeed || "Not provided"],
           ["Summary", submission.summary || "Not provided"]
         ]
-      : [
+      : submission.type === "partner_request"
+        ? [
+            ["Reference", submission.referenceId],
+            ["Request type", submission.type],
+            ["Company", submission.company],
+            ["Reply email", submission.email],
+            ["Submitted at", submission.submittedAt],
+            ["Source tag", submission.sourceTag || "site"],
+            ["Submission channel", submission.submissionChannel || "unknown"],
+            ["Partner role", submission.partnerRole || "Not provided"],
+            ["Partner goal", submission.partnerGoal || "Not provided"],
+            ["Expected client volume", submission.partnerVolume || "Not provided"],
+            ["Client profile", submission.clientProfile || "Not provided"],
+            ["Subprocessor page", submission.subprocessorUrl || "Not provided"],
+            ["Vendor change", submission.vendorChange || "Not provided"],
+            ["Customer segment and deadline", submission.deadline || "Not provided"],
+            ["Review needed", submission.reviewNeed || "Not provided"]
+          ]
+        : [
           ["Reference", submission.referenceId],
           ["Request type", submission.type],
           ["Company", submission.company],
@@ -113,7 +155,13 @@ function buildNotificationHtml(submission) {
         ];
 
   return [
-    `<p>${submission.type === "self_audit_feedback" ? "NoticeKit self-audit feedback" : "NoticeKit contact intake"}</p>`,
+    `<p>${
+      submission.type === "self_audit_feedback"
+        ? "NoticeKit self-audit feedback"
+        : submission.type === "partner_request"
+          ? "NoticeKit partner intake"
+          : "NoticeKit contact intake"
+    }</p>`,
     "<table cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;line-height:1.5;\">",
     ...rows.map(
       ([label, value]) =>
@@ -295,6 +343,10 @@ module.exports = async function handler(request, response) {
     vendorChange: clean(payload.vendorChange),
     deadline: clean(payload.deadline),
     reviewNeed: clean(payload.reviewNeed),
+    partnerRole: clean(payload.partnerRole),
+    clientProfile: clean(payload.clientProfile),
+    partnerGoal: clean(payload.partnerGoal),
+    partnerVolume: clean(payload.partnerVolume),
     ownershipSignal: clean(payload.ownershipSignal),
     sourceTag: clean(payload.sourceTag),
     submissionChannel: clean(payload.submissionChannel),
@@ -370,6 +422,8 @@ module.exports = async function handler(request, response) {
         ? "Your self-audit feedback was received."
         : submission.type === "free_async_teardown"
           ? "Your teardown request was received."
+          : submission.type === "partner_request"
+            ? "Your partner request was received."
           : "Your audit intake was received.",
     referenceId: submission.referenceId
   });
