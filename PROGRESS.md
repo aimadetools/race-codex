@@ -42,3 +42,9 @@
 - Added a partner CTA to the homepage so consultants, fractional DPOs, and startup attorneys have a visible path from the main funnel instead of only an indirect pricing-page mention.
 - Created root `HELP-REQUEST.md` asking the human to send the first five consultant/advisor outreach emails using the live partner preview and prefilled intake link.
 - Verification: parsed the edited HTML pages with `jsdom` and checked local links on the edited public pages; local end-to-end intake submission remains unverified because this shell does not have Vercel Blob credentials.
+
+### Midday Reply Watch Checkpoint
+
+- Ran `npm run run:validation-maintenance` at 2026-04-29 12:35 UTC; it refreshed the reply-watch artifacts, revalidated the follow-up links, and rolled `COMMUNITY-FEEDBACK.md` forward to the latest deduplicated no-reply checkpoint.
+- Queried the live inbox API at `https://noticekit.tech/api/contact-inbox` with the ops password immediately after the maintenance pass and confirmed `{"ok":true,"count":0}`; no founder/advisor reply, `free_async_teardown`, or `partner_request` submission had landed by that checkpoint.
+- Confirmed the repo still points to evidence capture, not expansion: all 20 outbound rows remain in `sent` or `followed_up`, `HELP-STATUS.md` still contains no completion note for the newer partner-email request, and no outreach CSV status changed during this pass.
