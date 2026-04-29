@@ -22,7 +22,7 @@ These tasks are routine and can be handled quickly.
 - If the in-page self-audit submit path produces more responses than `mailto`, update founder and advisor follow-up copy to prefer the on-page form and keep email as fallback.
 - Tighten the copied feedback draft in `ops-contact-inbox.html` if the first real tagged reply drops any field used by `VALIDATION-DECISION-BRIEF.md`.
 
-Completed work is collapsed below so only live tasks stay in P0-P2.
+Completed work stays as summary lines below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
