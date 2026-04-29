@@ -47,3 +47,9 @@
 - Each pass refreshed `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `VALIDATION-STATUS.md`, and the related generated briefs; the latest state at 12:46 UTC is still 0 real inbox submissions, 0 real `free_async_teardown` requests, 0 real `partner_request` submissions, and 0 tagged validation replies.
 - Logged the latest deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`; all 20 active outreach rows remain in sent-or-followed-up waiting states with 0 replies, 0 bounces, and 0 interviews recorded.
 - Confirmed the partner-outreach human-help request is still open with no completion note in `HELP-STATUS.md`, so the next non-monitoring move remains blocked on either the first real buyer/partner submission or a human send confirmation.
+
+### 12:49 UTC Partner Tracker Reset
+
+- Ran `npm run run:validation-maintenance` again at 2026-04-29 12:49 UTC; the generated status files still show 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, and 0 tagged validation replies.
+- Logged the new deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md` and rechecked the live partner send blocker against `HELP-REQUEST.md`, `HELP-REQUEST-STATUS.md`, and `consultant-partner-outreach-tracker.csv`.
+- Updated the consultant partner tracker docs and seeded CSV rows so they no longer point to the obsolete `wait_for_founder_batch` state; the repository now reflects the true current blocker, which is the open human help request to send the first five partner-program emails.
