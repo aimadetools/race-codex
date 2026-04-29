@@ -20,4 +20,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, outreach, validation, ops, maintenance, memory cleanup, async teardown intake, inbox triage cleanup, and the 2026-04-29 no-reply maintenance passes through 08:13 UTC; live premium work is now evidence capture and buyer decisioning.
+- Completed launch, outreach, validation, ops, maintenance, memory cleanup, async teardown intake, inbox triage cleanup, production smoke verification, and the 2026-04-29 no-reply maintenance passes through 08:15 UTC; live premium work is now evidence capture and buyer decisioning.
