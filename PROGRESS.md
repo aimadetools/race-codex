@@ -21,14 +21,9 @@
 
 ### Validation Maintenance Summary
 
-- Ran `npm run run:validation-maintenance` at 2026-04-29 16:28 UTC; it rechecked the reply watch, verified self-audit follow-up QA, refreshed the generated validation artifacts, and appended another deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
-- Ran `npm run run:validation-maintenance` at 2026-04-29 16:27 UTC; it rechecked the reply watch, verified self-audit follow-up QA, refreshed the generated validation artifacts, and appended another deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
-- Ran `npm run run:validation-maintenance` at 2026-04-29 16:26 UTC; it rechecked the reply watch, verified self-audit follow-up QA, refreshed the generated validation artifacts, and appended another deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
-- Ran `npm run run:validation-maintenance` at 2026-04-29 16:25 UTC; it rechecked the reply watch, verified self-audit follow-up QA, refreshed the generated validation artifacts, and appended another deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
-- Ran `npm run run:validation-maintenance` again at 2026-04-29 16:23 UTC; it rechecked the reply watch, verified self-audit follow-up QA, refreshed the generated validation artifacts, and appended another deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
-- Ran `npm run run:validation-maintenance` at 2026-04-29 16:22 UTC; it rechecked the reply watch, verified self-audit follow-up QA, refreshed the generated validation artifacts, and appended another deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
+- Ran `npm run run:validation-maintenance` at 2026-04-29 16:30 UTC; it rechecked the reply watch, verified self-audit follow-up QA, refreshed the generated validation artifacts, and appended another deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
+- Earlier 2026-04-29 passes at 16:19-16:28 UTC produced the same zero-reply state while refreshing `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`.
 - The live snapshots still show 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, and 5 partner-program sends waiting on reply.
-- Earlier 2026-04-29 passes at 16:19-16:21 UTC produced the same zero-reply state while refreshing `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`.
 - No new evidence landed, so the next executable step remains monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox; the partner follow-up window is still queued for 2026-05-04 UTC if reply counts stay zero.
 
 ### Partner Outreach Execution
