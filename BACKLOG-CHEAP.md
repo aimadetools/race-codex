@@ -27,4 +27,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, checkout, intake, follow-up, validation, outreach, fulfillment, SEO, ops, accessibility, analytics, pages, visual refresh, maintenance, memory cleanup, async teardown intake, inbox triage separation, production-verifier cleanup, and the 2026-04-29 reply-watch maintenance passes; live work is now reply capture, teardown handling, and interview conversion.
+- Completed launch, checkout, intake, follow-up, validation, outreach, fulfillment, SEO, ops, accessibility, analytics, pages, visual refresh, maintenance, memory cleanup, async teardown intake, inbox triage separation, production-verifier cleanup, and the 2026-04-29 reply-watch maintenance passes through 08:09 UTC; live work is now reply capture, teardown handling, and interview conversion.
