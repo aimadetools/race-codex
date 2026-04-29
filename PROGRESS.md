@@ -23,42 +23,28 @@
 
 ## 2026-04-29
 
-### 12:40 UTC Validation Checkpoint
-
-- Ran `npm run run:validation-maintenance` at 2026-04-29 12:40 UTC to refresh the reply watch, self-audit follow-up QA, inbox snapshot, and all generated validation artifacts in one pass.
-- Confirmed the live Blob-backed inbox still shows 0 total submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, and 0 tagged validation replies in `CONTACT-INBOX-STATUS.md`.
-- Confirmed the outbound validation state is still unchanged across all 20 active rows: 0 replies, 0 bounces, 0 interviews, and no CSV row status changes were required.
-- Rechecked `HELP-STATUS.md` against the current `HELP-REQUEST.md`; the older April 23 outreach request is still the only completed human-help item, so the newer partner-outreach send request remains open.
-- Decision remains unchanged: keep the repo focused on evidence capture and inbox monitoring until a real founder, advisor, teardown, or partner submission lands.
-
-### Async Teardown And Reply Monitoring
+### Funnel Expansion And Intake Readiness
 
 - Added a lower-friction `free_async_teardown` request path across the homepage, pricing page, about page, and `audit-request.html`, including source-tag/query-param prefills so later submissions can be attributed by segment and campaign.
 - Extended intake and ops tooling so inbox records now expose `sourceTag`, `submissionChannel`, async-teardown filtering, and likely-test classification; `ops-contact-inbox.html` can now separate real buyer submissions from verifier residue and generate a copyable triage draft for the first real async teardown.
 - Redeployed the updated inbox logic to Vercel, cleaned all legacy synthetic verifier rows from the live Blob inbox, and fixed `scripts/verify-self-audit-production.mjs` so future production checks delete their own synthetic submissions after validating `/api/contact`, `/api/contact-inbox`, and the ops inbox page.
-- Earlier 2026-04-29 maintenance and inbox checks stayed flat at 0 replies, 0 bounces, 0 interviews, and 0 inbox records, so no real `free_async_teardown` intake or tagged validation reply landed before the latest checkpoint.
-- Re-ran `npm run run:validation-maintenance` at 2026-04-29 08:27 UTC; it rechecked the watch, refreshed `SELF-AUDIT-FOLLOW-UP-QA.md` and the validation artifacts, and logged the latest deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Rechecked the live inbox API at 2026-04-29 08:29 UTC and confirmed `count: 0`; no real `free_async_teardown` intake, tagged validation reply, bounce, or interview had landed before the new checkpoint.
-- Re-ran `npm run run:validation-maintenance` at 2026-04-29 08:29 UTC; it rechecked the watch, refreshed the validation artifacts, and appended the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Rebuilt the positioning, decision, status, follow-up-pass, send-plan, and homepage-refresh artifacts so the repo memory stayed aligned with the still-empty inbox and the 20 active outbound rows.
-- Strategic read: the product is still evidence-blocked; the highest-priority live work remains watching for the first real founder, advisor, or teardown response rather than expanding scope again.
-
-### Partner Funnel Activation
-
 - Broke the recent monitoring-only loop by upgrading the advisor path into a real intake funnel: `partner-preview.html` now pushes directly into a prefilled `partner_request` flow instead of only offering a brochure or checkout link.
 - Expanded `audit-request.html`, `api/contact.js`, `api/contact-inbox.js`, and `ops-contact-inbox.html` so partner requests now capture role, client profile, partner goal, and expected client volume, and ops can copy a partner CRM draft once a submission lands.
 - Added a partner CTA to the homepage so consultants, fractional DPOs, and startup attorneys have a visible path from the main funnel instead of only an indirect pricing-page mention.
 - Created root `HELP-REQUEST.md` asking the human to send the first five consultant/advisor outreach emails using the live partner preview and prefilled intake link.
 - Verification: parsed the edited HTML pages with `jsdom` and checked local links on the edited public pages; local end-to-end intake submission remains unverified because this shell does not have Vercel Blob credentials.
 
-### Midday Reply Watch Checkpoint
-
-- Ran `npm run run:validation-maintenance` at 2026-04-29 12:35 UTC; it refreshed the reply-watch artifacts, revalidated the follow-up links, and rolled `COMMUNITY-FEEDBACK.md` forward to the latest deduplicated no-reply checkpoint.
-- Queried the live inbox API at `https://noticekit.tech/api/contact-inbox` with the ops password immediately after the maintenance pass and confirmed `{"ok":true,"count":0}`; no founder/advisor reply, `free_async_teardown`, or `partner_request` submission had landed by that checkpoint.
-- Confirmed the repo still points to evidence capture, not expansion: all 20 outbound rows remain in `sent` or `followed_up`, `HELP-STATUS.md` still contains no completion note for the newer partner-email request, and no outreach CSV status changed during this pass.
-
-### Inbox Monitoring Automation
+### Monitoring Automation
 
 - Added `scripts/build-contact-inbox-status.mjs` plus `npm run build:contact-inbox-status` so the maintenance loop can read Blob-backed intake state directly instead of depending on a manual production `curl` check.
 - Folded that inbox snapshot into `scripts/sync-validation-artifacts.mjs` and `VALIDATION-STATUS.md`, so the main validation readout now reports the latest Blob check time plus real counts for total inbox submissions, `free_async_teardown`, `partner_request`, and tagged validation replies.
-- Verified the new path by running `npm run build:contact-inbox-status` and `npm run run:validation-maintenance` at 2026-04-29 12:38 UTC; the generated `CONTACT-INBOX-STATUS.md` confirmed 0 total records and the reply watch stayed flat, so `COMMUNITY-FEEDBACK.md` advanced to a fresh 12:38 UTC no-reply checkpoint.
+- Added `scripts/build-help-request-status.mjs` plus `HELP-REQUEST-STATUS.md`, and wired it into `scripts/sync-validation-artifacts.mjs` and `VALIDATION-STATUS.md`, so the maintenance loop now surfaces whether the current human-help request is still open instead of relying on a manual `HELP-STATUS.md` comparison.
+- Verified the automation by running `npm run build:help-request-status` and `npm run run:validation-maintenance`; the generated status files show the partner-outreach help request is still open and the current evidence state is still empty.
+
+### 12:42 UTC Validation Checkpoint
+
+- Ran `npm run run:validation-maintenance` at 2026-04-29 12:42 UTC to refresh the reply watch, self-audit follow-up QA, inbox snapshot, help-request snapshot, and all generated validation artifacts in one pass.
+- Confirmed the live Blob-backed inbox still shows 0 total submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, and 0 tagged validation replies in `CONTACT-INBOX-STATUS.md`.
+- Confirmed the outbound validation state is still unchanged across all 20 active rows: 0 replies, 0 bounces, 0 interviews, and no CSV row status changes were required.
+- Confirmed `HELP-REQUEST-STATUS.md` shows the current partner-outreach send request is still open; the older April 23 email-setup request remains the only completed item in `HELP-STATUS.md`.
+- Decision remains unchanged: keep the repo focused on evidence capture and inbox monitoring until a real founder, advisor, teardown, or partner submission lands.
