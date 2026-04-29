@@ -4,7 +4,7 @@ These tasks are routine and can be handled quickly.
 
 ## P0
 
-- Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `ops-contact-inbox.html`, and all four outreach CSVs for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or completion of the partner-outreach help request; update the matching CSV or tracker immediately.
+- Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `ops-contact-inbox.html`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or completion of the partner-outreach help request; update the matching CSV or tracker immediately.
 - If the human sent the first 5 partner emails, update `consultant-partner-outreach-tracker.csv` with send dates, switch those rows out of `ready_to_send`, and set the next follow-up date.
 - If the first real `free_async_teardown` lands, record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link before replying.
 - If the first real `partner_request` lands from `partner-preview-hero`, `partner-preview-cta`, or `partner-outreach-batch-01`, log the qualification outcome in `consultant-partner-outreach-tracker.csv`.
