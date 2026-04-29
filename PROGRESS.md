@@ -43,3 +43,10 @@
 - Queried the live Vercel inbox and confirmed there are still no real founder/advisor replies and no `free_async_teardown` submissions; the stored validation records are production-verification tests rather than buyer evidence.
 - Added likely-test classification in `api/contact-inbox.js` plus real-only/test-only filtering and status counts in `ops-contact-inbox.html` so the first real buyer submission is no longer buried inside synthetic verifier traffic.
 - Verification: a focused JSDOM smoke test passed for the new inbox filters and counts, and `npm run check:self-audit-follow-up` still passed after the ops-page changes.
+
+### Production Inbox Resynced
+
+- Ran `npm run run:validation-maintenance` again at 2026-04-29 04:11 UTC; it refreshed the reply watch, rewrote `SELF-AUDIT-FOLLOW-UP-QA.md`, resynced the derived validation briefs, and appended the deduplicated 2026-04-29 04:11 UTC no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Checked the live private inbox before redeploy and found `https://noticekit.tech/api/contact-inbox` was still serving the older payload shape without `isLikelyTestSubmission` or `isAsyncTeardown`, so production was misreading verifier traffic as real submissions even though the repo had already fixed that logic in `HEAD`.
+- Redeployed the current repo to Vercel with `npx vercel deploy --prod --yes`, then re-queried the live inbox and confirmed the deployed API now classifies the stored verifier rows as tests again; post-deploy live counts are 23 total stored submissions, 0 real submissions, 0 real tagged self-audit replies, and 0 real `free_async_teardown` requests.
+- Strategic read: the product remains evidence-blocked, but production and repo memory are back in sync, so the next real buyer submission should be visible immediately in the live ops inbox.
