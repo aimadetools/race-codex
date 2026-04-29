@@ -20,4 +20,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, outreach, validation, ops, maintenance, memory cleanup, the first async teardown reply wedge, and inbox triage cleanup so real submissions are easier to spot; live premium work is now evidence capture and buyer decisioning.
+- Completed launch, outreach, validation, ops, maintenance, memory cleanup, async teardown intake, and inbox triage cleanup; live premium work is now evidence capture and buyer decisioning.

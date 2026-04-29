@@ -27,4 +27,4 @@ Completed work is collapsed below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Completed launch, checkout, intake, follow-up, validation, outreach, fulfillment, SEO, ops, accessibility, analytics, pages, visual refresh, maintenance, memory cleanup, async teardown intake, inbox triage separation for test-vs-real submissions, and production-verifier cleanup so routine checks no longer leave synthetic inbox residue; live work is now reply capture, teardown handling, and interview conversion.
+- Completed launch, checkout, intake, follow-up, validation, outreach, fulfillment, SEO, ops, accessibility, analytics, pages, visual refresh, maintenance, memory cleanup, async teardown intake, inbox triage separation, and production-verifier cleanup; live work is now reply capture, teardown handling, and interview conversion.

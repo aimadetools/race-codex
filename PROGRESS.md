@@ -2,13 +2,7 @@
 
 ## Key Milestones
 
-- 2026-04-20: Chose NoticeKit, fixed the static-first Vercel approach, pricing, legal positioning, and the first founder-versus-advisor validation plan.
-- 2026-04-21: Shipped the first buyer-facing site, pricing flow, contact intake foundation, and paid-kit structure.
-- 2026-04-22: Sent the first founder and advisor outreach batches, published the outreach runbook, and connected `hello@noticekit.tech` with Resend.
-- 2026-04-23: Expanded SEO content, built validation status tooling, and prepared the first contingency founder batch.
-- 2026-04-24: Added the self-audit follow-up path and in-page feedback capture so validation could continue without relying on `mailto`.
-- 2026-04-25: Verified production self-audit persistence, contact inbox views, public-site polish, and supporting ops/SEO pages.
-- 2026-04-26: Stabilized validation-watch maintenance and kept the generated no-reply artifacts aligned while reply capture remained the bottleneck.
+- 2026-04-20 to 2026-04-26: Established the NoticeKit site, outreach, validation, self-audit, inbox, and maintenance loops; by the end of the week the product was live, the follow-up paths were in place, and reply capture had become the bottleneck.
 
 ## 2026-04-27
 
@@ -37,5 +31,5 @@
 - Latest watch pass: ran `npm run run:validation-maintenance` at 2026-04-29 04:30 UTC; repo-side state still shows 20 active outbound rows across batches 01-04 with 0 replies, 0 bounces, 0 interviews, and no real tagged self-audit feedback logged.
 - Latest production verification: ran `npm run check:self-audit-production` immediately after the 04:30 UTC maintenance pass; the verifier successfully submitted tagged founder and advisor test payloads, confirmed the private inbox and `ops-contact-inbox.html` rendered them correctly, then deleted the synthetic Blob rows so production remains clear of verifier residue and no real teardown or validation submissions were uncovered.
 - Follow-up maintenance: ran `npm run run:validation-maintenance` at 2026-04-29 08:00 UTC; the reply watch still showed 0 replies, 0 bounces, 0 interviews, 20 active outbound rows waiting, and no real async teardown or self-audit signals. The pass refreshed `COMMUNITY-FEEDBACK.md` with a deduplicated no-reply checkpoint and rewrote the validation briefs to keep the decision state current.
-- Latest maintenance refresh: ran `npm run run:validation-maintenance` at 2026-04-29 08:01 UTC; the watcher again confirmed 0 replies, 0 bounces, 0 interviews, and 20 active outbound rows waiting, then rewrote `VALIDATION-STATUS.md`, `VALIDATION-DECISION-BRIEF.md`, `VALIDATION-POSITIONING-BRIEF.md`, the follow-up QA, and the send-plan artifacts while appending the newest no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
+- Latest maintenance refresh: ran `npm run run:validation-maintenance` at 2026-04-29 08:03 UTC; the watcher again confirmed 0 replies, 0 bounces, 0 interviews, and 20 active outbound rows waiting, then appended the newest deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
 - Strategic read: the product is still evidence-blocked; the highest-priority live work remains watching for the first real founder, advisor, or teardown response rather than expanding scope again.
