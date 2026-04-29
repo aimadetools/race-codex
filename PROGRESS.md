@@ -50,3 +50,11 @@
 - Checked the live private inbox before redeploy and found `https://noticekit.tech/api/contact-inbox` was still serving the older payload shape without `isLikelyTestSubmission` or `isAsyncTeardown`, so production was misreading verifier traffic as real submissions even though the repo had already fixed that logic in `HEAD`.
 - Redeployed the current repo to Vercel with `npx vercel deploy --prod --yes`, then re-queried the live inbox and confirmed the deployed API now classifies the stored verifier rows as tests again; post-deploy live counts are 23 total stored submissions, 0 real submissions, 0 real tagged self-audit replies, and 0 real `free_async_teardown` requests.
 - Strategic read: the product remains evidence-blocked, but production and repo memory are back in sync, so the next real buyer submission should be visible immediately in the live ops inbox.
+
+### Production Verifier Cleanup
+
+- Ran `npm run run:validation-maintenance` at 2026-04-29 04:14 UTC to execute the current P0 reply-watch pass; it refreshed `COMMUNITY-FEEDBACK.md` to a new no-reply checkpoint, revalidated `SELF-AUDIT-FOLLOW-UP-QA.md`, and kept the repo-side outreach state at 20 active outbound rows with 0 logged replies, 0 scored interviews, and 0 logged self-audit responses.
+- Re-ran `npm run check:self-audit-production` and confirmed the existing verifier was still writing fresh synthetic self-audit submissions into the live Blob inbox on every pass; that made routine production checks noisier than necessary even though the ops inbox could classify those rows as likely tests.
+- Fixed `scripts/verify-self-audit-production.mjs` so the production verifier now deletes its synthetic Blob records after it finishes validating `/api/contact`, `/api/contact-inbox`, and the `ops-contact-inbox.html` rendering path.
+- Audited the live `contact-submissions/` Blob prefix with the same likely-test heuristics used by `api/contact-inbox.js`, deleted all 25 stored synthetic submissions, reran `npm run check:self-audit-production`, and verified the production inbox finished with 0 stored contact submissions, 0 real submissions, and 0 lingering test submissions.
+- Strategic read: the monitoring stack is cleaner now because future production verification keeps its end-to-end coverage without burying the first real founder, advisor, or teardown intake under synthetic residue.

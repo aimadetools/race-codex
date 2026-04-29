@@ -3,7 +3,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { get, list } from "@vercel/blob";
+import { del, get, list } from "@vercel/blob";
 import { JSDOM } from "jsdom";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -203,6 +203,14 @@ async function loadStoredRecord(token, submission) {
   return { pathname: target.pathname, record };
 }
 
+async function deleteStoredRecord(token, pathname) {
+  if (!pathname) {
+    return;
+  }
+
+  await del(pathname, { token });
+}
+
 function verifyRecord(submission, stored) {
   const { record } = stored;
   assert(record.referenceId === submission.referenceId, `${submission.name}: referenceId mismatch in Blob.`);
@@ -384,6 +392,7 @@ function buildReport(results) {
     "- Verified the private Blob inbox stored the exact `sourceTag`, `submissionChannel`, `ownershipSignal`, `score`, `scoreBand`, `selectedChecks`, `topGaps`, and summary fields for each submit.",
     "- Verified `https://noticekit.tech/api/contact-inbox` returned both stored records when queried with the ops password.",
     "- Verified `ops-contact-inbox.html` rendered the likely-test filter view with the source tag, channel, score band, top gaps, likely-test label, and copyable feedback draft for the live records.",
+    "- Deleted the synthetic Blob records after verification so the routine production check does not keep inflating test-only inbox counts.",
     "",
     "## Results",
     "",
@@ -417,35 +426,45 @@ if (!opsPassword) {
 }
 
 const results = [];
-for (const testCase of CASES) {
-  const submitted = await submitCase(testCase);
-  const stored = await waitFor(
-    () => loadStoredRecord(blobToken, submitted),
-    `${submitted.name}: stored Blob record did not appear in time.`
+try {
+  for (const testCase of CASES) {
+    const submitted = await submitCase(testCase);
+    const stored = await waitFor(
+      () => loadStoredRecord(blobToken, submitted),
+      `${submitted.name}: stored Blob record did not appear in time.`
+    );
+    verifyRecord(submitted, stored);
+    results.push({
+      ...submitted,
+      pathname: stored.pathname
+    });
+  }
+
+  const inboxPayload = await waitFor(
+    async () => {
+      const payload = await fetchInbox(opsPassword);
+      for (const submission of results) {
+        findInboxRecord(payload, submission);
+      }
+      return payload;
+    },
+    "Production inbox did not return the submitted records in time."
   );
-  verifyRecord(submitted, stored);
-  results.push({
-    ...submitted,
-    pathname: stored.pathname
-  });
-}
 
-const inboxPayload = await waitFor(
-  async () => {
-    const payload = await fetchInbox(opsPassword);
-    for (const submission of results) {
-      findInboxRecord(payload, submission);
+  for (const submission of results) {
+    verifyInboxRecord(submission, findInboxRecord(inboxPayload, submission));
+  }
+
+  await verifyInboxRendering(inboxPayload, results);
+} finally {
+  for (const submission of results) {
+    try {
+      await deleteStoredRecord(blobToken, submission.pathname);
+    } catch (error) {
+      console.error(`Failed to delete synthetic verification record ${submission.pathname}`, error);
     }
-    return payload;
-  },
-  "Production inbox did not return the submitted records in time."
-);
-
-for (const submission of results) {
-  verifyInboxRecord(submission, findInboxRecord(inboxPayload, submission));
+  }
 }
-
-await verifyInboxRendering(inboxPayload, results);
 
 await writeFile(REPORT_PATH, buildReport(results));
 console.log(`Wrote ${REPORT_PATH}`);
