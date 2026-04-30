@@ -49,7 +49,7 @@ The first version includes:
 - `changelog.html` is the public changelog for product, content, and deployment updates.
 - `COMPETITOR-MATRIX.md` compares NoticeKit against page monitors, DPA templates, trust centers, and spreadsheets.
 - `CONSULTANT-REFERRAL-STRATEGY.md` defines partner profiles, white-label rights, coupon codes, and referral terms.
-- `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a lightweight CRM exists; the first partner-program send can now be executed through `scripts/send-partner-outreach.mjs` and summarized in `PARTNER-OUTREACH-STATUS.md`.
+- `CONSULTANT-PARTNER-OUTREACH-TRACKER.md` and `consultant-partner-outreach-tracker.csv` track consultant partner prospects manually until a lightweight CRM exists; the first partner-program send and the first due follow-up can now be executed through `scripts/send-partner-outreach.mjs` and summarized in `PARTNER-OUTREACH-STATUS.md`.
 - `CONTACT-DELIVERY.md` documents `/api/contact` delivery status, intake reference IDs, webhook and email relay environment variables, mailbox handoff steps, and verification steps for connecting a mailbox, CRM, or notification endpoint.
 - `CSV-FORMAT.md` defines the spreadsheet-safe import/export format.
 - `EVIDENCE-WORKFLOW.md` defines the no-backend customer evidence workflow.
@@ -62,6 +62,7 @@ The first version includes:
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
 - `noticekit-self-audit-worksheet.md` is the downloadable Markdown worksheet version of the public readiness self-audit.
 - `partner-preview.html` and `noticekit-partner-preview.pdf` provide a consultant/advisor partner preview based on the Pro kit manifest.
+- `PARTNER-OUTREACH-FOLLOW-UP-PASS.md` is the runbook for the first due partner non-responder follow-up pass and the tracker-led CTA order.
 - `PAYMENT-PROVIDER.md` documents the Stripe Payment Links launch decision.
 - `paid-kits/` contains the private early-access Starter and Pro fulfillment files, PDF exports, ZIP archives, and first-buyer fulfillment log for manual Stripe buyers; it is excluded from Vercel deployment by `.vercelignore`.
 - `PRICING-CHANGE-PLAN.md` defines how to adjust Starter, Pro, Concierge, add-ons, and discounts after the first five sales.
@@ -82,7 +83,7 @@ The first version includes:
 - `scripts/build-validation-status.mjs` regenerates the canonical buyer-validation status snapshot.
 - `scripts/build-partner-outreach-status.mjs` regenerates the compact partner-outreach watchboard from `consultant-partner-outreach-tracker.csv`.
 - `scripts/check-validation-reply-watch.mjs` prints the current reply-watch state and can write `VALIDATION-REPLY-WATCH.md` for repo memory, including the queued follow-up and contingency commands that become active when the next gate date opens.
-- `scripts/send-partner-outreach.mjs` dry-runs or sends the first ready partner-program messages through Resend using the same researched direct-email routes as advisor batch 02.
+- `scripts/send-partner-outreach.mjs` dry-runs or sends the first ready partner-program messages and the due partner follow-up pass through Resend using the same researched direct-email routes as advisor batch 02.
 - `scripts/sync-validation-artifacts.mjs` rebuilds the follow-up passes, homepage copy refresh queue, validation positioning brief, validation decision brief, validation status, and validation watch output after any send, reply, bounce, or interview update.
 - `npm run build:validation-watch` writes the current validation watchboard to `VALIDATION-REPLY-WATCH.md`.
 - `scripts/send-validation-batch.mjs` dry-runs or sends the prepared outreach queue and guarded non-responder follow-ups through SMTP or Resend when an approved sender is available; live sends are date-gated for advisor batch 02, contingency batches 03 and 04, and later contingency batches plus three-business-day follow-ups, with batch 04 additionally blocked until batch 03 is exhausted and founder replies are still zero.

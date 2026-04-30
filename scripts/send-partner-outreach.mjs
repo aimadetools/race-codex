@@ -164,6 +164,18 @@ function addBusinessDays(isoDate, businessDays) {
   return date.toISOString().slice(0, 10);
 }
 
+function todayIsoDate() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function isDueOnOrBefore(dateText, cutoff) {
+  const value = String(dateText || "").trim();
+  if (!value) {
+    return false;
+  }
+  return value <= cutoff;
+}
+
 function renderHtml(subject, text) {
   const escaped = text
     .replace(/&/g, "&amp;")
@@ -238,7 +250,45 @@ function buildMessage(row) {
   };
 }
 
-function applySendUpdate(row, recipient, timestamp, sendId) {
+function buildFollowUpMessage(row) {
+  const isAttorney = String(row.segment || "").includes("attorney");
+  const subject = isAttorney
+    ? "Re: Partner workflow for startup counsel handling subprocessor reviews"
+    : "Re: Partner workflow for your SaaS privacy clients";
+  const intakeLink = "https://noticekit.tech/audit-request.html?type=partner_request&source=partner-outreach-follow-up-01";
+  const previewLink = "https://noticekit.tech/partner-preview.html";
+  const trackerLink = "https://noticekit.tech/blog-dpa-objection-window.html";
+  const intro = isAttorney
+    ? "Quick follow-up on the partner workflow note I sent last week."
+    : "Quick follow-up on the partner workflow note I sent last week.";
+  const valueLine = isAttorney
+    ? "The most concrete asset is the free objection-window tracker. It shows the operational packet a founder can complete before legal review."
+    : "The most concrete asset is the free objection-window tracker. It shows the operational packet a client can complete before privacy review.";
+  const body = [
+    "Hi there,",
+    "",
+    intro,
+    "",
+    valueLine,
+    "",
+    `Free tracker: ${trackerLink}`,
+    `Partner preview: ${previewLink}`,
+    `Partner intake: ${intakeLink}`,
+    "",
+    "If this fits your client work, I can share the early referral or white-label terms through the intake form.",
+    "",
+    "Best,",
+    "NoticeKit"
+  ].join("\n");
+
+  return {
+    subject,
+    text: body,
+    html: renderHtml(subject, body)
+  };
+}
+
+function applyInitialSendUpdate(row, recipient, timestamp, sendId) {
   const sentDate = timestamp.slice(0, 10);
   row.outreach_status = "sent";
   row.next_action = "follow_up";
@@ -248,19 +298,41 @@ function applySendUpdate(row, recipient, timestamp, sendId) {
   row.notes = row.notes ? `${row.notes} ${sendNote}` : sendNote;
 }
 
+function applyFollowUpSendUpdate(row, recipient, timestamp, sendId) {
+  const sentDate = timestamp.slice(0, 10);
+  row.outreach_status = "sent";
+  row.next_action = "archive";
+  row.last_touch_date = sentDate;
+  row.next_touch_date = "";
+  const sendNote = `Partner follow-up sent ${timestamp} via Resend to ${recipient} using source tag partner-outreach-follow-up-01${sendId ? ` (id ${sendId})` : ""}.`;
+  row.notes = row.notes ? `${row.notes} ${sendNote}` : sendNote;
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const limit = Math.max(1, Number(args.get("limit") || 5));
   const send = args.has("send");
+  const followUp = args.has("follow-up");
+  const force = args.has("force");
 
   await loadEnvFile();
 
   const { header, records } = parseCsv(await readFile(PARTNER_TRACKER, "utf8"));
   const advisorRows = parseCsv(await readFile(ADVISOR_BATCH, "utf8")).records;
   const advisorMap = new Map(advisorRows.map((row) => [row.organization, row]));
-  const queue = records.filter((row) => String(row.outreach_status || "").trim() === "ready_to_send").slice(0, limit);
+  const queue = followUp
+    ? records
+        .filter((row) => String(row.outreach_status || "").trim() === "sent")
+        .filter((row) => String(row.next_action || "").trim() === "follow_up")
+        .filter((row) => force || isDueOnOrBefore(row.next_touch_date, todayIsoDate()))
+        .slice(0, limit)
+    : records.filter((row) => String(row.outreach_status || "").trim() === "ready_to_send").slice(0, limit);
 
   if (queue.length === 0) {
+    if (followUp) {
+      console.log(`No due partner follow-up rows found as of ${todayIsoDate()}.`);
+      return;
+    }
     console.log("No ready_to_send partner rows found.");
     return;
   }
@@ -272,10 +344,10 @@ async function main() {
       throw new Error(`No direct email route found for ${row.organization}.`);
     }
 
-    const message = buildMessage(row);
+    const message = followUp ? buildFollowUpMessage(row) : buildMessage(row);
 
     if (!send) {
-      console.log(`DRY RUN | ${row.organization} | ${recipient} | ${message.subject}`);
+      console.log(`DRY RUN | ${followUp ? "follow-up" : "initial"} | ${row.organization} | ${recipient} | ${message.subject}`);
       continue;
     }
 
@@ -285,8 +357,12 @@ async function main() {
       text: message.text,
       html: message.html
     });
-    applySendUpdate(row, recipient, new Date().toISOString(), response?.id || "");
-    console.log(`SENT | ${row.organization} | ${recipient} | ${response?.id || "no-id"}`);
+    if (followUp) {
+      applyFollowUpSendUpdate(row, recipient, new Date().toISOString(), response?.id || "");
+    } else {
+      applyInitialSendUpdate(row, recipient, new Date().toISOString(), response?.id || "");
+    }
+    console.log(`SENT | ${followUp ? "follow-up" : "initial"} | ${row.organization} | ${recipient} | ${response?.id || "no-id"}`);
   }
 
   if (send) {
