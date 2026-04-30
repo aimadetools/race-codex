@@ -81,3 +81,9 @@
 - Verified the partner follow-up gate by confirming `npm run send:partner-follow-up` blocks before 2026-05-04 UTC and `npm run send:partner-follow-up -- --force` dry-runs the five expected partner recipients without mutating the tracker.
 - Parsed the edited public pages with `jsdom` and confirmed their local links and assets resolve after the tracker-asset refactor.
 - Next executable step: keep watching `CONTACT-INBOX-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and future intake source tags; if partner replies are still zero on or after 2026-05-04 UTC, run `npm run send:partner-follow-up -- --send` before expanding outreach further.
+
+### Validation Maintenance Refresh
+
+- Ran another production-backed `npm run run:validation-maintenance` pass at the 2026-04-30 12:57 UTC checkpoint after rechecking the live backlog priority; the pass refreshed inbox, generator, help-request, partner-outreach, and validation status artifacts, reran self-audit follow-up QA, and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Current live state remains unchanged at 2026-04-30 12:57 UTC: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 partner replies, 0 interviews, 20 buyer-validation rows waiting on reply, and 5 partner-program sends waiting for the 2026-05-04 UTC follow-up window.
+- Reconfirmed that no higher-priority branch unlocked after the refresh, so the next executable work is still reply capture rather than more funnel or outreach expansion.
