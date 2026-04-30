@@ -43,7 +43,7 @@
           <div class="hero-actions">
             <a class="button" href="#generator-tool">Open generator</a>
             <a class="button secondary" href="self-audit.html">Run self-audit first</a>
-            <a class="button secondary" href="audit-request.html?type=free_async_teardown&source=generator-page">Request free teardown</a>
+            <a class="button secondary" href="free-teardown.html?source=generator-page">Request free teardown</a>
           </div>
         </section>
 
@@ -126,7 +126,7 @@
               <p>Use the full outputs below for review, then copy or download the draft into your own workspace.</p>
             </div>
             <div class="generator-actions">
-              <a class="button" id="send-packet" href="audit-request.html?type=free_async_teardown&source=generator-page&channel=generator-prefill">Send packet for teardown</a>
+              <a class="button" id="send-packet" href="free-teardown.html?source=generator-page&channel=generator-prefill">Send packet for teardown</a>
               <button class="button secondary" id="copy-notice" type="button">Copy notice</button>
               <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
               <button class="button secondary" id="download-notice" type="button">Download notice</button>
@@ -169,7 +169,7 @@
               <h2>Need a blunt second set of eyes?</h2>
               <p>If the timeline warning stays red or the draft still feels improvised, send one URL and one vendor change through the free async teardown. That is the fastest path to a specific reply without a call.</p>
             </div>
-            <a class="button gold" href="audit-request.html?type=free_async_teardown&source=generator-cta">Request free teardown</a>
+            <a class="button gold" href="free-teardown.html?source=generator-cta">Request free teardown</a>
           </div>
         </section>
 
@@ -366,18 +366,17 @@
 
       function buildTeardownHref(packet) {
         const params = new URLSearchParams({
-          type: "free_async_teardown",
           source: "generator-page",
           channel: "generator-prefill",
           company: packet.company,
+          email: packet.contactEmail,
           subprocessor_url: packet.subprocessorUrl === "{{subprocessor_page_url}}" ? "" : packet.subprocessorUrl,
           vendor_change: `${packet.changeType}: ${packet.vendorName} for ${packet.vendorPurpose}. Data categories: ${packet.dataCategories}. Processing region: ${packet.processingRegion}.`,
           deadline: `${packet.customerSegment}. Notice date: ${packet.noticeDate || "Not provided"}. Planned effective date: ${packet.effectiveDate || "Not provided"}. Objection deadline: ${packet.objectionDeadline || "Not provided"}.`,
-          review_need: `Review the generated notice packet, timeline, and evidence checklist. Internal note: ${packet.reviewNotes}`,
-          packet_subject: packet.subject
+          review_need: `Review the generated notice packet, timeline, and evidence checklist. Internal note: ${packet.reviewNotes}`
         });
 
-        return `audit-request.html?${params.toString()}`;
+        return `free-teardown.html?${params.toString()}`;
       }
 
       function renderPacket() {
