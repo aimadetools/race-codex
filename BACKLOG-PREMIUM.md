@@ -1,6 +1,6 @@
 # Premium Backlog
 
-These tasks need deeper reasoning, legal/compliance judgment, product strategy, or multi-file design work.
+These tasks need deeper reasoning, legal/compliance judgment, product strategy, or multi-file design work. Completed operational work stays collapsed into the summary line below so only live evidence decisions remain visible.
 
 ## P0
 
@@ -23,4 +23,4 @@ Completed work stays as summary lines below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke and handoff reporting, deploy-drift correction, status tooling, the tracker-led founder/advisor follow-up refresh, the 2026-04-30 20:20 UTC through 23:08 UTC no-reply maintenance checkpoints, and recurring reply-watch passes are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until then.
+- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke and handoff reporting, deploy-drift correction, status tooling, the tracker-led founder/advisor follow-up refresh, the 2026-04-30 20:20 UTC through 23:10 UTC no-reply maintenance checkpoints, and recurring reply-watch passes are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until then.
