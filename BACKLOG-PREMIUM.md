@@ -12,6 +12,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P1
 
+- If reply state is still zero by the 2026-05-04 UTC follow-up window, decide whether the next founder/advisor follow-up should lead with the new free objection-window tracker asset instead of article-only links, then compare resulting inbound quality against prior outreach.
 - Prepare the first benchmark report only after at least one reply clarifies whether founders or advisors are the sharper wedge for public teardown content.
 
 ## P2

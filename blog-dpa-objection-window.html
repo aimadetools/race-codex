@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to Track a DPA Objection Window | NoticeKit</title>
-    <meta name="description" content="A practical workflow for tracking DPA objection windows after a SaaS subprocessor change notice.">
+    <title>Free DPA Objection Window Tracker for SaaS Teams | NoticeKit</title>
+    <meta name="description" content="Build and download a simple DPA objection window tracker CSV for a subprocessor change notice, then route the next step into NoticeKit.">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="NoticeKit">
-    <meta property="og:title" content="How to Track a DPA Objection Window">
-    <meta property="og:description" content="Track notice dates, objection deadlines, customer segments, owners, and evidence records for subprocessor changes.">
+    <meta property="og:title" content="Free DPA Objection Window Tracker for SaaS Teams">
+    <meta property="og:description" content="Build and download a simple objection-window tracker CSV with notice dates, deadlines, owners, and evidence fields.">
     <meta property="og:image" content="https://noticekit.tech/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit subprocessor notices for small SaaS teams">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="How to Track a DPA Objection Window">
-    <meta name="twitter:description" content="Track notice dates, objection deadlines, customer segments, owners, and evidence records for subprocessor changes.">
+    <meta name="twitter:title" content="Free DPA Objection Window Tracker for SaaS Teams">
+    <meta name="twitter:description" content="Build and download a simple objection-window tracker CSV with notice dates, deadlines, owners, and evidence fields.">
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.png">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
@@ -37,14 +37,70 @@
         <article class="article">
           <header class="article-header">
             <span class="eyebrow">Workflow</span>
-            <h1>How to track a DPA objection window</h1>
-            <p>A customer notice is not finished when the email is sent. Track the objection window so your team knows when the change can proceed, who owns follow-up, and what evidence should be kept.</p>
+            <h1>Free DPA objection window tracker for SaaS teams</h1>
+            <p>A customer notice is not finished when the email is sent. Build a simple tracker so your team knows when the change can proceed, who owns follow-up, and what evidence should be kept.</p>
           </header>
 
           <div class="notice-band">
             <strong>Operational workflow, not legal advice.</strong>
             <p>This article explains a tracking process. Your DPA, customer agreement, and counsel determine what notice period or objection process applies.</p>
           </div>
+
+          <section>
+            <div class="download-band">
+              <div>
+                <span class="eyebrow">Free template</span>
+                <h2>Build and download a starter CSV</h2>
+                <p>Use the fields below to generate a simple objection-window tracker with one example row and the core columns most teams forget on the first pass.</p>
+              </div>
+              <div class="download-actions">
+                <a class="button secondary" href="audit-request.html?type=free_async_teardown&source=blog-dpa-objection-window-template">Request a free teardown</a>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="grid-2">
+              <article class="card">
+                <h2>Tracker builder</h2>
+                <div class="field-grid">
+                  <label>Company
+                    <input id="tracker-company" value="Example SaaS">
+                  </label>
+                  <label>Customer segment
+                    <input id="tracker-segment" value="EU customers on signed DPA">
+                  </label>
+                  <label>Notice date
+                    <input id="tracker-notice-date" type="date">
+                  </label>
+                  <label>Objection window
+                    <select id="tracker-window">
+                      <option value="7">7 days</option>
+                      <option value="14">14 days</option>
+                      <option value="30" selected>30 days</option>
+                      <option value="45">45 days</option>
+                    </select>
+                  </label>
+                  <label>Internal owner
+                    <input id="tracker-owner" value="Founder or compliance owner">
+                  </label>
+                  <label>Notice method
+                    <input id="tracker-method" value="Email plus public subprocessor page update">
+                  </label>
+                </div>
+                <div class="download-actions" style="margin-top: 16px; justify-content: flex-start;">
+                  <button id="tracker-download" class="button gold" type="button">Download CSV</button>
+                  <a class="button secondary" href="pricing.html">See full kits</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <h2>Preview</h2>
+                <div id="tracker-preview" class="notice-output" aria-live="polite"></div>
+                <p>The CSV includes one example row plus blank columns for contract source, reply owner, status, objections, and evidence links.</p>
+              </article>
+            </div>
+          </section>
 
           <section>
             <h2>Start with the customer segment</h2>
@@ -153,10 +209,10 @@
           <section>
             <div class="cta-band">
               <div>
-                <h2>Need the tracker file?</h2>
-                <p>NoticeKit Starter includes a one-change objection-window tracker. Pro adds customer segmentation and repeated vendor-change workflows.</p>
+                <h2>Need a blunt second set of eyes?</h2>
+                <p>If your notice date, effective date, or customer segmentation still feels shaky, send one URL and one vendor change for a short async gap read.</p>
               </div>
-              <a class="button gold" href="pricing.html">See pricing</a>
+              <a class="button gold" href="audit-request.html?type=free_async_teardown&source=blog-dpa-objection-window-cta">Request free teardown</a>
             </div>
           </section>
         </article>
@@ -167,6 +223,133 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+    <script>
+      const trackerCompanyInput = document.querySelector("#tracker-company");
+      const trackerSegmentInput = document.querySelector("#tracker-segment");
+      const trackerNoticeDateInput = document.querySelector("#tracker-notice-date");
+      const trackerWindowInput = document.querySelector("#tracker-window");
+      const trackerOwnerInput = document.querySelector("#tracker-owner");
+      const trackerMethodInput = document.querySelector("#tracker-method");
+      const trackerPreview = document.querySelector("#tracker-preview");
+      const trackerDownloadButton = document.querySelector("#tracker-download");
+
+      function trackerDate(offsetDays = 0) {
+        const date = new Date();
+        date.setUTCHours(0, 0, 0, 0);
+        date.setUTCDate(date.getUTCDate() + Number(offsetDays));
+        return date.toISOString().slice(0, 10);
+      }
+
+      function addDays(value, days) {
+        if (!value) return "";
+        const date = new Date(`${value}T00:00:00Z`);
+        date.setUTCDate(date.getUTCDate() + Number(days || 0));
+        return date.toISOString().slice(0, 10);
+      }
+
+      function buildTrackerRow() {
+        const noticeDate = trackerNoticeDateInput.value;
+        const windowDays = Number(trackerWindowInput.value || 0);
+        const deadline = addDays(noticeDate, windowDays);
+        const company = trackerCompanyInput.value.trim() || "Example SaaS";
+        const segment = trackerSegmentInput.value.trim() || "Customer segment";
+        const owner = trackerOwnerInput.value.trim() || "Internal owner";
+        const method = trackerMethodInput.value.trim() || "Notice method";
+
+        return {
+          company,
+          segment,
+          noticeDate,
+          windowDays,
+          deadline,
+          owner,
+          method
+        };
+      }
+
+      function buildTrackerCsv(row) {
+        const headers = [
+          "company",
+          "customer_segment",
+          "contract_source",
+          "notice_method",
+          "notice_sent_date",
+          "objection_window_days",
+          "objection_deadline",
+          "internal_owner",
+          "reply_owner",
+          "status",
+          "customer_objection_summary",
+          "resolution_note",
+          "evidence_link"
+        ];
+
+        const values = [
+          row.company,
+          row.segment,
+          "Standard DPA v2026-01",
+          row.method,
+          row.noticeDate,
+          String(row.windowDays),
+          row.deadline,
+          row.owner,
+          "Support or founder inbox",
+          "waiting",
+          "",
+          "",
+          "https://example.com/proof-folder"
+        ];
+
+        return [
+          headers.join(","),
+          values.map((value) => `"${String(value).replaceAll("\"", "\"\"")}"`).join(",")
+        ].join("\n");
+      }
+
+      function renderTrackerPreview() {
+        const row = buildTrackerRow();
+        trackerPreview.textContent = [
+          `Company: ${row.company}`,
+          `Segment: ${row.segment}`,
+          `Notice date: ${row.noticeDate || "[date not set]"}`,
+          `Objection window: ${row.windowDays} days`,
+          `Deadline: ${row.deadline || "[deadline not set]"}`,
+          `Owner: ${row.owner}`,
+          `Method: ${row.method}`,
+          "CSV also includes blank fields for contract source, reply owner, objection notes, resolution note, and evidence link."
+        ].join("\n");
+      }
+
+      function downloadTrackerCsv() {
+        const row = buildTrackerRow();
+        const csv = buildTrackerCsv(row);
+        const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        const safeCompany = (row.company || "noticekit").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+        link.href = url;
+        link.download = `${safeCompany || "noticekit"}-objection-window-tracker.csv`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      trackerNoticeDateInput.value = trackerDate(0);
+
+      [
+        trackerCompanyInput,
+        trackerSegmentInput,
+        trackerNoticeDateInput,
+        trackerWindowInput,
+        trackerOwnerInput,
+        trackerMethodInput
+      ].forEach((input) => input.addEventListener("input", renderTrackerPreview));
+
+      trackerDownloadButton.addEventListener("click", downloadTrackerCsv);
+      renderTrackerPreview();
+    </script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
