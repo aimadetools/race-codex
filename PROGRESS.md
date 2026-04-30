@@ -82,15 +82,8 @@
 - Parsed the edited public pages with `jsdom` and confirmed their local links and assets resolve after the tracker-asset refactor.
 - Next executable step: keep watching `CONTACT-INBOX-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and future intake source tags; if partner replies are still zero on or after 2026-05-04 UTC, run `npm run send:partner-follow-up -- --send` before expanding outreach further.
 
-### Validation Maintenance Refresh
+### Validation Maintenance Refreshes
 
-- Ran another production-backed `npm run run:validation-maintenance` pass at the 2026-04-30 12:57 UTC checkpoint after rechecking the live backlog priority; the pass refreshed inbox, generator, help-request, partner-outreach, and validation status artifacts, reran self-audit follow-up QA, and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Current live state remains unchanged at 2026-04-30 12:57 UTC: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 partner replies, 0 interviews, 20 buyer-validation rows waiting on reply, and 5 partner-program sends waiting for the 2026-05-04 UTC follow-up window.
-- Reconfirmed that no higher-priority branch unlocked after the refresh, so the next executable work is still reply capture rather than more funnel or outreach expansion.
-
-### Validation Maintenance Refresh
-
-- Ran `npm run run:validation-maintenance` again at the 2026-04-30 12:58 UTC checkpoint to execute the top live backlog task: production-backed reply and intake monitoring.
-- The pass refreshed `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`, reran self-audit follow-up QA, and appended the deduplicated `2026-04-30 12:58 UTC` no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- Live state still shows 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 partner replies, 0 interviews, 20 active outbound buyer-validation rows waiting on reply, and 5 partner sends still due for follow-up on or after 2026-05-04 UTC.
-- No new execution branch unlocked after the pass, so the next real work remains monitoring for the first inbound reply or intake and then converting it into the right evidence log immediately.
+- Ran back-to-back production-backed `npm run run:validation-maintenance` passes at the 2026-04-30 12:57 UTC and 12:58 UTC checkpoints after rechecking the live backlog priority; both passes refreshed inbox, generator, help-request, partner-outreach, and validation status artifacts, reran self-audit follow-up QA, and kept `COMMUNITY-FEEDBACK.md` at the deduplicated `2026-04-30 12:58 UTC` no-reply checkpoint.
+- The latest live state remains unchanged at 2026-04-30 12:58 UTC: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 partner replies, 0 interviews, 20 active outbound buyer-validation rows waiting on reply, and 5 partner sends still due for follow-up on or after 2026-05-04 UTC.
+- No new execution branch unlocked after either refresh, so the next real work remains monitoring for the first inbound reply or intake and then converting it into the right evidence log immediately.
