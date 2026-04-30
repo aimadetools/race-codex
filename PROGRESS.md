@@ -61,13 +61,14 @@
 
 ## 2026-04-30
 
+- Ran `npm run run:validation-maintenance` at 2026-04-30 08:11 UTC; it refreshed the live validation, inbox, partner, generator, and help status files and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` at 2026-04-30 08:10 UTC; it refreshed the live validation, inbox, partner, generator, and help status files and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` at 2026-04-30 08:09 UTC; it rechecked the reply watch, refreshed the live contact, partner, generator, help, and validation status files, and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` at 2026-04-30 08:08 UTC; it rechecked the reply watch, refreshed the live contact, partner, generator, help, and validation status files, and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` repeatedly from 2026-04-30 08:01 UTC through 08:05 UTC; each pass rechecked the validation reply watch, refreshed the live contact, partner, generator, help, and validation status files, and appended a deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` again at 2026-04-30 08:06 UTC; it refreshed `SELF-AUDIT-FOLLOW-UP-QA.md`, `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`, then logged another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` again at 2026-04-30 08:07 UTC; it refreshed the same live status files, kept the help request closed, and appended another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
-- The latest 08:10 UTC refresh is still flat: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 interviews, 20 outbound buyer-validation rows waiting on reply, and 5 partner sends queued for the 2026-05-04 UTC follow-up window.
+- The latest 08:11 UTC refresh is still flat: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 interviews, 20 outbound buyer-validation rows waiting on reply, and 5 partner sends queued for the 2026-05-04 UTC follow-up window.
 - Re-read repo memory, confirmed there is still no `DEPLOY-STATUS.md` break-fix marker, and shipped the self-serve generator wedge instead of adding more blind outreach.
 - Shipped a browser-only `generator.html` that drafts subprocessor notice copy, calculates the objection deadline, exports a starter CSV row, and generates an internal evidence checklist without sending inputs to NoticeKit.
 - Rewired homepage, pricing, self-audit, blog, about, audit-request, partner-preview, changelog, and the notice-example page so the generator is a real product path; updated `sitemap.xml` so the page is indexable.
