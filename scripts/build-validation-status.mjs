@@ -15,6 +15,7 @@ const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const CONTACT_INBOX_STATUS_FILE = join(ROOT, "CONTACT-INBOX-STATUS.md");
 const HELP_REQUEST_STATUS_FILE = join(ROOT, "HELP-REQUEST-STATUS.md");
 const GENERATOR_PRODUCTION_STATUS_FILE = join(ROOT, "GENERATOR-PRODUCTION-STATUS.md");
+const GENERATOR_HANDOFF_STATUS_FILE = join(ROOT, "GENERATOR-HANDOFF-STATUS.md");
 const PARTNER_OUTREACH_STATUS_FILE = join(ROOT, "PARTNER-OUTREACH-STATUS.md");
 const HOMEPAGE_QUEUE_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
 const DECISION_BRIEF_FILE = join(ROOT, "VALIDATION-DECISION-BRIEF.md");
@@ -210,6 +211,16 @@ function extractGeneratorCheckedAt(text) {
   return match ? match[1].trim() : "unknown";
 }
 
+function extractGeneratorHandoffStatus(text) {
+  const match = text.match(/- Status:\s*([^\n]+)/i);
+  return match ? match[1].trim().toLowerCase() : "unknown";
+}
+
+function extractGeneratorHandoffCheckedAt(text) {
+  const match = text.match(/Checked at:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
 function extractPartnerMetric(text, label) {
   const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const match = text.match(new RegExp(`- ${escaped}: (\\d+)`, "i"));
@@ -322,6 +333,7 @@ const feedbackText = await readFile(FEEDBACK_FILE, "utf8");
 const contactInboxStatusText = await readFile(CONTACT_INBOX_STATUS_FILE, "utf8").catch(() => "");
 const helpRequestStatusText = await readFile(HELP_REQUEST_STATUS_FILE, "utf8").catch(() => "");
 const generatorProductionStatusText = await readFile(GENERATOR_PRODUCTION_STATUS_FILE, "utf8").catch(() => "");
+const generatorHandoffStatusText = await readFile(GENERATOR_HANDOFF_STATUS_FILE, "utf8").catch(() => "");
 const partnerOutreachStatusText = await readFile(PARTNER_OUTREACH_STATUS_FILE, "utf8").catch(() => "");
 const homepageQueueText = await readFile(HOMEPAGE_QUEUE_FILE, "utf8").catch(() => "");
 const decisionBriefText = await readFile(DECISION_BRIEF_FILE, "utf8").catch(() => "");
@@ -348,6 +360,8 @@ const helpRequestWhat = extractHelpRequestWhat(helpRequestStatusText);
 const helpRequestCheckedAt = extractHelpRequestCheckedAt(helpRequestStatusText);
 const generatorProductionStatus = extractGeneratorStatus(generatorProductionStatusText);
 const generatorProductionCheckedAt = extractGeneratorCheckedAt(generatorProductionStatusText);
+const generatorHandoffStatus = extractGeneratorHandoffStatus(generatorHandoffStatusText);
+const generatorHandoffCheckedAt = extractGeneratorHandoffCheckedAt(generatorHandoffStatusText);
 const partnerOutreachCheckedAt = extractPartnerCheckedAt(partnerOutreachStatusText);
 const partnerReadyToSend = extractPartnerMetric(partnerOutreachStatusText, "Ready to send");
 const partnerSentWaiting = extractPartnerMetric(partnerOutreachStatusText, "Sent and waiting on reply");
@@ -370,6 +384,7 @@ const output = [
   `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` and ` + "`CONTACT-INBOX-STATUS.md`" + ` for the first real reply or intake, then convert it into the right evidence log.`,
   `- Human-help request state: ${helpRequestStatus === "open" ? `open as of ${helpRequestCheckedAt}` : helpRequestStatus === "completed" ? `completed as of ${helpRequestCheckedAt}` : helpRequestStatus === "missing" ? `no active request as of ${helpRequestCheckedAt}` : "missing or unknown"}.`,
   `- Production generator state: ${generatorProductionCheckedAt === "unknown" ? "missing; run \`npm run build:generator-production-status\`." : generatorProductionStatus === "ok" ? `checked ${generatorProductionCheckedAt}; live generator smoke passed.` : `checked ${generatorProductionCheckedAt}; status ${generatorProductionStatus}.`}`,
+  `- Generator handoff state: ${generatorHandoffCheckedAt === "unknown" ? "missing; run \`npm run build:generator-handoff-status\`." : generatorHandoffStatus === "ok" ? `checked ${generatorHandoffCheckedAt}; live generator-to-teardown handoff passed.` : `checked ${generatorHandoffCheckedAt}; status ${generatorHandoffStatus}.`}`,
   `- Partner outreach state: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}; ${partnerReadyToSend == null ? "unknown" : partnerReadyToSend} ready, ${partnerSentWaiting == null ? "unknown" : partnerSentWaiting} sent/waiting, ${partnerReplied == null ? "unknown" : partnerReplied} replied.`}`,
   describeFollowUpState("Founder follow-up pass", followUpDate, founderBatchRows),
   describeFollowUpState("Advisor follow-up pass", advisorFollowUpDate, advisorBatchRows),
@@ -396,6 +411,7 @@ const output = [
   `- Contact inbox check: ${inboxCheckedAt === "unknown" ? "missing; run \`npm run build:contact-inbox-status\`." : `last checked ${inboxCheckedAt}`}`,
   `- Human-help request check: ${helpRequestCheckedAt === "unknown" ? "missing; run \`npm run build:help-request-status\`." : `last checked ${helpRequestCheckedAt}`}`,
   `- Generator production check: ${generatorProductionCheckedAt === "unknown" ? "missing; run \`npm run build:generator-production-status\`." : `last checked ${generatorProductionCheckedAt}`}`,
+  `- Generator handoff check: ${generatorHandoffCheckedAt === "unknown" ? "missing; run \`npm run build:generator-handoff-status\`." : `last checked ${generatorHandoffCheckedAt}`}`,
   `- Partner-outreach check: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}`}`,
   `- Real inbox submissions: ${inboxRealSubmissions == null ? "unknown" : inboxRealSubmissions}`,
   `- Real free async teardown submissions: ${inboxTeardowns == null ? "unknown" : inboxTeardowns}`,
@@ -408,6 +424,7 @@ const output = [
   "- Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.",
   `- Human help: ${helpRequestStatus === "open" ? `\`HELP-REQUEST-STATUS.md\` still shows an open request for "${helpRequestWhat}".` : helpRequestStatus === "completed" ? `\`HELP-REQUEST-STATUS.md\` shows the current request as completed.` : helpRequestStatus === "missing" ? "`HELP-REQUEST-STATUS.md` shows no active request right now." : "help-request status snapshot missing or empty."}`,
   `- Production generator: ${generatorProductionStatus === "ok" ? "`GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing." : generatorProductionCheckedAt === "unknown" ? "status snapshot missing." : `latest smoke check status is ${generatorProductionStatus}.`}`,
+  `- Generator handoff: ${generatorHandoffStatus === "ok" ? "`GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing." : generatorHandoffCheckedAt === "unknown" ? "status snapshot missing." : `latest handoff check status is ${generatorHandoffStatus}.`}`,
   `- Partner outreach: ${partnerNextAction === "unknown" ? "status snapshot missing or empty." : `\`PARTNER-OUTREACH-STATUS.md\` says the next action is to ${partnerNextAction}`}`,
   "- Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.",
   `- Decision brief: ${decisionHeadline === "unknown" ? "missing; run \`npm run build:validation-decision-brief\`." : `\`VALIDATION-DECISION-BRIEF.md\` says: ${decisionHeadline}`}`,

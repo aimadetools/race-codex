@@ -4,6 +4,7 @@
     "build:help-request-status": "node scripts/build-help-request-status.mjs",
     "build:contact-inbox-status": "node scripts/build-contact-inbox-status.mjs",
     "build:generator-production-status": "node scripts/build-generator-production-status.mjs",
+    "build:generator-handoff-status": "node scripts/build-generator-handoff-status.mjs",
     "build:partner-outreach-status": "node scripts/build-partner-outreach-status.mjs",
     "build:validation-decision-brief": "node scripts/build-validation-decision-brief.mjs",
     "build:validation-positioning-brief": "node scripts/build-validation-positioning-brief.mjs",
