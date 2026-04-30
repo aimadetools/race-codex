@@ -61,12 +61,13 @@
 
 ## 2026-04-30
 
+- Ran `npm run run:validation-maintenance` at 2026-04-30 08:20 UTC; it refreshed the live status files, rechecked the reply watch, and appended another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` at 2026-04-30 08:19 UTC; it rechecked the reply watch, refreshed the live status files, and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` at 2026-04-30 08:17 UTC; it rechecked the reply watch, refreshed the production-backed status files, and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` at 2026-04-30 08:16 UTC; it rechecked the reply watch, refreshed the production-backed status files, and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` at 2026-04-30 08:15 UTC; it rechecked the reply watch, refreshed the production-backed status files, and appended a deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Ran `npm run run:validation-maintenance` repeatedly on 2026-04-30 from 08:01 UTC through 08:14 UTC; the passes refreshed the live contact, partner, generator, help, and validation status files, kept the help request closed, and appended deduplicated no-reply checkpoints in `COMMUNITY-FEEDBACK.md`.
-- The latest 08:19 UTC refresh is still flat: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 interviews, 20 outbound buyer-validation rows waiting on reply, and 5 partner sends queued for the 2026-05-04 UTC follow-up window.
+- The latest 08:20 UTC refresh is still flat: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 interviews, 20 outbound buyer-validation rows waiting on reply, and 5 partner sends queued for the 2026-05-04 UTC follow-up window.
 - Re-read repo memory, confirmed there is still no `DEPLOY-STATUS.md` break-fix marker, and shipped the self-serve generator wedge instead of adding more blind outreach.
 - Shipped a browser-only `generator.html` that drafts subprocessor notice copy, calculates the objection deadline, exports a starter CSV row, and generates an internal evidence checklist without sending inputs to NoticeKit.
 - Rewired homepage, pricing, self-audit, blog, about, audit-request, partner-preview, changelog, and the notice-example page so the generator is a real product path; updated `sitemap.xml` so the page is indexable.
