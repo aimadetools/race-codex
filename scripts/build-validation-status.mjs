@@ -250,6 +250,11 @@ function extractPartnerAction(text) {
   return match ? match[1].trim() : "unknown";
 }
 
+function extractPartnerReadiness(text) {
+  const match = text.match(/- Follow-up readiness:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
 function extractPartnerCheckedAt(text) {
   const match = text.match(/Checked at:\s*([^\n]+)/i);
   return match ? match[1].trim() : "unknown";
@@ -389,6 +394,7 @@ const partnerOutreachCheckedAt = extractPartnerCheckedAt(partnerOutreachStatusTe
 const partnerReadyToSend = extractPartnerMetric(partnerOutreachStatusText, "Ready to send");
 const partnerSentWaiting = extractPartnerMetric(partnerOutreachStatusText, "Sent and waiting on reply");
 const partnerReplied = extractPartnerMetric(partnerOutreachStatusText, "Replied");
+const partnerFollowUpReadiness = extractPartnerReadiness(partnerOutreachStatusText);
 const partnerNextAction = extractPartnerAction(partnerOutreachStatusText);
 const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
 const homepageQueueState = extractQueueState(homepageQueueText);
@@ -409,6 +415,7 @@ const output = [
   `- Production generator state: ${generatorProductionCheckedAt === "unknown" ? "missing; run \`npm run build:generator-production-status\`." : generatorProductionStatus === "ok" ? `checked ${generatorProductionCheckedAt}; live generator smoke passed.` : `checked ${generatorProductionCheckedAt}; status ${generatorProductionStatus}.`}`,
   `- Generator handoff state: ${generatorHandoffCheckedAt === "unknown" ? "missing; run \`npm run build:generator-handoff-status\`." : generatorHandoffStatus === "ok" ? `checked ${generatorHandoffCheckedAt}; live generator-to-teardown handoff passed.` : `checked ${generatorHandoffCheckedAt}; status ${generatorHandoffStatus}.`}`,
   `- Partner outreach state: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}; ${partnerReadyToSend == null ? "unknown" : partnerReadyToSend} ready, ${partnerSentWaiting == null ? "unknown" : partnerSentWaiting} sent/waiting, ${partnerReplied == null ? "unknown" : partnerReplied} replied.`}`,
+  `- Partner follow-up readiness: ${partnerFollowUpReadiness === "unknown" ? "missing from the current partner status snapshot." : partnerFollowUpReadiness}`,
   describeFollowUpState("Founder follow-up pass", followUpDate, founderBatchRows),
   describeFollowUpState("Advisor follow-up pass", advisorFollowUpDate, advisorBatchRows),
   describeBatchPosition("Batch 03", contingencyRows),

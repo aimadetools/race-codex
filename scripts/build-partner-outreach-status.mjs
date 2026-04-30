@@ -83,6 +83,58 @@ function formatUtcTimestamp(date) {
   return `${year}-${month}-${day} ${hour}:${minute} UTC`;
 }
 
+function todayIsoDate() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function parseIsoDate(value) {
+  const text = String(value || "").trim();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) {
+    return null;
+  }
+  return new Date(`${text}T00:00:00Z`);
+}
+
+function diffUtcDays(startIso, endIso) {
+  const start = parseIsoDate(startIso);
+  const end = parseIsoDate(endIso);
+  if (!start || !end) {
+    return null;
+  }
+  return Math.round((end.getTime() - start.getTime()) / 86400000);
+}
+
+function describeFollowUpReadiness(rows, today) {
+  const followUpRows = rows
+    .filter((row) => String(row.next_action || "").trim() === "follow_up")
+    .sort((left, right) => String(left.next_touch_date || "").localeCompare(String(right.next_touch_date || "")));
+
+  if (followUpRows.length === 0) {
+    return "no partner follow-ups are currently queued";
+  }
+
+  const dueNow = followUpRows.filter((row) => String(row.next_touch_date || "").trim() && String(row.next_touch_date || "").trim() <= today).length;
+  if (dueNow > 0) {
+    return `${dueNow} partner follow-up row(s) are due now`;
+  }
+
+  const nextDue = String(followUpRows[0].next_touch_date || "").trim();
+  const daysRemaining = diffUtcDays(today, nextDue);
+  if (!nextDue || daysRemaining == null) {
+    return "partner follow-up is queued but the next due date is missing";
+  }
+
+  if (daysRemaining === 0) {
+    return `next partner follow-up is due today (${nextDue})`;
+  }
+
+  if (daysRemaining === 1) {
+    return `next partner follow-up is due on ${nextDue} (1 day remaining)`;
+  }
+
+  return `next partner follow-up is due on ${nextDue} (${daysRemaining} days remaining)`;
+}
+
 function describeNextStep(rows) {
   const replied = rows.filter((row) => String(row.outreach_status || "").trim() === "replied").length;
   if (replied > 0) {
@@ -107,6 +159,7 @@ function describeNextStep(rows) {
 }
 
 const now = formatUtcTimestamp(new Date());
+const today = todayIsoDate();
 const rows = parseCsv(await readFile(TRACKER_FILE, "utf8"));
 const sent = countBy(rows, "outreach_status", "sent");
 const ready = countBy(rows, "outreach_status", "ready_to_send");
@@ -131,6 +184,7 @@ const output = [
   `- Booked: ${booked}`,
   `- No response: ${noResponse}`,
   `- Not fit: ${notFit}`,
+  `- Follow-up readiness: ${describeFollowUpReadiness(rows, today)}.`,
   `- Next partner action: ${describeNextStep(rows)}.`,
   ""
 ];
