@@ -101,6 +101,10 @@
 - Live state at the 2026-04-30 16:01 UTC checkpoint remains unchanged: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 partner replies, 0 interviews, 20 active buyer-validation rows waiting on reply, and 5 partner sends still queued for the 2026-05-04 UTC follow-up window.
 - No new evidence branch unlocked, so the next executable task remains monitoring `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real inbound event and then recording it immediately.
 
+- Ran the current production-backed `npm run run:validation-maintenance` pass at 2026-04-30 16:03 UTC; it refreshed the help-request, inbox, generator, handoff, partner-outreach, and validation status artifacts again, reran self-audit follow-up QA, and wrote the deduplicated `2026-04-30 16:03 UTC` no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
+- Live state at the 2026-04-30 16:03 UTC checkpoint is still unchanged: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 partner replies, 0 interviews, 20 active buyer-validation rows waiting on reply, and 5 partner sends still queued for the 2026-05-04 UTC follow-up window.
+- The watch loop remains the highest-priority incomplete task until the first real reply or intake lands, at which point the next step is to convert it into the correct evidence log immediately.
+
 ### Pricing Funnel Pass
 
 - Tightened `pricing.html` so the page now opens with a faster chooser: free async teardown first, then clear paths to Starter or Pro for buyers who already know the tier they need.
