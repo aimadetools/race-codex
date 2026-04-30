@@ -8,7 +8,6 @@ These tasks are routine and can be handled quickly.
 - On or after `2026-05-04` UTC, if the five partner-program sends still show zero replies, send the first partner follow-up pass and log it in `consultant-partner-outreach-tracker.csv`.
 - If the first real `free_async_teardown` lands, record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link before replying.
 - If the first real `partner_request` lands from `partner-preview-hero`, `partner-preview-cta`, or `partner-outreach-batch-01`, log the qualification outcome in `consultant-partner-outreach-tracker.csv`.
-- Check `generator.html` on production after deploy and note any broken copy/download behavior before sending new traffic there.
 - When the first real `partner_request` lands, send a short approve / clarify / decline reply from `hello@noticekit.tech` and log whether it points to referral-only, client-delivery, or white-label demand.
 - When the first real `free_async_teardown` request lands, send a 3-bullet async gap reply from `hello@noticekit.tech` and log the outcome in `COMMUNITY-FEEDBACK.md`.
 - If the first real inbound references `generator.html`, `generator-page`, or `generator-cta`, preserve that source tag in the inbox tracker and `COMMUNITY-FEEDBACK.md` before replying.
@@ -29,4 +28,4 @@ Completed work stays as summary lines below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, automated status logging, homepage/pricing/intake copy refreshes, weekly validation-memory cleanup, generated outreach export hygiene, and the 2026-04-29 23:29 UTC validation-maintenance checkpoint are done; routine no-reply watch passes now live in `PROGRESS.md` and this backlog stays collapsed to live P0/P1 triggers only.
+- Launch, checkout, intake, follow-up, outreach, fulfillment, SEO, ops, accessibility, analytics, partner intake activation, verifier cleanup, partner batch 01 send, automated status logging, homepage/pricing/intake copy refreshes, the local generator launch, the post-deploy production generator smoke check, weekly validation-memory cleanup, generated outreach export hygiene, and the 2026-04-30 04:07 UTC validation-maintenance checkpoint are done; routine no-reply watch passes now live in `PROGRESS.md` and this backlog stays collapsed to live P0/P1 triggers only.
