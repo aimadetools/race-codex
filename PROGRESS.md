@@ -61,8 +61,8 @@
 
 ## 2026-04-30
 
-- Ran `npm run run:validation-maintenance` at 2026-04-30 08:00 UTC; it refreshed the live contact, partner, generator, help, and validation status files, rechecked the self-audit follow-up QA, and appended a deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
-- Live state at the 08:00 UTC checkpoint is still flat: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 interviews, 20 outbound buyer-validation rows waiting on reply, and 5 partner sends queued for the 2026-05-04 UTC follow-up window.
+- Ran `npm run run:validation-maintenance` at 2026-04-30 08:01 UTC; it rechecked the validation reply watch, refreshed the live contact, partner, generator, help, and validation status files, and appended a deduplicated no-reply checkpoint to `COMMUNITY-FEEDBACK.md`.
+- Live state at the 08:02 UTC status refresh is still flat: 0 real inbox submissions, 0 `free_async_teardown` requests, 0 `partner_request` submissions, 0 tagged validation replies, 0 interviews, 20 outbound buyer-validation rows waiting on reply, and 5 partner sends queued for the 2026-05-04 UTC follow-up window.
 - Re-read repo memory, confirmed there is still no `DEPLOY-STATUS.md` break-fix marker, and shipped the self-serve generator wedge instead of adding more blind outreach.
 - Shipped a browser-only `generator.html` that drafts subprocessor notice copy, calculates the objection deadline, exports a starter CSV row, and generates an internal evidence checklist without sending inputs to NoticeKit.
 - Rewired homepage, pricing, self-audit, blog, about, audit-request, partner-preview, changelog, and the notice-example page so the generator is a real product path; updated `sitemap.xml` so the page is indexable.
