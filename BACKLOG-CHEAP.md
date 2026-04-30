@@ -8,11 +8,14 @@ These tasks are routine and can be handled quickly.
 - On or after `2026-05-04` UTC, if the five partner-program sends still show zero replies, send the first partner follow-up pass and log it in `consultant-partner-outreach-tracker.csv`.
 - If the first real `free_async_teardown` lands, record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link before replying.
 - If the first real `partner_request` lands from `partner-preview-hero`, `partner-preview-cta`, or `partner-outreach-batch-01`, log the qualification outcome in `consultant-partner-outreach-tracker.csv`.
+- Check `generator.html` on production after deploy and note any broken copy/download behavior before sending new traffic there.
 - When the first real `partner_request` lands, send a short approve / clarify / decline reply from `hello@noticekit.tech` and log whether it points to referral-only, client-delivery, or white-label demand.
 - When the first real `free_async_teardown` request lands, send a 3-bullet async gap reply from `hello@noticekit.tech` and log the outcome in `COMMUNITY-FEEDBACK.md`.
+- If the first real inbound references `generator.html`, `generator-page`, or `generator-cta`, preserve that source tag in the inbox tracker and `COMMUNITY-FEEDBACK.md` before replying.
 - When the first tagged self-audit reply lands, run `npm run record:feedback -- --input <json>` with exact `source_tag`, `channel`, `score_band`, and `ownership_signal` fields from the intake payload.
 - When the first scored interview lands, confirm `VALIDATION-POSITIONING-BRIEF.md` classified the segment correctly before acting on the branch recommendation.
 - If three teardown requests arrive before any self-audit replies, move the strongest async-teardown CTA higher on the homepage and pricing page.
+- If generator-led inbound appears before self-audit or teardown replies, move the generator CTA higher on the homepage, pricing page, and blog index.
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `advisor-first handoff`, update the homepage hero and pricing page opening copy from `HOMEPAGE-COPY-REFRESH-QUEUE.md`.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `vendor-change review packet`, refresh homepage and core CTA copy to broaden the product framing while keeping subprocessor-notice SEO pages intact.

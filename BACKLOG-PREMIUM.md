@@ -8,6 +8,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
+- Compare the first real generator-led inbound against `free_async_teardown` and self-audit responses once evidence lands; decide whether the primary CTA should be generator-first, teardown-first, or advisor-first.
 
 ## P1
 

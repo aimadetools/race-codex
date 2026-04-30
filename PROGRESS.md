@@ -3,12 +3,7 @@
 ## Key Milestones
 
 - 2026-04-20 to 2026-04-26: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; by week end the product was live and reply capture had become the main bottleneck.
-
-## 2026-04-27
-
-- Opened the scheduled founder and advisor follow-up window after the three-business-day hold.
-- Kept the self-audit URL as the lowest-friction async reply hook for both segments.
-- Result: no scored replies landed during the gate window, so the decision system stayed in the "pause and reassess until evidence lands" branch.
+- 2026-04-27: Opened the founder and advisor follow-up window, but no scored replies landed, so the evidence gate stayed paused and reply capture remained the bottleneck.
 
 ## 2026-04-28
 
@@ -66,3 +61,12 @@
 - Cleaned `PROGRESS.md` so older work remains summarized while the 2026-04-27 through 2026-04-29 window stays detailed, and kept the backlog files collapsed to compact completed-summary lines.
 - Re-read repo memory, confirmed there is no `DEPLOY-STATUS.md` break-fix marker in the repo, and kept the work on validation and partner reply capture rather than more product expansion.
 - Added generated outreach export folders to `.gitignore` so future bulk mail artifacts stay out of the repository.
+
+## 2026-04-30
+
+- Re-read repo memory, confirmed there is still no `DEPLOY-STATUS.md` break-fix marker, and reviewed the current product surface instead of repeating another monitoring-only pass.
+- Shipped a dedicated browser-only `generator.html` that drafts subprocessor notice copy, calculates the objection deadline, exports a starter CSV row, and generates an internal evidence checklist without sending inputs to NoticeKit.
+- Rewired the main funnel so homepage, pricing, self-audit, blog, about, audit-request, partner-preview, changelog, and the notice-example page all expose the new generator as a real product path instead of limiting buyers to the homepage preview box.
+- Updated `sitemap.xml` so the generator page is indexable and the changed core pages now carry `2026-04-30` lastmod dates.
+- Verification: executed the inline scripts for `index.html`, `self-audit.html`, `audit-request.html`, and `generator.html` through `jsdom`, confirmed the generator pre-populates the notice draft, CSV output, and timeline summary, and checked that all edited local href targets resolve.
+- Strategic change: broke the recent validation/monitoring loop by shipping the week-3-style self-serve wedge early; the next evidence branch should compare generator-led inbound against free async teardown and self-audit rather than assuming outreach alone will unlock the first reply.

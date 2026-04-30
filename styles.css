@@ -808,6 +808,25 @@ textarea {
   gap: 10px;
 }
 
+.generator-actions,
+.generator-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.generator-actions {
+  margin-top: 4px;
+}
+
+.generator-preview-actions {
+  margin-top: 14px;
+}
+
+.generator-summary strong {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+}
+
 .result-actions button {
   font: inherit;
   cursor: pointer;

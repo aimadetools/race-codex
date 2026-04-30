@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Subprocessor Notice Generator | NoticeKit</title>
+    <meta name="description" content="Generate subprocessor notice copy, an objection deadline, and a local evidence checklist in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:title" content="Local Subprocessor Notice Generator | NoticeKit">
+    <meta property="og:description" content="Browser-only subprocessor notice generator for small SaaS teams. Draft notice copy, objection dates, and an evidence checklist locally.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit local subprocessor notice generator">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Local Subprocessor Notice Generator | NoticeKit">
+    <meta name="twitter:description" content="Draft subprocessor notice copy, objection deadlines, and a proof checklist locally in your browser.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="generator.html">Generator</a>
+          <a href="self-audit.html">Self-audit</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <span class="eyebrow">Browser-only generator</span>
+          <h1>Draft the notice packet before the vendor change turns into a scramble.</h1>
+          <p>Use this local generator to draft the customer notice, calculate the objection deadline, and export a proof checklist without sending your inputs to NoticeKit. If the workflow still looks brittle, use the free async teardown or self-audit next.</p>
+          <div class="hero-actions">
+            <a class="button" href="#generator-tool">Open generator</a>
+            <a class="button secondary" href="self-audit.html">Run self-audit first</a>
+            <a class="button secondary" href="audit-request.html?type=free_async_teardown&source=generator-page">Request free teardown</a>
+          </div>
+        </section>
+
+        <section class="section audit-layout" id="generator-tool">
+          <form class="audit-card" id="generator-form">
+            <div class="section-head compact-head">
+              <h2>Notice inputs</h2>
+              <p>Fill the operational facts you already know. The output is a draft for counsel, DPO, or operator review, not legal advice.</p>
+            </div>
+
+            <div class="field-grid">
+              <label>Company
+                <input id="company" value="Example SaaS">
+              </label>
+              <label>Contact email
+                <input id="contact-email" type="email" value="privacy@example.com">
+              </label>
+              <label>Change type
+                <select id="change-type">
+                  <option value="add">Adding a new vendor</option>
+                  <option value="replace">Replacing one vendor with another</option>
+                  <option value="remove">Removing a vendor</option>
+                </select>
+              </label>
+              <label>Vendor name
+                <input id="vendor-name" value="Acme Email Cloud">
+              </label>
+              <label>Previous vendor
+                <input id="previous-vendor" value="Legacy Mailer">
+              </label>
+              <label>Vendor purpose
+                <input id="vendor-purpose" value="transactional email delivery">
+              </label>
+              <label>Data categories
+                <input id="data-categories" value="customer names, email addresses, and message metadata">
+              </label>
+              <label>Processing region
+                <input id="processing-region" value="United States and EU">
+              </label>
+              <label>Affected customer segment
+                <input id="customer-segment" value="EU customers on a signed DPA">
+              </label>
+              <label>Subprocessor page URL
+                <input id="subprocessor-url" type="url" value="https://example.com/subprocessors">
+              </label>
+              <label>Notice date
+                <input id="notice-date" type="date">
+              </label>
+              <label>Planned effective date
+                <input id="effective-date" type="date">
+              </label>
+              <label>Objection window
+                <select id="window-days">
+                  <option value="30">30 days</option>
+                  <option value="21">21 days</option>
+                  <option value="14">14 days</option>
+                  <option value="10">10 days</option>
+                  <option value="7">7 days</option>
+                </select>
+              </label>
+              <label>Workflow owner
+                <input id="workflow-owner" value="Privacy ops lead">
+              </label>
+            </div>
+
+            <label>Internal review notes
+              <textarea id="review-notes" placeholder="Example: Counsel wants the send draft, public page snapshot, and the objection owner recorded before approval.">Counsel review required before send. Save the notice draft, page snapshot, recipient list, and any objections in one evidence folder.</textarea>
+            </label>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Generated packet</span>
+            <div class="score-row generator-summary">
+              <strong id="deadline-label">May 23, 2026</strong>
+              <span id="timeline-state">Review-ready window</span>
+            </div>
+            <p id="timeline-summary">The planned effective date leaves enough time for the selected objection window.</p>
+            <div class="tier-guidance">
+              <strong id="subject-line">Subject: Notice of subprocessor update</strong>
+              <p>Use the full outputs below for review, then copy or download the draft into your own workspace.</p>
+            </div>
+            <div class="generator-actions">
+              <button class="button secondary" id="copy-notice" type="button">Copy notice</button>
+              <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
+              <button class="button secondary" id="download-notice" type="button">Download notice</button>
+              <button class="button secondary" id="download-csv" type="button">Download CSV row</button>
+            </div>
+            <p class="fine-print" id="generator-status" aria-live="polite">This tool runs in your browser and does not store your inputs.</p>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Customer notice draft</h2>
+            <p>A practical draft you can clean up before review and send.</p>
+          </div>
+          <div id="notice-output" class="template-box" aria-live="polite"></div>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article>
+              <div class="section-head">
+                <h2>Internal handoff</h2>
+                <p>Use this checklist to preserve the evidence trail before the notice goes out.</p>
+              </div>
+              <div id="checklist-output" class="template-box" aria-live="polite"></div>
+            </article>
+            <article>
+              <div class="section-head">
+                <h2>CSV preview</h2>
+                <p>Paste this into your own sheet or evidence log if you need a starting row.</p>
+              </div>
+              <div id="csv-output" class="template-box" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <h2>Need a blunt second set of eyes?</h2>
+              <p>If the timeline warning stays red or the draft still feels improvised, send one URL and one vendor change through the free async teardown. That is the fastest path to a specific reply without a call.</p>
+            </div>
+            <a class="button gold" href="audit-request.html?type=free_async_teardown&source=generator-cta">Request free teardown</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice-band">
+            <strong>Operational drafting only.</strong>
+            <p>NoticeKit organizes vendor facts, draft language, deadlines, and evidence steps. It does not decide whether your contracts or laws require a notice, and it does not replace counsel review.</p>
+            <a href="disclaimer.html">Read the disclaimer</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
+      </footer>
+    </div>
+
+    <script>
+      const today = new Date();
+      const noticeDateInput = document.querySelector("#notice-date");
+      const effectiveDateInput = document.querySelector("#effective-date");
+      const form = document.querySelector("#generator-form");
+      const deadlineLabel = document.querySelector("#deadline-label");
+      const timelineState = document.querySelector("#timeline-state");
+      const timelineSummary = document.querySelector("#timeline-summary");
+      const subjectLine = document.querySelector("#subject-line");
+      const noticeOutput = document.querySelector("#notice-output");
+      const checklistOutput = document.querySelector("#checklist-output");
+      const csvOutput = document.querySelector("#csv-output");
+      const generatorStatus = document.querySelector("#generator-status");
+      const copyNoticeButton = document.querySelector("#copy-notice");
+      const copyChecklistButton = document.querySelector("#copy-checklist");
+      const downloadNoticeButton = document.querySelector("#download-notice");
+      const downloadCsvButton = document.querySelector("#download-csv");
+
+      function formatDate(dateString) {
+        const date = new Date(`${dateString}T00:00:00`);
+        if (Number.isNaN(date.getTime())) {
+          return "Date not provided";
+        }
+
+        return new Intl.DateTimeFormat("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric"
+        }).format(date);
+      }
+
+      function addDays(dateString, days) {
+        const date = new Date(`${dateString}T00:00:00`);
+        if (Number.isNaN(date.getTime())) {
+          return "";
+        }
+
+        date.setDate(date.getDate() + days);
+        return date.toISOString().slice(0, 10);
+      }
+
+      function safeValue(id) {
+        return document.querySelector(`#${id}`).value.trim();
+      }
+
+      function csvCell(value) {
+        const normalized = String(value || "");
+        if (normalized.includes(",") || normalized.includes("\"") || normalized.includes("\n")) {
+          return `"${normalized.replaceAll("\"", "\"\"")}"`;
+        }
+        return normalized;
+      }
+
+      function downloadFile(name, content, type) {
+        const blob = new Blob([content], { type });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = name;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 0);
+      }
+
+      async function copyText(text, successMessage) {
+        try {
+          await navigator.clipboard.writeText(text);
+          generatorStatus.textContent = successMessage;
+        } catch (error) {
+          generatorStatus.textContent = "Clipboard copy failed in this browser. Use the download button instead.";
+        }
+      }
+
+      function buildPacket() {
+        const company = safeValue("company") || "Your company";
+        const contactEmail = safeValue("contact-email") || "privacy@example.com";
+        const changeType = safeValue("change-type") || "add";
+        const vendorName = safeValue("vendor-name") || "New vendor";
+        const previousVendor = safeValue("previous-vendor") || "Previous vendor";
+        const vendorPurpose = safeValue("vendor-purpose") || "the planned service";
+        const dataCategories = safeValue("data-categories") || "relevant customer data";
+        const processingRegion = safeValue("processing-region") || "the listed processing region";
+        const customerSegment = safeValue("customer-segment") || "affected customers";
+        const subprocessorUrl = safeValue("subprocessor-url") || "{{subprocessor_page_url}}";
+        const noticeDate = safeValue("notice-date");
+        const effectiveDate = safeValue("effective-date");
+        const windowDays = Number.parseInt(safeValue("window-days"), 10) || 30;
+        const workflowOwner = safeValue("workflow-owner") || "assigned owner";
+        const reviewNotes = safeValue("review-notes") || "Review notes not provided.";
+        const objectionDeadline = noticeDate ? addDays(noticeDate, windowDays) : "";
+        const effectiveTooEarly = noticeDate && effectiveDate && objectionDeadline && effectiveDate < objectionDeadline;
+
+        const introLineMap = {
+          add: `We are updating our subprocessor list to add ${vendorName} for ${vendorPurpose}.`,
+          replace: `We are updating our subprocessor list to replace ${previousVendor} with ${vendorName} for ${vendorPurpose}.`,
+          remove: `We are updating our subprocessor list to remove ${vendorName} from the workflow for ${vendorPurpose}.`
+        };
+
+        const subject = `${company}: subprocessor update notice for ${vendorName}`;
+        const noticeText = [
+          `Subject: ${subject}`,
+          "",
+          "Hello,",
+          "",
+          introLineMap[changeType] || introLineMap.add,
+          `This change affects ${customerSegment} and may involve ${dataCategories}. Processing may occur in ${processingRegion}.`,
+          `Notice date: ${formatDate(noticeDate)}`,
+          `Planned effective date: ${formatDate(effectiveDate)}`,
+          `Objection deadline: ${formatDate(objectionDeadline)}`,
+          `Current subprocessor page: ${subprocessorUrl}`,
+          "",
+          `If your agreement includes a right to object, please send any objection or routing instruction to ${contactEmail} by the deadline above so we can review it before the change takes effect.`,
+          "",
+          "Thank you,",
+          company
+        ].join("\n");
+
+        const checklistText = [
+          `- Confirm ${vendorName} facts, purpose, data categories, and region against source documents.`,
+          `- Save the final notice draft, send timestamp, and recipient source before ${formatDate(objectionDeadline)}.`,
+          `- Capture the updated subprocessor page snapshot and link it in the evidence folder.`,
+          `- Route objections or customer questions to ${workflowOwner}.`,
+          `- Record review note: ${reviewNotes}`
+        ].join("\n");
+
+        const csvHeader = [
+          "vendor_name",
+          "change_type",
+          "vendor_purpose",
+          "customer_segment",
+          "notice_date",
+          "effective_date",
+          "objection_window_days",
+          "objection_deadline",
+          "owner",
+          "contact_email",
+          "subprocessor_url"
+        ];
+        const csvRow = [
+          vendorName,
+          changeType,
+          vendorPurpose,
+          customerSegment,
+          noticeDate,
+          effectiveDate,
+          String(windowDays),
+          objectionDeadline,
+          workflowOwner,
+          contactEmail,
+          subprocessorUrl
+        ];
+
+        return {
+          subject,
+          noticeText,
+          checklistText,
+          csvText: `${csvHeader.join(",")}\n${csvRow.map(csvCell).join(",")}`,
+          objectionDeadline,
+          effectiveTooEarly,
+          effectiveDate,
+          noticeDate
+        };
+      }
+
+      function renderPacket() {
+        const packet = buildPacket();
+        subjectLine.textContent = `Subject: ${packet.subject}`;
+        noticeOutput.textContent = packet.noticeText;
+        checklistOutput.textContent = packet.checklistText;
+        csvOutput.textContent = packet.csvText;
+
+        if (!packet.noticeDate || !packet.objectionDeadline || !packet.effectiveDate) {
+          deadlineLabel.textContent = "Finish the dates";
+          timelineState.textContent = "Timeline incomplete";
+          timelineSummary.textContent = "Add the notice date and effective date so the generator can calculate the objection deadline and flag timing risk.";
+          return;
+        }
+
+        deadlineLabel.textContent = formatDate(packet.objectionDeadline);
+        if (packet.effectiveTooEarly) {
+          timelineState.textContent = "Timeline risk";
+          timelineSummary.textContent = "The planned effective date lands before the objection deadline. Move the effective date or send the notice earlier.";
+          return;
+        }
+
+        timelineState.textContent = "Review-ready window";
+        timelineSummary.textContent = "The planned effective date leaves enough time for the selected objection window, assuming the agreement uses this deadline structure.";
+      }
+
+      const defaultNoticeDate = today.toISOString().slice(0, 10);
+      const defaultEffectiveDate = new Date(today.getTime() + (35 * 24 * 60 * 60 * 1000)).toISOString().slice(0, 10);
+      noticeDateInput.value = defaultNoticeDate;
+      effectiveDateInput.value = defaultEffectiveDate;
+
+      form.addEventListener("input", renderPacket);
+      copyNoticeButton.addEventListener("click", () => copyText(buildPacket().noticeText, "Notice draft copied."));
+      copyChecklistButton.addEventListener("click", () => copyText(buildPacket().checklistText, "Checklist copied."));
+      downloadNoticeButton.addEventListener("click", () => {
+        downloadFile("noticekit-notice-draft.txt", buildPacket().noticeText, "text/plain;charset=utf-8");
+        generatorStatus.textContent = "Notice draft downloaded.";
+      });
+      downloadCsvButton.addEventListener("click", () => {
+        downloadFile("noticekit-notice-row.csv", buildPacket().csvText, "text/csv;charset=utf-8");
+        generatorStatus.textContent = "CSV row downloaded.";
+      });
+
+      renderPacket();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>
