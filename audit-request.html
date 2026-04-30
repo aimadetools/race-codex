@@ -203,6 +203,17 @@
         return document.querySelector(`#${id}`).value.trim() || "Not provided";
       }
 
+      function prefillField(id, queryKey) {
+        const field = document.querySelector(`#${id}`);
+        const queryValue = query.get(queryKey);
+
+        if (!field || !queryValue) {
+          return;
+        }
+
+        field.value = queryValue;
+      }
+
       const submitButton = document.querySelector("#audit-submit");
 
       function syncRequestTypeUi() {
@@ -218,6 +229,16 @@
         requestType.value = initialType;
       }
 
+      prefillField("company", "company");
+      prefillField("email", "email");
+      prefillField("subprocessor-url", "subprocessor_url");
+      prefillField("vendor-change", "vendor_change");
+      prefillField("deadline", "deadline");
+      prefillField("review-need", "review_need");
+      prefillField("partner-role", "partner_role");
+      prefillField("client-profile", "client_profile");
+      prefillField("partner-goal", "partner_goal");
+      prefillField("partner-volume", "partner_volume");
       sourceTagInput.value = query.get("source") || "site";
       submissionChannelInput.value = query.get("channel") || submissionChannelInput.value;
       syncRequestTypeUi();
@@ -293,6 +314,16 @@
           ].filter(Boolean).join("\n");
           setSummary(body);
           form.reset();
+          prefillField("company", "company");
+          prefillField("email", "email");
+          prefillField("subprocessor-url", "subprocessor_url");
+          prefillField("vendor-change", "vendor_change");
+          prefillField("deadline", "deadline");
+          prefillField("review-need", "review_need");
+          prefillField("partner-role", "partner_role");
+          prefillField("client-profile", "client_profile");
+          prefillField("partner-goal", "partner_goal");
+          prefillField("partner-volume", "partner_volume");
           sourceTagInput.value = query.get("source") || "site";
           submissionChannelInput.value = query.get("channel") || "audit-request-form";
         } catch (error) {

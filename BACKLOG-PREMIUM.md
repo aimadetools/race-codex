@@ -22,4 +22,4 @@ Completed work stays as summary lines below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, live generator smoke reporting, and status tooling are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until that happens.
+- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke reporting, and status tooling are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until that happens.
