@@ -27,8 +27,9 @@ Batch 01 follow-up has already been sent for 5 row(s), and no recorded replies a
 
 Use the follow-up subject and body from `BUYER-VALIDATION-OUTREACH-BATCH-01.md`.
 When the first send already recorded a direct-email inbox in CSV notes, use that inbox as the follow-up route instead of falling back to the broader public contact path.
-If it helps, include `https://noticekit.tech/self-audit.html?source=founder-follow-up` as a quick self-check hook before asking for blunt feedback.
-Ask recipients to reply with the score and top two gaps if they do not want a call.
+Lead with the free objection-window tracker asset: `https://noticekit.tech/blog-dpa-objection-window.html?source=founder-follow-up-tracker`.
+Offer the tagged async teardown path for recipients who prefer to reply with concrete gaps instead of booking time: `https://noticekit.tech/audit-request.html?type=free_async_teardown&source=founder-follow-up-teardown`.
+Ask recipients to reply with the top gaps or ownership handoff if they do not want a call.
 Keep the message short, avoid product pitching, and keep the non-legal-advice line intact.
 
 ## Send Guardrails

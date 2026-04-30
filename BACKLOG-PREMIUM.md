@@ -12,7 +12,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P1
 
-- If reply state is still zero by the 2026-05-04 UTC follow-up window, decide whether the next founder/advisor follow-up should lead with the new free objection-window tracker asset instead of article-only links, then compare resulting inbound quality against prior outreach.
+- After the 2026-05-04 UTC partner and any later founder/advisor follow-up windows, compare tracker-led inbound quality against the earlier self-audit-led outreach and decide whether the tracker or teardown hook deserves the default non-responder slot.
 - Prepare the first benchmark report only after at least one reply clarifies whether founders or advisors are the sharper wedge for public teardown content.
 
 ## P2
@@ -23,4 +23,4 @@ Completed work stays as summary lines below so only live tasks stay in P0-P2.
 
 ## Completed Summary
 
-- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke plus handoff reporting, deploy-drift correction, and status tooling are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until that happens.
+- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke plus handoff reporting, deploy-drift correction, status tooling, and the tracker-led founder/advisor follow-up refresh are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until that happens.

@@ -4,7 +4,8 @@ import { join } from "node:path";
 const ROOT = process.cwd();
 const BATCH_CSV = join(ROOT, "buyer-validation-outreach-batch-02.csv");
 const OUTPUT = join(ROOT, "BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md");
-const SELF_AUDIT_URL = "https://noticekit.tech/self-audit.html?source=advisor-follow-up";
+const TRACKER_URL = "https://noticekit.tech/blog-dpa-objection-window.html?source=advisor-follow-up-tracker";
+const TEARDOWN_URL = "https://noticekit.tech/audit-request.html?type=free_async_teardown&source=advisor-follow-up-teardown";
 
 function parseCsv(text) {
   const rows = [];
@@ -190,8 +191,9 @@ const output = [
   "",
   "Use the consultant and attorney follow-up subjects and bodies from `BUYER-VALIDATION-OUTREACH-BATCH-02.md`.",
   "When the first send already recorded a direct-email inbox in CSV notes, use that inbox as the follow-up route instead of falling back to the broader public contact path.",
-  `If it helps, include \`${SELF_AUDIT_URL}\` as a quick self-check hook before asking for blunt feedback.`,
-  "Ask recipients to reply with the score and top two gaps if they do not want a call.",
+  `Lead with the free objection-window tracker asset: \`${TRACKER_URL}\`.`,
+  `Offer the tagged async teardown path for recipients who prefer to reply with concrete gaps instead of booking time: \`${TEARDOWN_URL}\`.`,
+  "Ask recipients to reply with the top gaps or ownership handoff if they do not want a call.",
   "Keep the message short, avoid product pitching, and keep the non-legal-advice boundary intact.",
   "",
   "## Send Guardrails",

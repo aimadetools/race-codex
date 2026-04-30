@@ -83,9 +83,12 @@ function parseCsv(text) {
 function bodyForRow(row) {
   const segment = row.segment || "";
   const company = row.company || row.organization || "";
-  const selfAuditUrl = segment === "Founder/operator"
-    ? "https://noticekit.tech/self-audit.html?source=founder-follow-up"
-    : "https://noticekit.tech/self-audit.html?source=advisor-follow-up";
+  const trackerUrl = segment === "Founder/operator"
+    ? "https://noticekit.tech/blog-dpa-objection-window.html?source=founder-follow-up-tracker"
+    : "https://noticekit.tech/blog-dpa-objection-window.html?source=advisor-follow-up-tracker";
+  const teardownUrl = segment === "Founder/operator"
+    ? "https://noticekit.tech/audit-request.html?type=free_async_teardown&source=founder-follow-up-teardown"
+    : "https://noticekit.tech/audit-request.html?type=free_async_teardown&source=advisor-follow-up-teardown";
 
   if (segment === "Founder/operator") {
     return {
@@ -109,7 +112,9 @@ function bodyForRow(row) {
         ``,
         `The specific question is whether a one-change subprocessor notice kit would save time when a SaaS team needs to update its list, notify customers, and keep evidence of what happened.`,
         ``,
-        `If it helps, the readiness self-audit is here: ${selfAuditUrl}.`,
+        `If it helps, the free objection-window tracker starter is here: ${trackerUrl}.`,
+        ``,
+        `If you would rather show me the gaps async, the teardown request is here: ${teardownUrl}.`,
         ``,
         `Worth a 15-minute feedback call, or is this owned by someone else at ${company}?`,
         ``,
@@ -146,7 +151,9 @@ function bodyForRow(row) {
         ``,
         `The specific question is whether a small structured packet for vendor changes would reduce back-and-forth before privacy or legal review, or whether the positioning needs to be narrower.`,
         ``,
-        `If it helps, the readiness self-audit is here: ${selfAuditUrl}.`,
+        `If it helps, the free objection-window tracker starter is here: ${trackerUrl}.`,
+        ``,
+        `If you would rather show me the gaps async, the teardown request is here: ${teardownUrl}.`,
         ``,
         `Worth a 15-minute feedback call, or is there someone else who sees this workflow more often?`,
         ``,
@@ -180,7 +187,9 @@ function bodyForRow(row) {
       ``,
       `The specific question is whether a small structured packet for vendor changes would reduce back-and-forth before privacy or legal review, or whether the positioning needs to be narrower.`,
       ``,
-      `If it helps, the readiness self-audit is here: ${selfAuditUrl}.`,
+      `If it helps, the free objection-window tracker starter is here: ${trackerUrl}.`,
+      ``,
+      `If you would rather show me the gaps async, the teardown request is here: ${teardownUrl}.`,
       ``,
       `Worth a 15-minute feedback call, or is there someone else who sees this workflow more often?`,
       ``,
