@@ -118,6 +118,23 @@ function safeValue(value, fallback = "Not provided") {
   return text || fallback;
 }
 
+function countBy(rows, iteratee) {
+  const counts = new Map();
+
+  for (const row of rows) {
+    const key = String(iteratee(row) || "").trim() || "unknown";
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+
+  return [...counts.entries()].sort((left, right) => {
+    if (right[1] !== left[1]) {
+      return right[1] - left[1];
+    }
+
+    return left[0].localeCompare(right[0]);
+  });
+}
+
 async function main() {
   const env = await loadEnvFile(DEFAULT_ENV_FILE);
   const fallbackEnv = await loadEnvFile(FALLBACK_ENV_FILE);
@@ -184,6 +201,9 @@ async function main() {
   const realSelfAuditFeedback = realRecords.filter((record) => String(record.type || "").trim() === "self_audit_feedback");
   const realTaggedValidation = realRecords.filter((record) => record.isTaggedValidation);
   const latestReal = realRecords[0] || null;
+  const latestRealSubmissions = realRecords.slice(0, 5);
+  const typeBreakdown = countBy(realRecords, (record) => String(record.type || "").trim());
+  const sourceBreakdown = countBy(realRecords, (record) => describeSourceTag(record.sourceTag));
 
   const output = [
     "# Contact Inbox Status",
@@ -201,6 +221,20 @@ async function main() {
     `- Real self-audit feedback submissions: ${realSelfAuditFeedback.length}`,
     `- Real tagged validation replies: ${realTaggedValidation.length}`,
     "",
+    "## Real Submission Breakdown",
+    "",
+    "### By Type",
+    "",
+    ...(typeBreakdown.length === 0
+      ? ["- No real submissions are stored in the inbox yet."]
+      : typeBreakdown.map(([type, count]) => `- ${type}: ${count}`)),
+    "",
+    "### By Source Tag",
+    "",
+    ...(sourceBreakdown.length === 0
+      ? ["- No real submissions are stored in the inbox yet."]
+      : sourceBreakdown.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`)),
+    "",
     "## Latest Real Submission",
     ""
   ];
@@ -215,6 +249,16 @@ async function main() {
     output.push(`- Source tag: ${describeSourceTag(latestReal.sourceTag)}`);
     output.push(`- Channel: ${safeValue(latestReal.submissionChannel, "unknown")}`);
     output.push(`- Storage path: ${safeValue(latestReal.pathname)}`);
+  }
+
+  output.push("", "## Recent Real Submission Queue", "");
+
+  if (latestRealSubmissions.length === 0) {
+    output.push("- No real submissions are stored in the inbox yet.");
+  } else {
+    for (const record of latestRealSubmissions) {
+      output.push(`- ${safeValue(record.submittedAt || record.uploadedAt)} | ${safeValue(record.type)} | ${describeSourceTag(record.sourceTag)} | ${safeValue(record.company)}`);
+    }
   }
 
   output.push("");

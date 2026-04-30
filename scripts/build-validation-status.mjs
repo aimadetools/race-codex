@@ -186,6 +186,24 @@ function extractInboxCheckedAt(text) {
   return match ? match[1].trim() : "unknown";
 }
 
+function extractInboxLatestSourceTag(text) {
+  const match = text.match(/- Source tag:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
+function extractInboxBreakdownMetric(text, heading, label) {
+  const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const sectionPattern = new RegExp(`### ${escapedHeading}\\n\\n([\\s\\S]*?)(?:\\n## |$)`, "i");
+  const sectionMatch = text.match(sectionPattern);
+  if (!sectionMatch) {
+    return null;
+  }
+
+  const metricMatch = sectionMatch[1].match(new RegExp(`- ${escapedLabel}: (\\d+)`, "i"));
+  return metricMatch ? Number(metricMatch[1]) : 0;
+}
+
 function extractHelpRequestStatus(text) {
   const match = text.match(/- Status:\s*([^\n]+)/i);
   return match ? match[1].trim().toLowerCase() : "unknown";
@@ -354,6 +372,11 @@ const inboxRealSubmissions = extractInboxMetric(contactInboxStatusText, "Real su
 const inboxTeardowns = extractInboxMetric(contactInboxStatusText, "Real free async teardown submissions");
 const inboxPartnerRequests = extractInboxMetric(contactInboxStatusText, "Real partner requests");
 const inboxTaggedValidation = extractInboxMetric(contactInboxStatusText, "Real tagged validation replies");
+const inboxLatestSourceTag = extractInboxLatestSourceTag(contactInboxStatusText);
+const inboxTrackerTemplate = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "blog-dpa-objection-window-template");
+const inboxTrackerCta = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "blog-dpa-objection-window-cta");
+const inboxPartnerBatch = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "partner-outreach-batch-01");
+const inboxPartnerFollowUp = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "partner-outreach-follow-up-01");
 const inboxHasRealSubmissions = hasRealInboxSubmission(contactInboxStatusText);
 const helpRequestStatus = extractHelpRequestStatus(helpRequestStatusText);
 const helpRequestWhat = extractHelpRequestWhat(helpRequestStatusText);
@@ -417,6 +440,8 @@ const output = [
   `- Real free async teardown submissions: ${inboxTeardowns == null ? "unknown" : inboxTeardowns}`,
   `- Real partner requests: ${inboxPartnerRequests == null ? "unknown" : inboxPartnerRequests}`,
   `- Real tagged validation replies in inbox: ${inboxTaggedValidation == null ? "unknown" : inboxTaggedValidation}`,
+  `- Tracker-led inbox submissions: ${(inboxTrackerTemplate == null || inboxTrackerCta == null) ? "unknown" : inboxTrackerTemplate + inboxTrackerCta} (${inboxTrackerTemplate == null ? "unknown" : inboxTrackerTemplate} download CTA, ${inboxTrackerCta == null ? "unknown" : inboxTrackerCta} teardown CTA)`,
+  `- Partner-tagged inbox submissions: ${(inboxPartnerBatch == null || inboxPartnerFollowUp == null) ? "unknown" : inboxPartnerBatch + inboxPartnerFollowUp} (${inboxPartnerBatch == null ? "unknown" : inboxPartnerBatch} initial outreach, ${inboxPartnerFollowUp == null ? "unknown" : inboxPartnerFollowUp} follow-up outreach)`,
   "",
   "## Notes",
   "",
@@ -431,7 +456,7 @@ const output = [
   `- Positioning brief: ${positioningHeadline === "unknown" ? "missing; run \`node scripts/build-validation-positioning-brief.mjs\`." : `\`VALIDATION-POSITIONING-BRIEF.md\` says: ${positioningHeadline}`}`,
   `- Homepage advisor-handoff copy refresh queue: ${shouldQueueAdvisorCopyRefresh ? "queue it now based on logged ownership signals." : "not triggered."}`,
   `- Queue file: ${homepageQueueState === "unknown" ? "missing; run \`npm run build:homepage-copy-refresh-queue\`." : `\`HOMEPAGE-COPY-REFRESH-QUEUE.md\` is ${homepageQueueState}.`}`,
-  `- Inbox evidence read: ${contactInboxStatusText ? (inboxHasRealSubmissions ? "real intake exists and needs manual triage." : "no real intake is stored in Blob yet.") : "inbox snapshot missing."}`,
+  `- Inbox evidence read: ${contactInboxStatusText ? (inboxHasRealSubmissions ? `real intake exists and the latest source tag is ${inboxLatestSourceTag}.` : "no real intake is stored in Blob yet.") : "inbox snapshot missing."}`,
   ...contingencyNotes,
   ""
 ].join("\n");
