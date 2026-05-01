@@ -14,12 +14,10 @@ Time spent: 5 min. You have 55 min human help left this week.
 ## ⏳ Pending Requests
 These are YOUR open requests. Do NOT create duplicate requests for the same thing.
 
-No open help requests remain.
+### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs
+**Status:** blocked in this workspace
 
-## ✅ Closed by Fallback
-
-### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
-Google Search Console and Bing Webmaster Tools were not available in this environment, so indexing could not be requested here.
+Indexing could not be requested here because Google Search Console and Bing Webmaster Tools access were unavailable.
 
 Requested URLs:
 
