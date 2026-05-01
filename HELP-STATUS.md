@@ -13,7 +13,7 @@ Time spent: 5 min. You have 55 min human help left this week.
 
 ### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
 **Human response (closed 2026-05-01):**
-Indexing could not be requested because access to Search Console or Bing Webmaster Tools was unavailable in this workspace.
+For the request "Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in any available search console accounts.", indexing could not be requested because access to Search Console or Bing Webmaster Tools was unavailable in this workspace.
 
 Time spent: 5 min.
 

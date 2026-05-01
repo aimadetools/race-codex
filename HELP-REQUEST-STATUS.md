@@ -1,10 +1,10 @@
 # Help Request Status
 
-Checked at: 2026-05-01 23:08 UTC
+Checked at: 2026-05-01 23:10 UTC
 
 ## Current Request
 
-- Status: open
+- Status: completed
 - What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in any available search console accounts.
 - Priority: important
 - Time: 5min
@@ -19,4 +19,4 @@ Checked at: 2026-05-01 23:08 UTC
 
 ## Resolution
 
-- No matching completion note is present in `HELP-STATUS.md` yet.
+- Matching completed entry: [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
