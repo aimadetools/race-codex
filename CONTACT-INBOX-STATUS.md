@@ -1,13 +1,13 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-01 12:36 UTC
+Checked at: 2026-05-01 12:38 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
 
-- Total submissions stored: 0
+- Total submissions stored: 2
 - Real submissions: 0
-- Likely test submissions: 0
+- Likely test submissions: 2
 - Real free async teardown submissions: 0
 - Real partner requests: 0
 - Real self-audit feedback submissions: 0
