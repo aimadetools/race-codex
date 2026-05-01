@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subprocessor Review Brief Builder | NoticeKit</title>
+    <meta name="description" content="Turn a messy vendor change into a clean review brief for founders, privacy advisors, attorneys, or procurement reviewers in your browser.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:title" content="Subprocessor Review Brief Builder">
+    <meta property="og:description" content="Build a copyable review brief with the vendor facts, notice window, owners, and open questions reviewers need before a subprocessor change goes live.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit subprocessor review brief builder for SaaS teams">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Subprocessor Review Brief Builder">
+    <meta name="twitter:description" content="Create a browser-only handoff brief for subprocessor review with vendor facts, deadlines, and proof gaps.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="generator.html">Generator</a>
+          <a href="self-audit.html">Self-audit</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <article class="article">
+          <header class="article-header">
+            <span class="eyebrow">Tool</span>
+            <h1>Subprocessor review brief builder</h1>
+            <p>Use this browser-only builder when a founder, privacy advisor, attorney, or procurement reviewer needs the vendor-change facts in one clean handoff note instead of five scattered messages.</p>
+          </header>
+
+          <div class="notice-band">
+            <strong>Operational handoff, not legal advice.</strong>
+            <p>This builder organizes the facts, dates, owners, and open questions behind a vendor change. It does not interpret your DPA or decide whether the final notice is legally sufficient.</p>
+          </div>
+
+          <section>
+            <div class="download-band">
+              <div>
+                <span class="eyebrow">Use case</span>
+                <h2>Clean up the review packet before the thread gets messy</h2>
+                <p>This works best when the change is real, the reviewer is known, and the friction is operational: missing dates, missing customer segments, unclear ownership, or missing proof links. The output can route into teardown, partner intake, or the generator without losing context.</p>
+              </div>
+              <div class="download-actions">
+                <a class="button secondary" href="partner-preview.html">See partner preview</a>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="grid-2">
+              <article class="card">
+                <h2>Brief inputs</h2>
+                <div class="field-grid">
+                  <label>Company
+                    <input id="company" value="Example SaaS">
+                  </label>
+                  <label>Requester role
+                    <select id="requester-role">
+                      <option value="Founder">Founder</option>
+                      <option value="Operator">Operator</option>
+                      <option value="Privacy consultant">Privacy consultant</option>
+                      <option value="Fractional DPO">Fractional DPO</option>
+                      <option value="Attorney">Attorney</option>
+                    </select>
+                  </label>
+                  <label>Reviewer or approver
+                    <input id="reviewer" value="External counsel">
+                  </label>
+                  <label>Contact email
+                    <input id="contact-email" type="email" value="privacy@example.com">
+                  </label>
+                  <label>Subprocessor page URL
+                    <input id="subprocessor-url" type="url" value="https://example.com/subprocessors">
+                  </label>
+                  <label>Vendor change
+                    <input id="vendor-change" value="Adding Acme Email Cloud for transactional email delivery">
+                  </label>
+                  <label>Affected customer segment
+                    <input id="customer-segment" value="EU customers on a signed DPA">
+                  </label>
+                  <label>Notice window
+                    <input id="notice-window" value="30-day advance notice">
+                  </label>
+                  <label>Planned effective date
+                    <input id="effective-date" type="date">
+                  </label>
+                  <label>Workflow owner
+                    <input id="workflow-owner" value="Privacy ops lead">
+                  </label>
+                  <label>Current proof links
+                    <input id="proof-links" value="Public subprocessor page draft, vendor intake ticket, pending notice draft">
+                  </label>
+                  <label>Primary blocker
+                    <input id="primary-blocker" value="Customer segmentation is not finalized yet">
+                  </label>
+                </div>
+
+                <label>Open review questions
+                  <textarea id="open-questions">Do all affected customers use the same notice window?
+Does the effective date need to move if any segment uses a longer objection period?
+What proof should be saved before the notice goes out?</textarea>
+                </label>
+              </article>
+
+              <article class="result-panel" aria-live="polite">
+                <span class="eyebrow">Generated brief</span>
+                <div class="score-row generator-summary">
+                  <strong id="brief-status">Review packet ready</strong>
+                  <span id="brief-band">One clean handoff for counsel, advisor, or operator review</span>
+                </div>
+                <p id="brief-summary">The draft below keeps the key facts, blockers, and next actions in one place so the reviewer can react without reconstructing the timeline.</p>
+                <div id="brief-output" class="template-box"></div>
+                <div class="generator-actions">
+                  <button class="button" id="copy-brief" type="button">Copy brief</button>
+                  <button class="button secondary" id="download-brief" type="button">Download brief</button>
+                  <a class="button secondary" id="teardown-link" href="free-teardown.html?source=review-brief-builder-teardown&channel=review-brief-builder">Route to teardown</a>
+                  <a class="button secondary" id="partner-link" href="audit-request.html?type=partner_request&source=review-brief-builder-partner&channel=review-brief-builder">Route to partner intake</a>
+                  <a class="button secondary" id="generator-link" href="generator.html">Open generator</a>
+                </div>
+                <p class="fine-print" id="brief-guidance">Use teardown when the question is whether the current workflow is good enough to ship. Use partner intake when the same review pattern will recur across clients.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2>What the brief is meant to replace</h2>
+            <div class="grid-3">
+              <article class="card">
+                <span class="tag">Scattered context</span>
+                <h3>Five partial messages</h3>
+                <p>Reviewer has to rebuild the timeline from email, Slack, ticket notes, and the public page.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Missing ownership</span>
+                <h3>No clear next action</h3>
+                <p>The change is real, but nobody owns segmentation, send timing, or proof capture.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Thin proof</span>
+                <h3>Approval friction later</h3>
+                <p>The change can probably ship, but the evidence trail will not survive procurement or counsel questions cleanly.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2>Who this helps most</h2>
+            <ul class="article-list">
+              <li>Founders who need a fast legal or advisor review without writing the same explanation twice.</li>
+              <li>Privacy consultants and fractional DPOs who want a repeatable handoff note for each client vendor change.</li>
+              <li>Startup attorneys who want the facts, assumptions, and open questions before spending time on the wording.</li>
+              <li>Operators who need a crisp summary for procurement, success, or security reviewers.</li>
+            </ul>
+          </section>
+
+          <section>
+            <div class="cta-band">
+              <div>
+                <h2>Need the workflow files behind the brief?</h2>
+                <p>Starter is enough for one clean notice path. Pro fits recurring reviews with customer segments, multiple changes, and advisor handoff needs.</p>
+              </div>
+              <a class="button gold" href="pricing.html">See pricing</a>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
+      </footer>
+    </div>
+
+    <script>
+      const today = new Date();
+      today.setUTCHours(0, 0, 0, 0);
+
+      const companyInput = document.querySelector("#company");
+      const requesterRoleInput = document.querySelector("#requester-role");
+      const reviewerInput = document.querySelector("#reviewer");
+      const contactEmailInput = document.querySelector("#contact-email");
+      const subprocessorUrlInput = document.querySelector("#subprocessor-url");
+      const vendorChangeInput = document.querySelector("#vendor-change");
+      const customerSegmentInput = document.querySelector("#customer-segment");
+      const noticeWindowInput = document.querySelector("#notice-window");
+      const effectiveDateInput = document.querySelector("#effective-date");
+      const workflowOwnerInput = document.querySelector("#workflow-owner");
+      const proofLinksInput = document.querySelector("#proof-links");
+      const primaryBlockerInput = document.querySelector("#primary-blocker");
+      const openQuestionsInput = document.querySelector("#open-questions");
+
+      const briefStatus = document.querySelector("#brief-status");
+      const briefBand = document.querySelector("#brief-band");
+      const briefSummary = document.querySelector("#brief-summary");
+      const briefOutput = document.querySelector("#brief-output");
+      const copyBriefButton = document.querySelector("#copy-brief");
+      const downloadBriefButton = document.querySelector("#download-brief");
+      const teardownLink = document.querySelector("#teardown-link");
+      const partnerLink = document.querySelector("#partner-link");
+
+      function isoDate(offsetDays) {
+        const date = new Date(today);
+        date.setUTCDate(date.getUTCDate() + Number(offsetDays || 0));
+        return date.toISOString().slice(0, 10);
+      }
+
+      function formatDate(value) {
+        if (!value) return "Date not set";
+        return new Date(`${value}T00:00:00Z`).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        });
+      }
+
+      function safeValue(input, fallback) {
+        return input.value.trim() || fallback;
+      }
+
+      function buildBrief() {
+        const company = safeValue(companyInput, "Unknown company");
+        const requesterRole = safeValue(requesterRoleInput, "Unknown role");
+        const reviewer = safeValue(reviewerInput, "Reviewer not named");
+        const contactEmail = safeValue(contactEmailInput, "No contact email provided");
+        const subprocessorUrl = safeValue(subprocessorUrlInput, "No public subprocessor page provided");
+        const vendorChange = safeValue(vendorChangeInput, "Vendor change not described");
+        const customerSegment = safeValue(customerSegmentInput, "Customer segment not described");
+        const noticeWindow = safeValue(noticeWindowInput, "Notice window not described");
+        const effectiveDate = safeValue(effectiveDateInput, "");
+        const workflowOwner = safeValue(workflowOwnerInput, "Owner not assigned");
+        const proofLinks = safeValue(proofLinksInput, "Proof links not collected yet");
+        const primaryBlocker = safeValue(primaryBlockerInput, "Primary blocker not stated");
+        const openQuestions = safeValue(openQuestionsInput, "No explicit review questions listed");
+
+        const missingFields = [
+          !subprocessorUrlInput.value.trim() ? "public page URL" : null,
+          !contactEmailInput.value.trim() ? "contact email" : null,
+          !effectiveDateInput.value.trim() ? "effective date" : null
+        ].filter(Boolean);
+
+        const status = missingFields.length === 0 ? "Review packet ready" : "Needs a few missing facts";
+        const band = missingFields.length === 0
+          ? "Clean enough for counsel, advisor, or operator review"
+          : `Still missing: ${missingFields.join(", ")}`;
+        const summary = missingFields.length === 0
+          ? "The brief now covers the change, the affected customers, the owner, the blocker, and the proof trail in one handoff note."
+          : "The brief is usable, but reviewers will still need follow-up because a few core fields are missing.";
+
+        const brief = [
+          `Subprocessor review brief: ${company}`,
+          ``,
+          `Requester role: ${requesterRole}`,
+          `Reviewer: ${reviewer}`,
+          `Contact email: ${contactEmail}`,
+          `Public subprocessor page: ${subprocessorUrl}`,
+          ``,
+          `Planned vendor change: ${vendorChange}`,
+          `Affected customer segment: ${customerSegment}`,
+          `Notice window: ${noticeWindow}`,
+          `Planned effective date: ${formatDate(effectiveDate)}`,
+          `Workflow owner: ${workflowOwner}`,
+          ``,
+          `Current proof links or artifacts: ${proofLinks}`,
+          `Primary blocker: ${primaryBlocker}`,
+          ``,
+          `Open review questions:`,
+          openQuestions.split("\n").map((line) => `- ${line.trim() || "Question not provided"}`).join("\n"),
+          ``,
+          `Recommended next action: ${missingFields.length === 0 ? "Review the packet, finalize the notice timing, and save the proof trail before send." : `Fill the missing ${missingFields.join(", ")} before treating this as send-ready.`}`
+        ].join("\n");
+
+        briefStatus.textContent = status;
+        briefBand.textContent = band;
+        briefSummary.textContent = summary;
+        briefOutput.textContent = brief;
+
+        const teardownUrl = new URL("free-teardown.html", window.location.href);
+        teardownUrl.searchParams.set("source", "review-brief-builder-teardown");
+        teardownUrl.searchParams.set("channel", "review-brief-builder");
+        teardownUrl.searchParams.set("company", company);
+        teardownUrl.searchParams.set("email", contactEmailInput.value.trim());
+        teardownUrl.searchParams.set("subprocessor_url", subprocessorUrlInput.value.trim());
+        teardownUrl.searchParams.set("vendor_change", vendorChange);
+        teardownUrl.searchParams.set("deadline", `${customerSegment}; ${noticeWindow}; effective date ${formatDate(effectiveDate)}`);
+        teardownUrl.searchParams.set("review_need", `Please review this brief:\n\n${brief}`);
+        teardownLink.href = teardownUrl.pathname + teardownUrl.search;
+
+        const partnerUrl = new URL("audit-request.html", window.location.href);
+        partnerUrl.searchParams.set("type", "partner_request");
+        partnerUrl.searchParams.set("source", "review-brief-builder-partner");
+        partnerUrl.searchParams.set("channel", "review-brief-builder");
+        partnerUrl.searchParams.set("company", company);
+        partnerUrl.searchParams.set("email", contactEmailInput.value.trim());
+        partnerUrl.searchParams.set("subprocessor_url", subprocessorUrlInput.value.trim());
+        partnerUrl.searchParams.set("vendor_change", vendorChange);
+        partnerUrl.searchParams.set("client_profile", `${requesterRole} serving ${customerSegment}`);
+        partnerUrl.searchParams.set("review_need", `Considering repeat review or client-delivery use. Current brief:\n\n${brief}`);
+        partnerLink.href = partnerUrl.pathname + partnerUrl.search;
+
+        return brief;
+      }
+
+      function downloadFile(name, content, type) {
+        const blob = new Blob([content], { type });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = name;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 0);
+      }
+
+      async function copyBrief() {
+        const brief = buildBrief();
+        await navigator.clipboard.writeText(brief);
+        briefSummary.textContent = "Copied the current brief to your clipboard.";
+      }
+
+      effectiveDateInput.value = isoDate(30);
+
+      [
+        companyInput,
+        requesterRoleInput,
+        reviewerInput,
+        contactEmailInput,
+        subprocessorUrlInput,
+        vendorChangeInput,
+        customerSegmentInput,
+        noticeWindowInput,
+        effectiveDateInput,
+        workflowOwnerInput,
+        proofLinksInput,
+        primaryBlockerInput,
+        openQuestionsInput
+      ].forEach((input) => {
+        input.addEventListener("input", buildBrief);
+      });
+
+      copyBriefButton.addEventListener("click", async () => {
+        try {
+          await copyBrief();
+        } catch (error) {
+          briefSummary.textContent = "Clipboard copy failed in this browser. Use the download option instead.";
+        }
+      });
+
+      downloadBriefButton.addEventListener("click", () => {
+        const brief = buildBrief();
+        const fileCompany = safeValue(companyInput, "noticekit-review-brief")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "");
+        downloadFile(`${fileCompany || "noticekit-review-brief"}.md`, brief, "text/markdown;charset=utf-8");
+        briefSummary.textContent = "Downloaded the current brief as a markdown file.";
+      });
+
+      buildBrief();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>
