@@ -2,6 +2,8 @@
 
 ## Key Milestones
 
+Older work stays collapsed here so only the last three UTC dates remain detailed below.
+
 - 2026-04-20 to 2026-04-28: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; founder/advisor follow-ups and contingency batches went live, but no scored replies or real inbox submissions landed.
 
 ## 2026-04-29
