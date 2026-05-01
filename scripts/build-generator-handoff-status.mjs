@@ -7,6 +7,7 @@ import { JSDOM } from "jsdom";
 const ROOT = process.cwd();
 const OUTPUT = join(ROOT, "GENERATOR-HANDOFF-STATUS.md");
 const GENERATOR_URL = "https://noticekit.tech/generator.html";
+const FREE_TEARDOWN_URL = "https://noticekit.tech/free-teardown.html";
 
 function formatUtcTimestamp(date) {
   const year = date.getUTCFullYear();
@@ -59,27 +60,62 @@ const sendPacketLink = generatorDocument.querySelector("#send-packet");
 
 assert(sendPacketLink, "Generator page is missing the send-packet handoff link.");
 
-const handoffUrl = new URL(sendPacketLink.href, GENERATOR_URL);
+const teardownUrl = new URL(sendPacketLink.href, GENERATOR_URL);
 
-assert(handoffUrl.pathname.endsWith("/audit-request.html"), "Generator handoff does not point to audit-request.html.");
-assert(handoffUrl.searchParams.get("type") === "free_async_teardown", "Generator handoff type prefill is missing.");
-assert(handoffUrl.searchParams.get("source") === "generator-page", "Generator handoff source tag is incorrect.");
-assert(handoffUrl.searchParams.get("channel") === "generator-prefill", "Generator handoff channel tag is incorrect.");
-assert(handoffUrl.searchParams.get("company") === "Example SaaS", "Generator handoff company prefill is missing.");
+assert(teardownUrl.pathname.endsWith("/free-teardown.html"), "Generator handoff does not point to free-teardown.html.");
+assert(teardownUrl.searchParams.get("source") === "generator-page", "Generator handoff source tag is incorrect.");
+assert(teardownUrl.searchParams.get("channel") === "generator-prefill", "Generator handoff channel tag is incorrect.");
+assert(teardownUrl.searchParams.get("company") === "Example SaaS", "Generator handoff company prefill is missing.");
 assert(
-  handoffUrl.searchParams.get("subprocessor_url") === "https://example.com/subprocessors",
+  teardownUrl.searchParams.get("subprocessor_url") === "https://example.com/subprocessors",
   "Generator handoff subprocessor URL prefill is missing."
 );
 assert(
-  handoffUrl.searchParams.get("vendor_change")?.includes("Acme Email Cloud"),
+  teardownUrl.searchParams.get("vendor_change")?.includes("Acme Email Cloud"),
   "Generator handoff vendor-change prefill is missing the vendor name."
 );
 assert(
-  handoffUrl.searchParams.get("deadline")?.includes("EU customers on a signed DPA"),
+  teardownUrl.searchParams.get("deadline")?.includes("EU customers on a signed DPA"),
   "Generator handoff deadline prefill is missing the customer segment."
 );
 
-const auditResponse = await fetch(handoffUrl, {
+const teardownResponse = await fetch(teardownUrl, {
+  headers: {
+    "user-agent": "noticekit-generator-handoff-check"
+  }
+});
+
+assert(teardownResponse.ok, `Free-teardown page fetch failed with ${teardownResponse.status}.`);
+
+const teardownHtml = await teardownResponse.text();
+const teardownDom = await loadDom(teardownHtml, teardownUrl.toString());
+const teardownDocument = teardownDom.window.document;
+const teardownSourceTag = teardownDocument.querySelector("#source-tag")?.value || "";
+const teardownChannelTag = teardownDocument.querySelector("#channel-tag")?.value || "";
+const teardownCompany = teardownDocument.querySelector('input[name="company"]')?.value || "";
+const teardownEmail = teardownDocument.querySelector('input[name="email"]')?.value || "";
+const teardownSubprocessorUrl = teardownDocument.querySelector('input[name="subprocessor_url"]')?.value || "";
+const teardownVendorChange = teardownDocument.querySelector('input[name="vendor_change"]')?.value || "";
+const teardownDeadline = teardownDocument.querySelector('textarea[name="deadline"]')?.value || "";
+const intakeLink = teardownDocument.querySelector("#skip-to-intake");
+
+assert(intakeLink, "Free-teardown page is missing the skip-to-intake handoff link.");
+assert(teardownSourceTag === "generator-page", "Free-teardown page did not preserve the generator source tag.");
+assert(teardownChannelTag === "generator-prefill", "Free-teardown page did not preserve the generator channel tag.");
+assert(teardownCompany === "Example SaaS", "Free-teardown page did not hydrate the company from the handoff URL.");
+assert(teardownEmail === "privacy@example.com", "Free-teardown page did not hydrate the email from the handoff URL.");
+assert(teardownSubprocessorUrl === "https://example.com/subprocessors", "Free-teardown page did not hydrate the subprocessor URL.");
+assert(teardownVendorChange.includes("Acme Email Cloud"), "Free-teardown page did not hydrate the vendor change.");
+assert(teardownDeadline.includes("EU customers on a signed DPA"), "Free-teardown page did not hydrate the deadline field.");
+
+const auditUrl = new URL(intakeLink.href, FREE_TEARDOWN_URL);
+
+assert(auditUrl.pathname.endsWith("/audit-request.html"), "Free-teardown handoff does not point to audit-request.html.");
+assert(auditUrl.searchParams.get("type") === "free_async_teardown", "Free-teardown handoff type prefill is missing.");
+assert(auditUrl.searchParams.get("source") === "generator-page", "Free-teardown handoff source tag is incorrect.");
+assert(auditUrl.searchParams.get("channel") === "generator-prefill", "Free-teardown handoff channel tag is incorrect.");
+
+const auditResponse = await fetch(auditUrl, {
   headers: {
     "user-agent": "noticekit-generator-handoff-check"
   }
@@ -88,7 +124,7 @@ const auditResponse = await fetch(handoffUrl, {
 assert(auditResponse.ok, `Audit-request page fetch failed with ${auditResponse.status}.`);
 
 const auditHtml = await auditResponse.text();
-const auditDom = await loadDom(auditHtml, handoffUrl.toString());
+const auditDom = await loadDom(auditHtml, auditUrl.toString());
 const auditDocument = auditDom.window.document;
 
 const requestType = auditDocument.querySelector("#request-type")?.value || "";
@@ -118,22 +154,25 @@ const output = [
   "",
   `Checked at: ${checkedAt}`,
   `Generator URL: ${GENERATOR_URL}`,
-  `Audit URL: ${handoffUrl.toString()}`,
-  `HTTP status: generator ${generatorResponse.status}, audit ${auditResponse.status}`,
+  `Teardown URL: ${teardownUrl.toString()}`,
+  `Audit URL: ${auditUrl.toString()}`,
+  `HTTP status: generator ${generatorResponse.status}, teardown ${teardownResponse.status}, audit ${auditResponse.status}`,
   "",
   "## Result",
   "",
   "- Status: ok",
-  "- Live generator browser execution produced a populated teardown handoff URL.",
-  "- Live audit-request browser execution hydrated the prefilled teardown form from that handoff URL.",
+  "- Live generator browser execution produced a populated free-teardown handoff URL.",
+  "- Live free-teardown browser execution preserved the generator-prefilled fields and produced an audit-request intake URL.",
+  "- Live audit-request browser execution hydrated the prefilled teardown form from that intake URL.",
   `- Request type: ${requestType}`,
   `- Source tag: ${sourceTag}`,
   `- Submission channel: ${submissionChannel}`,
   "",
   "## Assertions",
   "",
-  "- The live generator kept the `send-packet` CTA pointed at `audit-request.html` with teardown type, generator source, and generator-prefill channel tags.",
-  "- The generated teardown URL carried company, subprocessor page URL, vendor-change context, and customer-segment/deadline context.",
+  "- The live generator kept the `send-packet` CTA pointed at `free-teardown.html` with generator source and generator-prefill channel tags.",
+  "- The generated free-teardown URL carried company, reply email, subprocessor page URL, vendor-change context, and customer-segment/deadline context.",
+  "- The live free-teardown page preserved those query params into its visible builder fields and the downstream audit-request handoff link.",
   "- The live audit-request page applied those query params into the visible form fields and teardown UI copy.",
   ""
 ].join("\n");
