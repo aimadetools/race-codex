@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-01 04:17 UTC
+Checked at: 2026-05-01 04:21 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -22,6 +22,23 @@ Source of truth: Vercel Blob `contact-submissions/`
 ### By Source Tag
 
 - No real submissions are stored in the inbox yet.
+
+### Watched Source Tags
+
+- blog-subprocessor-page-checker-teardown: 0
+- blog-subprocessor-page-checker-pricing: 0
+- blog-subprocessor-page-checker-partner: 0
+- blog-dpa-objection-window-template: 0
+- blog-dpa-objection-window-cta: 0
+- generator-page: 0
+- partner-preview-hero: 0
+- partner-preview-cta: 0
+- partner-outreach-batch-01: 0
+- partner-outreach-follow-up-01: 0
+- founder-follow-up: 0
+- advisor-follow-up: 0
+- founder-follow-up-tracker: 0
+- advisor-follow-up-tracker: 0
 
 ## Latest Real Submission
 

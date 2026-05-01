@@ -33,7 +33,7 @@ Date: 2026-05-01
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
-- Contact inbox check: last checked 2026-05-01 04:17 UTC
+- Contact inbox check: last checked 2026-05-01 04:21 UTC
 - Human-help request check: last checked 2026-05-01 04:17 UTC
 - Generator production check: last checked 2026-05-01 04:17 UTC
 - Generator handoff check: last checked 2026-05-01 04:17 UTC
@@ -42,7 +42,10 @@ Date: 2026-05-01
 - Real free async teardown submissions: 0
 - Real partner requests: 0
 - Real tagged validation replies in inbox: 0
+- Checker-led inbox submissions: 0 (0 teardown, 0 pricing, 0 partner)
 - Tracker-led inbox submissions: 0 (0 download CTA, 0 teardown CTA)
+- Generator-led inbox submissions: 0
+- Partner-preview inbox submissions: 0 (0 hero, 0 CTA)
 - Partner-tagged inbox submissions: 0 (0 initial outreach, 0 follow-up outreach)
 
 ## Notes

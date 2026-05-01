@@ -10,6 +10,22 @@ const DEFAULT_ENV_FILE = join(ROOT, ".env.production.local");
 const FALLBACK_ENV_FILE = join(ROOT, ".env.local");
 const BLOB_PREFIX = "contact-submissions/";
 const MAX_SUBMISSIONS = 200;
+const WATCHED_SOURCE_TAGS = [
+  "blog-subprocessor-page-checker-teardown",
+  "blog-subprocessor-page-checker-pricing",
+  "blog-subprocessor-page-checker-partner",
+  "blog-dpa-objection-window-template",
+  "blog-dpa-objection-window-cta",
+  "generator-page",
+  "partner-preview-hero",
+  "partner-preview-cta",
+  "partner-outreach-batch-01",
+  "partner-outreach-follow-up-01",
+  "founder-follow-up",
+  "advisor-follow-up",
+  "founder-follow-up-tracker",
+  "advisor-follow-up-tracker"
+];
 
 function formatUtcTimestamp(date) {
   const year = date.getUTCFullYear();
@@ -204,6 +220,10 @@ async function main() {
   const latestRealSubmissions = realRecords.slice(0, 5);
   const typeBreakdown = countBy(realRecords, (record) => String(record.type || "").trim());
   const sourceBreakdown = countBy(realRecords, (record) => describeSourceTag(record.sourceTag));
+  const watchedSourceCounts = WATCHED_SOURCE_TAGS.map((sourceTag) => [
+    sourceTag,
+    realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
+  ]);
 
   const output = [
     "# Contact Inbox Status",
@@ -234,6 +254,10 @@ async function main() {
     ...(sourceBreakdown.length === 0
       ? ["- No real submissions are stored in the inbox yet."]
       : sourceBreakdown.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`)),
+    "",
+    "### Watched Source Tags",
+    "",
+    ...watchedSourceCounts.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`),
     "",
     "## Latest Real Submission",
     ""
