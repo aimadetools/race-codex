@@ -384,6 +384,8 @@ const inboxCheckerTeardown = extractInboxBreakdownMetric(contactInboxStatusText,
 const inboxCheckerPricing = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "blog-subprocessor-page-checker-pricing");
 const inboxCheckerPartner = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "blog-subprocessor-page-checker-partner");
 const inboxGeneratorPage = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "generator-page");
+const inboxReviewBriefTeardown = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "review-brief-builder-teardown");
+const inboxReviewBriefPartner = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "review-brief-builder-partner");
 const inboxPartnerPreviewHero = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "partner-preview-hero");
 const inboxPartnerPreviewCta = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "partner-preview-cta");
 const inboxPartnerBatch = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "partner-outreach-batch-01");
@@ -456,6 +458,7 @@ const output = [
   `- Checker-led inbox submissions: ${(inboxCheckerTeardown == null || inboxCheckerPricing == null || inboxCheckerPartner == null) ? "unknown" : inboxCheckerTeardown + inboxCheckerPricing + inboxCheckerPartner} (${inboxCheckerTeardown == null ? "unknown" : inboxCheckerTeardown} teardown, ${inboxCheckerPricing == null ? "unknown" : inboxCheckerPricing} pricing, ${inboxCheckerPartner == null ? "unknown" : inboxCheckerPartner} partner)`,
   `- Tracker-led inbox submissions: ${(inboxTrackerTemplate == null || inboxTrackerCta == null) ? "unknown" : inboxTrackerTemplate + inboxTrackerCta} (${inboxTrackerTemplate == null ? "unknown" : inboxTrackerTemplate} download CTA, ${inboxTrackerCta == null ? "unknown" : inboxTrackerCta} teardown CTA)`,
   `- Generator-led inbox submissions: ${inboxGeneratorPage == null ? "unknown" : inboxGeneratorPage}`,
+  `- Review-brief-builder-led inbox submissions: ${(inboxReviewBriefTeardown == null || inboxReviewBriefPartner == null) ? "unknown" : inboxReviewBriefTeardown + inboxReviewBriefPartner} (${inboxReviewBriefTeardown == null ? "unknown" : inboxReviewBriefTeardown} teardown, ${inboxReviewBriefPartner == null ? "unknown" : inboxReviewBriefPartner} partner)`,
   `- Partner-preview inbox submissions: ${(inboxPartnerPreviewHero == null || inboxPartnerPreviewCta == null) ? "unknown" : inboxPartnerPreviewHero + inboxPartnerPreviewCta} (${inboxPartnerPreviewHero == null ? "unknown" : inboxPartnerPreviewHero} hero, ${inboxPartnerPreviewCta == null ? "unknown" : inboxPartnerPreviewCta} CTA)`,
   `- Partner-tagged inbox submissions: ${(inboxPartnerBatch == null || inboxPartnerFollowUp == null) ? "unknown" : inboxPartnerBatch + inboxPartnerFollowUp} (${inboxPartnerBatch == null ? "unknown" : inboxPartnerBatch} initial outreach, ${inboxPartnerFollowUp == null ? "unknown" : inboxPartnerFollowUp} follow-up outreach)`,
   "",

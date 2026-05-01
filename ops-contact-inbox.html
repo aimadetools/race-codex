@@ -98,6 +98,7 @@
                     <option value="checker_sources">Checker-led submissions only</option>
                     <option value="tracker_sources">Tracker-led submissions only</option>
                     <option value="generator_sources">Generator-led submissions only</option>
+                    <option value="review_brief_builder_sources">Review-brief-builder submissions only</option>
                     <option value="partner_sources">Partner-tagged submissions only</option>
                     <option value="concierge_audit">Audit requests only</option>
                   </select>
@@ -145,6 +146,10 @@
         "blog-dpa-objection-window-cta",
         "founder-follow-up-tracker",
         "advisor-follow-up-tracker"
+      ]);
+      const REVIEW_BRIEF_BUILDER_SOURCES = new Set([
+        "review-brief-builder-teardown",
+        "review-brief-builder-partner"
       ]);
       const PARTNER_SOURCES = new Set([
         "partner-preview-hero",
@@ -257,6 +262,10 @@
 
         if (filterValue === "generator_sources") {
           return normalizedSourceTag(record) === "generator-page";
+        }
+
+        if (filterValue === "review_brief_builder_sources") {
+          return REVIEW_BRIEF_BUILDER_SOURCES.has(normalizedSourceTag(record));
         }
 
         if (filterValue === "partner_sources") {

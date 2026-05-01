@@ -17,6 +17,8 @@ const WATCHED_SOURCE_TAGS = [
   "blog-dpa-objection-window-template",
   "blog-dpa-objection-window-cta",
   "generator-page",
+  "review-brief-builder-teardown",
+  "review-brief-builder-partner",
   "partner-preview-hero",
   "partner-preview-cta",
   "partner-outreach-batch-01",
