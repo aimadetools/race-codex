@@ -1,6 +1,6 @@
 # Partner Outreach Status
 
-Checked at: 2026-04-30 23:29 UTC
+Checked at: 2026-05-01 04:11 UTC
 
 ## Current State
 
@@ -10,7 +10,7 @@ Checked at: 2026-04-30 23:29 UTC
 - Booked: 0
 - No response: 0
 - Not fit: 0
-- Follow-up readiness: next partner follow-up is due on 2026-05-04 (4 days remaining).
+- Follow-up readiness: next partner follow-up is due on 2026-05-04 (3 days remaining).
 - Next partner action: send the next partner follow-up on or after 2026-05-04 if replies are still zero.
 
 ## Upcoming Follow-Ups
