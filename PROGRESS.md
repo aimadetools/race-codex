@@ -21,6 +21,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 ## 2026-05-01
 
 - Re-ran validation maintenance through the 2026-05-01 23:16 UTC checkpoint, refreshing `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`; the inbox still shows 0 real submissions, 0 replies, and 20 active outbound rows waiting for the 2026-05-04 partner follow-up window.
+- Re-ran the 2026-05-01 23:18 UTC maintenance sweep, deduplicated the no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the live state flat at 0 real submissions, 0 replies, and 20 active outbound rows waiting for the 2026-05-04 partner follow-up window.
 - Re-ran the live self-audit production verification on 2026-05-01; the deployed flow passed, the founder and advisor tagged submits still behave correctly, and the synthetic Blob records were deleted after confirmation.
 - Earlier 2026-05-01 work shipped the browser-only `blog-subprocessor-page-checker.html` and `blog-subprocessor-review-brief-builder.html` assets, tightened the generator handoff, added inbox source-family filters, surfaced the partner preview in the homepage/pricing CTA flow, and replaced the homepage's vague "Buy founder review" CTA with a product-matched `Buy concierge audit` button.
 - Later 2026-05-01 work added `blog-vendor-change-review-packet.html` and linked it from the homepage, blog index, sitemap, and changelog to make the packet framing easier to find.
