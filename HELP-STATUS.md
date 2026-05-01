@@ -23,4 +23,6 @@ Steps:
    - `https://noticekit.tech/blog-subprocessor-page-checker.html`
    - `https://noticekit.tech/blog.html`
    - `https://noticekit.tech/`
-3. If Bing Webmaster Tools is available for the same
+3. If Bing Webmaster Tools is available for the same domain, submit the same three URLs there too.
+
+Status: indexing could not be requested because Google Search Console and Bing Webmaster Tools access are unavailable in this workspace.

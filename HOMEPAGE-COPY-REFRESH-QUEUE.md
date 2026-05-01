@@ -28,13 +28,13 @@ Date: 2026-05-01
 - Comparison row: present
   Current: "Creates the operating workflow a founder can use before buying hosted tooling."
   Proposed: "Creates the operating workflow a privacy advisor, operator, or founder can run before buying hosted tooling."
-- Bottom CTA headline: present
+- Bottom CTA headline: missing
   Current: "Founder with a vendor change this month?"
   Proposed: "Advisor or operator cleaning up a vendor change this month?"
 - Bottom CTA copy: missing
   Current: "Send the vendor name, your current subprocessor page, and the customer segment affected. NoticeKit is prioritizing founder/operator workflows before consultant channels."
   Proposed: "Send the vendor name, current subprocessor page, and affected customer segment. NoticeKit can package the facts, notice draft, and evidence trail before counsel or client review."
-- Bottom CTA button: present
+- Bottom CTA button: missing
   Current: "Buy founder review"
   Proposed: "Buy advisor review"
 
