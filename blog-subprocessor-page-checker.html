@@ -53,10 +53,10 @@
               <div>
                 <span class="eyebrow">Fast diagnosis</span>
                 <h2>Grade the page before you send the next notice</h2>
-                <p>The score focuses on practical buyer friction: can someone tell who the vendor is, what changed, who is affected, and where the proof lives when questions come back.</p>
+                <p>The score focuses on practical buyer friction: can someone tell who the vendor is, what changed, who is affected, and where the proof lives when questions come back. When you are done, route the result into teardown, pricing-fit, or partner-fit intake without losing the checker context.</p>
               </div>
               <div class="download-actions">
-                <a class="button secondary" href="free-teardown.html?source=blog-subprocessor-page-checker">Request free teardown</a>
+                <a class="button secondary" href="free-teardown.html?source=blog-subprocessor-page-checker-teardown&channel=page-checker-hero">Request free teardown</a>
               </div>
             </div>
           </section>
@@ -184,11 +184,12 @@
                 <p id="checker-summary">Your page is probably usable for basic disclosure, but follow-up questions will still turn into manual cleanup if the notice route and evidence trail are thin.</p>
                 <div id="checker-missing" class="template-box"></div>
                 <div class="generator-actions">
-                  <a class="button" id="checker-teardown" href="free-teardown.html?source=blog-subprocessor-page-checker&channel=page-checker">Send score for teardown</a>
-                  <a class="button secondary" href="pricing.html">See kits</a>
+                  <a class="button" id="checker-teardown" href="free-teardown.html?source=blog-subprocessor-page-checker-teardown&channel=page-checker">Send score for teardown</a>
+                  <a class="button secondary" id="checker-pricing-fit" href="audit-request.html?type=starter_access&source=blog-subprocessor-page-checker-pricing&channel=page-checker-pricing">Ask which tier fits</a>
+                  <a class="button secondary" id="checker-partner-fit" href="audit-request.html?type=partner_request&source=blog-subprocessor-page-checker-partner&channel=page-checker-partner">Ask about partner use</a>
                   <a class="button secondary" href="generator.html">Open generator</a>
                 </div>
-                <p class="fine-print" id="checker-guidance">Best fit when your public page exists but the operational process behind it still feels improvised.</p>
+                <p class="fine-print" id="checker-guidance">Best fit when your public page exists but the operational process behind it still feels improvised. The intake buttons keep the checker score attached so replies can distinguish teardown, pricing, and partner demand.</p>
               </article>
             </div>
           </section>
@@ -268,6 +269,8 @@
       const missingOutput = document.querySelector("#checker-missing");
       const guidanceOutput = document.querySelector("#checker-guidance");
       const teardownLink = document.querySelector("#checker-teardown");
+      const pricingFitLink = document.querySelector("#checker-pricing-fit");
+      const partnerFitLink = document.querySelector("#checker-partner-fit");
 
       function renderChecker() {
         let score = 0;
@@ -309,12 +312,27 @@
           : ["No obvious gaps selected. The next check is whether the underlying notice workflow and evidence log are just as complete as the public page."];
         missingOutput.textContent = missingLines.join("\n");
 
-        const reviewNeed = encodeURIComponent([
-          `Subprocessor page checker score: ${roundedScore}/100 (${band}).`,
+        const scoreSummary = `Subprocessor page checker score: ${roundedScore}/100 (${band}).`;
+        const teardownReview = encodeURIComponent([
+          scoreSummary,
           "Please give the 3-bullet async gap read based on the missing items below.",
           ...missingLines
         ].join("\n"));
-        teardownLink.href = `free-teardown.html?source=blog-subprocessor-page-checker&channel=page-checker&review_need=${reviewNeed}`;
+        const pricingReview = encodeURIComponent([
+          scoreSummary,
+          "Please recommend whether Starter, Pro, or concierge audit is the right next step based on the gaps below.",
+          ...missingLines
+        ].join("\n"));
+        const partnerReview = encodeURIComponent([
+          scoreSummary,
+          "Please say whether this looks like referral-only, client-delivery, or white-label partner fit based on the missing items below.",
+          ...missingLines
+        ].join("\n"));
+        const pricingType = roundedScore >= 80 ? "pro_access" : "starter_access";
+
+        teardownLink.href = `free-teardown.html?source=blog-subprocessor-page-checker-teardown&channel=page-checker&review_need=${teardownReview}`;
+        pricingFitLink.href = `audit-request.html?type=${pricingType}&source=blog-subprocessor-page-checker-pricing&channel=page-checker-pricing&review_need=${pricingReview}`;
+        partnerFitLink.href = `audit-request.html?type=partner_request&source=blog-subprocessor-page-checker-partner&channel=page-checker-partner&review_need=${partnerReview}`;
       }
 
       for (const field of FIELD_WEIGHTS) {
