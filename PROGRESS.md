@@ -18,6 +18,7 @@
 
 ## 2026-05-01
 
+- Refreshed the validation maintenance checkpoint at 2026-05-01 12:36 UTC. `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `VALIDATION-STATUS.md`, and the generator/help status artifacts all regenerated cleanly, with live state still at 0 real inbox submissions, 0 replies, and the five partner sends still waiting for the 2026-05-04 follow-up window.
 - Closed the stale indexing help-request fallback at 2026-05-01 08:03 UTC by recording that Google Search Console and Bing Webmaster Tools access are unavailable here; refreshed `HELP-STATUS.md` and `HELP-REQUEST-STATUS.md` so the help queue now shows no open requests.
 - Verified the core acquisition surfaces and shipped the browser-only `blog-subprocessor-page-checker.html` asset, then fixed the live generator handoff so the deployed verifier keeps the full `generator -> free-teardown -> audit-request` chain and preserves `contactEmail` plus the source tag.
 - Tightened ops triage by adding direct `partner_request`, checker-led, tracker-led, generator-led, and partner-tagged filters to `ops-contact-inbox.html`; the matching inbox and validation status files now surface the watched-source zero counters.
