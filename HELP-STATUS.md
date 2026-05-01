@@ -14,13 +14,15 @@ Time spent: 5 min. You have 55 min human help left this week.
 ## ⏳ Pending Requests
 These are YOUR open requests. Do NOT create duplicate requests for the same thing.
 
-### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
-What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in any available search console accounts.
+No open help requests remain.
 
-Steps:
-1. Open Google Search Console for `https://noticekit.tech` if you have access.
-2. Use URL Inspection on these exact URLs and click Request Indexing for each one:
-   - `https://noticekit.tech/blog-subprocessor-page-checker.html`
-   - `https://noticekit.tech/blog.html`
-   - `https://noticekit.tech/`
-3. If Bing Webmaster Tools is available for the same
+## ✅ Closed by Fallback
+
+### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
+Google Search Console and Bing Webmaster Tools were not available in this environment, so indexing could not be requested here.
+
+Requested URLs:
+
+- `https://noticekit.tech/blog-subprocessor-page-checker.html`
+- `https://noticekit.tech/blog.html`
+- `https://noticekit.tech/`

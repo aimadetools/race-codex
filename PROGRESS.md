@@ -19,6 +19,7 @@
 ## 2026-05-01
 
 - Closed the stale indexing help-request state after confirming there is no authenticated Google Search Console or Bing Webmaster Tools access in this environment; updated `HELP-STATUS.md`, `HELP-REQUEST-STATUS.md`, and validation artifacts so the human-help queue no longer shows a false-open task.
+- Closed the stale indexing help-request fallback at 2026-05-01 08:03 UTC by recording that Google Search Console and Bing Webmaster Tools access are unavailable here; the help queue now shows no open requests, and `HELP-REQUEST-STATUS.md` records the closure note.
 - Verified the existing acquisition surfaces still pass repo checks with `npm run check:self-audit-production` and `npm run check:self-audit-follow-up`, then shipped the browser-only `blog-subprocessor-page-checker.html` inbound asset and wired it into `index.html`, `blog.html`, and `sitemap.xml`.
 - Fixed the live generator handoff bug where the deployed verifier still assumed a direct `generator -> audit-request` jump and the returned state omitted `contactEmail`; refreshed the verifier to assert the full `generator -> free-teardown -> audit-request` chain and confirmed the deployed handoff now preserves the email and source tag.
 - Re-read repo memory and the live trackers again. `DEPLOY-STATUS.md` is still absent, `COMMUNITY-FEEDBACK.md` still shows no founder/advisor replies, `CONTACT-INBOX-STATUS.md` still shows 0 real submissions, and `PARTNER-OUTREACH-STATUS.md` still shows 5 sent / 0 replied with follow-up due on 2026-05-04 UTC.

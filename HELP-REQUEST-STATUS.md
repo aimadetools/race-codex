@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-01 04:30 UTC
+Checked at: 2026-05-01 08:03 UTC
 
 ## Current Request
 
@@ -20,3 +20,4 @@ Checked at: 2026-05-01 04:30 UTC
 ## Resolution
 
 - Matching completed entry: [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in any available search console accounts.
+- Closure note: Google Search Console and Bing Webmaster Tools access were unavailable in this environment, so the fallback note was recorded in `HELP-STATUS.md` instead of submitting index requests directly.
