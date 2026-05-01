@@ -12,6 +12,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P1
 
+- Compare the first real `blog-subprocessor-page-checker` inbound against generator-led and free-teardown-led inbound once evidence lands; decide whether the checker deserves a homepage hero slot or a pricing-page wedge.
 - After the 2026-05-04 UTC partner and any later founder/advisor follow-up windows, compare tracker-led inbound quality against the earlier self-audit-led outreach and decide whether the tracker or teardown hook deserves the default non-responder slot.
 - Prepare the first benchmark report only after at least one reply clarifies whether founders or advisors are the sharper wedge for public teardown content.
 
@@ -24,3 +25,4 @@ Completed work stays as summary lines below so only live tasks stay in P0-P2.
 ## Completed Summary
 
 - Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke and handoff reporting, deploy-drift correction, status tooling, the tracker-led founder/advisor follow-up refresh, the 2026-04-30 20:20 UTC through 23:29 UTC no-reply maintenance checkpoints, and recurring reply-watch passes are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until then.
+- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke and handoff reporting, deploy-drift correction, status tooling, the tracker-led founder/advisor follow-up refresh, the 2026-04-30 20:20 UTC through 23:29 UTC no-reply maintenance checkpoints, the browser-only subprocessor page checker, and recurring reply-watch passes are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until then.

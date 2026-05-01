@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subprocessor List Checker for SaaS Teams | NoticeKit</title>
+    <meta name="description" content="Grade your subprocessor list in the browser and see which fields, notice details, and evidence hooks are still missing before a vendor change goes live.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:title" content="Subprocessor List Checker for SaaS Teams">
+    <meta property="og:description" content="Run a fast browser-only check on the public fields, notice cues, and evidence hooks most SaaS teams miss on their subprocessor page.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit subprocessor page checker for SaaS teams">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Subprocessor List Checker for SaaS Teams">
+    <meta name="twitter:description" content="Check whether your subprocessor page is missing the operational details buyers, attorneys, and privacy advisors usually ask for.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="generator.html">Generator</a>
+          <a href="self-audit.html">Self-audit</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <article class="article">
+          <header class="article-header">
+            <span class="eyebrow">Checker</span>
+            <h1>Subprocessor list checker for SaaS teams</h1>
+            <p>Use this browser-only checker to see whether your public subprocessor page is missing the fields, notice cues, and evidence hooks buyers usually ask for before a vendor change.</p>
+          </header>
+
+          <div class="notice-band">
+            <strong>Operational scoring, not legal advice.</strong>
+            <p>This checks whether your page looks operationally complete. It does not decide whether your contracts require these fields or whether your notice process is legally sufficient.</p>
+          </div>
+
+          <section>
+            <div class="download-band">
+              <div>
+                <span class="eyebrow">Fast diagnosis</span>
+                <h2>Grade the page before you send the next notice</h2>
+                <p>The score focuses on practical buyer friction: can someone tell who the vendor is, what changed, who is affected, and where the proof lives when questions come back.</p>
+              </div>
+              <div class="download-actions">
+                <a class="button secondary" href="free-teardown.html?source=blog-subprocessor-page-checker">Request free teardown</a>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="grid-2">
+              <article class="card">
+                <h2>Page fields</h2>
+                <div class="field-grid">
+                  <label>Vendor names are listed
+                    <select id="field-vendor-names">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Each vendor purpose is explained
+                    <select id="field-purpose">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Data categories are named
+                    <select id="field-data">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Processing regions or transfer context appear
+                    <select id="field-region">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Last updated date is visible
+                    <select id="field-updated">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Change history or revision notes exist
+                    <select id="field-history">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                </div>
+
+                <h2 style="margin-top: 24px;">Notice readiness</h2>
+                <div class="field-grid">
+                  <label>Customer notice path is clear
+                    <select id="field-notice-path">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Objection or question route is named
+                    <select id="field-objection">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Affected customer segments are documented internally
+                    <select id="field-segments">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Effective dates can be tied to a specific change
+                    <select id="field-effective-date">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                </div>
+
+                <h2 style="margin-top: 24px;">Proof trail</h2>
+                <div class="field-grid">
+                  <label>Someone owns the workflow
+                    <select id="field-owner">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Notice sends and screenshots are saved
+                    <select id="field-proof">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Objections or replies are logged
+                    <select id="field-replies">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                  <label>Counsel or advisor handoff is easy
+                    <select id="field-handoff">
+                      <option value="yes">Yes</option>
+                      <option value="partial">Partly</option>
+                      <option value="no">No</option>
+                    </select>
+                  </label>
+                </div>
+              </article>
+
+              <article class="result-panel" aria-live="polite">
+                <span class="eyebrow">Score</span>
+                <div class="score-row generator-summary">
+                  <strong id="checker-score">78 / 100</strong>
+                  <span id="checker-band">Solid public page, weak proof trail</span>
+                </div>
+                <p id="checker-summary">Your page is probably usable for basic disclosure, but follow-up questions will still turn into manual cleanup if the notice route and evidence trail are thin.</p>
+                <div id="checker-missing" class="template-box"></div>
+                <div class="generator-actions">
+                  <a class="button" id="checker-teardown" href="free-teardown.html?source=blog-subprocessor-page-checker&channel=page-checker">Send score for teardown</a>
+                  <a class="button secondary" href="pricing.html">See kits</a>
+                  <a class="button secondary" href="generator.html">Open generator</a>
+                </div>
+                <p class="fine-print" id="checker-guidance">Best fit when your public page exists but the operational process behind it still feels improvised.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2>What the score means</h2>
+            <div class="grid-3">
+              <article class="card">
+                <span class="tag">0-49</span>
+                <h3>Thin public signal</h3>
+                <p>Buyers and advisors will struggle to tell what changed, when it changed, or who owns the follow-up.</p>
+              </article>
+              <article class="card">
+                <span class="tag">50-79</span>
+                <h3>Page exists, process shaky</h3>
+                <p>The public list is present, but notice routing, customer segmentation, or evidence handling still looks brittle.</p>
+              </article>
+              <article class="card">
+                <span class="tag">80-100</span>
+                <h3>Operationally credible</h3>
+                <p>The page communicates the basics well and the internal proof trail is more likely to survive real buyer questions.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2>Why these fields matter</h2>
+            <ul class="article-list">
+              <li>Vendor purpose and data categories reduce the back-and-forth after a customer sees a new name on the list.</li>
+              <li>Last updated dates and change notes make the page feel maintained instead of abandoned.</li>
+              <li>Notice and objection routes show that the company knows how customer questions are supposed to flow.</li>
+              <li>Proof links, owners, and handoff notes make counsel or privacy advisors faster when an issue appears.</li>
+            </ul>
+          </section>
+
+          <section>
+            <div class="cta-band">
+              <div>
+                <h2>Need the files behind the score?</h2>
+                <p>Starter covers one clean notice workflow. Pro adds segmentation, CSV workflows, and attorney-ready handoff files if the same questions keep recurring.</p>
+              </div>
+              <a class="button gold" href="pricing.html">See pricing</a>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
+      </footer>
+    </div>
+
+    <script>
+      const FIELD_WEIGHTS = [
+        { id: "field-vendor-names", label: "List vendor names clearly", weight: 8 },
+        { id: "field-purpose", label: "Explain each vendor purpose", weight: 8 },
+        { id: "field-data", label: "Add data categories", weight: 8 },
+        { id: "field-region", label: "Add region or transfer context", weight: 7 },
+        { id: "field-updated", label: "Show a real last updated date", weight: 7 },
+        { id: "field-history", label: "Keep a simple change history", weight: 6 },
+        { id: "field-notice-path", label: "Clarify the customer notice path", weight: 10 },
+        { id: "field-objection", label: "Name the objection or question route", weight: 8 },
+        { id: "field-segments", label: "Document affected customer segments", weight: 8 },
+        { id: "field-effective-date", label: "Tie changes to effective dates", weight: 6 },
+        { id: "field-owner", label: "Assign a workflow owner", weight: 8 },
+        { id: "field-proof", label: "Save send proof and screenshots", weight: 8 },
+        { id: "field-replies", label: "Log objections or replies", weight: 8 },
+        { id: "field-handoff", label: "Prepare an advisor handoff packet", weight: 8 }
+      ];
+
+      const SCORE_MAP = { yes: 1, partial: 0.5, no: 0 };
+      const TOTAL_WEIGHT = FIELD_WEIGHTS.reduce((sum, field) => sum + field.weight, 0);
+      const scoreOutput = document.querySelector("#checker-score");
+      const bandOutput = document.querySelector("#checker-band");
+      const summaryOutput = document.querySelector("#checker-summary");
+      const missingOutput = document.querySelector("#checker-missing");
+      const guidanceOutput = document.querySelector("#checker-guidance");
+      const teardownLink = document.querySelector("#checker-teardown");
+
+      function renderChecker() {
+        let score = 0;
+        const missing = [];
+
+        for (const field of FIELD_WEIGHTS) {
+          const element = document.querySelector(`#${field.id}`);
+          const state = element ? element.value : "no";
+          score += field.weight * (SCORE_MAP[state] || 0);
+
+          if (state !== "yes") {
+            const prefix = state === "partial" ? "Tighten" : "Add";
+            missing.push(`${prefix}: ${field.label}`);
+          }
+        }
+
+        const roundedScore = Math.round((score / TOTAL_WEIGHT) * 100);
+        let band = "Operationally credible";
+        let summary = "Your public page communicates the basics well enough that the next friction is more likely to be internal process cleanup than public ambiguity.";
+        let guidance = "Best fit: use Starter if this is a one-change workflow, or Pro if the same review packet has to be reused across segments and approvals.";
+
+        if (roundedScore < 50) {
+          band = "Thin public signal";
+          summary = "A buyer or advisor will have to reconstruct too much context from other documents. Fix the public list, notice path, and proof trail before the next meaningful change.";
+          guidance = "Best fit: use the free teardown first, then decide whether Starter is enough or whether the workflow needs the fuller Pro packet.";
+        } else if (roundedScore < 80) {
+          band = "Solid page, weak process";
+          summary = "The page exists, but customer routing, segmentation, or evidence handling is still likely to break when the first objection or enterprise review lands.";
+          guidance = "Best fit: Starter for a one-off cleanup, Pro if the same gaps keep reappearing across customers or vendors.";
+        }
+
+        scoreOutput.textContent = `${roundedScore} / 100`;
+        bandOutput.textContent = band;
+        summaryOutput.textContent = summary;
+        guidanceOutput.textContent = guidance;
+
+        const missingLines = missing.length
+          ? missing.slice(0, 6)
+          : ["No obvious gaps selected. The next check is whether the underlying notice workflow and evidence log are just as complete as the public page."];
+        missingOutput.textContent = missingLines.join("\n");
+
+        const reviewNeed = encodeURIComponent([
+          `Subprocessor page checker score: ${roundedScore}/100 (${band}).`,
+          "Please give the 3-bullet async gap read based on the missing items below.",
+          ...missingLines
+        ].join("\n"));
+        teardownLink.href = `free-teardown.html?source=blog-subprocessor-page-checker&channel=page-checker&review_need=${reviewNeed}`;
+      }
+
+      for (const field of FIELD_WEIGHTS) {
+        const element = document.querySelector(`#${field.id}`);
+        if (element) {
+          element.addEventListener("input", renderChecker);
+        }
+      }
+
+      renderChecker();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>
