@@ -28,6 +28,18 @@ const WATCHED_SOURCE_TAGS = [
   "founder-follow-up-tracker",
   "advisor-follow-up-tracker"
 ];
+const TEARDOWN_SOURCE_FAMILY_ORDER = [
+  "homepage",
+  "pricing",
+  "about",
+  "generator",
+  "checker",
+  "tracker",
+  "review-brief-builder",
+  "blog",
+  "outreach",
+  "other"
+];
 
 function formatUtcTimestamp(date) {
   const year = date.getUTCFullYear();
@@ -131,6 +143,62 @@ function describeSourceTag(sourceTag) {
   return raw || "direct site visit";
 }
 
+function classifyTeardownSourceFamily(sourceTag) {
+  const normalized = String(sourceTag || "").trim().toLowerCase();
+
+  if (!normalized || normalized === "site") {
+    return "other";
+  }
+
+  if (normalized.startsWith("homepage-")) {
+    return "homepage";
+  }
+
+  if (normalized.startsWith("pricing-")) {
+    return "pricing";
+  }
+
+  if (normalized.startsWith("about-")) {
+    return "about";
+  }
+
+  if (normalized.startsWith("generator-")) {
+    return "generator";
+  }
+
+  if (normalized.startsWith("blog-subprocessor-page-checker-")) {
+    return "checker";
+  }
+
+  if (
+    normalized === "blog-dpa-objection-window-template" ||
+    normalized === "blog-dpa-objection-window-cta"
+  ) {
+    return "tracker";
+  }
+
+  if (normalized.startsWith("review-brief-builder-")) {
+    return "review-brief-builder";
+  }
+
+  if (
+    normalized.startsWith("founder-follow-up") ||
+    normalized.startsWith("advisor-follow-up") ||
+    normalized.startsWith("partner-outreach-")
+  ) {
+    return "outreach";
+  }
+
+  if (
+    normalized.startsWith("blog-") ||
+    normalized === "blog-index"
+  ) {
+    return "blog";
+  }
+
+  return "other";
+}
+
 function safeValue(value, fallback = "Not provided") {
   const text = String(value || "").trim();
   return text || fallback;
@@ -222,6 +290,10 @@ async function main() {
   const latestRealSubmissions = realRecords.slice(0, 5);
   const typeBreakdown = countBy(realRecords, (record) => String(record.type || "").trim());
   const sourceBreakdown = countBy(realRecords, (record) => describeSourceTag(record.sourceTag));
+  const teardownSourceFamilyCounts = TEARDOWN_SOURCE_FAMILY_ORDER.map((family) => [
+    family,
+    realTeardowns.filter((record) => classifyTeardownSourceFamily(record.sourceTag) === family).length
+  ]);
   const watchedSourceCounts = WATCHED_SOURCE_TAGS.map((sourceTag) => [
     sourceTag,
     realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
@@ -256,6 +328,10 @@ async function main() {
     ...(sourceBreakdown.length === 0
       ? ["- No real submissions are stored in the inbox yet."]
       : sourceBreakdown.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`)),
+    "",
+    "### Free Async Teardown Source Families",
+    "",
+    ...teardownSourceFamilyCounts.map(([family, count]) => `- ${family}: ${count}`),
     "",
     "### Watched Source Tags",
     "",

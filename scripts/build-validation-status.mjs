@@ -380,6 +380,16 @@ const inboxTaggedValidation = extractInboxMetric(contactInboxStatusText, "Real t
 const inboxLatestSourceTag = extractInboxLatestSourceTag(contactInboxStatusText);
 const inboxTrackerTemplate = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "blog-dpa-objection-window-template");
 const inboxTrackerCta = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "blog-dpa-objection-window-cta");
+const inboxTeardownHomepage = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "homepage");
+const inboxTeardownPricing = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "pricing");
+const inboxTeardownAbout = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "about");
+const inboxTeardownGenerator = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "generator");
+const inboxTeardownChecker = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "checker");
+const inboxTeardownTracker = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "tracker");
+const inboxTeardownReviewBriefBuilder = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "review-brief-builder");
+const inboxTeardownBlog = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "blog");
+const inboxTeardownOutreach = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "outreach");
+const inboxTeardownOther = extractInboxBreakdownMetric(contactInboxStatusText, "Free Async Teardown Source Families", "other");
 const inboxCheckerTeardown = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "blog-subprocessor-page-checker-teardown");
 const inboxCheckerPricing = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "blog-subprocessor-page-checker-pricing");
 const inboxCheckerPartner = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "blog-subprocessor-page-checker-partner");
@@ -453,6 +463,7 @@ const output = [
   `- Partner-outreach check: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}`}`,
   `- Real inbox submissions: ${inboxRealSubmissions == null ? "unknown" : inboxRealSubmissions}`,
   `- Real free async teardown submissions: ${inboxTeardowns == null ? "unknown" : inboxTeardowns}`,
+  `- Free async teardown source families: ${(inboxTeardownHomepage == null || inboxTeardownPricing == null || inboxTeardownAbout == null || inboxTeardownGenerator == null || inboxTeardownChecker == null || inboxTeardownTracker == null || inboxTeardownReviewBriefBuilder == null || inboxTeardownBlog == null || inboxTeardownOutreach == null || inboxTeardownOther == null) ? "unknown" : inboxTeardownHomepage + inboxTeardownPricing + inboxTeardownAbout + inboxTeardownGenerator + inboxTeardownChecker + inboxTeardownTracker + inboxTeardownReviewBriefBuilder + inboxTeardownBlog + inboxTeardownOutreach + inboxTeardownOther} (${inboxTeardownHomepage == null ? "unknown" : inboxTeardownHomepage} homepage, ${inboxTeardownPricing == null ? "unknown" : inboxTeardownPricing} pricing, ${inboxTeardownAbout == null ? "unknown" : inboxTeardownAbout} about, ${inboxTeardownGenerator == null ? "unknown" : inboxTeardownGenerator} generator, ${inboxTeardownChecker == null ? "unknown" : inboxTeardownChecker} checker, ${inboxTeardownTracker == null ? "unknown" : inboxTeardownTracker} tracker, ${inboxTeardownReviewBriefBuilder == null ? "unknown" : inboxTeardownReviewBriefBuilder} review-brief-builder, ${inboxTeardownBlog == null ? "unknown" : inboxTeardownBlog} blog, ${inboxTeardownOutreach == null ? "unknown" : inboxTeardownOutreach} outreach, ${inboxTeardownOther == null ? "unknown" : inboxTeardownOther} other)`,
   `- Real partner requests: ${inboxPartnerRequests == null ? "unknown" : inboxPartnerRequests}`,
   `- Real tagged validation replies in inbox: ${inboxTaggedValidation == null ? "unknown" : inboxTaggedValidation}`,
   `- Checker-led inbox submissions: ${(inboxCheckerTeardown == null || inboxCheckerPricing == null || inboxCheckerPartner == null) ? "unknown" : inboxCheckerTeardown + inboxCheckerPricing + inboxCheckerPartner} (${inboxCheckerTeardown == null ? "unknown" : inboxCheckerTeardown} teardown, ${inboxCheckerPricing == null ? "unknown" : inboxCheckerPricing} pricing, ${inboxCheckerPartner == null ? "unknown" : inboxCheckerPartner} partner)`,

@@ -92,6 +92,7 @@
                     <option value="real_only">Real submissions only</option>
                     <option value="test_only">Likely test submissions only</option>
                     <option value="free_async_teardown">Free async teardowns only</option>
+                    <option value="core_teardown_sources">Core teardown source families only</option>
                     <option value="partner_request">Partner requests only</option>
                     <option value="self_audit_feedback">Self-audit feedback only</option>
                     <option value="tagged_validation">Tagged validation replies only</option>
@@ -141,6 +142,7 @@
       const status = document.querySelector("#status");
       const results = document.querySelector("#results");
       const CHECKER_SOURCE_PREFIX = "blog-subprocessor-page-checker-";
+      const CORE_TEARDOWN_PREFIXES = ["homepage-", "pricing-", "about-", "generator-"];
       const TRACKER_SOURCES = new Set([
         "blog-dpa-objection-window-template",
         "blog-dpa-objection-window-cta",
@@ -169,6 +171,56 @@
         }
 
         return raw.replace(/[-_]+/g, " ");
+      }
+
+      function classifyTeardownSourceFamily(record) {
+        const sourceTag = normalizedSourceTag(record);
+
+        if (!sourceTag || sourceTag === "site") {
+          return "other";
+        }
+
+        if (sourceTag.startsWith("homepage-")) {
+          return "homepage";
+        }
+
+        if (sourceTag.startsWith("pricing-")) {
+          return "pricing";
+        }
+
+        if (sourceTag.startsWith("about-")) {
+          return "about";
+        }
+
+        if (sourceTag.startsWith("generator-")) {
+          return "generator";
+        }
+
+        if (sourceTag.startsWith(CHECKER_SOURCE_PREFIX)) {
+          return "checker";
+        }
+
+        if (TRACKER_SOURCES.has(sourceTag)) {
+          return "tracker";
+        }
+
+        if (REVIEW_BRIEF_BUILDER_SOURCES.has(sourceTag)) {
+          return "review-brief-builder";
+        }
+
+        if (
+          sourceTag.startsWith("founder-follow-up") ||
+          sourceTag.startsWith("advisor-follow-up") ||
+          sourceTag.startsWith("partner-outreach-")
+        ) {
+          return "outreach";
+        }
+
+        if (sourceTag.startsWith("blog-") || sourceTag === "blog-index") {
+          return "blog";
+        }
+
+        return "other";
       }
 
       function feedbackDraft(record) {
@@ -248,6 +300,16 @@
           return Boolean(record.isLikelyTestSubmission);
         }
 
+        if (filterValue === "core_teardown_sources") {
+          const sourceTag = normalizedSourceTag(record);
+          return String(record.type || "") === "free_async_teardown" && (
+            CORE_TEARDOWN_PREFIXES.some((prefix) => sourceTag.startsWith(prefix)) ||
+            sourceTag.startsWith("founder-follow-up") ||
+            sourceTag.startsWith("advisor-follow-up") ||
+            sourceTag.startsWith("partner-outreach-")
+          );
+        }
+
         if (filterValue === "tagged_validation") {
           return Boolean(record.isTaggedValidation);
         }
@@ -300,6 +362,7 @@
           ["Submitted", record.submittedAt || record.uploadedAt || "Unknown"],
           ["Blob", record.pathname || "Unknown"],
           ["Source tag", inferValidationSourceLabel(record.sourceTag)],
+          ["Teardown source family", classifyTeardownSourceFamily(record)],
           ["Submission channel", record.submissionChannel || "unknown"],
           ["Segment guess", record.segmentGuess || "unknown"],
           ["Submission class", record.isLikelyTestSubmission ? "likely test" : "likely real"]
