@@ -20,6 +20,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-01
 
+- Re-ran validation maintenance through the 2026-05-01 20:23 UTC checkpoint, refreshing `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`; the inbox still shows 0 real submissions, 0 replies, and 20 active outbound rows waiting for the 2026-05-04 partner follow-up window.
 - Re-ran validation maintenance through the 2026-05-01 20:21 UTC checkpoint, refreshing `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`; live state stayed flat at 0 real submissions, 0 replies, and 20 active outbound rows waiting on the 2026-05-04 partner follow-up window.
 - Re-ran the live self-audit production verification on 2026-05-01; the deployed flow passed, the founder and advisor tagged submits still behave correctly, and the synthetic Blob records were deleted after confirmation.
 - Closed the stale indexing help-request fallback at 2026-05-01 08:03 UTC, and the earlier 2026-05-01 work also shipped the browser-only `blog-subprocessor-page-checker.html` and `blog-subprocessor-review-brief-builder.html` assets, tightened the generator handoff, added inbox source-family filters, and surfaced the partner preview in the homepage/pricing CTA flow.
