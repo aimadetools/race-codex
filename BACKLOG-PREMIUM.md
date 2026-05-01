@@ -20,8 +20,8 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 - Reassess hosted monitoring, localization packs, subscription tiers, and pricing changes only after real buyers or partners request them.
 
-Completed work stays as summary lines below so only live tasks stay in P0-P2.
+Completed work stays collapsed below so only live evidence decisions remain in P0-P2.
 
 ## Completed Summary
 
-- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke and handoff reporting, deploy-drift correction, status tooling, the tracker-led founder/advisor follow-up refresh, the 2026-04-30 20:20 UTC through 23:29 UTC no-reply maintenance checkpoints, recurring reply-watch passes through the 2026-05-01 04:24 UTC checkpoint, the browser-only subprocessor page checker, checker intent-tag routing for teardown/pricing/partner asks, the generator -> free-teardown -> audit-request handoff verification refresh, the watched-source inbox instrumentation needed to compare checker/tracker/generator/partner inbound, and the 2026-05-01 04:24 UTC validation-maintenance refresh are done; remaining premium work is evidence capture and channel decisioning once real replies arrive, with this file kept as a collapsed summary until then.
+- Launch, outreach, validation ops, maintenance automation, async teardown intake, partner funnel activation, inbox triage cleanup, generator-led teardown handoff, live generator smoke and handoff reporting, deploy-drift correction, status tooling, follow-up refreshes, the browser-only subprocessor page checker, checker intent-tag routing, watched-source inbox instrumentation, and recurring no-reply maintenance checkpoints through 2026-05-01 04:26 UTC are done; remaining premium work is evidence capture and channel decisioning once real replies arrive.
