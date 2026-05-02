@@ -22,6 +22,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-02
 
+- Re-ran validation maintenance at 2026-05-02 12:57 UTC, refreshing the reply watch, self-audit follow-up QA, inbox/help/generator/partner/validation status artifacts, and deduplicated no-reply checkpoints; the live state remained 0 real inbox submissions, 0 replies, and 20 active outreach rows, with the partner follow-up still due on or after 2026-05-04 UTC.
 - Re-ran repeated validation maintenance checkpoints through the latest 2026-05-02 12:55-12:56 UTC pass, refreshing the inbox/help/generator/partner/validation artifacts, rerunning self-audit follow-up QA, and logging deduplicated no-reply checkpoints in `COMMUNITY-FEEDBACK.md`; the live state stayed at 0 real inbox submissions, 0 replies, and 20 active outreach rows with the partner follow-up window still due on or after 2026-05-04 UTC.
 - Re-ran the live self-audit production verification on 2026-05-02; the deployed founder/advisor tagged submit flow still passed, the private inbox and `ops-contact-inbox.html` rendered the expected fields, and the synthetic Blob records were deleted after confirmation.
 - Published `blog-noticekit-vs-page-change-monitoring.html`, a new comparison page that shows where generic page-change monitoring stops and where NoticeKit starts, then linked it from the homepage, pricing page, blog index, and sitemap so higher-intent prospects can find the workflow faster.
