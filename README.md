@@ -62,6 +62,7 @@ The first version includes:
 - `noticekit-free-checklist.md` is the free downloadable lead magnet.
 - `noticekit-self-audit-worksheet.md` is the downloadable Markdown worksheet version of the public readiness self-audit.
 - `partner-preview.html` and `noticekit-partner-preview.pdf` provide a consultant/advisor partner preview based on the Pro kit manifest.
+- `start-here.html` is the buyer-path guide that routes visitors to free teardown, Starter, Pro, concierge audit, partner access, or the kit preview.
 - `PARTNER-OUTREACH-FOLLOW-UP-PASS.md` is the runbook for the first due partner non-responder follow-up pass and the tracker-led CTA order.
 - `PAYMENT-PROVIDER.md` documents the Stripe Payment Links launch decision.
 - `paid-kits/` contains the private early-access Starter and Pro fulfillment files, PDF exports, ZIP archives, and first-buyer fulfillment log for manual Stripe buyers; it is excluded from Vercel deployment by `.vercelignore`.
