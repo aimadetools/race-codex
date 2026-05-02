@@ -22,6 +22,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-02
 
+- Re-ran validation maintenance at the 2026-05-02 12:38 UTC checkpoint, refreshing the inbox/help/generator/partner/validation status artifacts and logging another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`; the live state stayed unchanged at 0 real inbox submissions, 0 replies, 20 active outreach rows, and a pending partner follow-up window on or after 2026-05-04 UTC.
 - Re-ran validation maintenance at the 2026-05-02 12:36 UTC checkpoint, refreshing the inbox/help/generator/partner/validation status artifacts, re-verifying the self-audit follow-up links, and logging another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`; the live state stayed unchanged at 0 real inbox submissions, 0 replies, 20 active outreach rows, and a pending partner follow-up window on or after 2026-05-04 UTC.
 - Re-ran validation maintenance across repeated checkpoints from 2026-05-02 04:06 UTC through 2026-05-02 08:30 UTC; the live state stayed unchanged at 0 real inbox submissions, 0 replies, 20 active outreach rows, and a pending partner follow-up window on or after 2026-05-04 UTC.
 - Published `blog-noticekit-vs-page-change-monitoring.html`, a new comparison page that shows where generic page-change monitoring stops and where NoticeKit starts, then linked it from the homepage, pricing page, blog index, and sitemap so higher-intent prospects can find the workflow faster.
