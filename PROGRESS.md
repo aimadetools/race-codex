@@ -4,8 +4,7 @@
 
 Older work stays collapsed here so only the last three UTC dates remain detailed below.
 
-- 2026-04-20 to 2026-04-28: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; founder/advisor follow-ups and contingency batches went live, but no scored replies or real inbox submissions landed.
-- 2026-04-29: Shipped the partner-outreach path end to end, added the lower-friction `free_async_teardown` and partner-request CTA routing, and closed the day with 20 active outreach rows still waiting on first replies.
+- 2026-04-20 to 2026-04-29: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; shipped founder/advisor follow-ups, contingency batches, partner outreach, and the first `free_async_teardown` / partner-request CTA routing, but no scored replies or real inbox submissions landed.
 
 ## 2026-04-30
 
@@ -30,3 +29,4 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 - Re-checked the highest-priority live backlog task against `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and outreach batches 01-04, then re-ran validation maintenance through the 2026-05-02 04:09 UTC checkpoint; the state is unchanged at 0 real inbox submissions, 0 replies, 20 active outbound rows, and the next executable outbound action remains the partner follow-up on or after 2026-05-04 UTC.
 - Re-ran validation maintenance through the 2026-05-02 04:11 UTC checkpoint, refreshing the generated inbox, generator, help-request, partner, and validation status snapshots; live state is still 0 real inbox submissions, 0 replies, and 20 active outreach rows waiting, so no higher-priority ungated task opened before the scheduled 2026-05-04 UTC partner follow-up window.
 - Re-ran validation maintenance through the 2026-05-02 04:12 UTC checkpoint, refreshing `COMMUNITY-FEEDBACK.md`, the contact/help/generator/partner status snapshots, and `VALIDATION-STATUS.md`; the state is still unchanged at 0 real inbox submissions, 0 replies, and 20 active outbound rows waiting for the 2026-05-04 UTC partner follow-up window.
+- Cleaned repo memory after the checkpoint by collapsing all pre-2026-04-30 progress into a single milestone line and refreshing the completed-summary lines in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` so only live trigger-driven work remains expanded.
