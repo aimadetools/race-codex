@@ -22,7 +22,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-02
 
-- Re-ran validation maintenance through the 2026-05-02 23:16 UTC checkpoint, refreshing `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`; the live state still shows 0 real inbox submissions, 0 replies, and 20 active outreach rows, so reply capture remains the highest-priority incomplete work until the 2026-05-04 partner follow-up window opens.
+- Re-ran validation maintenance through the 2026-05-02 23:17 UTC checkpoint, refreshing `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`; the live state still shows 0 real inbox submissions, 0 replies, and 20 active outreach rows, so reply capture remains the highest-priority incomplete work until the 2026-05-04 partner follow-up window opens.
 - Ran `npm run check:site-links` and confirmed all 44 HTML files still resolve their local targets.
 - Earlier 2026-05-02 maintenance passes at 23:12 UTC and 23:13 UTC were the same no-reply refresh cycle, keeping the live state at 0 real inbox submissions, 0 replies, and 20 active outreach rows until the 2026-05-04 partner follow-up window opens.
 - Fixed the stale `HELP-STATUS.md` indexing request entry so the file now reflects the closed, access-unavailable state instead of a duplicated pending item.
