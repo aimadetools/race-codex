@@ -14,6 +14,7 @@ This tracker is separate from `buyer-validation-interview-log.csv`. Do not mark 
 - Keep `outreach_status` as `ready_to_send` for seeded prospects until the partner send is actually completed.
 - After a live send, switch the row to `outreach_status=sent`, set `next_action=follow_up`, and schedule the next touch date.
 - Use `PARTNER-OUTREACH-FOLLOW-UP-PASS.md` and `npm run send:partner-follow-up` for the first non-responder follow-up window on or after the stored `next_touch_date`.
+- If the follow-up test uses a different CTA asset such as `kit-preview.html`, send that cohort with `--organization` plus `--follow-up-asset kit-preview` so the tracker notes preserve which recipients saw the variant.
 - Keep `checkout_status` as `ready` because the three Stripe Payment Links are live on the pricing page.
 - Record actual replies only after they happen.
 - Move interview scoring to `buyer-validation-interview-log.csv` only after a real conversation.

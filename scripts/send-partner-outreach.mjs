@@ -168,6 +168,13 @@ function todayIsoDate() {
   return new Date().toISOString().slice(0, 10);
 }
 
+function parseList(value) {
+  return String(value || "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
 function isDueOnOrBefore(dateText, cutoff) {
   const value = String(dateText || "").trim();
   if (!value) {
@@ -250,7 +257,7 @@ function buildMessage(row) {
   };
 }
 
-function buildFollowUpMessage(row) {
+function buildFollowUpMessage(row, variant) {
   const isAttorney = String(row.segment || "").includes("attorney");
   const subject = isAttorney
     ? "Re: Partner workflow for startup counsel handling subprocessor reviews"
@@ -258,12 +265,21 @@ function buildFollowUpMessage(row) {
   const intakeLink = "https://noticekit.tech/audit-request.html?type=partner_request&source=partner-outreach-follow-up-01";
   const previewLink = "https://noticekit.tech/partner-preview.html";
   const trackerLink = "https://noticekit.tech/blog-dpa-objection-window.html";
+  const kitPreviewLink = "https://noticekit.tech/kit-preview.html";
   const intro = isAttorney
     ? "Quick follow-up on the partner workflow note I sent last week."
     : "Quick follow-up on the partner workflow note I sent last week.";
-  const valueLine = isAttorney
-    ? "The most concrete asset is the free objection-window tracker. It shows the operational packet a founder can complete before legal review."
-    : "The most concrete asset is the free objection-window tracker. It shows the operational packet a client can complete before privacy review.";
+  const useKitPreview = variant === "kit-preview";
+  const valueLine = useKitPreview
+    ? isAttorney
+      ? "The most concrete asset is the kit preview. It shows exactly what a founder would hand over before startup counsel reviews the change."
+      : "The most concrete asset is the kit preview. It shows exactly what a client would hand over before privacy review."
+    : isAttorney
+      ? "The most concrete asset is the free objection-window tracker. It shows the operational packet a founder can complete before legal review."
+      : "The most concrete asset is the free objection-window tracker. It shows the operational packet a client can complete before privacy review.";
+  const primaryAssetLine = useKitPreview
+    ? `Kit preview: ${kitPreviewLink}`
+    : `Free tracker: ${trackerLink}`;
   const body = [
     "Hi there,",
     "",
@@ -271,7 +287,7 @@ function buildFollowUpMessage(row) {
     "",
     valueLine,
     "",
-    `Free tracker: ${trackerLink}`,
+    primaryAssetLine,
     `Partner preview: ${previewLink}`,
     `Partner intake: ${intakeLink}`,
     "",
@@ -298,13 +314,13 @@ function applyInitialSendUpdate(row, recipient, timestamp, sendId) {
   row.notes = row.notes ? `${row.notes} ${sendNote}` : sendNote;
 }
 
-function applyFollowUpSendUpdate(row, recipient, timestamp, sendId) {
+function applyFollowUpSendUpdate(row, recipient, timestamp, sendId, variant) {
   const sentDate = timestamp.slice(0, 10);
   row.outreach_status = "sent";
   row.next_action = "archive";
   row.last_touch_date = sentDate;
   row.next_touch_date = "";
-  const sendNote = `Partner follow-up sent ${timestamp} via Resend to ${recipient} using source tag partner-outreach-follow-up-01${sendId ? ` (id ${sendId})` : ""}.`;
+  const sendNote = `Partner follow-up sent ${timestamp} via Resend to ${recipient} using source tag partner-outreach-follow-up-01 with ${variant} CTA${sendId ? ` (id ${sendId})` : ""}.`;
   row.notes = row.notes ? `${row.notes} ${sendNote}` : sendNote;
 }
 
@@ -314,19 +330,30 @@ async function main() {
   const send = args.has("send");
   const followUp = args.has("follow-up");
   const force = args.has("force");
+  const organizations = new Set(parseList(args.get("organization")).map((value) => value.toLowerCase()));
+  const followUpVariant = String(args.get("follow-up-asset") || "tracker").trim().toLowerCase();
+
+  if (!["tracker", "kit-preview"].includes(followUpVariant)) {
+    throw new Error("Unsupported --follow-up-asset value. Use tracker or kit-preview.");
+  }
 
   await loadEnvFile();
 
   const { header, records } = parseCsv(await readFile(PARTNER_TRACKER, "utf8"));
   const advisorRows = parseCsv(await readFile(ADVISOR_BATCH, "utf8")).records;
   const advisorMap = new Map(advisorRows.map((row) => [row.organization, row]));
-  const queue = followUp
+  let queue = followUp
     ? records
         .filter((row) => String(row.outreach_status || "").trim() === "sent")
         .filter((row) => String(row.next_action || "").trim() === "follow_up")
         .filter((row) => force || isDueOnOrBefore(row.next_touch_date, todayIsoDate()))
-        .slice(0, limit)
-    : records.filter((row) => String(row.outreach_status || "").trim() === "ready_to_send").slice(0, limit);
+    : records.filter((row) => String(row.outreach_status || "").trim() === "ready_to_send");
+
+  if (organizations.size > 0) {
+    queue = queue.filter((row) => organizations.has(String(row.organization || "").trim().toLowerCase()));
+  }
+
+  queue = queue.slice(0, limit);
 
   if (queue.length === 0) {
     if (followUp) {
@@ -344,10 +371,11 @@ async function main() {
       throw new Error(`No direct email route found for ${row.organization}.`);
     }
 
-    const message = followUp ? buildFollowUpMessage(row) : buildMessage(row);
+    const message = followUp ? buildFollowUpMessage(row, followUpVariant) : buildMessage(row);
 
     if (!send) {
-      console.log(`DRY RUN | ${followUp ? "follow-up" : "initial"} | ${row.organization} | ${recipient} | ${message.subject}`);
+      const variantNote = followUp ? ` | asset ${followUpVariant}` : "";
+      console.log(`DRY RUN | ${followUp ? "follow-up" : "initial"} | ${row.organization} | ${recipient} | ${message.subject}${variantNote}`);
       continue;
     }
 
@@ -358,11 +386,12 @@ async function main() {
       html: message.html
     });
     if (followUp) {
-      applyFollowUpSendUpdate(row, recipient, new Date().toISOString(), response?.id || "");
+      applyFollowUpSendUpdate(row, recipient, new Date().toISOString(), response?.id || "", followUpVariant);
     } else {
       applyInitialSendUpdate(row, recipient, new Date().toISOString(), response?.id || "");
     }
-    console.log(`SENT | ${followUp ? "follow-up" : "initial"} | ${row.organization} | ${recipient} | ${response?.id || "no-id"}`);
+    const variantNote = followUp ? ` | asset ${followUpVariant}` : "";
+    console.log(`SENT | ${followUp ? "follow-up" : "initial"} | ${row.organization} | ${recipient} | ${response?.id || "no-id"}${variantNote}`);
   }
 
   if (send) {
