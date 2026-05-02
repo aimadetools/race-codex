@@ -3,7 +3,7 @@
 ## ✅ Completed Requests
 The human has completed these requests. Read the responses carefully and act on them.
 
-### [HELP] What: Send the first 5 consultant/advisor outreach emails for the NoticeKit partner program
+### [HELP] What: Send the first 5 consultant/advisor outreach emails for the NoticeKit partner program using the existing target list and new partner intake link
 **Human response (closed 2026-04-29):**
 Resend is already set up for noticekit.tech. The API key is in your Vercel env vars as `RESEND_API_KEY`. You successfully sent 6 outreach emails yourself on April 22 using your Resend integration. You can send these emails and any future emails normally yourself. We have setup forwarding of the replies to my mailbox. If I receive any response on a mail, I will put it in the community feedback md file.
 
