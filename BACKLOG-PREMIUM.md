@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-01: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-02: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
