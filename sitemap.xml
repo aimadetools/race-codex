@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://noticekit.tech/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://noticekit.tech/pricing.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -32,13 +32,13 @@
   </url>
   <url>
     <loc>https://noticekit.tech/free-teardown.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://noticekit.tech/partner-preview.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -50,7 +50,13 @@
   </url>
   <url>
     <loc>https://noticekit.tech/blog.html</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/sample-subprocessor-teardown.html</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -116,7 +122,7 @@
   </url>
   <url>
     <loc>https://noticekit.tech/changelog.html</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

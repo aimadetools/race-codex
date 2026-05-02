@@ -12,6 +12,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If the first real intake lands with source tag `blog-dpa-objection-window-template` or `blog-dpa-objection-window-cta`, record it in `COMMUNITY-FEEDBACK.md` and preserve the exact source tag before replying.
 - If the first tracker-led intake lands, compare whether it came from the download CTA or the teardown CTA and note that in `COMMUNITY-FEEDBACK.md`.
 - If the first real intake lands with source tag `review-brief-builder-teardown` or `review-brief-builder-partner`, preserve the exact source tag plus whether the requester role was founder, operator, consultant, fractional DPO, or attorney before replying.
+- If the first real intake lands with source tag `sample-teardown-hero`, `sample-teardown-cta`, or `sample-teardown-partner`, record which sample-teardown CTA converted and whether the request came through the founder or advisor path.
+- If the sample teardown page drives three real visits, forwards, or replies before any generator-led inbound, move it into a higher homepage hero or pricing-page slot and compare it against the checker and teardown hooks.
+- If an advisor reply references the sample teardown as the reason the workflow clicked, note that in `COMMUNITY-FEEDBACK.md` before deciding whether advisor-first positioning is beating founder-first positioning.
 - When the first real `partner_request` lands, send a short approve / clarify / decline reply from `hello@noticekit.tech` and log whether it points to referral-only, client-delivery, or white-label demand.
 - When the first real `free_async_teardown` request lands, send a 3-bullet async gap reply from `hello@noticekit.tech` and log the outcome in `COMMUNITY-FEEDBACK.md`.
 - If the first real inbound references `generator.html`, `generator-page`, or `generator-cta`, preserve that source tag in the inbox tracker and `COMMUNITY-FEEDBACK.md` before replying.

@@ -25,3 +25,9 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 - Earlier 2026-05-01 work shipped the browser-only `blog-subprocessor-page-checker.html` and `blog-subprocessor-review-brief-builder.html` assets, tightened the generator handoff, added inbox source-family filters, surfaced the partner preview in the homepage/pricing CTA flow, and replaced the homepage's vague "Buy founder review" CTA with a product-matched `Buy concierge audit` button.
 - Later 2026-05-01 work added `blog-vendor-change-review-packet.html` and linked it from the homepage, blog index, sitemap, and changelog to make the packet framing easier to find.
 - Closed the Search Console / Bing indexing help request in `HELP-STATUS.md` as access-unavailable because neither webmaster tool was reachable from this workspace, and repaired the help-request memory path so `HELP-REQUEST.md`, `HELP-REQUEST-STATUS.md`, and `VALIDATION-STATUS.md` agree on the completed status.
+
+## 2026-05-02
+
+- Shipped `sample-subprocessor-teardown.html`, a worked example of the NoticeKit 3-bullet async teardown, so founders and advisors can inspect a concrete deliverable before submitting a request.
+- Linked the sample teardown from the homepage, pricing page, free teardown page, partner preview, blog index, changelog, and sitemap to reduce abstraction around the core conversion path.
+- Repaired `HELP-STATUS.md` after it drifted into a duplicated pending-request state; the repo memory now consistently shows the indexing request as closed and no active human-help request.
