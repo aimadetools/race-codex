@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { readFile, writeFile } from "node:fs/promises";
+import { spawnSync } from "node:child_process";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { del, get, list } from "@vercel/blob";
@@ -115,6 +116,25 @@ function pickEnvValue(key, ...sources) {
 function assert(condition, message) {
   if (!condition) {
     throw new Error(message);
+  }
+}
+
+function runLocalScript(label, script) {
+  const result = spawnSync("node", [join(ROOT, "scripts", script)], {
+    cwd: ROOT,
+    encoding: "utf8"
+  });
+
+  if (result.stdout) {
+    process.stdout.write(result.stdout);
+  }
+
+  if (result.stderr) {
+    process.stderr.write(result.stderr);
+  }
+
+  if (result.status !== 0) {
+    throw new Error(`${label} failed.`);
   }
 }
 
@@ -468,3 +488,5 @@ try {
 
 await writeFile(REPORT_PATH, buildReport(results));
 console.log(`Wrote ${REPORT_PATH}`);
+runLocalScript("Contact inbox status refresh", "build-contact-inbox-status.mjs");
+runLocalScript("Validation status refresh", "build-validation-status.mjs");
