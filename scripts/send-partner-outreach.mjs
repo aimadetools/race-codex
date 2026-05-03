@@ -266,20 +266,28 @@ function buildFollowUpMessage(row, variant) {
   const previewLink = "https://noticekit.tech/partner-preview.html";
   const trackerLink = "https://noticekit.tech/blog-dpa-objection-window.html";
   const kitPreviewLink = "https://noticekit.tech/kit-preview.html";
+  const clientHandoffLink = "https://noticekit.tech/partner-client-handoff.html";
   const intro = isAttorney
     ? "Quick follow-up on the partner workflow note I sent last week."
     : "Quick follow-up on the partner workflow note I sent last week.";
   const useKitPreview = variant === "kit-preview";
-  const valueLine = useKitPreview
+  const useClientHandoff = variant === "client-handoff";
+  const valueLine = useClientHandoff
     ? isAttorney
-      ? "The most concrete asset is the kit preview. It shows exactly what a founder would hand over before startup counsel reviews the change."
-      : "The most concrete asset is the kit preview. It shows exactly what a client would hand over before privacy review."
-    : isAttorney
-      ? "The most concrete asset is the free objection-window tracker. It shows the operational packet a founder can complete before legal review."
-      : "The most concrete asset is the free objection-window tracker. It shows the operational packet a client can complete before privacy review.";
-  const primaryAssetLine = useKitPreview
-    ? `Kit preview: ${kitPreviewLink}`
-    : `Free tracker: ${trackerLink}`;
+      ? "The cleanest founder-safe asset is a handoff page that bundles the sample teardown, kit preview, and review-brief-builder path before startup counsel reviews the change."
+      : "The cleanest founder-safe asset is a handoff page that bundles the sample teardown, kit preview, and review-brief-builder path before privacy review."
+    : useKitPreview
+      ? isAttorney
+        ? "The most concrete asset is the kit preview. It shows exactly what a founder would hand over before startup counsel reviews the change."
+        : "The most concrete asset is the kit preview. It shows exactly what a client would hand over before privacy review."
+      : isAttorney
+        ? "The most concrete asset is the free objection-window tracker. It shows the operational packet a founder can complete before legal review."
+        : "The most concrete asset is the free objection-window tracker. It shows the operational packet a client can complete before privacy review.";
+  const primaryAssetLine = useClientHandoff
+    ? `Founder handoff preview: ${clientHandoffLink}`
+    : useKitPreview
+      ? `Kit preview: ${kitPreviewLink}`
+      : `Free tracker: ${trackerLink}`;
   const body = [
     "Hi there,",
     "",
@@ -333,8 +341,8 @@ async function main() {
   const organizations = new Set(parseList(args.get("organization")).map((value) => value.toLowerCase()));
   const followUpVariant = String(args.get("follow-up-asset") || "tracker").trim().toLowerCase();
 
-  if (!["tracker", "kit-preview"].includes(followUpVariant)) {
-    throw new Error("Unsupported --follow-up-asset value. Use tracker or kit-preview.");
+  if (!["tracker", "kit-preview", "client-handoff"].includes(followUpVariant)) {
+    throw new Error("Unsupported --follow-up-asset value. Use tracker, kit-preview, or client-handoff.");
   }
 
   await loadEnvFile();

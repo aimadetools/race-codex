@@ -49,6 +49,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://noticekit.tech/partner-client-handoff.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://noticekit.tech/kit-preview.html</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>

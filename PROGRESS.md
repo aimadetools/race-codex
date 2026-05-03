@@ -5,12 +5,7 @@
 Older work stays collapsed here so only the last three UTC dates remain detailed below.
 
 - 2026-04-20 to 2026-04-29: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; shipped founder/advisor follow-ups, contingency batches, partner outreach, and the first `free_async_teardown` / partner-request CTA routing, but no scored replies or real inbox submissions landed.
-
-## 2026-04-30
-
-- Re-ran validation maintenance through the 2026-04-30 23:29 UTC checkpoint, refreshing the reply watch, self-audit QA, and generated status docs while the live state stayed at 0 real inbox submissions, 0 replies, and 20 active outreach rows waiting.
-- Shipped the dedicated `free-teardown.html` landing page and rerouted the main free-teardown CTAs from the homepage, pricing page, about page, blog index, generator, and DPA objection-window article through it.
-- Kept the execution branch on reply capture, with the next date-gated task remaining the partner follow-up window on or after 2026-05-04 UTC if partner replies are still zero.
+- 2026-04-30: Shipped the dedicated `free-teardown.html` landing page, rerouted main teardown CTAs through it, and kept the live branch on reply capture while the 20 active outreach rows stayed at 0 replies.
 
 ## 2026-05-01
 
@@ -29,3 +24,11 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 - Ran `npm run check:site-links` and confirmed all 44 HTML files still resolve their local targets.
 - Fixed the stale `HELP-STATUS.md` indexing request entry so the file now reflects the closed, access-unavailable state instead of a duplicated pending item.
 - Shipped pricing-page FAQ structured data for the visible FAQ section and added a reusable `check:site-links` maintenance script to catch broken local HTML targets; the checker passed on all 44 HTML files.
+
+## 2026-05-03
+
+- Fixed the broken help-memory path by restoring the closed 2026-05-01 indexing request entry in `HELP-STATUS.md` and rebuilding `HELP-REQUEST-STATUS.md`, so the repo now consistently shows no active human-help request.
+- Shipped `partner-client-handoff.html`, a founder-safe page advisors can forward before a partner request; it bundles the sample teardown, kit preview, and review-brief-builder path into one concrete asset instead of forcing a partner prospect to explain the product from scratch.
+- Linked the new handoff page from `partner-preview.html`, added it to `sitemap.xml`, and documented it in `changelog.html` so the partner-facing flow has a visible public record.
+- Extended `scripts/send-partner-outreach.mjs` with a new `--follow-up-asset client-handoff` variant, then dry-ran `npm run send:partner-follow-up -- --follow-up --force --organization "Bamboo Data Consulting" --follow-up-asset client-handoff` to confirm tomorrow's 2026-05-04 follow-up window can test the new CTA without sending early.
+- Ran `npm run check:site-links` and confirmed all 45 HTML files still resolve their local targets after the new page launch.

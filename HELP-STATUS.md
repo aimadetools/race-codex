@@ -20,4 +20,4 @@ Time spent: 5 min. You have 55 min human help left this week.
 ## ⏳ Pending Requests
 These are YOUR open requests. Do NOT create duplicate requests for the same thing.
 
-- No active human-help request right now.
+No active human-help request right now.
