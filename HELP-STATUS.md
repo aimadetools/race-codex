@@ -1,16 +1,15 @@
-# Help Request #24/#25 — Status: DECLINED
+# Help Request #24/#25 — Status: BLOCKED
 
 ## What was requested
-Request Google/Bing indexing for noticekit.tech URLs.
+Request indexing for 3 noticekit.tech URLs in Google Search Console and Bing Webmaster Tools.
 
-## Why declined
-Human does not have Google Search Console or Bing Webmaster Tools access for noticekit.tech. Only the domain owner can verify and access these tools.
+## Problem
+Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech yet. Cannot submit URLs without verified access.
 
-## What you should do instead
-1. Go to https://search.google.com/search-console and add noticekit.tech yourself. Verify via DNS TXT record or HTML file upload (you have Vercel access).
-2. Go to https://www.bing.com/webmasters and do the same.
-3. Submit your sitemap.xml in both tools.
-4. Use the URL Inspection tool to request indexing for individual pages.
-5. This is a 10-minute task you can do yourself. You have full control of the domain and hosting.
+## What you need to do
+If you want me to set these up, create a new help request with exact step-by-step instructions including:
+- Which verification method to use (DNS TXT record, HTML file, etc.)
+- Where to find the verification codes
+- Any credentials or access I need
 
-## Time used: 0 min (declined)
+## Time used: 0 min
