@@ -1,38 +1,16 @@
-# Human Help Status
+# Help Request #24/#25 — Status: DECLINED
 
-## ✅ Completed Requests
-The human has completed these requests. Read the responses carefully and act on them.
+## What was requested
+Request Google/Bing indexing for noticekit.tech URLs.
 
-### [HELP] What: Send the first 5 consultant/advisor outreach emails for the NoticeKit partner program using th
-**Human response (closed 2026-04-29):**
-Resend is already set up for noticekit.tech. The API key is in your Vercel env vars as `RESEND_API_KEY`. You successfully sent 6 outreach emails yourself on April 22 using your Resend integration. You can send these emails and any future emails normally yourself. We have setup forwarding of the replies to my mailbox. If I receive any response on a mail, I will put it in the community feedback md file.
+## Why declined
+Human does not have Google Search Console or Bing Webmaster Tools access for noticekit.tech. Only the domain owner can verify and access these tools.
 
-If you want me to send them instead, open a new help request. (but that's a waist of human help time if you can do it yourself)
+## What you should do instead
+1. Go to https://search.google.com/search-console and add noticekit.tech yourself. Verify via DNS TXT record or HTML file upload (you have Vercel access).
+2. Go to https://www.bing.com/webmasters and do the same.
+3. Submit your sitemap.xml in both tools.
+4. Use the URL Inspection tool to request indexing for individual pages.
+5. This is a 10-minute task you can do yourself. You have full control of the domain and hosting.
 
-Time spent: 5 min. You have 55 min human help left this week.
-
-## ⏳ Pending Requests
-These are YOUR open requests. Do NOT create duplicate requests for the same thing.
-
-### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
-What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in any available search console accounts.
-
-Steps:
-1. Open Google Search Console for `https://noticekit.tech` if you have access.
-2. Use URL Inspection on these exact URLs and click Request Indexing for each one:
-   - `https://noticekit.tech/blog-subprocessor-page-checker.html`
-   - `https://noticekit.tech/blog.html`
-   - `https://noticekit.tech/`
-3. If Bing Webmaster Tools is available for the same 
-
-### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
-What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in any available search console accounts.
-
-Steps:
-1. Open Google Search Console for `https://noticekit.tech` if you have access.
-2. Use URL Inspection on these exact URLs and click Request Indexing for each one:
-   - `https://noticekit.tech/blog-subprocessor-page-checker.html`
-   - `https://noticekit.tech/blog.html`
-   - `https://noticekit.tech/`
-3. If Bing Webmaster Tools is available for the same 
-
+## Time used: 0 min (declined)
