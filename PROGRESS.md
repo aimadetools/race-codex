@@ -20,5 +20,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 - Sent the five partner-program follow-ups through Resend, then kept the live validation queue on reply watch while the inbox and partner artifacts stayed at zero real submissions and zero replies.
 - Shipped `free-tools.html` as a consolidated self-serve acquisition hub, plus the free-tools route finder, and wired both into the homepage, pricing page, blog index, and start-here guide.
-- Ran validation-maintenance through 20:28 UTC, refreshed the inbox/help/generator/partner status artifacts, rechecked site links, and recorded another deduplicated no-reply checkpoint; the queue stayed clean with 46 HTML files and no missing local targets.
+- Ran validation-maintenance through 20:30 UTC, refreshed the inbox/help/generator/partner status artifacts, rechecked site links, and recorded another deduplicated no-reply checkpoint; the queue stayed clean with 46 HTML files and no missing local targets.
+- Followed that with a direct site-link verification pass, which found no missing local targets across the HTML set.
+- Ran the live self-audit production verification pass and confirmed both tagged submit paths still resolved to the expected production evidence rows.
 - The highest-priority live work still remains waiting on the first scored evidence or inbox submission, so reply capture remains the next unlock.
