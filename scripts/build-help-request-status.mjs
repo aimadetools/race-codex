@@ -163,6 +163,22 @@ function findRelatedEntries(requestText, entries) {
     .sort((left, right) => right.score - left.score);
 }
 
+function extractOpenBlockers(relatedEntries) {
+  return relatedEntries
+    .map((entry) => {
+      const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+      if (!/\bblocked\b/i.test(resolution)) {
+        return null;
+      }
+
+      return {
+        heading: entry.heading,
+        resolution
+      };
+    })
+    .filter(Boolean);
+}
+
 const checkedAt = formatUtcTimestamp(new Date());
 const helpRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
@@ -189,6 +205,7 @@ if (normalizedRequestWhat) {
 
 const status = matchingEntry ? "completed" : requestWhat ? "open" : "missing";
 const relatedEntries = status === "open" ? findRelatedEntries(requestWhat, completedEntries) : [];
+const openBlockers = status === "open" ? extractOpenBlockers(relatedEntries) : [];
 const output = [
   "# Help Request Status",
   "",
@@ -245,6 +262,17 @@ if (relatedEntries.length > 0) {
     output.push(`- ${entry.heading}`);
     output.push(`  - Shared keywords: ${entry.overlap.join(", ")}`);
     output.push(`  - Human response: ${resolution || "No response text extracted."}`);
+  }
+}
+
+if (openBlockers.length > 0) {
+  output.push("");
+  output.push("## Open Blockers");
+  output.push("");
+
+  for (const blocker of openBlockers) {
+    output.push(`- ${blocker.resolution}`);
+    output.push(`  - Source: ${blocker.heading}`);
   }
 }
 
