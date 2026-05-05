@@ -26,6 +26,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- Product and funnel foundation shipped: site launch, pricing/intake, async teardown fulfillment, generator handoff, partner funnel activation, page checker, review brief builder, sample teardown, kit preview, founder-safe partner handoff, and the `free-tools.html` hub surfacing are done.
-- Validation and ops tooling shipped: outreach ops, inbox cleanup, status tooling, maintenance automation, deploy-drift correction, generator smoke/handoff reporting, watched-source instrumentation, repeated no-reply checkpoints through 2026-05-05 16:10 UTC, self-audit QA refreshes through 2026-05-05 16:10 UTC, help-request blocker visibility, validation-status freshness fixes, and the clean 46-file site-link verification are done.
-- Support work shipped: help-request memory repair, deploy shielding for internal ops docs, partner follow-up CTA prep, the 2026-05-05 indexing/setup help request, the 2026-05-05 16:10 UTC no-reply maintenance refresh, and the Google Search Console/Bing Webmaster Tools setup plus sitemap submission are done; remaining premium work is evidence capture and channel decisioning once real replies arrive.
+- Product, funnel, and partner foundation shipped: launch, pricing/intake, async teardown, generator, partner, checker, brief-builder, sample, kit-preview, handoff, and `free-tools.html` surfacing are done.
+- Validation, ops, and support shipped: outreach ops, inbox/status tooling, deploy-drift correction, watched-source instrumentation, repeated no-reply checkpoints through 2026-05-05 16:12 UTC, help-request visibility, site-link verification, indexing help, and Search Console/Bing setup plus sitemap submission are done.
+- Remaining premium work is evidence capture and channel decisioning once real replies arrive.
