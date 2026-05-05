@@ -28,5 +28,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped.
 - 2026-05-05 validation-maintenance, status sync, and site-link verification are complete.
+- 2026-05-05 20:17 UTC validation-maintenance refreshed the no-reply checkpoint and synced the live status artifacts again; site-link checks still found no broken local targets.
 - 2026-05-05 reply-watch refresh confirmed there are still 0 real submissions, 0 replies, and 0 interviews, so the next actionable step remains evidence capture.
 - Remaining premium work stays limited to evidence capture and channel decisioning until a real reply or interview lands.
