@@ -26,6 +26,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- Product, funnel, and partner foundation is shipped; remaining premium work stays limited to evidence capture and channel decisioning.
-- Validation, ops, support, and maintenance are shipped, including inbox/status tooling, watch instrumentation, no-reply checkpoints, and indexing setup.
-- No new premium branch unlocks until a real reply or interview lands.
+- Product, funnel, partner, validation, ops, support, maintenance, inbox/status tooling, watch instrumentation, no-reply checkpoints, and indexing setup are shipped.
+- Remaining premium work stays limited to evidence capture and channel decisioning until a real reply or interview lands.
