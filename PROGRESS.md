@@ -18,9 +18,6 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-05
 
-- Sent the five partner-program follow-ups through Resend, then refreshed the partner, inbox, help, generator, and validation watch artifacts so the repo moved off the stale 2026-05-02 snapshot and stayed aligned with the live no-reply state.
-- Re-ran the validation maintenance loop through 2026-05-05 08:23 UTC, which kept `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `VALIDATION-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, `SELF-AUDIT-FOLLOW-UP-QA.md`, and `COMMUNITY-FEEDBACK.md` synced while the inbox remained at 0 real submissions, 0 replies, and 0 interviews.
-- Ran `npm run check:site-links`, which still passed with 45 HTML files and no missing local targets.
-- Kept the progress log and backlog memory trimmed so the current response state stays visible at a glance.
-- Re-ran the validation maintenance loop at 2026-05-05 08:25 UTC, which advanced the no-reply checkpoint, refreshed the validation status/watch artifacts, and still found 0 real submissions, 0 replies, and 0 interviews.
-- Re-ran the validation maintenance loop at 2026-05-05 08:26 UTC, which refreshed `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md` while keeping the inbox at 0 real submissions, 0 replies, and 0 interviews.
+- Sent the five partner-program follow-ups through Resend, advanced the no-reply checkpoint to 2026-05-05 08:28 UTC, and regenerated the inbox/help/generator/partner/validation status artifacts while the inbox stayed at 0 real submissions, 0 replies, and 0 interviews.
+- Re-ran `npm run check:site-links`, which passed again with 45 HTML files and no missing local targets.
+- Re-ran the validation maintenance pass at 2026-05-05 08:29 UTC, which kept `COMMUNITY-FEEDBACK.md` clean and left the live validation state unchanged while the follow-up queues remained on reply watch.
