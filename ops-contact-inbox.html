@@ -149,6 +149,18 @@
         "founder-follow-up-tracker",
         "advisor-follow-up-tracker"
       ]);
+      const FREE_TOOLS_SOURCES = new Set([
+        "free-tools-hero",
+        "free-tools-generator",
+        "free-tools-generator-card",
+        "free-tools-self-audit",
+        "free-tools-page-checker",
+        "free-tools-brief-builder",
+        "free-tools-deadline",
+        "free-tools-tracker",
+        "free-tools-conversion",
+        "free-tools-partner"
+      ]);
       const REVIEW_BRIEF_BUILDER_SOURCES = new Set([
         "review-brief-builder-teardown",
         "review-brief-builder-partner"
@@ -156,6 +168,10 @@
       const PARTNER_SOURCES = new Set([
         "partner-preview-hero",
         "partner-preview-cta",
+        "partner-client-handoff-hero",
+        "partner-client-handoff-founder",
+        "partner-client-handoff-teardown",
+        "partner-client-handoff-cta",
         "partner-outreach-batch-01",
         "partner-outreach-follow-up-01"
       ]);
@@ -194,6 +210,10 @@
 
         if (sourceTag.startsWith("generator-")) {
           return "generator";
+        }
+
+        if (FREE_TOOLS_SOURCES.has(sourceTag)) {
+          return "hub";
         }
 
         if (sourceTag.startsWith(CHECKER_SOURCE_PREFIX)) {

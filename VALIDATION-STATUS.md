@@ -40,14 +40,18 @@ Date: 2026-05-05
 - Partner-outreach check: last checked 2026-05-05 12:36 UTC
 - Real inbox submissions: 0
 - Real free async teardown submissions: 0
-- Free async teardown source families: 0 (0 homepage, 0 pricing, 0 about, 0 generator, 0 checker, 0 tracker, 0 review-brief-builder, 0 blog, 0 outreach, 0 other)
+- Free async teardown source families: 0 (0 homepage, 0 pricing, 0 about, 0 generator, 0 hub, 0 checker, 0 tracker, 0 review-brief-builder, 0 blog, 0 outreach, 0 other)
 - Real partner requests: 0
 - Real tagged validation replies in inbox: 0
 - Checker-led inbox submissions: 0 (0 teardown, 0 pricing, 0 partner)
 - Tracker-led inbox submissions: 0 (0 download CTA, 0 teardown CTA)
 - Generator-led inbox submissions: 0
+- Free-tools hub inbox submissions: 0 (0 hero, 0 generator, 0 generator-card, 0 self-audit, 0 page-checker, 0 brief-builder, 0 deadline, 0 tracker, 0 teardown CTA, 0 partner)
 - Review-brief-builder-led inbox submissions: 0 (0 teardown, 0 partner)
+- Sample-teardown inbox submissions: 0 (0 hero, 0 CTA, 0 partner)
+- Kit-preview inbox submissions: 0 (0 hero, 0 grid, 0 bottom)
 - Partner-preview inbox submissions: 0 (0 hero, 0 CTA)
+- Partner-client-handoff inbox submissions: 0 (0 hero, 0 founder teardown, 0 teardown CTA, 0 partner CTA)
 - Partner-tagged inbox submissions: 0 (0 initial outreach, 0 follow-up outreach)
 
 ## Notes

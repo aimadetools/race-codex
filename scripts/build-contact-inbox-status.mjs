@@ -17,10 +17,30 @@ const WATCHED_SOURCE_TAGS = [
   "blog-dpa-objection-window-template",
   "blog-dpa-objection-window-cta",
   "generator-page",
+  "free-tools-hero",
+  "free-tools-generator",
+  "free-tools-generator-card",
+  "free-tools-self-audit",
+  "free-tools-page-checker",
+  "free-tools-brief-builder",
+  "free-tools-deadline",
+  "free-tools-tracker",
+  "free-tools-conversion",
+  "free-tools-partner",
   "review-brief-builder-teardown",
   "review-brief-builder-partner",
+  "sample-teardown-hero",
+  "sample-teardown-cta",
+  "sample-teardown-partner",
+  "kit-preview-hero",
+  "kit-preview-grid",
+  "kit-preview-bottom",
   "partner-preview-hero",
   "partner-preview-cta",
+  "partner-client-handoff-hero",
+  "partner-client-handoff-founder",
+  "partner-client-handoff-teardown",
+  "partner-client-handoff-cta",
   "partner-outreach-batch-01",
   "partner-outreach-follow-up-01",
   "founder-follow-up",
@@ -33,6 +53,7 @@ const TEARDOWN_SOURCE_FAMILY_ORDER = [
   "pricing",
   "about",
   "generator",
+  "hub",
   "checker",
   "tracker",
   "review-brief-builder",
@@ -164,6 +185,10 @@ function classifyTeardownSourceFamily(sourceTag) {
 
   if (normalized.startsWith("generator-")) {
     return "generator";
+  }
+
+  if (normalized.startsWith("free-tools-")) {
+    return "hub";
   }
 
   if (normalized.startsWith("blog-subprocessor-page-checker-")) {
