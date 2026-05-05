@@ -45,7 +45,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-05: Refreshed reply-watch and status snapshots across community feedback, inbox, help, generator, and partner artifacts; confirmed no replies or submissions and reran the site-link smoke across 46 HTML files.
-- 2026-05-05: Collapsed the help-request pipeline refresh, founder-handoff exposure, and validation snapshot sync into the current memory set.
+- 2026-05-05: Refreshed reply-watch and status snapshots across community feedback, inbox, help, generator, and partner artifacts; the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, indexing, and search-console work is shipped.
 - Live work stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.
