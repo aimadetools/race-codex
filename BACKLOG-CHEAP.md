@@ -45,6 +45,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- Routine site, funnel, routing, and comparison work is shipped; the live backlog now stays focused on reply capture and intake evidence.
-- Partner activation, watched-source instrumentation, and source-tag follow-up passes are shipped; only reply-driven decisions remain live.
-- Maintenance, verifier cleanup, inbox resync, site-link verification, indexing help, and search-console setup are shipped; this backlog stays collapsed to live P0/P1 triggers.
+- Routine site, funnel, routing, and comparison work is shipped; live work now stays focused on reply capture and intake evidence.
+- Partner activation, watched-source instrumentation, and source-tag follow-up are shipped; only reply-driven decisions remain live.
+- Maintenance, verifier cleanup, inbox resync, link verification, indexing help, and search-console setup are shipped; the backlog stays collapsed to live P0/P1 triggers.
