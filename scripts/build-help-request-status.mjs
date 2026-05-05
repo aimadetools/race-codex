@@ -209,6 +209,27 @@ function extractOpenBlockers(relatedEntries) {
     .filter(Boolean);
 }
 
+function extractOperatorBlockers(text) {
+  const operatorNoteMatch = text.match(/##\s+\d{4}-\d{2}-\d{2} Operator Note[\s\S]*?(?=\n## |\n$)/i);
+  if (!operatorNoteMatch) {
+    return [];
+  }
+
+  const bulletLines = operatorNoteMatch[0]
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^\-\s+/, "").trim())
+    .filter(Boolean);
+
+  const blockerLines = bulletLines.filter((line) =>
+    /authenticated|workspace does not expose|could not complete|blocked|current help request/i.test(line)
+  );
+
+  return blockerLines.map((resolution) => ({
+    heading: "HELP-STATUS.md operator note",
+    resolution
+  }));
+}
+
 const checkedAt = formatUtcTimestamp(new Date());
 const { text: helpRequestText, source: helpRequestSource } = await readActiveRequestText();
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
@@ -235,7 +256,8 @@ if (normalizedRequestWhat) {
 
 const status = matchingEntry ? "completed" : requestWhat ? "open" : "missing";
 const relatedEntries = status === "open" ? findRelatedEntries(requestWhat, completedEntries) : [];
-const openBlockers = status === "open" ? extractOpenBlockers(relatedEntries) : [];
+const operatorBlockers = status === "open" ? extractOperatorBlockers(helpStatusText) : [];
+const openBlockers = operatorBlockers.length > 0 ? operatorBlockers : (status === "open" ? extractOpenBlockers(relatedEntries) : []);
 const output = [
   "# Help Request Status",
   "",

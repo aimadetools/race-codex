@@ -45,8 +45,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-05: Refreshed the help-request status pipeline so it now reads the newest archived request when `HELP-REQUEST.md` is absent, and synced the validation snapshots to the current open Search Console/Bing blocker.
+- 2026-05-05: Refreshed the help-request status pipeline so it now reads the current operator-note blocker, and synced the validation snapshots after a clean 46-file site-link check.
 - 2026-05-05: Exposed the founder handoff and partner preview path more prominently on the homepage, pricing page, and partner preview so advisor traffic has a clearer forwardable route.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, indexing, and search-console work is shipped.
-- 2026-05-05 validation-maintenance, status sync, and reply-watch refresh ran through 23:06 UTC; there were still no missing local targets, no inbox evidence, and the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - Live work stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.

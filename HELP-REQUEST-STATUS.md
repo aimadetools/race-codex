@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-05 23:06 UTC
+Checked at: 2026-05-05 23:08 UTC
 
 ## Current Request
 
@@ -44,5 +44,5 @@ Checked at: 2026-05-05 23:06 UTC
 
 ## Open Blockers
 
-- Blocked. Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech. If you want me to set them up, create a new help request with exact steps. See HELP-STATUS.md.
-  - Source: [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
+- The latest help request is now tracked in `HELP-REQUEST-STATUS.md`, but this workspace does not expose an authenticated Google Search Console or Bing Webmaster Tools session, so I could not complete the indexing request directly from here.
+  - Source: HELP-STATUS.md operator note
