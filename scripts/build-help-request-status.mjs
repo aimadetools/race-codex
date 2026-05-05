@@ -241,6 +241,7 @@ const requestTime = extractField(helpRequestText, "Time") || "unknown";
 const requestSteps = extractRequestedSteps(helpRequestText);
 const normalizedRequestWhat = normalize(requestWhat);
 const completedEntries = extractCompletedEntries(helpStatusText);
+const relatedCompletedEntries = normalizedRequestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];
 
 let matchingEntry = null;
 
@@ -250,6 +251,12 @@ if (normalizedRequestWhat) {
     matchingEntry = {
       heading: "Matched completed note in HELP-STATUS.md",
       body: helpStatusText
+    };
+  }
+  if (!matchingEntry && relatedCompletedEntries.length > 0 && relatedCompletedEntries[0].score >= 4) {
+    matchingEntry = {
+      heading: relatedCompletedEntries[0].heading,
+      body: relatedCompletedEntries[0].body
     };
   }
 }
