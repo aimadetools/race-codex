@@ -131,6 +131,69 @@ function normalizeRows(rows) {
   return rows.filter((row) => Object.values(row).some((value) => String(value || "").trim() !== ""));
 }
 
+function parseUtcTimestamp(value) {
+  const text = String(value || "").trim();
+  let match = text.match(/^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}) UTC$/);
+  if (match) {
+    const [, year, month, day, hour, minute] = match;
+    return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), Number(hour), Number(minute)));
+  }
+
+  match = text.match(/^(\d{4})-(\d{2})-(\d{2}) UTC$/);
+  if (match) {
+    const [, year, month, day] = match;
+    return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), 0, 0));
+  }
+
+  return null;
+}
+
+function formatRelativeAge(target, now = new Date()) {
+  if (!(target instanceof Date) || Number.isNaN(target.getTime())) {
+    return "age unknown";
+  }
+
+  const diffMs = now.getTime() - target.getTime();
+  const future = diffMs < 0;
+  const absoluteMs = Math.abs(diffMs);
+  const minutes = Math.floor(absoluteMs / 60000);
+  const hours = Math.floor(absoluteMs / 3600000);
+  const days = Math.floor(absoluteMs / 86400000);
+
+  if (minutes < 1) {
+    return future ? "in under 1 minute" : "less than 1 minute ago";
+  }
+
+  if (minutes < 60) {
+    return future
+      ? `in ${minutes} minute${minutes === 1 ? "" : "s"}`
+      : `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+  }
+
+  if (hours < 48) {
+    return future
+      ? `in ${hours} hour${hours === 1 ? "" : "s"}`
+      : `${hours} hour${hours === 1 ? "" : "s"} ago`;
+  }
+
+  return future
+    ? `in ${days} day${days === 1 ? "" : "s"}`
+    : `${days} day${days === 1 ? "" : "s"} ago`;
+}
+
+function describeFreshness(timestampText, now = new Date()) {
+  if (!timestampText || timestampText === "unknown") {
+    return "unknown";
+  }
+
+  const parsed = parseUtcTimestamp(timestampText);
+  if (!parsed) {
+    return timestampText;
+  }
+
+  return `${timestampText} (${formatRelativeAge(parsed, now)})`;
+}
+
 function extractFeedbackSignals(text) {
   const sourceTagMatches = [...text.matchAll(/Source tag:\s*([^\n|]+)/g)];
   const channelMatches = [...text.matchAll(/Channel:\s*([^\n|]+)/g)];
@@ -168,6 +231,27 @@ function hasNoReplyNote(text, segment) {
     ? /no founder\/operator replies have been posted here yet(?: across the active outreach batches)?\./i
     : /no advisor replies have been posted here yet\./i;
   return pattern.test(text);
+}
+
+function extractLatestRecheckTimestamp(text) {
+  const matches = [...text.matchAll(/Rechecked on (.+? UTC):/g)];
+  let latestText = "unknown";
+  let latestDate = null;
+
+  for (const match of matches) {
+    const timestampText = match[1].trim();
+    const parsed = parseUtcTimestamp(timestampText);
+    if (!parsed) {
+      continue;
+    }
+
+    if (!latestDate || parsed > latestDate) {
+      latestDate = parsed;
+      latestText = timestampText;
+    }
+  }
+
+  return latestText;
 }
 
 function extractQueueState(text) {
@@ -347,7 +431,8 @@ function describeContingencyNotes(batch03Rows, batch04Rows) {
   return notes;
 }
 
-const now = new Date().toISOString().slice(0, 10);
+const currentDate = new Date();
+const now = currentDate.toISOString().slice(0, 10);
 const founderBatchRows = parseCsv(await readFile(BATCH_FILES[0].path, "utf8"));
 const advisorBatchRows = parseCsv(await readFile(BATCH_FILES[1].path, "utf8"));
 const contingencyRows = parseCsv(await readFile(BATCH_FILES[2].path, "utf8"));
@@ -371,6 +456,7 @@ const advisorFollowUpDate = extractFollowUpDate(advisorFollowUpText);
 const noFounderRepliesPosted = hasNoReplyNote(feedbackText, "founder");
 const noAdvisorRepliesPosted = hasNoReplyNote(feedbackText, "advisor");
 const noRepliesPosted = noFounderRepliesPosted && noAdvisorRepliesPosted;
+const feedbackCheckedAt = extractLatestRecheckTimestamp(feedbackText);
 const feedbackSignals = extractFeedbackSignals(feedbackText);
 const inboxCheckedAt = extractInboxCheckedAt(contactInboxStatusText);
 const inboxRealSubmissions = extractInboxMetric(contactInboxStatusText, "Real submissions");
@@ -459,6 +545,15 @@ const output = [
   describeFollowUpState("Advisor follow-up pass", advisorFollowUpDate, advisorBatchRows),
   describeBatchPosition("Batch 03", contingencyRows),
   describeBatchPosition("Batch 04", contingencyTwoRows),
+  "",
+  "## Watch Freshness",
+  "",
+  `- Community feedback checkpoint: ${describeFreshness(feedbackCheckedAt, currentDate)}`,
+  `- Contact inbox snapshot: ${describeFreshness(inboxCheckedAt, currentDate)}`,
+  `- Human-help snapshot: ${describeFreshness(helpRequestCheckedAt, currentDate)}`,
+  `- Generator production snapshot: ${describeFreshness(generatorProductionCheckedAt, currentDate)}`,
+  `- Generator handoff snapshot: ${describeFreshness(generatorHandoffCheckedAt, currentDate)}`,
+  `- Partner-outreach snapshot: ${describeFreshness(partnerOutreachCheckedAt, currentDate)}`,
   "",
   "## Batch Snapshot",
   "",

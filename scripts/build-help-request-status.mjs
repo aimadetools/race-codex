@@ -83,6 +83,35 @@ function extractResolution(text) {
   return match ? match[1].trim() : "";
 }
 
+function parseIsoDate(value) {
+  const text = String(value || "").trim();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) {
+    return null;
+  }
+  return new Date(`${text}T00:00:00Z`);
+}
+
+function formatRelativeAge(target, now = new Date()) {
+  if (!(target instanceof Date) || Number.isNaN(target.getTime())) {
+    return "age unknown";
+  }
+
+  const diffMs = now.getTime() - target.getTime();
+  const future = diffMs < 0;
+  const absoluteDays = Math.floor(Math.abs(diffMs) / 86400000);
+  if (absoluteDays === 0) {
+    return future ? "today or later" : "today";
+  }
+  return future
+    ? `in ${absoluteDays} day${absoluteDays === 1 ? "" : "s"}`
+    : `${absoluteDays} day${absoluteDays === 1 ? "" : "s"} ago`;
+}
+
+function extractClosedDate(text) {
+  const match = String(text || "").match(/closed (\d{4}-\d{2}-\d{2})/i);
+  return match ? match[1] : "";
+}
+
 function tokenize(text) {
   return normalize(text)
     .split(/[^a-z0-9.://-]+/)
@@ -201,6 +230,15 @@ if (relatedEntries.length > 0) {
   output.push("");
   output.push("## Related History");
   output.push("");
+
+  const latestClosedDate = relatedEntries
+    .map((entry) => extractClosedDate(entry.body))
+    .filter(Boolean)
+    .sort((left, right) => right.localeCompare(left))[0];
+
+  if (latestClosedDate) {
+    output.push(`- Latest related note closed on: ${latestClosedDate} (${formatRelativeAge(parseIsoDate(latestClosedDate))})`);
+  }
 
   for (const entry of relatedEntries.slice(0, 2)) {
     const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
