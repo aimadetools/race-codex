@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-import { readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
 const HELP_REQUEST_FILE = join(ROOT, "HELP-REQUEST.md");
+const HELP_REQUESTS_DIR = join(ROOT, "help-requests");
 const HELP_STATUS_FILE = join(ROOT, "HELP-STATUS.md");
 const OUTPUT = join(ROOT, "HELP-REQUEST-STATUS.md");
 
@@ -112,6 +113,35 @@ function extractClosedDate(text) {
   return match ? match[1] : "";
 }
 
+async function readActiveRequestText() {
+  const directRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
+  if (directRequestText.trim()) {
+    return {
+      text: directRequestText,
+      source: "HELP-REQUEST.md"
+    };
+  }
+
+  const requestFiles = (await readdir(HELP_REQUESTS_DIR).catch(() => []))
+    .filter((name) => /^\d{8}-\d{6}-HELP-REQUEST\.md$/.test(name))
+    .sort()
+    .reverse();
+
+  if (requestFiles.length === 0) {
+    return {
+      text: "",
+      source: ""
+    };
+  }
+
+  const latestFile = requestFiles[0];
+  const text = await readFile(join(HELP_REQUESTS_DIR, latestFile), "utf8").catch(() => "");
+  return {
+    text,
+    source: `help-requests/${latestFile}`
+  };
+}
+
 function tokenize(text) {
   return normalize(text)
     .split(/[^a-z0-9.://-]+/)
@@ -180,7 +210,7 @@ function extractOpenBlockers(relatedEntries) {
 }
 
 const checkedAt = formatUtcTimestamp(new Date());
-const helpRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
+const { text: helpRequestText, source: helpRequestSource } = await readActiveRequestText();
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
 
 const requestWhat = extractField(helpRequestText, "What");
@@ -229,6 +259,11 @@ if (requestSteps.length > 0) {
       output.push(`  - ${substep}`);
     }
   }
+  output.push("");
+}
+
+if (helpRequestSource) {
+  output.push(`- Active request source: ${helpRequestSource}`);
   output.push("");
 }
 
