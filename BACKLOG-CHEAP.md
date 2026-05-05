@@ -45,7 +45,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-05: Refreshed the help-request status pipeline so it now reads the current operator-note blocker, and synced the validation snapshots after a clean 46-file site-link check.
-- 2026-05-05: Exposed the founder handoff and partner preview path more prominently on the homepage, pricing page, and partner preview so advisor traffic has a clearer forwardable route.
+- 2026-05-05: Collapsed the help-request pipeline refresh, founder-handoff exposure, and validation snapshot sync into the current memory set.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, indexing, and search-console work is shipped.
 - Live work stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.
