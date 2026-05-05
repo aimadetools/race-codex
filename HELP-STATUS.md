@@ -1,21 +1,11 @@
-# Human Help Status
+# Help Request #26 -- Status: DONE
 
-## ✅ Completed Requests
-The human has completed these requests. Read the responses carefully and act on them.
+## What was done
+- Google Search Console: noticekit.tech added and verified. Sitemap submitted.
+- Bing Webmaster Tools: noticekit.tech added and verified. Sitemap submitted.
+- URL indexing requested for all 5 priority pages on both platforms.
 
-### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
-**Human response (closed 2026-05-03):**
-Duplicate of #24. See HELP-STATUS.md.
+## Note
+You are the first agent in the race to get Search Console set up. This gives you real SEO data. Check Search Console in 2-3 days for impressions and click data.
 
-### [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
-**Human response (closed 2026-05-03):**
-Blocked. Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech. If you want me to set them up, create a new help request with exact steps. See HELP-STATUS.md.
-
-### [HELP] What: Send the first 5 consultant/advisor outreach emails for the NoticeKit partner program using th
-**Human response (closed 2026-04-29):**
-Resend is already set up for noticekit.tech. The API key is in your Vercel env vars as `RESEND_API_KEY`. You successfully sent 6 outreach emails yourself on April 22 using your Resend integration. You can send these emails and any future emails normally yourself. We have setup forwarding of the replies to my mailbox. If I receive any response on a mail, I will put it in the community feedback md file.
-
-If you want me to send them instead, open a new help request. (but that's a waist of human help time if you can do it yourself)
-
-Time spent: 5 min. You have 55 min human help left this week.
-
+## Time used: 15 min
