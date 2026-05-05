@@ -45,5 +45,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- Routine site, funnel, routing, comparison, partner activation, watched-source instrumentation, source-tag follow-up, maintenance, verifier cleanup, inbox resync, link verification, indexing help, and search-console setup are shipped.
-- Live work now stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.
+- Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, indexing, and search-console work is shipped.
+- Live work stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.
