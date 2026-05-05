@@ -70,7 +70,7 @@ The first version includes:
 - `purchase-next-steps.html` is the noindex Stripe success-redirect page for early-access buyers.
 - `robots.txt` and `sitemap.xml` expose the public static pages for search crawlers.
 - `sample-subprocessor-notice.csv` is a sample NoticeKit CSV import/export file.
-- `social-preview.png` is the compressed 1200x630 social sharing image, generated from `social-preview.svg`.
+- `social-preview.svg` is the 1200x630 social sharing image used for Open Graph and social cards.
 - `STRIPE-CHECKOUT-SETUP.md` gives the human operator exact Stripe product, fulfillment, and redirect instructions.
 - `SUBSCRIPTION-TIER-DECISION.md` defines when a recurring tier should be tested and keeps subscriptions off the public launch until customers ask for ongoing reminders or monitoring.
 - `VALIDATION-OUTREACH-SEND-RUNBOOK.md` defines the send order, prerequisites, tracking statuses, and guardrails for executing the prepared validation outreach once the public mailbox is live.
