@@ -34,7 +34,6 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If tagged self-audit replies show consultant/attorney ownership more often than founder ownership, queue a homepage copy refresh toward advisor handoff language.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `advisor-first handoff`, update the homepage hero and pricing page opening copy from `HOMEPAGE-COPY-REFRESH-QUEUE.md`.
 - If `VALIDATION-POSITIONING-BRIEF.md` flips to `vendor-change review packet`, refresh homepage and core CTA copy to broaden the product framing while keeping subprocessor-notice SEO pages intact.
-- Check `HELP-STATUS.md` for the Google Search Console and Bing setup result; if verification or sitemap submission is blocked, log the blocker in `COMMUNITY-FEEDBACK.md` or the relevant status file before opening another help request.
 - If the free-tools hub drives the first real intake before homepage, pricing, generator, or checker direct CTAs, move `free-tools.html` into a stronger homepage hero or outbound follow-up slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 
 ## P1
@@ -48,4 +47,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - Routine site and funnel work shipped: launch, checkout, outreach, fulfillment, SEO/ops/analytics, validation logging, homepage/pricing refreshes, generator and handoff fixes, the teardown/checker/brief-builder/sample/kit pages, start-here, free-tools, and comparison CTAs are done.
 - Trigger and routing work shipped: partner intake activation, follow-up passes, source-tag routing, partner-preview and handoff surfacing, watched-source instrumentation, and the pricing FAQ schema refresh are done.
-- Maintenance work shipped: verifier cleanup, validation-memory cleanup, repeated no-reply checkpoints through 2026-05-05 16:22 UTC, live self-audit QA and production refreshes, inbox/validation resync, deploy shielding, site-link verification, indexing help, and Search Console/Bing setup plus sitemap submission are done; this backlog now stays collapsed to live P0/P1 triggers only.
+- Maintenance work shipped: verifier cleanup, validation-memory cleanup, repeated no-reply checkpoints through 2026-05-05 16:23 UTC, live self-audit QA and production refreshes, inbox/validation resync, deploy shielding, site-link verification, indexing help, and Search Console/Bing setup plus sitemap submission are done; the help-status verification check is closed and this backlog now stays collapsed to live P0/P1 triggers only.
