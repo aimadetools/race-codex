@@ -112,7 +112,6 @@ async function main() {
 
   runCommand("Validation watch", ["npm", "run", "check:validation-watch"]);
   runCommand("Self-audit follow-up QA", ["npm", "run", "check:self-audit-follow-up"]);
-  runCommand("Validation artifact sync", ["npm", "run", "sync:validation-artifacts"]);
   runCommand("No-reply checkpoint log", [
     "npm",
     "run",
@@ -121,6 +120,7 @@ async function main() {
     "--timestamp",
     effectiveText
   ]);
+  runCommand("Validation artifact sync", ["npm", "run", "sync:validation-artifacts"]);
 }
 
 main().catch((error) => {
