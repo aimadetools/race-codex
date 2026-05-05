@@ -1,6 +1,6 @@
 # Partner Outreach Status
 
-Checked at: 2026-05-02 23:29 UTC
+Checked at: 2026-05-05 08:01 UTC
 
 ## Current State
 
@@ -10,21 +10,13 @@ Checked at: 2026-05-02 23:29 UTC
 - Booked: 0
 - No response: 0
 - Not fit: 0
-- Follow-up readiness: next partner follow-up is due on 2026-05-04 (2 days remaining).
-- Next partner action: send the next partner follow-up on or after 2026-05-04 if replies are still zero.
-
-## Upcoming Follow-Ups
-
-- Bamboo Data Consulting: follow up on or after 2026-05-04 (last touch 2026-04-29).
-- Privageo: follow up on or after 2026-05-04 (last touch 2026-04-29).
-- ATOM: follow up on or after 2026-05-04 (last touch 2026-04-29).
-- Coto & Waddington: follow up on or after 2026-05-04 (last touch 2026-04-29).
-- Altum Legal: follow up on or after 2026-05-04 (last touch 2026-04-29).
+- Follow-up readiness: no partner follow-ups are currently queued.
+- Next partner action: monitor the tracker for replies and keep the next expansion gated on evidence.
 
 ## Tracker Snapshot
 
-- Bamboo Data Consulting: sent; next action follow_up; last touch 2026-04-29; next touch 2026-05-04.
-- Privageo: sent; next action follow_up; last touch 2026-04-29; next touch 2026-05-04.
-- ATOM: sent; next action follow_up; last touch 2026-04-29; next touch 2026-05-04.
-- Coto & Waddington: sent; next action follow_up; last touch 2026-04-29; next touch 2026-05-04.
-- Altum Legal: sent; next action follow_up; last touch 2026-04-29; next touch 2026-05-04.
+- Bamboo Data Consulting: sent; next action archive; last touch 2026-05-05; next touch unknown.
+- Privageo: sent; next action archive; last touch 2026-05-05; next touch unknown.
+- ATOM: sent; next action archive; last touch 2026-05-05; next touch unknown.
+- Coto & Waddington: sent; next action archive; last touch 2026-05-05; next touch unknown.
+- Altum Legal: sent; next action archive; last touch 2026-05-05; next touch unknown.
