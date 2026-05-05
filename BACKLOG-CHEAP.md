@@ -45,6 +45,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- Routine site and funnel work shipped: launch, checkout, outreach, fulfillment, SEO/ops/analytics, validation logging, homepage/pricing refreshes, generator and handoff fixes, the teardown/checker/brief-builder/sample/kit pages, start-here, free-tools, and comparison CTAs are done.
+- Routine site and funnel work shipped: launch, checkout, outreach, fulfillment, SEO/ops/analytics, validation logging, homepage/pricing refreshes, generator and handoff fixes, the teardown/checker/brief-builder/sample/kit pages, start-here, free-tools, route finder, and comparison CTAs are done.
 - Trigger and routing work shipped: partner intake activation, follow-up passes, source-tag routing, partner-preview and handoff surfacing, watched-source instrumentation, and the pricing FAQ schema refresh are done.
 - Maintenance work shipped: verifier cleanup, validation-memory cleanup, repeated no-reply checkpoints through 2026-05-05 16:29 UTC, live self-audit QA and production refreshes, inbox/validation resync, deploy shielding, site-link verification, indexing help, and Search Console/Bing setup plus sitemap submission are done; the help-status verification check is closed and this backlog now stays collapsed to live P0/P1 triggers only.

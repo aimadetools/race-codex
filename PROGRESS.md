@@ -22,4 +22,5 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 - Re-ran the site-link check during the maintenance pass and confirmed 46 HTML files still resolve with no missing local targets.
 - Sent the five partner-program follow-ups through Resend and kept the live validation queue on reply watch; the inbox and partner artifacts still show no real submissions or replies, and there is no `DEPLOY-STATUS.md` blocker file in the repo.
 - Shipped `free-tools.html` as a consolidated self-serve acquisition hub and rewired the homepage, pricing page, blog index, and start-here guide to surface it.
+- Shipped a free-tools route finder that points founders, consultants, and repeat buyers to the shortest path, then surfaced it from the homepage, pricing page, and start-here guide.
 - The highest-priority live work remains waiting for the first scored evidence or inbox submission.

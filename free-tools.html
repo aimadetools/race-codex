@@ -82,7 +82,51 @@
           <div class="hero-actions">
             <a class="button" href="generator.html?source=free-tools-generator">Open generator</a>
             <a class="button secondary" href="free-teardown.html?source=free-tools-hero">Request free teardown</a>
+            <a class="button secondary" href="#route-finder">Try route finder</a>
             <a class="button secondary" href="pricing.html">See paid paths</a>
+          </div>
+        </section>
+
+        <section class="section" id="route-finder">
+          <div class="section-head">
+            <h2>Route finder</h2>
+            <p>Answer three quick questions and NoticeKit will point you at the shortest path. Use it if you are deciding between a written answer, the paid files, a human review, or the partner path.</p>
+          </div>
+          <div class="demo-panel">
+            <div class="panel-header">
+              <strong>Decision helper</strong>
+              <span class="status">Local only</span>
+            </div>
+            <div class="demo-body">
+              <div class="field-grid">
+                <label>Who are you?
+                  <select id="route-role">
+                    <option value="founder">Founder or operator</option>
+                    <option value="consultant">Consultant, fractional DPO, or attorney</option>
+                    <option value="other">Just comparing options</option>
+                  </select>
+                </label>
+                <label>What do you need now?
+                  <select id="route-need">
+                    <option value="written-answer">A written answer before I buy</option>
+                    <option value="files-now">The files to use right away</option>
+                    <option value="public-page">A review of the public page or workflow</option>
+                    <option value="package-preview">A look at what is inside the kit</option>
+                  </select>
+                </label>
+                <label>How often will this repeat?
+                  <select id="route-frequency">
+                    <option value="once">One vendor change</option>
+                    <option value="repeat">Repeated or segmented changes</option>
+                  </select>
+                </label>
+              </div>
+              <div id="route-output" class="notice-output" aria-live="polite"></div>
+              <div class="hero-actions">
+                <a id="route-primary" class="button" href="free-teardown.html?source=free-tools-route-finder">Use recommended path</a>
+                <a id="route-secondary" class="button secondary" href="pricing.html">Compare pricing</a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -191,6 +235,106 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+    <script>
+      const routeRole = document.querySelector("#route-role");
+      const routeNeed = document.querySelector("#route-need");
+      const routeFrequency = document.querySelector("#route-frequency");
+      const routeOutput = document.querySelector("#route-output");
+      const routePrimary = document.querySelector("#route-primary");
+      const routeSecondary = document.querySelector("#route-secondary");
+
+      function renderRoute() {
+        const role = routeRole.value;
+        const need = routeNeed.value;
+        const frequency = routeFrequency.value;
+
+        let recommendation = {
+          title: "Start with the free async teardown.",
+          summary: "You want the shortest written answer before buying. One URL and one change is enough to get a blunt gap read.",
+          primaryHref: "free-teardown.html?source=free-tools-route-finder",
+          primaryLabel: "Request free teardown",
+          secondaryHref: "pricing.html",
+          secondaryLabel: "Compare pricing",
+        };
+
+        if (role === "consultant") {
+          recommendation = {
+            title: "Open the partner path first.",
+            summary: "You are selling or delivering this for clients, so the partner preview is the fastest way to check referral, delivery, or white-label fit.",
+            primaryHref: "partner-preview.html",
+            primaryLabel: "Open partner preview",
+            secondaryHref: "audit-request.html?type=partner_request&source=free-tools-route-finder",
+            secondaryLabel: "Request partner access",
+          };
+        } else if (need === "files-now") {
+          recommendation = frequency === "repeat"
+            ? {
+                title: "Buy Pro.",
+                summary: "Repeated changes or segmented customers point to the repeatable workflow in Pro.",
+                primaryHref: "https://buy.stripe.com/cNieVd3Gw7X858680feEo08",
+                primaryLabel: "Buy Pro",
+                secondaryHref: "kit-preview.html",
+                secondaryLabel: "See exact preview",
+              }
+            : {
+                title: "Buy Starter.",
+                summary: "One vendor change and one notice workflow fit the one-time Starter kit.",
+                primaryHref: "https://buy.stripe.com/5kQbJ16SIgtE7ge80feEo09",
+                primaryLabel: "Buy Starter",
+                secondaryHref: "kit-preview.html",
+                secondaryLabel: "See exact preview",
+              };
+        } else if (need === "public-page") {
+          recommendation = frequency === "repeat"
+            ? {
+                title: "Book the concierge audit.",
+                summary: "When the public page or workflow keeps needing cleanup, a 48-hour review will give you a fix list.",
+                primaryHref: "https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07",
+                primaryLabel: "Buy audit",
+                secondaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
+                secondaryLabel: "Open page checker",
+              }
+            : {
+                title: "Open the page checker.",
+                summary: "If you just want to score the public page once, the checker is the fastest self-serve read.",
+                primaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
+                primaryLabel: "Open page checker",
+                secondaryHref: "free-teardown.html?source=free-tools-route-finder",
+                secondaryLabel: "Request free teardown",
+              };
+        } else if (need === "package-preview") {
+          recommendation = {
+            title: "Open the kit preview.",
+            summary: "You want to see the exact Starter and Pro artifact list before you check out.",
+            primaryHref: "kit-preview.html",
+            primaryLabel: "Open kit preview",
+            secondaryHref: "pricing.html",
+            secondaryLabel: "Compare pricing",
+          };
+        } else if (frequency === "repeat") {
+          recommendation = {
+            title: "Start with Pro or partner access.",
+            summary: "Repeat work usually means you need either the Pro kit or a partner path, depending on whether you are buying for yourself or clients.",
+            primaryHref: role === "other" ? "pricing.html" : "partner-preview.html",
+            primaryLabel: role === "other" ? "Compare pricing" : "Open partner preview",
+            secondaryHref: "kit-preview.html",
+            secondaryLabel: "See exact preview",
+          };
+        }
+
+        routeOutput.textContent = `${recommendation.title} ${recommendation.summary}`;
+        routePrimary.textContent = recommendation.primaryLabel;
+        routePrimary.href = recommendation.primaryHref;
+        routeSecondary.textContent = recommendation.secondaryLabel;
+        routeSecondary.href = recommendation.secondaryHref;
+      }
+
+      [routeRole, routeNeed, routeFrequency].forEach((control) => {
+        control.addEventListener("change", renderRoute);
+      });
+
+      renderRoute();
+    </script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
