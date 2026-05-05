@@ -47,4 +47,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, indexing, and search-console work is shipped.
 - 2026-05-05 validation-maintenance, status sync, and site-link verification are complete.
+- 2026-05-05 reply-watch refresh confirmed there are still 0 real submissions, 0 replies, and 0 interviews, so the active trigger-driven P0/P1 work remains unchanged.
 - Live work stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.
