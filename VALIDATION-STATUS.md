@@ -6,7 +6,7 @@ Date: 2026-05-05
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: no active request as of 2026-05-05 08:28 UTC.
+- Human-help request state: open as of 2026-05-05 12:34 UTC.
 - Production generator state: checked 2026-05-05 08:28 UTC; live generator smoke passed.
 - Generator handoff state: checked 2026-05-05 08:29 UTC; live generator-to-teardown handoff passed.
 - Partner outreach state: last checked 2026-05-05 08:29 UTC; 0 ready, 5 sent/waiting, 0 replied.
@@ -34,7 +34,7 @@ Date: 2026-05-05
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
 - Contact inbox check: last checked 2026-05-05 08:28 UTC
-- Human-help request check: last checked 2026-05-05 08:28 UTC
+- Human-help request check: last checked 2026-05-05 12:34 UTC
 - Generator production check: last checked 2026-05-05 08:28 UTC
 - Generator handoff check: last checked 2026-05-05 08:29 UTC
 - Partner-outreach check: last checked 2026-05-05 08:29 UTC
@@ -54,7 +54,7 @@ Date: 2026-05-05
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
-- Human help: `HELP-REQUEST-STATUS.md` shows no active request right now.
+- Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Set up Google Search Console and Bing Webmaster Tools for `noticekit.tech`, submit the sitemap, and request indexing for the highest-priority acquisition pages.".
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
 - Generator handoff: `GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing.
 - Partner outreach: `PARTNER-OUTREACH-STATUS.md` says the next action is to monitor the tracker for replies and keep the next expansion gated on evidence.
