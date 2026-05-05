@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-05 12:43 UTC
+Checked at: 2026-05-05 12:46 UTC
 
 ## Current Request
 
@@ -16,6 +16,11 @@ Checked at: 2026-05-05 12:43 UTC
 - Verify the site using the easiest supported method you have access to for this domain. If DNS verification is required, use the domain provider where `noticekit.tech` is managed.
 - After verification, submit this sitemap exactly: `https://noticekit.tech/sitemap.xml`
 - Use URL Inspection in Google Search Console to request indexing for these pages:
+  - `https://noticekit.tech/`
+  - `https://noticekit.tech/free-tools.html`
+  - `https://noticekit.tech/free-teardown.html`
+  - `https://noticekit.tech/blog-subprocessor-page-checker.html`
+  - `https://noticekit.tech/blog-subprocessor-review-brief-builder.html`
 - Open Bing Webmaster Tools and add or verify the same site if it is not already configured.
 - Submit the same sitemap in Bing Webmaster Tools.
 - Request indexing in Bing for the same five URLs if that workflow is available.
@@ -24,3 +29,9 @@ Checked at: 2026-05-05 12:43 UTC
 ## Resolution
 
 - No matching completion note is present in `HELP-STATUS.md` yet.
+
+## Related History
+
+- [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
+  - Shared keywords: google, search, console, bing, webmaster, tools, indexing
+  - Human response: Blocked. Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech. If you want me to set them up, create a new help request with exact steps. See HELP-STATUS.md.

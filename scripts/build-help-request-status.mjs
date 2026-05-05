@@ -44,6 +44,96 @@ function extractCompletedEntries(text) {
     });
 }
 
+function extractRequestedSteps(text) {
+  const lines = text.split(/\r?\n/);
+  const steps = [];
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    const stepMatch = line.match(/^\d+\.\s+(.+)$/);
+    if (!stepMatch) {
+      continue;
+    }
+
+    const step = {
+      text: stepMatch[1].trim(),
+      substeps: []
+    };
+
+    let cursor = index + 1;
+    while (cursor < lines.length) {
+      const nestedMatch = lines[cursor].match(/^\s*-\s+(.+)$/);
+      if (!nestedMatch) {
+        break;
+      }
+
+      step.substeps.push(nestedMatch[1].trim());
+      cursor += 1;
+    }
+
+    steps.push(step);
+    index = cursor - 1;
+  }
+
+  return steps;
+}
+
+function extractResolution(text) {
+  const match = text.match(/\*\*Human response.*?:\*\*\s*([\s\S]*?)(?=\n### |\n## |$)/i);
+  return match ? match[1].trim() : "";
+}
+
+function tokenize(text) {
+  return normalize(text)
+    .split(/[^a-z0-9.://-]+/)
+    .filter((token) => token.length >= 4)
+    .filter((token) => !new Set([
+      "what",
+      "with",
+      "that",
+      "this",
+      "from",
+      "have",
+      "will",
+      "your",
+      "into",
+      "were",
+      "they",
+      "them",
+      "then",
+      "same",
+      "page",
+      "pages",
+      "request",
+      "requests",
+      "exact",
+      "steps",
+      "using",
+      "setup"
+    ]).has(token));
+}
+
+function findRelatedEntries(requestText, entries) {
+  const requestTokens = [...new Set(tokenize(requestText))];
+  if (requestTokens.length === 0) {
+    return [];
+  }
+
+  return entries
+    .map((entry) => {
+      const haystack = `${entry.heading}\n${entry.body}`;
+      const entryTokens = new Set(tokenize(haystack));
+      const overlap = requestTokens.filter((token) => entryTokens.has(token));
+      return {
+        ...entry,
+        overlap,
+        score: overlap.length
+      };
+    })
+    .filter((entry) => entry.score >= 3)
+    .sort((left, right) => right.score - left.score);
+}
+
 const checkedAt = formatUtcTimestamp(new Date());
 const helpRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
@@ -52,7 +142,7 @@ const requestWhat = extractField(helpRequestText, "What");
 const requestPriority = extractField(helpRequestText, "Priority") || "unknown";
 const requestBudget = extractField(helpRequestText, "Budget") || "unknown";
 const requestTime = extractField(helpRequestText, "Time") || "unknown";
-const requestSteps = [...helpRequestText.matchAll(/^\d+\.\s+(.+)$/gm)].map((match) => match[1].trim());
+const requestSteps = extractRequestedSteps(helpRequestText);
 const normalizedRequestWhat = normalize(requestWhat);
 const completedEntries = extractCompletedEntries(helpStatusText);
 
@@ -69,6 +159,7 @@ if (normalizedRequestWhat) {
 }
 
 const status = matchingEntry ? "completed" : requestWhat ? "open" : "missing";
+const relatedEntries = status === "open" ? findRelatedEntries(requestWhat, completedEntries) : [];
 const output = [
   "# Help Request Status",
   "",
@@ -87,7 +178,10 @@ const output = [
 if (requestSteps.length > 0) {
   output.push("## Requested Steps", "");
   for (const step of requestSteps) {
-    output.push(`- ${step}`);
+    output.push(`- ${step.text}`);
+    for (const substep of step.substeps) {
+      output.push(`  - ${substep}`);
+    }
   }
   output.push("");
 }
@@ -101,6 +195,19 @@ if (matchingEntry) {
   output.push("- No matching completion note is present in `HELP-STATUS.md` yet.");
 } else {
   output.push("- `HELP-REQUEST.md` does not define an active request.");
+}
+
+if (relatedEntries.length > 0) {
+  output.push("");
+  output.push("## Related History");
+  output.push("");
+
+  for (const entry of relatedEntries.slice(0, 2)) {
+    const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+    output.push(`- ${entry.heading}`);
+    output.push(`  - Shared keywords: ${entry.overlap.join(", ")}`);
+    output.push(`  - Human response: ${resolution || "No response text extracted."}`);
+  }
 }
 
 output.push("");
