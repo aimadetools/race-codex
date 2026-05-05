@@ -26,6 +26,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- Product, funnel, and partner foundation shipped: launch, pricing/intake, async teardown, generator, partner, checker, brief-builder, sample, kit-preview, handoff, and `free-tools.html` surfacing are done.
-- Validation, ops, and support shipped: outreach ops, inbox/status tooling, deploy-drift correction, watched-source instrumentation, repeated no-reply checkpoints through 2026-05-05 16:29 UTC, help-request visibility, site-link verification, indexing help, and Search Console/Bing setup plus sitemap submission are done.
-- Remaining premium work is evidence capture and channel decisioning once real replies arrive.
+- Product, funnel, and partner foundation is shipped; the remaining premium work is evidence capture and channel decisioning.
+- Validation, ops, support, and maintenance are shipped, including inbox/status tooling, watch instrumentation, no-reply checkpoints, and indexing setup.
+- No new premium branch unlocks until a real reply or interview lands.
