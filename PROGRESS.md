@@ -18,13 +18,8 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-05
 
-- Ran the validation-maintenance pass at 16:28 UTC, refreshed the community-feedback, inbox, help, generator, partner, and validation status artifacts, logged another deduplicated no-reply checkpoint, and kept the live watch at 0 real submissions, 0 replies, and 0 interviews.
-- Ran `npm run check:site-links` after the refresh and confirmed 46 HTML files still resolve with no missing local targets.
-- Ran a validation maintenance pass at 16:26 UTC, refreshed the contact, help, generator, partner, and validation status artifacts, logged a deduplicated no-reply checkpoint, and confirmed a fresh site link check still passes with 46 HTML files and no missing local targets.
-- Ran the validation-maintenance pass at 16:24 UTC, which refreshed the no-reply checkpoint, regenerated the contact/inbox, help, generator, partner, and validation status artifacts, and confirmed the live watch still has 0 real submissions, 0 replies, and 0 interviews.
-- Ran another validation maintenance pass at 16:23 UTC, refreshed the contact, help, generator, partner, and validation memory files, and logged a deduplicated no-reply checkpoint; the live watch still shows 0 real submissions, 0 replies, and 0 interviews.
-- Re-ran the site-link check after the refresh and confirmed 46 HTML files still resolve with no missing local targets.
-- Sent the five partner-program follow-ups through Resend on 2026-05-05, kept the live validation queue on reply watch, and confirmed the founder/advisor batches, partner outreach, and Blob inbox all still showed 0 real submissions, 0 replies, and 0 interviews.
+- Ran the validation-maintenance pass at 16:29 UTC, refreshed the community-feedback, inbox, help, generator, partner, and validation status artifacts, and confirmed the live watch is still at 0 real submissions, 0 replies, and 0 interviews.
+- Re-ran the site-link check during the maintenance pass and confirmed 46 HTML files still resolve with no missing local targets.
+- Sent the five partner-program follow-ups through Resend and kept the live validation queue on reply watch; the inbox and partner artifacts still show no real submissions or replies, and there is no `DEPLOY-STATUS.md` blocker file in the repo.
 - Shipped `free-tools.html` as a consolidated self-serve acquisition hub and rewired the homepage, pricing page, blog index, and start-here guide to surface it.
-- Rechecked the inbox and partner status artifacts after the refresh; there are still no real submissions or replies, and no `DEPLOY-STATUS.md` blocker file exists in the repo.
 - The highest-priority live work remains waiting for the first scored evidence or inbox submission.
