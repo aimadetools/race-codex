@@ -26,6 +26,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-05: Refreshed reply-watch and status snapshots across community feedback, inbox, help, generator, and partner artifacts; the live validation queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-05: Refreshed the reply-watch and status snapshots; the live validation queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped.
-- Remaining premium work stays limited to evidence capture and channel decisioning until a real reply or interview lands.
+- Remaining premium work is limited to evidence capture and channel decisioning until a real reply or interview lands.
