@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-06 04:28 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-06 12:49 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
@@ -27,7 +27,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-06: Shipped the AI-founder acquisition wedge with the AI-stack template, sample CSV, homepage/blog/free-tools promotion, sitemap/indexing follow-up, and attribution hardening so the next AI-startup inbound can be compared cleanly against the older wedges.
-- 2026-05-06: Kept the validation maintenance loop current through 12:44 UTC, refreshed the reply-watch and generated status artifacts, and confirmed the evidence state still sat at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
+- 2026-05-06: Shipped the AI-founder acquisition wedge with the AI-stack template, sample CSV, homepage/blog/free-tools promotion, sitemap/indexing follow-up, and download-led attribution hardening so the next AI-startup inbound can be compared cleanly against the older wedges.
+- 2026-05-06: Kept the validation maintenance loop current through 12:49 UTC, refreshed the reply-watch and generated status artifacts, reran self-audit follow-up QA, and confirmed the evidence state still sat at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
 - 2026-05-05 to 2026-05-06: Shipped the direct-submit teardown funnel plus the reporting, archive, and handoff hardening needed to classify the first real teardown, partner request, or tagged self-audit reply without extra manual triage.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; remaining premium work is limited to evidence capture and channel decisioning until a real reply or interview lands.

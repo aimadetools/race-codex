@@ -51,7 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-06: Shipped the AI-stack acquisition wedge, indexing request, source-tag coverage, teardown-family attribution fix, and generated inbox/validation reporting updates so AI-stack-led demand is visible from first click through first submission.
-- 2026-05-06: Ran repeated validation maintenance passes through 12:44 UTC, refreshed the no-reply checkpoint plus help/inbox/generator/handoff/partner/validation artifacts, and kept the live evidence state at 20 active outbound rows with 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-06: Shipped the AI-stack acquisition wedge, indexing request, source-tag coverage, teardown-family attribution fix, and the new download-section follow-through tags plus reporting updates so AI-stack-led demand is visible from first click through first submission.
+- 2026-05-06: Ran repeated validation maintenance passes through 12:49 UTC, refreshed the deduplicated no-reply checkpoint plus help/inbox/generator/handoff/partner/validation artifacts, reran self-audit follow-up QA, and kept the live evidence state at 20 active outbound rows with 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-05 to 2026-05-06: Shipped the direct-submit teardown funnel, requester-role capture, webhook archive preservation, and handoff/reporting hardening needed to classify the first teardown, partner request, or tagged self-audit reply immediately.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, indexing, and search-console work is shipped; live work stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.
