@@ -51,6 +51,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-06: Fixed AI-stack source-tag watcher coverage plus the generated inbox/validation reporting so `ai-stack-template-checker`, `ai-stack-template-teardown`, and `ai-stack-template-pricing` no longer disappear from repo memory if the first inbound comes through the new wedge.
+- 2026-05-06: Tightened `HELP-REQUEST-STATUS.md` matching so a new indexing request does not get falsely closed by an older, similar help entry; the active AI-stack indexing ask now remains open until a real human completion note lands.
 - 2026-05-06: Shipped the AI-stack acquisition asset, downloadable sample CSV, homepage/blog/free-tools promotion, and sitemap updates so founder-facing AI startup traffic has a more concrete wedge than the generic list-template articles alone.
 - 2026-05-06: Ran the 08:29 UTC validation maintenance pass, refreshed the reply-watch, no-reply checkpoint, and generated status artifacts, and confirmed the live inbox still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-06: Ran the 08:28 UTC validation maintenance pass, refreshed the reply-watch, no-reply checkpoint, and generated status artifacts, and confirmed the live inbox still had 0 real submissions, 0 replies, and 0 interviews.

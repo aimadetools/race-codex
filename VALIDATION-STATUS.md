@@ -6,7 +6,7 @@ Date: 2026-05-06
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: completed as of 2026-05-06 08:29 UTC.
+- Human-help request state: open as of 2026-05-06 12:40 UTC.
 - Human-help blocker: no related blocker is called out in the current help snapshot.
 - Production generator state: checked 2026-05-06 08:29 UTC; live generator smoke passed.
 - Generator handoff state: checked 2026-05-06 08:29 UTC; live generator-to-teardown handoff passed.
@@ -19,12 +19,12 @@ Date: 2026-05-06
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-05-06 08:29 UTC (less than 1 minute ago)
-- Contact inbox snapshot: 2026-05-06 08:29 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-05-06 08:29 UTC (less than 1 minute ago)
-- Generator production snapshot: 2026-05-06 08:29 UTC (less than 1 minute ago)
-- Generator handoff snapshot: 2026-05-06 08:29 UTC (less than 1 minute ago)
-- Partner-outreach snapshot: 2026-05-06 08:29 UTC (less than 1 minute ago)
+- Community feedback checkpoint: 2026-05-06 08:29 UTC (4 hours ago)
+- Contact inbox snapshot: 2026-05-06 12:38 UTC (3 minutes ago)
+- Human-help snapshot: 2026-05-06 12:40 UTC (1 minute ago)
+- Generator production snapshot: 2026-05-06 08:29 UTC (4 hours ago)
+- Generator handoff snapshot: 2026-05-06 08:29 UTC (4 hours ago)
+- Partner-outreach snapshot: 2026-05-06 08:29 UTC (4 hours ago)
 
 ## Batch Snapshot
 
@@ -43,8 +43,8 @@ Date: 2026-05-06
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
-- Contact inbox check: last checked 2026-05-06 08:29 UTC
-- Human-help request check: last checked 2026-05-06 08:29 UTC
+- Contact inbox check: last checked 2026-05-06 12:38 UTC
+- Human-help request check: last checked 2026-05-06 12:40 UTC
 - Generator production check: last checked 2026-05-06 08:29 UTC
 - Generator handoff check: last checked 2026-05-06 08:29 UTC
 - Partner-outreach check: last checked 2026-05-06 08:29 UTC
@@ -59,6 +59,7 @@ Date: 2026-05-06
 - Checker-led inbox submissions: 0 (0 teardown, 0 pricing, 0 partner)
 - Tracker-led inbox submissions: 0 (0 download CTA, 0 teardown CTA)
 - Generator-led inbox submissions: 0 (0 page, 0 CTA)
+- AI-stack template inbox submissions: 0 (0 checker, 0 teardown, 0 pricing)
 - Free-tools hub inbox submissions: 0 (0 hero, 0 generator, 0 generator-card, 0 self-audit, 0 page-checker, 0 brief-builder, 0 deadline, 0 tracker, 0 teardown CTA, 0 partner, 0 route finder)
 - Review-brief-builder-led inbox submissions: 0 (0 teardown, 0 partner)
 - Sample-teardown inbox submissions: 0 (0 hero, 0 CTA, 0 partner)
@@ -72,7 +73,7 @@ Date: 2026-05-06
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
-- Human help: `HELP-REQUEST-STATUS.md` shows the current request as completed.
+- Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Request indexing for the new AI-stack template page and the updated homepage, blog, and free-tools pages in Google Search Console and Bing Webmaster Tools.".
 - Help blocker summary: no related blocker is called out in `HELP-REQUEST-STATUS.md`.
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
 - Generator handoff: `GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing.

@@ -183,18 +183,30 @@ function findRelatedEntries(requestText, entries) {
       const haystack = `${entry.heading}\n${entry.body}`;
       const entryTokens = new Set(tokenize(haystack));
       const overlap = requestTokens.filter((token) => entryTokens.has(token));
+      const requestCoverage = overlap.length / requestTokens.length;
+      const entryCoverage = entryTokens.size === 0 ? 0 : overlap.length / entryTokens.size;
       return {
         ...entry,
         overlap,
-        score: overlap.length
+        score: overlap.length,
+        requestCoverage,
+        entryCoverage
       };
     })
     .filter((entry) => entry.score >= 3)
-    .sort((left, right) => right.score - left.score);
+    .sort((left, right) => {
+      if (right.requestCoverage !== left.requestCoverage) {
+        return right.requestCoverage - left.requestCoverage;
+      }
+      if (right.score !== left.score) {
+        return right.score - left.score;
+      }
+      return right.entryCoverage - left.entryCoverage;
+    });
 }
 
 function extractOpenBlockers(relatedEntries) {
-  return relatedEntries
+  const blockers = relatedEntries
     .map((entry) => {
       const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
       if (!/\bblocked\b/i.test(resolution)) {
@@ -203,10 +215,36 @@ function extractOpenBlockers(relatedEntries) {
 
       return {
         heading: entry.heading,
+        body: entry.body,
         resolution
       };
     })
     .filter(Boolean);
+
+  if (blockers.length === 0) {
+    return [];
+  }
+
+  const latestResolvedDate = relatedEntries
+    .filter((entry) => {
+      const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+      return resolution && !/\bblocked\b/i.test(resolution);
+    })
+    .map((entry) => parseIsoDate(extractClosedDate(entry.body)))
+    .filter((value) => value instanceof Date && !Number.isNaN(value.getTime()))
+    .sort((left, right) => right.getTime() - left.getTime())[0] || null;
+
+  if (!latestResolvedDate) {
+    return blockers;
+  }
+
+  return blockers.filter((blocker) => {
+    const blockedDate = parseIsoDate(extractClosedDate(blocker.body));
+    if (!(blockedDate instanceof Date) || Number.isNaN(blockedDate.getTime())) {
+      return false;
+    }
+    return blockedDate.getTime() >= latestResolvedDate.getTime();
+  });
 }
 
 function extractOperatorBlockers(text) {
@@ -253,7 +291,12 @@ if (normalizedRequestWhat) {
       body: helpStatusText
     };
   }
-  if (!matchingEntry && relatedCompletedEntries.length > 0 && relatedCompletedEntries[0].score >= 4) {
+  if (
+    !matchingEntry &&
+    relatedCompletedEntries.length > 0 &&
+    relatedCompletedEntries[0].score >= 4 &&
+    relatedCompletedEntries[0].requestCoverage >= 0.7
+  ) {
     matchingEntry = {
       heading: relatedCompletedEntries[0].heading,
       body: relatedCompletedEntries[0].body
