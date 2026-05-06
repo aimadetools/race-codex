@@ -51,6 +51,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-05 to 2026-05-06: Collapsed the repeated validation/help refreshes, shipped the AI-stack acquisition wedge and adjacent notice-template funnel, and hardened the direct-submit teardown, attribution, indexing, and crawlability paths needed to classify the first real inbound cleanly.
-- 2026-05-06: Tightened the self-audit follow-up copy, kept the QA harness aligned, and refreshed the live validation/watch artifacts while the evidence state stayed at 20 active outbound rows with 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, and crawlability paths for future inbound classification.
+- 2026-05-06: Kept the self-audit follow-up copy, QA harness, and live validation/watch artifacts current while the evidence state stayed at 20 active outbound rows with 0 real submissions, 0 replies, and 0 interviews.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
