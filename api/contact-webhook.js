@@ -1,4 +1,5 @@
 const BLOB_PREFIX = "contact-webhook-deliveries";
+const { buildForwardedRecord } = require("./contact-forwarded-record.js");
 
 function sendJson(response, statusCode, payload) {
   response.writeHead(statusCode, {
@@ -6,10 +7,6 @@ function sendJson(response, statusCode, payload) {
     "cache-control": "no-store"
   });
   response.end(JSON.stringify(payload));
-}
-
-function clean(value) {
-  return String(value || "").trim().slice(0, 2000);
 }
 
 function getAuthorizationToken(request) {
@@ -77,22 +74,7 @@ module.exports = async function handler(request, response) {
   }
 
   const receivedAt = new Date().toISOString();
-  const record = {
-    referenceId: clean(payload.referenceId) || `WH-${receivedAt.replace(/[-:]/g, "").slice(0, 15)}`,
-    receivedAt,
-    forwardedAt: clean(payload.storedAt || payload.submittedAt || receivedAt),
-    company: clean(payload.company),
-    email: clean(payload.email),
-    type: clean(payload.type),
-    ownershipSignal: clean(payload.ownershipSignal),
-    subprocessorUrl: clean(payload.subprocessorUrl),
-    vendorChange: clean(payload.vendorChange),
-    deadline: clean(payload.deadline),
-    reviewNeed: clean(payload.reviewNeed),
-    storageUrl: clean(payload.storageUrl),
-    userAgent: clean(payload.userAgent),
-    source: "contact-webhook"
-  };
+  const record = buildForwardedRecord(payload, receivedAt);
 
   try {
     const { put } = await loadBlobSdk();
