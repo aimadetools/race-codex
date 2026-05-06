@@ -21,6 +21,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-06
 
+- Ran the 08:17 UTC validation maintenance pass, refreshed the help, inbox, generator, handoff, partner, and validation status artifacts, and confirmed there were still 0 real submissions, 0 replies, and 0 interviews while the reply-watch stayed flat.
 - Ran the 08:15 UTC validation maintenance pass, refreshed the help, inbox, generator, handoff, partner, and validation status artifacts, and confirmed there were still 0 real submissions, 0 replies, and 0 interviews while the reply-watch stayed flat.
 - Re-ran the 08:03 to 08:14 UTC maintenance and verification loop, including `npm run check:site-links`, and kept the live state at 0 real submissions, 0 replies, and 0 interviews across the watched batches.
 - Shipped the conversion-first intake update: `free-teardown.html` now submits directly to `/api/contact`, both teardown and full intake capture explicit requester roles, and the contact plus webhook paths preserve `ownershipSignal`, `sourceTag`, `submissionChannel`, partner fields, and self-audit metadata so the first real inbound can be qualified without raw-record cleanup.
