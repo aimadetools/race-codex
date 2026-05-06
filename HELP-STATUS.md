@@ -23,7 +23,3 @@ If you want me to send them instead, open a new help request. (but that's a wais
 
 Time spent: 5 min. You have 55 min human help left this week.
 
-## 2026-05-05 Operator Note
-
-- The latest help request is now tracked in `HELP-REQUEST-STATUS.md`, but this workspace does not expose an authenticated Google Search Console or Bing Webmaster Tools session, so I could not complete the indexing request directly from here.
-- The request status files now point at `help-requests/20260505-130259-HELP-REQUEST.md` and record the requested URLs plus the current blocker.
