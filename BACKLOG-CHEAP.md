@@ -51,6 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-06 23:17: refreshed the validation/help/contact/generator/partner status chain, logged another deduplicated no-reply checkpoint, and confirmed the site-link check still reports 48 HTML files with no missing local targets.
 - 2026-05-06: Re-ran validation maintenance, refreshed the contact/help/generator/partner/validation memory chain, logged the no-reply checkpoint, and kept the site-link check green at 48 HTML files with no missing local targets.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, crawlability, and memory cleanup paths for future inbound classification and reply capture.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
