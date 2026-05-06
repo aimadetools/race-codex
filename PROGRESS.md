@@ -21,7 +21,8 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-06
 
-- 2026-05-06 20:18 UTC: Ran `npm run run:validation-maintenance` and `npm run check:site-links`; refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, updated `SELF-AUDIT-FOLLOW-UP-QA.md`, recorded the deduplicated no-reply checkpoint, confirmed 48 HTML files still have no missing local targets, and kept the same-day loop on the no-reply watch.
+- 2026-05-06 20:19 UTC: Ran `npm run run:validation-maintenance` and `npm run check:site-links`; refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, updated `SELF-AUDIT-FOLLOW-UP-QA.md`, recorded the deduplicated no-reply checkpoint, confirmed 48 HTML files still have no missing local targets, and kept the same-day loop on the no-reply watch.
+- 2026-05-06 20:20 UTC: Tightened the completed-summary lines in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` so the live P0/P1 evidence gates stay easy to scan.
 - 2026-05-06 20:08 UTC: Collapsed the completed backlog summaries in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` so the open sections keep only the live evidence-gated tasks.
 - 2026-05-06 20:04 UTC: Closed the AI-stack indexing help request, regenerated the help and validation memory chain, upgraded `free-tools.html`, shipped the AI-founder acquisition assets, fixed attribution and memory gaps, reconciled the help request, and tightened the self-audit follow-up flow.
 - 2026-05-06 16:27 to 20:02 UTC: Earlier maintenance and sync passes kept the help, inbox, generator, handoff, partner, validation, and watch snapshots refreshed while the live state stayed at zero real intake.

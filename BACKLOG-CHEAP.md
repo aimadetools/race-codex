@@ -51,7 +51,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-06: Ran the 20:18 UTC validation maintenance and site-link checks; refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, recorded the deduplicated no-reply checkpoint, and confirmed 48 HTML files still had no missing local targets.
-- 2026-05-06: Closed the AI-stack indexing help request, upgraded the free-tools route finder, shipped the AI-stack acquisition assets, and tightened attribution and help-request handling for the new wedge.
+- 2026-05-06: Ran the 20:19 UTC validation maintenance and site-link checks, closed the AI-stack indexing help request, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, and tightened attribution and help-request handling for the new wedge.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, and crawlability paths for future inbound classification and reply capture.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
