@@ -27,8 +27,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-06: Ran the 20:26 UTC validation maintenance pass, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots again, and confirmed the local site-link check still reports 48 HTML files with no missing local targets.
-- 2026-05-06: Ran the 20:25 UTC validation maintenance pass, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, and confirmed the local site-link check still reports 48 HTML files with no missing local targets.
-- 2026-05-06: Ran the 20:23 UTC validation maintenance and site-link checks, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, and kept the evidence decision chain aligned with the current no-reply state.
+- 2026-05-06: Re-ran the 20:26 to 20:28 UTC validation maintenance and site-link integrity checks, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, recorded another deduplicated no-reply checkpoint, and confirmed 48 HTML files still have no missing local targets.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help/support refreshes, shipped the AI-founder acquisition wedge and notice-template funnel, and hardened teardown, handoff, attribution, reporting, and crawlability paths for future channel decisions.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
