@@ -27,7 +27,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-06: Shipped the AI-founder acquisition wedge with the AI-stack template, sample CSV, homepage/blog/free-tools promotion, sitemap/indexing follow-up, and download-led attribution hardening so the next AI-startup inbound can be compared cleanly against the older wedges.
-- 2026-05-06: Kept the validation maintenance loop current through 12:49 UTC, refreshed the reply-watch and generated status artifacts, reran self-audit follow-up QA, and confirmed the evidence state still sat at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
-- 2026-05-05 to 2026-05-06: Shipped the direct-submit teardown funnel plus the reporting, archive, and handoff hardening needed to classify the first real teardown, partner request, or tagged self-audit reply without extra manual triage.
-- Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; remaining premium work is limited to evidence capture and channel decisioning until a real reply or interview lands.
+- 2026-05-05 to 2026-05-06: Shipped the AI-founder acquisition wedge plus the teardown, archive, handoff, and attribution/reporting hardening required to compare the next real inbound against the older founder and advisor wedges.
+- 2026-05-06: Validation maintenance and generated decision artifacts are current; the evidence state remains 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
+- Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
