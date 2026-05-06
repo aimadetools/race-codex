@@ -51,10 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-06: Ran the 23:03 UTC validation maintenance pass, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, logged another deduplicated no-reply checkpoint, and confirmed `npm run check:site-links` still reports 48 HTML files with no missing local targets.
-- 2026-05-06: Ran the latest validation maintenance refresh, rewrote the contact/help/generator/partner snapshots, logged another deduplicated no-reply checkpoint, and confirmed site links still pass with 48 HTML files and no missing local targets.
-- 2026-05-06: Surfaced the AI-stack path earlier across the homepage, pricing page, and free-tools hub, then rechecked site links to confirm the static pages still report no missing local targets.
-- 2026-05-06: Ran another validation maintenance pass, refreshed the live help, inbox, generator, handoff, and partner snapshots, logged a deduplicated no-reply checkpoint, and rechecked site-link integrity with 48 HTML files still reporting no missing local targets.
-- 2026-05-06: Re-ran the 20:26 to 20:28 UTC validation maintenance and site-link integrity checks, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, recorded another deduplicated no-reply checkpoint, and confirmed 48 HTML files still have no missing local targets.
+- 2026-05-06: Ran repeated validation maintenance refreshes, rewrote the contact/help/generator/partner snapshots, logged deduplicated no-reply checkpoints, and confirmed site links still pass with 48 HTML files and no missing local targets.
+- 2026-05-06: Surfaced the AI-stack path earlier across the homepage, pricing page, and free-tools hub, then kept the no-reply watch aligned while no tagged intake landed.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, and crawlability paths for future inbound classification and reply capture.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.

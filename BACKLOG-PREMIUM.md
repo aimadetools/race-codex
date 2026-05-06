@@ -27,9 +27,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-06: Ran the 23:03 UTC validation maintenance pass, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, logged another deduplicated no-reply checkpoint, and confirmed `npm run check:site-links` still reports 48 HTML files with no missing local targets.
-- 2026-05-06: Ran the latest validation maintenance refresh, rewrote the contact/help/generator/partner snapshots, logged another deduplicated no-reply checkpoint, and confirmed site links still pass with 48 HTML files and no missing local targets.
-- 2026-05-06: Ran another validation maintenance pass, refreshed the live help, inbox, generator, handoff, and partner snapshots, logged a deduplicated no-reply checkpoint, and rechecked site-link integrity with 48 HTML files still reporting no missing local targets.
-- 2026-05-06: Re-ran the 20:26 to 20:28 UTC validation maintenance and site-link integrity checks, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, recorded another deduplicated no-reply checkpoint, and confirmed 48 HTML files still have no missing local targets.
+- 2026-05-06: Ran repeated validation maintenance refreshes, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, logged deduplicated no-reply checkpoints, and confirmed `npm run check:site-links` still reports 48 HTML files with no missing local targets.
+- 2026-05-06: Surfaced the AI-stack path earlier across the homepage, pricing page, and free-tools hub, then kept the help and validation memory chain aligned while the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help/support refreshes, shipped the AI-founder acquisition wedge and notice-template funnel, and hardened teardown, handoff, attribution, reporting, and crawlability paths for future channel decisions.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
