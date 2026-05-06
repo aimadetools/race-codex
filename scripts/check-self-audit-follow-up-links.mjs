@@ -17,6 +17,7 @@ const CASES = [
     expectedScore: "4/10",
     expectedLabel: "High-risk gap",
     expectedShareCopy: "If you came here from the founder follow-up, email the score and top gaps. Async feedback is enough.",
+    expectedReplyHint: "Reply with the score, the top gaps, and whether you want Starter, Pro, or the free teardown.",
     expectedSource: "Source: founder follow-up"
   },
   {
@@ -27,6 +28,7 @@ const CASES = [
     expectedScore: "8/10",
     expectedLabel: "Review-ready",
     expectedShareCopy: "If you came here from the advisor follow-up, email the score and top gaps. Async feedback is enough.",
+    expectedReplyHint: "Reply with the score, the top gaps, and whether you want referral-only, client delivery, or white-label access.",
     expectedSource: "Source: advisor follow-up"
   }
 ];
@@ -101,6 +103,7 @@ async function runCase(testCase) {
   const score = document.querySelector("#score-value")?.textContent?.trim() || "";
   const label = document.querySelector("#score-label")?.textContent?.trim() || "";
   const shareCopy = document.querySelector("#share-copy")?.textContent?.trim() || "";
+  const replyHint = document.querySelector("#reply-hint")?.textContent?.trim() || "";
   const emailHref = document.querySelector("#email-score-link")?.getAttribute("href") || "";
   const emailVisible = !document.querySelector("#email-score-link")?.hidden;
   const copyVisible = !document.querySelector("#copy-score-button")?.hidden;
@@ -108,6 +111,7 @@ async function runCase(testCase) {
   assert(score === testCase.expectedScore, `${testCase.name}: expected score ${testCase.expectedScore}, received ${score}.`);
   assert(label === testCase.expectedLabel, `${testCase.name}: expected label ${testCase.expectedLabel}, received ${label}.`);
   assert(shareCopy === testCase.expectedShareCopy, `${testCase.name}: unexpected share-copy text.`);
+  assert(replyHint === testCase.expectedReplyHint, `${testCase.name}: unexpected reply-hint text.`);
   assert(emailHref.startsWith("mailto:hello@noticekit.tech?subject="), `${testCase.name}: email link did not render a mailto with subject.`);
   assert(emailVisible, `${testCase.name}: email CTA is not visible.`);
   assert(copyVisible, `${testCase.name}: copy CTA is not visible.`);
@@ -156,6 +160,7 @@ async function runCase(testCase) {
     score,
     label,
     shareCopy,
+    replyHint,
     subject,
     copyStatus,
     feedbackStatus

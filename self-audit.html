@@ -137,7 +137,8 @@
             </div>
             <div class="share-card">
               <strong>Send the score, not a vague reply</strong>
-              <p id="share-copy">If you came here from a validation follow-up, email the score and top gaps. Async feedback is enough.</p>
+              <p id="share-copy">Email the score and top gaps. Async feedback is enough.</p>
+              <p id="reply-hint" class="fine-print">Add the next-step detail: Starter, Pro, teardown, or partner access.</p>
               <div class="result-actions">
                 <a class="button secondary" id="email-score-link" href="mailto:hello@noticekit.tech">Email this score</a>
                 <button class="button secondary" id="copy-score-button" type="button">Copy summary</button>
@@ -242,6 +243,7 @@
       const copyScoreButton = document.querySelector("#copy-score-button");
       const copyStatus = document.querySelector("#copy-status");
       const shareCopy = document.querySelector("#share-copy");
+      const replyHint = document.querySelector("#reply-hint");
       const feedbackForm = document.querySelector("#feedback-form");
       const feedbackStatus = document.querySelector("#feedback-status");
       const feedbackSubmit = document.querySelector("#feedback-submit");
@@ -250,7 +252,19 @@
         "founder-follow-up": "founder follow-up",
         "advisor-follow-up": "advisor follow-up",
         "founder-batch-03": "founder batch 03",
-        "founder-batch-04": "founder batch 04"
+        "founder-batch-04": "founder batch 04",
+        "founder-follow-up-teardown": "founder follow-up teardown",
+        "advisor-follow-up-teardown": "advisor follow-up teardown",
+        "founder-follow-up-tracker": "founder follow-up tracker",
+        "advisor-follow-up-tracker": "advisor follow-up tracker"
+      };
+      const replyPromptMap = {
+        "founder follow-up": "Reply with the score, the top gaps, and whether you want Starter, Pro, or the free teardown.",
+        "advisor follow-up": "Reply with the score, the top gaps, and whether you want referral-only, client delivery, or white-label access.",
+        "founder follow-up teardown": "Reply with the score, the top gaps, and whether the teardown should route toward the generator, Starter, or Pro.",
+        "advisor follow-up teardown": "Reply with the score, the top gaps, and whether the teardown should route toward referral-only, client delivery, or white-label access.",
+        "founder follow-up tracker": "Reply with the score, the top gaps, and whether the tracker or teardown path should be the next slot.",
+        "advisor follow-up tracker": "Reply with the score, the top gaps, and whether the tracker or partner path should be the next slot."
       };
 
       const advice = {
@@ -270,12 +284,18 @@
         return sourceLabelMap[pageSource] || pageSource.replace(/[-_]+/g, " ").trim();
       }
 
+      function replyPrompt() {
+        const source = sourceLabel();
+        return replyPromptMap[source] || "Reply with the score and top gaps. Async feedback is enough.";
+      }
+
       function buildSummary(score, label, missing, channel = "mailto") {
         return [
           `Self-audit score: ${score}/10 (${label})`,
           `Top gaps: ${missing.length ? missing.slice(0, 4).map((key) => advice[key]).join(" | ") : "No checklist gaps left."}`,
           `Source: ${sourceLabel() || "direct site visit"}`,
           `Channel: ${channel}`,
+          `Next reply: ${replyPrompt()}`,
           "",
           "Optional context:",
           "- Who owns subprocessor notices today?",
@@ -391,6 +411,7 @@
         shareCopy.textContent = source
           ? `If you came here from the ${source}, email the score and top gaps. Async feedback is enough.`
           : "Email the score and top gaps if you want blunt feedback without a call.";
+        replyHint.textContent = replyPrompt();
         copyStatus.textContent = "";
 
         const emailSummary = buildSummary(score, label, missing, "mailto");
