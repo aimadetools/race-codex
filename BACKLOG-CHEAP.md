@@ -51,9 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-06: Reran validation maintenance at 16:24 UTC and checked site links; the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews, and no missing local targets were found.
-- 2026-05-06: Reran validation maintenance at 16:22 UTC, refreshing the help, inbox, generator, handoff, partner, validation, and watch snapshots while reply capture still waited on the first real inbound.
-- 2026-05-06: Reran the validation artifact sync at 16:21 UTC, refreshing the help, inbox, generator, handoff, partner, validation, and watch snapshots while reply capture still waited on the first real inbound.
-- 2026-05-06: Rechecked the reply watch at 16:18 UTC, then reran the 16:20 UTC validation artifact sync to refresh the validation/help/partner/watch snapshots; the live inbox still has 0 real submissions and 0 replies.
+- 2026-05-06: Reran validation maintenance at 16:27 UTC and checked site links; the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews, and no missing local targets were found.
+- 2026-05-06: Earlier maintenance and sync passes at 16:04 to 16:24 UTC refreshed the help, inbox, generator, handoff, partner, validation, and watch snapshots while reply capture still waited on the first real inbound.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, and crawlability paths for future inbound classification and reply capture.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
