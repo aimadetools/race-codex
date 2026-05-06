@@ -523,6 +523,8 @@ const inboxPartnerClientHandoffTeardown = extractInboxBreakdownMetric(contactInb
 const inboxPartnerClientHandoffCta = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "partner-client-handoff-cta");
 const inboxPartnerBatch = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "partner-outreach-batch-01");
 const inboxPartnerFollowUp = extractInboxBreakdownMetric(contactInboxStatusText, "By Source Tag", "partner-outreach-follow-up-01");
+const inboxFounderFollowUpTeardown = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "founder-follow-up-teardown");
+const inboxAdvisorFollowUpTeardown = extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", "advisor-follow-up-teardown");
 const inboxHasRealSubmissions = hasRealInboxSubmission(contactInboxStatusText);
 const helpRequestStatus = extractHelpRequestStatus(helpRequestStatusText);
 const helpRequestWhat = extractHelpRequestWhat(helpRequestStatusText);
@@ -609,6 +611,7 @@ const output = [
   `- Kit-preview inbox submissions: ${(inboxKitPreviewHero == null || inboxKitPreviewGrid == null || inboxKitPreviewBottom == null) ? "unknown" : inboxKitPreviewHero + inboxKitPreviewGrid + inboxKitPreviewBottom} (${inboxKitPreviewHero == null ? "unknown" : inboxKitPreviewHero} hero, ${inboxKitPreviewGrid == null ? "unknown" : inboxKitPreviewGrid} grid, ${inboxKitPreviewBottom == null ? "unknown" : inboxKitPreviewBottom} bottom)`,
   `- Partner-preview inbox submissions: ${(inboxPartnerPreviewHero == null || inboxPartnerPreviewCta == null) ? "unknown" : inboxPartnerPreviewHero + inboxPartnerPreviewCta} (${inboxPartnerPreviewHero == null ? "unknown" : inboxPartnerPreviewHero} hero, ${inboxPartnerPreviewCta == null ? "unknown" : inboxPartnerPreviewCta} CTA)`,
   `- Partner-client-handoff inbox submissions: ${(inboxPartnerClientHandoffHero == null || inboxPartnerClientHandoffFounder == null || inboxPartnerClientHandoffTeardown == null || inboxPartnerClientHandoffCta == null) ? "unknown" : inboxPartnerClientHandoffHero + inboxPartnerClientHandoffFounder + inboxPartnerClientHandoffTeardown + inboxPartnerClientHandoffCta} (${inboxPartnerClientHandoffHero == null ? "unknown" : inboxPartnerClientHandoffHero} hero, ${inboxPartnerClientHandoffFounder == null ? "unknown" : inboxPartnerClientHandoffFounder} founder teardown, ${inboxPartnerClientHandoffTeardown == null ? "unknown" : inboxPartnerClientHandoffTeardown} teardown CTA, ${inboxPartnerClientHandoffCta == null ? "unknown" : inboxPartnerClientHandoffCta} partner CTA)`,
+  `- Follow-up teardown inbox submissions: ${(inboxFounderFollowUpTeardown == null || inboxAdvisorFollowUpTeardown == null) ? "unknown" : inboxFounderFollowUpTeardown + inboxAdvisorFollowUpTeardown} (${inboxFounderFollowUpTeardown == null ? "unknown" : inboxFounderFollowUpTeardown} founder follow-up, ${inboxAdvisorFollowUpTeardown == null ? "unknown" : inboxAdvisorFollowUpTeardown} advisor follow-up)`,
   `- Partner-tagged inbox submissions: ${(inboxPartnerBatch == null || inboxPartnerFollowUp == null) ? "unknown" : inboxPartnerBatch + inboxPartnerFollowUp} (${inboxPartnerBatch == null ? "unknown" : inboxPartnerBatch} initial outreach, ${inboxPartnerFollowUp == null ? "unknown" : inboxPartnerFollowUp} follow-up outreach)`,
   "",
   "## Notes",

@@ -3,6 +3,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { get, list } from "@vercel/blob";
+import { WATCHED_SOURCE_TAGS } from "./watched-source-tags.mjs";
 
 const ROOT = process.cwd();
 const OUTPUT = join(ROOT, "CONTACT-INBOX-STATUS.md");
@@ -10,59 +11,6 @@ const DEFAULT_ENV_FILE = join(ROOT, ".env.production.local");
 const FALLBACK_ENV_FILE = join(ROOT, ".env.local");
 const BLOB_PREFIX = "contact-submissions/";
 const MAX_SUBMISSIONS = 200;
-const WATCHED_SOURCE_TAGS = [
-  "homepage-hero",
-  "homepage-async-teardown",
-  "homepage-partner-cta",
-  "pricing-page",
-  "pricing-page-top",
-  "pricing-page-partner",
-  "pricing-partner-cta",
-  "about-page",
-  "generator-page",
-  "generator-cta",
-  "blog-subprocessor-page-checker-teardown",
-  "blog-subprocessor-page-checker-pricing",
-  "blog-subprocessor-page-checker-partner",
-  "blog-vendor-change-review-packet",
-  "blog-dpa-objection-window-template",
-  "blog-dpa-objection-window-cta",
-  "blog-index",
-  "free-tools-hero",
-  "free-tools-generator",
-  "free-tools-generator-card",
-  "free-tools-self-audit",
-  "free-tools-page-checker",
-  "free-tools-brief-builder",
-  "free-tools-deadline",
-  "free-tools-tracker",
-  "free-tools-conversion",
-  "free-tools-partner",
-  "free-tools-route-finder",
-  "review-brief-builder-teardown",
-  "review-brief-builder-partner",
-  "sample-teardown-hero",
-  "sample-teardown-cta",
-  "sample-teardown-partner",
-  "kit-preview-hero",
-  "kit-preview-grid",
-  "kit-preview-bottom",
-  "start-here",
-  "start-here-card",
-  "monitoring-comparison",
-  "partner-preview-hero",
-  "partner-preview-cta",
-  "partner-client-handoff-hero",
-  "partner-client-handoff-founder",
-  "partner-client-handoff-teardown",
-  "partner-client-handoff-cta",
-  "partner-outreach-batch-01",
-  "partner-outreach-follow-up-01",
-  "founder-follow-up",
-  "advisor-follow-up",
-  "founder-follow-up-tracker",
-  "advisor-follow-up-tracker"
-];
 const TEARDOWN_SOURCE_FAMILY_ORDER = [
   "homepage",
   "pricing",

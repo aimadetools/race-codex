@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-06 04:07 UTC
+Checked at: 2026-05-06 04:11 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -88,6 +88,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - partner-outreach-follow-up-01: 0
 - founder-follow-up: 0
 - advisor-follow-up: 0
+- founder-follow-up-teardown: 0
+- advisor-follow-up-teardown: 0
 - founder-follow-up-tracker: 0
 - advisor-follow-up-tracker: 0
 
