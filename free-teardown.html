@@ -213,23 +213,31 @@
 
       if (source) {
         sourceTag.value = source;
-        intakeUrl.searchParams.set("source", source);
       }
 
       if (channel) {
         channelTag.value = channel;
-        intakeUrl.searchParams.set("channel", channel);
       }
 
-      for (const name of Object.keys(prefillFields)) {
-        const value = query.get(name);
-        if (value) {
-          intakeUrl.searchParams.set(name, value);
+      function syncSkipToIntakeHref() {
+        intakeUrl.search = "";
+        intakeUrl.searchParams.set("type", "free_async_teardown");
+        intakeUrl.searchParams.set("source", fieldValue("source-tag") || "free-teardown-page");
+        intakeUrl.searchParams.set("channel", fieldValue("channel-tag") || "free-teardown-landing");
+
+        for (const [name, field] of Object.entries(prefillFields)) {
+          const currentValue = field?.value?.trim();
+          if (currentValue) {
+            intakeUrl.searchParams.set(name, currentValue);
+          }
         }
+
+        skipToIntake.href = intakeUrl.pathname + intakeUrl.search;
       }
 
-      intakeUrl.searchParams.set("type", "free_async_teardown");
-      skipToIntake.href = intakeUrl.pathname + intakeUrl.search;
+      syncSkipToIntakeHref();
+      form.addEventListener("input", syncSkipToIntakeHref);
+      form.addEventListener("change", syncSkipToIntakeHref);
 
       function setSummary(text, isError = false) {
         summary.hidden = false;
@@ -243,6 +251,7 @@
 
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
+        syncSkipToIntakeHref();
         submitButton.disabled = true;
         submitButton.textContent = "Sending...";
 
