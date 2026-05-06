@@ -15,9 +15,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 
 ## 2026-05-05
 
-- Ran the 23:30 UTC validation maintenance pass, which rechecked the reply watch, logged a deduplicated no-reply checkpoint, and refreshed the live help, inbox, generator, handoff, partner, and validation status artifacts; the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- Ran the 23:23 to 23:27 UTC maintenance passes, including the follow-up QA check, the deduplicated no-reply checkpoint, and the validation sync; refreshed `COMMUNITY-FEEDBACK.md`, `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md`, and kept the queue at 0 real submissions, 0 replies, and 0 interviews.
-- Ran the 23:28 UTC maintenance pass as well; it refreshed the reply-watch and status snapshots again, kept `COMMUNITY-FEEDBACK.md` on a clean no-reply checkpoint, and left the live queue at 0 real submissions, 0 replies, and 0 interviews.
+- Ran repeated 23:23 to 23:30 UTC validation maintenance passes, including follow-up QA, the deduplicated no-reply checkpoint, and the artifact sync; refreshed the live help, inbox, generator, handoff, partner, and validation snapshots while the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - Kept the partner-program follow-ups, free-tools hub, route finder, and founder handoff preview shipped and live while the reply-watch stayed on zero-real-intake evidence.
 - The earlier same-day maintenance, help-status reconciliation, and static-target verification passes stayed clean as well, so reply capture remains the next unlock.
 - Collapsed the backlog summary language so the active P0 evidence tasks stay easier to scan while the shipped maintenance items remain summarized below.
@@ -27,4 +25,5 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 - Broke the maintenance loop and shipped a conversion-focused intake change instead: `free-teardown.html` now submits directly to `/api/contact` instead of forcing a second step through `audit-request.html`, while preserving `source` and `channel` attribution.
 - Added explicit requester-role capture (`founder`, `operator`, `privacy consultant`, `fractional dpo`, `attorney`, `other`) to both `free-teardown.html` and `audit-request.html`, and threaded `ownershipSignal` through `api/contact.js` and `api/contact-webhook.js` so the first real teardown can be qualified as founder- or advisor-led immediately.
 - Verified the edited intake stack with `npm run check:site-links` and a Node module load check for `api/contact.js` / `api/contact-webhook.js`; local target checks stayed clean after the funnel change.
+- Ran a fresh 04:04 UTC validation maintenance pass after the intake change, which rechecked the reply watch, logged a deduplicated no-reply checkpoint, and refreshed `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `VALIDATION-STATUS.md`, and the related generator / follow-up artifacts; the queue still sits at 0 real submissions, 0 replies, and 0 interviews.
 - Left `HELP-STATUS.md` untouched because it already had user-side edits in the working tree; no new human request was needed for this session.

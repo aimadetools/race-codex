@@ -44,6 +44,12 @@ Rechecked on 2026-05-05 23:30 UTC: no advisor replies have been posted here yet.
 
 Rechecked on 2026-05-05 16:20 UTC: still no founder/operator or advisor replies were posted here, so the active outreach batches remain unchanged and the reply-watch task is still waiting on evidence.
 
+## 2026-05-06
+
+Rechecked on 2026-05-06 04:04 UTC: no founder/operator replies have been posted here yet across the active outreach batches. Keep `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-03.csv`, and `buyer-validation-outreach-batch-04.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+
+Rechecked on 2026-05-06 04:04 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+
 ## Reply Logging
 
 When a reply arrives, use `scripts/record-validation-feedback.mjs --input <json>` to append the reply note here, update the matching outreach CSV status, and optionally chain into `record:interview` for a real scored interview.
