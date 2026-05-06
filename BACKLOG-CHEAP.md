@@ -51,8 +51,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-06: Collapsed the repeated 16:04-16:12 UTC validation and help refreshes into one clean watch update, rechecked the site-link and source-tag coverage checks, and kept exact buyer validation blocked on the first real reply.
-- 2026-05-05 to 2026-05-06: Shipped the AI-stack acquisition wedge, the adjacent AI notice-template funnel, the direct-submit teardown and attribution hardening, the indexing/reporting updates needed to classify the first real inbound cleanly, and the crawlability/internal-linking hardening around the AI-stack guides.
-- 2026-05-06: Tightened the self-audit follow-up copy with source-specific reply hints for founder, advisor, teardown, tracker, and partner-adjacent paths, and updated the follow-up QA harness to keep the mailto/copy behavior in sync.
-- 2026-05-06: Validation maintenance, self-audit QA, source-tag coverage, and local-target verification are current; the live evidence state remains 20 active outbound rows with 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-05 to 2026-05-06: Collapsed the repeated validation/help refreshes, shipped the AI-stack acquisition wedge and adjacent notice-template funnel, and hardened the direct-submit teardown, attribution, indexing, and crawlability paths needed to classify the first real inbound cleanly.
+- 2026-05-06: Tightened the self-audit follow-up copy, kept the QA harness aligned, and refreshed the live validation/watch artifacts while the evidence state stayed at 20 active outbound rows with 0 real submissions, 0 replies, and 0 interviews.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
