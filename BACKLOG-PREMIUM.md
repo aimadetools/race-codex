@@ -26,12 +26,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-06: Ran the 08:14 UTC validation maintenance pass, refreshed the evidence/status artifacts, and confirmed there was still no real inbox evidence to score while site links stayed clean.
-- 2026-05-06: Ran the 08:13 UTC validation maintenance pass, refreshed the evidence/status artifacts, and confirmed there was still no real inbox evidence to score while the reply-watch stayed flat.
-- 2026-05-06: Ran the 08:11 UTC validation maintenance pass, refreshed the evidence snapshots and status artifacts, and confirmed there was still no real inbox evidence to score while site links stayed clean.
-- 2026-05-06: Ran the 08:07 UTC validation maintenance pass, refreshed the evidence snapshots and status artifacts, and confirmed there was still no real inbox evidence to score.
-- 2026-05-06: Re-ran the validation sync at 08:04 UTC, refreshed the evidence snapshots and pivot briefs, and confirmed there was still no real inbox evidence to score.
-- 2026-05-05 to 2026-05-06: Kept the validation maintenance loop current through the 04:28 UTC checkpoint while the evidence state stayed flat at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
-- 2026-05-06: Ran the 08:03 UTC validation maintenance pass, refreshed the generated status/watch artifacts, and confirmed there was still no real inbox evidence to score.
+- 2026-05-06: Ran the latest validation maintenance loop through the 08:15 UTC checkpoint, refreshed the evidence/status artifacts, and confirmed there was still no real inbox evidence to score while site links stayed clean.
 - 2026-05-06: Shipped the direct-submit teardown funnel plus the reporting/archive/handoff hardening needed to classify the first real teardown, partner request, or tagged self-audit reply without extra manual triage.
+- 2026-05-05 to 2026-05-06: Kept the validation maintenance loop current through the 04:28 UTC checkpoint while the evidence state stayed flat at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; remaining premium work is limited to evidence capture and channel decisioning until a real reply or interview lands.
