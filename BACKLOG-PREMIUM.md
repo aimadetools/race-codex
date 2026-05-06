@@ -27,6 +27,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-06: Ran the 23:03 UTC validation maintenance pass, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, logged another deduplicated no-reply checkpoint, and confirmed `npm run check:site-links` still reports 48 HTML files with no missing local targets.
 - 2026-05-06: Ran the latest validation maintenance refresh, rewrote the contact/help/generator/partner snapshots, logged another deduplicated no-reply checkpoint, and confirmed site links still pass with 48 HTML files and no missing local targets.
 - 2026-05-06: Ran another validation maintenance pass, refreshed the live help, inbox, generator, handoff, and partner snapshots, logged a deduplicated no-reply checkpoint, and rechecked site-link integrity with 48 HTML files still reporting no missing local targets.
 - 2026-05-06: Re-ran the 20:26 to 20:28 UTC validation maintenance and site-link integrity checks, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, recorded another deduplicated no-reply checkpoint, and confirmed 48 HTML files still have no missing local targets.
