@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-06 04:25 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-06 04:28 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
@@ -26,9 +26,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-05: Ran the 23:23 to 23:30 UTC maintenance and no-reply checkpoint passes, refreshed the inbox, help, partner, generator, and validation artifacts, and kept the live validation queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-06: Replaced the two-step teardown flow with a direct-submit intake on `free-teardown.html`, added requester-role capture across the teardown/audit intake stack, and reran the 04:04 UTC validation sync so the first real reply can be scored as founder-led or advisor-led immediately.
-- 2026-05-06: Refreshed the 04:13 UTC validation snapshots after the latest no-reply checkpoint; the evidence state is still 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
-- 2026-05-06: Hardened the webhook-backed intake archive so forwarded submissions keep their source, channel, role, partner, and self-audit qualification fields, then reran the 04:16 UTC validation sync with the evidence state still at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
-- 2026-05-06: Fixed the short-to-full teardown intake handoff, reran the 04:19 to 04:25 UTC validation sync window, and promoted ownership-signal plus partner-goal reporting into the generated inbox/validation artifacts so the first real teardown or partner request can be triaged without raw-record inspection; the evidence state still sits at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
+- 2026-05-05 to 2026-05-06: Kept the validation maintenance loop current through the 04:28 UTC checkpoint while the evidence state stayed flat at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
+- 2026-05-06: Shipped the direct-submit teardown funnel plus the reporting/archive/handoff hardening needed to classify the first real teardown, partner request, or tagged self-audit reply without extra manual triage.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; remaining premium work is limited to evidence capture and channel decisioning until a real reply or interview lands.
