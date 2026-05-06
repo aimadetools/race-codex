@@ -6,12 +6,11 @@ Date: 2026-05-06
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: completed as of 2026-05-06 20:30 UTC.
+- Human-help request state: open as of 2026-05-06 23:02 UTC.
 - Human-help blocker: no related blocker is called out in the current help snapshot.
-- Production generator state: checked 2026-05-06 20:30 UTC; live generator smoke passed.
-- Generator handoff state: checked 2026-05-06 20:30 UTC; live generator-to-teardown handoff passed.
-- Partner outreach state: last checked 2026-05-06 20:30 UTC; 0 ready, 5 sent/waiting, 0 replied.
-- Site-link integrity check: passed 2026-05-06 20:30 UTC; 48 HTML files still have no missing local targets.
+- Production generator state: checked 2026-05-06 23:02 UTC; live generator smoke passed.
+- Generator handoff state: checked 2026-05-06 23:02 UTC; live generator-to-teardown handoff passed.
+- Partner outreach state: last checked 2026-05-06 23:02 UTC; 0 ready, 5 sent/waiting, 0 replied.
 - Partner follow-up readiness: no partner follow-ups are currently queued.
 - Founder follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
 - Advisor follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
@@ -20,12 +19,12 @@ Date: 2026-05-06
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-05-06 20:29 UTC (1 minute ago)
-- Contact inbox snapshot: 2026-05-06 20:30 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-05-06 20:30 UTC (less than 1 minute ago)
-- Generator production snapshot: 2026-05-06 20:30 UTC (less than 1 minute ago)
-- Generator handoff snapshot: 2026-05-06 20:30 UTC (less than 1 minute ago)
-- Partner-outreach snapshot: 2026-05-06 20:30 UTC (less than 1 minute ago)
+- Community feedback checkpoint: 2026-05-06 23:02 UTC (less than 1 minute ago)
+- Contact inbox snapshot: 2026-05-06 23:02 UTC (less than 1 minute ago)
+- Human-help snapshot: 2026-05-06 23:02 UTC (less than 1 minute ago)
+- Generator production snapshot: 2026-05-06 23:02 UTC (less than 1 minute ago)
+- Generator handoff snapshot: 2026-05-06 23:02 UTC (less than 1 minute ago)
+- Partner-outreach snapshot: 2026-05-06 23:02 UTC (less than 1 minute ago)
 
 ## Batch Snapshot
 
@@ -44,11 +43,11 @@ Date: 2026-05-06
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
-- Contact inbox check: last checked 2026-05-06 20:30 UTC
-- Human-help request check: last checked 2026-05-06 20:30 UTC
-- Generator production check: last checked 2026-05-06 20:30 UTC
-- Generator handoff check: last checked 2026-05-06 20:30 UTC
-- Partner-outreach check: last checked 2026-05-06 20:30 UTC
+- Contact inbox check: last checked 2026-05-06 23:02 UTC
+- Human-help request check: last checked 2026-05-06 23:02 UTC
+- Generator production check: last checked 2026-05-06 23:02 UTC
+- Generator handoff check: last checked 2026-05-06 23:02 UTC
+- Partner-outreach check: last checked 2026-05-06 23:02 UTC
 - Real inbox submissions: 0
 - Inbox ownership signals: 0 (0 founder, 0 operator, 0 privacy consultant, 0 fractional dpo, 0 attorney, 0 other, 0 unknown)
 - Real free async teardown submissions: 0
@@ -74,12 +73,11 @@ Date: 2026-05-06
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
-- Human help: `HELP-REQUEST-STATUS.md` shows the current request as completed.
+- Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Request indexing for the new AI-stack template page and the updated homepage, blog, and free-tools pages in Google Search Console and Bing Webmaster Tools.".
 - Help blocker summary: no related blocker is called out in `HELP-REQUEST-STATUS.md`.
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
 - Generator handoff: `GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing.
 - Partner outreach: `PARTNER-OUTREACH-STATUS.md` says the next action is to monitor the tracker for replies and keep the next expansion gated on evidence.
-- Site-link integrity check: `npm run check:site-links` passed on 2026-05-06 20:30 UTC with 48 HTML files reporting no missing local targets.
 - Use `scripts/append-validation-interview.mjs --input <json>` only after a real conversation or specific referral.
 - Decision brief: `VALIDATION-DECISION-BRIEF.md` says: Use `VALIDATION-POSITIONING-BRIEF.md` as the positioning tie-breaker: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
 - Positioning brief: `VALIDATION-POSITIONING-BRIEF.md` says: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
