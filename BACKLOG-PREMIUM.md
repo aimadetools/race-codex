@@ -27,10 +27,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-06: Shipped the AI-founder acquisition wedge with a new OpenAI/Vercel/Stripe/Supabase/PostHog subprocessor-list template, downloadable sample CSV, homepage/blog/free-tools promotion, sitemap updates, and an indexing help request so the site is not stuck repeating maintenance-only sessions.
-- 2026-05-06: Ran the 08:29 UTC validation maintenance pass, refreshed the reply-watch, no-reply checkpoint, and generated status artifacts, and confirmed the inbox evidence still had 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-06: Ran the 08:28 UTC validation maintenance pass, refreshed the reply-watch, no-reply checkpoint, and generated status artifacts, and confirmed the inbox evidence still had 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-06: Ran the 08:15 to 08:26 UTC validation maintenance loop, refreshed the reply-watch and status artifacts, and kept the inbox evidence at zero while site-link checks stayed clean.
-- 2026-05-06: Shipped the direct-submit teardown funnel plus the reporting/archive/handoff hardening needed to classify the first real teardown, partner request, or tagged self-audit reply without extra manual triage.
-- 2026-05-05 to 2026-05-06: Kept the validation maintenance loop current through the 04:28 UTC checkpoint while the evidence state stayed flat at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
+- 2026-05-06: Shipped the AI-founder acquisition wedge with the AI-stack template, sample CSV, homepage/blog/free-tools promotion, sitemap/indexing follow-up, and attribution hardening so the next AI-startup inbound can be compared cleanly against the older wedges.
+- 2026-05-06: Kept the validation maintenance loop current through 12:44 UTC, refreshed the reply-watch and generated status artifacts, and confirmed the evidence state still sat at 20 active outreach rows, 0 real inbox submissions, 0 replies, and 0 interviews.
+- 2026-05-05 to 2026-05-06: Shipped the direct-submit teardown funnel plus the reporting, archive, and handoff hardening needed to classify the first real teardown, partner request, or tagged self-audit reply without extra manual triage.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; remaining premium work is limited to evidence capture and channel decisioning until a real reply or interview lands.
