@@ -27,6 +27,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-06: Refreshed the live help, inbox, generator, handoff, partner, validation, and watch snapshots at 16:10 UTC, then rechecked the watchboard and confirmed exact buyer validation is still blocked on the first real reply.
 - 2026-05-06: Reconciled the AI-stack indexing help request against the human response and refreshed the live validation/help snapshots at 16:08 UTC while reply capture remained blocked on external evidence.
 - 2026-05-06: Refreshed the live validation and status snapshots at 16:07 UTC, keeping the support checks clean while the exact buyer validation work remains waiting on the first real reply.
 - 2026-05-06: Refreshed the live validation and site-status snapshots at 16:05 UTC, confirmed the support checks are clean, and left exact buyer validation waiting on the first real reply.

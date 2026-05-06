@@ -51,6 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-06: Refreshed the live help, inbox, generator, handoff, partner, validation, and watch snapshots at 16:10 UTC, then rechecked the watchboard and confirmed exact buyer validation is still blocked on the first real reply.
 - 2026-05-06: Reconciled the AI-stack indexing help request against the human response and refreshed the live help/inbox/generator/handoff/partner/validation snapshots at 16:08 UTC.
 - 2026-05-06: Refreshed the live help, inbox, generator, handoff, partner, and validation snapshots at 16:07 UTC so the compact watch files stay current while reply capture remains blocked on external evidence.
 - 2026-05-06: Refreshed the live validation, site-link, and source-tag snapshots at 16:05 UTC, confirming the compact watch files stay clean while reply capture remains blocked on external evidence.
