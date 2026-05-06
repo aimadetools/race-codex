@@ -51,6 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-06 23:29 to 23:31 UTC: ran another validation maintenance pass, refreshed the contact/help/generator/handoff/partner/validation snapshot chain, logged another deduplicated no-reply checkpoint, and kept `npm run check:site-links` green at 48 HTML files with no missing local targets.
 - 2026-05-06 23:17 to 23:27 UTC: ran repeated validation maintenance passes, refreshed the contact/help/generator/handoff/partner/validation snapshot chain, logged deduplicated no-reply checkpoints, and kept `npm run check:site-links` green at 48 HTML files with no missing local targets.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, crawlability, and memory cleanup paths for future inbound classification and reply capture.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
