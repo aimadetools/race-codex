@@ -51,7 +51,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-06: Re-ran validation maintenance, rewrote the contact/help/generator/partner snapshots, logged deduplicated no-reply checkpoints, and confirmed site links still pass with 48 HTML files and no missing local targets.
-- 2026-05-06: Surfaced the AI-stack path earlier across the homepage, pricing page, and free-tools hub while the no-reply watch stayed empty.
+- 2026-05-06: Re-ran validation maintenance, rewrote the contact/help/generator/partner snapshots, surfaced the AI-stack path earlier across the homepage, pricing page, and free-tools hub, logged deduplicated no-reply checkpoints, and confirmed site links still pass with 48 HTML files and no missing local targets.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, crawlability, and memory cleanup paths for future inbound classification and reply capture.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.

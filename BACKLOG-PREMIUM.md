@@ -27,7 +27,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-06: Re-ran validation maintenance, refreshed the live help/inbox/generator/handoff/partner/validation snapshots, and confirmed `npm run check:site-links` still reports 48 HTML files with no missing local targets.
-- 2026-05-06: Surfaced the AI-stack path earlier across the homepage, pricing page, and free-tools hub while the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-06: Re-ran validation maintenance, refreshed the live help/inbox/generator/handoff/partner/validation snapshots, surfaced the AI-stack path earlier across the homepage, pricing page, and free-tools hub, and confirmed `npm run check:site-links` still reports 48 HTML files with no missing local targets while the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help/support refreshes, shipped the AI-founder acquisition wedge and notice-template funnel, and hardened teardown, handoff, attribution, reporting, crawlability, and indexing-path cleanup for future channel decisions.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
