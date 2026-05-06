@@ -51,6 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-06: Refreshed the live validation, site-link, and source-tag snapshots at 16:05 UTC, confirming the compact watch files stay clean while reply capture remains blocked on external evidence.
 - 2026-05-06: Refreshed the live validation and help status snapshots at 16:04 UTC so the compact watch files stay aligned while reply-capture remains blocked on external evidence.
 - 2026-05-05 to 2026-05-06: Shipped the AI-stack acquisition wedge, the adjacent AI notice-template funnel, the direct-submit teardown and attribution hardening, the indexing/reporting updates needed to classify the first real inbound cleanly, and the crawlability/internal-linking hardening around the AI-stack guides.
 - 2026-05-06: Tightened the self-audit follow-up copy with source-specific reply hints for founder, advisor, teardown, tracker, and partner-adjacent paths, and updated the follow-up QA harness to keep the mailto/copy behavior in sync.
