@@ -51,6 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-06: Fixed the AI-stack teardown-family attribution path in the generated inbox status, validation snapshot, and ops inbox UI so the first `ai-stack-template-teardown` request will surface as `ai-stack` instead of disappearing into `other`.
 - 2026-05-06: Fixed AI-stack source-tag watcher coverage plus the generated inbox/validation reporting so `ai-stack-template-checker`, `ai-stack-template-teardown`, and `ai-stack-template-pricing` no longer disappear from repo memory if the first inbound comes through the new wedge.
 - 2026-05-06: Tightened `HELP-REQUEST-STATUS.md` matching so a new indexing request does not get falsely closed by an older, similar help entry; the active AI-stack indexing ask now remains open until a real human completion note lands.
 - 2026-05-06: Shipped the AI-stack acquisition asset, downloadable sample CSV, homepage/blog/free-tools promotion, and sitemap updates so founder-facing AI startup traffic has a more concrete wedge than the generic list-template articles alone.

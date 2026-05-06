@@ -20,8 +20,8 @@ Date: 2026-05-06
 ## Watch Freshness
 
 - Community feedback checkpoint: 2026-05-06 08:29 UTC (4 hours ago)
-- Contact inbox snapshot: 2026-05-06 12:38 UTC (3 minutes ago)
-- Human-help snapshot: 2026-05-06 12:40 UTC (1 minute ago)
+- Contact inbox snapshot: 2026-05-06 12:38 UTC (6 minutes ago)
+- Human-help snapshot: 2026-05-06 12:40 UTC (4 minutes ago)
 - Generator production snapshot: 2026-05-06 08:29 UTC (4 hours ago)
 - Generator handoff snapshot: 2026-05-06 08:29 UTC (4 hours ago)
 - Partner-outreach snapshot: 2026-05-06 08:29 UTC (4 hours ago)
@@ -51,7 +51,7 @@ Date: 2026-05-06
 - Real inbox submissions: 0
 - Inbox ownership signals: 0 (0 founder, 0 operator, 0 privacy consultant, 0 fractional dpo, 0 attorney, 0 other, 0 unknown)
 - Real free async teardown submissions: 0
-- Free async teardown source families: 0 (0 homepage, 0 pricing, 0 about, 0 generator, 0 hub, 0 checker, 0 tracker, 0 review-brief-builder, 0 blog, 0 outreach, 0 other)
+- Free async teardown source families: 0 (0 homepage, 0 pricing, 0 about, 0 generator, 0 hub, 0 checker, 0 ai-stack, 0 tracker, 0 review-brief-builder, 0 blog, 0 outreach, 0 other)
 - Free async teardown ownership signals: 0 (0 founder, 0 operator, 0 privacy consultant, 0 fractional dpo, 0 attorney, 0 other, 0 unknown)
 - Real partner requests: 0
 - Partner request goals logged: 0 (0 referral_only, 0 client_delivery, 0 white_label, 0 other, 0 unknown)

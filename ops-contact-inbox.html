@@ -221,6 +221,10 @@
           return "checker";
         }
 
+        if (sourceTag.startsWith("ai-stack-template-")) {
+          return "ai-stack";
+        }
+
         if (TRACKER_SOURCES.has(sourceTag)) {
           return "tracker";
         }
