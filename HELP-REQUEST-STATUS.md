@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-06 13:01 UTC
+Checked at: 2026-05-06 16:04 UTC
 
 ## Current Request
 
@@ -19,7 +19,7 @@ Checked at: 2026-05-06 13:01 UTC
 - Submit the same four URLs for recrawl or URL submission there.
 - Add the completion status, date, and any indexing limits or errors to `HELP-STATUS.md`.
 
-- Active request source: HELP-REQUEST.md
+- Active request source: help-requests/20260506-130226-HELP-REQUEST.md
 
 ## Resolution
 
