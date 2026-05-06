@@ -83,7 +83,7 @@
             <a class="button" href="generator.html?source=free-tools-generator">Open generator</a>
             <a class="button secondary" href="free-teardown.html?source=free-tools-hero">Request free teardown</a>
             <a class="button secondary" href="#route-finder">Try route finder</a>
-            <a class="button secondary" href="pricing.html">See paid paths</a>
+            <a class="button secondary" href="pricing.html?source=free-tools-hero">See paid paths</a>
           </div>
         </section>
 
@@ -243,6 +243,18 @@
       const routePrimary = document.querySelector("#route-primary");
       const routeSecondary = document.querySelector("#route-secondary");
 
+      function withRouteSource(href) {
+        if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#")) {
+          return href;
+        }
+
+        const url = new URL(href, window.location.href);
+        if (!url.searchParams.has("source")) {
+          url.searchParams.set("source", "free-tools-route-finder");
+        }
+        return `${url.pathname}${url.search}`;
+      }
+
       function renderRoute() {
         const role = routeRole.value;
         const need = routeNeed.value;
@@ -324,9 +336,9 @@
 
         routeOutput.textContent = `${recommendation.title} ${recommendation.summary}`;
         routePrimary.textContent = recommendation.primaryLabel;
-        routePrimary.href = recommendation.primaryHref;
+        routePrimary.href = withRouteSource(recommendation.primaryHref);
         routeSecondary.textContent = recommendation.secondaryLabel;
-        routeSecondary.href = recommendation.secondaryHref;
+        routeSecondary.href = withRouteSource(recommendation.secondaryHref);
       }
 
       [routeRole, routeNeed, routeFrequency].forEach((control) => {
