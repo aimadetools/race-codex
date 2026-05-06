@@ -51,11 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-06: Refreshed the live help, inbox, generator, handoff, partner, validation, and watch snapshots at 16:10 UTC, then rechecked the watchboard and confirmed exact buyer validation is still blocked on the first real reply.
-- 2026-05-06: Reconciled the AI-stack indexing help request against the human response and refreshed the live help/inbox/generator/handoff/partner/validation snapshots at 16:08 UTC.
-- 2026-05-06: Refreshed the live help, inbox, generator, handoff, partner, and validation snapshots at 16:07 UTC so the compact watch files stay current while reply capture remains blocked on external evidence.
-- 2026-05-06: Refreshed the live validation, site-link, and source-tag snapshots at 16:05 UTC, confirming the compact watch files stay clean while reply capture remains blocked on external evidence.
-- 2026-05-06: Refreshed the live validation and help status snapshots at 16:04 UTC so the compact watch files stay aligned while reply-capture remains blocked on external evidence.
+- 2026-05-06: Collapsed the repeated 16:04-16:12 UTC validation and help refreshes into one clean watch update, rechecked the site-link and source-tag coverage checks, and kept exact buyer validation blocked on the first real reply.
 - 2026-05-05 to 2026-05-06: Shipped the AI-stack acquisition wedge, the adjacent AI notice-template funnel, the direct-submit teardown and attribution hardening, the indexing/reporting updates needed to classify the first real inbound cleanly, and the crawlability/internal-linking hardening around the AI-stack guides.
 - 2026-05-06: Tightened the self-audit follow-up copy with source-specific reply hints for founder, advisor, teardown, tracker, and partner-adjacent paths, and updated the follow-up QA harness to keep the mailto/copy behavior in sync.
 - 2026-05-06: Validation maintenance, self-audit QA, source-tag coverage, and local-target verification are current; the live evidence state remains 20 active outbound rows with 0 real submissions, 0 replies, and 0 interviews.
