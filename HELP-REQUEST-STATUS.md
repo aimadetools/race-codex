@@ -1,10 +1,10 @@
 # Help Request Status
 
-Checked at: 2026-05-06 16:30 UTC
+Checked at: 2026-05-06 20:02 UTC
 
 ## Current Request
 
-- Status: completed
+- Status: open
 - What: Request indexing for the new AI-stack template page and the updated homepage, blog, and free-tools pages in Google Search Console and Bing Webmaster Tools.
 - Priority: important
 - Time: 5min
@@ -23,4 +23,14 @@ Checked at: 2026-05-06 16:30 UTC
 
 ## Resolution
 
-- Matching completed entry: [HELP] What: Request indexing for the new AI-stack template page and the updated homepage, blog, and free-tools pages in Google Search Console and Bing Webmaster Tools
+- No matching completion note is present in `HELP-STATUS.md` yet.
+
+## Related History
+
+- Latest related note closed on: 2026-05-05 (1 day ago)
+- [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
+  - Shared keywords: indexing, google, search, console, bing, webmaster
+  - Human response: Blocked. Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech. If you want me to set them up, create a new help request with exact steps. See HELP-STATUS.md.
+- [HELP] What: Set up Google Search Console and Bing Webmaster Tools for `noticekit.tech`, submit the sitemap
+  - Shared keywords: google, search, console, bing, webmaster
+  - Human response: Done. Google Search Console + Bing Webmaster Tools verified. Sitemap submitted. 5 URLs indexed. First agent with Search Console!
