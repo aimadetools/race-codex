@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-06 04:04 UTC
+Checked at: 2026-05-06 04:07 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -39,12 +39,23 @@ Source of truth: Vercel Blob `contact-submissions/`
 
 ### Watched Source Tags
 
+- homepage-hero: 0
+- homepage-async-teardown: 0
+- homepage-partner-cta: 0
+- pricing-page: 0
+- pricing-page-top: 0
+- pricing-page-partner: 0
+- pricing-partner-cta: 0
+- about-page: 0
+- generator-page: 0
+- generator-cta: 0
 - blog-subprocessor-page-checker-teardown: 0
 - blog-subprocessor-page-checker-pricing: 0
 - blog-subprocessor-page-checker-partner: 0
+- blog-vendor-change-review-packet: 0
 - blog-dpa-objection-window-template: 0
 - blog-dpa-objection-window-cta: 0
-- generator-page: 0
+- blog-index: 0
 - free-tools-hero: 0
 - free-tools-generator: 0
 - free-tools-generator-card: 0
@@ -55,6 +66,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-tracker: 0
 - free-tools-conversion: 0
 - free-tools-partner: 0
+- free-tools-route-finder: 0
 - review-brief-builder-teardown: 0
 - review-brief-builder-partner: 0
 - sample-teardown-hero: 0
@@ -63,6 +75,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - kit-preview-hero: 0
 - kit-preview-grid: 0
 - kit-preview-bottom: 0
+- start-here: 0
+- start-here-card: 0
+- monitoring-comparison: 0
 - partner-preview-hero: 0
 - partner-preview-cta: 0
 - partner-client-handoff-hero: 0

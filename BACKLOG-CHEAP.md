@@ -50,4 +50,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - 2026-05-05: Ran the 23:23 to 23:30 UTC maintenance and no-reply checkpoint passes, kept the reply-watch and inbox snapshots at 0 real submissions, 0 replies, and 0 interviews, and rechecked the live static targets cleanly.
 - 2026-05-06: Shipped direct-submit free teardown intake plus requester-role capture through the contact stack, then reran the 04:04 UTC maintenance sync so the first real async teardown can be attributed and qualified without the extra intake step.
+- 2026-05-06: Expanded inbox/reporting coverage for the newer live CTA source tags, fixed `free-tools-route-finder` and `generator-*` / `partner_request` ops filtering, and rebuilt the inbox + validation snapshots so the first real intake will not disappear into `other`.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, indexing, and search-console work is shipped; live work stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.

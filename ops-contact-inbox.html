@@ -159,7 +159,8 @@
         "free-tools-deadline",
         "free-tools-tracker",
         "free-tools-conversion",
-        "free-tools-partner"
+        "free-tools-partner",
+        "free-tools-route-finder"
       ]);
       const REVIEW_BRIEF_BUILDER_SOURCES = new Set([
         "review-brief-builder-teardown",
@@ -343,7 +344,7 @@
         }
 
         if (filterValue === "generator_sources") {
-          return normalizedSourceTag(record) === "generator-page";
+          return normalizedSourceTag(record).startsWith("generator-");
         }
 
         if (filterValue === "review_brief_builder_sources") {
@@ -352,7 +353,7 @@
 
         if (filterValue === "partner_sources") {
           const sourceTag = normalizedSourceTag(record);
-          return sourceTag.startsWith("partner-") || PARTNER_SOURCES.has(sourceTag);
+          return String(record.type || "") === "partner_request" || sourceTag.startsWith("partner-") || PARTNER_SOURCES.has(sourceTag);
         }
 
         return String(record.type || "") === filterValue;
