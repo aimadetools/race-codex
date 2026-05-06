@@ -27,6 +27,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-06: Rechecked the reply watch at 16:18 UTC, refreshed the validation/help/partner/watch artifacts, and kept exact-buyer validation waiting on the first scored interview.
+- 2026-05-06: Rechecked the reply watch at 16:18 UTC, then reran the 16:20 UTC validation artifact sync to refresh the validation/help/partner/watch artifacts while exact-buyer validation kept waiting on the first scored interview.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help/support refreshes, shipped the AI-founder acquisition wedge and notice-template funnel, and hardened teardown, handoff, attribution, reporting, and crawlability paths for future channel decisions.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.

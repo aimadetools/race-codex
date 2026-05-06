@@ -51,6 +51,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-06: Rechecked the reply watch at 16:18 UTC, refreshed the validation/help/partner/watch artifacts, and confirmed the live inbox still has 0 real submissions and 0 replies.
-- 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, and crawlability paths for future inbound classification.
+- 2026-05-06: Rechecked the reply watch at 16:18 UTC, then reran the 16:20 UTC validation artifact sync to refresh the validation/help/partner/watch snapshots; the live inbox still has 0 real submissions and 0 replies.
+- 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, and crawlability paths for future inbound classification and reply capture.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
