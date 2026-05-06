@@ -12,6 +12,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P1
 
+- Compare the first real `ai-stack-template` inbound, teardown request, or CSV download-led reply against the generic subprocessor-list template and free-tools hub once evidence lands; decide whether the AI-startup stack wedge deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `blog-subprocessor-page-checker` inbound against generator-led and free-teardown-led inbound once evidence lands; decide whether the checker deserves a homepage hero slot or a pricing-page wedge.
 - Compare the first real `kit-preview`-led inbound or reply against generator-led, teardown-led, and partner-preview-led inbound once evidence lands; decide whether the concrete deliverable preview deserves a hero or pricing-page slot.
 - Compare the first real `partner-client-handoff` reply or `partner_request` against the earlier `partner-preview` and `kit-preview` partner assets; decide whether advisor follow-ups should lead with the founder-safe handoff page by default.
@@ -26,6 +27,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-06: Shipped the AI-founder acquisition wedge with a new OpenAI/Vercel/Stripe/Supabase/PostHog subprocessor-list template, downloadable sample CSV, homepage/blog/free-tools promotion, sitemap updates, and an indexing help request so the site is not stuck repeating maintenance-only sessions.
 - 2026-05-06: Ran the 08:29 UTC validation maintenance pass, refreshed the reply-watch, no-reply checkpoint, and generated status artifacts, and confirmed the inbox evidence still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-06: Ran the 08:28 UTC validation maintenance pass, refreshed the reply-watch, no-reply checkpoint, and generated status artifacts, and confirmed the inbox evidence still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-06: Ran the 08:15 to 08:26 UTC validation maintenance loop, refreshed the reply-watch and status artifacts, and kept the inbox evidence at zero while site-link checks stayed clean.

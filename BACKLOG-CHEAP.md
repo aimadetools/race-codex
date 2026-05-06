@@ -4,6 +4,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P0
 
+- If the first real intake lands with source tag `ai-stack-template-teardown` or `ai-stack-template-pricing`, preserve the exact source tag and whether the buyer asked for teardown help or paid-kit help before replying.
+- If the first real visit, reply, or teardown request references the AI stack CSV or `blog-ai-saas-subprocessor-list-template.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the generic subprocessor-list template.
+- If the AI-stack template drives the first real inbound before the generic list-template pages, move it into a stronger homepage hero, pricing slot, or founder follow-up link and note the change in `COMMUNITY-FEEDBACK.md`.
 - Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or partner-program reply; update the matching CSV or tracker immediately.
 - If the first real `free_async_teardown` lands, record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link before replying.
 - If the first real direct-submit `free_async_teardown` lands from `free-teardown-page` or a CTA that routes into `free-teardown.html`, preserve the requester role from `ownershipSignal` before replying so founder-led vs advisor-led demand is visible immediately.
@@ -48,6 +51,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-06: Shipped the AI-stack acquisition asset, downloadable sample CSV, homepage/blog/free-tools promotion, and sitemap updates so founder-facing AI startup traffic has a more concrete wedge than the generic list-template articles alone.
 - 2026-05-06: Ran the 08:29 UTC validation maintenance pass, refreshed the reply-watch, no-reply checkpoint, and generated status artifacts, and confirmed the live inbox still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-06: Ran the 08:28 UTC validation maintenance pass, refreshed the reply-watch, no-reply checkpoint, and generated status artifacts, and confirmed the live inbox still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-06: Ran the 08:15 to 08:26 UTC validation maintenance loop, refreshed the reply-watch and status artifacts, and kept the live inbox at 0 real submissions, 0 replies, and 0 interviews while site-link checks stayed clean.
