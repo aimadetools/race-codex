@@ -24,6 +24,22 @@ const TEARDOWN_SOURCE_FAMILY_ORDER = [
   "outreach",
   "other"
 ];
+const OWNERSHIP_BUCKET_ORDER = [
+  "founder",
+  "operator",
+  "privacy consultant",
+  "fractional dpo",
+  "attorney",
+  "other",
+  "unknown"
+];
+const PARTNER_GOAL_BUCKET_ORDER = [
+  "referral_only",
+  "client_delivery",
+  "white_label",
+  "other",
+  "unknown"
+];
 
 function formatUtcTimestamp(date) {
   const year = date.getUTCFullYear();
@@ -187,6 +203,34 @@ function classifyTeardownSourceFamily(sourceTag) {
   return "other";
 }
 
+function normalizeOwnershipSignal(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+
+  if (["founder", "operator", "privacy consultant", "fractional dpo", "attorney"].includes(normalized)) {
+    return normalized;
+  }
+
+  if (!normalized) {
+    return "unknown";
+  }
+
+  return "other";
+}
+
+function normalizePartnerGoal(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+
+  if (["referral_only", "client_delivery", "white_label"].includes(normalized)) {
+    return normalized;
+  }
+
+  if (!normalized) {
+    return "unknown";
+  }
+
+  return "other";
+}
+
 function safeValue(value, fallback = "Not provided") {
   const text = String(value || "").trim();
   return text || fallback;
@@ -278,9 +322,21 @@ async function main() {
   const latestRealSubmissions = realRecords.slice(0, 5);
   const typeBreakdown = countBy(realRecords, (record) => String(record.type || "").trim());
   const sourceBreakdown = countBy(realRecords, (record) => describeSourceTag(record.sourceTag));
+  const ownershipBreakdown = OWNERSHIP_BUCKET_ORDER.map((bucket) => [
+    bucket,
+    realRecords.filter((record) => normalizeOwnershipSignal(record.ownershipSignal) === bucket).length
+  ]);
   const teardownSourceFamilyCounts = TEARDOWN_SOURCE_FAMILY_ORDER.map((family) => [
     family,
     realTeardowns.filter((record) => classifyTeardownSourceFamily(record.sourceTag) === family).length
+  ]);
+  const teardownOwnershipCounts = OWNERSHIP_BUCKET_ORDER.map((bucket) => [
+    bucket,
+    realTeardowns.filter((record) => normalizeOwnershipSignal(record.ownershipSignal) === bucket).length
+  ]);
+  const partnerGoalCounts = PARTNER_GOAL_BUCKET_ORDER.map((bucket) => [
+    bucket,
+    realPartnerRequests.filter((record) => normalizePartnerGoal(record.partnerGoal) === bucket).length
   ]);
   const watchedSourceCounts = WATCHED_SOURCE_TAGS.map((sourceTag) => [
     sourceTag,
@@ -317,9 +373,21 @@ async function main() {
       ? ["- No real submissions are stored in the inbox yet."]
       : sourceBreakdown.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`)),
     "",
+    "### By Ownership Signal",
+    "",
+    ...ownershipBreakdown.map(([bucket, count]) => `- ${bucket}: ${count}`),
+    "",
     "### Free Async Teardown Source Families",
     "",
     ...teardownSourceFamilyCounts.map(([family, count]) => `- ${family}: ${count}`),
+    "",
+    "### Free Async Teardown Ownership Signals",
+    "",
+    ...teardownOwnershipCounts.map(([bucket, count]) => `- ${bucket}: ${count}`),
+    "",
+    "### Partner Request Goals",
+    "",
+    ...partnerGoalCounts.map(([bucket, count]) => `- ${bucket}: ${count}`),
     "",
     "### Watched Source Tags",
     "",
@@ -338,6 +406,10 @@ async function main() {
     output.push(`- Company: ${safeValue(latestReal.company)}`);
     output.push(`- Source tag: ${describeSourceTag(latestReal.sourceTag)}`);
     output.push(`- Channel: ${safeValue(latestReal.submissionChannel, "unknown")}`);
+    output.push(`- Ownership: ${safeValue(latestReal.ownershipSignal, "unknown")}`);
+    if (String(latestReal.type || "").trim() === "partner_request") {
+      output.push(`- Partner goal: ${safeValue(latestReal.partnerGoal, "unknown")}`);
+    }
     output.push(`- Storage path: ${safeValue(latestReal.pathname)}`);
   }
 
@@ -347,7 +419,10 @@ async function main() {
     output.push("- No real submissions are stored in the inbox yet.");
   } else {
     for (const record of latestRealSubmissions) {
-      output.push(`- ${safeValue(record.submittedAt || record.uploadedAt)} | ${safeValue(record.type)} | ${describeSourceTag(record.sourceTag)} | ${safeValue(record.company)}`);
+      const queueSuffix = String(record.type || "").trim() === "partner_request"
+        ? ` | goal ${safeValue(record.partnerGoal, "unknown")}`
+        : "";
+      output.push(`- ${safeValue(record.submittedAt || record.uploadedAt)} | ${safeValue(record.type)} | ${describeSourceTag(record.sourceTag)} | ${safeValue(record.company)} | role ${safeValue(record.ownershipSignal, "unknown")}${queueSuffix}`);
     }
   }
 

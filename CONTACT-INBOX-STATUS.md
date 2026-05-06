@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-06 04:19 UTC
+Checked at: 2026-05-06 04:25 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -23,6 +23,16 @@ Source of truth: Vercel Blob `contact-submissions/`
 
 - No real submissions are stored in the inbox yet.
 
+### By Ownership Signal
+
+- founder: 0
+- operator: 0
+- privacy consultant: 0
+- fractional dpo: 0
+- attorney: 0
+- other: 0
+- unknown: 0
+
 ### Free Async Teardown Source Families
 
 - homepage: 0
@@ -36,6 +46,24 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog: 0
 - outreach: 0
 - other: 0
+
+### Free Async Teardown Ownership Signals
+
+- founder: 0
+- operator: 0
+- privacy consultant: 0
+- fractional dpo: 0
+- attorney: 0
+- other: 0
+- unknown: 0
+
+### Partner Request Goals
+
+- referral_only: 0
+- client_delivery: 0
+- white_label: 0
+- other: 0
+- unknown: 0
 
 ### Watched Source Tags
 
