@@ -91,6 +91,7 @@
           <div class="section-head">
             <h2>Route finder</h2>
             <p>Answer three quick questions and NoticeKit will point you at the shortest path. Use it if you are deciding between a written answer, the paid files, a human review, or the partner path.</p>
+            <p class="fine-print">No email. No login. The result stays local in your browser.</p>
           </div>
           <div class="demo-panel">
             <div class="panel-header">
@@ -98,6 +99,11 @@
               <span class="status">Local only</span>
             </div>
             <div class="demo-body">
+              <div class="route-presets" aria-label="Quick route presets">
+                <button class="button secondary" type="button" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">Founder, one change</button>
+                <button class="button secondary" type="button" data-route-role="founder" data-route-need="written-answer" data-route-frequency="repeat">Founder, repeated changes</button>
+                <button class="button secondary" type="button" data-route-role="consultant" data-route-need="package-preview" data-route-frequency="repeat">Consultant, client work</button>
+              </div>
               <div class="field-grid">
                 <label>Who are you?
                   <select id="route-role">
@@ -121,7 +127,7 @@
                   </select>
                 </label>
               </div>
-              <div id="route-output" class="notice-output" aria-live="polite"></div>
+              <div id="route-output" class="notice-output" aria-live="polite" role="status"></div>
               <div class="hero-actions">
                 <a id="route-primary" class="button" href="free-teardown.html?source=free-tools-route-finder">Use recommended path</a>
                 <a id="route-secondary" class="button secondary" href="pricing.html">Compare pricing</a>
@@ -253,6 +259,7 @@
       const routeOutput = document.querySelector("#route-output");
       const routePrimary = document.querySelector("#route-primary");
       const routeSecondary = document.querySelector("#route-secondary");
+      const routePresets = Array.from(document.querySelectorAll("[data-route-role]"));
 
       function withRouteSource(href) {
         if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#")) {
@@ -272,8 +279,13 @@
         const frequency = routeFrequency.value;
 
         let recommendation = {
-          title: "Start with the free async teardown.",
-          summary: "You want the shortest written answer before buying. One URL and one change is enough to get a blunt gap read.",
+          title: "Request the free async teardown.",
+          summary: "You want the shortest written answer before buying. One URL, one change, and one customer segment is enough to get a blunt gap read.",
+          bullets: [
+            "Best when you want a fast written answer",
+            "Keeps you on the no-call path",
+            "Source tags stay attached for triage"
+          ],
           primaryHref: "free-teardown.html?source=free-tools-route-finder",
           primaryLabel: "Request free teardown",
           secondaryHref: "pricing.html",
@@ -284,6 +296,11 @@
           recommendation = {
             title: "Open the partner path first.",
             summary: "You are selling or delivering this for clients, so the partner preview is the fastest way to check referral, delivery, or white-label fit.",
+            bullets: [
+              "Shows referral, delivery, and white-label boundaries",
+              "Best for consultants, fractional DPOs, and attorneys",
+              "Keeps client work separate from founder pricing"
+            ],
             primaryHref: "partner-preview.html",
             primaryLabel: "Open partner preview",
             secondaryHref: "audit-request.html?type=partner_request&source=free-tools-route-finder",
@@ -294,6 +311,11 @@
             ? {
                 title: "Buy Pro.",
                 summary: "Repeated changes or segmented customers point to the repeatable workflow in Pro.",
+                bullets: [
+                  "Best for recurring or segmented notice work",
+                  "Includes the stronger workflow packet",
+                  "Fastest path if you already know the tier"
+                ],
                 primaryHref: "https://buy.stripe.com/cNieVd3Gw7X858680feEo08",
                 primaryLabel: "Buy Pro",
                 secondaryHref: "kit-preview.html",
@@ -302,6 +324,11 @@
             : {
                 title: "Buy Starter.",
                 summary: "One vendor change and one notice workflow fit the one-time Starter kit.",
+                bullets: [
+                  "Best for a single vendor change",
+                  "Matches the one-time operating packet",
+                  "Pairs well with the kit preview"
+                ],
                 primaryHref: "https://buy.stripe.com/5kQbJ16SIgtE7ge80feEo09",
                 primaryLabel: "Buy Starter",
                 secondaryHref: "kit-preview.html",
@@ -312,6 +339,11 @@
             ? {
                 title: "Book the concierge audit.",
                 summary: "When the public page or workflow keeps needing cleanup, a 48-hour review will give you a fix list.",
+                bullets: [
+                  "Best when the page keeps getting revised",
+                  "Useful if you need a concrete fix list",
+                  "Good fit when handoff is the bottleneck"
+                ],
                 primaryHref: "https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07",
                 primaryLabel: "Buy audit",
                 secondaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
@@ -320,6 +352,11 @@
             : {
                 title: "Open the page checker.",
                 summary: "If you just want to score the public page once, the checker is the fastest self-serve read.",
+                bullets: [
+                  "Best for a one-off public-page score",
+                  "Highlights missing fields and proof cues",
+                  "Pairs well with a teardown after the check"
+                ],
                 primaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
                 primaryLabel: "Open page checker",
                 secondaryHref: "free-teardown.html?source=free-tools-route-finder",
@@ -329,23 +366,77 @@
           recommendation = {
             title: "Open the kit preview.",
             summary: "You want to see the exact Starter and Pro artifact list before you check out.",
+            bullets: [
+              "Shows the real deliverables before checkout",
+              "Helps when the missing detail is inside the packet",
+              "Works well for founders and advisors"
+            ],
             primaryHref: "kit-preview.html",
             primaryLabel: "Open kit preview",
             secondaryHref: "pricing.html",
             secondaryLabel: "Compare pricing",
           };
+        } else if (need === "written-answer" && frequency === "repeat") {
+          recommendation = {
+            title: "Run the self-audit first.",
+            summary: "Repeated changes usually need a quick readiness score before a teardown or purchase.",
+            bullets: [
+              "Best when the workflow is still getting clarified",
+              "Helps decide whether teardown or paid files come next",
+              "Fastest route to a structured internal answer"
+            ],
+            primaryHref: "self-audit.html?source=free-tools-route-finder",
+            primaryLabel: "Run self-audit",
+            secondaryHref: "free-teardown.html?source=free-tools-route-finder",
+            secondaryLabel: "Request free teardown",
+          };
         } else if (frequency === "repeat") {
           recommendation = {
-            title: "Start with Pro or partner access.",
-            summary: "Repeat work usually means you need either the Pro kit or a partner path, depending on whether you are buying for yourself or clients.",
-            primaryHref: role === "other" ? "pricing.html" : "partner-preview.html",
-            primaryLabel: role === "other" ? "Compare pricing" : "Open partner preview",
-            secondaryHref: "kit-preview.html",
-            secondaryLabel: "See exact preview",
+            title: role === "other" ? "Compare pricing." : "Run the self-audit first.",
+            summary: role === "other"
+              ? "If you are just comparing options, the pricing page gives the fastest overview."
+              : "Repeated work usually benefits from a quick readiness score before you buy or ask for teardown help.",
+            bullets: role === "other"
+              ? [
+                  "Good when you are still comparing options",
+                  "Shows the paid paths in one place",
+                  "Fastest route to Starter, Pro, or audit"
+                ]
+              : [
+                  "Best when the answer is still fuzzy",
+                  "Turns repeated work into a clearer next step",
+                  "Keeps you on the no-call path"
+                ],
+            primaryHref: role === "other" ? "pricing.html" : "self-audit.html?source=free-tools-route-finder",
+            primaryLabel: role === "other" ? "Compare pricing" : "Run self-audit",
+            secondaryHref: role === "other" ? "kit-preview.html" : "free-teardown.html?source=free-tools-route-finder",
+            secondaryLabel: role === "other" ? "See exact preview" : "Request free teardown",
           };
         }
 
-        routeOutput.textContent = `${recommendation.title} ${recommendation.summary}`;
+        routeOutput.replaceChildren();
+
+        const recommendationBox = document.createElement("div");
+        recommendationBox.className = "route-recommendation";
+
+        const title = document.createElement("strong");
+        title.textContent = recommendation.title;
+        recommendationBox.append(title);
+
+        const summary = document.createElement("p");
+        summary.className = "route-summary";
+        summary.textContent = recommendation.summary;
+        recommendationBox.append(summary);
+
+        const bullets = document.createElement("ul");
+        recommendation.bullets.forEach((bullet) => {
+          const item = document.createElement("li");
+          item.textContent = bullet;
+          bullets.append(item);
+        });
+        recommendationBox.append(bullets);
+
+        routeOutput.append(recommendationBox);
         routePrimary.textContent = recommendation.primaryLabel;
         routePrimary.href = withRouteSource(recommendation.primaryHref);
         routeSecondary.textContent = recommendation.secondaryLabel;
@@ -354,6 +445,15 @@
 
       [routeRole, routeNeed, routeFrequency].forEach((control) => {
         control.addEventListener("change", renderRoute);
+      });
+
+      routePresets.forEach((button) => {
+        button.addEventListener("click", () => {
+          routeRole.value = button.dataset.routeRole;
+          routeNeed.value = button.dataset.routeNeed;
+          routeFrequency.value = button.dataset.routeFrequency;
+          renderRoute();
+        });
       });
 
       renderRoute();

@@ -307,6 +307,19 @@ p {
   gap: 12px;
 }
 
+.route-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.route-presets .button {
+  min-height: 38px;
+  padding: 0 14px;
+  font-size: 0.88rem;
+}
+
 label {
   display: grid;
   gap: 7px;
@@ -350,7 +363,31 @@ textarea {
   background: rgba(85, 214, 190, 0.08);
   color: #dffdf6;
   font-size: 0.92rem;
-  white-space: pre-wrap;
+}
+
+.route-recommendation {
+  display: grid;
+  gap: 10px;
+}
+
+.route-recommendation strong {
+  color: var(--text);
+  font-size: 1.08rem;
+}
+
+.route-summary {
+  color: #dffdf6;
+}
+
+.route-recommendation ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.route-recommendation li {
+  color: #dffdf6;
 }
 
 .form-error {
@@ -948,6 +985,10 @@ tbody tr:last-child td {
 
   .field-grid {
     grid-template-columns: 1fr;
+  }
+
+  .route-presets {
+    display: grid;
   }
 
   .option-grid {
