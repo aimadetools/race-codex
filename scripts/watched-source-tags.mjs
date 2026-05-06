@@ -17,6 +17,8 @@ export const WATCHED_SOURCE_TAGS = [
   "blog-dpa-objection-window-cta",
   "blog-index",
   "ai-stack-template-checker",
+  "ai-stack-template-download-pricing",
+  "ai-stack-template-download-teardown",
   "ai-stack-template-teardown",
   "ai-stack-template-pricing",
   "free-tools-hero",
