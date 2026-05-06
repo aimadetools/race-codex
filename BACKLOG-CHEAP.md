@@ -51,6 +51,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-05 to 2026-05-06: Shipped the AI-stack acquisition wedge, the direct-submit teardown and attribution hardening, the indexing/reporting updates needed to classify the first real inbound cleanly, and the crawlability/internal-linking hardening around the AI-stack guide.
+- 2026-05-05 to 2026-05-06: Shipped the AI-stack acquisition wedge, the adjacent AI notice-template funnel, the direct-submit teardown and attribution hardening, the indexing/reporting updates needed to classify the first real inbound cleanly, and the crawlability/internal-linking hardening around the AI-stack guides.
 - 2026-05-06: Validation maintenance, self-audit QA, source-tag coverage, and local-target verification are current; the live evidence state remains 20 active outbound rows with 0 real submissions, 0 replies, and 0 interviews.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
