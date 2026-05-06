@@ -84,6 +84,7 @@ module.exports = async function handler(request, response) {
     company: clean(payload.company),
     email: clean(payload.email),
     type: clean(payload.type),
+    ownershipSignal: clean(payload.ownershipSignal),
     subprocessorUrl: clean(payload.subprocessorUrl),
     vendorChange: clean(payload.vendorChange),
     deadline: clean(payload.deadline),

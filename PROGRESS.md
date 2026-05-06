@@ -7,10 +7,7 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 - 2026-04-20 to 2026-04-29: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; shipped founder/advisor follow-ups, contingency batches, partner outreach, and the first `free_async_teardown` / partner-request CTA routing, but no scored replies or real inbox submissions landed.
 - 2026-04-30: Shipped the dedicated `free-teardown.html` landing page, rerouted main teardown CTAs through it, and kept the live branch on reply capture while the 20 active outreach rows stayed at 0 replies.
 - 2026-05-01 to 2026-05-02: Re-ran validation maintenance and self-audit production verification, refreshed the inbox/help/generator/partner status artifacts, shipped the checker and review-brief-builder assets plus the vendor-change packet page, and kept the inbox at 0 real submissions, 0 replies, and 0 interviews.
-
-## 2026-05-03
-
-- Kept the reply-watch loop running while the partner follow-up gate was still pending; there were no real inbox submissions, replies, or interviews yet, so the live validation focus stayed on the due partner window.
+- 2026-05-03: Kept the reply-watch loop running while the partner follow-up gate was still pending; there were still no real inbox submissions, replies, or interviews, so the live validation focus stayed on the due partner window.
 
 ## 2026-05-04
 
@@ -24,3 +21,10 @@ Older work stays collapsed here so only the last three UTC dates remain detailed
 - Kept the partner-program follow-ups, free-tools hub, route finder, and founder handoff preview shipped and live while the reply-watch stayed on zero-real-intake evidence.
 - The earlier same-day maintenance, help-status reconciliation, and static-target verification passes stayed clean as well, so reply capture remains the next unlock.
 - Collapsed the backlog summary language so the active P0 evidence tasks stay easier to scan while the shipped maintenance items remain summarized below.
+
+## 2026-05-06
+
+- Broke the maintenance loop and shipped a conversion-focused intake change instead: `free-teardown.html` now submits directly to `/api/contact` instead of forcing a second step through `audit-request.html`, while preserving `source` and `channel` attribution.
+- Added explicit requester-role capture (`founder`, `operator`, `privacy consultant`, `fractional dpo`, `attorney`, `other`) to both `free-teardown.html` and `audit-request.html`, and threaded `ownershipSignal` through `api/contact.js` and `api/contact-webhook.js` so the first real teardown can be qualified as founder- or advisor-led immediately.
+- Verified the edited intake stack with `npm run check:site-links` and a Node module load check for `api/contact.js` / `api/contact-webhook.js`; local target checks stayed clean after the funnel change.
+- Left `HELP-STATUS.md` untouched because it already had user-side edits in the working tree; no new human request was needed for this session.

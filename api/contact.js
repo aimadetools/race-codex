@@ -38,7 +38,8 @@ function buildNotificationBody(submission) {
     `Reply email: ${submission.email}`,
     `Submitted at: ${submission.submittedAt}`,
     `Source tag: ${submission.sourceTag || "site"}`,
-    `Submission channel: ${submission.submissionChannel || "unknown"}`
+    `Submission channel: ${submission.submissionChannel || "unknown"}`,
+    `Role: ${submission.ownershipSignal || "Not provided"}`
   ];
 
   if (submission.type === "self_audit_feedback") {
@@ -114,6 +115,7 @@ function buildNotificationHtml(submission) {
           ["Submitted at", submission.submittedAt],
           ["Source tag", submission.sourceTag || "site"],
           ["Submission channel", submission.submissionChannel || "unknown"],
+          ["Role", submission.ownershipSignal || "Not provided"],
           ["Ownership", submission.ownershipSignal || "unknown"],
           ["Score", submission.scoreDisplay || "Not provided"],
           ["Score band", submission.scoreBand || "Not provided"],
@@ -131,6 +133,7 @@ function buildNotificationHtml(submission) {
             ["Submitted at", submission.submittedAt],
             ["Source tag", submission.sourceTag || "site"],
             ["Submission channel", submission.submissionChannel || "unknown"],
+            ["Role", submission.ownershipSignal || "Not provided"],
             ["Partner role", submission.partnerRole || "Not provided"],
             ["Partner goal", submission.partnerGoal || "Not provided"],
             ["Expected client volume", submission.partnerVolume || "Not provided"],
@@ -148,6 +151,7 @@ function buildNotificationHtml(submission) {
           ["Submitted at", submission.submittedAt],
           ["Source tag", submission.sourceTag || "site"],
           ["Submission channel", submission.submissionChannel || "unknown"],
+          ["Role", submission.ownershipSignal || "Not provided"],
           ["Subprocessor page", submission.subprocessorUrl || "Not provided"],
           ["Vendor change", submission.vendorChange || "Not provided"],
           ["Customer segment and deadline", submission.deadline || "Not provided"],

@@ -90,6 +90,17 @@
                 <label>Your email
                   <input id="email" name="email" type="email" autocomplete="email" required>
                 </label>
+                <label>Who are you?
+                  <select id="ownership-signal" name="ownership-signal">
+                    <option value="">Select role</option>
+                    <option value="founder">Founder</option>
+                    <option value="operator">Operator or ops lead</option>
+                    <option value="privacy consultant">Privacy consultant</option>
+                    <option value="fractional dpo">Fractional DPO</option>
+                    <option value="attorney">Attorney</option>
+                    <option value="unknown">Other</option>
+                  </select>
+                </label>
                 <label>Subprocessor page URL
                   <input id="subprocessor-url" name="subprocessor-url" type="url" placeholder="https://example.com/subprocessors">
                 </label>
@@ -231,6 +242,7 @@
 
       prefillField("company", "company");
       prefillField("email", "email");
+      prefillField("ownership-signal", "ownership_signal");
       prefillField("subprocessor-url", "subprocessor_url");
       prefillField("vendor-change", "vendor_change");
       prefillField("deadline", "deadline");
@@ -259,6 +271,7 @@
           type: value("request-type"),
           company: value("company"),
           email: value("email"),
+          ownershipSignal: value("ownership-signal"),
           subprocessorUrl: value("subprocessor-url"),
           vendorChange: value("vendor-change"),
           deadline: value("deadline"),
@@ -293,6 +306,7 @@
             `Request type: ${payload.type}`,
             `Company: ${payload.company}`,
             `Reply email: ${payload.email}`,
+            `Role: ${payload.ownershipSignal || "Not provided"}`,
             `Subprocessor page: ${payload.subprocessorUrl || "Not provided"}`,
             `Source tag: ${payload.sourceTag}`,
             `Submission channel: ${payload.submissionChannel}`,
@@ -316,6 +330,7 @@
           form.reset();
           prefillField("company", "company");
           prefillField("email", "email");
+          prefillField("ownership-signal", "ownership_signal");
           prefillField("subprocessor-url", "subprocessor_url");
           prefillField("vendor-change", "vendor_change");
           prefillField("deadline", "deadline");

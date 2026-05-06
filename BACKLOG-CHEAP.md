@@ -6,6 +6,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 - Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or partner-program reply; update the matching CSV or tracker immediately.
 - If the first real `free_async_teardown` lands, record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link before replying.
+- If the first real direct-submit `free_async_teardown` lands from `free-teardown-page` or a CTA that routes into `free-teardown.html`, preserve the requester role from `ownershipSignal` before replying so founder-led vs advisor-led demand is visible immediately.
 - If the first real `partner_request` lands from `partner-preview-hero`, `partner-preview-cta`, or `partner-outreach-batch-01`, log the qualification outcome in `consultant-partner-outreach-tracker.csv`.
 - If the first real `partner_request` lands from `partner-client-handoff-hero` or `partner-client-handoff-cta`, preserve the exact source tag and whether the advisor wanted referral-only, client-delivery, or white-label access before replying.
 - If the first real intake lands with source tag `blog-subprocessor-page-checker-teardown`, `blog-subprocessor-page-checker-pricing`, or `blog-subprocessor-page-checker-partner`, preserve the exact source tag and whether the lead asked for teardown, pricing, or partner help before replying.
@@ -21,6 +22,8 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If an advisor reply says the founder handoff page made the workflow click, note that in `COMMUNITY-FEEDBACK.md` before deciding whether advisor-first positioning is beating founder-first positioning.
 - When the first real `partner_request` lands, send a short approve / clarify / decline reply from `hello@noticekit.tech` and log whether it points to referral-only, client-delivery, or white-label demand.
 - When the first real `free_async_teardown` request lands, send a 3-bullet async gap reply from `hello@noticekit.tech` and log the outcome in `COMMUNITY-FEEDBACK.md`.
+- If the first two real direct-submit teardown requests both omit the subprocessor URL or customer-segment field, tighten `free-teardown.html` copy and placeholders so the page asks for the missing fact more explicitly.
+- If the first real teardown submission arrives through the new direct-submit flow before any full-intake submission, move `free-teardown.html` into a stronger homepage or pricing CTA slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real inbound references `generator.html`, `generator-page`, or `generator-cta`, preserve that source tag in the inbox tracker and `COMMUNITY-FEEDBACK.md` before replying.
 - If the first teardown or partner request references the new review brief builder, copy the generated blocker and open-question language into `COMMUNITY-FEEDBACK.md` so the next positioning pass can tell whether handoff cleanup is the real pain point.
 - If three real `blog-subprocessor-page-checker` visits or replies appear before any founder email reply, move the checker into a higher homepage CTA slot and add it to the pricing-page comparison block.
@@ -46,4 +49,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-05: Ran the 23:23 to 23:30 UTC maintenance and no-reply checkpoint passes, kept the reply-watch and inbox snapshots at 0 real submissions, 0 replies, and 0 interviews, and rechecked the live static targets cleanly.
+- 2026-05-06: Shipped direct-submit free teardown intake and requester-role capture through the contact stack so the first real async teardown can be attributed and qualified without the extra intake step.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, indexing, and search-console work is shipped; live work stays focused on reply capture and intake evidence, so only the trigger-driven P0/P1 items below remain active.
