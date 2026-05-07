@@ -180,6 +180,10 @@ function classifyTeardownSourceFamily(sourceTag) {
     return "ai-disclosure-packet";
   }
 
+  if (normalized.startsWith("ai-security-questionnaire-")) {
+    return "ai-disclosure-packet";
+  }
+
   if (normalized.startsWith("sample-ai-packet-")) {
     return "ai-disclosure-packet";
   }
