@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-07 12:59 UTC
+Checked at: 2026-05-07 16:03 UTC
 
 ## Current Request
 
@@ -18,7 +18,7 @@ Checked at: 2026-05-07 12:59 UTC
 - Exclude closed communities that require paid access and exclude obvious spam or agency lead lists.
 - Update `HELP-STATUS.md` with completion status and any blockers.
 
-- Active request source: HELP-REQUEST.md
+- Active request source: help-requests/20260507-130049-HELP-REQUEST.md
 
 ## Resolution
 
