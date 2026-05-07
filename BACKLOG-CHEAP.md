@@ -54,6 +54,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-07: extended the AI disclosure packet path into the audit request, kit preview, and sample teardown surfaces, added packet-template download routes there, and expanded watched source-tag coverage so higher-intent procurement traffic is attributable.
 - 2026-05-07: shipped the AI vendor disclosure packet page and downloadable template, expanded internal routing through pricing/start-here/AI-stack surfaces, added procurement FAQ plus structured-data support, reconciled the open indexing help request into the status chain, and kept the no-reply maintenance plus static verification loop green.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while repeatedly refreshing no-reply memory, help/status artifacts, attribution coverage, crawlability, teardown routing, and static verification.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.

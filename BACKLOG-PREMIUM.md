@@ -28,6 +28,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07: expanded the AI procurement/disclosure lane into the audit-intake, kit-preview, and sample-teardown conversion surfaces so buyers under enterprise-review pressure can route into the packet workflow before choosing teardown or paid delivery.
 - 2026-05-07: shipped the AI vendor disclosure packet acquisition lane plus the downloadable packet template, expanded pricing/start-here/AI-stack routing into that lane, added procurement FAQ and structured-data support, and kept help-request visibility plus maintenance green while indexing remained the only open human dependency.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while repeatedly refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
