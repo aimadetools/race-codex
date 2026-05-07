@@ -59,10 +59,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-07: ran the 20:13 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and kept the site-link and source-tag checks green while reply capture remained gated on a real response.
-- 2026-05-07: ran the 20:12 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and kept the site-link and source-tag checks green while reply capture remained gated on a real response.
-- 2026-05-07: ran the 20:10 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and kept the site-link and source-tag checks green while reply capture remained gated on a real response.
-- 2026-05-07: ran repeated 20:02 to 20:08 UTC validation maintenance passes, refreshed the watchboard artifacts, logged deduplicated no-reply checkpoints, and kept the site-link and source-tag checks green while reply capture remained gated on a real response.
+- 2026-05-07: ran repeated validation maintenance passes through 20:15 UTC, refreshed the watchboard artifacts, logged deduplicated no-reply checkpoints, and kept the site-link and source-tag checks green while reply capture remained gated on a real response.
 - 2026-05-07: promoted the AI procurement hub into the homepage shortcuts and free-tools route finder, added an AI procurement route-finder topic plus preset, and kept the site-link sweep green.
 - 2026-05-07: ran the 16:29 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and kept the queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-07: kept validation and AI procurement lanes current through the 16:28 UTC maintenance pass, refreshed the watchboard artifacts, confirmed source-tag coverage and site links stayed green, and kept the queue at 0 real submissions, 0 replies, and 0 interviews.
