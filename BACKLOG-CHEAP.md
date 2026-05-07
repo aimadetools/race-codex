@@ -54,10 +54,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-07: refreshed the validation/help status chain, recorded another deduplicated no-reply checkpoint, and kept the inbox and reply-watch artifacts aligned with the current zero-reply state.
-- 2026-05-07: tightened the free teardown and broader audit intake prompts so teardown requests explicitly ask for the live URL, vendor change, and affected customer segment before the reply is routed.
-- 2026-05-07: fixed the ops inbox and status rollups so `ai-disclosure-packet-*`, `ai-stack-template-disclosure-packet`, and the newer AI bridge tags are first-class evidence sources instead of falling into generic buckets when the first real intake arrives.
-- 2026-05-07: extended the AI disclosure packet path into the audit request, kit preview, and sample teardown surfaces, added packet-template download routes there, and expanded watched source-tag coverage so higher-intent procurement traffic is attributable.
-- 2026-05-07: shipped the AI vendor disclosure packet page and downloadable template, expanded internal routing through pricing/start-here/AI-stack surfaces, added procurement FAQ plus structured-data support, reconciled the open indexing help request into the status chain, and kept the no-reply maintenance plus static verification loop green.
+- 2026-05-07: refreshed the validation/help chain, tightened teardown intake prompts, and kept the inbox and reply-watch artifacts aligned with the current zero-reply state.
+- 2026-05-07: fixed the packet-tag rollups, extended the AI disclosure packet path into audit/kit/sample surfaces, and expanded watched source-tag coverage for procurement traffic.
+- 2026-05-07: shipped the AI vendor disclosure packet page and template, broadened internal routing through pricing-start-here/AI-stack surfaces, and kept the indexing follow-through and static verification loop green.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while repeatedly refreshing no-reply memory, help/status artifacts, attribution coverage, crawlability, teardown routing, and static verification.
-- Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.
+- Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.
