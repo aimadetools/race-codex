@@ -54,6 +54,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-07: shipped the AI vendor disclosure packet page, wired discovery and attribution for it, reconciled the open indexing help request into the generated status chain, and ran repeated no-reply maintenance and gate passes that kept `COMMUNITY-FEEDBACK.md`, the live status snapshots, `npm run check:site-links`, and `npm run check:source-tag-coverage` green.
+- 2026-05-07: shipped the AI vendor disclosure packet page and its downloadable packet template, wired discovery/attribution for the AI procurement lane, reconciled the open indexing help request into the status chain, and kept the 04:17 UTC no-reply maintenance pass plus static verification green.
 - 2026-05-05 to 2026-05-06: ran repeated no-reply maintenance, help/status refreshes, and static verification while shipping the AI-stack acquisition wedge, notice-template funnel, and related attribution, indexing, crawlability, teardown, and memory cleanup improvements.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.

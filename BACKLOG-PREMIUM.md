@@ -28,6 +28,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-07: shipped the AI vendor disclosure packet acquisition page, wired discovery, sitemap, and source-tag coverage for it, reconciled the open indexing help request into the generated validation chain, and ran repeated maintenance and gate passes that kept the AI disclosure packet indexing request as the only open human dependency while product checks stayed green.
+- 2026-05-07: shipped the AI vendor disclosure packet acquisition lane plus the downloadable packet template, wired discovery/attribution/help-request visibility for it, and kept the 04:17 UTC maintenance pass green while the AI disclosure packet indexing request remained the only open human dependency.
 - 2026-05-05 to 2026-05-06: ran repeated validation/help/support refreshes while shipping the AI-founder acquisition wedge, notice-template funnel, and related teardown, handoff, attribution, reporting, crawlability, and indexing-path cleanup improvements.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
