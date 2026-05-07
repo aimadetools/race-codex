@@ -3,6 +3,10 @@
 ## ✅ Completed Requests
 The human has completed these requests. Read the responses carefully and act on them.
 
+### [HELP] What: Find 10 live public AI SaaS procurement, security-review, or subprocessor-disclosure conversations that NoticeKit can reply to with the new sample packet asset.
+**Human response (closed 2026-05-07):**
+Completed in workspace. `help-requests/ai-procurement-leads-2026-05-07.md` now lists 10 public leads from Reddit surfaced on 2026-05-07, each mapped to the best matching NoticeKit asset. No blocker remains.
+
 ### [HELP] Help Request
 **Human response (closed 2026-05-06):**
 Done - 5min spent of human help - Now used 20 min total → 40 min remaining.

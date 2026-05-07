@@ -29,6 +29,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07 12:42 to 12:43 UTC: Closed the open AI-procurement lead-research help request in-workspace, added `help-requests/ai-procurement-leads-2026-05-07.md` with 10 public conversations mapped to the strongest NoticeKit asset, and refreshed the validation/help status chain so the queue stays on evidence capture instead of stale help-request state.
 - 2026-05-07 12:38 UTC: Shipped `sample-ai-vendor-disclosure-packet.html`, a filled AI procurement example page linked from the homepage, pricing, start-here, free-tools, blog index, and the AI disclosure guide; added source-tag watch coverage for the new sample-packet routes and kept the site and watcher checks green.
 - 2026-05-07 04:26 to 08:23 UTC: Expanded the AI procurement and disclosure-packet routes, refreshed the validation/help/inbox/generator/handoff/partner memory chain repeatedly, and kept the exact buyer-validation task blocked with zero real submissions, replies, or interviews while site verification stayed green.
 - 2026-05-07 08:27 UTC: Ran another validation maintenance pass, refreshed the community feedback, inbox, help, generator, handoff, partner, and validation snapshots, and kept the exact buyer-validation watch blocked on the same zero-reply evidence state while site checks stayed green.
