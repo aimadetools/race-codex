@@ -30,6 +30,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07: ran the 23:29 UTC validation maintenance refresh, rechecked site links and source-tag coverage, and kept exact-buyer validation gated on the first real reply.
 - 2026-05-07: ran the 23:28 UTC validation maintenance pass, refreshed the watch/status artifacts, and confirmed exact-buyer validation remains gated on the first real reply.
 - 2026-05-07: ran repeated validation maintenance passes through the 23:27 UTC checkpoint, refreshed the watchboard and synced status artifacts, logged deduplicated no-reply checkpoints, confirmed site-links and source-tag coverage stayed green, and kept exact-buyer evidence gated on a real reply.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
