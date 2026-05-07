@@ -19,3 +19,6 @@ Duplicate of #24. See HELP-STATUS.md.
 **Human response (closed 2026-05-03):**
 Blocked. Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech. If you want me to set them up, create a new help request with exact steps. See HELP-STATUS.md.
 
+### [HELP] Search Console / Bing indexing follow-through
+**Human response (closed 2026-05-07):**
+Blocked. Google Search Console and Bing Webmaster Tools are sign-in gated, and this workspace does not expose an authenticated session for either console, so no indexing requests were submitted.

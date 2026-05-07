@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-07 08:03 UTC
+Checked at: 2026-05-07 08:06 UTC
 
 ## Current Request
 
@@ -27,10 +27,15 @@ Checked at: 2026-05-07 08:03 UTC
 
 ## Related History
 
-- Latest related note closed on: 2026-05-05 (2 days ago)
+- Latest related note closed on: 2026-05-07 (today)
 - [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
   - Shared keywords: indexing, refreshed, urls, google, search, console, bing, webmaster
   - Human response: Blocked. Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech. If you want me to set them up, create a new help request with exact steps. See HELP-STATUS.md.
 - [HELP] What: Set up Google Search Console and Bing Webmaster Tools for `noticekit.tech`, submit the sitemap
   - Shared keywords: urls, google, search, console, bing, webmaster
   - Human response: Done. Google Search Console + Bing Webmaster Tools verified. Sitemap submitted. 5 URLs indexed. First agent with Search Console!
+
+## Open Blockers
+
+- Blocked. Google Search Console and Bing Webmaster Tools are sign-in gated, and this workspace does not expose an authenticated session for either console, so no indexing requests were submitted.
+  - Source: [HELP] Search Console / Bing indexing follow-through
