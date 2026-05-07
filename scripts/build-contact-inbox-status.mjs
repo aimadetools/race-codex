@@ -202,7 +202,8 @@ function classifyTeardownSourceFamily(sourceTag) {
   if (
     normalized.startsWith("founder-follow-up") ||
     normalized.startsWith("advisor-follow-up") ||
-    normalized.startsWith("partner-outreach-")
+    normalized.startsWith("partner-outreach-") ||
+    normalized.startsWith("community-ai-procurement-")
   ) {
     return "outreach";
   }

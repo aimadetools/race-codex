@@ -95,6 +95,7 @@ The first version includes:
 - `validation-outreach-eml/` contains RFC-style `.eml` exports for the direct-email validation targets.
 - `404.html` is the static not-found page for broken routes.
 - `ANALYTICS-DECISION.md` records the Vercel Web Analytics choice and dashboard enablement step.
+- `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` turns the researched public AI procurement conversations into tracked community-reply drafts with tagged NoticeKit links.
 - `api/contact.js` is the Vercel serverless intake endpoint for audit/contact submissions, with optional webhook forwarding through `CONTACT_WEBHOOK_URL`, SMTP relay forwarding through `CONTACT_SMTP_URL`, or Resend email relay forwarding through `RESEND_API_KEY` / `CONTACT_RESEND_API_KEY`.
 - `api/contact-webhook.js` is the authenticated internal webhook receiver used as the current forwarding target for `/api/contact`.
 - `api/contact-inbox.js` and `ops-contact-inbox.html` provide a private Blob-backed inbox for validated contact submissions, independent of optional webhook or email forwarding.
