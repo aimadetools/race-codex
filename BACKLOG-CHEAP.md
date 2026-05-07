@@ -59,8 +59,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-07: shipped the AI security questionnaire acquisition page, linked it from homepage/pricing/start-here/blog/free-tools surfaces, added watched source tags plus validation/inbox coverage for the new lane, and reran the validation maintenance chain while the live queue stayed at 0 real submissions, replies, and interviews.
-- 2026-05-07: shipped the AI procurement/sample-packet acquisition lane, completed the AI-procurement lead-research help request, expanded watched source-tag coverage, and kept repeated validation/help/inbox/generator/handoff/partner maintenance plus site verification green while the live queue stayed at 0 real submissions, replies, and interviews.
-- 2026-05-07: added the internal AI procurement community reply pack with tracked source tags so the 10 researched public conversations can be answered with attributable sample, guide, stack, notice, or teardown links.
+- 2026-05-07: shipped the AI procurement/sample-packet/questionnaire acquisition set, linked it across homepage/pricing/start-here/blog/free-tools surfaces, expanded watched source-tag plus inbox/validation coverage, and kept the no-reply maintenance chain current while the live queue stayed at 0 real submissions, replies, and interviews.
+- 2026-05-07: added the internal AI procurement community reply pack so the 10 researched public conversations can be answered with attributable sample, guide, stack, notice, or teardown links.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while repeatedly refreshing no-reply memory, help/status artifacts, attribution coverage, crawlability, teardown routing, and static verification.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.
