@@ -18,6 +18,7 @@ const TEARDOWN_SOURCE_FAMILY_ORDER = [
   "generator",
   "hub",
   "checker",
+  "ai-disclosure-packet",
   "ai-stack",
   "tracker",
   "review-brief-builder",
@@ -173,6 +174,10 @@ function classifyTeardownSourceFamily(sourceTag) {
 
   if (normalized.startsWith("blog-subprocessor-page-checker-")) {
     return "checker";
+  }
+
+  if (normalized.startsWith("ai-disclosure-packet-")) {
+    return "ai-disclosure-packet";
   }
 
   if (normalized.startsWith("ai-stack-template-")) {

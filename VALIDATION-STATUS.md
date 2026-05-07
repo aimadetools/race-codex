@@ -19,12 +19,12 @@ Date: 2026-05-07
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-05-07 04:17 UTC (less than 1 minute ago)
-- Contact inbox snapshot: 2026-05-07 04:17 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-05-07 04:17 UTC (less than 1 minute ago)
-- Generator production snapshot: 2026-05-07 04:17 UTC (less than 1 minute ago)
-- Generator handoff snapshot: 2026-05-07 04:17 UTC (less than 1 minute ago)
-- Partner-outreach snapshot: 2026-05-07 04:17 UTC (less than 1 minute ago)
+- Community feedback checkpoint: 2026-05-07 04:17 UTC (13 minutes ago)
+- Contact inbox snapshot: 2026-05-07 04:17 UTC (13 minutes ago)
+- Human-help snapshot: 2026-05-07 04:17 UTC (13 minutes ago)
+- Generator production snapshot: 2026-05-07 04:17 UTC (13 minutes ago)
+- Generator handoff snapshot: 2026-05-07 04:17 UTC (13 minutes ago)
+- Partner-outreach snapshot: 2026-05-07 04:17 UTC (13 minutes ago)
 
 ## Batch Snapshot
 
@@ -51,7 +51,7 @@ Date: 2026-05-07
 - Real inbox submissions: 0
 - Inbox ownership signals: 0 (0 founder, 0 operator, 0 privacy consultant, 0 fractional dpo, 0 attorney, 0 other, 0 unknown)
 - Real free async teardown submissions: 0
-- Free async teardown source families: 0 (0 homepage, 0 pricing, 0 about, 0 generator, 0 hub, 0 checker, 0 ai-stack, 0 tracker, 0 review-brief-builder, 0 blog, 0 outreach, 0 other)
+- Free async teardown source families: 0 (0 homepage, 0 pricing, 0 about, 0 generator, 0 hub, 0 checker, 0 ai-disclosure-packet, 0 ai-stack, 0 tracker, 0 review-brief-builder, 0 blog, 0 outreach, 0 other)
 - Free async teardown ownership signals: 0 (0 founder, 0 operator, 0 privacy consultant, 0 fractional dpo, 0 attorney, 0 other, 0 unknown)
 - Real partner requests: 0
 - Partner request goals logged: 0 (0 referral_only, 0 client_delivery, 0 white_label, 0 other, 0 unknown)
@@ -59,11 +59,12 @@ Date: 2026-05-07
 - Checker-led inbox submissions: 0 (0 teardown, 0 pricing, 0 partner)
 - Tracker-led inbox submissions: 0 (0 download CTA, 0 teardown CTA)
 - Generator-led inbox submissions: 0 (0 page, 0 CTA)
-- AI-stack template inbox submissions: 0 (0 checker, 0 notice csv, 0 notice deadline, 0 notice generator, 0 notice teardown, 0 notice pricing, 0 download teardown, 0 download pricing, 0 general teardown, 0 general pricing)
-- Free-tools hub inbox submissions: 0 (0 hero, 0 generator, 0 generator-card, 0 self-audit, 0 page-checker, 0 brief-builder, 0 deadline, 0 tracker, 0 teardown CTA, 0 partner, 0 route finder)
+- AI disclosure packet inbox submissions: 0 (0 stack bridge, 0 notice bridge, 0 brief bridge, 0 teardown, 0 pricing, 0 bottom CTA, 0 pricing page guide, 0 start-here guide, 0 audit-request guide, 0 sample-teardown guide, 0 kit-preview guide)
+- AI-stack template inbox submissions: 0 (0 disclosure-packet bridge, 0 checker, 0 notice csv, 0 notice deadline, 0 notice generator, 0 notice teardown, 0 notice pricing, 0 download teardown, 0 download pricing, 0 general teardown, 0 general pricing, 0 start-here guide, 0 audit-request guide)
+- Free-tools hub inbox submissions: 0 (0 hero, 0 ai-stack guide, 0 ai-packet guide, 0 generator, 0 generator-card, 0 self-audit, 0 page-checker, 0 brief-builder, 0 deadline, 0 tracker, 0 teardown CTA, 0 partner, 0 route finder)
 - Review-brief-builder-led inbox submissions: 0 (0 teardown, 0 partner)
-- Sample-teardown inbox submissions: 0 (0 hero, 0 CTA, 0 partner)
-- Kit-preview inbox submissions: 0 (0 hero, 0 grid, 0 bottom)
+- Sample-teardown inbox submissions: 0 (0 hero, 0 CTA, 0 partner, 0 ai-packet guide)
+- Kit-preview inbox submissions: 0 (0 hero, 0 grid, 0 bottom, 0 ai-packet guide)
 - Partner-preview inbox submissions: 0 (0 hero, 0 CTA)
 - Partner-client-handoff inbox submissions: 0 (0 hero, 0 founder teardown, 0 teardown CTA, 0 partner CTA)
 - Follow-up teardown inbox submissions: 0 (0 founder follow-up, 0 advisor follow-up)

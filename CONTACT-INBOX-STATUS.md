@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-07 04:17 UTC
+Checked at: 2026-05-07 04:30 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -41,6 +41,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - generator: 0
 - hub: 0
 - checker: 0
+- ai-disclosure-packet: 0
 - ai-stack: 0
 - tracker: 0
 - review-brief-builder: 0
@@ -93,6 +94,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-disclosure-packet-teardown: 0
 - ai-disclosure-packet-pricing: 0
 - ai-disclosure-packet-bottom: 0
+- ai-stack-template-disclosure-packet: 0
 - ai-stack-template-checker: 0
 - ai-stack-template-notice-csv: 0
 - ai-stack-template-notice-deadline: 0
@@ -124,11 +126,15 @@ Source of truth: Vercel Blob `contact-submissions/`
 - sample-teardown-hero: 0
 - sample-teardown-cta: 0
 - sample-teardown-partner: 0
+- sample-teardown-ai-packet: 0
 - kit-preview-hero: 0
 - kit-preview-grid: 0
 - kit-preview-bottom: 0
+- kit-preview-ai-packet: 0
 - start-here: 0
 - start-here-card: 0
+- start-here-ai-disclosure-packet: 0
+- start-here-ai-stack-guide: 0
 - monitoring-comparison: 0
 - partner-preview-hero: 0
 - partner-preview-cta: 0
@@ -137,6 +143,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - partner-client-handoff-teardown: 0
 - partner-client-handoff-cta: 0
 - homepage-ai-stack-guide: 0
+- audit-request-ai-packet: 0
+- audit-request-ai-stack: 0
+- pricing-ai-disclosure-packet: 0
 - pricing-ai-stack-guide: 0
 - partner-outreach-batch-01: 0
 - partner-outreach-follow-up-01: 0

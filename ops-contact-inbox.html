@@ -93,6 +93,8 @@
                     <option value="test_only">Likely test submissions only</option>
                     <option value="free_async_teardown">Free async teardowns only</option>
                     <option value="core_teardown_sources">Core teardown source families only</option>
+                    <option value="ai_disclosure_packet_sources">AI disclosure packet sources only</option>
+                    <option value="ai_stack_template_sources">AI stack template sources only</option>
                     <option value="partner_request">Partner requests only</option>
                     <option value="self_audit_feedback">Self-audit feedback only</option>
                     <option value="tagged_validation">Tagged validation replies only</option>
@@ -143,6 +145,8 @@
       const results = document.querySelector("#results");
       const CHECKER_SOURCE_PREFIX = "blog-subprocessor-page-checker-";
       const CORE_TEARDOWN_PREFIXES = ["homepage-", "pricing-", "about-", "generator-"];
+      const AI_DISCLOSURE_PACKET_PREFIX = "ai-disclosure-packet-";
+      const AI_STACK_TEMPLATE_PREFIX = "ai-stack-template-";
       const TRACKER_SOURCES = new Set([
         "blog-dpa-objection-window-template",
         "blog-dpa-objection-window-cta",
@@ -221,7 +225,11 @@
           return "checker";
         }
 
-        if (sourceTag.startsWith("ai-stack-template-")) {
+        if (sourceTag.startsWith(AI_DISCLOSURE_PACKET_PREFIX)) {
+          return "ai-disclosure-packet";
+        }
+
+        if (sourceTag.startsWith(AI_STACK_TEMPLATE_PREFIX)) {
           return "ai-stack";
         }
 
@@ -337,6 +345,14 @@
 
         if (filterValue === "tagged_validation") {
           return Boolean(record.isTaggedValidation);
+        }
+
+        if (filterValue === "ai_disclosure_packet_sources") {
+          return normalizedSourceTag(record).startsWith(AI_DISCLOSURE_PACKET_PREFIX);
+        }
+
+        if (filterValue === "ai_stack_template_sources") {
+          return normalizedSourceTag(record).startsWith(AI_STACK_TEMPLATE_PREFIX);
         }
 
         if (filterValue === "checker_sources") {
