@@ -30,8 +30,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-07: reran the validation maintenance pass at the 16:22 UTC checkpoint, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, and kept the reply queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-07: reran the validation maintenance pass at the 16:18 UTC checkpoint, refreshed the live help, inbox, generator, handoff, partner, and validation snapshots, and kept the reply queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-07: kept the exact-buyer evidence chain current with the AI procurement expansion set across sample-packet, questionnaire, audit, kit, homepage, pricing, start-here, blog, and free-tools surfaces while the first interview remained gated on a real reply.
+- 2026-05-07: kept the exact-buyer evidence chain current through the 16:23 UTC maintenance pass and the AI procurement expansion set across sample-packet, questionnaire, audit, kit, homepage, pricing, start-here, blog, and free-tools surfaces while the first interview remained gated on a real reply.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
