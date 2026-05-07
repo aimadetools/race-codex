@@ -38,7 +38,7 @@
         <section class="page-hero">
           <span class="eyebrow">Audit and access request</span>
           <h1>Send one vendor-change URL and get a blunt async read.</h1>
-          <p>Use this intake to request a free async teardown, prepare a paid Concierge Audit, or ask about Starter, Pro, and partner access. NoticeKit uses the details to scope the next step and reply by email, no call required.</p>
+          <p>Use this intake to request a free async teardown, prepare a paid Concierge Audit, or ask about Starter, Pro, and partner access. NoticeKit uses the details to scope the next step and reply by email, no call required. For teardown requests, include the live subprocessor page URL and the affected customer segment so the reply can stay specific.</p>
           <div class="hero-actions">
             <a class="button secondary" href="blog-ai-vendor-disclosure-packet.html?source=audit-request-ai-packet">Need a procurement-ready packet first?</a>
             <a class="button secondary" href="blog-ai-saas-subprocessor-list-template.html?source=audit-request-ai-stack">Start with the AI stack guide</a>
@@ -51,7 +51,7 @@
               <h2>Best low-friction ask</h2>
               <p>Not ready to buy or book a call? Send the current subprocessor page URL, the planned vendor change, and the affected customer segment. NoticeKit can reply with a short async gap read, usually in three bullets, instead of a meeting request.</p>
               <ul class="feature-list">
-                <li>Free async teardown: one URL, one vendor change, one blunt gap note</li>
+                <li>Free async teardown: one live URL, one vendor change, one blunt gap note</li>
                 <li>Paid audit: prioritized fix plan for an urgent or customer-facing change</li>
                 <li>Partner request: consultant and advisor workflow fit check</li>
               </ul>
@@ -64,7 +64,7 @@
               <h2>What to prepare</h2>
               <ul class="feature-list">
                 <li>Company name and website</li>
-                <li>Current subprocessor page URL</li>
+                <li>Current subprocessor page URL or closest live page</li>
                 <li>Vendor being added, removed, or replaced</li>
                 <li>Planned effective date and customer notice window</li>
                 <li>Customer segment affected by the change</li>
@@ -112,13 +112,13 @@
                   </select>
                 </label>
                 <label>Subprocessor page URL
-                  <input id="subprocessor-url" name="subprocessor-url" type="url" placeholder="https://example.com/subprocessors">
+                  <input id="subprocessor-url" name="subprocessor-url" type="url" placeholder="https://example.com/privacy/subprocessors">
                 </label>
                 <label>Vendor change
                   <textarea id="vendor-change" name="vendor-change" placeholder="Example: Adding Acme Email Cloud for transactional email delivery on May 20."></textarea>
                 </label>
-                <label>Customer segment and deadline
-                  <textarea id="deadline" name="deadline" placeholder="Example: EU customers on signed DPA, 30-day notice window."></textarea>
+                <label>Customer segment and notice window
+                  <textarea id="deadline" name="deadline" placeholder="Example: EU customers on signed DPA, 30-day notice window, effective May 20."></textarea>
                 </label>
                 <label>What you need reviewed
                   <textarea id="review-need" name="review-need" placeholder="Example: Notice copy, objection-window tracker, evidence trail, and public subprocessor page."></textarea>
@@ -190,7 +190,7 @@
       const requestTypeMeta = {
         free_async_teardown: {
           title: "Request a free async teardown",
-          copy: "Best for founders, operators, consultants, or attorneys who want a specific async reply in about three bullets without booking a call.",
+          copy: "Best for founders, operators, consultants, or attorneys who want a specific async reply in about three bullets without booking a call. Include the live subprocessor page URL and the affected customer segment so the answer can stay concrete.",
           button: "Request free teardown"
         },
         concierge_audit: {

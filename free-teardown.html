@@ -39,7 +39,7 @@
         <section class="page-hero">
           <span class="eyebrow">Free async teardown</span>
           <h1>Get a blunt 3-bullet read on one subprocessor change.</h1>
-          <p>Use this when you want a concrete gap note before you book a call or buy the kit. This page now submits the teardown directly, keeps the source tag attached, and avoids the extra intake step.</p>
+          <p>Use this when you want a concrete gap note before you book a call or buy the kit. Paste the live subprocessor page URL, the planned vendor change, and the affected customer segment so the reply can stay specific.</p>
           <div class="hero-actions">
             <a class="button" href="#request-builder">Start the teardown</a>
             <a class="button secondary" href="generator.html">Open generator</a>
@@ -51,7 +51,12 @@
           <form class="audit-card" id="teardown-form">
             <div class="section-head compact-head">
               <h2>What to send</h2>
-              <p>Keep it short. One URL, one change, and one affected segment is enough to route the reply. Company and reply email are required.</p>
+              <p>Keep it short, but include the live URL and affected segment. Company and reply email are required.</p>
+              <ul class="feature-list">
+                <li>Paste the live subprocessor page URL if you have one.</li>
+                <li>Describe the vendor change in one sentence.</li>
+                <li>Name the affected customer segment and notice window.</li>
+              </ul>
             </div>
             <div class="field-grid">
               <label>Company
@@ -72,13 +77,13 @@
                 </select>
               </label>
               <label>Subprocessor page URL
-                <input id="subprocessor-url" name="subprocessor_url" type="url" placeholder="https://example.com/subprocessors">
+                <input id="subprocessor-url" name="subprocessor_url" type="url" placeholder="https://example.com/privacy/subprocessors">
               </label>
               <label>Vendor change
-                <input id="vendor-change" name="vendor_change" placeholder="Example: adding a new email provider for transactional mail">
+                <input id="vendor-change" name="vendor_change" placeholder="Example: Adding a new email provider for transactional mail on May 20.">
               </label>
-              <label>Customer segment and deadline
-                <textarea id="deadline" name="deadline" placeholder="Example: EU customers on a signed DPA, 30-day notice window."></textarea>
+              <label>Customer segment and notice window
+                <textarea id="deadline" name="deadline" placeholder="Example: EU customers on a signed DPA, 30-day notice window, effective May 20."></textarea>
               </label>
               <label>What you want reviewed
                 <textarea id="review-need" name="review_need">Please give the 3-bullet async gap read. Flag anything that would slow down send timing, customer segmentation, or evidence logging.</textarea>
