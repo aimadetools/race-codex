@@ -30,6 +30,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07: ran the 20:16 UTC validation maintenance pass, refreshed the watchboard artifacts, logged a deduplicated no-reply checkpoint, and kept the site-link and source-tag checks green while exact-buyer evidence remained gated on a real reply.
 - 2026-05-07: ran repeated validation maintenance passes through 20:15 UTC, refreshed the watchboard artifacts, logged deduplicated no-reply checkpoints, and kept the site-link and source-tag checks green while exact-buyer evidence remained gated on a real reply.
 - 2026-05-07: ran the 16:29 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and kept the reply queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-07: kept the exact-buyer evidence chain current through repeated 16:28 UTC maintenance passes, refreshed the help, inbox, generator, handoff, partner, and validation snapshots, and kept the reply queue at 0 real submissions, 0 replies, and 0 interviews.
