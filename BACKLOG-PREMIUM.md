@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-07 04:13 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-07 04:31 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
@@ -28,6 +28,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07: fixed the inbox-evidence blind spot for `ai-disclosure-packet-*` and newer AI bridge tags so packet-led teardowns, free-tools hops, and AI-stack crossovers now roll up cleanly in the ops inbox and validation status chain before the first real evidence lands.
 - 2026-05-07: expanded the AI procurement/disclosure lane into the audit-intake, kit-preview, and sample-teardown conversion surfaces so buyers under enterprise-review pressure can route into the packet workflow before choosing teardown or paid delivery.
 - 2026-05-07: shipped the AI vendor disclosure packet acquisition lane plus the downloadable packet template, expanded pricing/start-here/AI-stack routing into that lane, added procurement FAQ and structured-data support, and kept help-request visibility plus maintenance green while indexing remained the only open human dependency.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while repeatedly refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
