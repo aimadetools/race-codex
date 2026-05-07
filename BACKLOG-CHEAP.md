@@ -6,6 +6,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 - If the first real intake lands with source tag `ai-stack-template-teardown` or `ai-stack-template-pricing`, preserve the exact source tag and whether the buyer asked for teardown help or paid-kit help before replying.
 - If the first real intake lands with source tag `ai-disclosure-packet-teardown`, `ai-disclosure-packet-pricing`, or `ai-disclosure-packet-bottom`, preserve the exact source tag and whether the buyer needed procurement, security review, or counsel handoff help before replying.
+- If the first real intake lands with source tag `sample-ai-packet-teardown` or `sample-ai-packet-pricing`, preserve the exact source tag and whether the buyer needed procurement packaging, direct customer notice, or reviewer-proof cleanup before replying.
+- If the first real visit, reply, or teardown request references `sample-ai-vendor-disclosure-packet.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the blank AI disclosure packet guide.
+- If the sample AI packet drives three real visits, forwards, or replies before the blank AI disclosure packet guide does, move the sample higher than the blank template in the homepage AI wedge or pricing AI wedge and note the shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real visit, reply, or teardown request references the AI disclosure packet page, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the older AI stack template and generic teardown lanes.
 - If the AI disclosure packet drives three real visits, forwards, or replies before the older AI stack template does, move it into a stronger homepage hero or outbound follow-up slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real visit, reply, or teardown request references the AI stack CSV or `blog-ai-saas-subprocessor-list-template.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the generic subprocessor-list template.
@@ -54,6 +57,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-07 12:38 UTC: Added the sample AI vendor disclosure packet route, linked it into the AI procurement surfaces, expanded watched source-tag coverage for the new sample-page CTAs, and kept site-link and watcher verification green.
 - 2026-05-07 04:26 to 08:23 UTC: Expanded the AI disclosure packet and teardown intake routes, refreshed the validation/help/inbox/generator/handoff/partner status chain repeatedly, and kept the trigger-driven intake tasks blocked with zero real submissions, replies, or interviews while site verification stayed green.
 - 2026-05-07 08:27 UTC: Ran another validation maintenance pass, refreshed the community feedback, inbox, help, generator, handoff, partner, and validation snapshots, and kept the zero-reply watch and site verification green.
 - 2026-05-07 08:28 UTC: Ran the production self-audit verification and free-teardown handoff check, confirmed the live API and inbox cleanup flow still worked, and kept the zero-real-intake snapshot stable.

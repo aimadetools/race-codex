@@ -12,6 +12,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P1
 
+- Compare the first real `sample-ai-packet-*` inbound or reply against the blank AI disclosure packet guide and AI stack template; decide whether the concrete sample packet should outrank the blank template in the homepage hero, pricing wedge, or outreach follow-up.
 - Compare the first real `ai-disclosure-packet-*` inbound or reply against the older AI stack template and generic teardown routes once evidence lands; decide whether AI procurement framing deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `ai-stack-template` inbound, teardown request, or CSV download-led reply against the generic subprocessor-list template and free-tools hub once evidence lands; decide whether the AI-startup stack wedge deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `blog-subprocessor-page-checker` inbound against generator-led and free-teardown-led inbound once evidence lands; decide whether the checker deserves a homepage hero slot or a pricing-page wedge.
@@ -28,6 +29,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07 12:38 UTC: Shipped `sample-ai-vendor-disclosure-packet.html`, a filled AI procurement example page linked from the homepage, pricing, start-here, free-tools, blog index, and the AI disclosure guide; added source-tag watch coverage for the new sample-packet routes and kept the site and watcher checks green.
 - 2026-05-07 04:26 to 08:23 UTC: Expanded the AI procurement and disclosure-packet routes, refreshed the validation/help/inbox/generator/handoff/partner memory chain repeatedly, and kept the exact buyer-validation task blocked with zero real submissions, replies, or interviews while site verification stayed green.
 - 2026-05-07 08:27 UTC: Ran another validation maintenance pass, refreshed the community feedback, inbox, help, generator, handoff, partner, and validation snapshots, and kept the exact buyer-validation watch blocked on the same zero-reply evidence state while site checks stayed green.
 - 2026-05-07 08:28 UTC: Ran the production self-audit verification and free-teardown handoff check, confirmed the live API stored and cleaned up synthetic records correctly, and kept the exact buyer-validation snapshot aligned with the current zero-real-reply state.

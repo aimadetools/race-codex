@@ -146,6 +146,7 @@
       const CHECKER_SOURCE_PREFIX = "blog-subprocessor-page-checker-";
       const CORE_TEARDOWN_PREFIXES = ["homepage-", "pricing-", "about-", "generator-"];
       const AI_DISCLOSURE_PACKET_PREFIX = "ai-disclosure-packet-";
+      const SAMPLE_AI_PACKET_PREFIX = "sample-ai-packet-";
       const AI_STACK_TEMPLATE_PREFIX = "ai-stack-template-";
       const TRACKER_SOURCES = new Set([
         "blog-dpa-objection-window-template",
@@ -226,6 +227,10 @@
         }
 
         if (sourceTag.startsWith(AI_DISCLOSURE_PACKET_PREFIX)) {
+          return "ai-disclosure-packet";
+        }
+
+        if (sourceTag.startsWith(SAMPLE_AI_PACKET_PREFIX)) {
           return "ai-disclosure-packet";
         }
 

@@ -1,41 +1,25 @@
 # Help Request Status
 
-Checked at: 2026-05-07 08:29 UTC
+Checked at: 2026-05-07 12:39 UTC
 
 ## Current Request
 
 - Status: open
-- What: Request indexing for the new AI vendor disclosure packet page and the refreshed homepage, blog, and free-tools URLs in Google Search Console and Bing Webmaster Tools.
+- What: Find 10 live public AI SaaS procurement, security-review, or subprocessor-disclosure conversations that NoticeKit can reply to with the new sample packet asset.
 - Priority: important
-- Time: 5min
+- Time: 15min
 - Budget: $0
 
 ## Requested Steps
 
-- Open Google Search Console for `noticekit.tech`.
-- Request indexing for `https://noticekit.tech/blog-ai-vendor-disclosure-packet.html`.
-- Request indexing again for `https://noticekit.tech/`, `https://noticekit.tech/blog.html`, and `https://noticekit.tech/free-tools.html` because all three now link to the new AI procurement page.
-- Open Bing Webmaster Tools for `noticekit.tech`.
-- Submit or request indexing for the same four URLs there.
-- Update `HELP-STATUS.md` with what was submitted and any limits, errors, or confirmations you saw.
+- Search public web results, founder communities, Reddit, LinkedIn posts, X posts, GitHub discussions, or forum threads from the last 90 days for people asking about AI vendor disclosure, subprocessors, security questionnaires, procurement review, or customer notice obligations.
+- Create a new markdown file at `help-requests/ai-procurement-leads-2026-05-07.md`.
+- Add exactly 10 leads. For each lead include: date found, URL, platform, company or author name, one-sentence summary of the pain, and the best matching NoticeKit asset from this list only: `sample-ai-vendor-disclosure-packet.html`, `blog-ai-vendor-disclosure-packet.html`, `blog-ai-saas-subprocessor-list-template.html`, `blog-ai-saas-subprocessor-notice-template.html`, `free-teardown.html`.
+- Exclude closed communities that require paid access and exclude obvious spam or agency lead lists.
+- Update `HELP-STATUS.md` with completion status and any blockers.
 
-- Active request source: help-requests/20260507-043233-HELP-REQUEST.md
+- Active request source: HELP-REQUEST.md
 
 ## Resolution
 
 - No matching completion note is present in `HELP-STATUS.md` yet.
-
-## Related History
-
-- Latest related note closed on: 2026-05-07 (today)
-- [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
-  - Shared keywords: indexing, refreshed, urls, google, search, console, bing, webmaster
-  - Human response: Blocked. Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech. If you want me to set them up, create a new help request with exact steps. See HELP-STATUS.md.
-- [HELP] What: Set up Google Search Console and Bing Webmaster Tools for `noticekit.tech`, submit the sitemap
-  - Shared keywords: urls, google, search, console, bing, webmaster
-  - Human response: Done. Google Search Console + Bing Webmaster Tools verified. Sitemap submitted. 5 URLs indexed. First agent with Search Console!
-
-## Open Blockers
-
-- Blocked. Google Search Console and Bing Webmaster Tools are sign-in gated, and this workspace does not expose an authenticated session for either console, so no indexing requests were submitted.
-  - Source: [HELP] Search Console / Bing indexing follow-through
