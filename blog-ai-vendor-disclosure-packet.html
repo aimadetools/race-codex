@@ -24,27 +24,60 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "AI Vendor Disclosure Packet for Enterprise Reviews",
-        "description": "A practical packet for AI SaaS founders who need vendor facts, notice timing, proof, and reviewer questions ready before procurement or security review stalls the deal.",
-        "author": {
-          "@type": "Organization",
-          "name": "NoticeKit"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "NoticeKit",
-          "url": "https://noticekit.tech/"
-        },
-        "datePublished": "2026-05-07",
-        "dateModified": "2026-05-07",
-        "mainEntityOfPage": "https://noticekit.tech/blog-ai-vendor-disclosure-packet.html",
-        "about": [
-          "AI vendor disclosure",
-          "enterprise security review",
-          "procurement packet",
-          "subprocessor notice",
-          "AI SaaS compliance"
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "AI Vendor Disclosure Packet for Enterprise Reviews",
+            "description": "A practical packet for AI SaaS founders who need vendor facts, notice timing, proof, and reviewer questions ready before procurement or security review stalls the deal.",
+            "author": {
+              "@type": "Organization",
+              "name": "NoticeKit"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "NoticeKit",
+              "url": "https://noticekit.tech/"
+            },
+            "datePublished": "2026-05-07",
+            "dateModified": "2026-05-07",
+            "mainEntityOfPage": "https://noticekit.tech/blog-ai-vendor-disclosure-packet.html",
+            "about": [
+              "AI vendor disclosure",
+              "enterprise security review",
+              "procurement packet",
+              "subprocessor notice",
+              "AI SaaS compliance"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is an AI vendor disclosure packet?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It is one operating document that combines your AI vendor list, the proposed or recent vendor change, the affected customer segment, notice timing, proof links, and open reviewer questions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What should an enterprise reviewer see first?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Lead with the named vendors, the exact change, who is affected, the notice timeline, and where the supporting proof lives so procurement, security, or counsel can review the delta quickly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What should stay out of the public vendor page?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keep internal reviewer notes, customer segmentation logic, approval status, evidence links, and unresolved legal or procurement questions in the private packet rather than on the public page."
+                }
+              }
+            ]
+          }
         ]
       }
     </script>
@@ -220,6 +253,28 @@
               <p><strong>Notice and proof:</strong> affected segment, controlling agreement fact, draft notice status, page archive, and open reviewer questions.</p>
             </div>
             <p>If those three blocks are clear, the packet usually gives procurement or counsel enough context to approve, revise, or escalate without another long fact-finding loop.</p>
+          </section>
+
+          <section>
+            <h2>FAQ for the first procurement pass</h2>
+            <div class="grid-2">
+              <article class="card">
+                <h3>What is the packet actually for?</h3>
+                <p>It gives procurement, security, or counsel one review artifact instead of making them reconstruct the vendor facts, notice logic, and proof trail from separate pages and emails.</p>
+              </article>
+              <article class="card">
+                <h3>What should the reviewer see first?</h3>
+                <p>Named vendors, the exact change, the affected customer segment, the notice timeline, and where the supporting proof lives. Those five facts usually decide whether the thread can move forward.</p>
+              </article>
+              <article class="card">
+                <h3>What stays private?</h3>
+                <p>Reviewer names, internal approval notes, unresolved questions, evidence links, and customer-segment logic that is useful for operations but too noisy for the public page.</p>
+              </article>
+              <article class="card">
+                <h3>When is the packet overkill?</h3>
+                <p>If there is no active buyer review, no vendor change, and no customer notice decision in flight, the public vendor list and internal tracker may be enough until a real review thread starts.</p>
+              </article>
+            </div>
           </section>
 
           <section>
