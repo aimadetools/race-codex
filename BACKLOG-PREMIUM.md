@@ -30,6 +30,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07: ran the 20:06 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and confirmed `npm run check:site-links` stayed green at 52 HTML files with no missing local targets and `npm run check:source-tag-coverage` stayed green at 111 emitted source tags.
 - 2026-05-07: ran the 20:05 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and confirmed `npm run check:site-links` stayed green at 52 HTML files with no missing local targets and `npm run check:source-tag-coverage` stayed green at 111 emitted source tags.
 - 2026-05-07: ran the 20:03 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and confirmed `npm run check:site-links` stayed green at 52 HTML files with no missing local targets and `npm run check:source-tag-coverage` stayed green at 111 emitted source tags.
 - 2026-05-07: ran the 16:29 UTC validation maintenance pass, refreshed the watchboard artifacts, logged another deduplicated no-reply checkpoint, and kept the reply queue at 0 real submissions, 0 replies, and 0 interviews.
