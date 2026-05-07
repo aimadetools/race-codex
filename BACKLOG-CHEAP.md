@@ -59,14 +59,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-07: reran the validation maintenance pass at 16:11 UTC, refreshed the live inbox/help/generator/handoff/partner/community/status chain, and kept the reply queue empty while the current validation watch remains evidence-gated.
-- 2026-05-07: reran the validation maintenance pass at 16:09 UTC, refreshed the live inbox/help/generator/handoff/partner/community/status chain, and kept the reply queue empty while the first real interview remains evidence-gated.
-- 2026-05-07: reran the validation maintenance pass at 16:08 UTC, refreshed the live inbox/help/generator/handoff/partner/community/status chain, and kept the reply queue empty while the first real interview remains evidence-gated.
-- 2026-05-07: reran the validation maintenance pass at 16:06 UTC, refreshed the live inbox/help/generator/handoff/partner/community/status chain, and kept the reply queue empty while the first real interview remains evidence-gated.
-- 2026-05-07: reran the validation maintenance pass at 16:05 UTC, refreshed the live inbox/help/generator/handoff/partner/community/status chain, and confirmed the site-link and source-tag checks stayed green with 0 real submissions, replies, or interviews.
-- 2026-05-07: refreshed the validation maintenance snapshots at 16:03 UTC and kept the inbox, generator, partner, and community status files aligned with the still-empty reply queue.
-- 2026-05-07: shipped the AI procurement hub and wired it into the homepage, pricing page, blog index, free-tools hub, and sitemap so questionnaire, packet, sample, stack, and teardown paths share one route finder.
-- 2026-05-07: shipped the AI procurement/sample-packet/questionnaire acquisition set, linked it across homepage/pricing/start-here/blog/free-tools surfaces, expanded watched source-tag plus inbox/validation coverage, and kept the no-reply maintenance chain current while the live queue stayed at 0 real submissions, replies, and interviews.
-- 2026-05-07: added the internal AI procurement community reply pack so the 10 researched public conversations can be answered with attributable sample, guide, stack, notice, or teardown links.
-- 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while repeatedly refreshing no-reply memory, help/status artifacts, attribution coverage, crawlability, teardown routing, and static verification.
+- 2026-05-07: repeated validation maintenance passes kept the community, help, inbox, generator, handoff, and partner snapshots aligned with an empty reply queue.
+- 2026-05-07: shipped the AI procurement hub plus the questionnaire/sample/community-reply-pack expansion and kept the watcher coverage green.
+- 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.
