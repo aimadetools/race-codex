@@ -30,6 +30,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07: refreshed the validation maintenance snapshots at 16:03 UTC and kept the live reply queue at zero while the first real interview remains evidence-gated.
 - 2026-05-07: shipped the AI procurement expansion set across sample-packet, questionnaire, audit, kit, homepage, pricing, start-here, blog, and free-tools surfaces; closed the matching lead-research help request; and extended watch/reporting coverage for the new AI source tags.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while repeatedly refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
