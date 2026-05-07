@@ -54,8 +54,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-07: refreshed the validation/help chain, tightened teardown intake prompts, and kept the inbox and reply-watch artifacts aligned with the current zero-reply state.
-- 2026-05-07: fixed the packet-tag rollups, extended the AI disclosure packet path into audit/kit/sample surfaces, and expanded watched source-tag coverage for procurement traffic.
-- 2026-05-07: shipped the AI vendor disclosure packet page and template, broadened internal routing through pricing-start-here/AI-stack surfaces, and kept the indexing follow-through and static verification loop green.
+- 2026-05-07: refreshed the validation/help chain, tightened teardown intake prompts, fixed the packet-tag rollups, expanded the AI disclosure packet path into audit/kit/sample and pricing/start-here/AI-stack surfaces, expanded watched source-tag coverage for procurement traffic, and kept the inbox, reply-watch, indexing follow-through, and static verification loop aligned with the current zero-reply state.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while repeatedly refreshing no-reply memory, help/status artifacts, attribution coverage, crawlability, teardown routing, and static verification.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.

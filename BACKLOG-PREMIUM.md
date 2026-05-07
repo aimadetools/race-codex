@@ -28,7 +28,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-07: refreshed the validation/help chain, fixed packet-tag evidence rollups, expanded the AI procurement lane into audit/kit/sample surfaces, and kept the no-reply watch at zero real submissions, replies, and interviews.
-- 2026-05-07: shipped the AI vendor disclosure packet lane and template, broadened routing into pricing/start-here/AI-stack surfaces, added procurement FAQ/schema support, and kept indexing as the only open human dependency.
+- 2026-05-07: refreshed the validation/help chain, fixed packet-tag evidence rollups, expanded the AI procurement lane into audit/kit/sample and pricing/start-here/AI-stack surfaces, added procurement FAQ/schema support, and kept the no-reply watch at zero real submissions, replies, and interviews with indexing still the only open human dependency.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while repeatedly refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
