@@ -12,6 +12,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P1
 
+- Compare the first real `ai-disclosure-packet-*` inbound or reply against the older AI stack template and generic teardown routes once evidence lands; decide whether AI procurement framing deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `ai-stack-template` inbound, teardown request, or CSV download-led reply against the generic subprocessor-list template and free-tools hub once evidence lands; decide whether the AI-startup stack wedge deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `blog-subprocessor-page-checker` inbound against generator-led and free-teardown-led inbound once evidence lands; decide whether the checker deserves a homepage hero slot or a pricing-page wedge.
 - Compare the first real `kit-preview`-led inbound or reply against generator-led, teardown-led, and partner-preview-led inbound once evidence lands; decide whether the concrete deliverable preview deserves a hero or pricing-page slot.
@@ -29,5 +30,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 - 2026-05-06 23:29 to 23:31 UTC: ran another validation maintenance pass, refreshed the live help/contact/generator/handoff/partner/validation snapshot chain, logged another deduplicated no-reply checkpoint, and kept `npm run check:site-links` green at 48 HTML files with no missing local targets.
 - 2026-05-06 23:17 to 23:27 UTC: ran repeated validation maintenance passes, refreshed the live help/contact/generator/handoff/partner/validation snapshot chain, logged deduplicated no-reply checkpoints, and kept `npm run check:site-links` green at 48 HTML files with no missing local targets.
+- 2026-05-07: shipped the AI vendor disclosure packet acquisition page, wired it into homepage/blog/free-tools discovery surfaces, added sitemap and source-tag coverage, and queued human indexing follow-through so the new wedge can earn real evidence.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help/support refreshes, shipped the AI-founder acquisition wedge and notice-template funnel, and hardened teardown, handoff, attribution, reporting, crawlability, and indexing-path cleanup for future channel decisions.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.

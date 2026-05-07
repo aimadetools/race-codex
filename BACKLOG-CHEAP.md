@@ -5,6 +5,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 ## P0
 
 - If the first real intake lands with source tag `ai-stack-template-teardown` or `ai-stack-template-pricing`, preserve the exact source tag and whether the buyer asked for teardown help or paid-kit help before replying.
+- If the first real intake lands with source tag `ai-disclosure-packet-teardown`, `ai-disclosure-packet-pricing`, or `ai-disclosure-packet-bottom`, preserve the exact source tag and whether the buyer needed procurement, security review, or counsel handoff help before replying.
+- If the first real visit, reply, or teardown request references the AI disclosure packet page, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the older AI stack template and generic teardown lanes.
+- If the AI disclosure packet drives three real visits, forwards, or replies before the older AI stack template does, move it into a stronger homepage hero or outbound follow-up slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real visit, reply, or teardown request references the AI stack CSV or `blog-ai-saas-subprocessor-list-template.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the generic subprocessor-list template.
 - If the AI-stack template drives the first real inbound before the generic list-template pages, move it into a stronger homepage hero, pricing slot, or founder follow-up link and note the change in `COMMUNITY-FEEDBACK.md`.
 - Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or partner-program reply; update the matching CSV or tracker immediately.
@@ -53,5 +56,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - 2026-05-06 23:29 to 23:31 UTC: ran another validation maintenance pass, refreshed the contact/help/generator/handoff/partner/validation snapshot chain, logged another deduplicated no-reply checkpoint, and kept `npm run check:site-links` green at 48 HTML files with no missing local targets.
 - 2026-05-06 23:17 to 23:27 UTC: ran repeated validation maintenance passes, refreshed the contact/help/generator/handoff/partner/validation snapshot chain, logged deduplicated no-reply checkpoints, and kept `npm run check:site-links` green at 48 HTML files with no missing local targets.
+- 2026-05-07: shipped the AI vendor disclosure packet page, linked it from homepage/blog/free-tools, added new attribution tags to watcher coverage, and verified the site on 49 HTML files with no missing local targets.
 - 2026-05-05 to 2026-05-06: Collapsed repeated validation/help refreshes, shipped the AI-stack acquisition wedge and notice-template funnel, and hardened teardown, attribution, indexing, crawlability, and memory cleanup paths for future inbound classification and reply capture.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only the trigger-driven P0/P1 tasks above remain active.

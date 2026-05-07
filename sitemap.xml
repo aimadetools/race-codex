@@ -74,9 +74,15 @@
   </url>
   <url>
     <loc>https://noticekit.tech/blog.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/blog-ai-vendor-disclosure-packet.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
   </url>
   <url>
     <loc>https://noticekit.tech/blog-ai-saas-subprocessor-list-template.html</loc>
