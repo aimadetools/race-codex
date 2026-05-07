@@ -54,6 +54,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-07 04:06 to 04:07 UTC: reconciled the new AI disclosure packet indexing help request into the generated help/validation status chain, refreshed inbox/generator/handoff/partner snapshots, and kept `npm run check:site-links` and `npm run check:source-tag-coverage` green.
 - 2026-05-06 23:29 to 23:31 UTC: ran another validation maintenance pass, refreshed the contact/help/generator/handoff/partner/validation snapshot chain, logged another deduplicated no-reply checkpoint, and kept `npm run check:site-links` green at 48 HTML files with no missing local targets.
 - 2026-05-06 23:17 to 23:27 UTC: ran repeated validation maintenance passes, refreshed the contact/help/generator/handoff/partner/validation snapshot chain, logged deduplicated no-reply checkpoints, and kept `npm run check:site-links` green at 48 HTML files with no missing local targets.
 - 2026-05-07: shipped the AI vendor disclosure packet page, linked it from homepage/blog/free-tools, added new attribution tags to watcher coverage, and verified the site on 49 HTML files with no missing local targets.

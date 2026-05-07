@@ -1,16 +1,16 @@
 # NoticeKit Validation Status
 
-Date: 2026-05-06
+Date: 2026-05-07
 
 ## Current Read
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: completed as of 2026-05-06 23:31 UTC.
+- Human-help request state: open as of 2026-05-07 04:06 UTC.
 - Human-help blocker: no related blocker is called out in the current help snapshot.
-- Production generator state: checked 2026-05-06 23:31 UTC; live generator smoke passed.
-- Generator handoff state: checked 2026-05-06 23:31 UTC; live generator-to-teardown handoff passed.
-- Partner outreach state: last checked 2026-05-06 23:31 UTC; 0 ready, 5 sent/waiting, 0 replied.
+- Production generator state: checked 2026-05-07 04:07 UTC; live generator smoke passed.
+- Generator handoff state: checked 2026-05-07 04:07 UTC; live generator-to-teardown handoff passed.
+- Partner outreach state: last checked 2026-05-07 04:07 UTC; 0 ready, 5 sent/waiting, 0 replied.
 - Partner follow-up readiness: no partner follow-ups are currently queued.
 - Founder follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
 - Advisor follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
@@ -19,12 +19,12 @@ Date: 2026-05-06
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-05-06 23:31 UTC (less than 1 minute ago)
-- Contact inbox snapshot: 2026-05-06 23:31 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-05-06 23:31 UTC (less than 1 minute ago)
-- Generator production snapshot: 2026-05-06 23:31 UTC (less than 1 minute ago)
-- Generator handoff snapshot: 2026-05-06 23:31 UTC (less than 1 minute ago)
-- Partner-outreach snapshot: 2026-05-06 23:31 UTC (less than 1 minute ago)
+- Community feedback checkpoint: 2026-05-06 23:31 UTC (4 hours ago)
+- Contact inbox snapshot: 2026-05-07 04:06 UTC (1 minute ago)
+- Human-help snapshot: 2026-05-07 04:06 UTC (1 minute ago)
+- Generator production snapshot: 2026-05-07 04:07 UTC (less than 1 minute ago)
+- Generator handoff snapshot: 2026-05-07 04:07 UTC (less than 1 minute ago)
+- Partner-outreach snapshot: 2026-05-07 04:07 UTC (less than 1 minute ago)
 
 ## Batch Snapshot
 
@@ -43,11 +43,11 @@ Date: 2026-05-06
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
-- Contact inbox check: last checked 2026-05-06 23:31 UTC
-- Human-help request check: last checked 2026-05-06 23:31 UTC
-- Generator production check: last checked 2026-05-06 23:31 UTC
-- Generator handoff check: last checked 2026-05-06 23:31 UTC
-- Partner-outreach check: last checked 2026-05-06 23:31 UTC
+- Contact inbox check: last checked 2026-05-07 04:06 UTC
+- Human-help request check: last checked 2026-05-07 04:06 UTC
+- Generator production check: last checked 2026-05-07 04:07 UTC
+- Generator handoff check: last checked 2026-05-07 04:07 UTC
+- Partner-outreach check: last checked 2026-05-07 04:07 UTC
 - Real inbox submissions: 0
 - Inbox ownership signals: 0 (0 founder, 0 operator, 0 privacy consultant, 0 fractional dpo, 0 attorney, 0 other, 0 unknown)
 - Real free async teardown submissions: 0
@@ -73,7 +73,7 @@ Date: 2026-05-06
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
-- Human help: `HELP-REQUEST-STATUS.md` shows the current request as completed.
+- Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Request indexing for the new AI vendor disclosure packet page and the refreshed homepage, blog, and free-tools URLs in Google Search Console and Bing Webmaster Tools.".
 - Help blocker summary: no related blocker is called out in `HELP-REQUEST-STATUS.md`.
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
 - Generator handoff: `GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing.
