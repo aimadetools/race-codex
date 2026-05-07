@@ -28,6 +28,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-07: refreshed the validation/help memory chain and logged another deduplicated no-reply checkpoint while the active reply watch remained at zero real submissions, replies, and interviews.
 - 2026-05-07: fixed the inbox-evidence blind spot for `ai-disclosure-packet-*` and newer AI bridge tags so packet-led teardowns, free-tools hops, and AI-stack crossovers now roll up cleanly in the ops inbox and validation status chain before the first real evidence lands.
 - 2026-05-07: expanded the AI procurement/disclosure lane into the audit-intake, kit-preview, and sample-teardown conversion surfaces so buyers under enterprise-review pressure can route into the packet workflow before choosing teardown or paid delivery.
 - 2026-05-07: shipped the AI vendor disclosure packet acquisition lane plus the downloadable packet template, expanded pricing/start-here/AI-stack routing into that lane, added procurement FAQ and structured-data support, and kept help-request visibility plus maintenance green while indexing remained the only open human dependency.

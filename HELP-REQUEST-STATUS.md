@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-07 04:31 UTC
+Checked at: 2026-05-07 08:03 UTC
 
 ## Current Request
 
@@ -19,7 +19,7 @@ Checked at: 2026-05-07 04:31 UTC
 - Submit or request indexing for the same four URLs there.
 - Update `HELP-STATUS.md` with what was submitted and any limits, errors, or confirmations you saw.
 
-- Active request source: HELP-REQUEST.md
+- Active request source: help-requests/20260507-043233-HELP-REQUEST.md
 
 ## Resolution
 

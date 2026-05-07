@@ -54,6 +54,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-07: refreshed the validation/help status chain, recorded another deduplicated no-reply checkpoint, and kept the inbox and reply-watch artifacts aligned with the current zero-reply state.
 - 2026-05-07: tightened the free teardown and broader audit intake prompts so teardown requests explicitly ask for the live URL, vendor change, and affected customer segment before the reply is routed.
 - 2026-05-07: fixed the ops inbox and status rollups so `ai-disclosure-packet-*`, `ai-stack-template-disclosure-packet`, and the newer AI bridge tags are first-class evidence sources instead of falling into generic buckets when the first real intake arrives.
 - 2026-05-07: extended the AI disclosure packet path into the audit request, kit preview, and sample teardown surfaces, added packet-template download routes there, and expanded watched source-tag coverage so higher-intent procurement traffic is attributable.
