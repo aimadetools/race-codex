@@ -82,7 +82,7 @@
           <div class="hero-actions">
             <a class="button" href="generator.html?source=free-tools-generator">Open generator</a>
             <a class="button secondary" href="free-teardown.html?source=free-tools-hero">Request free teardown</a>
-            <a class="button secondary" href="ai-procurement-hub.html">Open AI procurement hub</a>
+            <a class="button secondary" href="ai-procurement-hub.html?source=free-tools-hero-ai-procurement">Open AI review pack</a>
             <a class="button secondary" href="#route-finder">Try route finder</a>
             <a class="button secondary" href="pricing.html?source=free-tools-hero">See paid paths</a>
           </div>
@@ -154,7 +154,7 @@
               <span class="tag">Hub</span>
               <h3>AI procurement review pack</h3>
               <p>Route procurement, security, or counsel pressure toward the questionnaire, packet, sample, stack guide, or teardown path.</p>
-              <a class="button secondary" href="ai-procurement-hub.html">Open hub</a>
+              <a class="button secondary" href="ai-procurement-hub.html?source=free-tools-ai-procurement-card">Open review pack</a>
             </article>
             <article class="post-card">
               <span class="tag">Draft</span>
@@ -359,19 +359,63 @@
             secondaryLabel: "Request partner access",
           };
         } else if (topic === "ai-procurement") {
-          recommendation = {
-            title: "Open the AI procurement hub.",
-            summary: "You are dealing with questionnaire, disclosure packet, or counsel pressure, so the hub is the shortest path to the right AI review asset.",
-            bullets: [
-              "Routes to the questionnaire, packet, sample, stack guide, or teardown",
-              "Best when procurement or security review is the blocker",
-              "Keeps the AI path separate from the general notice workflow"
-            ],
-            primaryHref: "ai-procurement-hub.html",
-            primaryLabel: "Open AI procurement hub",
-            secondaryHref: "sample-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
-            secondaryLabel: "See sample packet",
-          };
+          if (need === "package-preview") {
+            recommendation = {
+              title: "See the filled AI packet example.",
+              summary: "You want a concrete artifact before you decide what to send, so start with the sample packet and work backward to the guide that fits.",
+              bullets: [
+                "Best when the blank template still feels abstract",
+                "Shows how the facts, timing, and proof trail fit together",
+                "Useful for founders and advisors"
+              ],
+              primaryHref: "sample-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
+              primaryLabel: "See sample packet",
+              secondaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
+              secondaryLabel: "Open review pack",
+            };
+          } else if (need === "files-now") {
+            recommendation = frequency === "repeat"
+              ? {
+                  title: "Open the AI disclosure packet guide.",
+                  summary: "You need a reusable packet more than a one-off answer, so start with the artifact that folds vendor facts, timing, and reviewer questions into one place.",
+                  bullets: [
+                    "Best for procurement, security, or counsel review",
+                    "Useful when the same cleanup keeps repeating",
+                    "Pairs well with the sample packet"
+                  ],
+                  primaryHref: "blog-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
+                  primaryLabel: "Open packet guide",
+                  secondaryHref: "sample-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
+                  secondaryLabel: "See sample packet",
+                }
+              : {
+                  title: "Open the AI questionnaire guide.",
+                  summary: "You need a clean written answer now, so use the questionnaire guide before the thread turns into a generic policy request.",
+                  bullets: [
+                    "Best when the blocker is one buyer questionnaire",
+                    "Gives you a review-ready answer structure",
+                    "Keeps procurement pressure contained"
+                  ],
+                  primaryHref: "blog-ai-security-questionnaire.html?source=free-tools-route-finder",
+                  primaryLabel: "Open questionnaire guide",
+                  secondaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open review pack",
+                };
+          } else {
+            recommendation = {
+              title: "Open the AI procurement hub.",
+              summary: "You are dealing with questionnaire, disclosure packet, or counsel pressure, so the hub is the shortest path to the right AI review asset.",
+              bullets: [
+                "Routes to the questionnaire, packet, sample, stack guide, or teardown",
+                "Best when procurement or security review is the blocker",
+                "Keeps the AI path separate from the general notice workflow"
+              ],
+              primaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
+              primaryLabel: "Open review pack",
+              secondaryHref: "sample-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
+              secondaryLabel: "See sample packet",
+            };
+          }
         } else if (need === "files-now") {
           recommendation = frequency === "repeat"
             ? {
