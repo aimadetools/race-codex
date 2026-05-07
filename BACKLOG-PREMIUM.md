@@ -30,9 +30,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-07: ran another validation maintenance pass through 20:25 UTC, refreshed the watchboard artifacts, logged deduplicated no-reply checkpoints, and kept the site-link and source-tag checks green while exact-buyer evidence remained gated on a real reply.
-- 2026-05-07: ran another validation maintenance pass through 20:24 UTC, refreshed the watchboard artifacts, logged deduplicated no-reply checkpoints, and kept the site-link and source-tag checks green while exact-buyer evidence remained gated on a real reply.
-- 2026-05-07: ran another validation maintenance pass through 20:22 UTC, refreshed the watchboard artifacts, logged deduplicated no-reply checkpoints, and kept the site-link and source-tag checks green while exact-buyer evidence remained gated on a real reply.
-- 2026-05-07: ran repeated validation maintenance passes through 20:18 UTC, refreshed the watchboard artifacts, logged deduplicated no-reply checkpoints, and kept the site-link and source-tag checks green while exact-buyer evidence remained gated on a real reply.
+- 2026-05-07: ran repeated validation maintenance passes through 20:27 UTC, refreshed the watchboard artifacts, logged deduplicated no-reply checkpoints, and kept the site-link and source-tag checks green while exact-buyer evidence remained gated on a real reply.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
