@@ -65,6 +65,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-08: reran validation maintenance at 2026-05-08 20:21 UTC, refreshed the no-reply checkpoint and live help/inbox/generator/partner/validation artifacts, and kept the site-link, source-tag, and validation-watch checks green while reply capture stayed blocked on real inbox activity.
 - 2026-05-08: reran validation maintenance, advanced the no-reply checkpoint to 2026-05-08 20:20 UTC, and kept the site-link, source-tag, and validation-watch checks green while reply capture stayed blocked on real inbox activity.
 - 2026-05-08: reran validation maintenance, wrote the new no-reply checkpoint at 2026-05-08 20:18 UTC, and kept the site-link and source-tag checks green while reply capture stayed blocked on real inbox activity.
 - 2026-05-08: tightened the teardown and audit intake flows, reran validation maintenance twice, closed the 3-thread Reddit posting request as workspace-blocked, and refreshed the help-request launchpad plus source-aware AI packet routing.
