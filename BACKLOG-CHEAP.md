@@ -65,6 +65,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-08: tightened the live AI procurement thread-capture loop again by making the community-targeted landing pages source-aware, defaulting community teardown visits into a `community-thread` channel, and shrinking the human operator launchpad/status artifacts into concise blocker summaries plus ready-to-paste result rows for `HELP-STATUS.md`.
 - 2026-05-08: refreshed the AI procurement reply-capture operations bundle by shipping the questionnaire answer-template asset and watcher coverage, opening the manual 3-thread Reddit-post request, adding the generated launchpad, teaching the help/validation status pipeline to keep human-auth requests `open` with explicit external-session constraints plus per-thread workspace probe results, and rerunning the validation artifact chain while the queue still showed 0 real submissions and 0 replies.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle: public lead hunt, risk-assessment checklist, worksheet landing path, refined human reply pack/request, pricing/start-here routing, and refreshed inbox/help/validation/watch artifacts for the active 3-thread pass.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification.
