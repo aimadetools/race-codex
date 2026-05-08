@@ -5,6 +5,7 @@ import { join } from "node:path";
 
 const ROOT = process.cwd();
 const TASKS = [
+  { label: "Help request launchpad", script: "build-help-request-launchpad.mjs" },
   { label: "Help request status", script: "build-help-request-status.mjs" },
   { label: "Contact inbox status", script: "build-contact-inbox-status.mjs" },
   { label: "Generator production status", script: "build-generator-production-status.mjs" },

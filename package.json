@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "build:help-request-launchpad": "node scripts/build-help-request-launchpad.mjs",
     "build:help-request-status": "node scripts/build-help-request-status.mjs",
     "build:contact-inbox-status": "node scripts/build-contact-inbox-status.mjs",
     "build:generator-production-status": "node scripts/build-generator-production-status.mjs",
