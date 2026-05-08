@@ -62,6 +62,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-08: surfaced the kit preview earlier on the homepage, pricing page, and free-tools hub so buyers can inspect Starter and Pro before checkout.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle: public lead hunt, risk-assessment checklist, worksheet landing path, refined human reply pack/request, pricing/start-here routing, and refreshed inbox/help/validation/watch artifacts for the active 3-thread pass.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.
