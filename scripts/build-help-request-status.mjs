@@ -172,6 +172,22 @@ function tokenize(text) {
     ]).has(token));
 }
 
+function requestNeedsExternalSession(text) {
+  const normalized = normalize(text);
+  if (!normalized) {
+    return false;
+  }
+
+  return [
+    "your own authenticated",
+    "your own browser session",
+    "from your own browser",
+    "outside this workspace",
+    "outside the workspace",
+    "manual browser session"
+  ].some((phrase) => normalized.includes(phrase));
+}
+
 function findRelatedEntries(requestText, entries) {
   const requestTokens = [...new Set(tokenize(requestText))];
   if (requestTokens.length === 0) {
@@ -296,6 +312,7 @@ const requestBudget = extractField(helpRequestText, "Budget") || "unknown";
 const requestTime = extractField(helpRequestText, "Time") || "unknown";
 const requestSteps = extractRequestedSteps(helpRequestText);
 const normalizedRequestWhat = normalize(requestWhat);
+const requestRequiresExternalSession = requestNeedsExternalSession(helpRequestText);
 const completedEntries = extractCompletedEntries(helpStatusText);
 const relatedCompletedEntries = normalizedRequestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];
 
@@ -323,9 +340,11 @@ if (normalizedRequestWhat) {
 }
 
 const relatedEntries = requestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];
-const operatorBlockers = requestWhat ? extractOperatorBlockers(helpStatusText) : [];
-const relatedBlockers = requestWhat ? extractOpenBlockers(relatedEntries) : [];
-const carryForwardBlocker = requestWhat && !matchingEntry ? selectCarryForwardBlocker(relatedEntries) : null;
+const operatorBlockers = requestWhat && !requestRequiresExternalSession ? extractOperatorBlockers(helpStatusText) : [];
+const relatedBlockers = requestWhat && !requestRequiresExternalSession ? extractOpenBlockers(relatedEntries) : [];
+const carryForwardBlocker = requestWhat && !matchingEntry && !requestRequiresExternalSession
+  ? selectCarryForwardBlocker(relatedEntries)
+  : null;
 const status = matchingEntry
   ? "completed"
   : requestWhat
