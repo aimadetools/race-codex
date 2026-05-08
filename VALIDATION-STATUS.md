@@ -19,12 +19,12 @@ Date: 2026-05-08
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-05-08 04:23 UTC (less than 1 minute ago)
-- Contact inbox snapshot: 2026-05-08 04:23 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-05-08 04:23 UTC (less than 1 minute ago)
-- Generator production snapshot: 2026-05-08 04:23 UTC (less than 1 minute ago)
-- Generator handoff snapshot: 2026-05-08 04:23 UTC (less than 1 minute ago)
-- Partner-outreach snapshot: 2026-05-08 04:23 UTC (less than 1 minute ago)
+- Community feedback checkpoint: 2026-05-08 04:23 UTC (5 minutes ago)
+- Contact inbox snapshot: 2026-05-08 04:23 UTC (5 minutes ago)
+- Human-help snapshot: 2026-05-08 04:23 UTC (5 minutes ago)
+- Generator production snapshot: 2026-05-08 04:23 UTC (5 minutes ago)
+- Generator handoff snapshot: 2026-05-08 04:23 UTC (5 minutes ago)
+- Partner-outreach snapshot: 2026-05-08 04:23 UTC (5 minutes ago)
 
 ## Batch Snapshot
 
@@ -59,7 +59,7 @@ Date: 2026-05-08
 - Checker-led inbox submissions: 0 (0 teardown, 0 pricing, 0 partner)
 - Tracker-led inbox submissions: 0 (0 download CTA, 0 teardown CTA)
 - Generator-led inbox submissions: 0 (0 page, 0 CTA)
-- AI vendor risk assessment inbox submissions: 0 (0 homepage checklist, 0 homepage worksheet, 0 blog-index checklist, 0 blog-index worksheet, 0 free-tools checklist, 0 free-tools worksheet, 0 procurement hub checklist, 0 procurement hub worksheet, 0 community reply, 0 checklist-to-worksheet CTA, 0 checklist sample CTA, 0 checklist guide CTA, 0 checklist stack CTA, 0 checklist teardown CTA, 0 checklist pricing CTA, 0 worksheet checklist CTA, 0 worksheet sample CTA, 0 worksheet guide CTA, 0 worksheet stack CTA, 0 worksheet teardown CTA, 0 worksheet pricing CTA)
+- AI vendor risk assessment inbox submissions: 0 (0 homepage checklist, 0 homepage worksheet, 0 blog-index checklist, 0 blog-index worksheet, 0 free-tools checklist, 0 free-tools worksheet, 0 procurement hub checklist, 0 procurement hub worksheet, 0 pricing checklist, 0 pricing worksheet, 0 start-here checklist, 0 start-here worksheet, 0 community reply, 0 checklist-to-worksheet CTA, 0 checklist sample CTA, 0 checklist guide CTA, 0 checklist stack CTA, 0 checklist teardown CTA, 0 checklist pricing CTA, 0 worksheet checklist CTA, 0 worksheet sample CTA, 0 worksheet guide CTA, 0 worksheet stack CTA, 0 worksheet teardown CTA, 0 worksheet pricing CTA)
 - AI disclosure packet inbox submissions: 0 (0 stack bridge, 0 notice bridge, 0 brief bridge, 0 teardown, 0 pricing, 0 bottom CTA, 0 sample bridge, 0 pricing page guide, 0 pricing page sample, 0 pricing page questionnaire, 0 start-here guide, 0 start-here questionnaire, 0 start-here sample, 0 audit-request guide, 0 sample-teardown guide, 0 kit-preview guide, 0 homepage questionnaire, 0 homepage sample, 0 blog-index questionnaire, 0 blog-index sample, 0 free-tools questionnaire, 0 free-tools sample, 0 questionnaire page guide, 0 questionnaire page sample, 0 questionnaire page stack, 0 questionnaire page teardown, 0 questionnaire page pricing, 0 sample page guide, 0 sample page stack, 0 sample page teardown, 0 sample page pricing)
 - AI-stack template inbox submissions: 0 (0 disclosure-packet bridge, 0 checker, 0 notice csv, 0 notice deadline, 0 notice generator, 0 notice teardown, 0 notice pricing, 0 download teardown, 0 download pricing, 0 general teardown, 0 general pricing, 0 start-here guide, 0 audit-request guide)
 - Free-tools hub inbox submissions: 0 (0 hero, 0 ai-stack guide, 0 ai-questionnaire guide, 0 ai-packet guide, 0 ai-packet sample, 0 generator, 0 generator-card, 0 self-audit, 0 page-checker, 0 brief-builder, 0 deadline, 0 tracker, 0 teardown CTA, 0 partner, 0 route finder)
