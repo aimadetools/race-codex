@@ -38,12 +38,23 @@
       <main id="main-content">
         <section class="page-hero">
           <span class="eyebrow">Free async teardown</span>
-          <h1>Get a blunt 3-bullet read on one subprocessor change.</h1>
-          <p>Use this when you want a concrete gap note before you book a call or buy the kit. Paste the live subprocessor page URL, the planned vendor change, and the affected customer segment so the reply can stay specific.</p>
+          <h1 id="hero-title">Get a blunt 3-bullet read on one subprocessor change.</h1>
+          <p id="hero-copy">Use this when you want a concrete gap note before you book a call or buy the kit. Paste the live subprocessor page URL, the planned vendor change, and the affected customer segment so the reply can stay specific.</p>
           <div class="hero-actions">
             <a class="button" href="#request-builder">Start the teardown</a>
             <a class="button secondary" href="generator.html">Open generator</a>
             <a class="button secondary" href="partner-preview.html">Partner preview</a>
+          </div>
+        </section>
+
+        <section class="section" id="source-context-section" hidden>
+          <div class="context-band" aria-live="polite">
+            <div>
+              <span class="eyebrow">Public thread path</span>
+              <h2 id="source-context-title">Use teardown when the blocker is one live page.</h2>
+              <p id="source-context-copy">This path works best when a thread turned into a live deal problem instead of a generic policy debate.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
           </div>
         </section>
 
@@ -207,7 +218,27 @@
 
       const source = query.get("source");
       const channel = query.get("channel");
+      const heroTitle = document.querySelector("#hero-title");
+      const heroCopy = document.querySelector("#hero-copy");
+      const sourceContextSection = document.querySelector("#source-context-section");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
       const intakeUrl = new URL("audit-request.html", window.location.href);
+      const sourceConfigs = {
+        "community-ai-procurement-teardown": {
+          heroTitle: "Get a blunt 3-bullet read on the live AI vendor review blocker.",
+          heroCopy: "If a public thread surfaced a real deal issue, use this form to send one current URL, the planned AI vendor change, and the affected customer segment. The reply stays specific so you can decide whether the next step is teardown, packet cleanup, or paid help.",
+          reviewNeed: "This came from a live AI procurement thread. Please give the 3-bullet async gap read for the current page, vendor change, and customer segment, and flag the fastest next step.",
+          title: "This is the right path when the thread became a real review issue.",
+          copy: "Paste the minimum facts so the response can stay concrete instead of expanding into a generic governance discussion.",
+          points: [
+            "Paste the current public subprocessor or trust page URL if one exists.",
+            "Name the specific AI vendor change or review blocker in one sentence.",
+            "State which customers or agreement segment are affected and whether timing is already active."
+          ]
+        }
+      };
 
       for (const [name, field] of Object.entries(prefillFields)) {
         const value = query.get(name);
@@ -222,6 +253,25 @@
 
       if (channel) {
         channelTag.value = channel;
+      } else if (source && source.startsWith("community-")) {
+        channelTag.value = "community-thread";
+      }
+
+      const sourceConfig = sourceConfigs[source];
+      if (sourceConfig) {
+        heroTitle.textContent = sourceConfig.heroTitle;
+        heroCopy.textContent = sourceConfig.heroCopy;
+        sourceContextTitle.textContent = sourceConfig.title;
+        sourceContextCopy.textContent = sourceConfig.copy;
+        sourceContextPoints.replaceChildren(...sourceConfig.points.map((point) => {
+          const item = document.createElement("li");
+          item.textContent = point;
+          return item;
+        }));
+        if (!query.get("review_need") && prefillFields.review_need) {
+          prefillFields.review_need.value = sourceConfig.reviewNeed;
+        }
+        sourceContextSection.hidden = false;
       }
 
       function syncSkipToIntakeHref() {

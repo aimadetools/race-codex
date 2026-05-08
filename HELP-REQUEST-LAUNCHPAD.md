@@ -1,6 +1,6 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-08 12:58 UTC
+Checked at: 2026-05-08 13:04 UTC
 
 ## Current Request
 
@@ -11,7 +11,7 @@ Checked at: 2026-05-08 12:58 UTC
 
 ## Active Constraint
 
-- Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass. - 2026-05-08 lead 1 (`r/procurement`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply. - 2026-05-08 lead 2 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply. - 2026-05-08 lead 5 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+- Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
 
 ## Launch Checklist
 
@@ -19,6 +19,12 @@ Checked at: 2026-05-08 12:58 UTC
 - Check the workspace thread probe below first; `workspace-blocked` means only your browser session can confirm whether replies are still open.
 - Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-no-link` in `HELP-STATUS.md`.
 - After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-no-link`, or `no longer open for replies`.
+
+## Ready To Paste Into `HELP-STATUS.md`
+
+- 2026-05-08 lead 1 (`r/procurement`): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-08 lead 2 (`r/SaaS`): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-08 lead 5 (`r/SaaS`): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
 
 ## Lead 1 (`r/procurement`)
 

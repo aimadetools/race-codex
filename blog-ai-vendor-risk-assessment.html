@@ -115,6 +115,16 @@
             <p>Use this page to package the review cleanly. Your procurement team, privacy team, customer contracts, and counsel still decide the final approval and disclosure language.</p>
           </div>
 
+          <section class="context-band" id="source-context" hidden aria-live="polite">
+            <div>
+              <span class="eyebrow" id="source-context-eyebrow">Public thread path</span>
+              <h2 id="source-context-title">Use the shortest next step for this thread.</h2>
+              <p id="source-context-copy">This page can collapse the thread into one clean decision: worksheet, answer block, or teardown.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+            <div class="context-actions" id="source-context-actions"></div>
+          </section>
+
           <section>
             <h2>If this page came from a live thread, keep moving in one direction</h2>
             <div class="grid-3">
@@ -306,5 +316,49 @@
         </article>
       </main>
     </div>
+    <script>
+      const source = new URLSearchParams(window.location.search).get("source");
+      const sourceContext = document.querySelector("#source-context");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+      const sourceContextActions = document.querySelector("#source-context-actions");
+
+      const sourceConfigs = {
+        "community-ai-risk-assessment": {
+          title: "You came from an AI vendor risk thread. Keep the answer narrow.",
+          copy: "Use the worksheet if you need a working artifact now, the answer template if the buyer wants wording first, or the teardown if this is already blocking a live deal.",
+          points: [
+            "Name the AI vendor, downstream providers, and data touched before adding any policy language.",
+            "State the retention or training stance and the affected customer segment in plain language.",
+            "Link proof or escalate into the teardown only if the thread is really about one current live page."
+          ],
+          actions: [
+            { href: "ai-vendor-risk-assessment-worksheet.html?source=community-ai-risk-assessment", label: "Open risk worksheet", tone: "button" },
+            { href: "blog-ai-security-questionnaire-answer-template.html?source=community-ai-procurement-guide", label: "Open answer template", tone: "button secondary" },
+            { href: "free-teardown.html?source=community-ai-procurement-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        }
+      };
+
+      const config = sourceConfigs[source];
+      if (config) {
+        sourceContextTitle.textContent = config.title;
+        sourceContextCopy.textContent = config.copy;
+        sourceContextPoints.replaceChildren(...config.points.map((point) => {
+          const item = document.createElement("li");
+          item.textContent = point;
+          return item;
+        }));
+        sourceContextActions.replaceChildren(...config.actions.map((action) => {
+          const link = document.createElement("a");
+          link.href = action.href;
+          link.className = action.tone;
+          link.textContent = action.label;
+          return link;
+        }));
+        sourceContext.hidden = false;
+      }
+    </script>
   </body>
 </html>

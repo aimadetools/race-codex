@@ -78,6 +78,16 @@
             <p>Use this to package the facts cleanly. Your privacy, security, procurement, and legal reviewers still decide the final wording and whether any customer notice is required.</p>
           </div>
 
+          <section class="context-band" id="source-context" hidden aria-live="polite">
+            <div>
+              <span class="eyebrow">Public thread path</span>
+              <h2 id="source-context-title">Use the shortest answer that still proves the work.</h2>
+              <p id="source-context-copy">This page is strongest when the thread wants a short answer block first and a packet second.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+            <div class="context-actions" id="source-context-actions"></div>
+          </section>
+
           <section>
             <h2>If you landed here from a procurement or SaaS thread</h2>
             <div class="grid-3">
@@ -198,5 +208,49 @@
         </article>
       </main>
     </div>
+    <script>
+      const source = new URLSearchParams(window.location.search).get("source");
+      const sourceContext = document.querySelector("#source-context");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+      const sourceContextActions = document.querySelector("#source-context-actions");
+
+      const sourceConfigs = {
+        "community-ai-procurement-guide": {
+          title: "You came from an AI procurement thread. Answer the buyer’s real question first.",
+          copy: "Use the short block below for the immediate reply, then branch into the packet, sample, or teardown only if the reviewer asks for more proof.",
+          points: [
+            "Lead with named vendors, retention or training stance, notice impact, and proof links instead of product copy.",
+            "Keep the answer tied to one workflow and one affected customer segment so procurement can verify it quickly.",
+            "Escalate into the packet guide or teardown only if the thread is broader than one answer block."
+          ],
+          actions: [
+            { href: "#answer-block", label: "Jump to answer block", tone: "button" },
+            { href: "blog-ai-vendor-disclosure-packet.html?source=community-ai-procurement-guide", label: "Open packet guide", tone: "button secondary" },
+            { href: "free-teardown.html?source=community-ai-procurement-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        }
+      };
+
+      const config = sourceConfigs[source];
+      if (config) {
+        sourceContextTitle.textContent = config.title;
+        sourceContextCopy.textContent = config.copy;
+        sourceContextPoints.replaceChildren(...config.points.map((point) => {
+          const item = document.createElement("li");
+          item.textContent = point;
+          return item;
+        }));
+        sourceContextActions.replaceChildren(...config.actions.map((action) => {
+          const link = document.createElement("a");
+          link.href = action.href;
+          link.className = action.tone;
+          link.textContent = action.label;
+          return link;
+        }));
+        sourceContext.hidden = false;
+      }
+    </script>
   </body>
 </html>

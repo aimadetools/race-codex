@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-08 12:58 UTC
+Checked at: 2026-05-08 13:04 UTC
 
 ## Current Request
 
@@ -37,7 +37,7 @@ Checked at: 2026-05-08 12:58 UTC
 - Latest related note closed on: 2026-05-08 (today)
 - [HELP] What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
   - Shared keywords: post, public, replies, noticekit, test, whether, threads, first, real, click, reply
-  - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass. - 2026-05-08 lead 1 (`r/procurement`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply. - 2026-05-08 lead 2 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply. - 2026-05-08 lead 5 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+  - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
 - [HELP] What: Find 10 live public AI SaaS procurement, security-review, or subprocessor-disclosure conversations that NoticeKit can reply to with the new sample packet asset.
   - Shared keywords: public, noticekit, procurement, reply
   - Human response: Completed in workspace. `help-requests/ai-procurement-leads-2026-05-07.md` now lists 10 public leads from Reddit surfaced on 2026-05-07, each mapped to the best matching NoticeKit asset. No blocker remains.
@@ -46,13 +46,19 @@ Checked at: 2026-05-08 12:58 UTC
 
 - This request requires a human-owned authenticated browser session outside this workspace.
   - Source: Current request requirement
-- Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass. - 2026-05-08 lead 1 (`r/procurement`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply. - 2026-05-08 lead 2 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply. - 2026-05-08 lead 5 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+- Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
   - Source: [HELP] What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
+
+## Ready To Paste Into `HELP-STATUS.md`
+
+- 2026-05-08 lead 1 (`r/procurement`): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-08 lead 2 (`r/SaaS`): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-08 lead 5 (`r/SaaS`): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
 
 ## Workspace Thread Probe
 
 - These checks come from the current workspace only; they do not prove whether a human-authenticated browser can still reply.
-- Checked at: 2026-05-08 12:58 UTC
+- Checked at: 2026-05-08 13:04 UTC
 - https://www.reddit.com/r/procurement/comments/1r3kbj9/how_do_you_actually_assess_ai_vendor_risk/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
 - https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
 - https://www.reddit.com/r/SaaS/comments/1r7ux9x/vendor_risk_as_a_system_design_problem_in/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page

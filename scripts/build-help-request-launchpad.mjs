@@ -94,6 +94,17 @@ function extractLatestRelatedAuthBlocker(text) {
   return "";
 }
 
+function compactResolution(text) {
+  return String(text || "")
+    .replace(/\s+/g, " ")
+    .split(/ - \d{4}-\d{2}-\d{2}\s+lead\b/i)[0]
+    .trim();
+}
+
+function formatReadyLabel(label) {
+  return String(label || "").replace(/^Lead\b/, "lead");
+}
+
 async function probeThread(url) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 12000);
@@ -161,7 +172,7 @@ const threadTargets = parseThreadTargets(helpRequestText);
 const sourceTags = parseLeadSourceTags(helpRequestText);
 const leadNotes = parseLeadNotes(helpRequestText);
 const replyPack = parseReplyPack(replyPackText);
-const relatedAuthBlocker = extractLatestRelatedAuthBlocker(helpStatusText);
+const relatedAuthBlocker = compactResolution(extractLatestRelatedAuthBlocker(helpStatusText));
 const threadProbes = new Map(
   await Promise.all(
     threadTargets.map(async (target) => [target.url, await probeThread(target.url)])
@@ -196,6 +207,13 @@ if (threadTargets.length === 0) {
   output.push("- Check the workspace thread probe below first; `workspace-blocked` means only your browser session can confirm whether replies are still open.");
   output.push("- Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-no-link` in `HELP-STATUS.md`.");
   output.push("- After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-no-link`, or `no longer open for replies`.");
+  output.push("");
+  output.push("## Ready To Paste Into `HELP-STATUS.md`", "");
+
+  for (const target of threadTargets) {
+    output.push(`- ${checkedAt.split(" ")[0]} ${formatReadyLabel(target.label)}: <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here`);
+  }
+
   output.push("");
 
   for (const target of threadTargets) {

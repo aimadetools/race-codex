@@ -84,6 +84,13 @@ function extractResolution(text) {
   return match ? match[1].trim() : "";
 }
 
+function compactResolution(text) {
+  return String(text || "")
+    .replace(/\s+/g, " ")
+    .split(/ - \d{4}-\d{2}-\d{2}\s+lead\b/i)[0]
+    .trim();
+}
+
 function parseIsoDate(value) {
   const text = String(value || "").trim();
   if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) {
@@ -224,7 +231,7 @@ function findRelatedEntries(requestText, entries) {
 function extractOpenBlockers(relatedEntries) {
   const blockers = relatedEntries
     .map((entry) => {
-      const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+      const resolution = compactResolution(extractResolution(entry.body));
       if (!/\bblocked\b/i.test(resolution)) {
         return null;
       }
@@ -243,7 +250,7 @@ function extractOpenBlockers(relatedEntries) {
 
   const latestResolvedDate = relatedEntries
     .filter((entry) => {
-      const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+      const resolution = compactResolution(extractResolution(entry.body));
       return resolution && !/\bblocked\b/i.test(resolution);
     })
     .map((entry) => parseIsoDate(extractClosedDate(entry.body)))
@@ -265,7 +272,7 @@ function extractOpenBlockers(relatedEntries) {
 
 function selectCarryForwardBlocker(relatedEntries) {
   for (const entry of relatedEntries) {
-    const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+    const resolution = compactResolution(extractResolution(entry.body));
     if (!/\bblocked\b/i.test(resolution)) {
       continue;
     }
@@ -293,7 +300,7 @@ function extractExternalSessionConstraints(requestText, relatedEntries) {
   });
 
   for (const entry of relatedEntries) {
-    const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+    const resolution = compactResolution(extractResolution(entry.body));
     if (!/\bblocked\b/i.test(resolution)) {
       continue;
     }
@@ -389,6 +396,17 @@ function extractThreadTargets(text) {
   return [...String(text || "").matchAll(/https:\/\/www\.reddit\.com\/r\/[^\s)]+/g)].map((match) => match[0]);
 }
 
+function extractThreadLabels(text) {
+  return [...String(text || "").matchAll(/^\s*-\s+(Lead\s+\d+.*?):\s+(https:\/\/www\.reddit\.com\/r\/[^\s]+)\s*$/gm)].map((match) => ({
+    label: match[1].trim(),
+    url: match[2].trim()
+  }));
+}
+
+function formatReadyLabel(label) {
+  return String(label || "").replace(/^Lead\b/, "lead");
+}
+
 const checkedAt = formatUtcTimestamp(new Date());
 const { text: helpRequestText, source: helpRequestSource } = await readActiveRequestText();
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
@@ -431,6 +449,7 @@ const externalSessionConstraints = requestWhat ? extractExternalSessionConstrain
 const operatorBlockers = requestWhat && !requestRequiresExternalSession ? extractOperatorBlockers(helpStatusText) : [];
 const relatedBlockers = requestWhat && !requestRequiresExternalSession ? extractOpenBlockers(relatedEntries) : [];
 const threadTargets = [...new Set(extractThreadTargets(helpRequestText))];
+const threadTargetLabels = extractThreadLabels(helpRequestText);
 const threadProbes = await Promise.all(threadTargets.map(probeThread));
 const carryForwardBlocker = requestWhat && !matchingEntry && !requestRequiresExternalSession
   ? selectCarryForwardBlocker(relatedEntries)
@@ -504,7 +523,7 @@ if (relatedEntries.length > 0) {
   }
 
   for (const entry of relatedEntries.slice(0, 2)) {
-    const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+    const resolution = compactResolution(extractResolution(entry.body));
     output.push(`- ${entry.heading}`);
     output.push(`  - Shared keywords: ${entry.overlap.join(", ")}`);
     output.push(`  - Human response: ${resolution || "No response text extracted."}`);
@@ -530,6 +549,16 @@ if (externalSessionConstraints.length > 0) {
   for (const constraint of externalSessionConstraints) {
     output.push(`- ${constraint.resolution}`);
     output.push(`  - Source: ${constraint.heading}`);
+  }
+}
+
+if (threadTargetLabels.length > 0 && status === "open") {
+  output.push("");
+  output.push("## Ready To Paste Into `HELP-STATUS.md`");
+  output.push("");
+
+  for (const target of threadTargetLabels) {
+    output.push(`- ${checkedAt.split(" ")[0]} ${formatReadyLabel(target.label)}: <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here`);
   }
 }
 
