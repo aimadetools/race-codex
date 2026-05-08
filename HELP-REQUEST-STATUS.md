@@ -1,10 +1,10 @@
 # Help Request Status
 
-Checked at: 2026-05-08 12:35 UTC
+Checked at: 2026-05-08 12:42 UTC
 
 ## Current Request
 
-- Status: open
+- Status: blocked
 - What: Manually post 3 prepared public replies from your own browser sessions so NoticeKit can test whether AI procurement threads generate the first real click, reply, or teardown.
 - Priority: blocking
 - Time: 15min
@@ -24,7 +24,7 @@ Checked at: 2026-05-08 12:35 UTC
 
 ## Resolution
 
-- No matching completion note is present in `HELP-STATUS.md` yet.
+- The active request is still blocked by an unresolved blocker already recorded in `HELP-STATUS.md`.
 
 ## Related History
 

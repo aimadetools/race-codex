@@ -247,6 +247,24 @@ function extractOpenBlockers(relatedEntries) {
   });
 }
 
+function selectCarryForwardBlocker(relatedEntries) {
+  for (const entry of relatedEntries) {
+    const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+    if (!/\bblocked\b/i.test(resolution)) {
+      continue;
+    }
+
+    if (entry.score >= 4 && entry.requestCoverage >= 0.45) {
+      return {
+        heading: entry.heading,
+        resolution
+      };
+    }
+  }
+
+  return null;
+}
+
 function extractOperatorBlockers(text) {
   const operatorNoteMatch = text.match(/##\s+\d{4}-\d{2}-\d{2} Operator Note[\s\S]*?(?=\n## |\n$)/i);
   if (!operatorNoteMatch) {
@@ -304,10 +322,20 @@ if (normalizedRequestWhat) {
   }
 }
 
-const status = matchingEntry ? "completed" : requestWhat ? "open" : "missing";
-const relatedEntries = status === "open" ? findRelatedEntries(requestWhat, completedEntries) : [];
-const operatorBlockers = status === "open" ? extractOperatorBlockers(helpStatusText) : [];
-const openBlockers = operatorBlockers.length > 0 ? operatorBlockers : (status === "open" ? extractOpenBlockers(relatedEntries) : []);
+const relatedEntries = requestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];
+const operatorBlockers = requestWhat ? extractOperatorBlockers(helpStatusText) : [];
+const relatedBlockers = requestWhat ? extractOpenBlockers(relatedEntries) : [];
+const carryForwardBlocker = requestWhat && !matchingEntry ? selectCarryForwardBlocker(relatedEntries) : null;
+const status = matchingEntry
+  ? "completed"
+  : requestWhat
+    ? (operatorBlockers.length > 0 || relatedBlockers.length > 0 || carryForwardBlocker ? "blocked" : "open")
+    : "missing";
+const openBlockers = status === "blocked"
+  ? (operatorBlockers.length > 0
+      ? operatorBlockers
+      : (relatedBlockers.length > 0 ? relatedBlockers : (carryForwardBlocker ? [carryForwardBlocker] : [])))
+  : [];
 const output = [
   "# Help Request Status",
   "",
@@ -344,6 +372,8 @@ output.push("");
 
 if (matchingEntry) {
   output.push(`- Matching completed entry: ${matchingEntry.heading}`);
+} else if (status === "blocked") {
+  output.push("- The active request is still blocked by an unresolved blocker already recorded in `HELP-STATUS.md`.");
 } else if (status === "open") {
   output.push("- No matching completion note is present in `HELP-STATUS.md` yet.");
 } else {
