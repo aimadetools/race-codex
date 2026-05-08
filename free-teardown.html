@@ -225,20 +225,128 @@
       const sourceContextCopy = document.querySelector("#source-context-copy");
       const sourceContextPoints = document.querySelector("#source-context-points");
       const intakeUrl = new URL("audit-request.html", window.location.href);
-      const sourceConfigs = {
-        "community-ai-procurement-teardown": {
-          heroTitle: "Get a blunt 3-bullet read on the live AI vendor review blocker.",
-          heroCopy: "If a public thread surfaced a real deal issue, use this form to send one current URL, the planned AI vendor change, and the affected customer segment. The reply stays specific so you can decide whether the next step is teardown, packet cleanup, or paid help.",
-          reviewNeed: "This came from a live AI procurement thread. Please give the 3-bullet async gap read for the current page, vendor change, and customer segment, and flag the fastest next step.",
-          title: "This is the right path when the thread became a real review issue.",
-          copy: "Paste the minimum facts so the response can stay concrete instead of expanding into a generic governance discussion.",
-          points: [
-            "Paste the current public subprocessor or trust page URL if one exists.",
-            "Name the specific AI vendor change or review blocker in one sentence.",
-            "State which customers or agreement segment are affected and whether timing is already active."
-          ]
+      function resolveSourceConfig(sourceValue) {
+        const normalized = String(sourceValue || "").toLowerCase();
+
+        if (!normalized) {
+          return null;
         }
-      };
+
+        if (normalized.startsWith("community-ai-procurement")) {
+          return {
+            heroTitle: "Get a blunt 3-bullet read on the live AI vendor review blocker.",
+            heroCopy: "If a public thread surfaced a real deal issue, use this form to send one current URL, the planned AI vendor change, and the affected customer segment. The reply stays specific so you can decide whether the next step is teardown, packet cleanup, or paid help.",
+            reviewNeed: "This came from a live AI procurement thread. Please give the 3-bullet async gap read for the current page, vendor change, and customer segment, and flag the fastest next step.",
+            title: "This is the right path when the thread became a real review issue.",
+            copy: "Paste the minimum facts so the response can stay concrete instead of expanding into a generic governance discussion.",
+            points: [
+              "Paste the current public subprocessor or trust page URL if one exists.",
+              "Name the specific AI vendor change or review blocker in one sentence.",
+              "State which customers or agreement segment are affected and whether timing is already active."
+            ]
+          };
+        }
+
+        if (
+          normalized.startsWith("ai-procurement-hub") ||
+          normalized.startsWith("ai-security-questionnaire") ||
+          normalized.startsWith("ai-disclosure-packet") ||
+          normalized.startsWith("ai-stack-template") ||
+          normalized.startsWith("sample-ai-packet") ||
+          normalized.startsWith("free-tools-ai") ||
+          normalized.startsWith("start-here-ai")
+        ) {
+          return {
+            heroTitle: "Get a blunt 3-bullet read on the review thread before it gets messy.",
+            heroCopy: "Use this when procurement or security review has become a real workflow problem. Paste the current URL, the vendor change, and the affected customer segment so the reply can stay specific.",
+            reviewNeed: "This came from an AI review or procurement path. Please give the 3-bullet async gap read for the current page, vendor change, and customer segment, and point me to the fastest next step.",
+            title: "Use teardown when the blocker is now a review thread, not just a page.",
+            copy: "Keep the facts short so the response can stay focused on the notice path instead of expanding into a generic governance discussion.",
+            points: [
+              "Paste the live page URL that is under review.",
+              "Name the vendor change, questionnaire, or disclosure gap in one sentence.",
+              "State which customers or agreement segment are affected and whether timing is already active."
+            ]
+          };
+        }
+
+        if (
+          normalized.startsWith("blog-subprocessor-page-checker") ||
+          normalized.startsWith("review-brief-builder") ||
+          normalized.startsWith("blog-vendor-change-review-packet") ||
+          normalized.startsWith("blog-dpa-objection-window") ||
+          normalized.startsWith("generator") ||
+          normalized.startsWith("homepage") ||
+          normalized.startsWith("pricing") ||
+          normalized.startsWith("about") ||
+          normalized.startsWith("blog-index")
+        ) {
+          return {
+            heroTitle: "Get a blunt 3-bullet read on the workflow before you keep editing.",
+            heroCopy: "Use this when you already have a page, score, or draft and want the shortest path to the next step. The reply can point you toward the generator, Starter, Pro, or partner flow.",
+            reviewNeed: "Please give the 3-bullet async gap read for the current page or score and tell me whether the next step is generator, Starter, Pro, or partner access.",
+            title: "Use teardown when the current workflow still feels improvised.",
+            copy: "The response should show whether the issue is really missing facts, weak proof, or the wrong product path.",
+            points: [
+              "Paste the page or score that triggered the question.",
+              "Name the missing field, deadline, or proof gap in one sentence.",
+              "State whether you are deciding between teardown, Starter, Pro, or partner access."
+            ]
+          };
+        }
+
+        if (normalized.startsWith("kit-preview") || normalized.startsWith("sample-teardown")) {
+          return {
+            heroTitle: "Get a blunt 3-bullet read on the package before checkout.",
+            heroCopy: "Use this when you want to compare the preview against the live workflow before buying. Paste the URL, the change, and the customer segment so the reply stays concrete.",
+            reviewNeed: "This came from a kit preview. Please give the 3-bullet async gap read for the current page, vendor change, and customer segment, and point me to the right tier or next step.",
+            title: "Use teardown when the package shape is clear but the workflow still needs a sanity check.",
+            copy: "The reply should tell you whether Starter, Pro, or the free workflow is the better fit.",
+            points: [
+              "Paste the preview page or sample asset you were reviewing.",
+              "Name the vendor change or workflow question in one sentence.",
+              "State whether the current decision is teardown, Starter, Pro, or partner access."
+            ]
+          };
+        }
+
+        if (
+          normalized.startsWith("partner-preview") ||
+          normalized.startsWith("partner-client-handoff") ||
+          normalized.startsWith("free-tools-partner") ||
+          normalized.startsWith("sample-teardown-partner")
+        ) {
+          return {
+            heroTitle: "Get a blunt 3-bullet read on the partner workflow before you request access.",
+            heroCopy: "Use this when you are deciding whether the right fit is referral-only, client delivery, or white-label access. Paste the current URL, the client profile, and the question you need answered.",
+            reviewNeed: "This came from a partner path. Please give the 3-bullet async gap read for the current page, client profile, and use case, and tell me whether referral-only, client delivery, or white-label is the best fit.",
+            title: "Use teardown when you are deciding whether the partner path is worth it.",
+            copy: "The reply should make the advisor fit obvious without turning this into a sales call.",
+            points: [
+              "Paste the partner or handoff page you were reviewing.",
+              "Name the client-delivery, referral, or white-label question in one sentence.",
+              "State whether the request is for your own practice or a specific client need."
+            ]
+          };
+        }
+
+        if (normalized === "monitoring-comparison") {
+          return {
+            heroTitle: "Get a blunt 3-bullet read on whether monitoring is enough.",
+            heroCopy: "Use this when you are comparing alerts against a real notice workflow. Paste the live URL, the change, and the affected segment so the reply can tell you which path is actually smaller.",
+            reviewNeed: "This came from the monitoring comparison. Please give the 3-bullet async gap read for the current page, vendor change, and customer segment, and say whether monitoring or NoticeKit is the better fit.",
+            title: "Use teardown when the comparison is really about workflow, not alerts.",
+            copy: "The reply should tell you whether you only need a monitor or whether the alert has to become a customer notice and proof trail.",
+            points: [
+              "Paste the page or workflow you are comparing against NoticeKit.",
+              "Name the change that needs to be tracked in one sentence.",
+              "State whether you need alerts only or a notice workflow with proof."
+            ]
+          };
+        }
+
+        return null;
+      }
 
       for (const [name, field] of Object.entries(prefillFields)) {
         const value = query.get(name);
@@ -257,7 +365,7 @@
         channelTag.value = "community-thread";
       }
 
-      const sourceConfig = sourceConfigs[source];
+      const sourceConfig = resolveSourceConfig(source);
       if (sourceConfig) {
         heroTitle.textContent = sourceConfig.heroTitle;
         heroCopy.textContent = sourceConfig.heroCopy;

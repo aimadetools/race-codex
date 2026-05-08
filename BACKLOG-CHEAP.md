@@ -65,6 +65,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-08: tightened the teardown and audit intake flows so common landing sources now prefill the right context, preserve the request type, and keep the source-tag routing visible.
 - 2026-05-08: reran validation maintenance across 16:23-16:30 UTC, refreshed the watch/status chain, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-08: closed the 3-thread Reddit posting request as blocked from this workspace and kept the external browser-session blocker explicit for the human-run post pass.
 - 2026-05-08: tightened the help-request launchpad and source-aware AI packet routing around dated request files, workspace thread probes, and the procurement-hub/free-tools surfaces.

@@ -45,6 +45,17 @@
           </div>
         </section>
 
+        <section class="section" id="source-context-section" hidden>
+          <div class="context-band" aria-live="polite">
+            <div>
+              <span class="eyebrow">Source context</span>
+              <h2 id="source-context-title">Use the intake path that matches the source.</h2>
+              <p id="source-context-copy">This page adapts the request path so the reply stays tied to the page or thread that brought you here.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+          </div>
+        </section>
+
         <section class="section">
           <div class="grid-2">
             <article class="panel legal-panel">
@@ -186,6 +197,11 @@
       const partnerFields = document.querySelector("#partner-fields");
       const sourceTagInput = document.querySelector("#source-tag");
       const submissionChannelInput = document.querySelector("#submission-channel");
+      const sourceContextSection = document.querySelector("#source-context-section");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+      const reviewNeedField = document.querySelector("#review-need");
       const query = new URLSearchParams(window.location.search);
       const requestTypeMeta = {
         free_async_teardown: {
@@ -235,6 +251,99 @@
         field.value = queryValue;
       }
 
+      function resolveSourceContext(sourceValue) {
+        const normalized = String(sourceValue || "").toLowerCase();
+
+        if (!normalized) {
+          return null;
+        }
+
+        if (normalized === "free-teardown-page" || normalized.startsWith("free-tools-route-finder")) {
+          return {
+            requestType: "free_async_teardown",
+            title: "Use this path for a specific written gap read.",
+            copy: "This source works best when you already have one URL, one change, and one customer segment. Keep the ask short so the reply can stay concrete.",
+            points: [
+              "Paste the live subprocessor page URL if you have one.",
+              "Name the vendor change and the affected customer segment.",
+              "Say whether you want a teardown, a paid audit, or a follow-up on the next step."
+            ]
+          };
+        }
+
+        if (
+          normalized.startsWith("partner-preview") ||
+          normalized.startsWith("partner-client-handoff") ||
+          normalized.startsWith("sample-teardown-partner") ||
+          normalized.startsWith("pricing-page-partner") ||
+          normalized.startsWith("homepage-partner-cta") ||
+          normalized.startsWith("free-tools-partner") ||
+          normalized.startsWith("review-brief-builder-partner") ||
+          normalized.startsWith("blog-subprocessor-page-checker-partner")
+        ) {
+          return {
+            requestType: "partner_request",
+            title: "Use the partner path when the work is client delivery, not a one-off review.",
+            copy: "This source is a match for consultants, fractional DPOs, or attorneys deciding whether to refer, deliver, or white-label the workflow.",
+            points: [
+              "Describe the client profile or advisory practice you are serving.",
+              "Say whether you want referral-only, client delivery, or white-label access.",
+              "Include any volume or delivery expectations that affect the fit."
+            ]
+          };
+        }
+
+        if (normalized.startsWith("blog-subprocessor-page-checker-pricing") || normalized.startsWith("pricing-page-top")) {
+          return {
+            requestType: "starter_access",
+            title: "Use this path when the page checker already pointed to a paid tier.",
+            copy: "The source tells us the public page is probably close but still needs cleanup. Use this intake to decide whether Starter or Pro is the better fit.",
+            points: [
+              "Paste the checker score or the public page that needs cleanup.",
+              "Name the missing field, deadline, or proof hook in one sentence.",
+              "Tell us whether you expect one change or repeated vendor updates."
+            ]
+          };
+        }
+
+        if (
+          normalized.startsWith("ai-procurement-hub") ||
+          normalized.startsWith("ai-security-questionnaire") ||
+          normalized.startsWith("ai-vendor-disclosure-packet") ||
+          normalized.startsWith("sample-ai-vendor-disclosure-packet") ||
+          normalized.startsWith("ai-stack-template") ||
+          normalized.startsWith("free-tools-ai") ||
+          normalized.startsWith("blog-ai")
+        ) {
+          return {
+            requestType: "starter_access",
+            title: "Use this path when AI procurement or security review turned into an access question.",
+            copy: "The source came from an AI review surface, so keep the request tied to the named vendor, questionnaire, or packet instead of broad compliance theory.",
+            points: [
+              "Name the AI vendor or review artifact that is blocked.",
+              "Say whether you need a teardown, paid kit, or partner access.",
+              "Include the customer segment or deal context if timing matters."
+            ],
+            reviewNeed: "This came from an AI review source. Please tell me the fastest next step and whether the blocker is teardown, paid access, or partner fit."
+          };
+        }
+
+        if (normalized === "monitoring-comparison") {
+          return {
+            requestType: "free_async_teardown",
+            title: "Use this path when the comparison is really about workflow, not alerts.",
+            copy: "A monitor only detects change. This intake helps decide whether you need the file set, a paid audit, or a partner workflow around the change.",
+            points: [
+              "Paste the page or comparison that brought you here.",
+              "Tell us whether you need files, a cleanup pass, or partner access.",
+              "Include the segment or timeline that makes the change time-sensitive."
+            ]
+          };
+        }
+
+        return null;
+      }
+
       const submitButton = document.querySelector("#audit-submit");
 
       function syncRequestTypeUi() {
@@ -261,6 +370,23 @@
       prefillField("client-profile", "client_profile");
       prefillField("partner-goal", "partner_goal");
       prefillField("partner-volume", "partner_volume");
+      const sourceContext = resolveSourceContext(query.get("source"));
+      if (!initialType && sourceContext?.requestType && requestTypeMeta[sourceContext.requestType]) {
+        requestType.value = sourceContext.requestType;
+      }
+      if (sourceContext) {
+        sourceContextTitle.textContent = sourceContext.title;
+        sourceContextCopy.textContent = sourceContext.copy;
+        sourceContextPoints.replaceChildren(...sourceContext.points.map((point) => {
+          const item = document.createElement("li");
+          item.textContent = point;
+          return item;
+        }));
+        if (!query.get("review_need") && sourceContext.reviewNeed && !reviewNeedField.value.trim()) {
+          reviewNeedField.value = sourceContext.reviewNeed;
+        }
+        sourceContextSection.hidden = false;
+      }
       sourceTagInput.value = query.get("source") || "site";
       submissionChannelInput.value = query.get("channel") || submissionChannelInput.value;
       syncRequestTypeUi();
