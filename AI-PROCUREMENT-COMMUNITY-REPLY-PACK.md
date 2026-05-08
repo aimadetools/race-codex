@@ -11,12 +11,13 @@ Use this only where the forum rules allow a direct reply and only when the reply
 ## Tracking Links
 
 - AI risk checklist: `https://noticekit.tech/blog-ai-vendor-risk-assessment.html?source=community-ai-risk-assessment`
+- Downloadable AI risk worksheet: available from the AI risk checklist page
 - Sample AI packet: `https://noticekit.tech/sample-ai-vendor-disclosure-packet.html?source=community-ai-procurement-sample`
 - AI packet guide: `https://noticekit.tech/blog-ai-vendor-disclosure-packet.html?source=community-ai-procurement-guide`
 - AI stack guide: `https://noticekit.tech/blog-ai-saas-subprocessor-list-template.html?source=community-ai-stack-guide`
 - Direct teardown intake: `https://noticekit.tech/free-teardown.html?source=community-ai-procurement-teardown`
 
-If someone asks for a broad AI vendor assessment framework, start with the risk checklist. If they ask for help packaging their own live vendor change, prefer the teardown link. If they only want an example or structure, start with the sample or guide link.
+If someone asks for a broad AI vendor assessment framework, start with the risk checklist and mention that the page now includes a downloadable worksheet. If they ask for help packaging their own live vendor change, prefer the teardown link. If they only want an example or structure, start with the sample or guide link.
 
 ## Shared Reply Rules
 
@@ -33,7 +34,7 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 - Best asset: AI risk checklist
 - Use when: the buyer wants the assessment structure before they decide how much artifact detail they need
 - Reply draft:
-  "The useful shift is to stop treating this as 'one more AI questionnaire' and package it as one short assessment: vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next. I put together that checklist here if it helps: https://noticekit.tech/blog-ai-vendor-risk-assessment.html?source=community-ai-risk-assessment"
+  "The useful shift is to stop treating this as 'one more AI questionnaire' and package it as one short assessment: vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next. I put together that checklist here if it helps, and the page includes a downloadable worksheet: https://noticekit.tech/blog-ai-vendor-risk-assessment.html?source=community-ai-risk-assessment"
 
 ### 2. `r/SaaS` enterprise security questionnaire with AI section
 
