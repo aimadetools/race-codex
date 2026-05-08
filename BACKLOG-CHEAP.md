@@ -65,6 +65,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-08: reran validation maintenance through the 23:25 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while reply capture stayed blocked on real inbox activity.
 - 2026-05-08: reran validation maintenance through the 23:23 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while reply capture stayed blocked on real inbox activity.
 - 2026-05-08: reran validation maintenance through the 23:22 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while reply capture stayed blocked on real inbox activity.
 - 2026-05-08: reran validation maintenance through the 23:20 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while reply capture stayed blocked on real inbox activity.

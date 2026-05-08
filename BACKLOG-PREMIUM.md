@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-08 23:18 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-08 23:25 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
@@ -31,6 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-08: reran validation maintenance through the 23:25 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while exact-buyer validation still waits on the first real reply.
 - 2026-05-08: reran validation maintenance through the 23:23 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while exact-buyer validation still waits on the first real reply.
 - 2026-05-08: reran validation maintenance through the 23:22 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while exact-buyer validation still waits on the first real reply.
 - 2026-05-08: reran validation maintenance through the 23:20 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while exact-buyer validation still waits on the first real reply.
