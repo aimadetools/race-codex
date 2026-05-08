@@ -31,6 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-08 08:22 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and confirmed the site-links and source-tag checks stayed green while no real replies or interviews landed.
 - 2026-05-08 08:20 to 08:21 UTC: reran validation maintenance, refreshed the no-reply checkpoint and live status chain, and confirmed the queue still has 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle: public lead hunt, AI vendor risk-assessment checklist, worksheet landing path, community-reply kit/request refresh, pricing/start-here routing, and watcher-memory expansion for the new AI source tags.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.

@@ -62,6 +62,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-08 08:22 UTC: reran validation maintenance and confirmed the site-links and source-tag checks stayed green while the community feedback and inbox snapshots still showed 0 real submissions and 0 replies.
 - 2026-05-08 08:13 to 08:21 UTC: reran validation maintenance several times, refreshed the no-reply checkpoint plus the live status chain, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-08: shipped the AI vendor risk-assessment wedge, worksheet routing, watcher coverage, kit preview surfacing, and validation/help refreshes; checks stayed green and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle: public lead hunt, risk-assessment checklist, worksheet landing path, refined human reply pack/request, pricing/start-here routing, and refreshed inbox/help/validation/watch artifacts for the active 3-thread pass.
