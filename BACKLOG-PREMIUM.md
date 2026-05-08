@@ -31,8 +31,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-08: reran validation maintenance, refreshed the watch/status chain, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-08: closed the 3-thread Reddit posting request as blocked from this workspace and tightened the AI procurement evidence-capture loop around the community-thread landing pages and questionnaire asset.
+- 2026-05-08: reran validation maintenance, refreshed the watch/status chain, and closed the 3-thread Reddit posting request as blocked from this workspace while the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle, including the public lead hunt, risk-assessment worksheet, reply kit refresh, pricing/start-here routing, and watcher-memory expansion for the new AI source tags.
-- 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
-- Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
+- 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup; product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped.

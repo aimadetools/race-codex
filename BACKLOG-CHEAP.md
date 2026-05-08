@@ -65,9 +65,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-08: tightened the teardown and audit intake flows so common landing sources now prefill the right context, preserve the request type, and keep the source-tag routing visible.
-- 2026-05-08: reran validation maintenance, refreshed the watch/status chain, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-08: closed the 3-thread Reddit posting request as blocked from this workspace and tightened the help-request launchpad plus source-aware AI packet routing around dated request files and workspace probes.
+- 2026-05-08: tightened the teardown and audit intake flows, reran validation maintenance, closed the 3-thread Reddit posting request as workspace-blocked, and refreshed the help-request launchpad plus source-aware AI packet routing.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle, including the public lead hunt, risk-assessment checklist, worksheet path, reply pack refresh, pricing/start-here routing, and watch coverage for the active 3-thread pass.
-- 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification.
-- Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.
+- 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification; routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped.
