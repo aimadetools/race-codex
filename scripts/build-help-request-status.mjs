@@ -332,6 +332,63 @@ function extractOperatorBlockers(text) {
   }));
 }
 
+async function probeThread(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 12000);
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "user-agent": "noticekit-help-request-probe/1.0"
+      },
+      redirect: "follow",
+      signal: controller.signal
+    });
+    const body = await response.text();
+    const compactBody = body.replace(/\s+/g, " ").trim();
+
+    if (
+      response.status === 403 ||
+      /whoa there, pardner|request has been blocked due to a network policy/i.test(compactBody)
+    ) {
+      return {
+        status: "workspace-blocked",
+        detail: `HTTP ${response.status}; Reddit blocked this workspace request with a network policy page`
+      };
+    }
+
+    if (!response.ok) {
+      return {
+        status: "http-error",
+        detail: `HTTP ${response.status}; workspace probe could not confirm whether replies are still open`
+      };
+    }
+
+    return {
+      status: "reachable",
+      detail: `HTTP ${response.status}; workspace probe reached the thread page`
+    };
+  } catch (error) {
+    if (error instanceof Error && error.name === "AbortError") {
+      return {
+        status: "timeout",
+        detail: "Workspace probe timed out before the thread state could be confirmed"
+      };
+    }
+
+    return {
+      status: "error",
+      detail: `Workspace probe failed: ${error instanceof Error ? error.message : String(error)}`
+    };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function extractThreadTargets(text) {
+  return [...String(text || "").matchAll(/https:\/\/www\.reddit\.com\/r\/[^\s)]+/g)].map((match) => match[0]);
+}
+
 const checkedAt = formatUtcTimestamp(new Date());
 const { text: helpRequestText, source: helpRequestSource } = await readActiveRequestText();
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
@@ -373,6 +430,8 @@ const relatedEntries = requestWhat ? findRelatedEntries(requestWhat, completedEn
 const externalSessionConstraints = requestWhat ? extractExternalSessionConstraints(helpRequestText, relatedEntries) : [];
 const operatorBlockers = requestWhat && !requestRequiresExternalSession ? extractOperatorBlockers(helpStatusText) : [];
 const relatedBlockers = requestWhat && !requestRequiresExternalSession ? extractOpenBlockers(relatedEntries) : [];
+const threadTargets = [...new Set(extractThreadTargets(helpRequestText))];
+const threadProbes = await Promise.all(threadTargets.map(probeThread));
 const carryForwardBlocker = requestWhat && !matchingEntry && !requestRequiresExternalSession
   ? selectCarryForwardBlocker(relatedEntries)
   : null;
@@ -471,6 +530,19 @@ if (externalSessionConstraints.length > 0) {
   for (const constraint of externalSessionConstraints) {
     output.push(`- ${constraint.resolution}`);
     output.push(`  - Source: ${constraint.heading}`);
+  }
+}
+
+if (threadTargets.length > 0) {
+  output.push("");
+  output.push("## Workspace Thread Probe");
+  output.push("");
+  output.push("- These checks come from the current workspace only; they do not prove whether a human-authenticated browser can still reply.");
+  output.push(`- Checked at: ${checkedAt}`);
+
+  for (let index = 0; index < threadTargets.length; index += 1) {
+    const probe = threadProbes[index];
+    output.push(`- ${threadTargets[index]} -> \`${probe.status}\`: ${probe.detail}`);
   }
 }
 

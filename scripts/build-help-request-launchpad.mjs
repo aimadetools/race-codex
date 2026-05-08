@@ -94,6 +94,59 @@ function extractLatestRelatedAuthBlocker(text) {
   return "";
 }
 
+async function probeThread(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 12000);
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "user-agent": "noticekit-help-request-probe/1.0"
+      },
+      redirect: "follow",
+      signal: controller.signal
+    });
+    const body = await response.text();
+    const compactBody = body.replace(/\s+/g, " ").trim();
+
+    if (
+      response.status === 403 ||
+      /whoa there, pardner|request has been blocked due to a network policy/i.test(compactBody)
+    ) {
+      return {
+        status: "workspace-blocked",
+        detail: `HTTP ${response.status}; Reddit blocked this workspace request with a network policy page`
+      };
+    }
+
+    if (!response.ok) {
+      return {
+        status: "http-error",
+        detail: `HTTP ${response.status}; workspace probe could not confirm whether replies are still open`
+      };
+    }
+
+    return {
+      status: "reachable",
+      detail: `HTTP ${response.status}; workspace probe reached the thread page`
+    };
+  } catch (error) {
+    if (error instanceof Error && error.name === "AbortError") {
+      return {
+        status: "timeout",
+        detail: "Workspace probe timed out before the thread state could be confirmed"
+      };
+    }
+
+    return {
+      status: "error",
+      detail: `Workspace probe failed: ${error instanceof Error ? error.message : String(error)}`
+    };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 const checkedAt = formatUtcTimestamp(new Date());
 const helpRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
@@ -109,6 +162,11 @@ const sourceTags = parseLeadSourceTags(helpRequestText);
 const leadNotes = parseLeadNotes(helpRequestText);
 const replyPack = parseReplyPack(replyPackText);
 const relatedAuthBlocker = extractLatestRelatedAuthBlocker(helpStatusText);
+const threadProbes = new Map(
+  await Promise.all(
+    threadTargets.map(async (target) => [target.url, await probeThread(target.url)])
+  )
+);
 
 const output = [
   "# Help Request Launchpad",
@@ -135,6 +193,7 @@ if (threadTargets.length === 0) {
 } else {
   output.push("## Launch Checklist", "");
   output.push("- Open each target URL from your own authenticated browser session.");
+  output.push("- Check the workspace thread probe below first; `workspace-blocked` means only your browser session can confirm whether replies are still open.");
   output.push("- Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-no-link` in `HELP-STATUS.md`.");
   output.push("- After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-no-link`, or `no longer open for replies`.");
   output.push("");
@@ -144,9 +203,14 @@ if (threadTargets.length === 0) {
     const sourceTag = sourceTags.get(leadKey) || "";
     const packEntry = replyPack.get(sourceTag);
     const note = leadNotes.get(leadKey) || "";
+    const probe = threadProbes.get(target.url);
 
     output.push(`## ${target.label}`, "");
     output.push(`- Thread: ${target.url}`);
+    if (probe) {
+      output.push(`- Workspace thread probe: \`${probe.status}\``);
+      output.push(`- Probe detail: ${probe.detail}`);
+    }
     if (sourceTag) {
       output.push(`- Source tag: \`${sourceTag}\``);
     }
