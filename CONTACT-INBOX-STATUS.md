@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-08 04:13 UTC
+Checked at: 2026-05-08 04:23 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -90,6 +90,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-packet: 0
 - blog-index-ai-packet-sample: 0
 - blog-index-ai-risk-assessment: 0
+- blog-index-ai-risk-worksheet: 0
 - blog-index-ai-stack: 0
 - ai-disclosure-packet-stack: 0
 - ai-disclosure-packet-notice: 0
@@ -155,6 +156,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-questionnaire: 0
 - homepage-ai-packet-sample: 0
 - homepage-ai-risk-assessment: 0
+- homepage-ai-risk-worksheet: 0
 - homepage-ai-procurement: 0
 - homepage-shortcut: 0
 - homepage-ai-disclosure-packet: 0
@@ -183,12 +185,21 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-downloads: 0
 - ai-procurement-hub-cta: 0
 - ai-procurement-hub-risk-assessment: 0
+- ai-procurement-hub-risk-worksheet: 0
 - ai-vendor-risk-assessment-sample: 0
 - ai-vendor-risk-assessment-guide: 0
 - ai-vendor-risk-assessment-stack: 0
 - ai-vendor-risk-assessment-teardown: 0
 - ai-vendor-risk-assessment-pricing: 0
+- ai-vendor-risk-assessment-worksheet: 0
+- ai-vendor-risk-assessment-worksheet-checklist: 0
+- ai-vendor-risk-assessment-worksheet-sample: 0
+- ai-vendor-risk-assessment-worksheet-guide: 0
+- ai-vendor-risk-assessment-worksheet-stack: 0
+- ai-vendor-risk-assessment-worksheet-teardown: 0
+- ai-vendor-risk-assessment-worksheet-pricing: 0
 - free-tools-ai-risk-assessment: 0
+- free-tools-ai-risk-worksheet: 0
 - sample-ai-packet-guide: 0
 - sample-ai-packet-stack: 0
 - sample-ai-packet-teardown: 0
