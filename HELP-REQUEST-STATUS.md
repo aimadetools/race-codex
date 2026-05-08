@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-08 13:04 UTC
+Checked at: 2026-05-08 16:05 UTC
 
 ## Current Request
 
@@ -26,7 +26,7 @@ Checked at: 2026-05-08 13:04 UTC
 - After all 3 attempts, update `HELP-STATUS.md` with one line per lead using one of these outcomes: `posted`, `removed`, `blocked`, `blocked-no-link`, or `no longer open for replies`.
 - If any thread receives a visible reply from another user, copy the reply text or a short summary into `HELP-STATUS.md`.
 
-- Active request source: HELP-REQUEST.md
+- Active request source: help-requests/20260508-130511-HELP-REQUEST.md
 
 ## Resolution
 
@@ -58,7 +58,7 @@ Checked at: 2026-05-08 13:04 UTC
 ## Workspace Thread Probe
 
 - These checks come from the current workspace only; they do not prove whether a human-authenticated browser can still reply.
-- Checked at: 2026-05-08 13:04 UTC
+- Checked at: 2026-05-08 16:05 UTC
 - https://www.reddit.com/r/procurement/comments/1r3kbj9/how_do_you_actually_assess_ai_vendor_risk/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
 - https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
 - https://www.reddit.com/r/SaaS/comments/1r7ux9x/vendor_risk_as_a_system_design_problem_in/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page

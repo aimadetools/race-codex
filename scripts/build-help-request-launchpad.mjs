@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { readFile, writeFile } from "node:fs/promises";
+import { readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
@@ -19,8 +20,33 @@ function formatUtcTimestamp(date) {
 }
 
 function extractField(text, label) {
-  const match = text.match(new RegExp(`^${label}:\\s*(.+)$`, "im"));
-  return match ? match[1].trim() : "";
+  const match = String(text || "").match(new RegExp(`^${label}:\\s*(.+)$`, "im"));
+  if (match) {
+    return match[1].trim();
+  }
+
+  const line = String(text || "")
+    .split(/\r?\n/)
+    .find((entry) => new RegExp(`^${label}:\\s*`, "i").test(entry));
+  return line ? line.replace(new RegExp(`^${label}:\\s*`, "i"), "").trim() : "";
+}
+
+async function readActiveRequestText() {
+  const directRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
+  if (directRequestText.trim()) {
+    return directRequestText;
+  }
+
+  const requestFiles = (await readdir(join(ROOT, "help-requests")).catch(() => []))
+    .filter((name) => /^\d{8}-\d{6}-HELP-REQUEST\.md$/.test(name))
+    .sort()
+    .reverse();
+
+  if (requestFiles.length === 0) {
+    return "";
+  }
+
+  return readFile(join(ROOT, "help-requests", requestFiles[0]), "utf8").catch(() => "");
 }
 
 function parseThreadTargets(text) {
@@ -159,7 +185,7 @@ async function probeThread(url) {
 }
 
 const checkedAt = formatUtcTimestamp(new Date());
-const helpRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
+const helpRequestText = await readActiveRequestText();
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
 const replyPackText = await readFile(REPLY_PACK_FILE, "utf8").catch(() => "");
 
