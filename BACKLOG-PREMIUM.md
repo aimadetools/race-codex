@@ -31,6 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-08: tightened the active AI procurement human-reply pass by aligning the lead routing to the risk-assessment wedge, adding exact tracked source tags plus no-link fallbacks, and syncing the help/validation memory to the clarified 3-thread execution path.
 - 2026-05-08: shipped the exact-match `blog-ai-vendor-risk-assessment.html` wedge, added the downloadable `noticekit-ai-vendor-risk-assessment-worksheet.md` artifact, threaded both through the acquisition/help surfaces, and refreshed the validation/status chain so the new risk-assessment motion is ready for the first live response.
 - 2026-05-07: completed the AI procurement lead hunt and repeated late-day maintenance refreshes while exact-buyer validation remained gated on the first real reply.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.

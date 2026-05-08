@@ -17,6 +17,16 @@ Use this only where the forum rules allow a direct reply and only when the reply
 - AI stack guide: `https://noticekit.tech/blog-ai-saas-subprocessor-list-template.html?source=community-ai-stack-guide`
 - Direct teardown intake: `https://noticekit.tech/free-teardown.html?source=community-ai-procurement-teardown`
 
+## Active Pass
+
+The current human request only asks for three public replies:
+
+- Lead 1 in `r/procurement`: use `community-ai-risk-assessment`
+- Lead 2 in `r/SaaS`: use `community-ai-procurement-guide`
+- Lead 5 in `r/SaaS`: use `community-ai-procurement-teardown`
+
+Record one of these outcomes in `HELP-STATUS.md` for each thread: `posted`, `removed`, `blocked`, or `no longer open for replies`.
+
 If someone asks for a broad AI vendor assessment framework, start with the risk checklist and mention that the page now includes a downloadable worksheet. If they ask for help packaging their own live vendor change, prefer the teardown link. If they only want an example or structure, start with the sample or guide link.
 
 ## Shared Reply Rules
@@ -33,6 +43,9 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 
 - Best asset: AI risk checklist
 - Use when: the buyer wants the assessment structure before they decide how much artifact detail they need
+- Exact source tag: `community-ai-risk-assessment`
+- Fallback if links are not allowed:
+  "The shortest useful framework I have seen is vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next."
 - Reply draft:
   "The useful shift is to stop treating this as 'one more AI questionnaire' and package it as one short assessment: vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next. I put together that checklist here if it helps, and the page includes a downloadable worksheet: https://noticekit.tech/blog-ai-vendor-risk-assessment.html?source=community-ai-risk-assessment"
 
@@ -40,6 +53,9 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 
 - Best asset: AI packet guide
 - Use when: the founder is blocked on how to answer procurement cleanly
+- Exact source tag: `community-ai-procurement-guide`
+- Fallback if links are not allowed:
+  "The tighter answer bundle is vendor facts, subprocessors or model providers, retention or training stance, notice obligations, and owner or proof links in one packet instead of spreading them across product copy and legal docs."
 - Reply draft:
   "What usually stalls these is that product copy answers the feature question, but procurement is asking for the operating record behind the AI vendor choice. A tighter answer bundle is vendor facts, subprocessors/model providers, retention/training stance, notice obligations, and owner/proof links in one packet. I wrote up that structure here: https://noticekit.tech/blog-ai-vendor-disclosure-packet.html?source=community-ai-procurement-guide"
 
@@ -61,6 +77,9 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 
 - Best asset: direct teardown intake
 - Use when: the founder describes a current blocker and may want help on one live page
+- Exact source tag: `community-ai-procurement-teardown`
+- Fallback if links are not allowed:
+  "The fastest fix is usually one blunt pass over the current subprocessor page, the planned AI vendor change, and the affected customer segment so you can see what is missing before procurement does."
 - Reply draft:
   "If this is happening on a live deal, the fastest fix is usually not a giant governance program. It is one blunt pass over the current subprocessor page, the planned AI vendor change, and the affected customer segment so you can see what is missing before procurement does. If useful, send one live URL here and I can point to the likely gaps: https://noticekit.tech/free-teardown.html?source=community-ai-procurement-teardown"
 

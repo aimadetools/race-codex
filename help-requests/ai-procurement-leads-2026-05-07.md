@@ -11,7 +11,9 @@ Exactly 10 public leads from the last 90 days that mention AI vendor procurement
    Platform: Reddit (`r/procurement`)
    Company or author: Reddit user in `r/procurement`
    Summary: A February 2026 buyer asks how teams actually assess AI vendor risk beyond SOC 2 and a generic questionnaire, with explicit concern about data governance and downstream model providers.
-   Best NoticeKit asset: `sample-ai-vendor-disclosure-packet.html`
+   Best NoticeKit asset: `blog-ai-vendor-risk-assessment.html`
+   Recommended source tag: `community-ai-risk-assessment`
+   Human reply status on 2026-05-08: target this thread first; mention the downloadable worksheet if the thread is still open.
 
 2. Date found: 2026-05-07
    URL: https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/
@@ -19,6 +21,8 @@ Exactly 10 public leads from the last 90 days that mention AI vendor procurement
    Company or author: Reddit user in `r/SaaS`
    Summary: A founder says an AI section in an enterprise security questionnaire stalled a deal in late April 2026 because procurement wanted framework-cited answers instead of feature copy.
    Best NoticeKit asset: `blog-ai-vendor-disclosure-packet.html`
+   Recommended source tag: `community-ai-procurement-guide`
+   Human reply status on 2026-05-08: include this in the current 3-thread reply pass.
 
 3. Date found: 2026-05-07
    URL: https://www.reddit.com/r/CIO/comments/1t02cn5/ai_tooling_in_internal_it_whats_your_security/
@@ -40,6 +44,8 @@ Exactly 10 public leads from the last 90 days that mention AI vendor procurement
    Company or author: Reddit user in `r/SaaS`
    Summary: A February 2026 founder discussion frames AI-native vendor governance as a real enterprise-sales bottleneck and asks how others classify vendor risk before security review.
    Best NoticeKit asset: `free-teardown.html`
+   Recommended source tag: `community-ai-procurement-teardown`
+   Human reply status on 2026-05-08: include this in the current 3-thread reply pass.
 
 6. Date found: 2026-05-07
    URL: https://www.reddit.com/r/sysadmin/comments/1rfd07q/your_ai_vendors_privacy_policy_is_not_a_security/
@@ -75,3 +81,7 @@ Exactly 10 public leads from the last 90 days that mention AI vendor procurement
     Company or author: Reddit user in `r/ciso`
     Summary: A CISO asks what to do when a client rejects a named subprocessor and notes the same refusal pattern is likely to spread to AI providers as subprocessors.
     Best NoticeKit asset: `blog-ai-saas-subprocessor-notice-template.html`
+
+## Current Priority Pass
+
+The open 2026-05-08 human request only targets leads 1, 2, and 5. Use the matching draft in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md`, keep the source tag exactly as listed above, and record the outcome in `HELP-STATUS.md` as `posted`, `removed`, `blocked`, or `no longer open for replies`.
