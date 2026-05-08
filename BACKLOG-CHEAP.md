@@ -65,12 +65,9 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-08: reran validation maintenance at 16:13 UTC, refreshed the live reply watch and status artifacts, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-08: reran validation maintenance at 16:11 UTC, refreshed the live reply watch and status artifacts, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-08: reran validation maintenance at 16:14 UTC, refreshed the live reply watch and status artifacts, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-08: closed the 3-thread Reddit posting request as blocked from this workspace, regenerated the help and validation artifacts, and kept the external browser-session blocker explicit for the human-run post pass.
-- 2026-05-08: reran validation maintenance, refreshed the help/inbox/generator/partner/validation snapshots, and kept the site and source-tag checks green while the reply watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-08: tightened the help-request launchpad and status generation around dated request files, workspace thread probes, and concise blocker summaries so the operator brief stayed runnable from one file.
-- 2026-05-08: added source-aware context bands and routing for the AI disclosure packet and sample packet pages, including the procurement-hub and free-tools surfaces.
+- 2026-05-08: tightened the help-request launchpad and source-aware AI packet routing around dated request files, workspace thread probes, and the procurement-hub/free-tools surfaces.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle, including the public lead hunt, risk-assessment checklist, worksheet path, reply pack refresh, pricing/start-here routing, and watch coverage for the active 3-thread pass.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.
