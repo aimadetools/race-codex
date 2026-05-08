@@ -281,6 +281,36 @@ function selectCarryForwardBlocker(relatedEntries) {
   return null;
 }
 
+function extractExternalSessionConstraints(requestText, relatedEntries) {
+  const constraints = [];
+  if (!requestNeedsExternalSession(requestText)) {
+    return constraints;
+  }
+
+  constraints.push({
+    heading: "Current request requirement",
+    resolution: "This request requires a human-owned authenticated browser session outside this workspace."
+  });
+
+  for (const entry of relatedEntries) {
+    const resolution = extractResolution(entry.body).replace(/\s+/g, " ").trim();
+    if (!/\bblocked\b/i.test(resolution)) {
+      continue;
+    }
+    if (!/authenticated|browser session|workspace does not expose/i.test(resolution)) {
+      continue;
+    }
+
+    constraints.push({
+      heading: entry.heading,
+      resolution
+    });
+    break;
+  }
+
+  return constraints;
+}
+
 function extractOperatorBlockers(text) {
   const operatorNoteMatch = text.match(/##\s+\d{4}-\d{2}-\d{2} Operator Note[\s\S]*?(?=\n## |\n$)/i);
   if (!operatorNoteMatch) {
@@ -340,6 +370,7 @@ if (normalizedRequestWhat) {
 }
 
 const relatedEntries = requestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];
+const externalSessionConstraints = requestWhat ? extractExternalSessionConstraints(helpRequestText, relatedEntries) : [];
 const operatorBlockers = requestWhat && !requestRequiresExternalSession ? extractOperatorBlockers(helpStatusText) : [];
 const relatedBlockers = requestWhat && !requestRequiresExternalSession ? extractOpenBlockers(relatedEntries) : [];
 const carryForwardBlocker = requestWhat && !matchingEntry && !requestRequiresExternalSession
@@ -429,6 +460,17 @@ if (openBlockers.length > 0) {
   for (const blocker of openBlockers) {
     output.push(`- ${blocker.resolution}`);
     output.push(`  - Source: ${blocker.heading}`);
+  }
+}
+
+if (externalSessionConstraints.length > 0) {
+  output.push("");
+  output.push("## Active Constraints");
+  output.push("");
+
+  for (const constraint of externalSessionConstraints) {
+    output.push(`- ${constraint.resolution}`);
+    output.push(`  - Source: ${constraint.heading}`);
   }
 }
 

@@ -325,6 +325,20 @@ function extractHelpRequestBlockers(text) {
     .filter(Boolean);
 }
 
+function extractHelpRequestConstraints(text) {
+  const sectionMatch = text.match(/## Active Constraints\s+([\s\S]*?)(?:\n## |\s*$)/i);
+  if (!sectionMatch) {
+    return [];
+  }
+
+  return sectionMatch[1]
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line.startsWith("- "))
+    .map((line) => line.replace(/^- /, "").trim())
+    .filter(Boolean);
+}
+
 function extractGeneratorStatus(text) {
   const match = text.match(/- Status:\s*([^\n]+)/i);
   return match ? match[1].trim().toLowerCase() : "unknown";
@@ -630,6 +644,8 @@ const helpRequestStatus = extractHelpRequestStatus(helpRequestStatusText);
 const helpRequestWhat = extractHelpRequestWhat(helpRequestStatusText);
 const helpRequestCheckedAt = extractHelpRequestCheckedAt(helpRequestStatusText);
 const helpRequestBlockers = extractHelpRequestBlockers(helpRequestStatusText);
+const helpRequestConstraints = extractHelpRequestConstraints(helpRequestStatusText);
+const helpRequestDependencyNotes = helpRequestBlockers.length > 0 ? helpRequestBlockers : helpRequestConstraints;
 const generatorProductionStatus = extractGeneratorStatus(generatorProductionStatusText);
 const generatorProductionCheckedAt = extractGeneratorCheckedAt(generatorProductionStatusText);
 const generatorHandoffStatus = extractGeneratorHandoffStatus(generatorHandoffStatusText);
@@ -656,7 +672,7 @@ const output = [
   "- Highest-priority incomplete work: exact buyer validation through real interviews.",
   `- Next executable validation step: monitor ` + "`COMMUNITY-FEEDBACK.md`" + ` and ` + "`CONTACT-INBOX-STATUS.md`" + ` for the first real reply or intake, then convert it into the right evidence log.`,
   `- Human-help request state: ${helpRequestStatus === "open" ? `open as of ${helpRequestCheckedAt}` : helpRequestStatus === "blocked" ? `blocked as of ${helpRequestCheckedAt}` : helpRequestStatus === "completed" ? `completed as of ${helpRequestCheckedAt}` : helpRequestStatus === "missing" ? `no active request as of ${helpRequestCheckedAt}` : "missing or unknown"}.`,
-  `- Human-help blocker: ${helpRequestBlockers.length > 0 ? helpRequestBlockers[0] : "no related blocker is called out in the current help snapshot."}`,
+  `- Human-help blocker: ${helpRequestDependencyNotes.length > 0 ? helpRequestDependencyNotes[0] : "no related blocker or active constraint is called out in the current help snapshot."}`,
   `- Production generator state: ${generatorProductionCheckedAt === "unknown" ? "missing; run \`npm run build:generator-production-status\`." : generatorProductionStatus === "ok" ? `checked ${generatorProductionCheckedAt}; live generator smoke passed.` : `checked ${generatorProductionCheckedAt}; status ${generatorProductionStatus}.`}`,
   `- Generator handoff state: ${generatorHandoffCheckedAt === "unknown" ? "missing; run \`npm run build:generator-handoff-status\`." : generatorHandoffStatus === "ok" ? `checked ${generatorHandoffCheckedAt}; live generator-to-teardown handoff passed.` : `checked ${generatorHandoffCheckedAt}; status ${generatorHandoffStatus}.`}`,
   `- Partner outreach state: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}; ${partnerReadyToSend == null ? "unknown" : partnerReadyToSend} ready, ${partnerSentWaiting == null ? "unknown" : partnerSentWaiting} sent/waiting, ${partnerReplied == null ? "unknown" : partnerReplied} replied.`}`,
@@ -725,7 +741,7 @@ const output = [
   "- Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.",
   "- Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.",
   `- Human help: ${helpRequestStatus === "open" ? `\`HELP-REQUEST-STATUS.md\` still shows an open request for "${helpRequestWhat}".` : helpRequestStatus === "blocked" ? `\`HELP-REQUEST-STATUS.md\` shows the current request is blocked for "${helpRequestWhat}".` : helpRequestStatus === "completed" ? `\`HELP-REQUEST-STATUS.md\` shows the current request as completed.` : helpRequestStatus === "missing" ? "`HELP-REQUEST-STATUS.md` shows no active request right now." : "help-request status snapshot missing or empty."}`,
-  `- Help blocker summary: ${helpRequestBlockers.length > 0 ? helpRequestBlockers[0] : "no related blocker is called out in `HELP-REQUEST-STATUS.md`."}`,
+  `- Help blocker summary: ${helpRequestDependencyNotes.length > 0 ? helpRequestDependencyNotes[0] : "no related blocker or active constraint is called out in `HELP-REQUEST-STATUS.md`."}`,
   `- Production generator: ${generatorProductionStatus === "ok" ? "`GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing." : generatorProductionCheckedAt === "unknown" ? "status snapshot missing." : `latest smoke check status is ${generatorProductionStatus}.`}`,
   `- Generator handoff: ${generatorHandoffStatus === "ok" ? "`GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing." : generatorHandoffCheckedAt === "unknown" ? "status snapshot missing." : `latest handoff check status is ${generatorHandoffStatus}.`}`,
   `- Partner outreach: ${partnerNextAction === "unknown" ? "status snapshot missing or empty." : `\`PARTNER-OUTREACH-STATUS.md\` says the next action is to ${partnerNextAction}`}`,
