@@ -1,25 +1,28 @@
 # Help Request Status
 
-Checked at: 2026-05-07 23:29 UTC
+Checked at: 2026-05-08 04:04 UTC
 
 ## Current Request
 
-- Status: completed
-- What: Find 10 live public AI SaaS procurement, security-review, or subprocessor-disclosure conversations that NoticeKit can reply to with the new sample packet asset.
+- Status: open
+- What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
 - Priority: important
 - Time: 15min
 - Budget: $0
 
 ## Requested Steps
 
-- Search public web results, founder communities, Reddit, LinkedIn posts, X posts, GitHub discussions, or forum threads from the last 90 days for people asking about AI vendor disclosure, subprocessors, security questionnaires, procurement review, or customer notice obligations.
-- Create a new markdown file at `help-requests/ai-procurement-leads-2026-05-07.md`.
-- Add exactly 10 leads. For each lead include: date found, URL, platform, company or author name, one-sentence summary of the pain, and the best matching NoticeKit asset from this list only: `sample-ai-vendor-disclosure-packet.html`, `blog-ai-vendor-disclosure-packet.html`, `blog-ai-saas-subprocessor-list-template.html`, `blog-ai-saas-subprocessor-notice-template.html`, `free-teardown.html`.
-- Exclude closed communities that require paid access and exclude obvious spam or agency lead lists.
-- Update `HELP-STATUS.md` with completion status and any blockers.
+- Open `help-requests/ai-procurement-leads-2026-05-07.md`.
+- Visit lead 1 (`r/procurement`), lead 2 (`r/SaaS`), and lead 5 (`r/SaaS`).
+- Open `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` and use the matching draft as the base.
+- For lead 1, use the new risk-checklist link: `https://noticekit.tech/blog-ai-vendor-risk-assessment.html?source=community-ai-risk-assessment`
+- For lead 2, use the packet-guide link already listed in the reply pack.
+- For lead 5, use the teardown link already listed in the reply pack.
+- Keep each reply helpful and plain. If the subreddit rejects links, post the text-only takeaway first, then add the link in a follow-up reply or DM if allowed.
+- Record what happened in `HELP-STATUS.md`: posted, removed, blocked, or no longer open for replies, plus the date for each thread.
 
-- Active request source: help-requests/20260507-130049-HELP-REQUEST.md
+- Active request source: HELP-REQUEST.md
 
 ## Resolution
 
-- Matching completed entry: [HELP] What: Find 10 live public AI SaaS procurement, security-review, or subprocessor-disclosure conversations that NoticeKit can reply to with the new sample packet asset.
+- No matching completion note is present in `HELP-STATUS.md` yet.

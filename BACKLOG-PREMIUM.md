@@ -12,6 +12,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P1
 
+- Compare the first real `community-ai-risk-assessment`, `blog-index-ai-risk-assessment`, `free-tools-ai-risk-assessment`, or `ai-procurement-hub-risk-assessment` click, reply, or teardown against the packet guide and questionnaire routes; decide whether "AI vendor risk assessment" should become the primary AI hero language.
 - Compare the first real `sample-ai-packet-*` inbound or reply against the blank AI disclosure packet guide and AI stack template; decide whether the concrete sample packet should outrank the blank template in the homepage hero, pricing wedge, or outreach follow-up.
 - Compare the first real `ai-security-questionnaire-*` inbound or reply against the broader AI disclosure packet, sample packet, and AI stack guide; decide whether the questionnaire-first framing deserves the main AI procurement hero slot.
 - Compare the first real `ai-disclosure-packet-*` inbound or reply against the older AI stack template and generic teardown routes once evidence lands; decide whether AI procurement framing deserves a permanent homepage hero or outbound follow-up slot.
@@ -33,5 +34,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 - 2026-05-07: ran the 23:29 UTC validation maintenance refresh, rechecked site links and source-tag coverage, and kept exact-buyer validation gated on the first real reply.
 - 2026-05-07: ran the 23:28 UTC validation maintenance pass, refreshed the watch/status artifacts, and confirmed exact-buyer validation remains gated on the first real reply.
 - 2026-05-07: ran repeated validation maintenance passes through the 23:27 UTC checkpoint, refreshed the watchboard and synced status artifacts, logged deduplicated no-reply checkpoints, confirmed site-links and source-tag coverage stayed green, and kept exact-buyer evidence gated on a real reply.
+- 2026-05-08: shipped the exact-match `blog-ai-vendor-risk-assessment.html` acquisition wedge, threaded it through the homepage/blog/free-tools/AI hub/community reply pack, opened a new human help request for 3 public replies, and verified links plus source-tag coverage.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.

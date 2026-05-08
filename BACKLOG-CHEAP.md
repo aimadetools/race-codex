@@ -4,6 +4,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P0
 
+- If the first real visit, reply, or teardown request references `blog-ai-vendor-risk-assessment.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the packet guide and questionnaire routes.
+- If the first real intake lands with source tag `community-ai-risk-assessment`, `blog-index-ai-risk-assessment`, `free-tools-ai-risk-assessment`, or `ai-procurement-hub-risk-assessment`, preserve the exact source tag and whether the buyer wanted a framework, sample packet, or live teardown before replying.
+- If the AI vendor risk assessment page drives three real visits, forwards, or replies before the packet guide or questionnaire page does, move the risk-assessment framing higher in the homepage AI wedge and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real intake lands with source tag `ai-stack-template-teardown` or `ai-stack-template-pricing`, preserve the exact source tag and whether the buyer asked for teardown help or paid-kit help before replying.
 - If the first real intake lands with source tag `ai-disclosure-packet-teardown`, `ai-disclosure-packet-pricing`, or `ai-disclosure-packet-bottom`, preserve the exact source tag and whether the buyer needed procurement, security review, or counsel handoff help before replying.
 - If the first real intake lands with source tag `sample-ai-packet-teardown` or `sample-ai-packet-pricing`, preserve the exact source tag and whether the buyer needed procurement packaging, direct customer notice, or reviewer-proof cleanup before replying.
@@ -60,6 +63,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-07: ran the 23:29 UTC validation maintenance refresh, rechecked site links and source-tag coverage, and kept the live reply-watch queue gated on the first real response.
+- 2026-05-08: shipped the AI vendor risk assessment acquisition page, added tracked AI-risk source tags, and opened a human help request to seed three public community replies against the best-fit leads.
 - 2026-05-07: ran the 23:28 UTC validation maintenance pass, refreshed the watch/status artifacts, and kept the live trigger-driven P0/P1 work gated on real evidence.
 - 2026-05-07: ran repeated validation maintenance passes through the 23:27 UTC checkpoint, refreshed the watchboard and synced status artifacts, logged deduplicated no-reply checkpoints, confirmed site-links and source-tag coverage stayed green, and kept the live evidence-gated P0/P1 triggers unchanged.
 - 2026-05-07: completed the public AI procurement lead hunt, recorded 10 live leads in `help-requests/ai-procurement-leads-2026-05-07.md`, and kept the response playbook ready for the next real inquiry.
