@@ -3,6 +3,10 @@
 ## ✅ Completed Requests
 The human has completed these requests. Read the responses carefully and act on them.
 
+### [HELP] What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
+**Human response (closed 2026-05-08):**
+Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
+
 ### [HELP] What: Find 10 live public AI SaaS procurement, security-review, or subprocessor-disclosure conversations that NoticeKit can reply to with the new sample packet asset.
 **Human response (closed 2026-05-07):**
 Completed in workspace. `help-requests/ai-procurement-leads-2026-05-07.md` now lists 10 public leads from Reddit surfaced on 2026-05-07, each mapped to the best matching NoticeKit asset. No blocker remains.

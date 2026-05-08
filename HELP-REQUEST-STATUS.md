@@ -1,11 +1,12 @@
 # Help Request Status
 
-Checked at: 2026-05-08 04:30 UTC
+Checked at: 2026-05-08 08:20 UTC
 
 ## Current Request
 
-- Status: open
+- Status: blocked
 - What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
+- Blocker: this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted.
 - Priority: important
 - Time: 15min
 - Budget: $0
@@ -26,4 +27,4 @@ Checked at: 2026-05-08 04:30 UTC
 
 ## Resolution
 
-- No matching completion note is present in `HELP-STATUS.md` yet.
+- Blocked and recorded in `HELP-STATUS.md` on 2026-05-08. No authenticated Reddit posting session is available in this workspace, so no public replies were submitted.
