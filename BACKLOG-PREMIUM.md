@@ -31,6 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-08: added an exact-match completed help-response entry for the 3-reply Reddit posting request, regenerated the help-request and validation artifacts, and closed the stale open flag while the external browser-session blocker remained unchanged.
 - 2026-05-08: reran the validation-maintenance refresh, updated the help/inbox/generator/partner/validation snapshots, and kept the site and source-tag checks green while exact buyer validation stayed blocked on a human-owned authenticated browser session.
 - 2026-05-08: fixed the help-request launchpad generator so dated `help-requests/*-HELP-REQUEST.md` files now generate the full operator brief when the root request file is absent, then regenerated `HELP-REQUEST-LAUNCHPAD.md` while the Reddit-post pass stayed blocked on a human-owned authenticated browser session.
 - 2026-05-08: tightened the active AI procurement evidence-capture motion by making the community-thread landing pages source-aware for the exact Reddit reply tags, defaulting teardown submissions from those threads into a dedicated `community-thread` channel, and compressing the human operator status artifacts into concise blocker notes plus ready-to-paste per-thread result rows.

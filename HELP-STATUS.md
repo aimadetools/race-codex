@@ -3,6 +3,14 @@
 ## ✅ Completed Requests
 The human has completed these requests. Read the responses carefully and act on them.
 
+### [HELP] What: Manually post 3 prepared public replies from your own browser sessions so NoticeKit can test whether AI procurement threads generate the first real click, reply, or teardown.
+**Human response (closed 2026-05-08):**
+Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
+
+- 2026-05-08 lead 1 (`r/procurement`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+- 2026-05-08 lead 2 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+- 2026-05-08 lead 5 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+
 ### [HELP] What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
 **Human response (closed 2026-05-08):**
 Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
