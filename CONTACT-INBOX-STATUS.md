@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-08 08:29 UTC
+Checked at: 2026-05-08 12:35 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -91,6 +91,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-packet-sample: 0
 - blog-index-ai-risk-assessment: 0
 - blog-index-ai-risk-worksheet: 0
+- blog-index-ai-questionnaire-template: 0
 - blog-index-ai-stack: 0
 - ai-disclosure-packet-stack: 0
 - ai-disclosure-packet-notice: 0
@@ -116,6 +117,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-hero: 0
 - free-tools-hero-ai-procurement: 0
 - free-tools-ai-stack-guide: 0
+- free-tools-ai-questionnaire-template: 0
 - free-tools-ai-questionnaire: 0
 - free-tools-ai-packet: 0
 - free-tools-ai-packet-sample: 0
@@ -156,6 +158,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - partner-client-handoff-cta: 0
 - homepage-ai-stack-guide: 0
 - homepage-ai-questionnaire: 0
+- homepage-ai-questionnaire-template: 0
 - homepage-ai-packet-sample: 0
 - homepage-ai-risk-assessment: 0
 - homepage-ai-risk-worksheet: 0
@@ -179,6 +182,12 @@ Source of truth: Vercel Blob `contact-submissions/`
 - community-ai-procurement-teardown: 0
 - community-ai-procurement-notice: 0
 - ai-security-questionnaire-guide: 0
+- ai-security-questionnaire-template: 0
+- ai-security-questionnaire-template-sample: 0
+- ai-security-questionnaire-template-guide: 0
+- ai-security-questionnaire-template-stack: 0
+- ai-security-questionnaire-template-teardown: 0
+- ai-security-questionnaire-template-pricing: 0
 - ai-security-questionnaire-sample: 0
 - ai-security-questionnaire-stack: 0
 - ai-security-questionnaire-teardown: 0
@@ -188,6 +197,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-card: 0
 - ai-procurement-hub-downloads: 0
 - ai-procurement-hub-cta: 0
+- ai-procurement-hub-answer-template: 0
 - ai-procurement-hub-risk-assessment: 0
 - ai-procurement-hub-risk-worksheet: 0
 - ai-vendor-risk-assessment-sample: 0

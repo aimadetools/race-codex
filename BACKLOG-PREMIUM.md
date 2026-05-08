@@ -14,7 +14,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 - Compare the first real `community-ai-risk-assessment`, `blog-index-ai-risk-assessment`, `free-tools-ai-risk-assessment`, or `ai-procurement-hub-risk-assessment` click, reply, or teardown against the packet guide and questionnaire routes; decide whether "AI vendor risk assessment" should become the primary AI hero language.
 - Compare the first real `sample-ai-packet-*` inbound or reply against the blank AI disclosure packet guide and AI stack template; decide whether the concrete sample packet should outrank the blank template in the homepage hero, pricing wedge, or outreach follow-up.
-- Compare the first real `ai-security-questionnaire-*` inbound or reply against the broader AI disclosure packet, sample packet, and AI stack guide; decide whether the questionnaire-first framing deserves the main AI procurement hero slot.
+- Compare the first real `ai-security-questionnaire-*` or `ai-security-questionnaire-template-*` inbound or reply against the broader AI disclosure packet, sample packet, and AI stack guide; decide whether the questionnaire-first framing or the new copy-paste answer-template framing deserves the main AI procurement hero slot.
 - Compare the first real `ai-disclosure-packet-*` inbound or reply against the older AI stack template and generic teardown routes once evidence lands; decide whether AI procurement framing deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `ai-stack-template` inbound, teardown request, or CSV download-led reply against the generic subprocessor-list template and free-tools hub once evidence lands; decide whether the AI-startup stack wedge deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `blog-subprocessor-page-checker` inbound against generator-led and free-teardown-led inbound once evidence lands; decide whether the checker deserves a homepage hero slot or a pricing-page wedge.
@@ -31,11 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-08 08:29 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and kept the site-links and source-tag checks green while no real replies or interviews landed.
-- 2026-05-08 08:27 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and kept the site-links and source-tag checks green while no real replies or interviews landed.
-- 2026-05-08 08:24 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and confirmed the site-links and source-tag checks stayed green while no real replies or interviews landed.
-- 2026-05-08 08:22 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and confirmed the site-links and source-tag checks stayed green while no real replies or interviews landed.
-- 2026-05-08 08:20 to 08:21 UTC: reran validation maintenance, refreshed the no-reply checkpoint and live status chain, and confirmed the queue still has 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-08: refreshed validation maintenance/status artifacts repeatedly while no real replies landed, then shipped the AI security questionnaire answer-template asset, routed it through the main AI acquisition surfaces, and opened a new root human request for manual authenticated posting of the 3 prepared public replies.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle: public lead hunt, AI vendor risk-assessment checklist, worksheet landing path, community-reply kit/request refresh, pricing/start-here routing, and watcher-memory expansion for the new AI source tags.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.

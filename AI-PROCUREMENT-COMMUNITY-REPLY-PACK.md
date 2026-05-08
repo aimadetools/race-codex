@@ -12,6 +12,7 @@ Use this only where the forum rules allow a direct reply and only when the reply
 
 - AI risk checklist: `https://noticekit.tech/blog-ai-vendor-risk-assessment.html?source=community-ai-risk-assessment`
 - Downloadable AI risk worksheet: available from the AI risk checklist page
+- AI questionnaire answer template: `https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html?source=community-ai-procurement-guide`
 - Sample AI packet: `https://noticekit.tech/sample-ai-vendor-disclosure-packet.html?source=community-ai-procurement-sample`
 - AI packet guide: `https://noticekit.tech/blog-ai-vendor-disclosure-packet.html?source=community-ai-procurement-guide`
 - AI stack guide: `https://noticekit.tech/blog-ai-saas-subprocessor-list-template.html?source=community-ai-stack-guide`
@@ -57,7 +58,7 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 - Fallback if links are not allowed:
   "The tighter answer bundle is vendor facts, subprocessors or model providers, retention or training stance, notice obligations, and owner or proof links in one packet instead of spreading them across product copy and legal docs."
 - Reply draft:
-  "What usually stalls these is that product copy answers the feature question, but procurement is asking for the operating record behind the AI vendor choice. A tighter answer bundle is vendor facts, subprocessors/model providers, retention/training stance, notice obligations, and owner/proof links in one packet. I wrote up that structure here: https://noticekit.tech/blog-ai-vendor-disclosure-packet.html?source=community-ai-procurement-guide"
+  "What usually stalls these is that product copy answers the feature question, but procurement is asking for the operating record behind the AI vendor choice. A tighter answer bundle is vendor facts, subprocessors/model providers, retention/training stance, customer scope, notice obligations, and owner/proof links in one answer block before you expand into a bigger packet. I wrote up that structure here: https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html?source=community-ai-procurement-guide"
 
 ### 3. `r/CIO` internal IT security review with stale subprocessor data
 
