@@ -31,6 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-08: reran validation maintenance through the 23:03 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the site-link, source-tag, and validation-watch checks green while exact-buyer validation still waits on the first real reply.
 - 2026-05-08: reran validation maintenance through the 20:29 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the site-link, source-tag, and validation-watch checks green while exact-buyer validation still waits on the first real reply.
 - 2026-05-08: refreshed the AI procurement acquisition bundle, including the public lead hunt, risk-assessment worksheet, reply kit refresh, pricing/start-here routing, and watcher-memory expansion for the new AI source tags while the 3-thread Reddit posting request stayed workspace-blocked.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle, including the public lead hunt, risk-assessment worksheet, reply kit refresh, pricing/start-here routing, and watcher-memory expansion for the new AI source tags.
