@@ -31,7 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-08: shipped the AI vendor risk-assessment acquisition path end-to-end by adding the checklist page, downloadable worksheet, tracked worksheet landing page, source-tag coverage, and the tightened 3-thread community-reply execution kit, then refreshed the help and validation memory around that motion.
+- 2026-05-08: shipped the AI vendor risk-assessment acquisition path as one collapsed bundle: checklist page, worksheet download + landing page, tightened 3-thread community-reply kit, and the follow-on pricing/start-here routing plus watcher-memory expansion for the new risk paths.
 - 2026-05-07: completed the AI procurement lead hunt and repeated late-day maintenance refreshes while exact-buyer validation remained gated on the first real reply.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.
