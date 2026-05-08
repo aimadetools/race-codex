@@ -65,7 +65,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-08: reran validation maintenance across the 20:18, 20:20, 20:21, and 20:23 UTC checkpoints, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the site-link, source-tag, and validation-watch checks green while reply capture stayed blocked on real inbox activity.
+- 2026-05-08: reran validation maintenance across the 20:18, 20:20, 20:21, 20:23, and 20:25 UTC checkpoints, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the site-link, source-tag, and validation-watch checks green while reply capture stayed blocked on real inbox activity.
 - 2026-05-08: tightened the teardown and audit intake flows, closed the 3-thread Reddit posting request as workspace-blocked, and refreshed the help-request launchpad plus source-aware AI packet routing.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle, including the public lead hunt, risk-assessment checklist, worksheet path, reply pack refresh, pricing/start-here routing, and watch coverage for the active 3-thread pass.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification; routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped.
