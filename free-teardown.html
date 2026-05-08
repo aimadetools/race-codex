@@ -248,6 +248,24 @@
         }
 
         if (
+          normalized.startsWith("blog-ai-vendor-risk-assessment") ||
+          normalized.startsWith("ai-vendor-risk-assessment-worksheet")
+        ) {
+          return {
+            heroTitle: "Get a blunt 3-bullet read on the AI vendor review blocker.",
+            heroCopy: "Use this when the checklist or worksheet already narrowed the chain but you still need the shortest path to a decision. Paste the live URL, the vendor change, and the affected customer segment so the reply can stay specific.",
+            reviewNeed: "This came from the AI risk checklist or worksheet. Please give the 3-bullet async gap read for the current page, vendor change, and customer segment, and flag the fastest next step.",
+            title: "Use teardown when the checklist showed a real review gap.",
+            copy: "Keep the facts short so the response can stay focused on the notice path instead of expanding into a generic governance discussion.",
+            points: [
+              "Paste the current public page or worksheet URL you were reviewing.",
+              "Name the vendor change or review blocker in one sentence.",
+              "State which customers or agreement segment are affected and whether timing is already active."
+            ]
+          };
+        }
+
+        if (
           normalized.startsWith("ai-procurement-hub") ||
           normalized.startsWith("ai-security-questionnaire") ||
           normalized.startsWith("ai-disclosure-packet") ||

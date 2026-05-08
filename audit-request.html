@@ -307,6 +307,23 @@
         }
 
         if (
+          normalized.startsWith("blog-ai-vendor-risk-assessment") ||
+          normalized.startsWith("ai-vendor-risk-assessment-worksheet")
+        ) {
+          return {
+            requestType: "free_async_teardown",
+            title: "Use this path when the AI risk checklist exposed a live review blocker.",
+            copy: "The checklist or worksheet already narrowed the vendor chain. Keep the request tied to the named vendor, affected customer segment, and current review question so the reply can stay specific.",
+            points: [
+              "Name the AI vendor or model chain you are assessing.",
+              "Paste the live page, worksheet, or public review artifact you are using.",
+              "Say whether you want a teardown, a paid kit, or a follow-up on the next step."
+            ],
+            reviewNeed: "This came from the AI risk checklist or worksheet. Please give the 3-bullet async gap read and point me to the fastest next step."
+          };
+        }
+
+        if (
           normalized.startsWith("ai-procurement-hub") ||
           normalized.startsWith("ai-security-questionnaire") ||
           normalized.startsWith("ai-vendor-disclosure-packet") ||

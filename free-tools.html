@@ -82,6 +82,8 @@
           <div class="hero-actions">
             <a class="button" href="generator.html?source=free-tools-generator">Open generator</a>
             <a class="button secondary" href="free-teardown.html?source=free-tools-hero">Request free teardown</a>
+            <a class="button secondary" href="blog-ai-vendor-risk-assessment.html?source=free-tools-ai-risk-assessment">Open AI risk checklist</a>
+            <a class="button secondary" href="ai-vendor-risk-assessment-worksheet.html?source=free-tools-ai-risk-worksheet">Open AI risk worksheet</a>
             <a class="button secondary" href="ai-procurement-hub.html?source=free-tools-hero-ai-procurement">Open AI review pack</a>
             <a class="button secondary" href="kit-preview.html">Open kit preview</a>
             <a class="button secondary" href="#route-finder">Try route finder</a>
@@ -105,6 +107,7 @@
                 <button class="button secondary" type="button" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">Founder, one change</button>
                 <button class="button secondary" type="button" data-route-role="founder" data-route-need="written-answer" data-route-frequency="repeat">Founder, repeated changes</button>
                 <button class="button secondary" type="button" data-route-role="consultant" data-route-need="package-preview" data-route-frequency="repeat">Consultant, client work</button>
+                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="once">AI vendor risk check</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="once">AI procurement, buyer review</button>
               </div>
               <div class="field-grid">
@@ -152,12 +155,6 @@
           </div>
           <div class="grid-3">
             <article class="post-card">
-              <span class="tag">Hub</span>
-              <h3>AI procurement review pack</h3>
-              <p>Route procurement, security, or counsel pressure toward the questionnaire, packet, sample, stack guide, or teardown path.</p>
-              <a class="button secondary" href="ai-procurement-hub.html?source=free-tools-ai-procurement-card">Open review pack</a>
-            </article>
-            <article class="post-card">
               <span class="tag">AI risk</span>
               <h3>AI vendor risk assessment checklist</h3>
               <p>Use a short checklist and downloadable worksheet when the thread is stuck on named vendors, downstream model providers, retention stance, customer scope, and proof.</p>
@@ -165,6 +162,12 @@
                 <a class="button secondary" href="blog-ai-vendor-risk-assessment.html?source=free-tools-ai-risk-assessment">Open risk checklist</a>
                 <a class="button secondary" href="ai-vendor-risk-assessment-worksheet.html?source=free-tools-ai-risk-worksheet">Open worksheet</a>
               </div>
+            </article>
+            <article class="post-card">
+              <span class="tag">Hub</span>
+              <h3>AI procurement review pack</h3>
+              <p>Route procurement, security, or counsel pressure toward the questionnaire, packet, sample, stack guide, or teardown path.</p>
+              <a class="button secondary" href="ai-procurement-hub.html?source=free-tools-ai-procurement-card">Open review pack</a>
             </article>
             <article class="post-card">
               <span class="tag">Draft</span>
@@ -388,6 +391,20 @@
               primaryLabel: "See sample packet",
               secondaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
               secondaryLabel: "Open review pack",
+            };
+          } else if (need === "written-answer" && frequency === "once") {
+            recommendation = {
+              title: "Open the AI risk checklist.",
+              summary: "You need to assess the named vendor or chain first, so start with the checklist before you expand into a packet or questionnaire.",
+              bullets: [
+                "Best for the first pass on a named vendor",
+                "Keeps the review focused on facts, scope, and proof",
+                "Works well before a one-off buyer question turns into a bigger thread"
+              ],
+              primaryHref: "blog-ai-vendor-risk-assessment.html?source=free-tools-route-finder",
+              primaryLabel: "Open risk checklist",
+              secondaryHref: "ai-vendor-risk-assessment-worksheet.html?source=free-tools-route-finder",
+              secondaryLabel: "Open worksheet",
             };
           } else if (need === "files-now") {
             recommendation = frequency === "repeat"
