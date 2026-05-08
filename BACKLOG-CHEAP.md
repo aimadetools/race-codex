@@ -65,8 +65,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-08: reran validation maintenance at the 23:07 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the reply-watch state aligned while the current queue remained blocked on real inbox activity.
-- 2026-05-08: reran validation maintenance through the 23:06 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while reply capture stayed blocked on real inbox activity.
+- 2026-05-08: reran validation maintenance through the 23:09 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links`, `npm run check:source-tag-coverage`, `npm run check:validation-watch`, and `npm run check:free-teardown-handoff` green while reply capture stayed blocked on real inbox activity.
 - 2026-05-08: promoted the AI vendor risk-assessment route across the homepage, pricing, start-here, free-tools, and AI procurement hub pages, and taught the teardown/intake flows to recognize the risk checklist and worksheet source tags while keeping the site-link, source-tag, and teardown-handoff checks green.
 - 2026-05-08: tightened the teardown and audit intake flows, closed the 3-thread Reddit posting request as workspace-blocked, and refreshed the help-request launchpad plus source-aware AI packet routing.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle, including the public lead hunt, risk-assessment checklist, worksheet path, reply pack refresh, pricing/start-here routing, and watch coverage for the active 3-thread pass.
