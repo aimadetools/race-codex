@@ -109,6 +109,16 @@
             <p>Use this page to package vendor facts, notice timing, and proof cleanly before review. Your agreements and counsel still decide the final disclosure and notice obligations.</p>
           </div>
 
+          <section class="context-band" id="source-context" hidden aria-live="polite">
+            <div>
+              <span class="eyebrow" id="source-context-eyebrow">Public thread path</span>
+              <h2 id="source-context-title">Use the packet to collapse the review thread.</h2>
+              <p id="source-context-copy">If you arrived from a thread or internal review, keep the next step narrow: answer block first, sample packet second, teardown only if the page is already live.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+            <div class="context-actions" id="source-context-actions"></div>
+          </section>
+
           <section>
             <h2>When this packet matters</h2>
             <div class="grid-3">
@@ -303,5 +313,97 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+    <script>
+      const source = new URLSearchParams(window.location.search).get("source");
+      const sourceContext = document.querySelector("#source-context");
+      const sourceContextEyebrow = document.querySelector("#source-context-eyebrow");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+      const sourceContextActions = document.querySelector("#source-context-actions");
+
+      const sourceConfigs = {
+        "community-ai-procurement-guide": {
+          eyebrow: "Community thread",
+          title: "You came from a procurement thread. Keep the packet tight.",
+          copy: "Use the answer template if the reviewer needs wording first, then move into the packet or sample only if the thread still needs proof.",
+          points: [
+            "Name the vendors, the exact change, and the affected customer segment before adding more detail.",
+            "Keep the notice timing and proof trail in one packet so the thread can move once.",
+            "Escalate to teardown only if the live page itself is the blocker."
+          ],
+          actions: [
+            { href: "blog-ai-security-questionnaire-answer-template.html?source=community-ai-procurement-guide", label: "Open answer template", tone: "button" },
+            { href: "sample-ai-vendor-disclosure-packet.html?source=community-ai-procurement-sample", label: "See sample packet", tone: "button secondary" },
+            { href: "free-teardown.html?source=community-ai-procurement-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        },
+        "ai-procurement-hub-hero": {
+          eyebrow: "AI procurement hub",
+          title: "You came from the hub. Move from checklist into packet.",
+          copy: "If the hub surfaced this page, use the packet guide to keep the vendor facts, notice timeline, and proof trail in one place.",
+          points: [
+            "Turn the checklist into one review-ready packet instead of another loose note.",
+            "Use the sample packet if you want to see the structure filled in first.",
+            "Drop into teardown only if you are already staring at a live page."
+          ],
+          actions: [
+            { href: "blog-ai-security-questionnaire-answer-template.html?source=ai-procurement-hub-answer-template", label: "Open answer template", tone: "button" },
+            { href: "sample-ai-vendor-disclosure-packet.html?source=ai-procurement-hub-sample", label: "See sample packet", tone: "button secondary" },
+            { href: "free-teardown.html?source=ai-procurement-hub-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        },
+        "ai-procurement-hub-table": {
+          eyebrow: "AI procurement hub",
+          title: "The hub points here because the packet is the shortest next step.",
+          copy: "Use the packet to centralize vendor facts and reviewer questions before the thread gets spread across five docs.",
+          points: [
+            "Keep the AI stack and the notice decision in one artifact.",
+            "Use the sample packet if the blank template still feels abstract.",
+            "Escalate to teardown only when the current page needs a live read."
+          ],
+          actions: [
+            { href: "sample-ai-vendor-disclosure-packet.html?source=ai-procurement-hub-sample", label: "See sample packet", tone: "button" },
+            { href: "blog-ai-security-questionnaire-answer-template.html?source=ai-procurement-hub-answer-template", label: "Open answer template", tone: "button secondary" },
+            { href: "free-teardown.html?source=ai-procurement-hub-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        },
+        "free-tools-ai-packet": {
+          eyebrow: "Free tools",
+          title: "You came from the free hub. Keep the packet path moving.",
+          copy: "Use the packet guide when you already know the vendor story and just need the review shape, then stop if a sample or teardown is the faster next step.",
+          points: [
+            "The packet should answer who changed, who is affected, and what proof exists.",
+            "If the question is only wording, pivot to the answer template first.",
+            "If the live page is the issue, use teardown instead of over-documenting."
+          ],
+          actions: [
+            { href: "blog-ai-security-questionnaire-answer-template.html?source=free-tools-ai-questionnaire-template", label: "Open answer template", tone: "button" },
+            { href: "sample-ai-vendor-disclosure-packet.html?source=free-tools-ai-packet-sample", label: "See sample packet", tone: "button secondary" },
+            { href: "free-teardown.html?source=free-tools-ai-packet-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        }
+      };
+
+      const config = sourceConfigs[source];
+      if (config) {
+        sourceContextEyebrow.textContent = config.eyebrow;
+        sourceContextTitle.textContent = config.title;
+        sourceContextCopy.textContent = config.copy;
+        sourceContextPoints.replaceChildren(...config.points.map((point) => {
+          const item = document.createElement("li");
+          item.textContent = point;
+          return item;
+        }));
+        sourceContextActions.replaceChildren(...config.actions.map((action) => {
+          const link = document.createElement("a");
+          link.href = action.href;
+          link.className = action.tone;
+          link.textContent = action.label;
+          return link;
+        }));
+        sourceContext.hidden = false;
+      }
+    </script>
   </body>
 </html>

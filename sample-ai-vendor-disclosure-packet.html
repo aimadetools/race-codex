@@ -99,6 +99,16 @@
             <p>Use this page to see how the facts can be packaged. The example company, dates, and workflow are fictional and should be adapted to your own agreements and review process.</p>
           </div>
 
+          <section class="context-band" id="source-context" hidden aria-live="polite">
+            <div>
+              <span class="eyebrow" id="source-context-eyebrow">Public thread path</span>
+              <h2 id="source-context-title">Use the sample to make the packet concrete.</h2>
+              <p id="source-context-copy">If you arrived from the procurement flow or the free hub, keep the next step narrow: see the packet shape, then move to the blank template or teardown if needed.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+            <div class="context-actions" id="source-context-actions"></div>
+          </section>
+
           <section>
             <div class="grid-2">
               <article class="card">
@@ -375,5 +385,85 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+    <script>
+      const source = new URLSearchParams(window.location.search).get("source");
+      const sourceContext = document.querySelector("#source-context");
+      const sourceContextEyebrow = document.querySelector("#source-context-eyebrow");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+      const sourceContextActions = document.querySelector("#source-context-actions");
+
+      const sourceConfigs = {
+        "community-ai-procurement-sample": {
+          eyebrow: "Community thread",
+          title: "You came from a sample-packet thread. Keep the next step concrete.",
+          copy: "Use the filled example to show the shape, then drop into the blank template or teardown only if the reviewer still needs more proof.",
+          points: [
+            "Use the example to explain the packet structure, not to restate the whole AI story.",
+            "Move to the blank template when the team is ready to adapt the packet internally.",
+            "Use teardown only if the live page needs a specific gap read."
+          ],
+          actions: [
+            { href: "blog-ai-vendor-disclosure-packet.html?source=community-ai-procurement-guide", label: "Open packet guide", tone: "button" },
+            { href: "noticekit-ai-vendor-disclosure-packet-template.md", label: "Download blank template", tone: "button secondary", download: true },
+            { href: "free-teardown.html?source=community-ai-procurement-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        },
+        "ai-procurement-hub-sample": {
+          eyebrow: "AI procurement hub",
+          title: "The hub pointed you here because the sample packet is the quickest proof.",
+          copy: "If the blank template still feels abstract, use the sample to see the packet shape before choosing the guide or teardown path.",
+          points: [
+            "The sample shows the review-ready structure in one pass.",
+            "The blank template is the next step if you need to adapt it internally.",
+            "Teardown is the fallback when the live page is the real blocker."
+          ],
+          actions: [
+            { href: "blog-ai-vendor-disclosure-packet.html?source=ai-procurement-hub-guide", label: "Open packet guide", tone: "button" },
+            { href: "noticekit-ai-vendor-disclosure-packet-template.md", label: "Download blank template", tone: "button secondary", download: true },
+            { href: "free-teardown.html?source=ai-procurement-hub-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        },
+        "free-tools-ai-packet-sample": {
+          eyebrow: "Free tools",
+          title: "You came from free tools. Use the sample to make the packet tangible.",
+          copy: "The sample packet is the fastest way to see how the facts, notice timing, and proof trail fit together before you edit your own version.",
+          points: [
+            "See the structure first, then adapt the blank template to your own stack.",
+            "Use the packet guide if you need the written explainer behind the example.",
+            "Use teardown if you want a short read on one live URL instead."
+          ],
+          actions: [
+            { href: "blog-ai-vendor-disclosure-packet.html?source=free-tools-ai-packet", label: "Open packet guide", tone: "button" },
+            { href: "noticekit-ai-vendor-disclosure-packet-template.md", label: "Download blank template", tone: "button secondary", download: true },
+            { href: "free-teardown.html?source=free-tools-ai-packet-teardown", label: "Request free teardown", tone: "button secondary" }
+          ]
+        }
+      };
+
+      const config = sourceConfigs[source];
+      if (config) {
+        sourceContextEyebrow.textContent = config.eyebrow;
+        sourceContextTitle.textContent = config.title;
+        sourceContextCopy.textContent = config.copy;
+        sourceContextPoints.replaceChildren(...config.points.map((point) => {
+          const item = document.createElement("li");
+          item.textContent = point;
+          return item;
+        }));
+        sourceContextActions.replaceChildren(...config.actions.map((action) => {
+          const link = document.createElement("a");
+          link.href = action.href;
+          link.className = action.tone;
+          link.textContent = action.label;
+          if (action.download) {
+            link.download = "";
+          }
+          return link;
+        }));
+        sourceContext.hidden = false;
+      }
+    </script>
   </body>
 </html>
