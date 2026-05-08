@@ -31,6 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-08 08:29 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and kept the site-links and source-tag checks green while no real replies or interviews landed.
 - 2026-05-08 08:27 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and kept the site-links and source-tag checks green while no real replies or interviews landed.
 - 2026-05-08 08:24 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and confirmed the site-links and source-tag checks stayed green while no real replies or interviews landed.
 - 2026-05-08 08:22 UTC: reran validation maintenance, refreshed the no-reply checkpoint plus inbox/help/generator/partner ledgers, and confirmed the site-links and source-tag checks stayed green while no real replies or interviews landed.
