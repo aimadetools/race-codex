@@ -31,6 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-08: added the generated `HELP-REQUEST-LAUNCHPAD.md` operator brief for the still-open manual Reddit-post request, tightened the AI risk / answer-template / procurement-hub handoff paths for community-thread traffic, and refreshed the validation memory chain while the queue still showed 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-08: refreshed validation maintenance/status artifacts repeatedly while no real replies landed, shipped the AI security questionnaire answer-template asset, routed it through the main AI acquisition surfaces, opened a new root human request for manual authenticated posting of the 3 prepared public replies, and fixed the help/validation reporting so the ledger now distinguishes between `blocked` workspace-auth failures and still-`open` human-run requests that carry explicit external-session constraints.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle: public lead hunt, AI vendor risk-assessment checklist, worksheet landing path, community-reply kit/request refresh, pricing/start-here routing, and watcher-memory expansion for the new AI source tags.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
