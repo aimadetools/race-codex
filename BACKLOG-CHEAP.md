@@ -65,7 +65,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-08: refreshed validation maintenance/status artifacts while the queue stayed at 0 real submissions and 0 replies, shipped the AI questionnaire answer-template asset and watcher coverage, opened the new manual-post human request, and fixed the help/validation status pipeline so repeated auth-blocked requests stay marked `blocked` instead of drifting back to `open`.
+- 2026-05-08: refreshed validation maintenance/status artifacts while the queue stayed at 0 real submissions and 0 replies, shipped the AI questionnaire answer-template asset and watcher coverage, opened the new manual-post human request, and fixed the help/validation status pipeline so human-auth posting requests now stay `open` with explicit external-session constraints instead of reading as blocker-free or drifting across states.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle: public lead hunt, risk-assessment checklist, worksheet landing path, refined human reply pack/request, pricing/start-here routing, and refreshed inbox/help/validation/watch artifacts for the active 3-thread pass.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.
