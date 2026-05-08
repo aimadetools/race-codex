@@ -31,7 +31,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-08: shipped the exact-match `blog-ai-vendor-risk-assessment.html` wedge, threaded it through the acquisition surfaces, opened the human community-reply request, and refreshed the validation/status chain so exact-buyer work is clearly waiting on the first live response.
+- 2026-05-08: shipped the exact-match `blog-ai-vendor-risk-assessment.html` wedge, threaded it through the acquisition surfaces, opened the human community-reply request, and fixed the validation/status chain so the new risk-assessment source tags roll into the main evidence snapshot before the first live response arrives.
 - 2026-05-07: completed the AI procurement lead hunt and repeated late-day maintenance refreshes while exact-buyer validation remained gated on the first real reply.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup.
 - Product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped; only evidence-capture and channel-decision tasks remain active above.

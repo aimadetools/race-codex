@@ -207,9 +207,14 @@ function classifyTeardownSourceFamily(sourceTag) {
     normalized.startsWith("founder-follow-up") ||
     normalized.startsWith("advisor-follow-up") ||
     normalized.startsWith("partner-outreach-") ||
-    normalized.startsWith("community-ai-procurement-")
+    normalized.startsWith("community-ai-procurement-") ||
+    normalized.startsWith("community-ai-risk-assessment")
   ) {
     return "outreach";
+  }
+
+  if (normalized.startsWith("ai-vendor-risk-assessment-")) {
+    return "blog";
   }
 
   if (

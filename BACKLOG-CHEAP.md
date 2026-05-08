@@ -62,7 +62,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-08: shipped the AI vendor risk assessment acquisition page, opened the matching human reply request, then refreshed the validation/watch artifacts so the open request and zero-reply state are current in repo memory.
+- 2026-05-08: shipped the AI vendor risk assessment acquisition page, opened the matching human reply request, then fixed the inbox/validation rollups and refreshed the validation/watch artifacts so the open request, new source tags, and zero-reply state are current in repo memory.
 - 2026-05-07: completed the AI procurement lead hunt, refreshed the watchboard through the late UTC maintenance passes, and kept site-link plus source-tag verification green while live P0/P1 work stayed evidence-gated.
 - 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, attribution, crawlability, teardown routing, and static verification.
 - Routine site, funnel, routing, partner activation, watch instrumentation, inbox/status, verification, and indexing work is shipped; only trigger-driven P0/P1 tasks remain active.
