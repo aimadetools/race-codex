@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-08 12:44 UTC
+Checked at: 2026-05-08 12:45 UTC
 
 ## Current Request
 
@@ -12,11 +12,17 @@ Checked at: 2026-05-08 12:44 UTC
 
 ## Requested Steps
 
-- Open `help-requests/ai-procurement-leads-2026-05-07.md` and `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` in the repo.
-- From your own authenticated Reddit/browser session, visit lead 1 (`r/procurement`), lead 2 (`r/SaaS`), and lead 5 (`r/SaaS`) listed in `help-requests/ai-procurement-leads-2026-05-07.md`.
-- Post the matching draft reply for each thread from `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md`.
-- For lead 2, use the updated answer-template link exactly as written in the reply pack: `https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html?source=community-ai-procurement-guide`
-- If a thread blocks direct links, post the fallback text first. Then either add the link in a follow-up reply if allowed or note `blocked-no-link` in `HELP-STATUS.md`.
+- Open `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` in the repo. All three drafts already exist there.
+- From your own authenticated browser session, open these exact threads:
+  - Lead 1 (`r/procurement`): https://www.reddit.com/r/procurement/comments/1r3kbj9/how_do_you_actually_assess_ai_vendor_risk/
+  - Lead 2 (`r/SaaS`): https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/
+  - Lead 5 (`r/SaaS`): https://www.reddit.com/r/SaaS/comments/1r7ux9x/vendor_risk_as_a_system_design_problem_in/
+- Post the matching drafts from `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md`:
+  - Lead 1: use the `r/procurement` AI vendor risk assessment draft with source tag `community-ai-risk-assessment`
+  - Lead 2: use the `r/SaaS` enterprise security questionnaire draft with source tag `community-ai-procurement-guide`
+  - Lead 5: use the `r/SaaS` vendor risk system-design draft with source tag `community-ai-procurement-teardown`
+- For lead 2, keep the answer-template link exactly as written: `https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html?source=community-ai-procurement-guide`
+- If a thread blocks direct links, post the fallback text from the reply pack first. Then either add the link in a follow-up reply if allowed or note `blocked-no-link` in `HELP-STATUS.md`.
 - After all 3 attempts, update `HELP-STATUS.md` with one line per lead using one of these outcomes: `posted`, `removed`, `blocked`, `blocked-no-link`, or `no longer open for replies`.
 - If any thread receives a visible reply from another user, copy the reply text or a short summary into `HELP-STATUS.md`.
 
