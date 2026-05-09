@@ -24,12 +24,45 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "NoticeKit AI Security Questionnaire Answer Builder",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web browser",
-        "url": "https://noticekit.tech/ai-security-questionnaire-answer-builder.html",
-        "description": "Browser-only builder for AI security questionnaire answers with named vendors, customer scope, retention stance, and proof links."
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "NoticeKit AI Security Questionnaire Answer Builder",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://noticekit.tech/ai-security-questionnaire-answer-builder.html",
+            "description": "Browser-only builder for AI security questionnaire answers with named vendors, customer scope, retention stance, and proof links."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use the AI security questionnaire answer builder?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use the builder when a buyer or reviewer needs one written AI questionnaire answer now and you want named vendors, data scope, retention stance, customer impact, and proof links in one local draft."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is the builder different from the answer template or packet guide?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The builder creates a filled answer block and proof checklist locally in the browser. The answer template is better when you want a blank copy-paste format. The packet guide is better when procurement, security, and counsel all need the same fuller review artifact."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the builder send my inputs to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The builder runs in the browser and does not store the inputs on a server."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -190,6 +223,62 @@
               <span class="tag">Teardown</span>
               <h3>Switch paths when</h3>
               <p>The blocker is one live page, one real vendor change, and one customer segment that needs a blunt next-step read.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Choose builder, template, or packet</h2>
+            <p>Pick the shortest route for the current review thread instead of overbuilding the response.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>If you need...</th>
+                  <th>Start with...</th>
+                  <th>Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>One filled answer block right now</td>
+                  <td><a href="ai-security-questionnaire-answer-builder.html">This builder</a></td>
+                  <td>It creates the answer, checklist, and escalation handoff in one browser-only pass.</td>
+                </tr>
+                <tr>
+                  <td>A blank copy-paste structure</td>
+                  <td><a href="blog-ai-security-questionnaire-answer-template.html?source=ai-security-questionnaire-builder">AI answer template</a></td>
+                  <td>It is faster when you already know the wording and just need a clean format.</td>
+                </tr>
+                <tr>
+                  <td>A broader procurement or counsel artifact</td>
+                  <td><a href="blog-ai-vendor-disclosure-packet.html?source=ai-security-questionnaire-builder">AI packet guide</a></td>
+                  <td>It is better when the thread has moved beyond one answer into a multi-stakeholder review.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>FAQ</h2>
+            <p>Use the builder when the deal is blocked on the answer wording, not on a missing legal conclusion.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card">
+              <h3>When should I start here?</h3>
+              <p>Start here when procurement, security, or a buyer wants one concrete AI answer now and the team does not want to assemble the first draft by hand.</p>
+            </article>
+            <article class="card">
+              <h3>When is the template better?</h3>
+              <p>Use the template if your team already has the facts and only needs a short blank response block to edit inside another doc or thread.</p>
+            </article>
+            <article class="card">
+              <h3>When should I escalate?</h3>
+              <p>Escalate into the packet guide, sample packet, or teardown path when the review expands into proof, customer notice, contract review, or one live page that needs a blunt read.</p>
             </article>
           </div>
         </section>
