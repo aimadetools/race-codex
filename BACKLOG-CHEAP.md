@@ -71,7 +71,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-09: reran validation maintenance through the 08:16 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links` plus `npm run check:source-tag-coverage` green while exact-buyer validation remained blocked on the first real reply.
+- 2026-05-09: reran validation maintenance through the 08:18 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links` plus `npm run check:source-tag-coverage` green while exact-buyer validation remained blocked on the first real reply.
 - 2026-05-09: added canonical and `og:url` metadata to the core routes, promoted the review brief builder on pricing and start-here, and refreshed source-tag coverage for the new builder links.
 - 2026-05-09: strengthened crawlability for the AI questionnaire wedge, including builder/hub FAQ schema, canonical metadata, ItemList coverage, and builder-vs-template comparison copy.
 - 2026-05-09: shipped the filled AI answer example, wired it into the builder/template/hub entry points, and refreshed the indexing request to target the builder plus the example route.
