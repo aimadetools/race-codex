@@ -71,6 +71,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-09: reran the validation-maintenance loop through the 08:02 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the no-reply monitoring state aligned across the working status files.
 - 2026-05-09: added canonical and `og:url` metadata to the core routes, promoted the review brief builder on pricing and start-here, and refreshed watched source-tag coverage for the new builder links while the site-link and source-tag checks stayed green.
 - 2026-05-09: strengthened crawlability for the AI questionnaire acquisition wedge by adding builder/hub FAQ schema, blog/free-tools canonical and `og:url` metadata, expanded AI route ItemList coverage on the blog and free-tools hubs, and builder comparison copy clarifying when to use the builder, static template, or broader packet path while link and source-tag verification stayed green.
 - 2026-05-09: shipped the filled AI security questionnaire answer example page, wired it into the builder/template/hub and the main AI entry points, extended source-tag watcher and backlog coverage for example-led inbound, and refreshed the human indexing request so Search Console/Bing submission now targets the builder plus the new example route.
