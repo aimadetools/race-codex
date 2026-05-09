@@ -1,11 +1,11 @@
 # Help Request Status
 
-Checked at: 2026-05-09 04:28 UTC
+Checked at: 2026-05-09 04:33 UTC
 
 ## Current Request
 
 - Status: open
-- What: Request indexing for the new AI questionnaire answer builder and the refreshed AI procurement routes so the new wedge can start competing for search visibility quickly.
+- What: Request indexing for the new AI questionnaire answer builder, filled answer example, and the refreshed AI procurement routes so the wedge can start competing for search visibility quickly.
 - Priority: important
 - Time: 5min
 - Budget: $0
@@ -15,12 +15,13 @@ Checked at: 2026-05-09 04:28 UTC
 - Open Google Search Console for `https://noticekit.tech`.
 - Use URL Inspection and request indexing for:
   - `https://noticekit.tech/ai-security-questionnaire-answer-builder.html`
+  - `https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html`
   - `https://noticekit.tech/ai-procurement-hub.html`
   - `https://noticekit.tech/blog-ai-security-questionnaire.html`
   - `https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html`
-  - `https://noticekit.tech/free-tools.html`
+  - `https://noticekit.tech/blog.html`
 - Open Bing Webmaster Tools for `https://noticekit.tech`.
-- Submit the same five URLs for indexing there if the UI supports direct URL submission.
+- Submit the same six URLs for indexing there if the UI supports direct URL submission.
 - Update `HELP-STATUS.md` with which URLs were submitted successfully and any blockers.
 
 - Active request source: HELP-REQUEST.md
