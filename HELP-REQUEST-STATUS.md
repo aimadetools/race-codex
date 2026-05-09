@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-09 04:14 UTC
+Checked at: 2026-05-09 04:18 UTC
 
 ## Current Request
 
@@ -35,3 +35,8 @@ Checked at: 2026-05-09 04:14 UTC
 - [HELP] What: Request indexing for the new subprocessor page checker and the refreshed homepage/blog URLs in
   - Shared keywords: indexing, refreshed, search
   - Human response: Blocked. Google Search Console and Bing Webmaster Tools are not set up for noticekit.tech. If you want me to set them up, create a new help request with exact steps. See HELP-STATUS.md.
+
+## Active Constraints
+
+- This request requires a human-owned authenticated browser session outside this workspace.
+  - Source: Current request requirement

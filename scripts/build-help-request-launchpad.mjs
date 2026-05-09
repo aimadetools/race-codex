@@ -76,6 +76,40 @@ function parseRequestedUrls(text) {
   });
 }
 
+function requestNeedsExternalSession(text) {
+  const normalized = String(text || "").toLowerCase();
+  if (!normalized) {
+    return false;
+  }
+
+  return [
+    "your own authenticated",
+    "your own browser session",
+    "from your own browser",
+    "outside this workspace",
+    "outside the workspace",
+    "manual browser session",
+    "google search console",
+    "bing webmaster tools"
+  ].some((phrase) => normalized.includes(phrase));
+}
+
+function extractServiceTargets(text) {
+  const lines = String(text || "").split(/\r?\n/);
+  const services = [];
+
+  for (const line of lines) {
+    if (/google search console/i.test(line)) {
+      services.push("Google Search Console");
+    }
+    if (/bing webmaster tools/i.test(line)) {
+      services.push("Bing Webmaster Tools");
+    }
+  }
+
+  return [...new Set(services)];
+}
+
 function parseLeadSourceTags(text) {
   const mapping = new Map();
   for (const match of text.matchAll(/^\s*-\s+(Lead \d+):.*source tag `([^`]+)`/gm)) {
@@ -220,6 +254,8 @@ const sourceTags = parseLeadSourceTags(helpRequestText);
 const leadNotes = parseLeadNotes(helpRequestText);
 const replyPack = parseReplyPack(replyPackText);
 const relatedAuthBlocker = compactResolution(extractLatestRelatedAuthBlocker(helpStatusText));
+const requestRequiresExternalSession = requestNeedsExternalSession(helpRequestText);
+const serviceTargets = extractServiceTargets(helpRequestText);
 const threadProbes = new Map(
   await Promise.all(
     threadTargets.map(async (target) => [target.url, await probeThread(target.url)])
@@ -255,14 +291,42 @@ if (threadTargets.length === 0) {
     output.push("- No thread-style launch targets were found in `HELP-REQUEST.md`.");
     output.push("- This request is URL-based, so use the checklist below and record one status line per URL in `HELP-STATUS.md`.");
     output.push("");
+    if (requestRequiresExternalSession) {
+      output.push("## Active Constraint", "");
+      output.push("- This submission flow requires a human-owned authenticated browser session; the workspace cannot submit or verify Search Console / Bing actions directly.");
+      output.push("");
+    }
+    output.push("## Outcome Codes", "");
+    output.push("- `submitted`: the console accepted a new indexing request for that URL.");
+    output.push("- `already indexed`: the console already showed the URL as indexed or already queued.");
+    output.push("- `blocked`: the console could not submit the URL; add the reason.");
+    output.push("- `not supported`: the console did not offer direct submission for that URL or service.");
+    output.push("");
     output.push("## URL Checklist", "");
-    output.push("- Open the requested service in your own authenticated browser session.");
-    output.push("- Submit each URL exactly as listed below.");
+    output.push("- Open each requested service in your own authenticated browser session.");
+    if (serviceTargets.length > 0) {
+      for (const service of serviceTargets) {
+        output.push(`- In ${service}, submit each URL exactly as listed below.`);
+      }
+    } else {
+      output.push("- Submit each URL exactly as listed below.");
+    }
     output.push("- Update `HELP-STATUS.md` with one line per URL using `submitted`, `already indexed`, `blocked`, or `not supported` plus any useful note.");
     output.push("");
+    if (serviceTargets.length > 0) {
+      output.push("## Service Checklist", "");
+      for (const service of serviceTargets) {
+        output.push(`### ${service}`);
+        output.push("");
+        for (const url of requestedUrls) {
+          output.push(`- ${url}`);
+        }
+        output.push("");
+      }
+    }
     output.push("## Ready To Paste Into `HELP-STATUS.md`", "");
     for (const url of requestedUrls) {
-      output.push(`- ${checkedAt.split(" ")[0]} ${url} -> <submitted|already indexed|blocked|not supported>; add short note here`);
+      output.push(`- ${checkedAt.split(" ")[0]} ${url} -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]`);
     }
     output.push("");
     output.push("## Requested URLs", "");

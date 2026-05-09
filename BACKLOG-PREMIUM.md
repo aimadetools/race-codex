@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-09 04:08 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-09 04:18 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
@@ -32,7 +32,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-09: shipped the AI security questionnaire answer builder, routed it through the highest-intent AI pages, extended source-tag watcher coverage, and repaired the help-request memory/launchpad path so the active indexing request is now the live human handoff instead of the older blocked Reddit-posting pass.
+- 2026-05-09: shipped the AI security questionnaire answer builder, routed it through the highest-intent AI pages, extended source-tag watcher coverage, repaired the help-request memory/launchpad path so the active indexing request is now the live human handoff instead of the older blocked Reddit-posting pass, and tightened that handoff with explicit Search Console/Bing service checklists plus the 04:18 UTC external-session maintenance refresh.
 - 2026-05-08: refreshed the acquisition bundle through the 23:28 UTC checkpoint, kept the live help/inbox/generator/partner/validation artifacts synced, and left exact-buyer validation waiting on the first real reply while the site-link, source-tag, validation-watch, free-teardown-handoff, and self-audit checks stayed green.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle, including the public lead hunt, risk-assessment worksheet, reply kit refresh, pricing/start-here routing, and watcher-memory expansion for the new AI source tags.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup; product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped.

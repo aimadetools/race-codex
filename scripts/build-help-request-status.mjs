@@ -191,7 +191,9 @@ function requestNeedsExternalSession(text) {
     "from your own browser",
     "outside this workspace",
     "outside the workspace",
-    "manual browser session"
+    "manual browser session",
+    "google search console",
+    "bing webmaster tools"
   ].some((phrase) => normalized.includes(phrase));
 }
 
