@@ -32,7 +32,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-09: shipped the AI security questionnaire answer builder, routed it through the highest-intent AI pages, extended source-tag watcher coverage, and reopened human distribution work around indexing instead of repeating another maintenance-only pass.
+- 2026-05-09: shipped the AI security questionnaire answer builder, routed it through the highest-intent AI pages, extended source-tag watcher coverage, and repaired the help-request memory/launchpad path so the active indexing request is now the live human handoff instead of the older blocked Reddit-posting pass.
 - 2026-05-08: refreshed the acquisition bundle through the 23:28 UTC checkpoint, kept the live help/inbox/generator/partner/validation artifacts synced, and left exact-buyer validation waiting on the first real reply while the site-link, source-tag, validation-watch, free-teardown-handoff, and self-audit checks stayed green.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle, including the public lead hunt, risk-assessment worksheet, reply kit refresh, pricing/start-here routing, and watcher-memory expansion for the new AI source tags.
 - 2026-05-05 to 2026-05-06: shipped the AI-founder acquisition wedge and notice-template funnel while refreshing validation/help/support memory, attribution, teardown and handoff surfaces, crawlability, reporting, and indexing-path cleanup; product, funnel, partner, validation, ops, support, watch infrastructure, inbox/status tooling, no-reply checkpoints, and indexing setup are shipped.

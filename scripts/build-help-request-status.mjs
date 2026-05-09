@@ -270,6 +270,45 @@ function extractOpenBlockers(relatedEntries) {
   });
 }
 
+function isSearchConsoleSetupResolution(entryBody) {
+  const resolution = compactResolution(extractResolution(entryBody));
+  return /google search console/i.test(resolution)
+    && /bing webmaster tools/i.test(resolution)
+    && /(set up|verified|submitted)/i.test(resolution);
+}
+
+function hasResolvedSearchConsoleSetup(completedEntries, blockedDate) {
+  return completedEntries.some((entry) => {
+    if (!isSearchConsoleSetupResolution(entry.body)) {
+      return false;
+    }
+
+    const resolvedDate = parseIsoDate(extractClosedDate(entry.body));
+    if (!(resolvedDate instanceof Date) || Number.isNaN(resolvedDate.getTime())) {
+      return false;
+    }
+
+    if (!(blockedDate instanceof Date) || Number.isNaN(blockedDate.getTime())) {
+      return true;
+    }
+
+    return resolvedDate.getTime() >= blockedDate.getTime();
+  });
+}
+
+function filterResolvedBlockers(blockers, completedEntries) {
+  return blockers.filter((blocker) => {
+    const blockedDate = parseIsoDate(extractClosedDate(blocker.body));
+    const resolution = blocker.resolution;
+
+    if (/not set up for noticekit\.tech/i.test(resolution)) {
+      return !hasResolvedSearchConsoleSetup(completedEntries, blockedDate);
+    }
+
+    return true;
+  });
+}
+
 function selectCarryForwardBlocker(relatedEntries) {
   for (const entry of relatedEntries) {
     const resolution = compactResolution(extractResolution(entry.body));
@@ -447,7 +486,9 @@ if (normalizedRequestWhat) {
 const relatedEntries = requestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];
 const externalSessionConstraints = requestWhat ? extractExternalSessionConstraints(helpRequestText, relatedEntries) : [];
 const operatorBlockers = requestWhat && !requestRequiresExternalSession ? extractOperatorBlockers(helpStatusText) : [];
-const relatedBlockers = requestWhat && !requestRequiresExternalSession ? extractOpenBlockers(relatedEntries) : [];
+const relatedBlockers = requestWhat && !requestRequiresExternalSession
+  ? filterResolvedBlockers(extractOpenBlockers(relatedEntries), completedEntries)
+  : [];
 const threadTargets = [...new Set(extractThreadTargets(helpRequestText))];
 const threadTargetLabels = extractThreadLabels(helpRequestText);
 const threadProbes = await Promise.all(threadTargets.map(probeThread));

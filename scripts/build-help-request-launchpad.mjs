@@ -56,6 +56,26 @@ function parseThreadTargets(text) {
   }));
 }
 
+function parseAllUrls(text) {
+  return [...String(text || "").matchAll(/https:\/\/[^\s)`]+/g)].map((match) => match[0]);
+}
+
+function parseRequestedUrls(text) {
+  const explicitBulletUrls = [...String(text || "").matchAll(/^\s*-\s+`(https:\/\/[^`]+)`\s*$/gm)].map((match) => match[1].trim());
+  if (explicitBulletUrls.length > 0) {
+    return explicitBulletUrls;
+  }
+
+  return parseAllUrls(text).filter((url) => {
+    try {
+      const parsed = new URL(url);
+      return parsed.pathname && parsed.pathname !== "/";
+    } catch {
+      return false;
+    }
+  });
+}
+
 function parseLeadSourceTags(text) {
   const mapping = new Map();
   for (const match of text.matchAll(/^\s*-\s+(Lead \d+):.*source tag `([^`]+)`/gm)) {
@@ -195,6 +215,7 @@ const requestTime = extractField(helpRequestText, "Time") || "unknown";
 const requestBudget = extractField(helpRequestText, "Budget") || "unknown";
 
 const threadTargets = parseThreadTargets(helpRequestText);
+const requestedUrls = [...new Set(parseRequestedUrls(helpRequestText))].filter((url) => !/reddit\.com\/r\//i.test(url));
 const sourceTags = parseLeadSourceTags(helpRequestText);
 const leadNotes = parseLeadNotes(helpRequestText);
 const replyPack = parseReplyPack(replyPackText);
@@ -219,14 +240,37 @@ const output = [
   ""
 ];
 
-if (relatedAuthBlocker) {
+if (relatedAuthBlocker && threadTargets.length > 0) {
   output.push("## Active Constraint", "");
   output.push(`- ${relatedAuthBlocker}`);
   output.push("");
 }
 
 if (threadTargets.length === 0) {
-  output.push("## Status", "", "- No thread-style launch targets were found in `HELP-REQUEST.md`.", "");
+  output.push("## Status", "");
+  if (requestedUrls.length === 0) {
+    output.push("- No thread-style launch targets were found in `HELP-REQUEST.md`.");
+    output.push("");
+  } else {
+    output.push("- No thread-style launch targets were found in `HELP-REQUEST.md`.");
+    output.push("- This request is URL-based, so use the checklist below and record one status line per URL in `HELP-STATUS.md`.");
+    output.push("");
+    output.push("## URL Checklist", "");
+    output.push("- Open the requested service in your own authenticated browser session.");
+    output.push("- Submit each URL exactly as listed below.");
+    output.push("- Update `HELP-STATUS.md` with one line per URL using `submitted`, `already indexed`, `blocked`, or `not supported` plus any useful note.");
+    output.push("");
+    output.push("## Ready To Paste Into `HELP-STATUS.md`", "");
+    for (const url of requestedUrls) {
+      output.push(`- ${checkedAt.split(" ")[0]} ${url} -> <submitted|already indexed|blocked|not supported>; add short note here`);
+    }
+    output.push("");
+    output.push("## Requested URLs", "");
+    for (const url of requestedUrls) {
+      output.push(`- ${url}`);
+    }
+    output.push("");
+  }
 } else {
   output.push("## Launch Checklist", "");
   output.push("- Open each target URL from your own authenticated browser session.");
