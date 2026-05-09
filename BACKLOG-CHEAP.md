@@ -71,11 +71,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-09: reran validation maintenance through the 08:18 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept `npm run check:site-links` plus `npm run check:source-tag-coverage` green while exact-buyer validation remained blocked on the first real reply.
-- 2026-05-09: added canonical and `og:url` metadata to the core routes, promoted the review brief builder on pricing and start-here, and refreshed source-tag coverage for the new builder links.
-- 2026-05-09: strengthened crawlability for the AI questionnaire wedge, including builder/hub FAQ schema, canonical metadata, ItemList coverage, and builder-vs-template comparison copy.
-- 2026-05-09: shipped the filled AI answer example, wired it into the builder/template/hub entry points, and refreshed the indexing request to target the builder plus the example route.
-- 2026-05-09: shipped the AI answer builder, wired it through the homepage and adjacent AI routes, and tightened the Search Console/Bing handoff with explicit external-session guidance.
-- 2026-05-08: kept the validation-maintenance loop current through the 23:28 UTC checkpoint and left reply capture blocked on real inbox activity.
-- 2026-05-07 to 2026-05-08: shipped the AI procurement reply-capture bundle, including the public lead hunt, risk-assessment checklist, worksheet path, reply pack refresh, pricing/start-here routing, and watch coverage for the active 3-thread pass.
-- 2026-05-05 to 2026-05-06: shipped the AI-stack acquisition wedge and AI notice-template funnel while refreshing memory, crawlability, teardown routing, and verification.
+- 2026-05-09: reran validation maintenance through the 08:19 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the no-reply branch intact while exact-buyer validation stayed blocked on the first real reply.
+- 2026-05-09: strengthened the AI questionnaire wedge with the answer builder, filled answer example, crawlability/SEO refresh, and review-brief-builder promotion.
+- 2026-05-07 to 2026-05-08: shipped the AI procurement bundle and the earlier AI-stack acquisition funnel while keeping the validation/help/support memory current.
