@@ -33,6 +33,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-09: reran validation maintenance through the 08:12 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
 - 2026-05-09: reran validation maintenance through the 08:11 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
 - 2026-05-09: strengthened the AI questionnaire wedge by shipping the answer builder, the filled answer example, and the crawlability/SEO refresh around the open Search Console/Bing indexing request.
 - 2026-05-09: promoted the answer builder across the adjacent AI procurement pages, expanded watcher/backlog coverage for the new source tags, and moved the active indexing request onto the live human handoff path.
