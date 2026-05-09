@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-09 04:33 UTC
+Checked at: 2026-05-09 04:35 UTC
 
 ## Current Request
 
@@ -24,7 +24,7 @@ Checked at: 2026-05-09 04:33 UTC
 - Submit the same six URLs for indexing there if the UI supports direct URL submission.
 - Update `HELP-STATUS.md` with which URLs were submitted successfully and any blockers.
 
-- Active request source: HELP-REQUEST.md
+- Active request source: help-requests/20260509-043512-HELP-REQUEST.md
 
 ## Resolution
 
