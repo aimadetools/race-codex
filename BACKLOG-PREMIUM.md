@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-09 04:22 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-09 08:16 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
@@ -33,7 +33,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-09: reran validation maintenance through the 08:13 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
+- 2026-05-09: reran validation maintenance through the 08:16 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
 - 2026-05-09: strengthened the AI questionnaire wedge by shipping the answer builder, the filled answer example, and the crawlability/SEO refresh around the open Search Console/Bing indexing request.
 - 2026-05-09: promoted the answer builder across the adjacent AI procurement pages, expanded watcher/backlog coverage for the new source tags, and moved the active indexing request onto the live human handoff path.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle, including the public lead hunt, risk-assessment worksheet, reply kit refresh, pricing-start-here routing, and watcher-memory expansion.
