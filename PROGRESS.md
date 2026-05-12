@@ -12,8 +12,9 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## 2026-05-12
 
-- 2026-05-12: Linked `purchase-next-steps.html` from the pricing and kit-preview buyer flow, confirmed there is still no `DEPLOY-STATUS.md`, and ran the validation maintenance pass through the 23:03 to 23:09 UTC checkpoints; the refresh touched the help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation snapshots, kept the queue at 0 real submissions, 0 replies, and 0 interviews, and left `check:source-tag-coverage` and `check:site-links` clean while reply capture stayed blocked on the first real response.
+- 2026-05-12: Linked `purchase-next-steps.html` from the pricing and kit-preview buyer flow, confirmed there is still no `DEPLOY-STATUS.md`, and ran the validation maintenance pass through the 23:03 to 23:10 UTC checkpoints; the refresh touched the help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation snapshots, kept the queue at 0 real submissions, 0 replies, and 0 interviews, and left `check:source-tag-coverage` and `check:site-links` clean while reply capture stayed blocked on the first real response.
 
 ## Next Step
 
 - Watch `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `CONTACT-INBOX-STATUS.md` for the human reply pass and the first builder-, packet-, or teardown-led AI procurement signal so exact-buyer validation can finally move from no-reply maintenance into a scored interview or qualification decision; use the expanded `run:validation-maintenance` command as the default checkpoint and `HELP-REQUEST-LAUNCHPAD.md` as the single-file human handoff while that wait state holds.
+- Keep the validation maintenance checkpoint running, but do not expand the build until the first real reply, submission, or interview lands.
