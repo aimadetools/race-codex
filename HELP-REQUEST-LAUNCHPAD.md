@@ -1,6 +1,6 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-12 23:21 UTC
+Checked at: 2026-05-12 23:22 UTC
 
 ## Current Request
 
@@ -17,14 +17,14 @@ Checked at: 2026-05-12 23:21 UTC
 
 - Open each target URL from your own authenticated browser session.
 - Check the workspace thread probe below first; `workspace-blocked` means only your browser session can confirm whether replies are still open.
-- Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-no-link` in `HELP-STATUS.md`.
-- After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-no-link`, or `no longer open for replies`.
+- Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-links` in `HELP-STATUS.md`.
+- After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-links`, or `no longer open for replies`.
 
 ## Ready To Paste Into `HELP-STATUS.md`
 
-- 2026-05-12 lead 1 (Reddit (`r/procurement`)): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
-- 2026-05-12 lead 2 (Reddit (`r/SaaS`)): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
-- 2026-05-12 lead 5 (Reddit (`r/SaaS`)): <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-12 lead 1 (Reddit (`r/procurement`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-12 lead 2 (Reddit (`r/SaaS`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-12 lead 5 (Reddit (`r/SaaS`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
 
 ## Lead 1 (Reddit (`r/procurement`))
 
