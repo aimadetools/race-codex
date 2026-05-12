@@ -8,7 +8,7 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## 2026-05-12
 
-- 2026-05-12: Ran `npm run run:validation-maintenance` through the 08:21 UTC checkpoint; the watch and self-audit QA checks stayed on the no-reply branch, `COMMUNITY-FEEDBACK.md` logged the deduplicated checkpoints, the sync kept the live help/inbox/generator/partner/validation artifacts current, and the earlier site-link check stayed clean across 57 HTML files.
+- 2026-05-12: Ran `npm run run:validation-maintenance` through the 08:24 UTC checkpoint; the watch and self-audit QA checks stayed on the no-reply branch, `COMMUNITY-FEEDBACK.md` logged the deduplicated checkpoints, the sync kept the live help/inbox/generator/partner/validation artifacts current, and the local site-link sweep stayed clean across 57 HTML files.
 
 ## Next Step
 
