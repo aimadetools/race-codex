@@ -4,7 +4,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 
 ## P0
 
-- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-09 08:16 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-12 16:07 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
@@ -34,7 +34,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-05-12: fixed the human-help launchpad and status matcher so the blocking Reddit-plus-indexing request stays attached to the live thread targets, source tags, prepared drafts, and indexing instructions instead of collapsing into an older blocked pass.
-- 2026-05-12: folded the production verification set into `run:validation-maintenance` and reran the expanded checkpoint at 16:03 UTC so reply-watch, help/inbox/generator/partner snapshots, source-tag coverage, and local site-link verification all refresh from one routine command.
+- 2026-05-12: folded the production verification set into `run:validation-maintenance` and reran the expanded checkpoint at 16:07 UTC so reply-watch, help/inbox/generator/partner snapshots, source-tag coverage, and local site-link verification all refresh from one routine command.
 - 2026-05-12: earlier 2026-05-12 maintenance passes at 12:49 UTC and 12:52 UTC kept the no-reply checkpoint current and refreshed the live help/inbox/generator/partner snapshots plus the production verification.
 - 2026-05-12: fixed the human-help status matcher so the active Reddit-plus-indexing request stays open until `HELP-STATUS.md` records a true completion note, then re-synced the validation artifacts that depend on that help-request state.
 - 2026-05-12: strengthened the AI procurement wedge by turning the local answer builder into an answer-plus-handoff builder, promoting it across the homepage/pricing/start-here/AI hub/AI article routes, and creating an explicit human distribution request plus indexing request for the refreshed builder path.
