@@ -33,11 +33,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-12: reran the expanded validation-maintenance checkpoint at 16:10 UTC, refreshed the help/contact/generator/partner snapshots and self-audit production verification, and kept the no-reply branch intact with 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-12: fixed the human-help launchpad and status matcher so the blocking Reddit-plus-indexing request stays attached to the live thread targets, source tags, prepared drafts, and indexing instructions instead of collapsing into an older blocked pass.
-- 2026-05-12: folded the production verification set into `run:validation-maintenance` and reran the expanded checkpoint at 16:07 UTC so reply-watch, help/inbox/generator/partner snapshots, source-tag coverage, and local site-link verification all refresh from one routine command.
-- 2026-05-12: earlier 2026-05-12 maintenance passes at 12:49 UTC and 12:52 UTC kept the no-reply checkpoint current and refreshed the live help/inbox/generator/partner snapshots plus the production verification.
-- 2026-05-12: fixed the human-help status matcher so the active Reddit-plus-indexing request stays open until `HELP-STATUS.md` records a true completion note, then re-synced the validation artifacts that depend on that help-request state.
+- 2026-05-12: reran the expanded validation-maintenance checkpoint at 16:11 UTC, refreshed the help/contact/generator/partner snapshots and self-audit production verification, and kept the no-reply branch intact with 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-12: fixed the human-help launchpad and status matcher, folded the production verification set into `run:validation-maintenance`, and kept the blocking Reddit-plus-indexing request attached to the live thread targets, drafts, and indexing instructions instead of collapsing it into an older blocked pass.
 - 2026-05-12: strengthened the AI procurement wedge by turning the local answer builder into an answer-plus-handoff builder, promoting it across the homepage/pricing/start-here/AI hub/AI article routes, and creating an explicit human distribution request plus indexing request for the refreshed builder path.
 - 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge and shipped the answer builder, filled answer example, crawlability refresh, and adjacent procurement route promotion.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and earlier AI-founder acquisition funnel while keeping validation/help/support memory current.
