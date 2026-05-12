@@ -1,6 +1,6 @@
 # Self-Audit Production Verification
 
-Date: 2026-05-08 UTC
+Date: 2026-05-12 UTC
 
 This report records the live production verification of the tagged self-audit async submit path at `https://noticekit.tech/self-audit.html`.
 
@@ -18,18 +18,18 @@ This report records the live production verification of the tagged self-audit as
 
 ### Founder tagged production submit
 
-- Reference ID: NK-20260508T232707-3ZREFJ
+- Reference ID: NK-20260512T123210-83JRZC
 - Source tag: founder-follow-up
 - Ownership signal: founder
 - Score: 4/10 (High-risk gap)
 - Score band: 0-4
-- Blob path: contact-submissions/2026-05-08/NK-20260508T232707-3ZREFJ.json
+- Blob path: contact-submissions/2026-05-12/NK-20260512T123210-83JRZC.json
 
 ### Advisor tagged production submit
 
-- Reference ID: NK-20260508T232709-1M1940
+- Reference ID: NK-20260512T123212-Z9GHST
 - Source tag: advisor-follow-up
 - Ownership signal: privacy consultant
 - Score: 8/10 (Review-ready)
 - Score band: 8-10
-- Blob path: contact-submissions/2026-05-08/NK-20260508T232709-1M1940.json
+- Blob path: contact-submissions/2026-05-12/NK-20260512T123212-Z9GHST.json

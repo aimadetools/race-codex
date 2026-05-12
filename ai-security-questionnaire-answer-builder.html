@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Security Questionnaire Answer Builder | NoticeKit</title>
-    <meta name="description" content="Build a review-ready AI security questionnaire answer in your browser with named vendors, data scope, retention stance, customer impact, and proof links.">
+    <title>AI Security Questionnaire Answer + Handoff Builder | NoticeKit</title>
+    <meta name="description" content="Build a review-ready AI security questionnaire answer, proof checklist, and internal handoff brief in your browser with named vendors, scope, stance, and proof links.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NoticeKit">
     <meta property="og:url" content="https://noticekit.tech/ai-security-questionnaire-answer-builder.html">
-    <meta property="og:title" content="AI Security Questionnaire Answer Builder | NoticeKit">
-    <meta property="og:description" content="Generate a copy-ready AI security questionnaire answer block and proof checklist locally in your browser.">
+    <meta property="og:title" content="AI Security Questionnaire Answer + Handoff Builder | NoticeKit">
+    <meta property="og:description" content="Generate a copy-ready AI questionnaire answer, proof checklist, and internal handoff brief locally in your browser.">
     <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit AI security questionnaire answer builder">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Security Questionnaire Answer Builder | NoticeKit">
-    <meta name="twitter:description" content="Turn AI vendor facts, scope, stance, and proof into a review-ready questionnaire answer without sending your inputs to a server.">
+    <meta name="twitter:title" content="AI Security Questionnaire Answer + Handoff Builder | NoticeKit">
+    <meta name="twitter:description" content="Turn AI vendor facts, scope, stance, and proof into a review-ready questionnaire answer and handoff brief without sending your inputs to a server.">
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/ai-security-questionnaire-answer-builder.html">
@@ -27,11 +27,11 @@
         "@graph": [
           {
             "@type": "WebApplication",
-            "name": "NoticeKit AI Security Questionnaire Answer Builder",
+            "name": "NoticeKit AI Security Questionnaire Answer + Handoff Builder",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web browser",
             "url": "https://noticekit.tech/ai-security-questionnaire-answer-builder.html",
-            "description": "Browser-only builder for AI security questionnaire answers with named vendors, customer scope, retention stance, and proof links."
+            "description": "Browser-only builder for AI security questionnaire answers, proof checklists, and handoff briefs with named vendors, customer scope, retention stance, and proof links."
           },
           {
             "@type": "FAQPage",
@@ -49,7 +49,7 @@
                 "name": "How is the builder different from the answer template or packet guide?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The builder creates a filled answer block and proof checklist locally in the browser. The answer template is better when you want a blank copy-paste format. The packet guide is better when procurement, security, and counsel all need the same fuller review artifact."
+                  "text": "The builder creates a filled answer block, proof checklist, and internal handoff brief locally in the browser. The answer template is better when you want a blank copy-paste format. The packet guide is better when procurement, security, and counsel all need the same fuller review artifact."
                 }
               },
               {
@@ -82,9 +82,9 @@
 
       <main id="main-content">
         <section class="page-hero">
-          <span class="eyebrow">Local AI answer builder</span>
-          <h1 id="hero-title">Build the AI questionnaire answer before procurement asks for the packet.</h1>
-          <p id="hero-copy">Use this browser-only builder when a buyer, security reviewer, or counsel wants one concrete AI answer now. Fill the named vendors, data scope, retention stance, customer impact, and proof links, then copy the answer block into the questionnaire thread.</p>
+          <span class="eyebrow">Local AI answer + handoff builder</span>
+          <h1 id="hero-title">Build the AI answer and the internal handoff before procurement asks for the packet.</h1>
+          <p id="hero-copy">Use this browser-only builder when a buyer, security reviewer, founder, or counsel wants one concrete AI answer now and your team still needs a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links, then copy the answer block and the handoff note without sending your inputs to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#builder">Open builder</a>
             <a class="button secondary" href="blog-ai-security-questionnaire-answer-template.html?source=ai-security-questionnaire-builder">Open static template</a>
@@ -97,8 +97,8 @@
           <div class="context-band" aria-live="polite">
             <div>
               <span class="eyebrow">Source context</span>
-              <h2 id="source-context-title">Use the builder when the blocker is one answer block.</h2>
-              <p id="source-context-copy">This page is strongest when the thread needs a fast written answer before a broader packet.</p>
+              <h2 id="source-context-title">Use the builder when the blocker is one answer block plus one clean handoff.</h2>
+              <p id="source-context-copy">This page is strongest when the thread needs a fast written answer before a broader packet, but the team also needs to preserve the owner, decision, and next reviewer.</p>
             </div>
             <ol class="context-points" id="source-context-points"></ol>
           </div>
@@ -108,7 +108,7 @@
           <form class="audit-card" id="builder-form">
             <div class="section-head compact-head">
               <h2>Answer inputs</h2>
-              <p>Keep the answer tight. One workflow, one real vendor change, one affected customer segment, and the proof links behind the claims.</p>
+              <p>Keep the draft tight. One workflow, one real vendor change, one affected customer segment, one decision needed, and the proof links behind the claims.</p>
               <div class="route-presets" aria-label="Quick presets">
                 <button class="button secondary" type="button" data-preset="new-model">New model provider</button>
                 <button class="button secondary" type="button" data-preset="support-ai">Support copilot</button>
@@ -145,8 +145,14 @@
               <label>Customer scope
                 <textarea id="customer-scope">Enterprise and EU customers using the support workflow, with additional review for customers on signed DPAs.</textarea>
               </label>
+              <label>Reviewer ask
+                <textarea id="reviewer-ask">Procurement asked for the AI vendor chain, customer scope, training stance, and proof behind the answer before approving the security questionnaire response.</textarea>
+              </label>
               <label>Notice or escalation impact
                 <textarea id="notice-impact">The team is confirming whether this workflow changes the public subprocessor page and whether a customer notice or counsel handoff is required before rollout.</textarea>
+              </label>
+              <label>Decision needed next
+                <textarea id="decision-needed">Confirm whether the current answer is sufficient for buyer review or whether the workflow needs packet expansion, subprocessor-page updates, or counsel review before rollout.</textarea>
               </label>
               <label>Proof links
                 <textarea id="proof-links">Public subprocessor page URL, draft internal review packet, vendor terms link, screenshot of current workflow, tracker row, and owner notes.</textarea>
@@ -169,11 +175,12 @@
             <p id="coverage-summary">The current draft names the vendor chain, scope, stance, customer impact, and proof links.</p>
             <div class="tier-guidance">
               <strong id="answer-summary-title">Best use right now</strong>
-              <p id="answer-summary-copy">Copy the answer block into the questionnaire, then send the same facts into teardown or the packet path if the reviewer asks for more proof.</p>
+              <p id="answer-summary-copy">Copy the answer block into the questionnaire, then send the same facts into the internal handoff, teardown, or packet path if the reviewer asks for more proof.</p>
             </div>
             <div class="generator-actions">
               <button class="button" id="copy-answer" type="button">Copy answer</button>
               <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
+              <button class="button secondary" id="copy-handoff" type="button">Copy handoff</button>
               <button class="button secondary" id="download-answer" type="button">Download answer</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
@@ -200,8 +207,8 @@
             </article>
             <article>
               <div class="section-head">
-                <h2>Escalation handoff</h2>
-                <p>Use this when the thread needs a packet, a live-page teardown, or internal approval instead of one more draft.</p>
+                <h2>Internal handoff brief</h2>
+                <p>Use this when the thread needs a packet, a live-page teardown, or an internal decision instead of one more draft.</p>
               </div>
               <div id="handoff-output" class="template-box" aria-live="polite"></div>
             </article>
@@ -213,7 +220,7 @@
             <article class="card">
               <span class="tag">Answer</span>
               <h3>Use this builder when</h3>
-              <p>The reviewer wants a written answer now and you need the shortest path from vendor facts to a clean response block.</p>
+              <p>The reviewer wants a written answer now and your team also needs the shortest path from vendor facts to a clean internal handoff.</p>
             </article>
             <article class="card">
               <span class="tag">Packet</span>
@@ -246,7 +253,7 @@
                 <tr>
                   <td>One filled answer block right now</td>
                   <td><a href="ai-security-questionnaire-answer-builder.html">This builder</a></td>
-                  <td>It creates the answer, checklist, and escalation handoff in one browser-only pass.</td>
+                  <td>It creates the answer, checklist, and internal handoff in one browser-only pass.</td>
                 </tr>
                 <tr>
                   <td>A concrete filled response to model from</td>
@@ -271,7 +278,7 @@
         <section class="section">
           <div class="section-head">
             <h2>FAQ</h2>
-            <p>Use the builder when the deal is blocked on the answer wording, not on a missing legal conclusion.</p>
+              <p>Use the builder when the deal is blocked on the answer wording and the team needs a clean handoff, not on a missing legal conclusion.</p>
           </div>
           <div class="grid-3">
             <article class="card">
@@ -330,6 +337,7 @@
       const builderStatus = document.querySelector("#builder-status");
       const copyAnswerButton = document.querySelector("#copy-answer");
       const copyChecklistButton = document.querySelector("#copy-checklist");
+      const copyHandoffButton = document.querySelector("#copy-handoff");
       const downloadAnswerButton = document.querySelector("#download-answer");
       const sendToTeardown = document.querySelector("#send-to-teardown");
       const query = new URLSearchParams(window.location.search);
@@ -389,7 +397,9 @@
         const dataCategories = sentence(value("data-categories"), "the relevant customer or operational data");
         const retentionStance = sentence(value("retention-stance"), "The current retention or training stance is still under review.");
         const customerScope = sentence(value("customer-scope"), "The affected customer scope still needs to be clarified.");
+        const reviewerAsk = sentence(value("reviewer-ask"), "The reviewer ask still needs to be clarified.");
         const noticeImpact = sentence(value("notice-impact"), "Notice or escalation impact is still being confirmed.");
+        const decisionNeeded = sentence(value("decision-needed"), "The next internal decision still needs to be clarified.");
         const proofLinks = sentence(value("proof-links"), "The source-of-truth links still need to be collected.");
         const openQuestions = sentence(value("open-questions"), "No open reviewer notes were added.");
         const replyOwner = sentence(value("reply-owner"), "Owner not provided");
@@ -403,9 +413,11 @@
           `AI vendors used: ${primaryVendor} is the primary AI vendor for ${workflow}. Supporting vendors in this workflow include ${supportingVendors}.`,
           `Workflow reviewed: ${company} is reviewing ${workflow}, which is currently ${statusLabel}.`,
           `Data categories involved: ${dataCategories}.`,
+          `Reviewer ask: ${reviewerAsk}`,
           `Retention and training stance: ${retentionStance}`,
           `Customer scope: ${customerScope}`,
           `Notice or escalation impact: ${noticeImpact}`,
+          `Decision needed next: ${decisionNeeded}`,
           `Proof links: ${proofLinks}`,
           `Reply owner and open questions: ${replyOwner}. Open questions: ${openQuestions}`
         ].join("\n\n");
@@ -420,6 +432,8 @@
 
         const handoff = [
           `Current blocker: ${workflow} needs a review-ready answer tied to ${primaryVendor}.`,
+          `Reviewer ask: ${reviewerAsk}`,
+          `Decision needed next: ${decisionNeeded}`,
           "Escalate to packet path if the reviewer wants broader proof beyond this answer block.",
           "Escalate to teardown if one live page and one customer segment need a blunt gap read.",
           `Owner: ${replyOwner}.`,
@@ -468,20 +482,20 @@
         if (payload.completedCount === 5) {
           coverageState.textContent = "Review-ready answer";
           coverageSummary.textContent = "The current draft names the vendor chain, scope, stance, customer impact, and proof links.";
-          answerSummaryCopy.textContent = "Copy the answer into the questionnaire now. If the reviewer asks for more proof, branch into the packet or teardown path without rewriting the facts.";
+          answerSummaryCopy.textContent = "Copy the answer into the questionnaire now, and copy the handoff into Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.";
           return;
         }
 
         if (payload.completedCount >= 3) {
           coverageState.textContent = "Needs a tighter proof pass";
           coverageSummary.textContent = "The answer is usable, but at least one of the core reviewer facts is still too vague.";
-          answerSummaryCopy.textContent = "Tighten the missing proof or scope fields before sending this into procurement. The wording is close, but the evidence path is still thin.";
+          answerSummaryCopy.textContent = "Tighten the missing proof or scope fields before sending this into procurement. The wording is close, but the evidence path and the internal handoff are still thin.";
           return;
         }
 
         coverageState.textContent = "Too thin for buyer review";
         coverageSummary.textContent = "The answer still needs core facts before it is safe to send into a live questionnaire thread.";
-        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the vendor chain, scope, stance, and proof cleanly.";
+        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the vendor chain, scope, stance, and proof cleanly enough for the answer and handoff to hold up.";
       }
 
       const presets = {
@@ -526,13 +540,14 @@
 
       const sourceConfigs = {
         "ai-procurement-hub-answer-builder": {
-          heroTitle: "Build the AI answer block before the review thread sprawls.",
-          heroCopy: "You already know the blocker is the wording. Use this builder to package the named vendor, scope, stance, and proof in one short answer before you escalate into a bigger packet.",
-          title: "This is the shortest path when the blocker is the immediate answer.",
-          copy: "Keep the answer scoped to one workflow and one affected customer segment so the reviewer can verify it quickly.",
+          heroTitle: "Build the AI answer and internal handoff before the review thread sprawls.",
+          heroCopy: "You already know the blocker is the wording, but you still need a clean handoff behind it. Use this builder to package the named vendor, scope, stance, proof, owner, and next decision in one pass before you escalate into a bigger packet.",
+          title: "This is the shortest path when the blocker is the immediate answer plus one clean handoff.",
+          copy: "Keep the answer scoped to one workflow and one affected customer segment so the reviewer can verify it quickly and the next internal owner can move without a rewrite.",
           points: [
             "Use the builder when the buyer needs the answer block now, not the full packet first.",
             "Keep the proof links in the same draft so procurement does not have to chase other docs.",
+            "Copy the handoff too so the next reviewer inherits the same facts and decision path.",
             "Switch to teardown if the real blocker is one live page instead of the wording."
           ]
         },
@@ -654,11 +669,14 @@
       copyChecklistButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().checklist, "Proof checklist copied.");
       });
+      copyHandoffButton.addEventListener("click", () => {
+        copyText(buildAnswerPayload().handoff, "Internal handoff copied.");
+      });
       downloadAnswerButton.addEventListener("click", () => {
         const payload = buildAnswerPayload();
-        const content = `# ${payload.company} AI security questionnaire answer\n\n${payload.answer}\n\n## Proof checklist\n\n${payload.checklist}\n\n## Escalation handoff\n\n${payload.handoff}\n`;
+        const content = `# ${payload.company} AI security questionnaire answer\n\n${payload.answer}\n\n## Proof checklist\n\n${payload.checklist}\n\n## Internal handoff brief\n\n${payload.handoff}\n`;
         downloadFile("noticekit-ai-questionnaire-answer.md", content);
-        builderStatus.textContent = "Answer downloaded as Markdown.";
+        builderStatus.textContent = "Answer and handoff downloaded as Markdown.";
       });
 
       render();

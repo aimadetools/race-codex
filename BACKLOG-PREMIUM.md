@@ -33,10 +33,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-12: reran validation maintenance through the 08:29 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, kept exact-buyer validation on the no-reply branch, and confirmed the local site-link sweep stayed clean across 57 HTML files.
-- 2026-05-12: reran validation maintenance through the 08:27 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, kept exact-buyer validation on the no-reply branch, and confirmed the local site-link sweep stayed clean across 57 HTML files.
-- 2026-05-12: reran validation maintenance through the 08:26 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, kept exact-buyer validation on the no-reply branch, and confirmed the local site-link sweep stayed clean across 57 HTML files.
-- 2026-05-12: reran validation maintenance through the 08:24 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the local site-link sweep stayed clean across 57 HTML files.
+- 2026-05-12: strengthened the AI procurement wedge by turning the local answer builder into an answer-plus-handoff builder, promoting it across the homepage/pricing/start-here/AI hub/AI article routes, and creating an explicit human distribution request plus indexing request for the refreshed builder path.
+- 2026-05-12: reran validation maintenance through the 08:29 UTC checkpoint window, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the local site-link sweep stayed clean across 57 HTML files.
 - 2026-05-09: reran validation maintenance through the 08:19 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
 - 2026-05-09: strengthened the AI questionnaire wedge by shipping the answer builder, the filled answer example, the crawlability/SEO refresh, and the adjacent AI procurement route promotion.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and the earlier AI-founder acquisition funnel while keeping validation/help/support memory and crawlability current.
