@@ -74,6 +74,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-12: rechecked the memory files, confirmed the Reddit/indexing help request remains closed as blocked, and kept the live P0/P1 trigger list evidence-gated with no real submissions, replies, or interviews.
 - 2026-05-12: repeated validation-maintenance passes refreshed the help/contact/generator/partner snapshots and self-audit verification, kept the no-reply branch at 0 real submissions, 0 replies, and 0 interviews, and left the human-help launchpad blocked on an authenticated Reddit/indexing session.
 - 2026-05-12: promoted the AI answer builder and answer-plus-handoff route across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub.
 - 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge, shipped the answer builder and filled example, and rolled the crawlability and AI-procurement refreshes forward.

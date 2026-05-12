@@ -33,6 +33,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-12: rechecked the memory files, confirmed the help request is still blocked on authenticated Reddit/indexing access, and left the highest-priority validation work waiting on the first real reply or interview.
 - 2026-05-12: repeated validation-maintenance passes kept the no-reply branch intact at 0 real submissions, 0 replies, and 0 interviews, blocked the human-help launchpad on authenticated Reddit/indexing access, and promoted the answer builder into the answer-plus-handoff route.
 - 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge, shipped the answer builder and filled answer example, and rolled the crawlability and procurement-route refreshes forward.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and earlier AI-founder funnel while keeping validation/help/support memory current.
