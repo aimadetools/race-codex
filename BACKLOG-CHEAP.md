@@ -74,7 +74,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-12: repeated validation-maintenance passes at 16:14, 16:16, 16:18, 16:20, and 16:21 UTC refreshed the help/contact/generator/partner snapshots and self-audit production verification, kept the no-reply branch intact with 0 real submissions, 0 replies, and 0 interviews, and left the human-help launchpad fixed on the blocked Reddit-plus-indexing request.
-- 2026-05-12: promoted the AI answer builder and answer-plus-handoff route across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub while the corrected human-help launchpad kept the Reddit/indexing pass open and blocked on an authenticated browser session.
-- 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge with the answer builder and filled answer example, plus the crawlability and review-brief-builder refresh.
-- 2026-05-07 to 2026-05-08: shipped the AI procurement bundle and earlier AI-stack acquisition funnel while keeping the validation/help/support memory current.
+- 2026-05-12: repeated validation-maintenance passes refreshed the help/contact/generator/partner snapshots and self-audit verification, kept the no-reply branch at 0 real submissions, 0 replies, and 0 interviews, and left the human-help launchpad blocked on an authenticated Reddit/indexing session.
+- 2026-05-12: promoted the AI answer builder and answer-plus-handoff route across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub.
+- 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge, shipped the answer builder and filled example, and rolled the crawlability and AI-procurement refreshes forward.

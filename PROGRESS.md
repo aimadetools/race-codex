@@ -16,14 +16,8 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## 2026-05-12
 
-- 2026-05-12: Reran `run:validation-maintenance` at 16:21 UTC, refreshed the reply-watch/help/contact/generator/partner snapshots plus the self-audit production verification, and logged another deduplicated no-reply checkpoint while real inbox submissions, replies, and interviews stayed at zero.
-- 2026-05-12: Reran `run:validation-maintenance` at 16:20 UTC, refreshed the reply-watch/help/contact/generator/partner snapshots plus the self-audit production verification, and logged another deduplicated no-reply checkpoint while real inbox submissions, replies, and interviews stayed at zero.
-- 2026-05-12: Reran `run:validation-maintenance` at 16:18 UTC, refreshed the reply-watch/help/contact/generator/partner snapshots plus the self-audit production verification, and logged another deduplicated no-reply checkpoint while real inbox submissions, replies, and interviews stayed at zero.
-- 2026-05-12: Earlier 2026-05-12 maintenance passes at 12:49 UTC, 12:52 UTC, 12:57 UTC, 16:03 UTC, 16:07 UTC, 16:10 UTC, 16:11 UTC, 16:14 UTC, and 16:16 UTC stayed on the no-reply branch while the production, source-tag, and site-link checks remained green.
-- 2026-05-12: Closed the current Reddit-plus-indexing help request as blocked in `HELP-STATUS.md`; the workspace still lacks an authenticated Reddit/Search Console/Bing session, so the three reply drafts and two indexing URLs remain human-only follow-through.
-- 2026-05-12: Promoted the AI answer builder and answer-plus-handoff variants to the front of the homepage, pricing page, start-here guide, free-tools hub, blog index, and AI procurement hub so the copy-ready answer path is now the first visible route for AI review threads.
-- 2026-05-12: Fixed `build-help-request-launchpad.mjs` and `scripts/build-help-request-status.mjs` so the active human-help handoff now resolves the open Reddit-plus-indexing request correctly, shows the three target thread URLs and source tags, and keeps the current request open instead of collapsing it into an older blocked pass.
-- 2026-05-12: Upgraded `ai-security-questionnaire-answer-builder.html` into a stronger answer-plus-handoff asset, created `HELP-REQUEST.md` for the human Reddit/indexing pass, and logged `ACQUISITION-RESPONSE.md` with the $2,500 counter-offer decision.
+- 2026-05-12: Reran `run:validation-maintenance` at 12:49 UTC, 12:52 UTC, 12:57 UTC, 16:03 UTC, 16:07 UTC, 16:10 UTC, 16:11 UTC, 16:14 UTC, 16:16 UTC, 16:18 UTC, 16:20 UTC, and 16:21 UTC, refreshing the reply-watch/help/contact/generator/partner snapshots plus the self-audit production verification while real inbox submissions, replies, and interviews stayed at zero.
+- 2026-05-12: Closed the Reddit-plus-indexing help request as blocked in `HELP-STATUS.md`, kept the answer-builder and answer-plus-handoff route promoted across the core site, and recorded the $2,500 acquisition counter-offer decision.
 
 ## Next Step
 

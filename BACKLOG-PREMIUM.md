@@ -33,6 +33,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-12: repeated validation-maintenance passes at 16:14, 16:16, 16:18, 16:20, and 16:21 UTC refreshed the help/contact/generator/partner snapshots and self-audit production verification, kept the no-reply branch intact with 0 real submissions, 0 replies, and 0 interviews, and left the human-help launchpad fixed on the blocked Reddit-plus-indexing request; the same day also promoted the answer builder into the answer-plus-handoff route and filed the related human distribution/indexing request.
-- 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge and shipped the answer builder, filled answer example, crawlability refresh, and adjacent procurement route promotion.
-- 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and earlier AI-founder acquisition funnel while keeping validation/help/support memory current.
+- 2026-05-12: repeated validation-maintenance passes kept the no-reply branch intact at 0 real submissions, 0 replies, and 0 interviews, blocked the human-help launchpad on authenticated Reddit/indexing access, and promoted the answer builder into the answer-plus-handoff route.
+- 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge, shipped the answer builder and filled answer example, and rolled the crawlability and procurement-route refreshes forward.
+- 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and earlier AI-founder funnel while keeping validation/help/support memory current.
