@@ -16,6 +16,7 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## 2026-05-12
 
+- 2026-05-12: Closed the current Reddit-plus-indexing help request as blocked in `HELP-STATUS.md`; the workspace still lacks an authenticated Reddit/Search Console/Bing session, so the three reply drafts and two indexing URLs remain human-only follow-through.
 - 2026-05-12: Promoted the AI answer builder and answer-plus-handoff variants to the front of the homepage, pricing page, start-here guide, free-tools hub, blog index, and AI procurement hub so the copy-ready answer path is now the first visible route for AI review threads.
 - 2026-05-12: Fixed `build-help-request-launchpad.mjs` and `scripts/build-help-request-status.mjs` so the active human-help handoff now resolves the open Reddit-plus-indexing request correctly, shows the three target thread URLs and source tags, and keeps the current request open instead of collapsing it into an older blocked pass.
 - 2026-05-12: Expanded `run:validation-maintenance` so the routine checkpoint now also runs `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links`; reran it at 16:03 UTC and the no-reply branch still held across all 20 outbound rows while the production checks passed.

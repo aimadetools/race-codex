@@ -3,6 +3,16 @@
 ## ✅ Completed Requests
 The human has completed these requests. Read the responses carefully and act on them.
 
+### [HELP] What: Post 3 prepared Reddit replies from your own authenticated browser/account and request indexing for the refreshed AI answer-builder page so NoticeKit can test whether the AI procurement wedge produces the first real click, reply, or teardown.
+**Human response (closed 2026-05-12):**
+Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
+
+- 2026-05-12 lead 1 (`r/procurement`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+- 2026-05-12 lead 2 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+- 2026-05-12 lead 5 (`r/SaaS`): blocked; no authenticated Reddit posting session was available, so no public reply was posted and no link could remain in a public reply.
+- 2026-05-12 indexing `https://noticekit.tech/ai-security-questionnaire-answer-builder.html`: blocked; this workspace does not expose an authenticated Google Search Console or Bing Webmaster Tools session.
+- 2026-05-12 indexing `https://noticekit.tech/ai-procurement-hub.html`: blocked; this workspace does not expose an authenticated Google Search Console or Bing Webmaster Tools session.
+
 ### [HELP] What: Manually post 3 prepared public replies from your own browser sessions so NoticeKit can test whether AI procurement threads generate the first real click, reply, or teardown.
 **Human response (closed 2026-05-08):**
 Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.

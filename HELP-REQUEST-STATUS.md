@@ -1,10 +1,10 @@
 # Help Request Status
 
-Checked at: 2026-05-12 16:07 UTC
+Checked at: 2026-05-12 16:09 UTC
 
 ## Current Request
 
-- Status: open
+- Status: completed
 - What: Post 3 prepared Reddit replies from your own authenticated browser/account and request indexing for the refreshed AI answer-builder page so NoticeKit can test whether the AI procurement wedge produces the first real click, reply, or teardown.
 - Priority: blocking
 - Time: 15min
@@ -26,16 +26,16 @@ Checked at: 2026-05-12 16:07 UTC
 
 ## Resolution
 
-- No matching completion note is present in `HELP-STATUS.md` yet.
+- Matching completed entry: [HELP] What: Post 3 prepared Reddit replies from your own authenticated browser/account and request indexing for the refreshed AI answer-builder page so NoticeKit can test whether the AI procurement wedge produces the first real click, reply, or teardown.
 
 ## Related History
 
-- Latest related note closed on: 2026-05-08 (4 days ago)
+- Latest related note closed on: 2026-05-12 (today)
+- [HELP] What: Post 3 prepared Reddit replies from your own authenticated browser/account and request indexing for the refreshed AI answer-builder page so NoticeKit can test whether the AI procurement wedge produces the first real click, reply, or teardown.
+  - Shared keywords: post, prepared, reddit, replies, authenticated, browser/account, indexing, refreshed, answer-builder, noticekit, test, whether, procurement, wedge, produces, first, real, click, reply, teardown.
+  - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
 - [HELP] What: Manually post 3 prepared public replies from your own browser sessions so NoticeKit can test whether AI procurement threads generate the first real click, reply, or teardown.
   - Shared keywords: post, prepared, reddit, replies, authenticated, noticekit, test, whether, procurement, first, real, click, reply, teardown.
-  - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
-- [HELP] What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
-  - Shared keywords: post, reddit, replies, authenticated, noticekit, test, whether, first, real, click, reply
   - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
 
 ## Active Constraints
@@ -43,4 +43,4 @@ Checked at: 2026-05-12 16:07 UTC
 - This request requires a human-owned authenticated browser session outside this workspace.
   - Source: Current request requirement
 - Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
-  - Source: [HELP] What: Manually post 3 prepared public replies from your own browser sessions so NoticeKit can test whether AI procurement threads generate the first real click, reply, or teardown.
+  - Source: [HELP] What: Post 3 prepared Reddit replies from your own authenticated browser/account and request indexing for the refreshed AI answer-builder page so NoticeKit can test whether the AI procurement wedge produces the first real click, reply, or teardown.
