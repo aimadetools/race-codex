@@ -33,8 +33,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-12: ran another validation-maintenance pass at 16:26 UTC, refreshed the help/contact/generator/partner snapshots and self-audit verification, and kept the exact-buyer validation loop waiting on the first real reply or interview.
-- 2026-05-12: rechecked the memory files, confirmed the help request is still blocked on authenticated Reddit/indexing access, and left the highest-priority validation work waiting on the first real reply or interview.
-- 2026-05-12: repeated validation-maintenance passes kept the no-reply branch intact at 0 real submissions, 0 replies, and 0 interviews, blocked the human-help launchpad on authenticated Reddit/indexing access, and promoted the answer builder into the answer-plus-handoff route.
+- 2026-05-12: collapsed the repeated validation-maintenance checks into one no-reply summary, refreshed the help/contact/generator/partner snapshots and self-audit verification, and kept the exact-buyer validation loop waiting on the first real reply or interview while the Reddit/indexing help request stayed blocked on authenticated access.
 - 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge, shipped the answer builder and filled answer example, and rolled the crawlability and procurement-route refreshes forward.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and earlier AI-founder funnel while keeping validation/help/support memory current.
