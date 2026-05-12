@@ -6,19 +6,15 @@ Older work is collapsed here so only the active validation window stays detailed
 
 - 2026-04-20 to 2026-05-09: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; shipped the AI procurement funnel, helper pages, and validation artifacts; and kept the live queue at 0 real submissions, 0 replies, and 0 interviews while reply capture stayed blocked on the first real response.
 
-## 2026-05-10
+## 2026-05-10 to 2026-05-11
 
-- 2026-05-10: No repo changes were logged; validation stayed on the no-reply branch while the workspace waited on the next evidence checkpoint.
-
-## 2026-05-11
-
-- 2026-05-11: No repo changes were logged; reply capture and human-help follow-through stayed the focus rather than new funnel expansion.
+- 2026-05-10 to 2026-05-11: No repo changes were logged; validation stayed on the no-reply branch while the workspace waited on the next evidence checkpoint, and reply capture remained the focus rather than new funnel expansion.
 
 ## 2026-05-12
 
-- 2026-05-12: Rechecked the memory and status files, confirmed there is still no `DEPLOY-STATUS.md`, and ran `npm run run:validation-maintenance` plus `npm run run:validation-gate` through the 23:02 UTC pass; the refresh touched the help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation snapshots, kept the queue at 0 real submissions, 0 replies, and 0 interviews, and left `check:source-tag-coverage` and `check:site-links` clean.
+- 2026-05-12: Rechecked the memory and status files, confirmed there is still no `DEPLOY-STATUS.md`, and ran `npm run run:validation-maintenance` plus `npm run run:validation-gate` through the 23:05 UTC pass; the refresh touched the help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation snapshots, kept the queue at 0 real submissions, 0 replies, and 0 interviews, and left `check:source-tag-coverage` and `check:site-links` clean.
 - 2026-05-12: Linked `purchase-next-steps.html` from the pricing and kit-preview buyer flow so early-access fulfillment instructions are discoverable after checkout or before purchase, then re-ran `check:site-links` to confirm the static site still had no broken local targets.
-- 2026-05-12: Reran the validation maintenance and gate pass at the 23:03 to 23:04 UTC checkpoint, which refreshed the live help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation artifacts again, kept real submissions at 0, and preserved clean `check:source-tag-coverage` and `check:site-links` results while the work stayed evidence-gated on the first real reply.
+- 2026-05-12: Reran the validation maintenance and gate pass at the 23:03 to 23:05 UTC checkpoints, which refreshed the live help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation artifacts again, kept real submissions at 0, and preserved clean `check:source-tag-coverage` and `check:site-links` results while the work stayed evidence-gated on the first real reply.
 
 ## Next Step
 
