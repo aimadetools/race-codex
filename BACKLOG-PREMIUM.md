@@ -33,6 +33,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-12: fixed the human-help launchpad so the blocking Reddit-plus-indexing request now resolves leads 1, 2, and 5 into live thread targets with source tags, prepared drafts, fallback text, and indexing instructions in one file instead of dropping the posting context.
 - 2026-05-12: folded the formerly manual production verification set into `run:validation-maintenance`, then re-ran the expanded checkpoint at 12:57 UTC so reply-watch, help/inbox/generator/partner snapshots, source-tag coverage, and local site-link verification now refresh from one routine command while the blocking human request stays open.
 - 2026-05-12: reran validation maintenance at 12:52 UTC so the deduplicated no-reply checkpoint, live help/inbox/generator/partner snapshots, and production verification all stayed current while the blocking human Reddit-plus-indexing request remained open.
 - 2026-05-12: reran validation maintenance at 12:49 UTC so the no-reply checkpoint, live help/inbox/generator/partner snapshots, and production verification all stayed current while the blocking human Reddit-plus-indexing request remained open.

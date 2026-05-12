@@ -8,6 +8,7 @@ const ROOT = process.cwd();
 const HELP_REQUEST_FILE = join(ROOT, "HELP-REQUEST.md");
 const HELP_STATUS_FILE = join(ROOT, "HELP-STATUS.md");
 const REPLY_PACK_FILE = join(ROOT, "AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md");
+const LEADS_FILE = join(ROOT, "help-requests", "ai-procurement-leads-2026-05-07.md");
 const OUTPUT = join(ROOT, "HELP-REQUEST-LAUNCHPAD.md");
 
 function formatUtcTimestamp(date) {
@@ -54,6 +55,55 @@ function parseThreadTargets(text) {
     label: match[1].trim(),
     url: match[2].trim()
   }));
+}
+
+function parseLeadCatalog(text) {
+  const catalog = new Map();
+  const sections = String(text || "").split(/\n(?=\d+\.\s+Date found:)/);
+
+  for (const section of sections) {
+    const leadNumber = section.match(/^(\d+)\.\s+Date found:/m)?.[1];
+    const url = section.match(/^\s*URL:\s*(https:\/\/\S+)\s*$/m)?.[1]?.trim();
+    const platform = section.match(/^\s*Platform:\s*(.+)\s*$/m)?.[1]?.trim() || "";
+    const sourceTag = section.match(/^\s*Recommended source tag:\s*`([^`]+)`\s*$/m)?.[1]?.trim() || "";
+    const requestNote = section.match(/^\s*Human reply status on .*?:\s*(.+)\s*$/m)?.[1]?.trim() || "";
+    if (!leadNumber || !url) {
+      continue;
+    }
+
+    const platformLabel = platform ? ` (${platform})` : "";
+    catalog.set(`Lead ${leadNumber}`, {
+      label: `Lead ${leadNumber}${platformLabel}`,
+      url,
+      sourceTag,
+      requestNote
+    });
+  }
+
+  return catalog;
+}
+
+function parseReferencedLeadLabels(text) {
+  const labels = new Set();
+  for (const match of String(text || "").matchAll(/\blead\s+(\d+)\b/gi)) {
+    labels.add(`Lead ${match[1]}`);
+  }
+  return [...labels];
+}
+
+function resolveThreadTargets(requestText, leadCatalog) {
+  const explicitTargets = parseThreadTargets(requestText);
+  const merged = new Map(explicitTargets.map((target) => [target.url, target]));
+
+  for (const leadLabel of parseReferencedLeadLabels(requestText)) {
+    const entry = leadCatalog.get(leadLabel);
+    if (!entry) {
+      continue;
+    }
+    merged.set(entry.url, entry);
+  }
+
+  return [...merged.values()];
 }
 
 function parseAllUrls(text) {
@@ -242,13 +292,15 @@ const checkedAt = formatUtcTimestamp(new Date());
 const helpRequestText = await readActiveRequestText();
 const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
 const replyPackText = await readFile(REPLY_PACK_FILE, "utf8").catch(() => "");
+const leadsText = await readFile(LEADS_FILE, "utf8").catch(() => "");
 
 const requestWhat = extractField(helpRequestText, "What") || "No active help request found.";
 const requestPriority = extractField(helpRequestText, "Priority") || "unknown";
 const requestTime = extractField(helpRequestText, "Time") || "unknown";
 const requestBudget = extractField(helpRequestText, "Budget") || "unknown";
 
-const threadTargets = parseThreadTargets(helpRequestText);
+const leadCatalog = parseLeadCatalog(leadsText);
+const threadTargets = resolveThreadTargets(helpRequestText, leadCatalog);
 const requestedUrls = [...new Set(parseRequestedUrls(helpRequestText))].filter((url) => !/reddit\.com\/r\//i.test(url));
 const sourceTags = parseLeadSourceTags(helpRequestText);
 const leadNotes = parseLeadNotes(helpRequestText);
@@ -282,60 +334,13 @@ if (relatedAuthBlocker && threadTargets.length > 0) {
   output.push("");
 }
 
-if (threadTargets.length === 0) {
+if (threadTargets.length === 0 && requestedUrls.length === 0) {
   output.push("## Status", "");
-  if (requestedUrls.length === 0) {
-    output.push("- No thread-style launch targets were found in `HELP-REQUEST.md`.");
-    output.push("");
-  } else {
-    output.push("- No thread-style launch targets were found in `HELP-REQUEST.md`.");
-    output.push("- This request is URL-based, so use the checklist below and record one status line per URL in `HELP-STATUS.md`.");
-    output.push("");
-    if (requestRequiresExternalSession) {
-      output.push("## Active Constraint", "");
-      output.push("- This submission flow requires a human-owned authenticated browser session; the workspace cannot submit or verify Search Console / Bing actions directly.");
-      output.push("");
-    }
-    output.push("## Outcome Codes", "");
-    output.push("- `submitted`: the console accepted a new indexing request for that URL.");
-    output.push("- `already indexed`: the console already showed the URL as indexed or already queued.");
-    output.push("- `blocked`: the console could not submit the URL; add the reason.");
-    output.push("- `not supported`: the console did not offer direct submission for that URL or service.");
-    output.push("");
-    output.push("## URL Checklist", "");
-    output.push("- Open each requested service in your own authenticated browser session.");
-    if (serviceTargets.length > 0) {
-      for (const service of serviceTargets) {
-        output.push(`- In ${service}, submit each URL exactly as listed below.`);
-      }
-    } else {
-      output.push("- Submit each URL exactly as listed below.");
-    }
-    output.push("- Update `HELP-STATUS.md` with one line per URL using `submitted`, `already indexed`, `blocked`, or `not supported` plus any useful note.");
-    output.push("");
-    if (serviceTargets.length > 0) {
-      output.push("## Service Checklist", "");
-      for (const service of serviceTargets) {
-        output.push(`### ${service}`);
-        output.push("");
-        for (const url of requestedUrls) {
-          output.push(`- ${url}`);
-        }
-        output.push("");
-      }
-    }
-    output.push("## Ready To Paste Into `HELP-STATUS.md`", "");
-    for (const url of requestedUrls) {
-      output.push(`- ${checkedAt.split(" ")[0]} ${url} -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]`);
-    }
-    output.push("");
-    output.push("## Requested URLs", "");
-    for (const url of requestedUrls) {
-      output.push(`- ${url}`);
-    }
-    output.push("");
-  }
-} else {
+  output.push("- No thread-style launch targets or requested URLs were found in `HELP-REQUEST.md`.");
+  output.push("");
+}
+
+if (threadTargets.length > 0) {
   output.push("## Launch Checklist", "");
   output.push("- Open each target URL from your own authenticated browser session.");
   output.push("- Check the workspace thread probe below first; `workspace-blocked` means only your browser session can confirm whether replies are still open.");
@@ -352,9 +357,10 @@ if (threadTargets.length === 0) {
 
   for (const target of threadTargets) {
     const leadKey = target.label.match(/^Lead \d+/)?.[0] || target.label;
-    const sourceTag = sourceTags.get(leadKey) || "";
+    const leadEntry = leadCatalog.get(leadKey);
+    const sourceTag = sourceTags.get(leadKey) || leadEntry?.sourceTag || "";
     const packEntry = replyPack.get(sourceTag);
-    const note = leadNotes.get(leadKey) || "";
+    const note = leadNotes.get(leadKey) || leadEntry?.requestNote || "";
     const probe = threadProbes.get(target.url);
 
     output.push(`## ${target.label}`, "");
@@ -391,6 +397,52 @@ if (threadTargets.length === 0) {
       output.push("");
     }
   }
+}
+
+if (requestedUrls.length > 0) {
+  if (requestRequiresExternalSession) {
+    output.push("## Indexing Constraint", "");
+    output.push("- This submission flow requires a human-owned authenticated browser session; the workspace cannot submit or verify Search Console / Bing actions directly.");
+    output.push("");
+  }
+  output.push("## Indexing Outcome Codes", "");
+  output.push("- `submitted`: the console accepted a new indexing request for that URL.");
+  output.push("- `already indexed`: the console already showed the URL as indexed or already queued.");
+  output.push("- `blocked`: the console could not submit the URL; add the reason.");
+  output.push("- `not supported`: the console did not offer direct submission for that URL or service.");
+  output.push("");
+  output.push("## URL Checklist", "");
+  output.push("- Open each requested service in your own authenticated browser session.");
+  if (serviceTargets.length > 0) {
+    for (const service of serviceTargets) {
+      output.push(`- In ${service}, submit each URL exactly as listed below.`);
+    }
+  } else {
+    output.push("- Submit each URL exactly as listed below.");
+  }
+  output.push("- Update `HELP-STATUS.md` with one line per URL using `submitted`, `already indexed`, `blocked`, or `not supported` plus any useful note.");
+  output.push("");
+  if (serviceTargets.length > 0) {
+    output.push("## Service Checklist", "");
+    for (const service of serviceTargets) {
+      output.push(`### ${service}`);
+      output.push("");
+      for (const url of requestedUrls) {
+        output.push(`- ${url}`);
+      }
+      output.push("");
+    }
+  }
+  output.push("## Ready To Paste Indexing Lines Into `HELP-STATUS.md`", "");
+  for (const url of requestedUrls) {
+    output.push(`- ${checkedAt.split(" ")[0]} ${url} -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]`);
+  }
+  output.push("");
+  output.push("## Requested URLs", "");
+  for (const url of requestedUrls) {
+    output.push(`- ${url}`);
+  }
+  output.push("");
 }
 
 await writeFile(OUTPUT, output.join("\n"));
