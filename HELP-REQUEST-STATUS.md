@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-12 12:57 UTC
+Checked at: 2026-05-12 16:03 UTC
 
 ## Current Request
 
@@ -22,7 +22,7 @@ Checked at: 2026-05-12 12:57 UTC
   - `https://noticekit.tech/ai-procurement-hub.html`
 - Append the outcome to `HELP-STATUS.md` for each thread and for indexing using one of these statuses: `posted`, `removed`, `blocked`, `no longer open for replies`, or `indexed-requested`.
 
-- Active request source: HELP-REQUEST.md
+- Active request source: help-requests/20260512-130354-HELP-REQUEST.md
 
 ## Resolution
 

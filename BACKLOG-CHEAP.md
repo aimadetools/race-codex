@@ -74,14 +74,10 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-12: promoted the AI answer builder to the first visible route across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub so the copy-ready answer + handoff path is now the clearest AI procurement click.
-- 2026-05-12: fixed `HELP-REQUEST-LAUNCHPAD.md` generation so the active human request now includes the exact Reddit thread targets, source tags, prepared reply/fallback copy, and the two indexing URLs in one actionable handoff.
-- 2026-05-12: expanded `run:validation-maintenance` to include the webhook, teardown handoff, live self-audit production, source-tag coverage, and local site-link checks, then re-ran the now-complete checkpoint at 12:57 UTC so the no-reply watch and dependent status artifacts stayed in sync from one routine pass.
-- 2026-05-12: reran validation maintenance at 12:52 UTC, refreshed the deduplicated no-reply checkpoint plus the live help/inbox/generator/partner snapshots, and confirmed the production checks and local site-link sweep still passed.
-- 2026-05-12: reran validation maintenance at 12:49 UTC, refreshed the live help/inbox/generator/partner artifacts, updated the no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and confirmed the production checks plus local site-link sweep still passed.
+- 2026-05-12: promoted the AI answer builder and answer-plus-handoff route across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub, then kept the human Reddit/indexing pass open with the corrected launchpad and status sync.
+- 2026-05-12: expanded `run:validation-maintenance` to cover the webhook, teardown handoff, self-audit production, source-tag coverage, and site-link checks, then reran the checkpoint at 16:03 UTC with the no-reply branch still intact and all production checks passing.
+- 2026-05-12: earlier 2026-05-12 maintenance passes at 12:49 UTC, 12:52 UTC, and 12:57 UTC kept the no-reply checkpoint current and refreshed the live help/inbox/generator/partner snapshots plus the source-tag and site-link sweeps.
 - 2026-05-12: fixed the human-help status matcher so the active Reddit-plus-indexing request stays open until `HELP-STATUS.md` records a true completion note, then re-synced the validation artifacts to refresh the dependent help/inbox/generator/partner snapshots.
 - 2026-05-12: strengthened the AI answer-builder route into an answer-plus-handoff path, queued the human Reddit/indexing pass, and kept exact-buyer validation ready for the first tracked AI procurement signal.
-- 2026-05-12: reran validation maintenance through the 08:29 UTC checkpoint window, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the no-reply branch intact while the local site-link sweep stayed clean across 57 HTML files.
-- 2026-05-09: reran validation maintenance through the 08:19 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the no-reply branch intact while exact-buyer validation stayed blocked on the first real reply.
-- 2026-05-09: strengthened the AI questionnaire wedge with the answer builder, filled answer example, crawlability/SEO refresh, and review-brief-builder promotion.
-- 2026-05-07 to 2026-05-08: shipped the AI procurement bundle and the earlier AI-stack acquisition funnel while keeping the validation/help/support memory current.
+- 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge with the answer builder and filled answer example, plus the crawlability and review-brief-builder refresh.
+- 2026-05-07 to 2026-05-08: shipped the AI procurement bundle and earlier AI-stack acquisition funnel while keeping the validation/help/support memory current.
