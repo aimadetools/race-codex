@@ -16,6 +16,7 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## 2026-05-12
 
+- 2026-05-12: Promoted the AI answer builder to the front of the homepage, pricing page, start-here guide, free-tools hub, blog index, and AI procurement hub so the copy-ready answer + internal handoff path is now the first visible route for AI review threads.
 - 2026-05-12: Fixed `build-help-request-launchpad.mjs` so the active human-help launchpad now resolves lead references from `HELP-REQUEST.md`, shows the three Reddit thread URLs with `workspace-blocked` probe notes, and includes the exact source tags plus reply/fallback drafts from `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` alongside the Search Console and Bing indexing checklist in one handoff file.
 - 2026-05-12: Expanded `run:validation-maintenance` so the routine checkpoint now also runs `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links`, eliminating the earlier gap where the production verification set depended on separate manual commands.
 - 2026-05-12: Re-ran the expanded maintenance flow at 12:57 UTC; the no-reply branch still held across all 20 outbound rows, the live help/inbox/generator/partner snapshots were refreshed again, the source-tag watcher still covered 193 emitted tags, and the local site-link sweep still passed across 57 HTML files.

@@ -74,6 +74,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-12: promoted the AI answer builder to the first visible route across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub so the copy-ready answer + handoff path is now the clearest AI procurement click.
 - 2026-05-12: fixed `HELP-REQUEST-LAUNCHPAD.md` generation so the active human request now includes the exact Reddit thread targets, source tags, prepared reply/fallback copy, and the two indexing URLs in one actionable handoff.
 - 2026-05-12: expanded `run:validation-maintenance` to include the webhook, teardown handoff, live self-audit production, source-tag coverage, and local site-link checks, then re-ran the now-complete checkpoint at 12:57 UTC so the no-reply watch and dependent status artifacts stayed in sync from one routine pass.
 - 2026-05-12: reran validation maintenance at 12:52 UTC, refreshed the deduplicated no-reply checkpoint plus the live help/inbox/generator/partner snapshots, and confirmed the production checks and local site-link sweep still passed.
