@@ -74,5 +74,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-12: reran validation maintenance and gate at 20:15-20:16 UTC, refreshed the live inbox, help, generator, partner, self-audit, community-feedback, and validation status docs, kept the trigger-driven backlog evidence-gated while no real replies, submissions, or interviews were present, and surfaced/promoted the AI answer-builder path earlier across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub.
+- 2026-05-12: reran validation maintenance and gate at 20:17-20:18 UTC, refreshed the live inbox, help, generator, partner, self-audit, community-feedback, and validation status docs, kept the trigger-driven backlog evidence-gated while no real replies, submissions, or interviews were present, and confirmed site-link coverage stayed clean while the AI answer-builder path remained promoted earlier across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub.
 - 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge, shipped the answer builder and filled example, and rolled the crawlability and AI-procurement refreshes forward.
