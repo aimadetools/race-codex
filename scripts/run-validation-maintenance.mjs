@@ -112,6 +112,11 @@ async function main() {
 
   runCommand("Validation watch", ["npm", "run", "check:validation-watch"]);
   runCommand("Self-audit follow-up QA", ["npm", "run", "check:self-audit-follow-up"]);
+  runCommand("Contact webhook record check", ["npm", "run", "check:contact-webhook-record"]);
+  runCommand("Free teardown handoff check", ["npm", "run", "check:free-teardown-handoff"]);
+  runCommand("Self-audit production check", ["npm", "run", "check:self-audit-production"]);
+  runCommand("Source tag coverage check", ["npm", "run", "check:source-tag-coverage"]);
+  runCommand("Site link check", ["npm", "run", "check:site-links"]);
   runCommand("No-reply checkpoint log", [
     "npm",
     "run",

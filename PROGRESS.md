@@ -16,6 +16,8 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## 2026-05-12
 
+- 2026-05-12: Expanded `run:validation-maintenance` so the routine checkpoint now also runs `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links`, eliminating the earlier gap where the production verification set depended on separate manual commands.
+- 2026-05-12: Re-ran the expanded maintenance flow at 12:57 UTC; the no-reply branch still held across all 20 outbound rows, the live help/inbox/generator/partner snapshots were refreshed again, the source-tag watcher still covered 193 emitted tags, and the local site-link sweep still passed across 57 HTML files.
 - 2026-05-12: Collapsed the repeated no-reply maintenance checkpoints into summary memory: through the 08:29 UTC pass, validation stayed on the no-reply branch, the live help/inbox/generator/partner artifacts were refreshed, and the local site-link sweep stayed clean across 57 HTML files.
 - 2026-05-12: Ran another validation maintenance checkpoint at 12:49 UTC; the no-reply branch still held across all 20 outbound rows, `COMMUNITY-FEEDBACK.md` was refreshed with the deduplicated checkpoint, the live help/inbox/generator/partner snapshots were re-synced, and the production checks still passed with 193 watched source tags and no missing local links across 57 HTML files.
 - 2026-05-12: Ran the next validation maintenance checkpoint at 12:52 UTC; the no-reply branch still held across all 20 outbound rows, `COMMUNITY-FEEDBACK.md` and the dependent help/inbox/generator/partner status files were refreshed again, and the production verification still passed with 193 watched source tags and no missing local links across 57 HTML files.
@@ -28,4 +30,4 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## Next Step
 
-- Watch `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `CONTACT-INBOX-STATUS.md` for the human reply pass and the first builder-, packet-, or teardown-led AI procurement signal so exact-buyer validation can finally move from no-reply maintenance into a scored interview or qualification decision.
+- Watch `HELP-STATUS.md`, `COMMUNITY-FEEDBACK.md`, and `CONTACT-INBOX-STATUS.md` for the human reply pass and the first builder-, packet-, or teardown-led AI procurement signal so exact-buyer validation can finally move from no-reply maintenance into a scored interview or qualification decision; use the expanded `run:validation-maintenance` command as the default single-pass checkpoint while that wait state holds.

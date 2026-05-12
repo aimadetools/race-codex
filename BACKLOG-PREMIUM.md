@@ -33,6 +33,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-12: folded the formerly manual production verification set into `run:validation-maintenance`, then re-ran the expanded checkpoint at 12:57 UTC so reply-watch, help/inbox/generator/partner snapshots, source-tag coverage, and local site-link verification now refresh from one routine command while the blocking human request stays open.
 - 2026-05-12: reran validation maintenance at 12:52 UTC so the deduplicated no-reply checkpoint, live help/inbox/generator/partner snapshots, and production verification all stayed current while the blocking human Reddit-plus-indexing request remained open.
 - 2026-05-12: reran validation maintenance at 12:49 UTC so the no-reply checkpoint, live help/inbox/generator/partner snapshots, and production verification all stayed current while the blocking human Reddit-plus-indexing request remained open.
 - 2026-05-12: fixed the human-help status matcher so the active Reddit-plus-indexing request is no longer misclassified as completed from an older blocked Reddit pass, then re-synced the validation artifacts that depend on that help-request state.

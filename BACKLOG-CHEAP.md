@@ -74,6 +74,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-12: expanded `run:validation-maintenance` to include the webhook, teardown handoff, live self-audit production, source-tag coverage, and local site-link checks, then re-ran the now-complete checkpoint at 12:57 UTC so the no-reply watch and dependent status artifacts stayed in sync from one routine pass.
 - 2026-05-12: reran validation maintenance at 12:52 UTC, refreshed the deduplicated no-reply checkpoint plus the live help/inbox/generator/partner snapshots, and confirmed the production checks and local site-link sweep still passed.
 - 2026-05-12: reran validation maintenance at 12:49 UTC, refreshed the live help/inbox/generator/partner artifacts, updated the no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and confirmed the production checks plus local site-link sweep still passed.
 - 2026-05-12: fixed the human-help status matcher so the active Reddit-plus-indexing request stays open until `HELP-STATUS.md` records a true completion note, then re-synced the validation artifacts to refresh the dependent help/inbox/generator/partner snapshots.
