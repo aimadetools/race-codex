@@ -71,6 +71,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-12: reran validation maintenance through the 08:27 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, kept exact-buyer validation on the no-reply branch, and confirmed the local site-link sweep stayed clean across 57 HTML files.
 - 2026-05-12: reran validation maintenance through the 08:26 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, kept exact-buyer validation on the no-reply branch, and confirmed the local site-link sweep stayed clean across 57 HTML files.
 - 2026-05-12: reran validation maintenance through the 08:24 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the local site-link sweep stayed clean across 57 HTML files.
 - 2026-05-09: reran validation maintenance through the 08:19 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the no-reply branch intact while exact-buyer validation stayed blocked on the first real reply.
