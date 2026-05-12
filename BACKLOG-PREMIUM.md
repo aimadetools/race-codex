@@ -33,12 +33,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-12: reran validation maintenance through the 08:19 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and confirmed the site-link check stayed clean while exact-buyer validation remained on the no-reply branch.
-- 2026-05-12: reran validation maintenance through the 08:18 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and confirmed the site-link check stayed clean while exact-buyer validation remained on the no-reply branch.
-- 2026-05-12: reran validation maintenance through the 08:15 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
-- 2026-05-12: reran validation maintenance through the 08:13 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
-- 2026-05-12: reran validation maintenance through the 08:11 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
-- 2026-05-12: reran validation maintenance through the 08:07 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
+- 2026-05-12: reran validation maintenance through the 08:21 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the recent site-link checks stayed clean.
 - 2026-05-09: reran validation maintenance through the 08:19 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the human indexing request stayed open.
 - 2026-05-09: strengthened the AI questionnaire wedge by shipping the answer builder, the filled answer example, the crawlability/SEO refresh, and the adjacent AI procurement route promotion.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and the earlier AI-founder acquisition funnel while keeping validation/help/support memory and crawlability current.
