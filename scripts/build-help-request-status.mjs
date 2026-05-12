@@ -590,7 +590,7 @@ if (threadTargetLabels.length > 0 && status === "open") {
   output.push("");
 
   for (const target of threadTargetLabels) {
-    output.push(`- ${checkedAt.split(" ")[0]} ${formatReadyLabel(target.label)}: <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here`);
+    output.push(`- ${checkedAt.split(" ")[0]} ${formatReadyLabel(target.label)}: <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here`);
   }
 }
 

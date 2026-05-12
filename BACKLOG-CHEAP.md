@@ -74,5 +74,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-12: linked `purchase-next-steps.html` into the pricing and kit-preview buyer flow, then reran validation maintenance and gate through the 23:22 UTC checkpoint; the live inbox, help, generator, partner, self-audit, community-feedback, launchpad, and validation status docs stayed refreshed, the backlog remained evidence-gated with 0 real replies, submissions, or interviews, and site-link plus source-tag coverage stayed clean while the Reddit reply/indexing request remained blocked on the missing authenticated browser session.
+- 2026-05-12: linked `purchase-next-steps.html` into the pricing and kit-preview buyer flow, then reran validation maintenance and gate through the 23:24 UTC checkpoint; the live inbox, help, generator, partner, self-audit, community-feedback, launchpad, and validation status docs stayed refreshed, the backlog remained evidence-gated with 0 real replies, submissions, or interviews, and the help-request wording was normalized back to `blocked-links`.
 - 2026-05-08 to 2026-05-09: strengthened the AI questionnaire wedge, shipped the answer builder and filled example, and rolled the crawlability and AI-procurement refreshes forward.

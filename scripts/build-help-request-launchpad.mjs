@@ -344,13 +344,13 @@ if (threadTargets.length > 0) {
   output.push("## Launch Checklist", "");
   output.push("- Open each target URL from your own authenticated browser session.");
   output.push("- Check the workspace thread probe below first; `workspace-blocked` means only your browser session can confirm whether replies are still open.");
-  output.push("- Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-no-link` in `HELP-STATUS.md`.");
-  output.push("- After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-no-link`, or `no longer open for replies`.");
+  output.push("- Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-links` in `HELP-STATUS.md`.");
+  output.push("- After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-links`, or `no longer open for replies`.");
   output.push("");
   output.push("## Ready To Paste Into `HELP-STATUS.md`", "");
 
   for (const target of threadTargets) {
-    output.push(`- ${checkedAt.split(" ")[0]} ${formatReadyLabel(target.label)}: <posted|removed|blocked|blocked-no-link|no longer open for replies>; add short note or visible reply summary here`);
+    output.push(`- ${checkedAt.split(" ")[0]} ${formatReadyLabel(target.label)}: <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here`);
   }
 
   output.push("");
