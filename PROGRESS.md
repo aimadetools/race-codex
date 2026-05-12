@@ -8,16 +8,15 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## 2026-05-10
 
-- 2026-05-10: No new repo changes were logged in this file; validation remained on the no-reply branch between the 2026-05-09 checkpoint and the next recorded maintenance pass.
+- 2026-05-10: No repo changes were logged; validation stayed on the no-reply branch while the workspace waited on the next evidence checkpoint.
 
 ## 2026-05-11
 
-- 2026-05-11: No new repo changes were logged in this file; the active work stayed reply capture and human-help follow-through rather than new funnel expansion.
+- 2026-05-11: No repo changes were logged; reply capture and human-help follow-through stayed the focus rather than new funnel expansion.
 
 ## 2026-05-12
 
-- 2026-05-12: Re-read `PROGRESS.md`, both backlog files, `HELP-STATUS.md`, and the live status docs; confirmed there is no `DEPLOY-STATUS.md`; reran `npm run run:validation-maintenance` and `npm run run:validation-gate` through the 20:12-20:18 UTC maintenance window; refreshed the live help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots; and kept the no-reply state at 0 real submissions, 0 replies, and 0 interviews while `check:source-tag-coverage` and `check:site-links` stayed clean.
-- 2026-05-12: Ran `npm run run:validation-maintenance` and `npm run run:validation-gate` again at 20:19 UTC; advanced `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-LAUNCHPAD.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `SELF-AUDIT-PRODUCTION-VERIFY.md`, and `VALIDATION-STATUS.md`; and kept the live state at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-12: Re-read `PROGRESS.md`, both backlog files, `HELP-STATUS.md`, and the live status docs; confirmed there is no `DEPLOY-STATUS.md`; reran `npm run run:validation-maintenance` and `npm run run:validation-gate` through the 20:21 UTC maintenance window; refreshed the live help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots; and kept the no-reply state at 0 real submissions, 0 replies, and 0 interviews while `check:source-tag-coverage` and `check:site-links` stayed clean.
 
 ## Next Step
 
