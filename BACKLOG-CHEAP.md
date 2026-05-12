@@ -74,7 +74,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-12: reran validation maintenance at 20:02 UTC, refreshed the live inbox, help, generator, partner, and self-audit status docs, and kept the trigger-driven backlog evidence-gated while no real replies or submissions were present.
 - 2026-05-12: surfaced the AI answer-builder path earlier across the homepage, pricing, start-here, free-tools, and AI procurement hub, and added direct route-finder presets so the copy-ready answer flow is easier to reach.
-- 2026-05-12: ran the no-reply maintenance pass, refreshed the help/contact/generator/partner snapshots and self-audit verification, and kept the live P0/P1 trigger list evidence-gated while the Reddit/indexing help request remained blocked on authenticated access.
 - 2026-05-12: promoted the AI answer builder and answer-plus-handoff route across the homepage, pricing, start-here, free-tools, blog index, and AI procurement hub.
 - 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge, shipped the answer builder and filled example, and rolled the crawlability and AI-procurement refreshes forward.
