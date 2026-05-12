@@ -1,12 +1,12 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-12 08:29 UTC
+Checked at: 2026-05-12 12:45 UTC
 
 ## Current Request
 
-- What: Request indexing for the new AI questionnaire answer builder, filled answer example, and the refreshed AI procurement routes so the wedge can start competing for search visibility quickly.
-- Priority: important
-- Time: 5min
+- What: Post 3 prepared Reddit replies from your own authenticated browser/account and request indexing for the refreshed AI answer-builder page so NoticeKit can test whether the AI procurement wedge produces the first real click, reply, or teardown.
+- Priority: blocking
+- Time: 15min
 - Budget: $0
 
 ## Status
@@ -37,35 +37,19 @@ Checked at: 2026-05-12 08:29 UTC
 ### Google Search Console
 
 - https://noticekit.tech/ai-security-questionnaire-answer-builder.html
-- https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html
 - https://noticekit.tech/ai-procurement-hub.html
-- https://noticekit.tech/blog-ai-security-questionnaire.html
-- https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html
-- https://noticekit.tech/blog.html
 
 ### Bing Webmaster Tools
 
 - https://noticekit.tech/ai-security-questionnaire-answer-builder.html
-- https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html
 - https://noticekit.tech/ai-procurement-hub.html
-- https://noticekit.tech/blog-ai-security-questionnaire.html
-- https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html
-- https://noticekit.tech/blog.html
 
 ## Ready To Paste Into `HELP-STATUS.md`
 
 - 2026-05-12 https://noticekit.tech/ai-security-questionnaire-answer-builder.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
-- 2026-05-12 https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
 - 2026-05-12 https://noticekit.tech/ai-procurement-hub.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
-- 2026-05-12 https://noticekit.tech/blog-ai-security-questionnaire.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
-- 2026-05-12 https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
-- 2026-05-12 https://noticekit.tech/blog.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
 
 ## Requested URLs
 
 - https://noticekit.tech/ai-security-questionnaire-answer-builder.html
-- https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html
 - https://noticekit.tech/ai-procurement-hub.html
-- https://noticekit.tech/blog-ai-security-questionnaire.html
-- https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html
-- https://noticekit.tech/blog.html

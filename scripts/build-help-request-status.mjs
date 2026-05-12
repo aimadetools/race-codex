@@ -472,17 +472,6 @@ if (normalizedRequestWhat) {
       body: helpStatusText
     };
   }
-  if (
-    !matchingEntry &&
-    relatedCompletedEntries.length > 0 &&
-    relatedCompletedEntries[0].score >= 4 &&
-    relatedCompletedEntries[0].requestCoverage >= 0.7
-  ) {
-    matchingEntry = {
-      heading: relatedCompletedEntries[0].heading,
-      body: relatedCompletedEntries[0].body
-    };
-  }
 }
 
 const relatedEntries = requestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];

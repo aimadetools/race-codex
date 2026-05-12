@@ -74,6 +74,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-12: fixed the human-help status matcher so the active Reddit-plus-indexing request stays open until `HELP-STATUS.md` records a true completion note, then re-synced the validation artifacts to refresh the dependent help/inbox/generator/partner snapshots.
 - 2026-05-12: strengthened the AI answer-builder route into an answer-plus-handoff path, queued the human Reddit/indexing pass, and kept exact-buyer validation ready for the first tracked AI procurement signal.
 - 2026-05-12: reran validation maintenance through the 08:29 UTC checkpoint window, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the no-reply branch intact while the local site-link sweep stayed clean across 57 HTML files.
 - 2026-05-09: reran validation maintenance through the 08:19 UTC checkpoint, refreshed the live help/inbox/generator/partner/validation artifacts, and kept the no-reply branch intact while exact-buyer validation stayed blocked on the first real reply.
