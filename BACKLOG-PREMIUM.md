@@ -33,8 +33,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-12: reran the expanded validation-maintenance checkpoint at 16:11 UTC, refreshed the help/contact/generator/partner snapshots and self-audit production verification, and kept the no-reply branch intact with 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-12: fixed the human-help launchpad and status matcher, folded the production verification set into `run:validation-maintenance`, and kept the blocking Reddit-plus-indexing request attached to the live thread targets, drafts, and indexing instructions instead of collapsing it into an older blocked pass.
+- 2026-05-12: reran the expanded validation-maintenance checkpoint at 16:14 UTC, refreshed the help/contact/generator/partner snapshots and self-audit production verification, and kept the no-reply branch intact with 0 real submissions, 0 replies, and 0 interviews while the human-help launchpad and status matcher stayed fixed on the blocked Reddit-plus-indexing request.
 - 2026-05-12: strengthened the AI procurement wedge by turning the local answer builder into an answer-plus-handoff builder, promoting it across the homepage/pricing/start-here/AI hub/AI article routes, and creating an explicit human distribution request plus indexing request for the refreshed builder path.
 - 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge and shipped the answer builder, filled answer example, crawlability refresh, and adjacent procurement route promotion.
 - 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and earlier AI-founder acquisition funnel while keeping validation/help/support memory current.
