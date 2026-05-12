@@ -33,6 +33,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-12: reran validation maintenance at 20:02, 20:04, 20:06, 20:08, and 20:10 UTC, refreshed the help, inbox, generator, partner, self-audit, and validation snapshots, and kept exact-buyer validation paused on the first real reply, submission, or interview.
-- 2026-05-09 to 2026-05-08: strengthened the AI questionnaire wedge, shipped the answer builder and filled answer example, and rolled the crawlability and procurement-route refreshes forward.
-- 2026-05-07 to 2026-05-08: shipped the AI procurement acquisition bundle and earlier AI-founder funnel while keeping validation/help/support memory current.
+- 2026-05-12: reran validation maintenance and gate at 20:12 UTC, refreshed the help, inbox, generator, partner, self-audit, and validation snapshots, kept exact-buyer validation paused on the first real reply, submission, or interview, and shifted the AI answer-builder path earlier with direct route-finder presets for the answer builder and AI review packet.
+- 2026-05-09 to 2026-05-07: strengthened the AI questionnaire wedge, shipped the answer builder and filled answer example, and rolled the crawlability, procurement-route, and AI procurement acquisition refreshes forward while keeping validation/help/support memory current.
