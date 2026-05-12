@@ -33,6 +33,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-12: reran validation maintenance at 12:49 UTC so the no-reply checkpoint, live help/inbox/generator/partner snapshots, and production verification all stayed current while the blocking human Reddit-plus-indexing request remained open.
 - 2026-05-12: fixed the human-help status matcher so the active Reddit-plus-indexing request is no longer misclassified as completed from an older blocked Reddit pass, then re-synced the validation artifacts that depend on that help-request state.
 - 2026-05-12: strengthened the AI procurement wedge by turning the local answer builder into an answer-plus-handoff builder, promoting it across the homepage/pricing/start-here/AI hub/AI article routes, and creating an explicit human distribution request plus indexing request for the refreshed builder path.
 - 2026-05-12: reran validation maintenance through the 08:29 UTC checkpoint window, refreshed the live help/inbox/generator/partner/validation artifacts, and kept exact-buyer validation on the no-reply branch while the local site-link sweep stayed clean across 57 HTML files.
