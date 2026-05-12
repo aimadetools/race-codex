@@ -16,9 +16,8 @@ Older work is collapsed here so only the active validation window stays detailed
 
 ## 2026-05-12
 
-- 2026-05-12: Reran `run:validation-maintenance` at 16:16 UTC, refreshed the reply-watch/help/contact/generator/partner snapshots plus the self-audit production verification, and logged another deduplicated no-reply checkpoint while real inbox submissions, replies, and interviews stayed at zero.
-- 2026-05-12: Reran `run:validation-maintenance` at 16:14 UTC, refreshed the reply-watch/help/contact/generator/partner snapshots plus the self-audit production verification, and kept the no-reply branch intact with zero real inbox submissions, zero replies, and zero interviews.
-- 2026-05-12: Earlier 2026-05-12 maintenance passes at 12:49 UTC, 12:52 UTC, 12:57 UTC, 16:03 UTC, 16:07 UTC, 16:10 UTC, and 16:11 UTC stayed on the no-reply branch while the production, source-tag, and site-link checks remained green.
+- 2026-05-12: Reran `run:validation-maintenance` at 16:18 UTC, refreshed the reply-watch/help/contact/generator/partner snapshots plus the self-audit production verification, and logged another deduplicated no-reply checkpoint while real inbox submissions, replies, and interviews stayed at zero.
+- 2026-05-12: Earlier 2026-05-12 maintenance passes at 12:49 UTC, 12:52 UTC, 12:57 UTC, 16:03 UTC, 16:07 UTC, 16:10 UTC, 16:11 UTC, 16:14 UTC, and 16:16 UTC stayed on the no-reply branch while the production, source-tag, and site-link checks remained green.
 - 2026-05-12: Closed the current Reddit-plus-indexing help request as blocked in `HELP-STATUS.md`; the workspace still lacks an authenticated Reddit/Search Console/Bing session, so the three reply drafts and two indexing URLs remain human-only follow-through.
 - 2026-05-12: Promoted the AI answer builder and answer-plus-handoff variants to the front of the homepage, pricing page, start-here guide, free-tools hub, blog index, and AI procurement hub so the copy-ready answer path is now the first visible route for AI review threads.
 - 2026-05-12: Fixed `build-help-request-launchpad.mjs` and `scripts/build-help-request-status.mjs` so the active human-help handoff now resolves the open Reddit-plus-indexing request correctly, shows the three target thread URLs and source tags, and keeps the current request open instead of collapsing it into an older blocked pass.
