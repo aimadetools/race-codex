@@ -16,7 +16,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-12
 
-- 2026-05-12: Linked `purchase-next-steps.html` from the pricing and kit-preview buyer flow, confirmed there is still no `DEPLOY-STATUS.md`, and ran the validation maintenance and gate passes through the 23:16 UTC checkpoint; the refresh touched the help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation snapshots, kept the queue at 0 real submissions, 0 replies, and 0 interviews, and left `check:source-tag-coverage` and `check:site-links` clean.
+- 2026-05-12: Linked `purchase-next-steps.html` from the pricing and kit-preview buyer flow, confirmed there is still no `DEPLOY-STATUS.md`, and ran the validation maintenance pass through the 23:18 UTC checkpoint; the refresh touched the help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation snapshots, kept the queue at 0 real submissions, 0 replies, and 0 interviews, and left `check:source-tag-coverage` and `check:site-links` clean while the no-reply checkpoint was deduplicated into `COMMUNITY-FEEDBACK.md`.
 
 ## Next Step
 
