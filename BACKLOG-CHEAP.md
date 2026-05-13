@@ -80,6 +80,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-13: converted the blocked Reddit starter-pack pass into a text-only follow-up retry by adding no-link reply variants for leads 1, 2, and 5, updating the active help request, and regenerating the launchpad/status handoff docs.
-- 2026-05-13: reran validation maintenance once, verified the live production intake endpoint with a marked teardown submission, shipped the AI questionnaire starter-pack wedge, and refreshed the human community-posting brief around that route.
+- 2026-05-13: shipped the AI questionnaire starter-pack wedge, verified the live production intake endpoint with a marked teardown submission, converted the blocked Reddit pass into a text-only follow-up retry for leads 1, 2, and 5, refreshed the human handoff docs, and reran validation maintenance through the 12:38 UTC checkpoint.
 - 2026-05-12 to 2026-05-09: reran validation maintenance and rolled the AI questionnaire wedge, answer-builder, example, crawlability, and procurement-route refreshes forward.
