@@ -24,6 +24,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-13: Retuned the AI questionnaire starter-pack routing across the homepage, pricing, AI hub, free-tools hub, blog routes, and adjacent operational-review pages; taught the starter-pack page to recognize community procurement traffic; and moved the reply pack plus help-request flow to text-only Reddit retries for leads 1, 2, and 5 after repeated `blocked-links` results.
 - 2026-05-13: Surfaced `purchase-next-steps.html` in the homepage and pricing flows, added a manual-fulfillment callout to the pricing page, and added return links on the purchase handoff page so buyers can see the checkout path before they commit.
 - 2026-05-13: Added source-aware routing to `ai-procurement-hub.html` so visitors from the starter pack, risk checklist, answer builder, packet, stack, preview, and partner pages see a tailored shortest-path callout before the generic hub flow.
+- 2026-05-13: Re-read the repo memory and status files, confirmed `DEPLOY-STATUS.md` is still absent, and cleaned up the live backlog/status context so the only remaining top work is still the first real reply or interview.
 
 ## Next Step
 
