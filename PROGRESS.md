@@ -17,6 +17,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-13
 
+- 2026-05-13: Promoted the AI questionnaire starter pack ahead of the broader AI review hub across the homepage, pricing, free-tools, and AI procurement pages, then revalidated the static site link graph after the copy and CTA reordering.
 - 2026-05-13: Reran the validation maintenance loop through the 20:29 UTC checkpoint, refreshed the contact inbox, help request, generator production, generator handoff, partner outreach, self-audit verify, and community feedback snapshots, and confirmed the site-link and source-tag coverage checks still pass with no real replies or intakes yet.
 - 2026-05-13: Ran the validation maintenance loop through the 20:27 UTC checkpoint, refreshed the community feedback, contact inbox, help request, generator, partner, and validation snapshots, confirmed the site-link sweep still has no missing local targets, and kept the workspace blocked on the first real reply, submission, or interview rather than any deployment issue.
 - 2026-05-13: Re-ran the production self-audit verification, confirmed the live API and private Blob inbox still accept and return the tagged founder/advisor test payloads, and deleted the synthetic records after the check.
