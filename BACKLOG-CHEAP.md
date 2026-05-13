@@ -19,7 +19,6 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If the first real builder-led reply or teardown request explicitly mentions internal handoff, counsel handoff, procurement handoff, or "send this to legal/security," record that wording in `COMMUNITY-FEEDBACK.md` before deciding whether handoff language should outrank the static answer-template framing.
 - If the human Reddit pass goes live and the first `community-ai-risk-assessment`, `community-ai-procurement-guide`, or `community-ai-procurement-teardown` click or reply appears, preserve the exact thread URL plus whether the visitor moved into the builder, packet, or teardown path before replying.
 - If the first real `community-ai-procurement-guide` click lands, record whether the visitor moved from the starter pack into the builder, filled example, static template, packet guide, sample packet, or teardown path before replying.
-- If the human reports `blocked-links` again for the starter-pack Reddit pass, prepare a text-only follow-up variant for the same three threads before requesting another community attempt.
 - If any of the three manual Reddit replies are posted successfully, keep those source tags in the next 72-hour inbox watch and add the public thread URLs to `COMMUNITY-FEEDBACK.md`.
 - When `HELP-STATUS.md` records `indexed-requested` for `ai-security-questionnaire-answer-builder.html` or `ai-procurement-hub.html`, re-run the local site-link sweep and keep those two URLs in the next indexing follow-through until one real visit, reply, or teardown lands.
 - If the answer builder drives three real visits, forwards, or replies before the static answer-template page does, move the builder higher than the template across the homepage AI wedge, AI procurement hub, free-tools hub, and blog index and note the source shift in `COMMUNITY-FEEDBACK.md`.
@@ -81,5 +80,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-13: converted the blocked Reddit starter-pack pass into a text-only follow-up retry by adding no-link reply variants for leads 1, 2, and 5, updating the active help request, and regenerating the launchpad/status handoff docs.
 - 2026-05-13: reran validation maintenance once, verified the live production intake endpoint with a marked teardown submission, shipped the AI questionnaire starter-pack wedge, and refreshed the human community-posting brief around that route.
 - 2026-05-12 to 2026-05-09: reran validation maintenance and rolled the AI questionnaire wedge, answer-builder, example, crawlability, and procurement-route refreshes forward.

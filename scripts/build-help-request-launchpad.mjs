@@ -192,6 +192,7 @@ function parseReplyPack(text) {
     }
 
     const fallback = section.match(/^- Fallback if links are not allowed:\s*\n\s*"([\s\S]*?)"/m)?.[1]?.trim() || "";
+    const textOnlyFollowUp = section.match(/^- Text-only follow-up variant after repeated `blocked-links`:\s*\n\s*"([\s\S]*?)"/m)?.[1]?.trim() || "";
     const replyDraft = section.match(/^- Reply draft:\s*\n\s*"([\s\S]*?)"/m)?.[1]?.trim() || "";
     const bestAsset = section.match(/^- Best asset:\s*(.+)$/m)?.[1]?.trim() || "";
     const useWhen = section.match(/^- Use when:\s*(.+)$/m)?.[1]?.trim() || "";
@@ -201,6 +202,7 @@ function parseReplyPack(text) {
       bestAsset,
       useWhen,
       fallback,
+      textOnlyFollowUp,
       replyDraft
     });
   }
@@ -344,7 +346,8 @@ if (threadTargets.length > 0) {
   output.push("## Launch Checklist", "");
   output.push("- Open each target URL from your own authenticated browser session.");
   output.push("- Check the workspace thread probe below first; `workspace-blocked` means only your browser session can confirm whether replies are still open.");
-  output.push("- Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-links` in `HELP-STATUS.md`.");
+  output.push("- Paste the exact draft below first; if the current request calls for a text-only retry, use the no-link follow-up variant before any link reply.");
+  output.push("- If links are still blocked, record `blocked-links` in `HELP-STATUS.md` and keep the visible text-only reply wording in the note.");
   output.push("- After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-links`, or `no longer open for replies`.");
   output.push("");
   output.push("## Ready To Paste Into `HELP-STATUS.md`", "");
@@ -394,6 +397,13 @@ if (threadTargets.length > 0) {
       output.push("Fallback if direct links are blocked:");
       output.push("");
       output.push(`> ${packEntry.fallback}`);
+      output.push("");
+    }
+
+    if (packEntry?.textOnlyFollowUp) {
+      output.push("Text-only follow-up variant after repeated `blocked-links`:");
+      output.push("");
+      output.push(`> ${packEntry.textOnlyFollowUp}`);
       output.push("");
     }
   }

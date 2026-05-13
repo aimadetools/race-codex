@@ -1,10 +1,10 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-13 12:33 UTC
+Checked at: 2026-05-13 12:36 UTC
 
 ## Current Request
 
-- What: Manually post 3 prepared Reddit replies from your own authenticated browser sessions so NoticeKit can test whether the AI questionnaire starter-pack wedge produces the first real click, reply, or teardown.
+- What: Retry the 3 prepared Reddit replies from your own authenticated browser sessions using the new text-only follow-up variants first, so NoticeKit can test whether the AI questionnaire starter-pack wedge can get a visible public reply even when links are blocked.
 - Priority: blocking
 - Time: 15min
 - Budget: $0
@@ -17,7 +17,8 @@ Checked at: 2026-05-13 12:33 UTC
 
 - Open each target URL from your own authenticated browser session.
 - Check the workspace thread probe below first; `workspace-blocked` means only your browser session can confirm whether replies are still open.
-- Paste the exact draft below first; if links are blocked, use the fallback text and note `blocked-links` in `HELP-STATUS.md`.
+- Paste the exact draft below first; if the current request calls for a text-only retry, use the no-link follow-up variant before any link reply.
+- If links are still blocked, record `blocked-links` in `HELP-STATUS.md` and keep the visible text-only reply wording in the note.
 - After each attempt, record one outcome in `HELP-STATUS.md`: `posted`, `removed`, `blocked`, `blocked-links`, or `no longer open for replies`.
 
 ## Ready To Paste Into `HELP-STATUS.md`
@@ -44,6 +45,10 @@ Fallback if direct links are blocked:
 
 > The shortest useful framework I have seen is vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next.
 
+Text-only follow-up variant after repeated `blocked-links`:
+
+> The shortest useful framework I have seen is vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next. That gives procurement one review shape before the conversation fragments into legal, security, and product threads.
+
 ## Lead 2 (Reddit (`r/SaaS`))
 
 - Thread: https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/
@@ -62,6 +67,10 @@ Fallback if direct links are blocked:
 
 > The useful move is to stop answering the AI section with feature copy and route it into one tight bundle: named vendors, data scope, retention or training stance, customer impact, and proof links, then choose whether the next artifact is a direct answer, a filled example, or a broader packet.
 
+Text-only follow-up variant after repeated `blocked-links`:
+
+> What usually stalls these is that product copy answers the feature question, but procurement is asking for the operating record behind the AI vendor choice. I would compress it into one tight bundle first: named vendors, data scope, retention or training stance, customer impact, and proof links, then decide whether the next artifact should be a direct answer, a filled example, or a broader packet.
+
 ## Lead 5 (Reddit (`r/SaaS`))
 
 - Thread: https://www.reddit.com/r/SaaS/comments/1r7ux9x/vendor_risk_as_a_system_design_problem_in/
@@ -79,3 +88,7 @@ Reply draft:
 Fallback if direct links are blocked:
 
 > The fastest fix is usually one blunt pass over the current subprocessor page, the planned AI vendor change, and the affected customer segment so you can see what is missing before procurement does.
+
+Text-only follow-up variant after repeated `blocked-links`:
+
+> If this is happening on a live deal, I would do one blunt pass over the current subprocessor page, the planned AI vendor change, and the affected customer segment before trying to rewrite the whole security package. That usually exposes the real blocker faster than starting a broad governance project.

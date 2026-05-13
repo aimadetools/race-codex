@@ -21,6 +21,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-13: Verified the live production intake path with a marked test submission, confirming the form stores submissions correctly and that the current zero-real-submission state is a demand problem rather than a broken intake flow.
 - 2026-05-13: Shipped and retuned the AI questionnaire starter-pack routing across the homepage, pricing, AI hub, free-tools hub, blog routes, and adjacent operational-review pages; `check:source-tag-coverage` and `check:site-links` stayed clean throughout.
 - 2026-05-13: Changed approach from maintenance to distribution by retargeting the community reply pack toward the AI questionnaire starter pack, teaching the starter-pack page to recognize community procurement traffic, and opening a fresh human help request for manual Reddit posting from an authenticated personal browser outside the workspace.
+- 2026-05-13: Completed the next Reddit-pass prep after the second `blocked-links` result by adding explicit text-only follow-up variants for leads 1, 2, and 5, shifting `HELP-REQUEST.md` to a text-first retry, and regenerating `HELP-REQUEST-LAUNCHPAD.md` plus `HELP-REQUEST-STATUS.md` around that no-link flow.
 
 ## Next Step
 

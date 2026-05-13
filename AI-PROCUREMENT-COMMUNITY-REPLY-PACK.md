@@ -26,7 +26,7 @@ The current human request only asks for three public replies:
 - Lead 2 in `r/SaaS`: use `community-ai-procurement-guide`
 - Lead 5 in `r/SaaS`: use `community-ai-procurement-teardown`
 
-Record one of these outcomes in `HELP-STATUS.md` for each thread: `posted`, `removed`, `blocked`, or `no longer open for replies`.
+Record one of these outcomes in `HELP-STATUS.md` for each thread: `posted`, `removed`, `blocked`, `blocked-links`, or `no longer open for replies`.
 
 If someone asks for a broad AI vendor assessment framework, start with the risk checklist and mention that the page now includes a downloadable worksheet. If they say the deal is already stuck on the AI section, start with the AI questionnaire starter pack. If they ask for help packaging their own live vendor change, prefer the teardown link. If they only want an example or structure, start with the sample or guide link.
 
@@ -36,7 +36,7 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 - Give one practical takeaway in plain language before dropping a link.
 - Keep the CTA narrow: sample packet, guide, stack template, or async teardown.
 - Do not imply NoticeKit reviewed their contract or can replace counsel.
-- If the thread is hostile to links, post the text-only takeaway first and keep the URL for a follow-up reply or DM.
+- If the thread is hostile to links, post the text-only follow-up variant first and keep the URL for a follow-up reply or DM only if the subreddit rules or the poster explicitly allow it.
 
 ## Lead-by-Lead Drafts
 
@@ -47,6 +47,8 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 - Exact source tag: `community-ai-risk-assessment`
 - Fallback if links are not allowed:
   "The shortest useful framework I have seen is vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next."
+- Text-only follow-up variant after repeated `blocked-links`:
+  "The shortest useful framework I have seen is vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next. That gives procurement one review shape before the conversation fragments into legal, security, and product threads."
 - Reply draft:
   "The useful shift is to stop treating this as 'one more AI questionnaire' and package it as one short assessment: vendor name, downstream model providers, data touched, retention or training stance, affected customer segment, notice timing, and the proof links procurement will ask for next. I put together that checklist here if it helps, and the page includes a downloadable worksheet: https://noticekit.tech/blog-ai-vendor-risk-assessment.html?source=community-ai-risk-assessment"
 
@@ -57,6 +59,8 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 - Exact source tag: `community-ai-procurement-guide`
 - Fallback if links are not allowed:
   "The useful move is to stop answering the AI section with feature copy and route it into one tight bundle: named vendors, data scope, retention or training stance, customer impact, and proof links, then choose whether the next artifact is a direct answer, a filled example, or a broader packet."
+- Text-only follow-up variant after repeated `blocked-links`:
+  "What usually stalls these is that product copy answers the feature question, but procurement is asking for the operating record behind the AI vendor choice. I would compress it into one tight bundle first: named vendors, data scope, retention or training stance, customer impact, and proof links, then decide whether the next artifact should be a direct answer, a filled example, or a broader packet."
 - Reply draft:
   "What usually stalls these is that product copy answers the feature question, but procurement is asking for the operating record behind the AI vendor choice. The useful move is to route the thread into the smallest artifact that can unblock it: a direct answer, a filled example, a template, a packet, or a teardown. I pulled those paths into one starter pack here: https://noticekit.tech/ai-security-questionnaire-starter-pack.html?source=community-ai-procurement-guide"
 
@@ -81,6 +85,8 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 - Exact source tag: `community-ai-procurement-teardown`
 - Fallback if links are not allowed:
   "The fastest fix is usually one blunt pass over the current subprocessor page, the planned AI vendor change, and the affected customer segment so you can see what is missing before procurement does."
+- Text-only follow-up variant after repeated `blocked-links`:
+  "If this is happening on a live deal, I would do one blunt pass over the current subprocessor page, the planned AI vendor change, and the affected customer segment before trying to rewrite the whole security package. That usually exposes the real blocker faster than starting a broad governance project."
 - Reply draft:
   "If this is happening on a live deal, the fastest fix is usually not a giant governance program. It is one blunt pass over the current subprocessor page, the planned AI vendor change, and the affected customer segment so you can see what is missing before procurement does. If useful, send one live URL here and I can point to the likely gaps: https://noticekit.tech/free-teardown.html?source=community-ai-procurement-teardown"
 
