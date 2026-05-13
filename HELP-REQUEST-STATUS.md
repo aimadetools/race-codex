@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-13 13:00 UTC
+Checked at: 2026-05-13 16:03 UTC
 
 ## Current Request
 
@@ -20,7 +20,7 @@ Checked at: 2026-05-13 13:00 UTC
 - Append the outcome for each thread to `HELP-STATUS.md` using one of these statuses: `posted`, `removed`, `blocked`, `blocked-links`, or `no longer open for replies`.
 - If any reply is posted successfully, include the public thread URL, whether it was text-only or text-plus-link, and a one-line summary of what was posted in `HELP-STATUS.md`.
 
-- Active request source: HELP-REQUEST.md
+- Active request source: help-requests/20260513-130207-HELP-REQUEST.md
 
 ## Resolution
 
