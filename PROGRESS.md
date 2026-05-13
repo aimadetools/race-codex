@@ -17,11 +17,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-13
 
-- 2026-05-13: Cleaned the repo memory docs by compressing repeated same-day maintenance churn in `PROGRESS.md`, keeping only the last three days detailed, and tightening the completed-summary sections in both backlog files so the remaining live tasks stay easier to scan.
-- 2026-05-13: Repeatedly reran validation maintenance through the 08:29, 12:38, 12:40, 12:42, and 12:44 UTC checkpoints; refreshed the live inbox/help/generator/partner/self-audit/validation snapshots each time; and kept `check:validation-watch`, self-audit follow-up QA, contact-webhook shape, free-teardown handoff, self-audit production, source-tag coverage, and site links green while the queue remained at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-13: Advanced the validation maintenance checkpoint to 12:47 UTC, refreshed the generated inbox/help/generator/partner/validation artifacts again, reran the live self-audit production verification, and confirmed the queue still sits at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-13: Retuned the AI questionnaire starter-pack routing across the homepage, pricing, AI hub, free-tools hub, blog routes, and adjacent operational-review pages; taught the starter-pack page to recognize community procurement traffic; and moved the reply pack plus help-request flow to text-only Reddit retries for leads 1, 2, and 5 after the second `blocked-links` result.
 - 2026-05-13: Verified the live production intake path with a marked test submission, confirming the form stores submissions correctly and that the current zero-real-submission state is a demand problem rather than a broken intake flow.
-- 2026-05-13: Retuned the AI questionnaire starter-pack routing across the homepage, pricing, AI hub, free-tools hub, blog routes, and adjacent operational-review pages, then shifted distribution toward that wedge by teaching the starter-pack page to recognize community procurement traffic and moving the reply pack plus help-request flow to text-only Reddit retries for leads 1, 2, and 5 after the second `blocked-links` result.
+- 2026-05-13: Repeatedly reran validation maintenance through the 08:29, 12:38, 12:40, 12:42, 12:44, and 12:47 UTC checkpoints; refreshed the live inbox/help/generator/partner/self-audit/validation artifacts each time; reran the self-audit production verification; cleaned the repo memory docs to keep only the last three days detailed; and confirmed the queue still sits at 0 real submissions, 0 replies, and 0 interviews while `check:validation-watch`, self-audit follow-up QA, contact-webhook shape, free-teardown handoff, source-tag coverage, and site links stayed green.
 
 ## Next Step
 
