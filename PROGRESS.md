@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-13: Surfaced `purchase-next-steps.html` in the homepage and pricing flows, added a manual-fulfillment callout to the pricing page, and added return links on the purchase handoff page so buyers can see the checkout path before they commit.
 - 2026-05-13: Reran the validation maintenance stack through the 16:12 UTC checkpoint, refreshed the live feedback, inbox, help, generator, partner, and validation snapshots, logged the deduplicated no-reply checkpoint, and confirmed the live site-link, source-tag coverage, generator, handoff, and contact checks stayed green while reply capture still waits on first real evidence and the Reddit/browser-session blocker remains unresolved.
 - 2026-05-13: Cleaned the repo memory docs so the progress log keeps only the last three days detailed and the backlog completion notes stay collapsed into summary lines.
+- 2026-05-13: Reran `run:validation-gate` through the 16:14 UTC checkpoint, refreshed the help, inbox, generator, partner, and validation status artifacts, and rechecked `check:site-links`, `check:source-tag-coverage`, and the validation gate with no local site break detected; the open help request remains blocked on the missing authenticated Reddit browser session.
 
 ## Next Step
 
