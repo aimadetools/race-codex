@@ -32,11 +32,12 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-13: Reran `npm run run:validation-maintenance` through the 20:10 UTC checkpoint, refreshed the community feedback, contact inbox, help request, generator, partner outreach, self-audit, and validation snapshots, and confirmed the repo is still blocked on first real evidence while the latest no-reply checkpoint and watch outputs stayed clean.
 - 2026-05-13: Reran `npm run run:validation-maintenance` through the 20:12 UTC checkpoint, refreshed the community feedback, contact inbox, help request, generator, partner outreach, self-audit, and validation snapshots, and confirmed the repo is still blocked on first real evidence while the latest no-reply checkpoint and watch outputs stayed clean.
 - 2026-05-13: Reran `npm run run:validation-maintenance` through the 20:15 UTC checkpoint, refreshed the community feedback, contact inbox, help request, generator, partner outreach, self-audit, and validation snapshots, and confirmed the repo is still blocked on first real evidence while the live watch stayed clean and no deployment issue surfaced.
+- 2026-05-13: Reran `npm run run:validation-maintenance` through the 20:17 UTC checkpoint, refreshed the community feedback, contact inbox, help request, generator, partner outreach, self-audit, and validation snapshots, and confirmed the repo is still blocked on first real evidence while the latest no-reply checkpoint, site-link sweep, and generator/handoff/contact checks stayed green.
 - 2026-05-13: Cleaned the repo memory docs so the progress log keeps only the last three days detailed and the backlog completion notes stay collapsed into summary lines.
 
 ## Next Step
 
 - Watch `HELP-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and `COMMUNITY-FEEDBACK.md` for the first result from the reopened community posting pass, especially `community-ai-procurement-guide`, `community-ai-risk-assessment`, and `community-ai-procurement-teardown`, while the Reddit/browser-session blocker remains unresolved.
-- Watch the refreshed 20:15 UTC validation snapshots for the first real reply, submission, or interview before making any new positioning changes.
+- Watch the refreshed 20:17 UTC validation snapshots for the first real reply, submission, or interview before making any new positioning changes.
 - If the first community click or reply lands through the starter-pack path, compare whether it moved into the builder, example, packet, or teardown branch before making another homepage or pricing shift.
 - Keep the live validation snapshots current until the first real reply, intake, or interview arrives; no further expansion is unlocked before evidence lands.
