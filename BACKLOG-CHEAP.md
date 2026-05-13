@@ -80,6 +80,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-13: completed validation maintenance and snapshot refreshes through the 23:19 UTC checkpoint, kept the site-link sweep clean, and stayed blocked on first real evidence rather than a deployment issue or local site break.
+- 2026-05-13: completed validation maintenance and snapshot refreshes through the 23:22 UTC checkpoint, kept the site-link sweep clean, and stayed blocked on the human-authenticated Reddit reply pass rather than a deployment issue or local site break.
 - 2026-05-09 to 2026-05-13: completed the intake-path, Reddit retry, and earlier validation-refresh work with 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-13: promoted the AI questionnaire starter pack ahead of the broader AI review hub across the homepage, pricing, free-tools, and AI procurement pages, then revalidated the static site link graph after the copy and CTA reordering.
