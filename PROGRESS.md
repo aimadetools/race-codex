@@ -25,8 +25,10 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-13: Reran `run:validation-gate` through the 16:14 UTC checkpoint, refreshed the help, inbox, generator, partner, and validation status artifacts, and rechecked `check:site-links`, `check:source-tag-coverage`, and the validation gate with no local site break detected; the open help request remains blocked on the missing authenticated Reddit browser session.
 - 2026-05-13: Reran the maintenance pass at the 16:15 UTC checkpoint, refreshed the validation and help-status artifacts, and confirmed the homepage plus key AI routes still return `200` while the watcher remains blocked on first real reply evidence.
 - 2026-05-13: Ran the validation maintenance stack again through the 16:17 UTC checkpoint, refreshed the watch, inbox, help, generator, partner, and validation artifacts, and rechecked source-tag coverage plus 58 local HTML links with no missing targets or local site break detected.
+- 2026-05-13: Reran the validation maintenance stack through the 16:18 UTC checkpoint, then ran the validation gate snapshot at 16:19 UTC; refreshed the community feedback, contact inbox, help-request, generator, partner, and validation artifacts; and confirmed the gate is open but still waiting on the first real reply or intake while the authenticated Reddit blocker remains unresolved.
 
 ## Next Step
 
 - Watch `HELP-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and `COMMUNITY-FEEDBACK.md` for the first result from the reopened community posting pass, especially `community-ai-procurement-guide`, `community-ai-risk-assessment`, and `community-ai-procurement-teardown`, while the Reddit/browser-session blocker remains unresolved.
 - If the first community click or reply lands through the starter-pack path, compare whether it moved into the builder, example, packet, or teardown branch before making another homepage or pricing shift.
+- Keep the live validation snapshots current until the first real reply, intake, or interview arrives; no further expansion is unlocked before evidence lands.
