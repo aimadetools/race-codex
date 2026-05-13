@@ -102,6 +102,17 @@
           </div>
         </section>
 
+        <section class="section" id="source-context-section" hidden>
+          <div class="context-band" aria-live="polite">
+            <div>
+              <span class="eyebrow">Source context</span>
+              <h2 id="source-context-title">Use the shortest route for the blocker you already found.</h2>
+              <p id="source-context-copy">This starter pack adapts to the page that brought you here so the next step stays tied to the live review problem instead of resetting the story.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+          </div>
+        </section>
+
         <section class="section">
           <div class="notice-band">
             <strong>Operational packaging, not legal advice.</strong>
@@ -272,6 +283,97 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+    <script>
+      const query = new URLSearchParams(window.location.search);
+      const normalizedSource = (query.get("source") || "").trim().toLowerCase();
+      const sourceContextSection = document.querySelector("#source-context-section");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+
+      const sourceContexts = [
+        {
+          match: (source) =>
+            source.startsWith("ai-vendor-risk-assessment") ||
+            source.startsWith("community-ai-risk-assessment"),
+          title: "You already identified a named AI vendor blocker.",
+          copy: "Do not restart with generic questionnaire theory. Move straight from the risk checklist into the artifact that answers the live review question cleanly.",
+          points: [
+            "Use the answer builder if the reviewer wants one copy-ready answer today.",
+            "Use the packet guide if the blocker already spans security, procurement, privacy, or counsel.",
+            "Use teardown if the real issue is deciding whether the vendor, scope, or proof story is still too weak."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-stack-template") ||
+            source.startsWith("community-ai-stack-guide"),
+          title: "You came from the AI stack or notice workflow.",
+          copy: "The vendor rows and notice dates already matter here. Use this pack to collapse that operating work into the buyer-facing answer or packet instead of keeping the review split across separate files.",
+          points: [
+            "Start with the packet guide if the public page, notice timing, and proof trail all need to stay aligned.",
+            "Use the sample packet if the team needs to see the finished shape before adapting the blank guide.",
+            "Use the answer builder only if the immediate request is one questionnaire row, not the broader packet."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-disclosure-packet") ||
+            source.startsWith("sample-ai-packet"),
+          title: "You already know this is a packet or proof problem.",
+          copy: "Stay close to the review artifact. Use the answer and example pages only when a single questionnaire row is blocking the broader packet from moving.",
+          points: [
+            "Keep the packet guide first if multiple reviewers need one shared artifact.",
+            "Use the filled answer example when the packet is fine but the questionnaire wording still sounds vague.",
+            "Use teardown if you want a blunt outside read before buying or expanding the packet."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-security-questionnaire") ||
+            source.startsWith("ai-questionnaire-builder") ||
+            source.startsWith("homepage-ai") ||
+            source.startsWith("blog-index-ai") ||
+            source.startsWith("pricing-ai") ||
+            source.startsWith("start-here-ai") ||
+            source.startsWith("free-tools-ai") ||
+            source.startsWith("ai-procurement-hub"),
+          title: "You came from an AI review route that was already close to the answer.",
+          copy: "Use this starter pack to pick the smallest artifact that can unblock the deal now instead of bouncing between the builder, template, packet, and teardown pages manually.",
+          points: [
+            "Use the answer builder for copy-ready wording and a clean internal handoff.",
+            "Use the filled example if you need to calibrate tone before writing your own answer.",
+            "Use the packet or teardown paths only if the review has already widened beyond one questionnaire row."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("audit-request") ||
+            source.startsWith("kit-preview"),
+          title: "You came from a buyer-intent page, so keep the next step narrow.",
+          copy: "If the live blocker is a questionnaire row, answer it first. If the blocker is package quality or trust in the operating trail, use the packet or teardown path instead of broad intake copy.",
+          points: [
+            "Use the answer builder when the buyer wants one founder-safe answer block now.",
+            "Use the packet guide when the review already needs evidence, notice timing, and reviewer handoff.",
+            "Use teardown if you still need a blunt recommendation on whether to buy, escalate, or rewrite."
+          ]
+        }
+      ];
+
+      const matchedContext = sourceContexts.find((context) => context.match(normalizedSource));
+      if (matchedContext) {
+        sourceContextTitle.textContent = matchedContext.title;
+        sourceContextCopy.textContent = matchedContext.copy;
+        sourceContextPoints.replaceChildren(
+          ...matchedContext.points.map((point) => {
+            const item = document.createElement("li");
+            item.textContent = point;
+            return item;
+          })
+        );
+        sourceContextSection.hidden = false;
+      }
+    </script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
