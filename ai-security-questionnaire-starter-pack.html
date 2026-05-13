@@ -349,13 +349,28 @@
         {
           match: (source) =>
             source.startsWith("audit-request") ||
-            source.startsWith("kit-preview"),
+            source.startsWith("kit-preview") ||
+            source.startsWith("partner-preview") ||
+            source.startsWith("partner-client-handoff"),
           title: "You came from a buyer-intent page, so keep the next step narrow.",
           copy: "If the live blocker is a questionnaire row, answer it first. If the blocker is package quality or trust in the operating trail, use the packet or teardown path instead of broad intake copy.",
           points: [
             "Use the answer builder when the buyer wants one founder-safe answer block now.",
             "Use the packet guide when the review already needs evidence, notice timing, and reviewer handoff.",
             "Use teardown if you still need a blunt recommendation on whether to buy, escalate, or rewrite."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("generator") ||
+            source.startsWith("self-audit") ||
+            source.startsWith("free-teardown"),
+          title: "You came from an operational workflow page, but the blocker is now AI review.",
+          copy: "Do not force a broader notice-workflow cleanup if the real delay is one AI vendor answer or packet request. Pick the smallest AI-specific artifact that can unblock the buyer first.",
+          points: [
+            "Use the answer builder if one questionnaire answer is all the reviewer needs today.",
+            "Use the filled example if the team needs tone and scope calibration before writing its own answer.",
+            "Use the packet or teardown path if the buyer now wants proof, supporting artifacts, or an outside recommendation."
           ]
         }
       ];
