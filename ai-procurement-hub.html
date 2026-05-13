@@ -39,7 +39,7 @@
               "url": "https://noticekit.tech/"
             },
             "datePublished": "2026-05-07",
-            "dateModified": "2026-05-09",
+            "dateModified": "2026-05-13",
             "mainEntityOfPage": "https://noticekit.tech/ai-procurement-hub.html"
           },
           {
@@ -112,6 +112,17 @@
             <strong>Operational help, not legal advice.</strong>
             <p>Use the hub to package the facts cleanly. Your agreements, privacy team, procurement team, and counsel still decide the final answer and notice obligations.</p>
           </div>
+
+          <section class="section" id="source-context-section" hidden>
+            <div class="context-band" aria-live="polite">
+              <div>
+                <span class="eyebrow">Source context</span>
+                <h2 id="source-context-title">Use the shortest AI route for the blocker you already found.</h2>
+                <p id="source-context-copy">This hub adapts to the page that brought you here so the next step stays tied to the live review problem instead of resetting the story.</p>
+              </div>
+              <ol class="context-points" id="source-context-points"></ol>
+            </div>
+          </section>
 
           <section>
             <h2>If you came here from a public thread, match the blocker and move</h2>
@@ -273,5 +284,123 @@
         </article>
       </main>
     </div>
+    <script>
+      const query = new URLSearchParams(window.location.search);
+      const normalizedSource = (query.get("source") || "").trim().toLowerCase();
+      const sourceContextSection = document.querySelector("#source-context-section");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+
+      const sourceContexts = [
+        {
+          match: (source) =>
+            source.startsWith("ai-security-questionnaire-starter-pack") ||
+            source.startsWith("homepage-ai-deal-blocker") ||
+            source.startsWith("free-tools-ai-deal-blocker") ||
+            source.startsWith("pricing-ai-deal-blocker") ||
+            source.startsWith("start-here-ai-deal-blocker") ||
+            source.startsWith("blog-index-ai-deal-blocker"),
+          title: "You already found the AI deal blocker.",
+          copy: "Stay close to the starter pack so the thread keeps moving toward the smallest artifact that can unblock the review.",
+          points: [
+            "Use the starter pack when the buyer wants the answer builder, example, template, packet, and teardown in one place.",
+            "Use the answer builder if one questionnaire row is the immediate blocker.",
+            "Use the packet or teardown paths only if the review has widened beyond one answer."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-vendor-risk-assessment") ||
+            source.startsWith("homepage-ai-risk-assessment") ||
+            source.startsWith("free-tools-ai-risk-assessment") ||
+            source.startsWith("pricing-ai-risk-assessment") ||
+            source.startsWith("start-here-ai-risk-assessment") ||
+            source.startsWith("blog-index-ai-risk-assessment"),
+          title: "You already pinned down the named vendor question.",
+          copy: "Use the checklist result to decide whether the blocker is the vendor chain, the data scope, or the proof trail.",
+          points: [
+            "Use the starter pack if the review now needs the answer builder, example, packet, or teardown.",
+            "Use the worksheet when you still need to collect the vendor facts cleanly.",
+            "Use the answer builder once the reviewer is ready for a copy-ready response."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-security-questionnaire-answer-builder") ||
+            source.startsWith("homepage-ai-answer-builder") ||
+            source.startsWith("free-tools-ai-answer-builder") ||
+            source.startsWith("pricing-ai-answer-builder") ||
+            source.startsWith("start-here-ai-answer-builder") ||
+            source.startsWith("blog-index-ai-answer-builder"),
+          title: "You already need a written answer.",
+          copy: "Keep the review narrow. The answer builder is the fastest path when one copy-ready response block is what the reviewer wants next.",
+          points: [
+            "Use the builder for the answer plus handoff note.",
+            "Use the example if the wording still needs calibration.",
+            "Use the packet guide only if the thread is moving past a single questionnaire row."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-disclosure-packet") ||
+            source.startsWith("sample-ai-packet") ||
+            source.startsWith("homepage-ai-disclosure-packet") ||
+            source.startsWith("free-tools-ai-packet") ||
+            source.startsWith("pricing-ai-disclosure-packet"),
+          title: "You already know this is a packet problem.",
+          copy: "Stay close to the review artifact. The packet guide and sample packet are the shortest routes when the thread has widened beyond one questionnaire answer.",
+          points: [
+            "Use the packet guide for the cleaner founder-ready or procurement-ready structure.",
+            "Use the sample packet when the blank guide still feels too abstract.",
+            "Use teardown if you want a blunt recommendation before buying or escalating."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-stack-template") ||
+            source.startsWith("homepage-ai-stack-guide") ||
+            source.startsWith("free-tools-ai-stack-guide") ||
+            source.startsWith("pricing-ai-stack-guide") ||
+            source.startsWith("start-here-ai-stack-guide"),
+          title: "You came from the AI stack route.",
+          copy: "Use the named vendor rows and notice wording to collapse the operating work into the buyer-facing answer or packet.",
+          points: [
+            "Use the AI stack guide when the public vendor list still reads too generic.",
+            "Use the packet guide when notice timing and proof need to travel together.",
+            "Use the answer builder when the blocker is only one questionnaire row."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("review-brief-builder") ||
+            source.startsWith("sample-teardown") ||
+            source.startsWith("kit-preview") ||
+            source.startsWith("partner-preview") ||
+            source.startsWith("partner-client-handoff"),
+          title: "You already mapped the workflow. Now narrow the AI review path.",
+          copy: "The brief, teardown, preview, or partner page already did the cleanup. Use this hub to move that work into the smallest AI-specific artifact.",
+          points: [
+            "Use the starter pack if you still need to choose between the builder, example, template, packet, or teardown.",
+            "Use the answer builder if one reviewer needs a clean response block.",
+            "Use the packet or partner path if the blocker has widened into a fuller handoff."
+          ]
+        }
+      ];
+
+      const matchedContext = sourceContexts.find((context) => context.match(normalizedSource));
+      if (matchedContext) {
+        sourceContextTitle.textContent = matchedContext.title;
+        sourceContextCopy.textContent = matchedContext.copy;
+        sourceContextPoints.replaceChildren(
+          ...matchedContext.points.map((point) => {
+            const item = document.createElement("li");
+            item.textContent = point;
+            return item;
+          })
+        );
+        sourceContextSection.hidden = false;
+      }
+    </script>
   </body>
 </html>
