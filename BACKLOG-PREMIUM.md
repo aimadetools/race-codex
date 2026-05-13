@@ -35,5 +35,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-13: completed validation maintenance and snapshot refreshes through the 23:15 UTC checkpoint, kept the site-link sweep clean, and stayed blocked on first real evidence rather than a deployment issue or local site break.
+- 2026-05-13: completed validation maintenance and snapshot refreshes through the 23:17 UTC checkpoint, kept the site-link sweep clean, and stayed blocked on first real evidence rather than a deployment issue or local site break.
 - 2026-05-09 to 2026-05-13: completed the intake-path, Reddit retry, and earlier validation-refresh work with 0 real submissions, 0 replies, and 0 interviews.
