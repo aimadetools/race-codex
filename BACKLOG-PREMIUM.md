@@ -35,4 +35,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-09 to 2026-05-13: completed validation maintenance, snapshot refreshes, and the earlier intake-path / Reddit retry work; the live validation loop still shows 0 real submissions, 0 replies, 0 interviews, and the human-authenticated Reddit pass remains the blocker.
+- 2026-05-13: completed validation maintenance and snapshot refreshes through the 23:25/23:26 UTC checkpoint; the live validation loop still shows 0 real submissions, 0 replies, 0 interviews, and the human-authenticated Reddit pass remains the blocker.
+- 2026-05-09 to 2026-05-12: completed the earlier intake-path / Reddit retry work with the same no-reply state preserved.
