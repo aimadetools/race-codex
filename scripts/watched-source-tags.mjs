@@ -45,6 +45,7 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-stack-template-brief-builder",
   "ai-stack-template-download-pricing",
   "ai-stack-template-download-teardown",
+  "ai-stack-template-starter-pack",
   "ai-stack-template-teardown",
   "ai-stack-template-pricing",
   "free-tools-hero",
