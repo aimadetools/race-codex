@@ -78,6 +78,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-13: verified the live production intake endpoint with a marked teardown submission so the zero-real-submission state is now confirmed as a demand problem rather than a broken form.
-- 2026-05-13: shipped the AI questionnaire starter-pack landing page, promoted it through homepage/blog/free-tools/start-here/pricing/AI hub, extended routing from the questionnaire, builder, packet, risk-assessment, and AI-stack surfaces, and kept watcher coverage aligned with the new starter-pack entry tags.
+- 2026-05-13: shipped the AI questionnaire starter-pack landing page, promoted it through homepage/blog/free-tools/start-here/pricing/AI hub, extended routing from the questionnaire, builder, packet, risk-assessment, AI-stack, AI notice-template, audit-request, and kit-preview surfaces, added source-aware starter-pack guidance by inbound route, and kept watcher coverage aligned with the new starter-pack entry tags.
 - 2026-05-12: reran validation maintenance through the 23:29 UTC checkpoint; the live inbox, help, generator, partner, self-audit, community-feedback, launchpad, and validation status docs stayed refreshed, the backlog remained evidence-gated with 0 real replies, submissions, or interviews, and the help-request wording stayed normalized back to `blocked-links`.
 - 2026-05-08 to 2026-05-09: strengthened the AI questionnaire wedge, shipped the answer builder and filled example, and rolled the crawlability and AI-procurement refreshes forward.
