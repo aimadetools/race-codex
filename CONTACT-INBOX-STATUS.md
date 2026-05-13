@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-13 04:25 UTC
+Checked at: 2026-05-13 04:30 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -83,7 +83,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-subprocessor-page-checker-teardown: 0
 - blog-subprocessor-page-checker-pricing: 0
 - blog-subprocessor-page-checker-partner: 0
+- blog-subprocessor-page-checker-ai-deal-blocker: 0
 - blog-vendor-change-review-packet: 0
+- blog-vendor-change-review-packet-ai-deal-blocker: 0
 - blog-dpa-objection-window-template: 0
 - blog-dpa-objection-window-cta: 0
 - blog-index: 0
@@ -143,10 +145,12 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-route-finder: 0
 - review-brief-builder-teardown: 0
 - review-brief-builder-partner: 0
+- review-brief-builder-ai-deal-blocker: 0
 - sample-teardown-hero: 0
 - sample-teardown-cta: 0
 - sample-teardown-partner: 0
 - sample-teardown-ai-packet: 0
+- sample-teardown-ai-deal-blocker: 0
 - kit-preview-hero: 0
 - kit-preview-grid: 0
 - kit-preview-bottom: 0

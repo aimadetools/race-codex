@@ -372,6 +372,20 @@
             "Use the filled example if the team needs tone and scope calibration before writing its own answer.",
             "Use the packet or teardown path if the buyer now wants proof, supporting artifacts, or an outside recommendation."
           ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("blog-subprocessor-page-checker") ||
+            source.startsWith("review-brief-builder") ||
+            source.startsWith("blog-vendor-change-review-packet") ||
+            source.startsWith("sample-teardown"),
+          title: "You already mapped the operational workflow. Now answer the AI review blocker directly.",
+          copy: "The page score, review brief, packet outline, or teardown already did the workflow cleanup. Use this starter pack to turn that work into the shortest AI-specific answer, example, or packet instead of restarting from a generic notice flow.",
+          points: [
+            "Use the answer builder when the blocker is one buyer or security reviewer waiting on a direct AI answer.",
+            "Use the filled example when the facts are mostly ready but the response still needs tone and scope calibration.",
+            "Use the packet or teardown paths if the blocker has widened into counsel handoff, supporting proof, or a multi-reviewer packet."
+          ]
         }
       ];
 
