@@ -60,36 +60,41 @@
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://noticekit.tech/ai-procurement-hub.html"
+            "url": "https://noticekit.tech/ai-security-questionnaire-starter-pack.html"
           },
           {
             "@type": "ListItem",
             "position": 8,
-            "url": "https://noticekit.tech/blog-ai-vendor-risk-assessment.html"
+            "url": "https://noticekit.tech/ai-procurement-hub.html"
           },
           {
             "@type": "ListItem",
             "position": 9,
-            "url": "https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html"
+            "url": "https://noticekit.tech/blog-ai-vendor-risk-assessment.html"
           },
           {
             "@type": "ListItem",
             "position": 10,
-            "url": "https://noticekit.tech/ai-security-questionnaire-answer-builder.html"
+            "url": "https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html"
           },
           {
             "@type": "ListItem",
             "position": 11,
-            "url": "https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html"
+            "url": "https://noticekit.tech/ai-security-questionnaire-answer-builder.html"
           },
           {
             "@type": "ListItem",
             "position": 12,
-            "url": "https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html"
+            "url": "https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html"
           },
           {
             "@type": "ListItem",
             "position": 13,
+            "url": "https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
             "url": "https://noticekit.tech/blog-ai-security-questionnaire.html"
           }
         ]
@@ -115,7 +120,7 @@
         <section class="page-hero">
           <span class="eyebrow">Free toolkit</span>
           <h1>Use the free tools before you buy the kit.</h1>
-          <p>This hub collects the strongest no-call NoticeKit assets in one place: draft the notice, score the workflow, check the public page, calculate the deadline, build the tracker, answer the AI section of a buyer questionnaire, or send one URL for a blunt async teardown.</p>
+          <p>This hub collects the strongest no-call NoticeKit assets in one place: draft the notice, score the workflow, check the public page, calculate the deadline, build the tracker, start with the AI questionnaire starter pack, answer the AI section of a buyer questionnaire, or send one URL for a blunt async teardown.</p>
           <div class="hero-actions">
             <a class="button" href="generator.html?source=free-tools-generator">Open generator</a>
             <a class="button secondary" href="free-teardown.html?source=free-tools-hero">Request free teardown</a>
@@ -435,75 +440,97 @@
             secondaryLabel: "Request partner access",
           };
         } else if (topic === "ai-procurement") {
-          if (need === "package-preview") {
+          if (need === "public-page") {
             recommendation = {
-              title: "See the filled AI packet example.",
-              summary: "You want a concrete artifact before you decide what to send, so start with the sample packet and work backward to the guide that fits.",
+              title: "Open the AI procurement hub.",
+              summary: "You are dealing with procurement, security, or counsel pressure on the public workflow, so the hub is the shortest path to the right AI review asset.",
               bullets: [
-                "Best when the blank template still feels abstract",
-                "Shows how the facts, timing, and proof trail fit together",
-                "Useful for founders and advisors"
+                "Routes to the questionnaire, packet, sample, stack guide, or teardown",
+                "Best when the blocker is broader than one questionnaire row",
+                "Keeps the AI path separate from the general notice workflow"
               ],
-              primaryHref: "sample-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
-              primaryLabel: "See sample packet",
-              secondaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
-              secondaryLabel: "Open review pack",
+              primaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
+              primaryLabel: "Open review pack",
+              secondaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
+              secondaryLabel: "Open page checker",
             };
-          } else if (need === "written-answer" && frequency === "once") {
+          } else if (need === "package-preview") {
             recommendation = {
-              title: "Open the AI risk checklist.",
-              summary: "You need to assess the named vendor or chain first, so start with the checklist before you expand into a packet or questionnaire.",
+              title: "Start with the AI questionnaire starter pack.",
+              summary: "You want a concrete AI review path before you choose the artifact, so the starter pack keeps the answer builder, example, packet, and teardown together.",
               bullets: [
-                "Best for the first pass on a named vendor",
-                "Keeps the review focused on facts, scope, and proof",
-                "Works well before a one-off buyer question turns into a bigger thread"
+                "Best when the AI blocker is already visible but not yet specific",
+                "Shows the answer builder, example, packet, and teardown in one place",
+                "Helps founders and advisors choose the smallest next artifact"
               ],
-              primaryHref: "blog-ai-vendor-risk-assessment.html?source=free-tools-route-finder",
-              primaryLabel: "Open risk checklist",
-              secondaryHref: "ai-vendor-risk-assessment-worksheet.html?source=free-tools-route-finder",
-              secondaryLabel: "Open worksheet",
+              primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+              primaryLabel: "Open starter pack",
+              secondaryHref: "blog-ai-security-questionnaire-answer-example.html?source=free-tools-route-finder",
+              secondaryLabel: "See filled example",
+            };
+          } else if (need === "written-answer") {
+            recommendation = {
+              title: "Start with the AI questionnaire starter pack.",
+              summary: frequency === "repeat"
+                ? "You are likely to face the same AI review again, so the starter pack keeps the reusable answer, example, and packet paths together."
+                : "You want a clean written answer now, so the starter pack gets you to the builder without losing the packet or teardown routes.",
+              bullets: frequency === "repeat"
+                ? [
+                    "Best when procurement pressure is likely to repeat",
+                    "Keeps the answer builder, example, packet, and teardown in one place",
+                    "Good fit when the review is still changing shape"
+                  ]
+                : [
+                    "Best when one buyer questionnaire is blocking the deal",
+                    "Gets you to a copy-ready answer with less wandering",
+                    "Keeps the packet and teardown path one click away"
+                  ],
+              primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+              primaryLabel: "Open starter pack",
+              secondaryHref: "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
+              secondaryLabel: "Open answer builder",
             };
           } else if (need === "files-now") {
             recommendation = frequency === "repeat"
               ? {
-                  title: "Open the AI disclosure packet guide.",
-                  summary: "You need a reusable packet more than a one-off answer, so start with the artifact that folds vendor facts, timing, and reviewer questions into one place.",
+                  title: "Start with the AI questionnaire starter pack.",
+                  summary: "You need reusable AI review files, and the starter pack is the fastest way to compare the packet, example, builder, and teardown paths.",
                   bullets: [
                     "Best for procurement, security, or counsel review",
                     "Useful when the same cleanup keeps repeating",
                     "Pairs well with the sample packet"
                   ],
-                  primaryHref: "blog-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
-                  primaryLabel: "Open packet guide",
-                  secondaryHref: "sample-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
-                  secondaryLabel: "See sample packet",
+                  primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+                  primaryLabel: "Open starter pack",
+                  secondaryHref: "blog-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open packet guide",
                 }
               : {
-                  title: "Open the AI answer builder.",
-                  summary: "You need a clean written answer now, so start with the builder before the thread turns into a generic policy request.",
+                  title: "Start with the AI questionnaire starter pack.",
+                  summary: "You need a clean written answer now, and the starter pack gets you to the builder before the thread turns into a generic policy request.",
                   bullets: [
                     "Best when the blocker is one buyer questionnaire",
                     "Generates a copy-ready answer plus proof checklist",
                     "Keeps procurement pressure contained"
                   ],
-                  primaryHref: "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
-                  primaryLabel: "Open answer builder",
-                  secondaryHref: "blog-ai-security-questionnaire.html?source=free-tools-route-finder",
-                  secondaryLabel: "Open questionnaire guide",
+                  primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+                  primaryLabel: "Open starter pack",
+                  secondaryHref: "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open answer builder",
                 };
           } else {
             recommendation = {
-              title: "Open the AI procurement hub.",
-              summary: "You are dealing with questionnaire, disclosure packet, or counsel pressure, so the hub is the shortest path to the right AI review asset.",
+              title: "Start with the AI questionnaire starter pack.",
+              summary: "You are dealing with questionnaire, disclosure packet, or counsel pressure, and the starter pack is the shortest path to the right AI review asset.",
               bullets: [
                 "Routes to the questionnaire, packet, sample, stack guide, or teardown",
                 "Best when procurement or security review is the blocker",
                 "Keeps the AI path separate from the general notice workflow"
               ],
-              primaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
-              primaryLabel: "Open review pack",
-              secondaryHref: "sample-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
-              secondaryLabel: "See sample packet",
+              primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+              primaryLabel: "Open starter pack",
+              secondaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
+              secondaryLabel: "Open review pack",
             };
           }
         } else if (need === "files-now") {
