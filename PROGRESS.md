@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-13: Surfaced `purchase-next-steps.html` in the homepage and pricing flows, added a manual-fulfillment callout to the pricing page, and added return links on the purchase handoff page so buyers can see the checkout path before they commit.
 - 2026-05-13: Reran the validation maintenance stack through the 16:25 UTC checkpoint, refreshed the live feedback, inbox, help, generator, partner, and validation snapshots, logged the deduplicated no-reply checkpoint, and confirmed the live site-link, source-tag coverage, generator, handoff, and contact checks stayed green while reply capture still waits on first real evidence and the Reddit/browser-session blocker remains unresolved.
 - 2026-05-13: Reran validation maintenance through the 16:27 UTC checkpoint, refreshed the live feedback, inbox, help, generator, handoff, partner, and validation snapshots, and confirmed the repo still has no real replies, submissions, or interviews to process.
+- 2026-05-13: Reran validation maintenance through the 16:29 UTC checkpoint, refreshed the live feedback, inbox, help, generator, handoff, partner, and validation snapshots, and confirmed the repo is still blocked on first real buyer evidence rather than any local site or deploy issue.
 - 2026-05-13: Cleaned the repo memory docs so the progress log keeps only the last three days detailed and the backlog completion notes stay collapsed into summary lines.
 
 ## Next Step
