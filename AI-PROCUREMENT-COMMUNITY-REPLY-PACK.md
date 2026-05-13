@@ -1,6 +1,6 @@
 # AI Procurement Community Reply Pack
 
-Date: 2026-05-07
+Date: 2026-05-13
 
 ## Purpose
 
@@ -12,7 +12,7 @@ Use this only where the forum rules allow a direct reply and only when the reply
 
 - AI risk checklist: `https://noticekit.tech/blog-ai-vendor-risk-assessment.html?source=community-ai-risk-assessment`
 - Downloadable AI risk worksheet: available from the AI risk checklist page
-- AI questionnaire answer template: `https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html?source=community-ai-procurement-guide`
+- AI questionnaire starter pack: `https://noticekit.tech/ai-security-questionnaire-starter-pack.html?source=community-ai-procurement-guide`
 - Sample AI packet: `https://noticekit.tech/sample-ai-vendor-disclosure-packet.html?source=community-ai-procurement-sample`
 - AI packet guide: `https://noticekit.tech/blog-ai-vendor-disclosure-packet.html?source=community-ai-procurement-guide`
 - AI stack guide: `https://noticekit.tech/blog-ai-saas-subprocessor-list-template.html?source=community-ai-stack-guide`
@@ -28,7 +28,7 @@ The current human request only asks for three public replies:
 
 Record one of these outcomes in `HELP-STATUS.md` for each thread: `posted`, `removed`, `blocked`, or `no longer open for replies`.
 
-If someone asks for a broad AI vendor assessment framework, start with the risk checklist and mention that the page now includes a downloadable worksheet. If they ask for help packaging their own live vendor change, prefer the teardown link. If they only want an example or structure, start with the sample or guide link.
+If someone asks for a broad AI vendor assessment framework, start with the risk checklist and mention that the page now includes a downloadable worksheet. If they say the deal is already stuck on the AI section, start with the AI questionnaire starter pack. If they ask for help packaging their own live vendor change, prefer the teardown link. If they only want an example or structure, start with the sample or guide link.
 
 ## Shared Reply Rules
 
@@ -52,13 +52,13 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 
 ### 2. `r/SaaS` enterprise security questionnaire with AI section
 
-- Best asset: AI packet guide
-- Use when: the founder is blocked on how to answer procurement cleanly
+- Best asset: AI questionnaire starter pack
+- Use when: the founder is blocked on the AI section and needs the shortest route into the right artifact
 - Exact source tag: `community-ai-procurement-guide`
 - Fallback if links are not allowed:
-  "The tighter answer bundle is vendor facts, subprocessors or model providers, retention or training stance, notice obligations, and owner or proof links in one packet instead of spreading them across product copy and legal docs."
+  "The useful move is to stop answering the AI section with feature copy and route it into one tight bundle: named vendors, data scope, retention or training stance, customer impact, and proof links, then choose whether the next artifact is a direct answer, a filled example, or a broader packet."
 - Reply draft:
-  "What usually stalls these is that product copy answers the feature question, but procurement is asking for the operating record behind the AI vendor choice. A tighter answer bundle is vendor facts, subprocessors/model providers, retention/training stance, customer scope, notice obligations, and owner/proof links in one answer block before you expand into a bigger packet. I wrote up that structure here: https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html?source=community-ai-procurement-guide"
+  "What usually stalls these is that product copy answers the feature question, but procurement is asking for the operating record behind the AI vendor choice. The useful move is to route the thread into the smallest artifact that can unblock it: a direct answer, a filled example, a template, a packet, or a teardown. I pulled those paths into one starter pack here: https://noticekit.tech/ai-security-questionnaire-starter-pack.html?source=community-ai-procurement-guide"
 
 ### 3. `r/CIO` internal IT security review with stale subprocessor data
 
@@ -122,6 +122,7 @@ If someone asks for a broad AI vendor assessment framework, start with the risk 
 
 ## Escalation Paths
 
+- If someone asks "our deal is stuck on the AI section," send the AI questionnaire starter pack.
 - If someone asks "can you look at our page?" send the teardown link.
 - If someone asks "what should this packet include?" send the guide link.
 - If someone asks "show me a finished version," send the sample link.

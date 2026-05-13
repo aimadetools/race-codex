@@ -20,7 +20,7 @@ Exactly 10 public leads from the last 90 days that mention AI vendor procurement
    Platform: Reddit (`r/SaaS`)
    Company or author: Reddit user in `r/SaaS`
    Summary: A founder says an AI section in an enterprise security questionnaire stalled a deal in late April 2026 because procurement wanted framework-cited answers instead of feature copy.
-   Best NoticeKit asset: `blog-ai-vendor-disclosure-packet.html`
+   Best NoticeKit asset: `ai-security-questionnaire-starter-pack.html`
    Recommended source tag: `community-ai-procurement-guide`
    Human reply status on 2026-05-08: include this in the current 3-thread reply pass.
 
@@ -84,4 +84,4 @@ Exactly 10 public leads from the last 90 days that mention AI vendor procurement
 
 ## Current Priority Pass
 
-The open 2026-05-08 human request only targets leads 1, 2, and 5. Use the matching draft in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md`, keep the source tag exactly as listed above, and record the outcome in `HELP-STATUS.md` as `posted`, `removed`, `blocked`, or `no longer open for replies`.
+The active 2026-05-13 human request only targets leads 1, 2, and 5. Use the matching draft in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md`, keep the source tag exactly as listed above, and record the outcome in `HELP-STATUS.md` as `posted`, `removed`, `blocked`, `blocked-links`, or `no longer open for replies`.
