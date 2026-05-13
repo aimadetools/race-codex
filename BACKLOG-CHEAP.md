@@ -77,6 +77,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-13: added starter-pack entry routes from the AI questionnaire guide, template, and filled example so AI-review traffic can collapse into the route-finder wedge before branching into the builder or packet paths.
 - 2026-05-13: promoted the AI questionnaire starter-pack wedge into `pricing.html` and `ai-procurement-hub.html`, fixed the starter-pack-to-free-tools source attribution, and added watched source-tag coverage for the new entry paths.
 - 2026-05-13: verified the live production intake endpoint with a marked teardown submission that was stored and classified as a likely test, shipped the AI questionnaire starter-pack landing page, and added watcher coverage for the new starter-pack and entry-point source tags.
 - 2026-05-12: reran validation maintenance through the 23:29 UTC checkpoint; the live inbox, help, generator, partner, self-audit, community-feedback, launchpad, and validation status docs stayed refreshed, the backlog remained evidence-gated with 0 real replies, submissions, or interviews, and the help-request wording stayed normalized back to `blocked-links`.
