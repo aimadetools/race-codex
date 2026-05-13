@@ -1,6 +1,6 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-12 23:29 UTC
+Checked at: 2026-05-13 04:13 UTC
 
 ## Current Request
 
@@ -22,9 +22,9 @@ Checked at: 2026-05-12 23:29 UTC
 
 ## Ready To Paste Into `HELP-STATUS.md`
 
-- 2026-05-12 lead 1 (Reddit (`r/procurement`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
-- 2026-05-12 lead 2 (Reddit (`r/SaaS`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
-- 2026-05-12 lead 5 (Reddit (`r/SaaS`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-13 lead 1 (Reddit (`r/procurement`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-13 lead 2 (Reddit (`r/SaaS`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
+- 2026-05-13 lead 5 (Reddit (`r/SaaS`)): <posted|removed|blocked|blocked-links|no longer open for replies>; add short note or visible reply summary here
 
 ## Lead 1 (Reddit (`r/procurement`))
 
@@ -112,8 +112,8 @@ Fallback if direct links are blocked:
 
 ## Ready To Paste Indexing Lines Into `HELP-STATUS.md`
 
-- 2026-05-12 https://noticekit.tech/ai-security-questionnaire-answer-builder.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
-- 2026-05-12 https://noticekit.tech/ai-procurement-hub.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
+- 2026-05-13 https://noticekit.tech/ai-security-questionnaire-answer-builder.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
+- 2026-05-13 https://noticekit.tech/ai-procurement-hub.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
 
 ## Requested URLs
 

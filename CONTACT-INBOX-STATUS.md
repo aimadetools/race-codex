@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-13 04:02 UTC
+Checked at: 2026-05-13 04:13 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -91,6 +91,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-packet: 0
 - blog-index-ai-packet-sample: 0
 - blog-index-ai-risk-assessment: 0
+- blog-index-ai-deal-blocker: 0
 - blog-index-ai-risk-worksheet: 0
 - blog-index-ai-questionnaire-template: 0
 - blog-index-ai-questionnaire-example: 0
@@ -119,6 +120,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-hero: 0
 - free-tools-hero-ai-procurement: 0
 - free-tools-ai-stack-guide: 0
+- free-tools-ai-deal-blocker: 0
 - free-tools-ai-answer-builder: 0
 - free-tools-ai-questionnaire-template: 0
 - free-tools-ai-questionnaire-example: 0
@@ -149,6 +151,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here: 0
 - start-here-card: 0
 - start-here-ai-risk-assessment: 0
+- start-here-ai-deal-blocker: 0
 - start-here-ai-risk-worksheet: 0
 - start-here-ai-disclosure-packet: 0
 - start-here-ai-packet-sample: 0
@@ -167,6 +170,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-answer-builder: 0
 - homepage-ai-packet-sample: 0
 - homepage-ai-risk-assessment: 0
+- homepage-ai-deal-blocker: 0
 - homepage-ai-risk-worksheet: 0
 - homepage-ai-procurement: 0
 - homepage-shortcut: 0
@@ -174,6 +178,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - audit-request-ai-packet: 0
 - audit-request-ai-stack: 0
 - pricing-ai-disclosure-packet: 0
+- pricing-ai-deal-blocker: 0
 - pricing-ai-procurement: 0
 - pricing-ai-risk-assessment: 0
 - pricing-ai-risk-worksheet: 0
@@ -194,9 +199,20 @@ Source of truth: Vercel Blob `contact-submissions/`
 - community-ai-procurement-teardown: 0
 - community-ai-procurement-notice: 0
 - ai-security-questionnaire-guide: 0
+- ai-security-questionnaire-guide-starter-pack: 0
+- ai-security-questionnaire-starter-pack-builder: 0
+- ai-security-questionnaire-starter-pack-example: 0
+- ai-security-questionnaire-starter-pack-free-tools: 0
+- ai-security-questionnaire-starter-pack-template: 0
+- ai-security-questionnaire-starter-pack-packet: 0
+- ai-security-questionnaire-starter-pack-sample: 0
+- ai-security-questionnaire-starter-pack-teardown: 0
+- ai-security-questionnaire-starter-pack-pricing: 0
 - ai-security-questionnaire-builder: 0
+- ai-questionnaire-builder-starter-pack: 0
 - ai-questionnaire-builder-example: 0
 - ai-security-questionnaire-template: 0
+- ai-security-questionnaire-template-starter-pack: 0
 - ai-security-questionnaire-template-builder: 0
 - ai-security-questionnaire-template-example: 0
 - ai-security-questionnaire-template-sample: 0
@@ -209,6 +225,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-teardown: 0
 - ai-security-questionnaire-pricing: 0
 - ai-security-questionnaire-example-builder: 0
+- ai-security-questionnaire-example-starter-pack: 0
 - ai-security-questionnaire-example-template: 0
 - ai-security-questionnaire-example-guide: 0
 - ai-security-questionnaire-example-packet: 0
@@ -222,6 +239,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-answer-template: 0
 - ai-procurement-hub-answer-example: 0
 - ai-procurement-hub-answer-builder: 0
+- ai-procurement-hub-deal-blocker: 0
 - ai-procurement-hub-risk-assessment: 0
 - ai-procurement-hub-risk-worksheet: 0
 - ai-procurement-hub-guide: 0
@@ -232,6 +250,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-vendor-risk-assessment-stack: 0
 - ai-vendor-risk-assessment-teardown: 0
 - ai-vendor-risk-assessment-pricing: 0
+- ai-vendor-risk-assessment-starter-pack: 0
 - ai-vendor-risk-assessment-worksheet: 0
 - ai-vendor-risk-assessment-worksheet-checklist: 0
 - ai-vendor-risk-assessment-worksheet-sample: 0
@@ -243,11 +262,13 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-risk-assessment: 0
 - free-tools-ai-risk-worksheet: 0
 - sample-ai-packet-guide: 0
+- sample-ai-packet-starter-pack: 0
 - sample-ai-packet-builder: 0
 - sample-ai-packet-stack: 0
 - sample-ai-packet-teardown: 0
 - sample-ai-packet-pricing: 0
 - free-tools-ai-packet-teardown: 0
+- ai-disclosure-packet-starter-pack: 0
 - ai-disclosure-packet-builder: 0
 - audit-request-ai-answer-builder: 0
 - ai-questionnaire-builder-teardown: 0
