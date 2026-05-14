@@ -39,6 +39,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-14: completed the AI Pro paid-path launch plus the batch-02 answer-bank maintenance branch, including route distribution, watcher coverage, partial-response reconciliation, open/partial help-request tracker fixes, and refreshed maintenance checkpoints through 12:51 UTC while the evidence gate stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-14: completed the AI Pro paid-path launch plus the batch-02 answer-bank maintenance branch, including route distribution, watcher coverage, partial-response reconciliation across the status artifacts and operating packet, open/partial help-request tracker fixes, and refreshed maintenance checkpoints through 12:53 UTC while the evidence gate stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-13 to 2026-05-14: completed the answer-bank launch and distribution setup across the site, route finder, sitemap, directory packet, manual outbound packs, and human help queue while watcher coverage expanded across both `directory-*` and `manual-*` source tags.
 - 2026-05-09 to 2026-05-12: completed the earlier intake-path / Reddit retry work with the same no-reply state preserved.

@@ -6,6 +6,11 @@ Date: 2026-05-14
 
 Keep a third non-Reddit distribution lane ready if the first manual startup-directory batch still produces no clicks, teardown requests, or replies after the next inbox watch. This batch mixes broad startup directories with AI-focused directories that still accept free submissions.
 
+## Current Status
+
+- Human browser pass recorded on 2026-05-14: `manual-thenextai-answer-bank` was submitted and accepted for review; `manual-newtools-answer-bank` is blocked on email verification; `manual-startupbuffer-answer-bank` is blocked by a Cloudflare challenge; and `manual-junkstartups-answer-bank` is blocked on account or magic-link verification.
+- Keep this pack as the re-entry reference if any of the blocked routes becomes available again or if The Next AI returns a review outcome.
+
 ## Send Conditions
 
 - Use this batch only after `AI-ANSWER-BANK-MANUAL-OUTBOUND-BATCH-01.md` is completed, blocked, or still shows no movement after the next inbox watch.
@@ -88,7 +93,7 @@ Use the answer-bank URL first. Only use a fallback URL if the form forces a seco
 
 ## Ready To Paste Into `HELP-STATUS.md`
 
-- 2026-05-14 Newtools: <submitted|live|rejected|blocked>; source tag `manual-newtools-answer-bank`; public listing URL or blocker note here
-- 2026-05-14 Startup Buffer: <submitted|live|rejected|blocked>; source tag `manual-startupbuffer-answer-bank`; public listing URL or blocker note here
-- 2026-05-14 JunkStartups: <submitted|live|rejected|blocked>; source tag `manual-junkstartups-answer-bank`; public listing URL or blocker note here
-- 2026-05-14 The Next AI: <submitted|live|rejected|blocked>; source tag `manual-thenextai-answer-bank`; public listing URL or blocker note here
+- 2026-05-14 Newtools: blocked; source tag `manual-newtools-answer-bank`; registration succeeded but email verification is required before the directory flow can continue.
+- 2026-05-14 Startup Buffer: blocked; source tag `manual-startupbuffer-answer-bank`; the submission page is gated by a Cloudflare challenge.
+- 2026-05-14 JunkStartups: blocked; source tag `manual-junkstartups-answer-bank`; the submission flow requires account or magic-link verification.
+- 2026-05-14 The Next AI: submitted; source tag `manual-thenextai-answer-bank`; the tool form was accepted and is queued for review.
