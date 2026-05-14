@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-14 08:25 UTC
+Checked at: 2026-05-14 08:28 UTC
 
 ## Current Request
 
@@ -24,7 +24,7 @@ Checked at: 2026-05-14 08:25 UTC
 
 ## Resolution
 
-- Partial completion recorded in `HELP-STATUS.md`: The Next AI was submitted successfully, while Newtools, Startup Buffer, and JunkStartups are still blocked on verification or challenge gates.
+- Partial completion recorded in `HELP-STATUS.md`: The Next AI was submitted successfully, while Newtools, Startup Buffer, and JunkStartups are still blocked on verification or challenge gates, so the request remains open until a human-owned browser session can clear the remaining blockers or one of the blocked directories goes live.
 
 ## Related History
 
