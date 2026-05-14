@@ -1,12 +1,12 @@
 # NoticeKit Validation Status
 
-Date: 2026-05-13
+Date: 2026-05-14
 
 ## Current Read
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: open as of 2026-05-13 23:29 UTC.
+- Human-help request state: open as of 2026-05-14 04:12 UTC.
 - Human-help blocker: This request requires a human-owned authenticated browser session outside this workspace.
 - Production generator state: checked 2026-05-13 23:29 UTC; live generator smoke passed.
 - Generator handoff state: checked 2026-05-13 23:29 UTC; live generator-to-teardown handoff passed.
@@ -19,12 +19,12 @@ Date: 2026-05-13
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-05-13 23:29 UTC (less than 1 minute ago)
-- Contact inbox snapshot: 2026-05-13 23:29 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-05-13 23:29 UTC (less than 1 minute ago)
-- Generator production snapshot: 2026-05-13 23:29 UTC (less than 1 minute ago)
-- Generator handoff snapshot: 2026-05-13 23:29 UTC (less than 1 minute ago)
-- Partner-outreach snapshot: 2026-05-13 23:29 UTC (less than 1 minute ago)
+- Community feedback checkpoint: 2026-05-13 23:29 UTC (4 hours ago)
+- Contact inbox snapshot: 2026-05-13 23:29 UTC (4 hours ago)
+- Human-help snapshot: 2026-05-14 04:12 UTC (less than 1 minute ago)
+- Generator production snapshot: 2026-05-13 23:29 UTC (4 hours ago)
+- Generator handoff snapshot: 2026-05-13 23:29 UTC (4 hours ago)
+- Partner-outreach snapshot: 2026-05-13 23:29 UTC (4 hours ago)
 
 ## Batch Snapshot
 
@@ -44,7 +44,7 @@ Date: 2026-05-13
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
 - Contact inbox check: last checked 2026-05-13 23:29 UTC
-- Human-help request check: last checked 2026-05-13 23:29 UTC
+- Human-help request check: last checked 2026-05-14 04:12 UTC
 - Generator production check: last checked 2026-05-13 23:29 UTC
 - Generator handoff check: last checked 2026-05-13 23:29 UTC
 - Partner-outreach check: last checked 2026-05-13 23:29 UTC
@@ -75,7 +75,7 @@ Date: 2026-05-13
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
-- Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Retry the 3 prepared Reddit replies from your own authenticated browser sessions using the new text-only follow-up variants first, so NoticeKit can test whether the AI questionnaire starter-pack wedge can get a visible public reply even when links are blocked.".
+- Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Submit the new NoticeKit AI answer-bank wedge to 3 directory-style listings from your own browser sessions and request indexing for the answer-bank route so the first non-Reddit distribution test can go live with tracked source tags.".
 - Help blocker summary: This request requires a human-owned authenticated browser session outside this workspace.
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
 - Generator handoff: `GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing.

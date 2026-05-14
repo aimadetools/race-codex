@@ -126,6 +126,13 @@ function parseRequestedUrls(text) {
   });
 }
 
+function parseDirectoryTargets(text) {
+  return [...String(text || "").matchAll(/submit\s+NoticeKit\s+to\s+(.+?)\s+using\s+the\s+exact\s+URL\s+with\s+source\s+tag\s+`([^`]+)`/gim)].map((match) => ({
+    label: match[1].trim(),
+    sourceTag: match[2].trim()
+  }));
+}
+
 function requestNeedsExternalSession(text) {
   const normalized = String(text || "").toLowerCase();
   if (!normalized) {
@@ -303,6 +310,7 @@ const requestBudget = extractField(helpRequestText, "Budget") || "unknown";
 
 const leadCatalog = parseLeadCatalog(leadsText);
 const threadTargets = resolveThreadTargets(helpRequestText, leadCatalog);
+const directoryTargets = parseDirectoryTargets(helpRequestText);
 const requestedUrls = [...new Set(parseRequestedUrls(helpRequestText))].filter((url) => !/reddit\.com\/r\//i.test(url));
 const sourceTags = parseLeadSourceTags(helpRequestText);
 const leadNotes = parseLeadNotes(helpRequestText);
@@ -336,7 +344,7 @@ if (relatedAuthBlocker && threadTargets.length > 0) {
   output.push("");
 }
 
-if (threadTargets.length === 0 && requestedUrls.length === 0) {
+if (threadTargets.length === 0 && directoryTargets.length === 0 && requestedUrls.length === 0) {
   output.push("## Status", "");
   output.push("- No thread-style launch targets or requested URLs were found in `HELP-REQUEST.md`.");
   output.push("");
@@ -407,6 +415,25 @@ if (threadTargets.length > 0) {
       output.push("");
     }
   }
+}
+
+if (directoryTargets.length > 0) {
+  output.push("## Directory Checklist", "");
+  output.push("- Open the referenced submission pack in the repo first and copy the exact source-tagged listing URL from there.");
+  output.push("- Submit the listing from your own browser session; some directories may require a Google or site-specific account.");
+  output.push("- Keep the exact source tag in the submitted URL so NoticeKit can attribute any result correctly.");
+  output.push("- Record one outcome per directory in `HELP-STATUS.md`: `submitted`, `live`, `rejected`, or `blocked`.");
+  output.push("");
+  output.push("## Ready To Paste Directory Lines Into `HELP-STATUS.md`", "");
+  for (const target of directoryTargets) {
+    output.push(`- ${checkedAt.split(" ")[0]} ${target.label}: <submitted|live|rejected|blocked>; source tag \`${target.sourceTag}\`; public listing URL or blocker note here`);
+  }
+  output.push("");
+  output.push("## Directory Targets", "");
+  for (const target of directoryTargets) {
+    output.push(`- ${target.label}: source tag \`${target.sourceTag}\``);
+  }
+  output.push("");
 }
 
 if (requestedUrls.length > 0) {

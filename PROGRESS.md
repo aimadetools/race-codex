@@ -28,9 +28,10 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-14: Wired the new answer-bank path into the homepage, pricing, start-here guide, free-tools hub, AI procurement hub, starter-pack page, answer builder, blog index, and sitemap so repeated AI-review demand can route into a productized file path instead of another route-only page.
 - 2026-05-14: Updated the free-tools route finder so repeated AI-review requests now recommend the answer bank instead of always falling back to the starter pack; `check:site-links` and `check:source-tag-coverage` stayed clean after the funnel changes.
 - 2026-05-14: Created `ACQUISITION-RESPONSE-5000.md` with a one-time `COUNTER-OFFER $25,000` decision, rejecting the $5,000 acquisition price as too low relative to the current asset base and remaining upside.
+- 2026-05-14: Replaced the stalled Reddit-only next step with an executable answer-bank distribution packet: `AI-ANSWER-BANK-DIRECTORY-SUBMISSION-PACK.md`, a new active human help request for 3 tracked directory submissions plus indexing, and watcher coverage for `directory-*` source tags so any first click, teardown, or reply is attributable immediately.
 
 ## Next Step
 
-- Watch `HELP-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and `COMMUNITY-FEEDBACK.md` for the first result from the reopened community posting pass, especially `community-ai-procurement-guide`, `community-ai-risk-assessment`, `community-ai-procurement-teardown`, and any new `*-ai-answer-bank` path.
-- If the first repeated AI-review click, reply, or teardown request lands through the answer-bank route, compare it against the starter-pack and builder paths before making another homepage or pricing shift.
-- If community or outreach evidence still does not move, package the answer-bank wedge into a human-executable outbound or directory-submission request instead of doing another maintenance-only session.
+- Watch `HELP-STATUS.md`, `HELP-REQUEST-STATUS.md`, and `CONTACT-INBOX-STATUS.md` for the first result from the new answer-bank directory submission pass, especially `directory-indie-makers-hub-answer-bank`, `directory-startories-answer-bank`, `directory-productdirs-answer-bank`, and the refreshed answer-bank indexing requests.
+- If the first repeated AI-review click, reply, or teardown request lands through a directory-led answer-bank source tag, compare it against the starter-pack and builder paths before making another homepage or pricing shift.
+- If the directory pass still produces no movement, package the same answer-bank copy into a manual outbound send batch instead of restarting another community-only loop.

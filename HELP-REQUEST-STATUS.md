@@ -1,26 +1,30 @@
 # Help Request Status
 
-Checked at: 2026-05-13 23:29 UTC
+Checked at: 2026-05-14 04:12 UTC
 
 ## Current Request
 
 - Status: open
-- What: Retry the 3 prepared Reddit replies from your own authenticated browser sessions using the new text-only follow-up variants first, so NoticeKit can test whether the AI questionnaire starter-pack wedge can get a visible public reply even when links are blocked.
-- Priority: blocking
+- What: Submit the new NoticeKit AI answer-bank wedge to 3 directory-style listings from your own browser sessions and request indexing for the answer-bank route so the first non-Reddit distribution test can go live with tracked source tags.
+- Priority: important
 - Time: 15min
 - Budget: $0
 
 ## Requested Steps
 
-- Open `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` in the repo root.
-- From your own authenticated Reddit account outside this workspace, open lead 1 in `r/procurement` and post the exact `Text-only follow-up variant after repeated blocked-links` for `community-ai-risk-assessment`.
-- From your own authenticated Reddit account outside this workspace, open lead 2 in `r/SaaS` and post the exact `Text-only follow-up variant after repeated blocked-links` for `community-ai-procurement-guide`.
-- From your own authenticated Reddit account outside this workspace, open lead 5 in `r/SaaS` and post the exact `Text-only follow-up variant after repeated blocked-links` for `community-ai-procurement-teardown`.
-- Only if the subreddit clearly allows links in a follow-up reply or the poster explicitly asks for resources, add the matching full link reply from the same file and keep the source tag exactly as written.
-- Append the outcome for each thread to `HELP-STATUS.md` using one of these statuses: `posted`, `removed`, `blocked`, `blocked-links`, or `no longer open for replies`.
-- If any reply is posted successfully, include the public thread URL, whether it was text-only or text-plus-link, and a one-line summary of what was posted in `HELP-STATUS.md`.
+- Open `AI-ANSWER-BANK-DIRECTORY-SUBMISSION-PACK.md` in the repo root.
+- From your own browser session, submit NoticeKit to Indie Makers Hub using the exact URL with source tag `directory-indie-makers-hub-answer-bank`.
+- From your own browser session, submit NoticeKit to Startories using the exact URL with source tag `directory-startories-answer-bank`.
+- From your own browser session, submit NoticeKit to productdirs using the exact URL with source tag `directory-productdirs-answer-bank`.
+- In Google Search Console for `https://noticekit.tech`, request indexing for:
+  - `https://noticekit.tech/ai-security-questionnaire-answer-bank.html`
+  - `https://noticekit.tech/ai-security-questionnaire-starter-pack.html`
+  - `https://noticekit.tech/ai-procurement-hub.html`
+- In Bing Webmaster Tools for `https://noticekit.tech`, submit the same three URLs if direct URL submission is available.
+- Append the outcome for each directory and the indexing pass to `HELP-STATUS.md` using the ready-to-paste lines in `AI-ANSWER-BANK-DIRECTORY-SUBMISSION-PACK.md`.
+- If any directory listing goes live immediately, include the public listing URL in `HELP-STATUS.md`.
 
-- Active request source: help-requests/20260513-130207-HELP-REQUEST.md
+- Active request source: help-requests/20260514-041134-HELP-REQUEST.md
 
 ## Resolution
 
@@ -28,12 +32,12 @@ Checked at: 2026-05-13 23:29 UTC
 
 ## Related History
 
-- Latest related note closed on: 2026-05-12 (1 day ago)
+- Latest related note closed on: 2026-05-12 (2 days ago)
 - [HELP] What: Manually post 3 prepared public replies from your own browser sessions so NoticeKit can test whether AI procurement threads generate the first real click, reply, or teardown.
-  - Shared keywords: prepared, reddit, replies, authenticated, browser, sessions, first, noticekit, test, whether, public, reply, blocked.
+  - Shared keywords: noticekit, browser, sessions, first, test
   - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
 - [HELP] What: Post 3 prepared Reddit replies from your own authenticated browser/account and request indexing for the refreshed AI answer-builder page so NoticeKit can test whether the AI procurement wedge produces the first real click, reply, or teardown.
-  - Shared keywords: prepared, reddit, replies, authenticated, first, noticekit, test, whether, wedge, public, reply, blocked.
+  - Shared keywords: noticekit, wedge, indexing, first, test
   - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
 
 ## Active Constraints
