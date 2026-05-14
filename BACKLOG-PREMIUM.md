@@ -39,6 +39,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-14: completed the repository memory cleanup pass and the current validation-refresh sweep, keeping the last three days detailed in `PROGRESS.md` and collapsing older backlog history into summary lines.
 - 2026-05-14: completed the latest validation-maintenance refresh plus the public The Next AI re-check, kept the browser-session blocker documented, and left the live reply-capture gate at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the batch-02 directory re-entry prep and the batch-02 answer-bank maintenance branch, including the partial-response reconciliation, route distribution, watcher coverage, and help-request tracker fixes.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes while the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews.
