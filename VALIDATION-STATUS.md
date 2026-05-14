@@ -5,9 +5,9 @@ Date: 2026-05-14
 ## Current Read
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
-- Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: open as of 2026-05-14 08:05 UTC.
-- Human-help blocker: This request requires a human-owned authenticated browser session outside this workspace.
+- Next executable validation step: monitor `HELP-STATUS.md` and `CONTACT-INBOX-STATUS.md` for the Next AI review queue or the first real reply or intake, then convert it into the right evidence log.
+- Human-help request state: open as of 2026-05-14 08:18 UTC, with one directory submission queued and three routes still blocked.
+- Human-help blocker: Newtools still needs email verification; Startup Buffer is behind Cloudflare; JunkStartups needs account or magic-link verification.
 - Production generator state: checked 2026-05-14 08:05 UTC; live generator smoke passed.
 - Generator handoff state: checked 2026-05-14 08:05 UTC; live generator-to-teardown handoff passed.
 - Partner outreach state: last checked 2026-05-14 08:05 UTC; 0 ready, 5 sent/waiting, 0 replied.
@@ -76,7 +76,7 @@ Date: 2026-05-14
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
 - Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Submit NoticeKit AI Answer Bank to 4 additional verified directories from your own browser session so the batch-02 non-Reddit distribution fallback can go live with tracked source tags after batch 01 stayed idle through the next inbox watch.".
-- Help blocker summary: This request requires a human-owned authenticated browser session outside this workspace.
+- Help blocker summary: One submission is queued for review, while the other three targets still require verification or challenge-gated access outside this workspace.
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
 - Generator handoff: `GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing.
 - Partner outreach: `PARTNER-OUTREACH-STATUS.md` says the next action is to monitor the tracker for replies and keep the next expansion gated on evidence.

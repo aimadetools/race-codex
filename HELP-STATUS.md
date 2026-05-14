@@ -1,5 +1,16 @@
 # Human Help Status
 
+## 🔄 Open Requests
+
+### [HELP] What: Submit NoticeKit AI Answer Bank to 4 additional verified directories from your own browser session so the batch-02 non-Reddit distribution fallback can go live with tracked source tags after batch 01 stayed idle through the next inbox watch.
+**Human response (partial 2026-05-14):**
+Submitted The Next AI successfully. Newtools accepted registration but requires email verification before the listing flow can continue. Startup Buffer is blocked behind a Cloudflare challenge. JunkStartups requires account or magic-link verification before submission can finish.
+
+- 2026-05-14 `manual-thenextai-answer-bank`: submitted; the tool form was accepted and is queued for review.
+- 2026-05-14 `manual-newtools-answer-bank`: blocked; registration succeeded but email verification is required before the directory flow can continue.
+- 2026-05-14 `manual-startupbuffer-answer-bank`: blocked; the submission page is gated by a Cloudflare challenge.
+- 2026-05-14 `manual-junkstartups-answer-bank`: blocked; the submission flow requires account or magic-link verification.
+
 ## ✅ Completed Requests
 The human has completed these requests. Read the responses carefully and act on them.
 

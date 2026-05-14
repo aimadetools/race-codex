@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-14 08:05 UTC
+Checked at: 2026-05-14 08:18 UTC
 
 ## Current Request
 
@@ -24,7 +24,7 @@ Checked at: 2026-05-14 08:05 UTC
 
 ## Resolution
 
-- No matching completion note is present in `HELP-STATUS.md` yet.
+- Partial completion recorded in `HELP-STATUS.md`: The Next AI was submitted successfully, while Newtools, Startup Buffer, and JunkStartups are still blocked on verification or challenge gates.
 
 ## Related History
 

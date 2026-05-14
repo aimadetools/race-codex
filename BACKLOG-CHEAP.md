@@ -87,5 +87,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-14: completed the batch-02 answer-bank directory pass with one queued submission at The Next AI and three blocked routes (Newtools email verification, Startup Buffer Cloudflare, JunkStartups account or magic-link verification), then rolled the outcome into the help and validation status files.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, help-request handoffs, watcher expansion for both `directory-*` and `manual-*` answer-bank source tags, and the related maintenance/routing refreshes; the 2026-05-14 08:05 UTC maintenance pass kept the inbox/help/generator/partner snapshots clean while the live reply watch remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-09 to 2026-05-13: completed the intake-path, Reddit retry, and earlier validation-refresh work with 0 real submissions, 0 replies, and 0 interviews.
