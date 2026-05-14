@@ -90,6 +90,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-14: completed the AI answer bank vs Pro kit comparison page and wired it across the homepage, pricing, blog index, free-tools, AI procurement hub, answer bank, and Pro kit surfaces; watcher coverage expanded for the new source tags and local link/source-tag checks stayed clean.
 - 2026-05-14: completed the batch-02 directory re-entry prep by splitting the remaining The Next AI / Newtools / JunkStartups / Startup Buffer follow-up into a dedicated packet and narrower human request so the active queue no longer asks for the already-submitted full batch.
 - 2026-05-14: completed the batch-02 answer-bank maintenance branch, including the partial-response reconciliation across the status artifacts and the batch-02 operating packet plus repeated maintenance sweeps through the 12:53 UTC checkpoint while The Next AI stayed queued and Newtools, Startup Buffer, and JunkStartups remained externally blocked.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes; the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews.

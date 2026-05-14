@@ -3,6 +3,8 @@ cron.log
 logs/
 validation-outreach-drafts/
 validation-outreach-eml/
+*.orig
+*.rej
 node_modules/
 .next/
 dist/
