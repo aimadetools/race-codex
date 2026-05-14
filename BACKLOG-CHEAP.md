@@ -90,6 +90,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-14: completed the 16:08 UTC validation-maintenance refresh and resynced the help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation artifacts; site-link and source-tag coverage checks stayed clean, the no-reply checkpoint was deduplicated, and the live watch remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the 16:06 UTC validation-maintenance refresh and synced the help, inbox, generator, partner, and validation snapshots; no new replies, interviews, or live directory outcomes surfaced, so the batch-02 re-entry lane remains open.
 - 2026-05-14: completed the AI answer bank vs Pro kit comparison page and wired it across the homepage, pricing, blog index, free-tools, AI procurement hub, answer bank, and Pro kit surfaces; watcher coverage expanded for the new source tags and local link/source-tag checks stayed clean.
 - 2026-05-14: completed the batch-02 directory re-entry prep by splitting the remaining The Next AI / Newtools / JunkStartups / Startup Buffer follow-up into a dedicated packet and narrower human request so the active queue no longer asks for the already-submitted full batch.
