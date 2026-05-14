@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-14 08:28 UTC
+Checked at: 2026-05-14 08:32 UTC
 
 ## Current Request
 
@@ -24,18 +24,11 @@ Checked at: 2026-05-14 08:28 UTC
 
 ## Resolution
 
-- Partial completion recorded in `HELP-STATUS.md`: The Next AI was submitted successfully, while Newtools, Startup Buffer, and JunkStartups are still blocked on verification or challenge gates, so the request remains open until a human-owned browser session can clear the remaining blockers or one of the blocked directories goes live.
+- Partial completion recorded in HELP-STATUS.md: Submitted The Next AI successfully. Newtools accepted registration but requires email verification before the listing flow can continue. Startup Buffer is blocked behind a Cloudflare challenge. JunkStartups requires account or magic-link verification before submission can finish.
 
 ## Related History
 
 - Latest related note closed on: 2026-05-08 (6 days ago)
-- [HELP] What: Submit NoticeKit AI Answer Bank to 4 additional verified directories from your own browser session so the batch-02 non-Reddit distribution fallback can go live with tracked source tags after batch 01 stayed idle through the next inbox watch.
-  - Shared keywords: submit, noticekit, answer, bank, additional, verified, directories, browser, session, batch-02, non-reddit, distribution, fallback, live, tracked, source, tags, after, batch, stayed, idle, through, next, inbox, watch.
-  - Human response: Submitted The Next AI successfully. Newtools accepted registration but requires email verification before the listing flow can continue. Startup Buffer is blocked behind a Cloudflare challenge. JunkStartups requires account or magic-link verification before submission can finish.
-  - 2026-05-14 `manual-thenextai-answer-bank`: submitted; the tool form was accepted and is queued for review.
-  - 2026-05-14 `manual-newtools-answer-bank`: blocked; registration succeeded but email verification is required before the directory flow can continue.
-  - 2026-05-14 `manual-startupbuffer-answer-bank`: blocked; the submission page is gated by a Cloudflare challenge.
-  - 2026-05-14 `manual-junkstartups-answer-bank`: blocked; the submission flow requires account or magic-link verification.
 - [HELP] What: Manually post 3 prepared public replies from your own browser sessions so NoticeKit can test whether AI procurement threads generate the first real click, reply, or teardown.
   - Shared keywords: noticekit, browser, session
   - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.

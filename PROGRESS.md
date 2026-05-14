@@ -20,6 +20,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-14
 
+- 2026-05-14: Fixed the help-request status and launchpad generators so the batch-02 directory pass stays marked open with partial completion, then reran validation maintenance through the 08:32 UTC checkpoint; the refreshed inbox, community, generator, partner, and validation snapshots still showed 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-14: Reconciled the batch-02 directory help request after the partial human response came back: The Next AI was submitted successfully, Newtools is waiting on email verification, Startup Buffer is behind Cloudflare, and JunkStartups still needs account or magic-link access.
 - 2026-05-14: Refreshed `HELP-REQUEST-STATUS.md`, `HELP-REQUEST-LAUNCHPAD.md`, and `VALIDATION-STATUS.md` so the current help snapshot stays open with one queued submission and three external blockers instead of collapsing the batch into a false completion.
 - 2026-05-14: Shipped a new AI procurement revenue wedge: `ai-security-questionnaire-answer-bank.html` plus `noticekit-ai-security-questionnaire-answer-bank-template.md`, positioned for repeated buyer questionnaires where the team needs reusable approved wording, proof links, owner notes, and segment variants instead of another one-off answer draft.

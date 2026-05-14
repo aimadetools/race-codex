@@ -87,6 +87,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-14: fixed the help-request status and launchpad generators so the batch-02 directory pass stays open with partial completion, then reran the 08:32 UTC maintenance sweep; the live reply watch remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: rechecked the 08:28 UTC batch-02 help-request state, kept The Next AI queued for review, and left Newtools, Startup Buffer, and JunkStartups blocked by verification or challenge gates while the inbox watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the batch-02 answer-bank response handoff and refreshed the help-request trackers at the 08:22 UTC checkpoint; The Next AI is queued for review and Newtools, Startup Buffer, and JunkStartups remain blocked by verification or challenge gates.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, help-request handoffs, watcher expansion for both `directory-*` and `manual-*` answer-bank source tags, and the related maintenance/routing refreshes; the 2026-05-14 08:05 UTC maintenance pass kept the inbox/help/generator/partner snapshots clean while the live reply watch remained at 0 real submissions, 0 replies, and 0 interviews.

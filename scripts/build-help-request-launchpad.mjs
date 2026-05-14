@@ -32,6 +32,14 @@ function extractField(text, label) {
   return line ? line.replace(new RegExp(`^${label}:\\s*`, "i"), "").trim() : "";
 }
 
+function normalize(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[`*_]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 async function readActiveRequestText() {
   const directRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
   if (directRequestText.trim()) {
@@ -233,6 +241,22 @@ function extractLatestRelatedAuthBlocker(text) {
   return "";
 }
 
+function extractOpenRequestDirectoryLines(text, requestWhat) {
+  const openBlockMatch = String(text || "").match(/## 🔄 Open Requests[\s\S]*?(?=\n## ✅ Completed Requests|$)/i);
+  if (!openBlockMatch || !requestWhat) {
+    return [];
+  }
+
+  const needle = normalize(requestWhat);
+  const sections = openBlockMatch[0].split(/\n(?=###\s+)/);
+  const section = sections.find((entry) => entry.trim().startsWith("### ") && normalize(entry).includes(needle));
+  if (!section) {
+    return [];
+  }
+
+  return [...section.matchAll(/^\s*-\s+(2026-\d{2}-\d{2}\s+.+)$/gm)].map((match) => match[1].trim());
+}
+
 function compactResolution(text) {
   return String(text || "")
     .replace(/\s+/g, " ")
@@ -318,6 +342,7 @@ const replyPack = parseReplyPack(replyPackText);
 const relatedAuthBlocker = compactResolution(extractLatestRelatedAuthBlocker(helpStatusText));
 const requestRequiresExternalSession = requestNeedsExternalSession(helpRequestText);
 const serviceTargets = extractServiceTargets(helpRequestText);
+const openRequestDirectoryLines = extractOpenRequestDirectoryLines(helpStatusText, requestWhat);
 const threadProbes = new Map(
   await Promise.all(
     threadTargets.map(async (target) => [target.url, await probeThread(target.url)])
@@ -425,8 +450,14 @@ if (directoryTargets.length > 0) {
   output.push("- Record one outcome per directory in `HELP-STATUS.md`: `submitted`, `live`, `rejected`, or `blocked`.");
   output.push("");
   output.push("## Ready To Paste Directory Lines Into `HELP-STATUS.md`", "");
-  for (const target of directoryTargets) {
-    output.push(`- ${checkedAt.split(" ")[0]} ${target.label}: <submitted|live|rejected|blocked>; source tag \`${target.sourceTag}\`; public listing URL or blocker note here`);
+  if (openRequestDirectoryLines.length > 0) {
+    for (const line of openRequestDirectoryLines) {
+      output.push(line.startsWith("-") ? line : `- ${line}`);
+    }
+  } else {
+    for (const target of directoryTargets) {
+      output.push(`- ${checkedAt.split(" ")[0]} ${target.label}: <submitted|live|rejected|blocked>; source tag \`${target.sourceTag}\`; public listing URL or blocker note here`);
+    }
   }
   output.push("");
   output.push("## Directory Targets", "");

@@ -32,7 +32,12 @@ function normalize(text) {
 }
 
 function extractCompletedEntries(text) {
-  const sections = text.split(/\n(?=###\s+)/);
+  const completedBlockMatch = text.match(/## ✅ Completed Requests[\s\S]*?(?=\n## [^#]|\n## Reply Logging|$)/i);
+  if (!completedBlockMatch) {
+    return [];
+  }
+
+  const sections = completedBlockMatch[0].split(/\n(?=###\s+)/);
   return sections
     .filter((section) => section.trim().startsWith("### "))
     .map((section) => {
@@ -82,6 +87,23 @@ function extractRequestedSteps(text) {
 function extractResolution(text) {
   const match = text.match(/\*\*Human response.*?:\*\*\s*([\s\S]*?)(?=\n### |\n## |$)/i);
   return match ? match[1].trim() : "";
+}
+
+function extractOpenRequestResponse(text, requestWhat) {
+  const openBlockMatch = text.match(/## 🔄 Open Requests[\s\S]*?(?=\n## ✅ Completed Requests|$)/i);
+  if (!openBlockMatch || !requestWhat) {
+    return "";
+  }
+
+  const needle = normalize(requestWhat);
+  const sections = openBlockMatch[0].split(/\n(?=###\s+)/);
+  const section = sections.find((entry) => entry.trim().startsWith("### ") && normalize(entry).includes(needle));
+  if (!section) {
+    return "";
+  }
+
+  const responseMatch = section.match(/\*\*Human response.*?:\*\*\s*([\s\S]*?)(?=\n-\s+\d{4}-\d{2}-\d{2}\s+`|\n### |\n## |$)/i);
+  return responseMatch ? responseMatch[1].trim() : "";
 }
 
 function compactResolution(text) {
@@ -460,18 +482,13 @@ const requestSteps = extractRequestedSteps(helpRequestText);
 const normalizedRequestWhat = normalize(requestWhat);
 const requestRequiresExternalSession = requestNeedsExternalSession(helpRequestText);
 const completedEntries = extractCompletedEntries(helpStatusText);
+const openRequestResponse = extractOpenRequestResponse(helpStatusText, requestWhat);
 const relatedCompletedEntries = normalizedRequestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];
 
 let matchingEntry = null;
 
 if (normalizedRequestWhat) {
   matchingEntry = completedEntries.find((entry) => normalize(entry.body).includes(normalizedRequestWhat)) || null;
-  if (!matchingEntry && normalize(helpStatusText).includes(normalizedRequestWhat)) {
-    matchingEntry = {
-      heading: "Matched completed note in HELP-STATUS.md",
-      body: helpStatusText
-    };
-  }
 }
 
 const relatedEntries = requestWhat ? findRelatedEntries(requestWhat, completedEntries) : [];
@@ -532,6 +549,8 @@ output.push("");
 
 if (matchingEntry) {
   output.push(`- Matching completed entry: ${matchingEntry.heading}`);
+} else if (openRequestResponse) {
+  output.push(`- Partial completion recorded in HELP-STATUS.md: ${openRequestResponse}`);
 } else if (status === "blocked") {
   output.push("- The active request is still blocked by an unresolved blocker already recorded in `HELP-STATUS.md`.");
 } else if (status === "open") {
