@@ -24,7 +24,7 @@ Checked at: 2026-05-14 20:05 UTC
 
 ## Resolution
 
-- Partial completion recorded in HELP-STATUS.md: Pending.
+- Partial completion recorded in HELP-STATUS.md: The Next AI was submitted and is still pending review; Newtools is blocked on email verification; Startup Buffer is blocked by Cloudflare; JunkStartups is blocked on account or magic-link verification.
 
 - Public check at 2026-05-14 20:05 UTC: no public NoticeKit listing surfaced on The Next AI.
 - Remaining blocker: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here.
