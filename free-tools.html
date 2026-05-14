@@ -85,16 +85,21 @@
           {
             "@type": "ListItem",
             "position": 12,
-            "url": "https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html"
+            "url": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html"
           },
           {
             "@type": "ListItem",
             "position": 13,
-            "url": "https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html"
+            "url": "https://noticekit.tech/blog-ai-security-questionnaire-answer-template.html"
           },
           {
             "@type": "ListItem",
             "position": 14,
+            "url": "https://noticekit.tech/blog-ai-security-questionnaire-answer-example.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
             "url": "https://noticekit.tech/blog-ai-security-questionnaire.html"
           }
         ]
@@ -120,11 +125,12 @@
         <section class="page-hero">
           <span class="eyebrow">Free toolkit</span>
           <h1>Use the free tools before you buy the kit.</h1>
-          <p>This hub collects the strongest no-call NoticeKit assets in one place: draft the notice, score the workflow, check the public page, calculate the deadline, build the tracker, start with the AI questionnaire starter pack, answer the AI section of a buyer questionnaire, or send one URL for a blunt async teardown.</p>
+          <p>This hub collects the strongest no-call NoticeKit assets in one place: draft the notice, score the workflow, check the public page, calculate the deadline, build the tracker, start with the AI questionnaire starter pack, build a reusable AI answer bank, answer the AI section of a buyer questionnaire, or send one URL for a blunt async teardown.</p>
           <div class="hero-actions">
             <a class="button" href="generator.html?source=free-tools-generator">Open generator</a>
             <a class="button secondary" href="free-teardown.html?source=free-tools-hero">Request free teardown</a>
             <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=free-tools-ai-deal-blocker">Open AI questionnaire starter pack</a>
+            <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=free-tools-ai-answer-bank">Open AI answer bank</a>
             <a class="button secondary" href="blog-ai-vendor-risk-assessment.html?source=free-tools-ai-risk-assessment">Open AI risk checklist</a>
             <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=free-tools-ai-answer-builder">Open answer builder</a>
             <a class="button secondary" href="ai-vendor-risk-assessment-worksheet.html?source=free-tools-ai-risk-worksheet">Open AI risk worksheet</a>
@@ -152,7 +158,7 @@
                 <button class="button secondary" type="button" data-route-role="founder" data-route-need="written-answer" data-route-frequency="repeat">Founder, repeated changes</button>
                 <button class="button secondary" type="button" data-route-role="consultant" data-route-need="package-preview" data-route-frequency="repeat">Consultant, client work</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">AI answer builder</button>
-                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="files-now" data-route-frequency="repeat">AI review packet</button>
+                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="files-now" data-route-frequency="repeat">AI answer bank</button>
               </div>
               <div class="field-grid">
                 <label>What are you working through?
@@ -195,7 +201,7 @@
         <section class="section">
           <div class="section-head">
             <h2>Pick the shortest path to your next answer.</h2>
-            <p>Each tool is designed to answer one question fast. If the workflow still feels shaky after that, route the result into teardown, Starter, Pro, or partner access. For AI review threads, the starter pack and answer builder sit close to the top so the copy-ready handoff is easy to find.</p>
+            <p>Each tool is designed to answer one question fast. If the workflow still feels shaky after that, route the result into teardown, Starter, Pro, or partner access. For AI review threads, the starter pack, answer bank, and answer builder sit close to the top so both one-off and repeat-review paths are easy to find.</p>
           </div>
           <div class="grid-3">
             <article class="post-card">
@@ -209,6 +215,12 @@
               <h3>AI questionnaire answer builder</h3>
               <p>Fill a local answer block with named vendors, data scope, retention stance, customer impact, and proof links before you paste it into procurement.</p>
               <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=free-tools-ai-answer-builder">Open answer builder</a>
+            </article>
+            <article class="post-card">
+              <span class="tag">AI repeat-review</span>
+              <h3>AI questionnaire answer bank</h3>
+              <p>Use one reusable source file for repeated buyer questions with approved wording, proof links, owner notes, and segment variants.</p>
+              <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=free-tools-ai-answer-bank">Open answer bank</a>
             </article>
             <article class="post-card">
               <span class="tag">AI risk</span>
@@ -305,10 +317,11 @@
             <div>
               <span class="eyebrow">Downloads</span>
               <h2>Take the free templates with you.</h2>
-              <p>Use the checklist, worksheet, packet template, and sample CSV when you need a lightweight packet inside your own docs, drive, or ticketing system.</p>
+              <p>Use the checklist, worksheet, answer-bank template, packet template, and sample CSV when you need a lightweight packet inside your own docs, drive, or ticketing system.</p>
             </div>
             <div class="download-actions">
               <a class="button gold" href="noticekit-ai-vendor-disclosure-packet-template.md" download>Download AI packet template</a>
+              <a class="button secondary" href="noticekit-ai-security-questionnaire-answer-bank-template.md" download>Download AI answer bank</a>
               <a class="button secondary" href="sample-ai-vendor-disclosure-packet.html?source=free-tools-ai-packet-sample">See filled packet example</a>
               <a class="button secondary" href="sample-ai-saas-subprocessors.csv" download>Download AI stack CSV</a>
               <a class="button secondary" href="noticekit-free-checklist.md" download>Download checklist</a>
@@ -469,39 +482,45 @@
               secondaryLabel: "See filled example",
             };
           } else if (need === "written-answer") {
-            recommendation = {
-              title: "Start with the AI questionnaire starter pack.",
-              summary: frequency === "repeat"
-                ? "You are likely to face the same AI review again, so the starter pack keeps the reusable answer, example, and packet paths together."
-                : "You want a clean written answer now, so the starter pack gets you to the builder without losing the packet or teardown routes.",
-              bullets: frequency === "repeat"
-                ? [
+            recommendation = frequency === "repeat"
+              ? {
+                  title: "Open the AI answer bank.",
+                  summary: "You are likely to face the same AI review again, so the answer bank is the shortest path to reusable approved wording, proof links, and owner notes.",
+                  bullets: [
                     "Best when procurement pressure is likely to repeat",
-                    "Keeps the answer builder, example, packet, and teardown in one place",
-                    "Good fit when the review is still changing shape"
-                  ]
-                : [
+                    "Keeps reusable answers and proof links in one file",
+                    "Still keeps the builder and packet path one click away"
+                  ],
+                  primaryHref: "ai-security-questionnaire-answer-bank.html?source=free-tools-route-finder",
+                  primaryLabel: "Open answer bank",
+                  secondaryHref: "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open answer builder",
+                }
+              : {
+                  title: "Start with the AI questionnaire starter pack.",
+                  summary: "You want a clean written answer now, so the starter pack gets you to the builder without losing the packet or teardown routes.",
+                  bullets: [
                     "Best when one buyer questionnaire is blocking the deal",
                     "Gets you to a copy-ready answer with less wandering",
                     "Keeps the packet and teardown path one click away"
                   ],
-              primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
-              primaryLabel: "Open starter pack",
-              secondaryHref: "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
-              secondaryLabel: "Open answer builder",
-            };
+                  primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+                  primaryLabel: "Open starter pack",
+                  secondaryHref: "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open answer builder",
+                };
           } else if (need === "files-now") {
             recommendation = frequency === "repeat"
               ? {
-                  title: "Start with the AI questionnaire starter pack.",
-                  summary: "You need reusable AI review files, and the starter pack is the fastest way to compare the packet, example, builder, and teardown paths.",
+                  title: "Open the AI answer bank.",
+                  summary: "You need reusable AI review files, and the answer bank is the fastest path to a repeatable internal source of truth.",
                   bullets: [
-                    "Best for procurement, security, or counsel review",
+                    "Best for repeated procurement, security, or counsel review",
                     "Useful when the same cleanup keeps repeating",
-                    "Pairs well with the sample packet"
+                    "Pairs well with the builder and disclosure packet"
                   ],
-                  primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
-                  primaryLabel: "Open starter pack",
+                  primaryHref: "ai-security-questionnaire-answer-bank.html?source=free-tools-route-finder",
+                  primaryLabel: "Open answer bank",
                   secondaryHref: "blog-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
                   secondaryLabel: "Open packet guide",
                 }
