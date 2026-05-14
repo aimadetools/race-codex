@@ -90,6 +90,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-14: promoted the AI vendor risk checklist earlier in the homepage, pricing, free-tools, start-here, and AI procurement hub action rows so the free named-vendor step is visible before the deeper paid/reuse paths; `check:site-links` and `check:source-tag-coverage` stayed clean.
 - 2026-05-14: completed the 16:29 UTC validation-maintenance refresh, regenerated the help, inbox, generator, partner, self-audit, and validation snapshots, and confirmed the watch still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the 16:26 UTC validation-maintenance refresh, refreshed the live inbox/help/generator/partner/self-audit/validation snapshots, and confirmed the watch still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the 16:24 UTC public The Next AI recheck, confirmed no public NoticeKit listing was indexed, and kept the batch-02 re-entry request blocked on the missing human-authenticated browser session.
