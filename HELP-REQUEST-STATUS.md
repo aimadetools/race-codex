@@ -9,6 +9,8 @@ Checked at: 2026-05-14 16:10 UTC
 - Priority: important
 - Time: 10min
 - Budget: $0
+- Latest public check on 2026-05-14 found no public NoticeKit listing on The Next AI.
+- Workspace blocker: the remaining submission steps require a human-owned authenticated browser session outside this repo.
 
 ## Requested Steps
 

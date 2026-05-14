@@ -8,6 +8,8 @@ Checked at: 2026-05-14 16:10 UTC
 - Priority: important
 - Time: 10min
 - Budget: $0
+- Public re-check on 2026-05-14 found no live NoticeKit listing on The Next AI.
+- Remaining work is browser-gated outside this workspace.
 
 ## Directory Checklist
 
