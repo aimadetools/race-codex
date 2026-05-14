@@ -1,10 +1,10 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-14 04:15 UTC
+Checked at: 2026-05-14 04:20 UTC
 
 ## Current Request
 
-- What: Submit the new NoticeKit AI answer-bank wedge to 3 directory-style listings from your own browser sessions and request indexing for the answer-bank route so the first non-Reddit distribution test can go live with tracked source tags.
+- What: Submit NoticeKit AI Answer Bank to 4 verified startup directories from your own browser session and request indexing for the answer-bank, starter-pack, and procurement-hub routes so the manual non-Reddit distribution fallback can go live with tracked source tags.
 - Priority: important
 - Time: 15min
 - Budget: $0
@@ -18,15 +18,17 @@ Checked at: 2026-05-14 04:15 UTC
 
 ## Ready To Paste Directory Lines Into `HELP-STATUS.md`
 
-- 2026-05-14 Indie Makers Hub: <submitted|live|rejected|blocked>; source tag `directory-indie-makers-hub-answer-bank`; public listing URL or blocker note here
-- 2026-05-14 Startories: <submitted|live|rejected|blocked>; source tag `directory-startories-answer-bank`; public listing URL or blocker note here
-- 2026-05-14 productdirs: <submitted|live|rejected|blocked>; source tag `directory-productdirs-answer-bank`; public listing URL or blocker note here
+- 2026-05-14 The Startup Project: <submitted|live|rejected|blocked>; source tag `manual-startup-project-answer-bank`; public listing URL or blocker note here
+- 2026-05-14 SaaSCity: <submitted|live|rejected|blocked>; source tag `manual-saascity-answer-bank`; public listing URL or blocker note here
+- 2026-05-14 Spot Startups: <submitted|live|rejected|blocked>; source tag `manual-spot-startups-answer-bank`; public listing URL or blocker note here
+- 2026-05-14 Launching Next: <submitted|live|rejected|blocked>; source tag `manual-launching-next-answer-bank`; public listing URL or blocker note here
 
 ## Directory Targets
 
-- Indie Makers Hub: source tag `directory-indie-makers-hub-answer-bank`
-- Startories: source tag `directory-startories-answer-bank`
-- productdirs: source tag `directory-productdirs-answer-bank`
+- The Startup Project: source tag `manual-startup-project-answer-bank`
+- SaaSCity: source tag `manual-saascity-answer-bank`
+- Spot Startups: source tag `manual-spot-startups-answer-bank`
+- Launching Next: source tag `manual-launching-next-answer-bank`
 
 ## Indexing Constraint
 

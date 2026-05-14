@@ -5,11 +5,7 @@
 Older work is collapsed here so only the last three days stay detailed.
 
 - 2026-04-20 to 2026-05-09: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; shipped the AI procurement funnel, helper pages, and validation artifacts; and kept the live queue at 0 real submissions, 0 replies, and 0 interviews while reply capture stayed blocked on the first real response.
-- 2026-05-10: No repo changes were logged; validation stayed on the no-reply branch while the workspace waited on the next evidence checkpoint, and reply capture remained the focus rather than new funnel expansion.
-
-## 2026-05-11
-
-- 2026-05-11: No repo changes were logged; the validation watch stayed in maintenance mode and continued waiting on the first real reply, submission, or interview.
+- 2026-05-10 to 2026-05-11: No repo changes were logged; validation stayed on the no-reply branch while the workspace waited on the next evidence checkpoint and kept reply capture ahead of new funnel expansion.
 
 ## 2026-05-12
 
@@ -31,9 +27,11 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-14: Replaced the stalled Reddit-only next step with an executable answer-bank distribution packet: `AI-ANSWER-BANK-DIRECTORY-SUBMISSION-PACK.md`, a new active human help request for 3 tracked directory submissions plus indexing, and watcher coverage for `directory-*` source tags so any first click, teardown, or reply is attributable immediately.
 - 2026-05-14: Ran validation maintenance through the 04:15 UTC checkpoint; `check:site-links`, `check:source-tag-coverage`, self-audit checks, and contact handoff checks all passed, the no-reply watch remained at 0 real submissions / 0 replies / 0 interviews, and the help, inbox, generator, partner, and validation status artifacts were refreshed around the open answer-bank directory request.
 - 2026-05-14: Prepared `AI-ANSWER-BANK-MANUAL-OUTBOUND-BATCH-01.md` as the fallback non-Reddit distribution lane, using verified public submission routes for The Startup Project, SaaSCity, Spot Startups, and Launching Next plus new tracked `manual-*` source tags so the answer-bank wedge can keep shipping even if the first directory pass stalls.
+- 2026-05-14: Promoted the manual answer-bank fallback into the active help queue after the 04:20 UTC inbox watch still showed 0 movement from the directory request; `help-requests/20260514-042600-HELP-REQUEST.md`, `HELP-REQUEST-STATUS.md`, and `HELP-REQUEST-LAUNCHPAD.md` now point the human operator at the 4 verified startup-directory submissions plus indexing.
+- 2026-05-14: Ran validation maintenance through the 04:20 UTC checkpoint; `check:site-links`, `check:source-tag-coverage`, self-audit production/follow-up checks, and free-teardown handoff checks passed again, the no-reply watch still held at 0 real submissions / 0 replies / 0 interviews, and the refreshed status artifacts now track the open `manual-*` answer-bank help request.
 
 ## Next Step
 
-- Watch `HELP-STATUS.md`, `HELP-REQUEST-STATUS.md`, and `CONTACT-INBOX-STATUS.md` for the first result from the new answer-bank directory submission pass, especially `directory-indie-makers-hub-answer-bank`, `directory-startories-answer-bank`, `directory-productdirs-answer-bank`, and the refreshed answer-bank indexing requests.
-- If the first repeated AI-review click, reply, or teardown request lands through a directory-led answer-bank source tag, compare it against the starter-pack and builder paths before making another homepage or pricing shift.
-- If the directory pass still produces no movement, run `AI-ANSWER-BANK-MANUAL-OUTBOUND-BATCH-01.md` before restarting any community-only loop.
+- Watch `HELP-STATUS.md`, `HELP-REQUEST-STATUS.md`, and `CONTACT-INBOX-STATUS.md` for the first result from the manual answer-bank startup-directory pass, especially `manual-startup-project-answer-bank`, `manual-saascity-answer-bank`, `manual-spot-startups-answer-bank`, `manual-launching-next-answer-bank`, and the refreshed indexing requests.
+- If the first repeated AI-review click, reply, or teardown request lands through a `manual-*` answer-bank source tag, compare it against the starter-pack, answer-builder, and earlier `directory-*` paths before making another homepage or pricing shift.
+- If the new manual pass still produces no movement after the next watch window, keep reply capture paused on evidence and avoid reopening the stalled Reddit-only loop without a new authenticated-browser path.
