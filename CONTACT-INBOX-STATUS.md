@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-14 20:29 UTC
+Checked at: 2026-05-14 23:03 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -150,6 +150,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-conversion: 0
 - free-tools-partner: 0
 - free-tools-route-finder: 0
+- free-tools-route-one-answer: 0
+- free-tools-route-repeat-review: 0
+- free-tools-route-broader-handoff: 0
 - review-brief-builder-teardown: 0
 - review-brief-builder-partner: 0
 - review-brief-builder-ai-deal-blocker: 0
@@ -163,6 +166,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - kit-preview-bottom: 0
 - kit-preview-ai-deal-blocker: 0
 - kit-preview-ai-packet: 0
+- kit-preview-route-one-answer: 0
+- kit-preview-route-repeat-review: 0
+- kit-preview-route-broader-handoff: 0
 - start-here: 0
 - start-here-card: 0
 - start-here-ai-risk-assessment: 0
@@ -197,6 +203,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-procurement: 0
 - homepage-shortcut: 0
 - homepage-ai-disclosure-packet: 0
+- homepage-ai-route-one-answer: 0
+- homepage-ai-route-repeat-review: 0
+- homepage-ai-route-broader-handoff: 0
 - audit-request-ai-packet: 0
 - audit-request-ai-stack: 0
 - audit-request-ai-deal-blocker: 0
@@ -215,6 +224,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-packet-sample: 0
 - pricing-ai-stack-guide: 0
 - pricing-review-brief-builder: 0
+- pricing-ai-route-one-answer: 0
+- pricing-ai-route-repeat-review: 0
+- pricing-ai-route-broader-handoff: 0
 - start-here-ai-answer-builder: 0
 - start-here-ai-pro-kit: 0
 - start-here-ai-questionnaire: 0
