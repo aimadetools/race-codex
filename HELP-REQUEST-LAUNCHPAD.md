@@ -1,6 +1,6 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-14 08:20 UTC
+Checked at: 2026-05-14 08:22 UTC
 
 ## Current Request
 
@@ -18,10 +18,10 @@ Checked at: 2026-05-14 08:20 UTC
 
 ## Ready To Paste Directory Lines Into `HELP-STATUS.md`
 
-- 2026-05-14 Newtools: <submitted|live|rejected|blocked>; source tag `manual-newtools-answer-bank`; public listing URL or blocker note here
-- 2026-05-14 Startup Buffer: <submitted|live|rejected|blocked>; source tag `manual-startupbuffer-answer-bank`; public listing URL or blocker note here
-- 2026-05-14 JunkStartups: <submitted|live|rejected|blocked>; source tag `manual-junkstartups-answer-bank`; public listing URL or blocker note here
-- 2026-05-14 The Next AI: <submitted|live|rejected|blocked>; source tag `manual-thenextai-answer-bank`; public listing URL or blocker note here
+- 2026-05-14 Newtools: blocked; source tag `manual-newtools-answer-bank`; registration succeeded but email verification is required before the directory flow can continue
+- 2026-05-14 Startup Buffer: blocked; source tag `manual-startupbuffer-answer-bank`; the submission page is gated by a Cloudflare challenge
+- 2026-05-14 JunkStartups: blocked; source tag `manual-junkstartups-answer-bank`; the submission flow requires account or magic-link verification
+- 2026-05-14 The Next AI: submitted; source tag `manual-thenextai-answer-bank`; the tool form was accepted and is queued for review
 
 ## Directory Targets
 
