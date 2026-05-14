@@ -39,14 +39,10 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-14: completed the 23:07 UTC validation-maintenance refresh and snapshot resync; the live watch stayed at 0 real submissions, 0 replies, and 0 interviews while the browser-only batch-02 help blocker remained unchanged.
+- 2026-05-14: completed the repeated validation-maintenance refreshes through the 23:07 UTC checkpoint and kept the live watch at 0 real submissions, 0 replies, and 0 interviews while the batch-02 browser-session blocker remained unchanged.
 - 2026-05-14: completed the live validation evidence audit and left the browser-only batch-02 help request parked while the repo still showed 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the 23:04 UTC validation-maintenance refresh and snapshot resync; the live watch stayed at 0 real submissions, 0 replies, and 0 interviews while the browser-only help blocker remained unchanged.
-- 2026-05-14: completed the 23:02 UTC validation-maintenance refresh, including the watched-source registry update for the new route tags, and resynced the inbox and validation snapshots while the live watch remained at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the 20:29 UTC validation-maintenance refresh and snapshot resync; the live watch stayed at 0 real submissions, 0 replies, and 0 interviews while the browser-only help blocker remained unchanged.
-- 2026-05-14: completed the latest public The Next AI check for the batch-02 directory re-entry request; no public NoticeKit listing surfaced, and the human-owned authenticated browser-session blocker remains.
-- 2026-05-14: completed the 20:24 UTC validation-maintenance refresh and self-audit production verification, then resynced the canonical status snapshots while the live watch remained at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the validation-maintenance refreshes and the 16:24 UTC The Next AI recheck; re-synced the help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots, kept the repo health checks green with 0 real submissions, 0 replies, and 0 interviews, and confirmed The Next AI remained submitted and pending review.
+- 2026-05-14: completed the 23:04 UTC and 23:02 UTC validation-maintenance refreshes, including the watched-source registry update for the new route tags, and kept the live watch at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-14: completed the 20:29 UTC, 20:24 UTC, and 16:24 UTC validation-maintenance refreshes plus the latest public The Next AI recheck; no public NoticeKit listing surfaced, the browser-session blocker remained, and the snapshots stayed aligned.
 - 2026-05-14: completed the repository memory cleanup pass and the current validation-refresh sweep, keeping the last three days detailed in `PROGRESS.md` and collapsing older backlog history into summary lines.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes while the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-09 to 2026-05-12: completed the earlier intake-path / Reddit retry work with the same no-reply state preserved.
