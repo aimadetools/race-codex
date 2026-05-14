@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-14 04:30 UTC
+Checked at: 2026-05-14 08:05 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -99,6 +99,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-risk-worksheet: 0
 - blog-index-ai-questionnaire-template: 0
 - blog-index-ai-questionnaire-example: 0
+- blog-index-ai-comparison: 0
 - blog-index-ai-stack: 0
 - ai-disclosure-packet-stack: 0
 - ai-disclosure-packet-notice: 0
@@ -134,6 +135,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-questionnaire: 0
 - free-tools-ai-packet: 0
 - free-tools-ai-packet-sample: 0
+- free-tools-ai-comparison: 0
 - free-tools-ai-procurement-card: 0
 - free-tools-generator: 0
 - free-tools-generator-card: 0
@@ -182,6 +184,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-questionnaire-example: 0
 - homepage-ai-answer-bank: 0
 - homepage-ai-answer-builder: 0
+- homepage-ai-comparison: 0
 - homepage-ai-packet-sample: 0
 - homepage-ai-risk-assessment: 0
 - homepage-ai-deal-blocker: 0
@@ -199,6 +202,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-risk-worksheet: 0
 - pricing-ai-answer-bank: 0
 - pricing-ai-answer-builder: 0
+- pricing-ai-comparison: 0
 - pricing-ai-questionnaire: 0
 - pricing-ai-questionnaire-example: 0
 - pricing-ai-packet-sample: 0
@@ -267,6 +271,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-card: 0
 - ai-procurement-hub-downloads: 0
 - ai-procurement-hub-cta: 0
+- ai-procurement-hub-comparison: 0
 - ai-procurement-hub-answer-template: 0
 - ai-procurement-hub-answer-example: 0
 - ai-procurement-hub-answer-builder: 0
@@ -315,6 +320,13 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-answer-bank-starter-pack: 0
 - ai-security-questionnaire-answer-bank-teardown: 0
 - ai-security-questionnaire-answer-bank-template: 0
+- ai-security-questionnaire-answer-bank-comparison: 0
+- ai-answer-bank-vs-builder-answer-bank: 0
+- ai-answer-bank-vs-builder-builder: 0
+- ai-answer-bank-vs-builder-pricing: 0
+- ai-answer-bank-vs-builder-starter-pack: 0
+- ai-answer-bank-vs-builder-teardown: 0
+- ai-answer-bank-vs-builder-bank: 0
 - free-teardown-ai-deal-blocker: 0
 - self-audit-teardown: 0
 - self-audit-ai-deal-blocker: 0
