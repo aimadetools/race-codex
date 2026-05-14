@@ -20,6 +20,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-14
 
+- 2026-05-14: Cleaned repo memory by keeping only the last three days detailed in `PROGRESS.md` and collapsing completed backlog history into shorter summary lines in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md`.
 - 2026-05-14: Ran the validation maintenance loop through the 12:37/12:38 UTC checkpoint; `check:validation-watch`, self-audit follow-up/production checks, contact webhook checks, free-teardown handoff checks, `check:source-tag-coverage`, and `check:site-links` all passed again while the refreshed help, inbox, generator, partner, and validation snapshots kept the batch-02 directory request open/partial and the live watch at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-14: Shipped `ai-security-questionnaire-pro-kit.html` as a direct paid path for repeated AI procurement and security-review cleanup, framing NoticeKit Pro around reusable answer-bank, matrix, intake, packet, and calendar files instead of sending repeat-review buyers into generic pricing.
 - 2026-05-14: Wired the AI Pro kit route into the homepage, pricing, free-tools hub, route finder, start-here guide, AI procurement hub, answer-bank page, starter-pack page, comparison page, and sitemap so repeat-review AI traffic can reach a product-specific checkout decision in one hop.
