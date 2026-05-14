@@ -90,13 +90,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-14: completed the 23:14/23:15 UTC validation-maintenance pass, resynced the live status artifacts, and kept the watch at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the 23:13 UTC validation-maintenance refresh, resynced the live status artifacts, and kept the watch at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the repeated validation-maintenance refreshes through the 23:07 UTC checkpoint and kept the live watch at 0 real submissions, 0 replies, and 0 interviews while the batch-02 browser-session blocker remained unchanged.
-- 2026-05-14: completed the live validation evidence audit and left the browser-only batch-02 help request parked while the repo still showed 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the 23:04 UTC and 23:02 UTC validation-maintenance refreshes, including the watched-source registry update for the new homepage, pricing, free-tools, and kit-preview route tags, and kept the live watch at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the AI route chooser, preview-routing, AI vendor risk, and answer-bank vs Pro kit refreshes across the homepage, pricing page, free-tools hub, and kit preview while `check:site-links` plus `check:source-tag-coverage` stayed clean.
-- 2026-05-14: completed the 20:29 UTC, 20:24 UTC, and 16:24 UTC validation-maintenance refreshes plus the latest public The Next AI recheck; no public NoticeKit listing surfaced, the browser-session blocker remained, and the snapshot set stayed aligned.
-- 2026-05-14: completed the repository memory cleanup pass and the AI answer bank vs Pro kit comparison branch, including the batch-02 directory re-entry prep, the partial-response reconciliation, and the help-request tracker fixes.
+- 2026-05-14: completed the repeated validation-maintenance passes, live status refreshes, browser-session rechecks, and memory cleanup work; the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes; the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, and validation-refresh work with the same no-reply state preserved.

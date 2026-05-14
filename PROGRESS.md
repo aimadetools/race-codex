@@ -20,12 +20,14 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-14
 
+- 2026-05-14: Ran the 23:17 UTC validation-maintenance pass, refreshed the live help, inbox, generator, partner, self-audit, community-feedback, launchpad, and validation snapshots, and kept the watch at 0 real submissions, 0 replies, and 0 interviews; `check:site-links` and `check:source-tag-coverage` stayed clean.
 - 2026-05-14: Ran the 23:14/23:15 UTC validation-maintenance pass, refreshed the live help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots, and kept the watch at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: Rechecked the batch-02 directory re-entry lane and The Next AI public listing path; no public NoticeKit listing surfaced, and the request stayed blocked on the missing human-owned authenticated browser session.
 - 2026-05-14: Kept the AI route-chooser, AI vendor-risk, and answer-bank vs Pro kit updates in place across the homepage, pricing, free-tools, and kit-preview pages; `check:site-links` and `check:source-tag-coverage` stayed clean.
 - 2026-05-14: Preserved the 20:03-20:29 UTC maintenance refreshes and the 16:15 UTC pass in the watch history; every checkpoint still showed 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: Split the partially completed batch-02 directory follow-up into a dedicated re-entry lane, reconciled the partial human response, and kept The Next AI submitted while Newtools, Startup Buffer, and JunkStartups stayed blocked.
 - 2026-05-14: Recorded the `ACQUISITION-RESPONSE-5000.md` counter-offer decision and the memory cleanup pass that kept the last three days detailed while collapsing older backlog history into summary lines.
+- 2026-05-14: Collapsed the completed backlog summaries further so the live P0/P1 trigger items stayed visible while the finished maintenance history remained compact.
 
 ## Next Step
 
