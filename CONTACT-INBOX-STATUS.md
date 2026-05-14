@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-14 13:00 UTC
+Checked at: 2026-05-14 16:06 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -100,6 +100,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-questionnaire-template: 0
 - blog-index-ai-questionnaire-example: 0
 - blog-index-ai-comparison: 0
+- blog-index-ai-answer-bank-vs-pro-kit: 0
 - blog-index-ai-stack: 0
 - ai-disclosure-packet-stack: 0
 - ai-disclosure-packet-notice: 0
@@ -130,6 +131,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-deal-blocker: 0
 - free-tools-ai-pro-kit: 0
 - free-tools-ai-answer-bank: 0
+- free-tools-ai-answer-bank-vs-pro-kit: 0
 - free-tools-ai-answer-builder: 0
 - free-tools-ai-questionnaire-template: 0
 - free-tools-ai-questionnaire-example: 0
@@ -185,6 +187,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-questionnaire-example: 0
 - homepage-ai-pro-kit: 0
 - homepage-ai-answer-bank: 0
+- homepage-ai-answer-bank-vs-pro-kit: 0
 - homepage-ai-answer-builder: 0
 - homepage-ai-comparison: 0
 - homepage-ai-packet-sample: 0
@@ -204,6 +207,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-risk-worksheet: 0
 - pricing-ai-pro-kit: 0
 - pricing-ai-answer-bank: 0
+- pricing-ai-answer-bank-vs-pro-kit: 0
 - pricing-ai-answer-builder: 0
 - pricing-ai-comparison: 0
 - pricing-ai-questionnaire: 0
@@ -247,10 +251,17 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-starter-pack-sample: 0
 - ai-security-questionnaire-starter-pack-teardown: 0
 - ai-security-questionnaire-starter-pack-pricing: 0
+- ai-security-questionnaire-answer-bank-pro-kit-comparison: 0
 - ai-security-questionnaire-builder: 0
 - ai-questionnaire-builder-answer-bank: 0
 - ai-questionnaire-builder-starter-pack: 0
 - ai-questionnaire-builder-example: 0
+- ai-answer-bank-vs-pro-kit-answer-bank: 0
+- ai-answer-bank-vs-pro-kit-bank: 0
+- ai-answer-bank-vs-pro-kit-pricing: 0
+- ai-answer-bank-vs-pro-kit-pro-kit: 0
+- ai-answer-bank-vs-pro-kit-starter-pack: 0
+- ai-answer-bank-vs-pro-kit-teardown: 0
 - ai-security-questionnaire-template: 0
 - ai-security-questionnaire-template-starter-pack: 0
 - ai-security-questionnaire-template-builder: 0
@@ -281,6 +292,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-answer-example: 0
 - ai-procurement-hub-answer-builder: 0
 - ai-procurement-hub-answer-bank: 0
+- ai-procurement-hub-answer-bank-vs-pro-kit: 0
 - ai-procurement-hub-pro-kit: 0
 - ai-procurement-hub-deal-blocker: 0
 - ai-procurement-hub-risk-assessment: 0
