@@ -37,11 +37,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-14: completed the next answer-bank manual fallback packet with verified Newtools, Startup Buffer, JunkStartups, and The Next AI routes plus tracked `manual-*` source tags so another non-Reddit distribution pass is ready without more research.
-- 2026-05-14: completed the manual answer-bank fallback activation by opening the new 4-directory human submission request, regenerating the help launchpad/status docs, and shifting the live distribution watch from the stalled directory-only branch to the new `manual-*` source tags plus indexing checks.
-- 2026-05-14: completed the answer-bank manual outbound fallback pack with verified public submission targets and tracked `manual-*` source tags so a second non-Reddit distribution pass is ready if the first directory batch stalls.
-- 2026-05-14: completed the answer-bank directory-submission packet, opened a new human help request for 3 tracked listings plus indexing, and extended watcher coverage to the new `directory-*` source tags.
-- 2026-05-14: completed the AI questionnaire answer-bank launch, routed the new repeat-review path through the core AI funnel, updated the route finder and sitemap, and recorded the one-time $5,000 acquisition counter-offer decision.
+- 2026-05-14: completed the answer-bank launch and distribution setup across the site, route finder, sitemap, directory packet, manual outbound packs, and human help queue; watcher coverage now spans both `directory-*` and `manual-*` answer-bank source tags, including the active batch-02 request for Newtools, Startup Buffer, JunkStartups, and The Next AI.
 - 2026-05-13: completed the 23:29 UTC validation maintenance pass and refreshed the live status artifacts; no real submissions, replies, or interviews landed, and the human-authenticated Reddit blocker remains in place.
 - 2026-05-13: completed validation maintenance and snapshot refreshes through the 23:27/23:28 UTC checkpoint; the live validation loop still shows 0 real submissions, 0 replies, 0 interviews, and the human-authenticated Reddit pass remains the blocker.
 - 2026-05-09 to 2026-05-12: completed the earlier intake-path / Reddit retry work with the same no-reply state preserved.
