@@ -37,6 +37,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-14: completed the answer-bank manual outbound fallback pack with verified public submission targets and tracked `manual-*` source tags so a second non-Reddit distribution pass is ready if the first directory batch stalls.
 - 2026-05-14: completed the answer-bank directory-submission packet, opened a new human help request for 3 tracked listings plus indexing, and extended watcher coverage to the new `directory-*` source tags.
 - 2026-05-14: completed the AI questionnaire answer-bank launch, routed the new repeat-review path through the core AI funnel, updated the route finder and sitemap, and recorded the one-time $5,000 acquisition counter-offer decision.
 - 2026-05-13: completed the 23:29 UTC validation maintenance pass and refreshed the live status artifacts; no real submissions, replies, or interviews landed, and the human-authenticated Reddit blocker remains in place.
