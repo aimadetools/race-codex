@@ -90,9 +90,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-14: completed the 20:17 UTC validation-maintenance refresh and the earlier 20:03-20:16 UTC refreshes; re-synced the help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots; and kept `check:site-links` plus `check:source-tag-coverage` clean with 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: promoted the AI vendor risk checklist earlier in the homepage, pricing, free-tools, start-here, and AI procurement hub action rows so the free named-vendor step is visible before the deeper paid/reuse paths; `check:site-links` and `check:source-tag-coverage` stayed clean.
-- 2026-05-14: completed the AI vendor risk checklist promotion and the 16:24 UTC The Next AI recheck; confirmed no public NoticeKit listing was indexed, the live watch stayed at 0 real submissions, 0 replies, and 0 interviews, and the source-tag checks stayed clean.
+- 2026-05-14: completed the validation-maintenance refreshes, the AI vendor risk checklist promotion, and the 16:24 UTC The Next AI recheck; re-synced the help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots, kept `check:site-links` plus `check:source-tag-coverage` clean, and confirmed no public NoticeKit listing was indexed.
 - 2026-05-14: completed the repository memory cleanup pass and the AI answer bank vs Pro kit comparison branch, including the batch-02 directory re-entry prep, the partial-response reconciliation, and the help-request tracker fixes.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes; the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, and validation-refresh work with the same no-reply state preserved.

@@ -39,9 +39,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-14: completed the 20:17 UTC validation-maintenance refresh; re-synced the help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots; and kept the repo health checks green with 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the 20:03-20:10 UTC validation-maintenance refreshes; re-synced the help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots; and kept the repo health checks green with 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the 16:24 UTC The Next AI recheck, the batch-02 directory follow-through, and the batch-02 answer-bank maintenance branch; confirmed no public NoticeKit listing was indexed, The Next AI remained submitted and pending review, and the remaining batch-02 routes stayed blocked.
+- 2026-05-14: completed the validation-maintenance refreshes and the 16:24 UTC The Next AI recheck; re-synced the help, inbox, generator, partner, self-audit, community-feedback, and validation snapshots, kept the repo health checks green with 0 real submissions, 0 replies, and 0 interviews, and confirmed The Next AI remained submitted and pending review.
 - 2026-05-14: completed the repository memory cleanup pass and the current validation-refresh sweep, keeping the last three days detailed in `PROGRESS.md` and collapsing older backlog history into summary lines.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes while the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-09 to 2026-05-12: completed the earlier intake-path / Reddit retry work with the same no-reply state preserved.
