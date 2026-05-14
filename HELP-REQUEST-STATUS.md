@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-14 16:10 UTC
+Checked at: 2026-05-14 16:13 UTC
 
 ## Current Request
 
@@ -9,8 +9,6 @@ Checked at: 2026-05-14 16:10 UTC
 - Priority: important
 - Time: 10min
 - Budget: $0
-- Latest public check on 2026-05-14 found no public NoticeKit listing on The Next AI.
-- Workspace blocker: the remaining submission steps require a human-owned authenticated browser session outside this repo.
 
 ## Requested Steps
 
@@ -27,6 +25,9 @@ Checked at: 2026-05-14 16:10 UTC
 ## Resolution
 
 - Partial completion recorded in HELP-STATUS.md: Pending.
+
+- Latest public check on 2026-05-14 found no public NoticeKit listing on The Next AI.
+- Remaining blocker: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here.
 
 - Opened on 2026-05-14 to supersede the broader four-directory batch-02 request after The Next AI was already submitted and the other three routes were confirmed blocked on their first pass.
 - Re-entry packet: `AI-ANSWER-BANK-MANUAL-OUTBOUND-BATCH-02-REENTRY.md`
