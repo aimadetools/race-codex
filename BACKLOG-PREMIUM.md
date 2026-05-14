@@ -39,8 +39,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-14: completed the 23:21 UTC validation-maintenance pass, refreshed the live status artifacts, and confirmed the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the latest validation-maintenance pass and status refreshes; the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the repeated validation-maintenance passes, live status refreshes, and browser-session rechecks; the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-14: completed the validation-maintenance passes, live status refreshes, browser-session rechecks, and memory cleanup work while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, and watcher expansion work while the validation watch stayed empty.
-- 2026-05-09 to 2026-05-12: completed the earlier intake-path / Reddit retry work with the same no-reply state preserved.
+- 2026-05-09 to 2026-05-12: completed the earlier intake-path and Reddit retry work with the same no-reply state preserved.

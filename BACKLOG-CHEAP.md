@@ -90,8 +90,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-14: completed the 23:21 UTC validation-maintenance pass, refreshed the live status artifacts, and confirmed the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the latest validation-maintenance pass, status refreshes, and memory cleanup; the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the repeated validation-maintenance passes, live status refreshes, browser-session rechecks, and memory cleanup work; the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes; the validation watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-14: completed the validation-maintenance passes, help/status refreshes, and browser-session rechecks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes while the validation watch stayed empty.
 - 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, and validation-refresh work with the same no-reply state preserved.
