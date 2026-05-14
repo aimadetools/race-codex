@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-14 16:22 UTC
+Checked at: 2026-05-14 16:25 UTC
 
 ## Current Request
 
@@ -26,7 +26,7 @@ Checked at: 2026-05-14 16:22 UTC
 
 - Partial completion recorded in HELP-STATUS.md: Pending.
 
-- Latest public check on 2026-05-14 found no public NoticeKit listing on The Next AI.
+- Public check at 2026-05-14 16:24 UTC: no public NoticeKit listing surfaced on The Next AI.
 - Remaining blocker: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here.
 
 - Opened on 2026-05-14 to supersede the broader four-directory batch-02 request after The Next AI was already submitted and the other three routes were confirmed blocked on their first pass.
