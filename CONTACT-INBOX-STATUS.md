@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-14 04:23 UTC
+Checked at: 2026-05-14 04:25 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -222,6 +222,11 @@ Source of truth: Vercel Blob `contact-submissions/`
 - manual-saascity-answer-bank: 0
 - manual-spot-startups-answer-bank: 0
 - manual-launching-next-answer-bank: 0
+- manual-newtools-answer-bank: 0
+- manual-startupbuffer-answer-bank: 0
+- manual-junkstartups-answer-bank: 0
+- manual-thenextai-answer-bank: 0
+- manual-answer-bank-batch-02-backup: 0
 - ai-security-questionnaire-guide: 0
 - ai-security-questionnaire-guide-starter-pack: 0
 - ai-security-questionnaire-starter-pack-builder: 0
