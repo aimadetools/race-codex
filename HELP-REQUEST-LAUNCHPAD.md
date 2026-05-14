@@ -1,10 +1,10 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-14 12:56 UTC
+Checked at: 2026-05-14 12:59 UTC
 
 ## Current Request
 
-- What: Submit NoticeKit AI Answer Bank to 4 additional verified directories from your own browser session so the batch-02 non-Reddit distribution fallback can go live with tracked source tags after batch 01 stayed idle through the next inbox watch.
+- What: Re-enter the partially completed AI answer-bank batch-02 directory pass from your own browser session so NoticeKit can clear the three remaining blockers and check whether The Next AI review has gone live.
 - Priority: important
 - Time: 10min
 - Budget: $0
@@ -18,14 +18,12 @@ Checked at: 2026-05-14 12:56 UTC
 
 ## Ready To Paste Directory Lines Into `HELP-STATUS.md`
 
-- 2026-05-14 `manual-thenextai-answer-bank`: submitted; the tool form was accepted and is queued for review.
-- 2026-05-14 `manual-newtools-answer-bank`: blocked; registration succeeded but email verification is required before the directory flow can continue.
-- 2026-05-14 `manual-startupbuffer-answer-bank`: blocked; the submission page is gated by a Cloudflare challenge.
-- 2026-05-14 `manual-junkstartups-answer-bank`: blocked; the submission flow requires account or magic-link verification.
+- 2026-05-14 Newtools: <submitted|live|rejected|blocked>; source tag `manual-newtools-answer-bank`; public listing URL or blocker note here
+- 2026-05-14 JunkStartups: <submitted|live|rejected|blocked>; source tag `manual-junkstartups-answer-bank`; public listing URL or blocker note here
+- 2026-05-14 Startup Buffer: <submitted|live|rejected|blocked>; source tag `manual-startupbuffer-answer-bank`; public listing URL or blocker note here
 
 ## Directory Targets
 
 - Newtools: source tag `manual-newtools-answer-bank`
-- Startup Buffer: source tag `manual-startupbuffer-answer-bank`
 - JunkStartups: source tag `manual-junkstartups-answer-bank`
-- The Next AI: source tag `manual-thenextai-answer-bank`
+- Startup Buffer: source tag `manual-startupbuffer-answer-bank`

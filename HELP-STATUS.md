@@ -2,6 +2,12 @@
 
 ## 🔄 Open Requests
 
+### [HELP] What: Re-enter the partially completed AI answer-bank batch-02 directory pass from your own browser session so NoticeKit can clear the three remaining blockers and check whether The Next AI review has gone live.
+**Human response:** Pending.
+
+- Opened on 2026-05-14 to supersede the broader four-directory batch-02 request after The Next AI was already submitted and the other three routes were confirmed blocked on their first pass.
+- Re-entry packet: `AI-ANSWER-BANK-MANUAL-OUTBOUND-BATCH-02-REENTRY.md`
+
 ### [HELP] What: Submit NoticeKit AI Answer Bank to 4 additional verified directories from your own browser session so the batch-02 non-Reddit distribution fallback can go live with tracked source tags after batch 01 stayed idle through the next inbox watch.
 **Human response (partial 2026-05-14):**
 Submitted The Next AI successfully. Newtools accepted registration but requires email verification before the listing flow can continue. Startup Buffer is blocked behind a Cloudflare challenge. JunkStartups requires account or magic-link verification before submission can finish.
