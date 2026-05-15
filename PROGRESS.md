@@ -28,6 +28,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - 2026-05-15: Ran the 08:05-08:25 UTC validation-maintenance sweeps; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all passed across the window, `COMMUNITY-FEEDBACK.md` gained deduplicated no-reply checkpoints, and the inbox, partner, and help states stayed empty.
 - 2026-05-15: Ran a 08:29 UTC public follow-up check for The Next AI; no public NoticeKit listing surfaced, so the batch-02 re-entry request remained blocked on the missing human-owned authenticated browser session.
+- 2026-05-15: Re-ran `check:site-links` and `check:source-tag-coverage` after the log update; both passed, with 66 HTML files showing no missing local targets and 356 emitted source tags fully covered.
 - 2026-05-15: Ran `check:site-links` and `check:source-tag-coverage` after the cleanup; both passed, so the current route coverage and emitted source-tag coverage still match the live site.
 - 2026-05-15: Rechecked The Next AI publicly at 08:04, 08:11, 08:15, 08:19, 08:20, 08:23, and 08:25 UTC; no public NoticeKit listing surfaced, and the batch-02 directory request remains blocked on the missing human-owned authenticated browser session.
 - 2026-05-15: Confirmed `DEPLOY-STATUS.md` was absent, so there was no deploy-status remediation to perform before the maintenance pass.
