@@ -89,8 +89,8 @@
             <a class="button" href="#builder">Open builder</a>
             <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-questionnaire-builder-starter-pack">Open starter pack</a>
             <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=ai-questionnaire-builder-answer-bank">Open answer bank</a>
-            <a class="button secondary" href="blog-ai-security-questionnaire-answer-template.html?source=ai-security-questionnaire-builder">Open static template</a>
-            <a class="button secondary" href="blog-ai-security-questionnaire-answer-example.html?source=ai-questionnaire-builder-example">See filled example</a>
+            <a class="button secondary" id="builder-template-link" href="blog-ai-security-questionnaire-answer-template.html?source=ai-security-questionnaire-builder">Open static template</a>
+            <a class="button secondary" id="builder-example-link" href="blog-ai-security-questionnaire-answer-example.html?source=ai-questionnaire-builder-example">See filled example</a>
             <a class="button secondary" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Request free teardown</a>
           </div>
         </section>
@@ -360,6 +360,8 @@
       const sourceContextPoints = document.querySelector("#source-context-points");
       const heroTitle = document.querySelector("#hero-title");
       const heroCopy = document.querySelector("#hero-copy");
+      const builderTemplateLink = document.querySelector("#builder-template-link");
+      const builderExampleLink = document.querySelector("#builder-example-link");
 
       function value(id) {
         return document.querySelector(`#${id}`).value.trim();
@@ -593,6 +595,21 @@
             "Escalate into the packet only if the reviewer needs broader evidence."
           ]
         },
+        "openai-security-questionnaire-template-builder": {
+          heroTitle: "Turn the OpenAI-specific template into a filled named-vendor answer and handoff.",
+          heroCopy: "You already know the buyer named OpenAI directly. Use the builder to package the reviewed workflow, supporting vendors, data scope, retention stance, proof links, and handoff note in one browser-only draft.",
+          title: "The OpenAI template gave you the structure; this builder turns it into the actual answer.",
+          copy: "Keep the draft pinned to one OpenAI-backed workflow and one affected customer segment so the reviewer sees a concrete named-vendor answer instead of another broad AI policy summary.",
+          points: [
+            "Preserve the named OpenAI workflow instead of broadening the answer into a product-level AI story.",
+            "Keep the supporting vendor chain, proof links, and open notice questions attached to the same draft.",
+            "Switch to the answer bank only if repeated OpenAI review prompts keep coming back across deals."
+          ],
+          templateHref: "blog-openai-security-questionnaire-answer-template.html?source=openai-security-questionnaire-example-template",
+          templateLabel: "Open OpenAI template",
+          exampleHref: "blog-openai-security-questionnaire-answer-example.html?source=openai-security-questionnaire-template-example",
+          exampleLabel: "See OpenAI example"
+        },
         "free-tools-ai-answer-builder": {
           title: "Use the builder when the fastest next step is a written answer.",
           copy: "This route is for buyers who do not need the full packet or teardown yet.",
@@ -664,6 +681,21 @@
             "Carry the same vendor, scope, and proof details into the intake if you still need help.",
             "Use the packet path next only if the reviewer needs broader documentation."
           ]
+        },
+        "openai-security-questionnaire-example-builder": {
+          heroTitle: "Turn the OpenAI example into your own named-vendor answer before the deal stalls.",
+          heroCopy: "You already saw the level of specificity the buyer expects. Use the builder to replace the sample workflow, scope, stance, proof links, and owner notes with your own facts without losing the named-vendor framing.",
+          title: "The example made the answer shape click; now generate the real draft from your own facts.",
+          copy: "Keep the answer tied to one OpenAI-backed workflow, one customer segment, and one live reviewer ask so the final draft stays sharper than the generic AI route.",
+          points: [
+            "Replace every example fact with your own workflow, customer scope, and proof trail before you send the answer.",
+            "Keep the supporting vendor chain visible so the reviewer can see the real operating path around OpenAI.",
+            "Escalate into teardown or the packet path only if the blocker expands beyond the questionnaire wording."
+          ],
+          templateHref: "blog-openai-security-questionnaire-answer-template.html?source=openai-security-questionnaire-example-template",
+          templateLabel: "Open OpenAI template",
+          exampleHref: "blog-openai-security-questionnaire-answer-example.html?source=openai-security-questionnaire-example-template",
+          exampleLabel: "Back to OpenAI example"
         }
       };
 
@@ -683,6 +715,18 @@
           item.textContent = point;
           return item;
         }));
+        if (config.templateHref) {
+          builderTemplateLink.href = config.templateHref;
+        }
+        if (config.templateLabel) {
+          builderTemplateLink.textContent = config.templateLabel;
+        }
+        if (config.exampleHref) {
+          builderExampleLink.href = config.exampleHref;
+        }
+        if (config.exampleLabel) {
+          builderExampleLink.textContent = config.exampleLabel;
+        }
         sourceContextSection.hidden = false;
       }
 

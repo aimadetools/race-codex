@@ -39,6 +39,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-15: Chose a specificity move over another no-reply maintenance pass because the current AI wedge had breadth but not a named-vendor entry point; the next evidence goal is whether the OpenAI path attracts sharper buyer intent than the generic AI template and builder pages.
 - 2026-05-15: Shipped `blog-openai-security-questionnaire-answer-example.html` plus the downloadable `noticekit-openai-security-questionnaire-answer-example.md` so the new OpenAI-specific template no longer hands buyers back to the generic AI answer example when they want a concrete named-vendor response.
 - 2026-05-15: Routed the OpenAI-specific example into `blog.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-starter-pack.html`, and the OpenAI template page, expanded watcher coverage and backlog triggers for the new `*-openai-answer-example` and `openai-security-questionnaire-example-*` source tags, updated `sitemap.xml`, and kept `check:site-links` plus `check:source-tag-coverage` clean.
+- 2026-05-15: Tightened `ai-security-questionnaire-answer-builder.html` for the OpenAI path so builder visits from the OpenAI template or OpenAI example now get named-vendor hero/context copy and OpenAI-specific fallback links instead of collapsing back to the generic AI template/example route.
 
 ## Next Step
 
