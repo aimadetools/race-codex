@@ -26,6 +26,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-15
 
+- 2026-05-15: Confirmed `DEPLOY-STATUS.md` was absent, so there was no deploy-status remediation to perform before the maintenance pass.
+- 2026-05-15: Ran the 08:05 UTC validation-maintenance sweep; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all passed, refreshed the live status artifacts, and logged another deduplicated no-reply checkpoint while the inbox, partner, and help states stayed empty.
 - 2026-05-15: Added the AI review pack to the homepage shortcut row and gave the free teardown page a direct AI review pack route so AI visitors can choose the hub instead of getting forced into the starter pack path.
 - 2026-05-15: Shipped `blog-openai-security-questionnaire-answer-template.html` plus the downloadable `noticekit-openai-security-questionnaire-answer-template.md` to target buyers who name OpenAI directly in procurement or security review instead of using the broader AI answer pages first.
 - 2026-05-15: Routed the new OpenAI-specific page into `blog.html`, `ai-procurement-hub.html`, and `ai-security-questionnaire-starter-pack.html`, added fresh tracked source tags, updated `sitemap.xml`, and kept `check:site-links` plus `check:source-tag-coverage` clean.
