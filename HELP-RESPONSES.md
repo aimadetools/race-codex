@@ -4,27 +4,27 @@ This file is maintained by the human. Do NOT modify it. Check here BEFORE creati
 ## Pending
 - [None currently]
 
-## Infrastructure (configured by human)
-- Domain: noticekit.tech (pointed to Vercel)
-- Resend: RESEND_API_KEY (in Vercel env vars) — sending from hello@noticekit.tech
-- Stripe: STRIPE_STARTER_PAYMENT_LINK, STRIPE_GROWTH_PAYMENT_LINK, STRIPE_TEAM_PAYMENT_LINK (URLs in Vercel env vars)
-- Stripe redirect: /purchase-next-steps.html (configured in Stripe dashboard)
-- Vercel Blob: BLOB_READ_WRITE_TOKEN (in Vercel env vars)
-- Contact system: CONTACT_WEBHOOK_SECRET, CONTACT_WEBHOOK_URL, CONTACT_SMTP_FROM, CONTACT_NOTIFICATION_EMAIL, OPS_DASHBOARD_PASSWORD
+## Infrastructure (configured by human, all working)
+- Domain: noticekit.tech (pointed to Vercel, live)
+- Resend: process.env.RESEND_API_KEY — send from hello@noticekit.tech
+- Stripe payment links: process.env.STRIPE_STARTER_PAYMENT_LINK, process.env.STRIPE_GROWTH_PAYMENT_LINK, process.env.STRIPE_TEAM_PAYMENT_LINK
+- Stripe redirect: configured to /purchase-next-steps.html after payment
+- Vercel Blob: process.env.BLOB_READ_WRITE_TOKEN
+- Contact system: process.env.CONTACT_WEBHOOK_SECRET, CONTACT_WEBHOOK_URL, CONTACT_SMTP_FROM, CONTACT_NOTIFICATION_EMAIL
+- Ops dashboard: process.env.OPS_DASHBOARD_PASSWORD
+- Site URL: process.env.NEXT_PUBLIC_SITE_URL
 - Google Search Console: verified, sitemap submitted
 - Bing Webmaster Tools: verified
-- NEXT_PUBLIC_SITE_URL: set in Vercel env vars
 
 ## Completed Requests
-| Date | Request | Status | Ref |
-|------|---------|--------|-----|
-| Apr 20 | Domain (noticekit.tech) | ✅ Done | #1, #2 |
-| Apr 21 | Stripe payment links (3 tiers) | ✅ Done | #2 |
-| Apr 22 | Resend email setup | ✅ Done | #13-20 |
-| May 5 | Google Search Console + Bing Webmaster | ✅ Done | #26 |
-| May 8 | URL indexing in GSC | ✅ Done | #32 |
-| May 13-15 | Reddit replies + indexing | ✅ Done — posted, low traction | #33, #34 |
+- Domain registration (noticekit.tech) — done Apr 20
+- Stripe payment links (3 tiers: $29, $79, $249) — done Apr 21
+- Resend email setup — done Apr 22
+- Google Search Console + Bing Webmaster Tools — done May 5
+- URL indexing in GSC — done May 8, May 13
+- Reddit replies posted — done May 15
 
-## Declined
-- Sending emails on your behalf: Do it yourself — Resend is configured
-- Code debugging: Your responsibility
+## Declined (do NOT re-request these)
+- Sending emails on your behalf: You have Resend configured. Send them yourself.
+- Code debugging: Your responsibility.
+- Posting Reddit replies from our account repeatedly: Already done. New accounts get minimal engagement.
