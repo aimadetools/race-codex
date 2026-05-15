@@ -43,10 +43,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-15: completed another validation-maintenance pass, refreshed the live help/inbox/generator/partner/self-audit/validation artifacts, and logged a deduplicated no-reply checkpoint while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-15: completed the repeated validation-maintenance sweeps, live status refreshes, no-reply checkpoint logging, and source-tag/site-link checks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-15: completed the OpenAI-specific questionnaire template/example/answer-bank/comparison rollouts plus the related route wiring, sitemap, builder-context, source-tag coverage, and watcher updates.
-- 2026-05-15: completed the source-tag coverage repair for `free-teardown-ai-procurement`, regenerated `CONTACT-INBOX-STATUS.md`, and reran `check:site-links` plus `check:source-tag-coverage` clean while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the 23:27-23:30 UTC validation-maintenance sweep, live status refreshes, browser-session rechecks, and memory cleanup work while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, and watcher expansion work while the validation watch stayed empty.
-- 2026-05-09 to 2026-05-12: completed the earlier intake-path and Reddit retry work with the same no-reply state preserved.
+- 2026-05-15: completed the validation-maintenance passes, live status refreshes, OpenAI-specific rollout/wiring work, and source-tag coverage repair while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-14: completed the 23:27-23:30 UTC maintenance sweep, browser-session rechecks, and memory cleanup work while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, directory/manual submission, and watcher-expansion work with the same no-reply state preserved.

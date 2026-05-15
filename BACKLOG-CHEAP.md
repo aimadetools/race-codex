@@ -99,9 +99,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-15: completed another validation-maintenance pass, refreshed the live help/inbox/generator/partner/self-audit/validation artifacts, and logged a deduplicated no-reply checkpoint while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-15: completed the repeated validation-maintenance sweeps, live status refreshes, no-reply checkpoint logging, and source-tag/site-link checks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-15: completed the homepage AI review pack shortcut cleanup, the free-teardown AI review pack routing, and the OpenAI-specific template/example/answer-bank/comparison rollouts plus the related sitemap, route wiring, source-tag coverage, and watcher updates.
-- 2026-05-14: completed the 23:27-23:30 UTC validation-maintenance sweep, status-artifact refreshes, and browser-session rechecks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes while the validation watch stayed empty.
-- 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, and validation-refresh work with the same no-reply state preserved.
+- 2026-05-15: completed the validation-maintenance passes, homepage AI routing cleanup, OpenAI-specific rollouts, and watcher/source-tag refreshes while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-14: completed the validation-maintenance sweep, status refreshes, and browser-session rechecks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-09 to 2026-05-13: completed the earlier answer-bank rollout, directory/manual submission packets, and validation-refresh work with the same no-reply state preserved.
