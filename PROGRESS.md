@@ -34,6 +34,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-15: Tightened `ai-security-questionnaire-answer-builder.html` for the OpenAI path so builder visits from the OpenAI template or OpenAI example now get named-vendor hero/context copy and OpenAI-specific fallback links instead of collapsing back to the generic AI template/example route.
 - 2026-05-15: Ran the 04:16-04:17 UTC validation-maintenance sweep, refreshed the help, inbox, generator, partner, self-audit, and validation artifacts, logged the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, expanded `CONTACT-INBOX-STATUS.md` to include the new OpenAI source tags, and kept `check:site-links` plus `check:source-tag-coverage` clean while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-15: Rechecked the batch-02 directory re-entry lane from the public web; The Next AI still showed no public NoticeKit listing, and the request stayed blocked on the missing human-owned authenticated browser session for the remaining manual steps.
+- 2026-05-15: Shipped `openai-security-questionnaire-answer-bank.html` plus the downloadable `noticekit-openai-security-questionnaire-answer-bank-template.md` so repeated named-vendor OpenAI review threads no longer fall back to the generic AI answer bank when buyers keep asking the same vendor-specific questions.
+- 2026-05-15: Routed the new OpenAI answer-bank path into `blog.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-starter-pack.html`, the OpenAI template/example pages, and the generic AI answer bank; extended builder source-context handling for `openai-answer-bank-builder`; refreshed `CONTACT-INBOX-STATUS.md`; updated `sitemap.xml`; and kept `check:site-links` plus `check:source-tag-coverage` clean.
 
 ## Next Step
 
@@ -42,4 +44,5 @@ Older work is collapsed here so only the last three days stay detailed.
 - If The Next AI goes live or any blocked route becomes unblocked, preserve the evidence gate and prefer pausing more distribution before opening another fresh batch.
 - Watch the new OpenAI-specific source tags for the first real click, teardown, or reply and compare them against the broader AI answer-template and builder routes before adding more AI landing pages.
 - Watch whether the OpenAI-specific filled example beats the OpenAI template or generic AI example for the first real click, teardown, or reply before moving the named-vendor example higher across the AI surfaces.
+- Watch whether the OpenAI-specific answer bank beats the OpenAI template, OpenAI example, or generic AI answer bank for the first real click, teardown, or reply before moving the named-vendor repeat-review framing higher across the AI surfaces.
 - If the first AI Pro kit, answer-bank, or starter-pack teardown lands, compare it against the adjacent routes before changing homepage or pricing copy again.
