@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-15 04:26 UTC
+Checked at: 2026-05-15 04:33 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -388,6 +388,18 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-answer-bank-risk-worksheet: 0
 - openai-answer-bank-teardown: 0
 - openai-answer-bank-vs-builder: 0
+- openai-answer-bank-vs-builder-bank: 0
+- openai-answer-bank-vs-builder-builder: 0
+- openai-answer-bank-vs-builder-template: 0
+- openai-answer-bank-vs-builder-example: 0
+- openai-answer-bank-vs-builder-starter-pack: 0
+- openai-answer-bank-vs-builder-teardown: 0
+- openai-answer-bank-vs-builder-pricing: 0
+- blog-index-openai-answer-comparison: 0
+- ai-procurement-hub-openai-answer-comparison: 0
+- ai-security-questionnaire-starter-pack-openai-answer-comparison: 0
+- openai-security-questionnaire-template-comparison: 0
+- openai-security-questionnaire-example-comparison: 0
 - ai-answer-bank-vs-builder-answer-bank: 0
 - ai-answer-bank-vs-builder-builder: 0
 - ai-answer-bank-vs-builder-pro-kit: 0
