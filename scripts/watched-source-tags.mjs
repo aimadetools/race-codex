@@ -62,6 +62,7 @@ export const WATCHED_SOURCE_TAGS = [
   "free-tools-hero-ai-procurement",
   "free-tools-ai-stack-guide",
   "free-tools-ai-deal-blocker",
+  "free-teardown-ai-procurement",
   "free-tools-ai-pro-kit",
   "free-tools-ai-answer-bank",
   "free-tools-ai-answer-bank-vs-pro-kit",

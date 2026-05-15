@@ -45,6 +45,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 - 2026-05-15: completed the 04:16-04:17 UTC validation-maintenance sweep, status refreshes, source-tag watch expansion for the OpenAI routes, and another public The Next AI recheck while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-15: completed the 04:26 UTC validation-maintenance sweep and status refresh after the OpenAI answer-bank rollout while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-15: completed the source-tag coverage repair for `free-teardown-ai-procurement`, regenerated `CONTACT-INBOX-STATUS.md`, and reran `check:site-links` plus `check:source-tag-coverage` clean while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the 23:27-23:30 UTC validation-maintenance sweep, live status refreshes, browser-session rechecks, and memory cleanup work while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-15: completed the OpenAI-specific AI questionnaire template/example rollout, downloadable assets, routed source-tag coverage, and sitemap/blog/starter-pack/hub distribution updates.
 - 2026-05-15: completed the OpenAI-specific answer-bank rollout, downloadable template, builder context extension, routed source-tag coverage, and inbox watcher expansion for repeated named-vendor review demand.

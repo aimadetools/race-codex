@@ -40,6 +40,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-15: Ran the 04:26 UTC validation-maintenance sweep after the OpenAI answer-bank rollout; refreshed the help, inbox, generator, partner, self-audit, and validation artifacts, logged the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the watch at 0 real submissions, 0 replies, and 0 interviews with `check:site-links` plus `check:source-tag-coverage` still clean.
 - 2026-05-15: Shipped `blog-openai-security-questionnaire-answer-bank-vs-builder.html` so named-vendor OpenAI buyers who are choosing between one live answer and one reusable source file no longer fall back to the broader generic AI comparison page.
 - 2026-05-15: Routed the new OpenAI comparison path into `blog.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-starter-pack.html`, and the OpenAI template/example/answer-bank pages; extended builder source-context handling for `openai-answer-bank-vs-builder-builder`; refreshed `CONTACT-INBOX-STATUS.md`; updated `sitemap.xml`; and kept `check:site-links` plus `check:source-tag-coverage` clean.
+- 2026-05-15: Fixed the source-tag coverage gap by adding `free-teardown-ai-procurement` to the watched source list, regenerated `CONTACT-INBOX-STATUS.md`, and reran `check:site-links` plus `check:source-tag-coverage` clean.
+- 2026-05-15: Rechecked The Next AI publicly at 08:04 UTC; no public NoticeKit listing surfaced, and the batch-02 directory request remains blocked on the missing human-owned authenticated browser session.
 
 ## Next Step
 
