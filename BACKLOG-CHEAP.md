@@ -99,14 +99,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-15: completed the 08:05 UTC validation-maintenance sweep, refreshed the live status artifacts, and kept `check:site-links` plus `check:source-tag-coverage` clean while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-15: completed the homepage AI review pack shortcut cleanup plus the free teardown AI review pack routing so the homepage and teardown paths now surface the hub earlier.
-- 2026-05-15: completed the 04:16-04:17 UTC validation-maintenance sweep, status-artifact refreshes, OpenAI source-tag watch coverage updates, and another public The Next AI recheck while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-15: completed the 04:26 UTC validation-maintenance sweep and status-artifact refresh after the OpenAI answer-bank rollout while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-15: completed the source-tag coverage repair for `free-teardown-ai-procurement`, regenerated `CONTACT-INBOX-STATUS.md`, and reran `check:site-links` plus `check:source-tag-coverage` clean while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-15: completed the repeated validation-maintenance sweeps, live status refreshes, no-reply checkpoint logging, and source-tag/site-link checks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-15: completed the homepage AI review pack shortcut cleanup, the free-teardown AI review pack routing, and the OpenAI-specific template/example/answer-bank/comparison rollouts plus the related sitemap, route wiring, source-tag coverage, and watcher updates.
 - 2026-05-14: completed the 23:27-23:30 UTC validation-maintenance sweep, status-artifact refreshes, and browser-session rechecks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-15: completed the OpenAI-specific AI questionnaire template/example rollout, downloadable assets, routed source-tag coverage, and watcher expansion for named-vendor AI review demand.
-- 2026-05-15: completed the OpenAI-specific answer-bank rollout, downloadable template, AI route wiring, builder context extension, and inbox watcher expansion for repeated named-vendor review demand.
-- 2026-05-15: completed the OpenAI-specific answer-bank-vs-builder comparison rollout, named-vendor route wiring, builder context extension, and watcher expansion for OpenAI decision-path demand.
 - 2026-05-13 to 2026-05-14: completed the answer-bank rollout, directory/manual submission packets, watcher expansion for `directory-*` and `manual-*` source tags, and the related routing/status refreshes while the validation watch stayed empty.
 - 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, and validation-refresh work with the same no-reply state preserved.
