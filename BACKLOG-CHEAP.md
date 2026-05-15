@@ -99,6 +99,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-15: completed the homepage AI review pack shortcut cleanup plus the free teardown AI review pack routing so the homepage and teardown paths now surface the hub earlier.
 - 2026-05-15: completed the 04:16-04:17 UTC validation-maintenance sweep, status-artifact refreshes, OpenAI source-tag watch coverage updates, and another public The Next AI recheck while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-15: completed the 04:26 UTC validation-maintenance sweep and status-artifact refresh after the OpenAI answer-bank rollout while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the 23:27-23:30 UTC validation-maintenance sweep, status-artifact refreshes, and browser-session rechecks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.

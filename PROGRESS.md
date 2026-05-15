@@ -26,6 +26,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-15
 
+- 2026-05-15: Added the AI review pack to the homepage shortcut row and gave the free teardown page a direct AI review pack route so AI visitors can choose the hub instead of getting forced into the starter pack path.
 - 2026-05-15: Shipped `blog-openai-security-questionnaire-answer-template.html` plus the downloadable `noticekit-openai-security-questionnaire-answer-template.md` to target buyers who name OpenAI directly in procurement or security review instead of using the broader AI answer pages first.
 - 2026-05-15: Routed the new OpenAI-specific page into `blog.html`, `ai-procurement-hub.html`, and `ai-security-questionnaire-starter-pack.html`, added fresh tracked source tags, updated `sitemap.xml`, and kept `check:site-links` plus `check:source-tag-coverage` clean.
 - 2026-05-15: Chose a specificity move over another no-reply maintenance pass because the current AI wedge had breadth but not a named-vendor entry point; the next evidence goal is whether the OpenAI path attracts sharper buyer intent than the generic AI template and builder pages.
