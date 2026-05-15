@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-14 23:30 UTC
+Checked at: 2026-05-15 04:18 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -98,6 +98,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-deal-blocker: 0
 - blog-index-ai-risk-worksheet: 0
 - blog-index-ai-questionnaire-template: 0
+- blog-index-openai-answer-template: 0
+- blog-index-openai-answer-example: 0
 - blog-index-ai-questionnaire-example: 0
 - blog-index-ai-comparison: 0
 - blog-index-ai-answer-bank-vs-pro-kit: 0
@@ -259,6 +261,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-starter-pack-example: 0
 - ai-security-questionnaire-starter-pack-free-tools: 0
 - ai-security-questionnaire-starter-pack-template: 0
+- ai-security-questionnaire-starter-pack-openai-answer-template: 0
+- ai-security-questionnaire-starter-pack-openai-answer-example: 0
 - ai-security-questionnaire-starter-pack-packet: 0
 - ai-security-questionnaire-starter-pack-sample: 0
 - ai-security-questionnaire-starter-pack-teardown: 0
@@ -283,6 +287,21 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-template-stack: 0
 - ai-security-questionnaire-template-teardown: 0
 - ai-security-questionnaire-template-pricing: 0
+- openai-security-questionnaire-template-builder: 0
+- openai-security-questionnaire-template-answer-bank: 0
+- openai-security-questionnaire-template-starter-pack: 0
+- openai-security-questionnaire-template-risk-worksheet: 0
+- openai-security-questionnaire-template-example: 0
+- openai-security-questionnaire-template-packet: 0
+- openai-security-questionnaire-template-teardown: 0
+- openai-security-questionnaire-template-pricing: 0
+- openai-security-questionnaire-example-builder: 0
+- openai-security-questionnaire-example-template: 0
+- openai-security-questionnaire-example-starter-pack: 0
+- openai-security-questionnaire-example-answer-bank: 0
+- openai-security-questionnaire-example-packet: 0
+- openai-security-questionnaire-example-teardown: 0
+- openai-security-questionnaire-example-pricing: 0
 - ai-security-questionnaire-sample: 0
 - ai-security-questionnaire-stack: 0
 - ai-security-questionnaire-teardown: 0
@@ -301,6 +320,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-cta: 0
 - ai-procurement-hub-comparison: 0
 - ai-procurement-hub-answer-template: 0
+- ai-procurement-hub-openai-answer-template: 0
+- ai-procurement-hub-openai-answer-example: 0
 - ai-procurement-hub-answer-example: 0
 - ai-procurement-hub-answer-builder: 0
 - ai-procurement-hub-answer-bank: 0
