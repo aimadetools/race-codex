@@ -44,6 +44,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-20: tightened the homepage and free-tools split so the receiver-side AI questionnaire path stayed primary, moved the broader review-pack, teardown, and partner paths lower on `free-tools.html`, and kept source-tag coverage and site-link checks green.
 - 2026-05-20: refreshed the validation/status snapshots at 16:12 UTC, kept the no-reply state unchanged, and left the live evidence gates on monitoring.
 - 2026-05-20: completed the receiver-side AI route-finder, homepage, pricing, start-here, free-tools, AI procurement hub, and blog cleanup; repaired source-context matching and kept validation and coverage checks green while real intake stayed at zero.
 - 2026-05-14 to 2026-05-15: completed the validation-maintenance sweeps, live status refreshes, OpenAI-specific rollout/wiring work, browser-session rechecks, and source-tag coverage repair while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
