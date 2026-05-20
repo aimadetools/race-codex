@@ -44,9 +44,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-20: completed the receiver-side AI route-finder cleanup on `ai-procurement-hub.html` and `blog.html`, repaired hub source-context matching for the live homepage/pricing/free-tools/start-here tags, and retired the stale `ai-procurement-hub-hero` watcher label so the remaining AI acquisition surfaces now point at the same buyer.
-- 2026-05-20: completed the homepage, pricing, start-here, and free-tools buyer-clarity passes so the main acquisition surfaces now lead with the receiver-side AI questionnaire route and keep subprocessor/partner workflows secondary until evidence says otherwise.
-- 2026-05-20: completed the validation-maintenance refresh after normalizing stale generated-artifact ownership, regenerating the live status/brief files, and confirming the watch still sits at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-20: completed the receiver-side AI route-finder, homepage, pricing, start-here, free-tools, AI procurement hub, and blog cleanup; repaired source-context matching, retired stale watcher labels, and kept validation and coverage checks green while real intake stayed at zero.
 - 2026-05-15: completed the validation-maintenance passes through the 08:23 UTC sweep, live status refreshes, OpenAI-specific rollout/wiring work, and source-tag coverage repair while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the 23:27-23:30 UTC maintenance sweep, browser-session rechecks, and memory cleanup work while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, directory/manual submission, and watcher-expansion work with the same no-reply state preserved.
