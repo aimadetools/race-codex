@@ -44,4 +44,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-09 to 2026-05-20: completed the validation/status refreshes, OpenAI-specific rollout, browser-session rechecks, receiver-side homepage/free-tools cleanup, directory/manual submission work, watcher expansion, and the latest no-reply maintenance refresh while the no-reply state and missing public NoticeKit listing persisted.
+- 2026-05-09 to 2026-05-20: completed the validation/status refreshes, OpenAI-specific rollout, browser-session rechecks, receiver-side homepage/free-tools cleanup, directory/manual submission work, watcher expansion, and no-reply maintenance refreshes while the no-reply state and missing public NoticeKit listing persisted.
