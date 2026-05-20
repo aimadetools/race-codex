@@ -22,6 +22,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-20: Tightened `pricing.html` and `start-here.html` around the same receiver-side AI buyer used on the homepage: the SaaS team answering an AI security questionnaire, with the older subprocessor notice workflow explicitly demoted to the secondary route instead of competing in the first screen.
 - 2026-05-20: Refreshed the pricing/start-here metadata, hero CTA order, route-by-blocker cards, and diagnostic copy so the free and paid paths now ladder from starter-pack or builder to answer-bank or AI Pro kit before branching into notice operations or partner delivery.
 - 2026-05-20: Removed retired `start-here` watcher labels from `scripts/watched-source-tags.mjs`, rebuilt `CONTACT-INBOX-STATUS.md`, and re-ran `npm run check:site-links` plus `npm run check:source-tag-coverage`; both passed again with 66 HTML files and 345 emitted source tags fully covered.
+- 2026-05-20: Rebuilt `free-tools.html` around the receiver-side AI questionnaire buyer instead of the older generator-first notice workflow: the hero, metadata, route finder defaults, conversion guidance, and downloads now start with starter-pack, builder, answer-bank, risk, and review-pack paths while the legacy subprocessor tools sit in a separate fallback section.
+- 2026-05-20: Retired the dead `free-tools-generator` and `free-tools-ai-answer-bank-vs-pro-kit` watch labels, refreshed `scripts/watched-source-tags.mjs`, regenerated `CONTACT-INBOX-STATUS.md`, and updated cheap-backlog CTA wording so tracking matches the live free-tools hub.
+- 2026-05-20: Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the free-tools pass; both passed with 66 HTML files showing no missing local targets and 343 emitted source tags fully covered.
 
 ## Next Step
 
