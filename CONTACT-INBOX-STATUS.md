@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-15 08:23 UTC
+Checked at: 2026-05-20 12:36 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -191,22 +191,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - partner-client-handoff-founder: 0
 - partner-client-handoff-teardown: 0
 - partner-client-handoff-cta: 0
-- homepage-ai-stack-guide: 0
-- homepage-ai-questionnaire: 0
-- homepage-ai-questionnaire-template: 0
-- homepage-ai-questionnaire-example: 0
-- homepage-ai-pro-kit: 0
-- homepage-ai-answer-bank: 0
-- homepage-ai-answer-bank-vs-pro-kit: 0
-- homepage-ai-answer-builder: 0
-- homepage-ai-comparison: 0
-- homepage-ai-packet-sample: 0
-- homepage-ai-risk-assessment: 0
-- homepage-ai-deal-blocker: 0
-- homepage-ai-risk-worksheet: 0
-- homepage-ai-procurement: 0
 - homepage-shortcut: 0
-- homepage-ai-disclosure-packet: 0
+- homepage-hero: 0
+- homepage-pricing: 0
+- homepage-free-tools: 0
+- homepage-subprocessor-teardown: 0
+- homepage-job-one-answer: 0
+- homepage-job-repeat-review: 0
+- homepage-job-subprocessor: 0
 - homepage-ai-route-one-answer: 0
 - homepage-ai-route-repeat-review: 0
 - homepage-ai-route-broader-handoff: 0
