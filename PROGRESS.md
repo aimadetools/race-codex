@@ -13,9 +13,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-20
 
-- 2026-05-20: Rechecked The Next AI publicly at 16:18 UTC; no public NoticeKit listing surfaced, so the batch-02 directory re-entry remains blocked on the human-owned browser session.
+- 2026-05-20: Rechecked The Next AI publicly at 16:20 UTC; no public NoticeKit listing surfaced, so the batch-02 directory re-entry remains blocked on the human-owned browser session.
 - 2026-05-20: Confirmed `DEPLOY-STATUS.md` was absent, reviewed `HELP-RESPONSES.md` plus `COMMUNITY-FEEDBACK.md`, and kept the “too many audiences” feedback as the priority signal.
-- 2026-05-20: Checked The Next AI again at 16:13 UTC; no public NoticeKit listing surfaced, so the batch-02 re-entry request remains blocked on the human-owned browser session.
+- 2026-05-20: Refreshed `HELP-STATUS.md`, `HELP-REQUEST-STATUS.md`, and `VALIDATION-STATUS.md` with the latest public The Next AI check while keeping the batch-02 request open.
 - 2026-05-20: Repositioned the homepage, pricing/start-here, `free-tools.html`, `ai-security-questionnaire-starter-pack.html`, `ai-security-questionnaire-answer-builder.html`, `ai-procurement-hub.html`, and `blog.html` around the receiver-side AI questionnaire buyer while clarifying the handoff and purchase path.
 - 2026-05-20: Tightened the homepage and free-tools split so the receiver-side AI questionnaire path stays primary, moved the broader review-pack, teardown, and partner paths lower on `free-tools.html`, and kept the source-tag coverage plus site-link checks green.
 - 2026-05-20: Updated `scripts/watched-source-tags.mjs`, retired stale watcher labels, and regenerated `CONTACT-INBOX-STATUS.md` so the watch loop follows the live homepage tags.
