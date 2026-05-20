@@ -17,6 +17,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-20: Added explicit “who this is for” receiver-side copy, tightened the builder/starter-pack free-path framing so it feels like a serious first pass rather than a teaser, and rewired homepage CTA language around starter-pack, builder, answer-bank, and the subprocessor fallback.
 - 2026-05-20: Updated `scripts/watched-source-tags.mjs`, regenerated `CONTACT-INBOX-STATUS.md`, and realigned backlog/source-context language to the new homepage tags (`homepage-hero`, `homepage-job-one-answer`, `homepage-job-repeat-review`, `homepage-subprocessor-teardown`, `homepage-free-tools`, `homepage-pricing`) so future watch loops do not follow retired labels.
 - 2026-05-20: Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage`; both passed, with 66 HTML files showing no missing local targets and 347 emitted source tags fully covered after the repositioning pass.
+- 2026-05-20: Recreated stale root-owned generated artifacts as the repo user so the validation maintenance scripts could write again, then ran `npm run run:validation-maintenance` successfully end-to-end.
+- 2026-05-20: Refreshed `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, generator/self-audit validation reports, and the validation briefs/status files; live state still shows 0 real submissions, 0 replies, and 0 interviews with one likely test submission in Blob storage.
 
 ## Next Step
 

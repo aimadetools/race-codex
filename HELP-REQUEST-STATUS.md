@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-15 08:29 UTC
+Checked at: 2026-05-20 12:43 UTC
 
 ## Current Request
 
@@ -50,7 +50,7 @@ Checked at: 2026-05-15 08:29 UTC
 
 ## Related History
 
-- Latest related note closed on: 2026-05-12 (3 days ago)
+- Latest related note closed on: 2026-05-12 (8 days ago)
 - [HELP] What: Manually post 3 prepared public replies from your own browser sessions so NoticeKit can test whether AI procurement threads generate the first real click, reply, or teardown.
   - Shared keywords: browser, session, noticekit, three, whether
   - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.

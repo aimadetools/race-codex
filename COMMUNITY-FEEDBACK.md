@@ -7,3 +7,8 @@
 ## Reddit r/SaaS (May 15, 2026)
 
 > Interesting niche but your site feels like it is trying to serve too many audiences at once. Are you for the company sending the questionnaire or the one receiving it? Pick one and make it obvious in the first 5 seconds.
+## 2026-05-20
+
+Rechecked on 2026-05-20 12:42 UTC: no founder/operator replies have been posted here yet across the active outreach batches. Keep `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-03.csv`, and `buyer-validation-outreach-batch-04.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+
+Rechecked on 2026-05-20 12:42 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.

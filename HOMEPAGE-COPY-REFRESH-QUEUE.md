@@ -1,6 +1,6 @@
 # Homepage Copy Refresh Queue
 
-Date: 2026-05-15
+Date: 2026-05-20
 
 ## Status
 
@@ -16,10 +16,10 @@ Date: 2026-05-15
 
 ## Current Founder-First Copy To Revisit
 
-- Hero eyebrow: present
+- Hero eyebrow: missing
   Current: "For SaaS teams under 30 people"
   Proposed: "For privacy advisors and lean SaaS teams"
-- Hero headline: present
+- Hero headline: missing
   Current: "Ship subprocessor change notices without a trust center."
   Proposed: "Prepare vendor-change review packets before counsel review."
 - Hero copy: missing
