@@ -13,14 +13,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-20
 
-- 2026-05-20: Ran `npm run run:validation-maintenance` again at 16:25 UTC; the reply watch, contact inbox, generator checks, partner status, and no-reply checkpoint all refreshed cleanly with 0 real submissions, 0 replies, and 0 interviews still on record.
+- 2026-05-20: Ran `npm run run:validation-maintenance` at 16:26-16:27 UTC; the reply watch, contact inbox, generator checks, partner status, source-tag coverage, and site-link sweeps all refreshed cleanly with 0 real submissions, 0 replies, and 0 interviews still on record.
 - 2026-05-20: Rechecked The Next AI publicly at 16:21 UTC; no public NoticeKit listing surfaced, so the batch-02 directory re-entry remains blocked on the human-owned browser session.
-- 2026-05-20: Confirmed `DEPLOY-STATUS.md` was absent, kept the r/SaaS “too many audiences” note as the priority signal, and left the batch-02 help request open.
-- 2026-05-20: Refreshed `HELP-STATUS.md`, `HELP-REQUEST-STATUS.md`, `VALIDATION-STATUS.md`, and `CONTACT-INBOX-STATUS.md` with the 16:21 UTC maintenance pass while keeping the live request set unchanged.
-- 2026-05-20: Repositioned the homepage, pricing/start-here, `free-tools.html`, `ai-security-questionnaire-starter-pack.html`, `ai-security-questionnaire-answer-builder.html`, `ai-procurement-hub.html`, and `blog.html` around the receiver-side AI questionnaire buyer while clarifying the handoff and purchase path.
-- 2026-05-20: Tightened the homepage and free-tools split so the receiver-side AI questionnaire path stays primary, moved the broader review-pack, teardown, and partner paths lower on `free-tools.html`, and kept the source-tag coverage plus site-link checks green.
-- 2026-05-20: Ran `npm run run:validation-maintenance`; the site-link and source-tag checks stayed green, the validation artifacts refreshed, and the no-reply checkpoint advanced to 16:21 UTC with 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-20: Cleaned this progress log and the completed backlog summaries so older shipping work stays collapsed while the live blockers remain visible.
+- 2026-05-20: Kept the homepage, pricing/start-here, `free-tools.html`, `ai-security-questionnaire-starter-pack.html`, `ai-security-questionnaire-answer-builder.html`, `ai-procurement-hub.html`, and `blog.html` framed around the receiver-side AI questionnaire buyer while the no-reply checkpoint stayed unchanged.
 
 ## Next Step
 
