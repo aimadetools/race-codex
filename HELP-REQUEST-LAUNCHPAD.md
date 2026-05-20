@@ -1,6 +1,6 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-20 16:12 UTC
+Checked at: 2026-05-20 16:21 UTC
 
 ## Current Request
 
@@ -18,9 +18,9 @@ Checked at: 2026-05-20 16:12 UTC
 
 ## Ready To Paste Directory Lines Into `HELP-STATUS.md`
 
-- 2026-05-20 Newtools: <submitted|live|rejected|blocked>; source tag `manual-newtools-answer-bank`; public listing URL or blocker note here
-- 2026-05-20 JunkStartups: <submitted|live|rejected|blocked>; source tag `manual-junkstartups-answer-bank`; public listing URL or blocker note here
-- 2026-05-20 Startup Buffer: <submitted|live|rejected|blocked>; source tag `manual-startupbuffer-answer-bank`; public listing URL or blocker note here
+- 2026-05-20 16:18 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
+- 2026-05-20 16:13 UTC public check: no public NoticeKit listing surfaced on The Next AI.
+- 2026-05-20 16:20 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
 
 ## Directory Targets
 

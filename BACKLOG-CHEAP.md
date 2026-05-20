@@ -102,9 +102,9 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-20: rechecked The Next AI publicly at 16:18 UTC and still found no public NoticeKit listing, so the batch-02 directory re-entry remains blocked on the human-owned browser session.
+- 2026-05-20: rechecked The Next AI publicly at 16:18-16:21 UTC and still found no public NoticeKit listing, so the batch-02 directory re-entry remains blocked on the human-owned browser session.
 - 2026-05-20: tightened the homepage and free-tools split so the receiver-side AI questionnaire path stayed primary, moved the broader review-pack, teardown, and partner paths lower on `free-tools.html`, and kept source-tag coverage and site-link checks green.
-- 2026-05-20: refreshed the validation/status snapshots at 16:12 UTC, kept the no-reply state unchanged, and left the live trigger set on monitoring.
+- 2026-05-20: refreshed the validation/status snapshots, kept the no-reply state unchanged, and left the live trigger set on monitoring.
 - 2026-05-20: completed the receiver-side AI positioning and handoff cleanup across homepage, pricing, start-here, free-tools, the AI procurement hub, and the blog, then refreshed the validation artifacts and kept real intake at zero.
 - 2026-05-14 to 2026-05-15: completed the validation-maintenance passes, homepage AI routing cleanup, OpenAI-specific rollouts, watcher/source-tag refreshes, and browser-session rechecks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-09 to 2026-05-13: completed the earlier answer-bank rollout, directory/manual submission work, and validation-refresh passes with the same no-reply state preserved.
