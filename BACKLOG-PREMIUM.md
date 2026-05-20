@@ -44,7 +44,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-20: completed another validation-maintenance pass at 23:09 UTC, refreshed the live reply-watch and status artifacts, and kept the generator, handoff, partner, and validation checks green while the no-reply state persisted.
-- 2026-05-20: completed another validation-maintenance pass at 23:08 UTC, refreshed the live reply-watch and status artifacts, and kept the generator, handoff, partner, and validation checks green while the no-reply state persisted.
-- 2026-05-20: completed the validation/status refreshes, OpenAI-specific rollout, browser-session rechecks, receiver-side homepage/free-tools cleanup, about-page alignment pass, directory/manual submission work, watcher expansion, and repeated no-reply maintenance passes while the no-reply state and missing public NoticeKit listing persisted.
+- 2026-05-20: completed the latest validation-maintenance passes and live reply-watch refreshes, keeping generator, handoff, partner, and validation checks green while the no-reply state persisted.
 - 2026-05-09 to 2026-05-20: completed the broader validation/status refresh cycle and no-reply maintenance work across the same queue, with no real replies, submissions, or interviews recorded.

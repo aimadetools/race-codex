@@ -102,8 +102,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-20: completed another validation-maintenance pass at 23:09 UTC, refreshed the live reply-watch and status artifacts, and kept source-tag coverage and site-link checks green with 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-20: completed another validation-maintenance pass at 23:08 UTC, refreshed the live reply-watch and status artifacts, and kept source-tag coverage and site-link checks green with 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-20: completed the DPA clause intake and multi-change vendor register shipping pass, added the CSV templates, wired both into the blog/homepage/free-tools/sitemap, and kept validation-maintenance and watcher coverage green with no replies, submissions, or interviews.
-- 2026-05-20: completed the latest no-reply maintenance and public The Next AI rechecks; the batch-02 directory re-entry remains blocked on the human-owned browser session.
-- 2026-05-09 to 2026-05-20: completed the validation/status refreshes, homepage AI routing cleanup, OpenAI-specific rollouts, receiver-side homepage/free-tools cleanup, about-page alignment pass, answer-bank rollout, manual directory submission work, named-vendor blog hero refresh, and repeated no-reply maintenance passes while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-20: completed the latest validation-maintenance and no-reply monitoring passes, plus the DPA clause intake and multi-change vendor register shipping work, while source-tag coverage, site-link checks, and live queue counts stayed green with 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-20: completed the public The Next AI rechecks and the receiver-side homepage/about/free-tools copy cleanup, with the batch-02 directory re-entry still blocked on the human-owned browser session.
+- 2026-05-09 to 2026-05-20: completed the broader validation/status refresh cycle, answer-bank rollout, and manual directory submission work while the live queue stayed empty.
