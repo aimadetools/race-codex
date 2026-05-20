@@ -44,7 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-20: completed the receiver-side AI route-finder, homepage, pricing, start-here, free-tools, AI procurement hub, and blog cleanup; repaired source-context matching, retired stale watcher labels, and kept validation and coverage checks green while real intake stayed at zero.
-- 2026-05-15: completed the validation-maintenance passes through the 08:23 UTC sweep, live status refreshes, OpenAI-specific rollout/wiring work, and source-tag coverage repair while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-14: completed the 23:27-23:30 UTC maintenance sweep, browser-session rechecks, and memory cleanup work while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-20: completed the receiver-side AI route-finder, homepage, pricing, start-here, free-tools, AI procurement hub, and blog cleanup; repaired source-context matching and kept validation and coverage checks green while real intake stayed at zero.
+- 2026-05-14 to 2026-05-15: completed the validation-maintenance sweeps, live status refreshes, OpenAI-specific rollout/wiring work, browser-session rechecks, and source-tag coverage repair while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, directory/manual submission, and watcher-expansion work with the same no-reply state preserved.
