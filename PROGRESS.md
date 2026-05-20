@@ -9,6 +9,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-13: Kept the AI questionnaire starter-pack and procurement routes promoted across the homepage, pricing, free-tools, and AI hub while validation maintenance remained clean and the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: Refreshed the validation/status artifacts, rechecked blocked directory paths, and kept the AI route-chooser plus answer-bank positioning updates live while buyer evidence remained unchanged.
 - 2026-05-15: Shipped the OpenAI-specific template/example/answer-bank/comparison rollout, updated routing plus source-tag coverage, and kept all link/source-tag checks green with the same no-reply state.
+- 2026-05-16 to 2026-05-19: No separate shipping log was recorded; the repo stayed in the no-reply holding pattern between positioning passes.
 
 ## 2026-05-20
 
@@ -30,6 +31,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real `homepage-hero`, `homepage-job-one-answer`, or `homepage-job-repeat-review` signal and confirm whether the clarified receiver-side homepage changed route quality.
 - Watch `CONTACT-INBOX-STATUS.md` for the first real `pricing-ai-deal-blocker`, `pricing-ai-answer-bank`, `start-here-ai-deal-blocker`, or `start-here-ai-answer-bank` signal and confirm whether the pricing/start-here clarification improved receiver-side route quality.
+- Watch `CONTACT-INBOX-STATUS.md` for the first real `free-tools-ai-deal-blocker`, `free-tools-ai-answer-builder`, `free-tools-ai-answer-bank`, `free-tools-ai-risk-assessment`, or `free-tools-hero-ai-procurement` signal and confirm whether the rebuilt free-tools hub is sending cleaner AI-route demand than the older mixed-tool version.
 - Keep the batch-02 re-entry request parked until a human-owned authenticated browser session is available or The Next AI changes state.
 - If another public comment still says the site serves too many audiences at once, tighten the homepage/free-tools split again before publishing more AI acquisition pages.
 - Watch whether the OpenAI-specific example, answer bank, and comparison pages outperform the generic AI routes before moving named-vendor framing higher across the AI surfaces.
