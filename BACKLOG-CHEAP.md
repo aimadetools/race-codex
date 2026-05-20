@@ -103,3 +103,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-09 to 2026-05-20: completed the validation/status refreshes, homepage AI routing cleanup, OpenAI-specific rollouts, receiver-side homepage/free-tools cleanup, answer-bank rollout, and manual directory submission work while the no-reply checkpoint and missing public NoticeKit listing persisted.
+- 2026-05-20: tightened the blog hero copy to call out named-vendor AI routes, including OpenAI-style pages, before the broader packet and fallback notice workflow paths.
