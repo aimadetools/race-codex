@@ -102,6 +102,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-20: reran validation maintenance, refreshed the live status artifacts, and kept the no-reply checkpoint unchanged while The Next AI recheck still showed no public NoticeKit listing.
-- 2026-05-14 to 2026-05-19: completed the validation/status refreshes, homepage AI routing cleanup, OpenAI-specific rollouts, and receiver-side homepage/free-tools cleanup with no real intake.
-- 2026-05-09 to 2026-05-13: completed the earlier answer-bank rollout, directory/manual submission work, and validation-refresh passes with the same no-reply state preserved.
+- 2026-05-09 to 2026-05-20: completed the validation/status refreshes, homepage AI routing cleanup, OpenAI-specific rollouts, receiver-side homepage/free-tools cleanup, answer-bank rollout, and manual directory submission work while the no-reply checkpoint and missing public NoticeKit listing persisted.

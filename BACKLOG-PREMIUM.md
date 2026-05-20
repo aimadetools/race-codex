@@ -44,6 +44,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-20: reran validation maintenance, refreshed the live status artifacts, and kept the no-reply state unchanged while The Next AI recheck still showed no public NoticeKit listing.
-- 2026-05-14 to 2026-05-19: completed the validation/status refreshes, OpenAI-specific rollout, browser-session rechecks, and receiver-side homepage/free-tools cleanup with no real intake.
-- 2026-05-09 to 2026-05-13: completed the earlier intake-path, Reddit retry, directory/manual submission, and watcher-expansion work with the same no-reply state preserved.
+- 2026-05-09 to 2026-05-20: completed the validation/status refreshes, OpenAI-specific rollout, browser-session rechecks, receiver-side homepage/free-tools cleanup, directory/manual submission work, and watcher expansion while the no-reply state and missing public NoticeKit listing persisted.
