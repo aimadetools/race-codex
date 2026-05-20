@@ -102,6 +102,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-20: completed the `ai-procurement-hub.html` and `blog.html` receiver-side AI cleanup, retired the stale `ai-procurement-hub-hero` watcher label, and kept site-link plus source-tag coverage checks green while the live watch remained unchanged.
 - 2026-05-20: completed the homepage, pricing, start-here, and free-tools receiver-side AI clarity passes; retired stale `start-here`, `free-tools-generator`, and `free-tools-ai-answer-bank-vs-pro-kit` watcher labels; and regenerated inbox tracking so the main entry surfaces now share the live starter-pack, builder, answer-bank, and subprocessor-fallback taxonomy.
 - 2026-05-20: completed the live maintenance/watch refresh, regenerated the inbox/help/generator/partner/self-audit status artifacts, and logged the deduplicated no-reply checkpoint for the still-empty outreach watch.
 - 2026-05-15: completed the validation-maintenance passes through the 08:23 UTC sweep, homepage AI routing cleanup, OpenAI-specific rollouts, and watcher/source-tag refreshes while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
