@@ -44,5 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-20: ran another validation-maintenance pass and rechecked The Next AI publicly; no public NoticeKit listing surfaced, so the batch-02 directory re-entry remains blocked on the human-owned browser session.
 - 2026-05-09 to 2026-05-20: completed the validation/status refreshes, OpenAI-specific rollout, browser-session rechecks, receiver-side homepage/free-tools cleanup, about-page alignment pass, directory/manual submission work, watcher expansion, and no-reply maintenance refreshes while the no-reply state and missing public NoticeKit listing persisted.
 - 2026-05-20: completed another validation-maintenance refresh pass at 20:26 UTC with no new replies, submissions, or interviews; the active no-reply hold remained in place.
