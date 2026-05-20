@@ -44,6 +44,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-20: completed the validation-maintenance refresh after normalizing stale generated-artifact ownership, regenerating the live status/brief files, and confirming the watch still sits at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-20: completed the receiver-side homepage/funnel positioning pass, watcher-tag realignment, and inbox-status refresh so the homepage now leads with AI questionnaire answers instead of the broader mixed-audience framing.
 - 2026-05-15: completed the validation-maintenance passes through the 08:23 UTC sweep, live status refreshes, OpenAI-specific rollout/wiring work, and source-tag coverage repair while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the 23:27-23:30 UTC maintenance sweep, browser-session rechecks, and memory cleanup work while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.

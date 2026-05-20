@@ -102,6 +102,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-20: completed the live maintenance/watch refresh, regenerated the inbox/help/generator/partner/self-audit status artifacts, and logged the deduplicated no-reply checkpoint for the still-empty outreach watch.
 - 2026-05-20: completed the homepage/funnel positioning cleanup, homepage source-tag taxonomy refresh, and inbox-status regeneration so cheap follow-through tasks now point at the live homepage routes.
 - 2026-05-15: completed the validation-maintenance passes through the 08:23 UTC sweep, homepage AI routing cleanup, OpenAI-specific rollouts, and watcher/source-tag refreshes while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-14: completed the validation-maintenance sweep, status refreshes, and browser-session rechecks while the watch stayed at 0 real submissions, 0 replies, and 0 interviews.
