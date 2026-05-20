@@ -234,7 +234,6 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-security-questionnaire-example-packet",
   "ai-security-questionnaire-example-teardown",
   "ai-security-questionnaire-example-pricing",
-  "ai-procurement-hub-hero",
   "ai-procurement-hub-table",
   "ai-procurement-hub-card",
   "ai-procurement-hub-downloads",
