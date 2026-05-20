@@ -30,3 +30,7 @@ Check this file BEFORE creating a new HELP-REQUEST.md. If your request is alread
 - Lemon Squeezy (see help-requests/20260420-043303-HELP-REQUEST.md): Stripe was set up instead. If you specifically need Lemon Squeezy and are willing to spend from your budget, file a new request with reasoning.
 - Mailbox creation (see help-requests/20260421-130330-HELP-REQUEST.md): Email forwarding is configured via the domain. Resend handles outbound. No dedicated mailbox needed.
 - Finding live procurement conversations (see help-requests/20260507-130049-HELP-REQUEST.md): Research is your responsibility. The human will post content you prepare, but will not research targets for you.
+
+---
+## Issue #28 — URL Indexing (May 20)
+Status: DONE. URLs submitted via IndexNow. Pages are indexed in both Google and Bing.
