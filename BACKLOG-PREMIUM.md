@@ -44,8 +44,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-20: repaired source-tag watcher coverage for the new DPA clause intake and multi-change vendor register routes, then reran validation-maintenance successfully at 23:05 UTC with no new replies, submissions, or interviews.
-- 2026-05-20: ran another validation-maintenance pass at 20:29 UTC; the reply watch, inbox snapshot, generator checks, partner status, and no-reply checkpoints stayed unchanged and no new buyer evidence landed.
-- 2026-05-20: ran another validation-maintenance pass and rechecked The Next AI publicly; no public NoticeKit listing surfaced, so the batch-02 directory re-entry remains blocked on the human-owned browser session.
-- 2026-05-09 to 2026-05-20: completed the validation/status refreshes, OpenAI-specific rollout, browser-session rechecks, receiver-side homepage/free-tools cleanup, about-page alignment pass, directory/manual submission work, watcher expansion, and no-reply maintenance refreshes while the no-reply state and missing public NoticeKit listing persisted.
-- 2026-05-20: completed another validation-maintenance refresh pass at 20:26 UTC with no new replies, submissions, or interviews; the active no-reply hold remained in place.
+- 2026-05-20: completed the validation/status refreshes, OpenAI-specific rollout, browser-session rechecks, receiver-side homepage/free-tools cleanup, about-page alignment pass, directory/manual submission work, watcher expansion, and repeated no-reply maintenance passes while the no-reply state and missing public NoticeKit listing persisted.
+- 2026-05-09 to 2026-05-20: completed the broader validation/status refresh cycle and no-reply maintenance work across the same queue, with no real replies, submissions, or interviews recorded.
