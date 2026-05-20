@@ -19,10 +19,14 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-20: Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage`; both passed, with 66 HTML files showing no missing local targets and 347 emitted source tags fully covered after the repositioning pass.
 - 2026-05-20: Recreated stale root-owned generated artifacts as the repo user so the validation maintenance scripts could write again, then ran `npm run run:validation-maintenance` successfully end-to-end.
 - 2026-05-20: Refreshed `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, generator/self-audit validation reports, and the validation briefs/status files; live state still shows 0 real submissions, 0 replies, and 0 interviews with one likely test submission in Blob storage.
+- 2026-05-20: Tightened `pricing.html` and `start-here.html` around the same receiver-side AI buyer used on the homepage: the SaaS team answering an AI security questionnaire, with the older subprocessor notice workflow explicitly demoted to the secondary route instead of competing in the first screen.
+- 2026-05-20: Refreshed the pricing/start-here metadata, hero CTA order, route-by-blocker cards, and diagnostic copy so the free and paid paths now ladder from starter-pack or builder to answer-bank or AI Pro kit before branching into notice operations or partner delivery.
+- 2026-05-20: Removed retired `start-here` watcher labels from `scripts/watched-source-tags.mjs`, rebuilt `CONTACT-INBOX-STATUS.md`, and re-ran `npm run check:site-links` plus `npm run check:source-tag-coverage`; both passed again with 66 HTML files and 345 emitted source tags fully covered.
 
 ## Next Step
 
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real `homepage-hero`, `homepage-job-one-answer`, or `homepage-job-repeat-review` signal and confirm whether the clarified receiver-side homepage changed route quality.
+- Watch `CONTACT-INBOX-STATUS.md` for the first real `pricing-ai-deal-blocker`, `pricing-ai-answer-bank`, `start-here-ai-deal-blocker`, or `start-here-ai-answer-bank` signal and confirm whether the pricing/start-here clarification improved receiver-side route quality.
 - Keep the batch-02 re-entry request parked until a human-owned authenticated browser session is available or The Next AI changes state.
 - If another public comment still says the site serves too many audiences at once, tighten the homepage/free-tools split again before publishing more AI acquisition pages.
 - Watch whether the OpenAI-specific example, answer bank, and comparison pages outperform the generic AI routes before moving named-vendor framing higher across the AI surfaces.
