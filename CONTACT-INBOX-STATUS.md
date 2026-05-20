@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-20 20:29 UTC
+Checked at: 2026-05-20 23:05 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -98,6 +98,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-deal-blocker: 0
 - blog-index-ai-risk-worksheet: 0
 - blog-index-ai-questionnaire-template: 0
+- blog-index-dpa-clause-intake: 0
+- blog-index-vendor-register: 0
 - blog-index-openai-answer-template: 0
 - blog-index-openai-answer-example: 0
 - blog-index-openai-answer-bank: 0
@@ -132,6 +134,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-hero-ai-procurement: 0
 - free-tools-ai-stack-guide: 0
 - free-tools-ai-deal-blocker: 0
+- free-tools-dpa-clause-intake: 0
+- free-tools-dpa-clause-intake-legacy: 0
 - free-teardown-ai-procurement: 0
 - free-tools-ai-pro-kit: 0
 - free-tools-ai-answer-bank: 0
@@ -155,6 +159,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-route-one-answer: 0
 - free-tools-route-repeat-review: 0
 - free-tools-route-broader-handoff: 0
+- free-tools-vendor-register: 0
+- free-tools-vendor-register-legacy: 0
 - review-brief-builder-teardown: 0
 - review-brief-builder-partner: 0
 - review-brief-builder-ai-deal-blocker: 0
@@ -220,6 +226,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-route-one-answer: 0
 - pricing-ai-route-repeat-review: 0
 - pricing-ai-route-broader-handoff: 0
+- dpa-clause-intake-worksheet-calculator: 0
+- dpa-clause-intake-worksheet-pricing: 0
+- dpa-clause-intake-worksheet-tracker: 0
+- dpa-clause-intake-worksheet-window: 0
 - start-here-ai-answer-builder: 0
 - start-here-ai-pro-kit: 0
 - start-here-ai-questionnaire: 0
@@ -328,6 +338,11 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-vendor-risk-assessment-guide: 0
 - ai-vendor-risk-assessment-stack: 0
 - ai-vendor-risk-assessment-teardown: 0
+- multi-change-register-calculator: 0
+- multi-change-register-checker: 0
+- multi-change-register-clause-intake: 0
+- multi-change-register-pricing: 0
+- multi-change-register-stack: 0
 - ai-vendor-risk-assessment-pricing: 0
 - ai-vendor-risk-assessment-starter-pack: 0
 - ai-vendor-risk-assessment-worksheet: 0
