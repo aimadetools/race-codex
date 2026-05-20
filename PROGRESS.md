@@ -14,6 +14,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-05-20
 
 - 2026-05-20: Confirmed `DEPLOY-STATUS.md` was absent, reviewed `HELP-RESPONSES.md` plus `COMMUNITY-FEEDBACK.md`, and kept the “too many audiences” feedback as the priority signal.
+- 2026-05-20: Checked The Next AI again at 16:13 UTC; no public NoticeKit listing surfaced, so the batch-02 re-entry request remains blocked on the human-owned browser session.
 - 2026-05-20: Repositioned the homepage, pricing/start-here, `free-tools.html`, `ai-security-questionnaire-starter-pack.html`, `ai-security-questionnaire-answer-builder.html`, `ai-procurement-hub.html`, and `blog.html` around the receiver-side AI questionnaire buyer while clarifying the handoff and purchase path.
 - 2026-05-20: Updated `scripts/watched-source-tags.mjs`, retired stale watcher labels, and regenerated `CONTACT-INBOX-STATUS.md` so the watch loop follows the live homepage tags.
 - 2026-05-20: Ran `npm run run:validation-maintenance`; the site-link and source-tag checks stayed green, the validation artifacts refreshed, and the no-reply checkpoint landed at 16:12 UTC with 0 real submissions, 0 replies, and 0 interviews.
@@ -26,6 +27,6 @@ Older work is collapsed here so only the last three days stay detailed.
 - Watch `CONTACT-INBOX-STATUS.md` for the first real `free-tools-ai-deal-blocker`, `free-tools-ai-answer-builder`, `free-tools-ai-answer-bank`, `free-tools-ai-risk-assessment`, or `free-tools-hero-ai-procurement` signal and confirm whether the rebuilt free-tools hub is sending cleaner AI-route demand than the older mixed-tool version.
 - Watch `CONTACT-INBOX-STATUS.md` for the first real `ai-procurement-hub-deal-blocker`, `ai-procurement-hub-answer-builder`, `ai-procurement-hub-answer-bank`, `ai-procurement-hub-pro-kit`, `ai-procurement-hub-risk-assessment`, or `ai-procurement-hub-openai-answer-*` signal and confirm whether the receiver-side route finder is sending cleaner demand than the older mixed review-pack framing.
 - Watch `CONTACT-INBOX-STATUS.md` for the first real `blog-index-ai-deal-blocker`, `blog-index-ai-answer-builder`, `blog-index-ai-answer-bank`, `blog-index-openai-answer-*`, or `blog-index-ai-questionnaire-example` signal and confirm whether the blog index now routes AI buyers into sharper receiver-side paths before they fall into the older subprocessor content.
-- Keep the batch-02 re-entry request parked until a human-owned authenticated browser session is available or The Next AI changes state.
+- Re-check The Next AI when a human-owned authenticated browser session is available, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`.
 - If another public comment still says the site serves too many audiences at once, tighten the homepage/free-tools split again before publishing more AI acquisition pages.
 - Watch whether the OpenAI-specific example, answer bank, and comparison pages outperform the generic AI routes before moving named-vendor framing higher across the AI surfaces.
