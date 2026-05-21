@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-21 13:01 UTC
+Checked at: 2026-05-21 16:05 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -147,6 +147,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-packet-sample: 0
 - free-tools-ai-comparison: 0
 - free-tools-ai-procurement-card: 0
+- free-tools-ai-inventory-template: 0
 - free-tools-generator-card: 0
 - free-tools-self-audit: 0
 - free-tools-page-checker: 0
@@ -156,6 +157,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-conversion: 0
 - free-tools-partner: 0
 - free-tools-route-finder: 0
+- free-tools-route-inventory: 0
 - free-tools-route-one-answer: 0
 - free-tools-route-repeat-review: 0
 - free-tools-route-broader-handoff: 0
@@ -196,10 +198,12 @@ Source of truth: Vercel Blob `contact-submissions/`
 - partner-client-handoff-cta: 0
 - homepage-shortcut: 0
 - homepage-hero: 0
+- homepage-ai-route-inventory: 0
 - homepage-pricing: 0
 - homepage-free-tools: 0
 - homepage-subprocessor-teardown: 0
 - homepage-job-one-answer: 0
+- homepage-job-inventory: 0
 - homepage-job-repeat-review: 0
 - homepage-job-subprocessor: 0
 - homepage-ai-route-one-answer: 0
@@ -226,6 +230,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-route-one-answer: 0
 - pricing-ai-route-repeat-review: 0
 - pricing-ai-route-broader-handoff: 0
+- blog-index-ai-inventory-template: 0
 - dpa-clause-intake-worksheet-calculator: 0
 - dpa-clause-intake-worksheet-pricing: 0
 - dpa-clause-intake-worksheet-tracker: 0
@@ -288,6 +293,12 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-template-stack: 0
 - ai-security-questionnaire-template-teardown: 0
 - ai-security-questionnaire-template-pricing: 0
+- ai-vendor-inventory-builder: 0
+- ai-vendor-inventory-answer-bank: 0
+- ai-vendor-inventory-pricing: 0
+- ai-vendor-inventory-starter-pack: 0
+- ai-vendor-inventory-teardown: 0
+- ai-vendor-inventory-risk-assessment: 0
 - openai-security-questionnaire-template-builder: 0
 - openai-security-questionnaire-template-answer-bank: 0
 - openai-security-questionnaire-template-starter-pack: 0
@@ -329,6 +340,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-answer-bank-vs-pro-kit: 0
 - ai-procurement-hub-pro-kit: 0
 - ai-procurement-hub-deal-blocker: 0
+- ai-procurement-hub-inventory: 0
 - ai-procurement-hub-risk-assessment: 0
 - ai-procurement-hub-risk-worksheet: 0
 - ai-procurement-hub-guide: 0
