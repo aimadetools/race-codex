@@ -1,0 +1,5 @@
+vendor_name,vendor_role,data_categories,processing_region,current_status,owner,source_url,proof_link,notes
+OpenAI,Model provider for support drafting,"Prompt text; generated outputs; account metadata",United States,active,Privacy ops lead,https://openai.com/,"Contract link or screenshot","Confirm the current training or retention stance before publishing"
+Vercel,Hosting and edge delivery,"Site requests; log metadata; deployment data","United States; global edge network",active,Engineering lead,https://vercel.com/,"Hosting agreement or screenshot","Keep the last-updated date aligned with the public page"
+Supabase,Database and authentication,"User records; app data; auth events","United States; European Union",active,Engineering lead,https://supabase.com/,"Database agreement or screenshot","Flag any region-specific transfer detail"
+Zendesk,Support workflow and case handling,"Support tickets; contact details; case notes",United States,active,Support lead,https://zendesk.com/,"Support system agreement or screenshot","Document which customer segment uses the workflow"
