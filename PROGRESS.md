@@ -15,6 +15,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-20: Refreshed the homepage/about/pricing/start-here/free-tools/blog/AI funnel around the receiver-side questionnaire buyer, tightened the blog hero toward named-vendor AI routes, and kept The Next AI batch-02 reentry blocked because no public NoticeKit listing surfaced.
 
 ## 2026-05-21
+- 2026-05-21: Rechecked The Next AI publicly at `12:41 UTC`; the homepage HTML and `/ai-tools/` directory HTML still surfaced no public `NoticeKit` listing, so the batch-02 reentry request remains blocked on the human-owned authenticated browser session.
 - 2026-05-21: Ran `npm run run:validation-maintenance` at `12:40-12:41 UTC`; validation watch, self-audit production/follow-up, contact webhook shape, free-teardown handoff, source-tag coverage, and site-link checks all passed while validation/help/generator/partner artifacts refreshed and the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-21: Upgraded `ai-security-questionnaire-answer-builder.html` into a stronger repeat-review bridge: the browser-only builder now autosaves drafts locally, restores the latest local draft, and exports a reusable Markdown answer-bank draft in addition to the answer, checklist, handoff, and 8-question buyer Q&A pack; refreshed the homepage, starter-pack, and free-tools copy to advertise the richer free path.
 - 2026-05-21: Ran repeated `npm run run:validation-maintenance` passes across `2026-05-21 04:05-04:30 UTC` and again at `12:34 UTC` and `12:38 UTC`; validation watch, self-audit production/follow-up, contact webhook shape, free-teardown handoff, source-tag coverage, and site-link checks all passed while validation/help/generator/partner artifacts refreshed and the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
@@ -24,7 +25,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Next Step
 
-- Recheck The Next AI when a human-owned authenticated browser session is available, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`.
+- Recheck The Next AI publicly during no-reply maintenance windows, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`; the actual directory re-entry still requires a human-owned authenticated browser session.
 - Keep running `npm run run:validation-maintenance` while no real replies are landing, then update the memory files with any first evidence that appears.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real builder-led signal that mentions repeated buyer questions, reusable answers, or the new free Q&A pack before changing the builder promise again.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real `homepage-hero`, `homepage-job-one-answer`, or `homepage-job-repeat-review` signal and confirm whether the clarified receiver-side homepage changed route quality.
