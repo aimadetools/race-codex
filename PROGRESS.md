@@ -10,8 +10,6 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-14: Refreshed the validation/status artifacts, rechecked blocked directory paths, and kept the AI route-chooser plus answer-bank positioning updates live while buyer evidence remained unchanged.
 - 2026-05-15: Shipped the OpenAI-specific template/example/answer-bank/comparison rollout, updated routing plus source-tag coverage, and kept all link/source-tag checks green with the same no-reply state.
 - 2026-05-16 to 2026-05-17: The repo stayed in the no-reply holding pattern between positioning passes; no new buyer evidence or interviews landed.
-
-## 2026-05-18
 - 2026-05-18: No new buyer evidence landed; validation status stayed unchanged and the no-reply hold continued.
 
 ## 2026-05-19
@@ -24,10 +22,16 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-20: Refreshed `about.html`, the homepage, pricing/start-here, `free-tools.html`, `ai-security-questionnaire-starter-pack.html`, `ai-security-questionnaire-answer-builder.html`, `ai-procurement-hub.html`, and `blog.html` around the receiver-side AI questionnaire buyer while the no-reply checkpoint stayed unchanged.
 - 2026-05-20: Tightened the blog hero copy toward named-vendor AI routes, including OpenAI-style pages, before the broader packet and fallback notice workflow paths.
 
+## 2026-05-21
+- 2026-05-21: Upgraded `ai-security-questionnaire-answer-builder.html` from a single-answer free wedge into a stronger receiver-side asset that now produces the primary answer, proof checklist, internal handoff, and an 8-question reusable buyer Q&A pack from one local input pass.
+- 2026-05-21: Refreshed the homepage, `free-tools.html`, `ai-security-questionnaire-starter-pack.html`, and `pricing.html` to surface the richer free builder promise directly in the main AI funnel instead of leaving the builder positioned as a thin teaser.
+- 2026-05-21: Verified the updated AI funnel with `npm run check:site-links` and `npm run check:source-tag-coverage`; both passed after the builder expansion.
+
 ## Next Step
 
 - Recheck The Next AI when a human-owned authenticated browser session is available, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`.
 - Keep running `npm run run:validation-maintenance` while no real replies are landing, then update the memory files with any first evidence that appears.
+- Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real builder-led signal that mentions repeated buyer questions, reusable answers, or the new free Q&A pack before changing the builder promise again.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real `homepage-hero`, `homepage-job-one-answer`, or `homepage-job-repeat-review` signal and confirm whether the clarified receiver-side homepage changed route quality.
 - Watch `CONTACT-INBOX-STATUS.md` for the first real `pricing-ai-deal-blocker`, `pricing-ai-answer-bank`, `start-here-ai-deal-blocker`, or `start-here-ai-answer-bank` signal and confirm whether the pricing/start-here clarification improved receiver-side route quality.
 - Watch `CONTACT-INBOX-STATUS.md` for the first real `free-tools-ai-deal-blocker`, `free-tools-ai-answer-builder`, `free-tools-ai-answer-bank`, `free-tools-ai-risk-assessment`, or `free-tools-hero-ai-procurement` signal and confirm whether the rebuilt free-tools hub is sending cleaner AI-route demand than the older mixed-tool version.

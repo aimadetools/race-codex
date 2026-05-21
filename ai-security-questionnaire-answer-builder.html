@@ -84,7 +84,7 @@
         <section class="page-hero">
           <span class="eyebrow">Local AI answer + handoff builder</span>
           <h1 id="hero-title">Build the AI answer and the internal handoff before procurement asks for the packet.</h1>
-          <p id="hero-copy">Use this browser-only builder when your SaaS team is answering a buyer or security reviewer and needs one concrete AI answer now plus a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links, then copy the answer block and the handoff note without sending your inputs to a server.</p>
+          <p id="hero-copy">Use this browser-only builder when your SaaS team is answering a buyer or security reviewer and needs one concrete AI answer now plus a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links once, then copy the answer block, the handoff note, and a reusable pack of common buyer-question answers without sending your inputs to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#builder">Open builder</a>
             <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-questionnaire-builder-starter-pack">Open starter pack</a>
@@ -98,7 +98,7 @@
         <section class="section">
           <div class="notice-band">
             <strong>For the company answering the questionnaire.</strong>
-            <p>This builder is designed for founders and operators responding to buyer review, not for procurement teams sending questionnaires. Use it as a serious free first pass when one live answer is blocking the deal.</p>
+            <p>This builder is designed for founders and operators responding to buyer review, not for procurement teams sending questionnaires. Use it as a serious free first pass when one live answer is blocking the deal and you want more than a thin teaser before deciding on the paid path.</p>
           </div>
         </section>
 
@@ -184,16 +184,18 @@
             <p id="coverage-summary">The current draft names the vendor chain, scope, stance, customer impact, and proof links.</p>
             <div class="tier-guidance">
               <strong id="answer-summary-title">Best use right now</strong>
-              <p id="answer-summary-copy">Copy the answer block into the questionnaire, then send the same facts into the internal handoff, teardown, or packet path if the reviewer asks for more proof.</p>
+              <p id="answer-summary-copy">Copy the answer block into the questionnaire, then send the same facts into the internal handoff, repeated-question pack, teardown, or packet path if the reviewer asks for more proof.</p>
             </div>
             <div class="generator-actions">
               <button class="button" id="copy-answer" type="button">Copy answer</button>
               <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
               <button class="button secondary" id="copy-handoff" type="button">Copy handoff</button>
+              <button class="button secondary" id="copy-qa-pack" type="button">Copy Q&A pack</button>
               <button class="button secondary" id="download-answer" type="button">Download answer</button>
+              <button class="button secondary" id="download-qa-pack" type="button">Download Q&A pack</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser and does not store your inputs.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser and does not store your inputs. One pass now produces a primary answer, checklist, handoff, and 8 common buyer-question responses.</p>
           </aside>
         </section>
 
@@ -203,6 +205,14 @@
             <p>Use this when the buyer or reviewer needs one clean answer before the conversation branches into a broader packet.</p>
           </div>
           <div id="answer-output" class="template-box" aria-live="polite"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Common buyer-question answer pack</h2>
+            <p>Use this when the buyer thread asks the same follow-up questions in slightly different wording. The pack turns one fact-gathering pass into eight reusable response blocks you can paste into procurement, security, privacy, or counsel threads.</p>
+          </div>
+          <div id="qa-pack-output" class="template-box" aria-live="polite"></div>
         </section>
 
         <section class="section">
@@ -348,6 +358,7 @@
     <script>
       const builderForm = document.querySelector("#builder-form");
       const answerOutput = document.querySelector("#answer-output");
+      const qaPackOutput = document.querySelector("#qa-pack-output");
       const checklistOutput = document.querySelector("#checklist-output");
       const handoffOutput = document.querySelector("#handoff-output");
       const coverageScore = document.querySelector("#coverage-score");
@@ -358,7 +369,9 @@
       const copyAnswerButton = document.querySelector("#copy-answer");
       const copyChecklistButton = document.querySelector("#copy-checklist");
       const copyHandoffButton = document.querySelector("#copy-handoff");
+      const copyQaPackButton = document.querySelector("#copy-qa-pack");
       const downloadAnswerButton = document.querySelector("#download-answer");
+      const downloadQaPackButton = document.querySelector("#download-qa-pack");
       const sendToTeardown = document.querySelector("#send-to-teardown");
       const query = new URLSearchParams(window.location.search);
       const sourceContextSection = document.querySelector("#source-context-section");
@@ -462,6 +475,17 @@
           `Open questions: ${openQuestions}`
         ].join("\n");
 
+        const qaPack = [
+          `1. Which AI vendors are in scope?\n${primaryVendor} is the primary AI vendor for ${workflow}. Supporting vendors in this workflow include ${supportingVendors}.`,
+          `2. What workflow is under review?\n${company} is reviewing ${workflow}, which is currently ${statusLabel}.`,
+          `3. What data categories are involved?\n${dataCategories}.`,
+          `4. What is the current retention or training stance?\n${retentionStance}`,
+          `5. Which customers or agreements are affected?\n${customerScope}`,
+          `6. Why is this answer being requested?\n${reviewerAsk}`,
+          `7. Does this trigger notice, escalation, or counsel review?\n${noticeImpact}`,
+          `8. What proof and next decision sit behind the answer?\nProof: ${proofLinks}\nNext decision: ${decisionNeeded}\nOwner and open questions: ${replyOwner}. ${openQuestions}`
+        ].join("\n\n");
+
         const completenessChecks = [
           value("primary-vendor"),
           value("data-categories"),
@@ -472,6 +496,7 @@
 
         return {
           answer,
+          qaPack,
           checklist,
           handoff,
           completedCount: completenessChecks.filter(Boolean).length,
@@ -496,6 +521,7 @@
       function render() {
         const payload = buildAnswerPayload();
         answerOutput.innerHTML = markdownToHtml(payload.answer);
+        qaPackOutput.innerHTML = markdownToHtml(payload.qaPack);
         checklistOutput.innerHTML = markdownToHtml(payload.checklist);
         handoffOutput.innerHTML = markdownToHtml(payload.handoff);
         syncTeardownLink(payload);
@@ -504,20 +530,20 @@
         if (payload.completedCount === 5) {
           coverageState.textContent = "Review-ready answer";
           coverageSummary.textContent = "The current draft names the vendor chain, scope, stance, customer impact, and proof links.";
-          answerSummaryCopy.textContent = "Copy the answer into the questionnaire now, and copy the handoff into Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.";
+          answerSummaryCopy.textContent = "Copy the answer into the questionnaire now, then reuse the Q&A pack and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.";
           return;
         }
 
         if (payload.completedCount >= 3) {
           coverageState.textContent = "Needs a tighter proof pass";
           coverageSummary.textContent = "The answer is usable, but at least one of the core reviewer facts is still too vague.";
-          answerSummaryCopy.textContent = "Tighten the missing proof or scope fields before sending this into procurement. The wording is close, but the evidence path and the internal handoff are still thin.";
+          answerSummaryCopy.textContent = "Tighten the missing proof or scope fields before sending this into procurement. The wording is close, but the evidence path, repeated-question pack, and internal handoff are still thin.";
           return;
         }
 
         coverageState.textContent = "Too thin for buyer review";
         coverageSummary.textContent = "The answer still needs core facts before it is safe to send into a live questionnaire thread.";
-        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the vendor chain, scope, stance, and proof cleanly enough for the answer and handoff to hold up.";
+        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the vendor chain, scope, stance, and proof cleanly enough for the answer, repeated-question pack, and handoff to hold up.";
       }
 
       const presets = {
@@ -795,11 +821,20 @@
       copyHandoffButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().handoff, "Internal handoff copied.");
       });
+      copyQaPackButton.addEventListener("click", () => {
+        copyText(buildAnswerPayload().qaPack, "Q&A pack copied.");
+      });
       downloadAnswerButton.addEventListener("click", () => {
         const payload = buildAnswerPayload();
         const content = `# ${payload.company} AI security questionnaire answer\n\n${payload.answer}\n\n## Proof checklist\n\n${payload.checklist}\n\n## Internal handoff brief\n\n${payload.handoff}\n`;
         downloadFile("noticekit-ai-questionnaire-answer.md", content);
         builderStatus.textContent = "Answer and handoff downloaded as Markdown.";
+      });
+      downloadQaPackButton.addEventListener("click", () => {
+        const payload = buildAnswerPayload();
+        const content = `# ${payload.company} AI security questionnaire common buyer-question pack\n\n${payload.qaPack}\n`;
+        downloadFile("noticekit-ai-questionnaire-qa-pack.md", content);
+        builderStatus.textContent = "Q&A pack downloaded as Markdown.";
       });
 
       render();

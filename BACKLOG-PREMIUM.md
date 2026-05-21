@@ -44,6 +44,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-21: completed the builder expansion that turns one local AI questionnaire input pass into the primary answer, proof checklist, internal handoff, and an 8-question reusable buyer Q&A pack, then surfaced that richer free wedge across the homepage, starter-pack, free-tools, and pricing funnels.
 - 2026-05-20: completed the 23:29-23:30 UTC validation-maintenance and live reply-watch refresh, keeping generator, handoff, partner, and validation checks green while the no-reply state persisted.
 - 2026-05-20: completed the 23:06-23:27 UTC validation-maintenance and live reply-watch refreshes, keeping generator, handoff, partner, and validation checks green while the no-reply state persisted.
 - 2026-05-20: completed the DPA clause intake, multi-change vendor register, receiver-side homepage/about/free-tools copy cleanup, and The Next AI rechecks, while the batch-02 browser blocker remained open.
