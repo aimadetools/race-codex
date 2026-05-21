@@ -191,11 +191,14 @@
               <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
               <button class="button secondary" id="copy-handoff" type="button">Copy handoff</button>
               <button class="button secondary" id="copy-qa-pack" type="button">Copy Q&A pack</button>
+              <button class="button secondary" id="copy-answer-bank" type="button">Copy answer bank</button>
               <button class="button secondary" id="download-answer" type="button">Download answer</button>
               <button class="button secondary" id="download-qa-pack" type="button">Download Q&A pack</button>
+              <button class="button secondary" id="download-answer-bank" type="button">Download answer bank</button>
+              <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser and does not store your inputs. One pass now produces a primary answer, checklist, handoff, and 8 common buyer-question responses.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces a primary answer, checklist, handoff, reusable answer-bank draft, and 8 common buyer-question responses.</p>
           </aside>
         </section>
 
@@ -370,8 +373,11 @@
       const copyChecklistButton = document.querySelector("#copy-checklist");
       const copyHandoffButton = document.querySelector("#copy-handoff");
       const copyQaPackButton = document.querySelector("#copy-qa-pack");
+      const copyAnswerBankButton = document.querySelector("#copy-answer-bank");
       const downloadAnswerButton = document.querySelector("#download-answer");
       const downloadQaPackButton = document.querySelector("#download-qa-pack");
+      const downloadAnswerBankButton = document.querySelector("#download-answer-bank");
+      const clearSavedDraftButton = document.querySelector("#clear-saved-draft");
       const sendToTeardown = document.querySelector("#send-to-teardown");
       const query = new URLSearchParams(window.location.search);
       const sourceContextSection = document.querySelector("#source-context-section");
@@ -382,6 +388,7 @@
       const heroCopy = document.querySelector("#hero-copy");
       const builderTemplateLink = document.querySelector("#builder-template-link");
       const builderExampleLink = document.querySelector("#builder-example-link");
+      const builderStorageKey = "noticekit-ai-questionnaire-builder-draft-v2";
 
       function value(id) {
         return document.querySelector(`#${id}`).value.trim();
@@ -420,6 +427,64 @@
           builderStatus.textContent = message;
         } catch (error) {
           builderStatus.textContent = "Clipboard failed. Copy the output manually.";
+        }
+      }
+
+      function todayIso() {
+        return new Date().toISOString().slice(0, 10);
+      }
+
+      function slugify(text, fallback) {
+        const normalized = String(text || "")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+        return normalized || fallback;
+      }
+
+      function collectFormState() {
+        const fields = {};
+        builderForm.querySelectorAll("input, textarea, select").forEach((field) => {
+          fields[field.id] = field.value;
+        });
+        return fields;
+      }
+
+      function saveDraft() {
+        try {
+          window.localStorage.setItem(builderStorageKey, JSON.stringify(collectFormState()));
+        } catch (error) {
+          builderStatus.textContent = "Local save failed in this browser. Downloads still work.";
+        }
+      }
+
+      function restoreDraft() {
+        try {
+          const raw = window.localStorage.getItem(builderStorageKey);
+          if (!raw) {
+            return false;
+          }
+          const fields = JSON.parse(raw);
+          Object.entries(fields).forEach(([id, fieldValue]) => {
+            const field = document.querySelector(`#${id}`);
+            if (field) {
+              field.value = fieldValue;
+            }
+          });
+          builderStatus.textContent = "Saved draft restored from this browser.";
+          return true;
+        } catch (error) {
+          builderStatus.textContent = "Saved draft could not be restored cleanly.";
+          return false;
+        }
+      }
+
+      function clearSavedDraft() {
+        try {
+          window.localStorage.removeItem(builderStorageKey);
+          builderStatus.textContent = "Saved draft removed from this browser.";
+        } catch (error) {
+          builderStatus.textContent = "Saved draft could not be cleared.";
         }
       }
 
@@ -486,6 +551,131 @@
           `8. What proof and next decision sit behind the answer?\nProof: ${proofLinks}\nNext decision: ${decisionNeeded}\nOwner and open questions: ${replyOwner}. ${openQuestions}`
         ].join("\n\n");
 
+        const shortAnswer = `For ${workflow}, ${company} currently lists ${primaryVendor} as the primary AI vendor with ${supportingVendors} supporting the workflow. Data in scope: ${dataCategories}. Customer scope: ${customerScope}. Retention/training stance: ${retentionStance}`;
+
+        const vendorChain = primaryVendor.toLowerCase().includes("openai")
+          ? `OpenAI plus ${supportingVendors}`
+          : `${primaryVendor} plus ${supportingVendors}`;
+        const bankTitle = primaryVendor.toLowerCase().includes("openai")
+          ? "OpenAI Security Questionnaire Answer Bank"
+          : "AI Security Questionnaire Answer Bank";
+        const workflowLabel = primaryVendor.toLowerCase().includes("openai")
+          ? "OpenAI-backed workflow covered"
+          : "Workflow covered";
+        const vendorLabel = primaryVendor.toLowerCase().includes("openai")
+          ? "Supporting vendor chain"
+          : "Named vendors";
+        const companySnapshotVendorLine = primaryVendor.toLowerCase().includes("openai")
+          ? `- Source of truth for retention or training stance: ${retentionStance}`
+          : `- Primary AI/model vendors: ${primaryVendor}`;
+        const snapshotWorkflowLabel = primaryVendor.toLowerCase().includes("openai")
+          ? "- OpenAI-backed workflows in scope"
+          : "- Primary AI workflows in scope";
+        const snapshotSupportingVendorLine = `- Supporting vendors in scope: ${supportingVendors}`;
+        const snapshotVendorDetailLine = primaryVendor.toLowerCase().includes("openai")
+          ? "- Primary named vendor in scope: OpenAI"
+          : companySnapshotVendorLine;
+
+        const bankRows = [
+          {
+            label: "Named vendors and workflow scope",
+            buyerWording: "Which AI vendors are in scope for this workflow and what exactly is under review?",
+            short: shortAnswer,
+            long: answer
+          },
+          {
+            label: "Retention, training, and customer scope",
+            buyerWording: "What is the current retention or training stance and which customers or agreements are affected?",
+            short: `Retention/training stance: ${retentionStance} Customer scope: ${customerScope}`,
+            long: `Retention and training stance: ${retentionStance}\n\nCustomer scope / segment: ${customerScope}\n\nNotice or escalation impact: ${noticeImpact}`
+          },
+          {
+            label: "Proof, owner, and next decision",
+            buyerWording: "What proof supports this answer, who owns it, and what still needs review?",
+            short: `Proof links: ${proofLinks} Owner: ${replyOwner}. Next decision: ${decisionNeeded}`,
+            long: `Proof links: ${proofLinks}\n\nOwner: ${replyOwner}\n\nDecision needed next: ${decisionNeeded}\n\nOpen questions: ${openQuestions}`
+          }
+        ];
+
+        const answerBank = [
+          `# ${bankTitle}`,
+          "",
+          "Use this generated file as the first reusable source of truth for repeated AI procurement and security-review questions. Edit the wording, add proof links, and mark approval state before you reuse it in a live buyer thread.",
+          "",
+          "## Usage Notes",
+          "",
+          "- Keep answers operational and specific.",
+          "- Do not store secrets or customer data here.",
+          "- Mark answers as `approved`, `needs review`, or `do not use` before wider reuse.",
+          "- Replace any placeholder public page note with the actual page or packet link.",
+          "",
+          "## Company Snapshot",
+          "",
+          `- Company: ${company}`,
+          "- Product: [Add product or feature name]",
+          `${snapshotWorkflowLabel}: ${workflow}`,
+          snapshotVendorDetailLine,
+          snapshotSupportingVendorLine,
+          `- Default customer segment covered by this file: ${customerScope}`,
+          companySnapshotVendorLine,
+          `- File owner: ${replyOwner}`,
+          `- Last full review date: ${todayIso()}`,
+          "",
+          "## Reusable Answer Rows",
+          "",
+          ...bankRows.flatMap((row, index) => [
+            `### ${index + 1}. ${row.label}`,
+            "",
+            `- Buyer wording: ${row.buyerWording}`,
+            `- Short answer: ${row.short}`,
+            `- Longer answer: ${row.long}`,
+            `- ${workflowLabel}: ${workflow}`,
+            `- ${vendorLabel}: ${vendorChain}`,
+            `- Data categories: ${dataCategories}`,
+            `- Retention / training stance: ${retentionStance}`,
+            `- Customer scope / segment: ${customerScope}`,
+            "- Public page or packet links: [Add current public page, packet, or trust-center link]",
+            `- Internal proof links: ${proofLinks}`,
+            `- Owner: ${replyOwner}`,
+            "- Approval status: needs review",
+            `- Last reviewed: ${todayIso()}`,
+            `- Open questions: ${openQuestions}`,
+            ""
+          ]),
+          "## Common Variants",
+          "",
+          "### Enterprise Procurement Variant",
+          "",
+          "- When to use: The buyer needs the shortest answer plus proof links in the questionnaire thread.",
+          "- What changes from the default wording: Tighten the short answer and emphasize the named vendor chain plus proof path.",
+          `- Extra proof links: ${proofLinks}`,
+          "",
+          "### Security Review Variant",
+          "",
+          "- When to use: Security wants more direct wording about data categories, workflow boundaries, and the training or retention stance.",
+          "- What changes from the default wording: Expand the longer answer with the exact workflow and any internal controls or exclusions.",
+          `- Extra proof links: ${proofLinks}`,
+          "",
+          "### Counsel / Privacy Review Variant",
+          "",
+          "- When to use: The answer now needs notice-impact and contract-review context before it is reused broadly.",
+          `- What changes from the default wording: Add the notice or escalation impact and decision-needed notes: ${noticeImpact}`,
+          `- Extra proof links: ${proofLinks}`,
+          "",
+          "## Open Questions Queue",
+          "",
+          `- Question: ${openQuestions}`,
+          `- Owner: ${replyOwner}`,
+          "- Needed by: [Add internal due date]",
+          `- Blocking answers: ${decisionNeeded}`,
+          "",
+          "## Change Log",
+          "",
+          `- Date: ${todayIso()}`,
+          "- Change: Initial draft generated from the NoticeKit AI questionnaire answer builder.",
+          "- Reason: Capture reusable wording from the live answer path before the next repeat-review thread starts."
+        ].join("\n");
+
         const completenessChecks = [
           value("primary-vendor"),
           value("data-categories"),
@@ -499,11 +689,13 @@
           qaPack,
           checklist,
           handoff,
+          answerBank,
           completedCount: completenessChecks.filter(Boolean).length,
           company,
           workflow,
           primaryVendor,
-          customerScope
+          customerScope,
+          bankSlug: slugify(`${company}-${primaryVendor}-answer-bank`, "noticekit-ai-answer-bank")
         };
       }
 
@@ -812,6 +1004,7 @@
       }
 
       builderForm.addEventListener("input", render);
+      builderForm.addEventListener("input", saveDraft);
       copyAnswerButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().answer, "AI questionnaire answer copied.");
       });
@@ -823,6 +1016,9 @@
       });
       copyQaPackButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().qaPack, "Q&A pack copied.");
+      });
+      copyAnswerBankButton.addEventListener("click", () => {
+        copyText(buildAnswerPayload().answerBank, "Answer bank draft copied.");
       });
       downloadAnswerButton.addEventListener("click", () => {
         const payload = buildAnswerPayload();
@@ -836,7 +1032,16 @@
         downloadFile("noticekit-ai-questionnaire-qa-pack.md", content);
         builderStatus.textContent = "Q&A pack downloaded as Markdown.";
       });
+      downloadAnswerBankButton.addEventListener("click", () => {
+        const payload = buildAnswerPayload();
+        downloadFile(`${payload.bankSlug}.md`, payload.answerBank);
+        builderStatus.textContent = "Reusable answer bank draft downloaded as Markdown.";
+      });
+      clearSavedDraftButton.addEventListener("click", () => {
+        clearSavedDraft();
+      });
 
+      restoreDraft();
       render();
     </script>
   </body>

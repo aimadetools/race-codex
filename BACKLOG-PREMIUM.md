@@ -44,6 +44,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-21: completed the AI questionnaire builder repeat-review upgrade, adding local browser draft autosave/restore plus reusable Markdown answer-bank export and surfacing the richer free path across the homepage, starter-pack, and free-tools funnel.
 - 2026-05-21: completed the `04:30 UTC` no-reply maintenance and public The Next AI homepage HTML recheck cycle, keeping validation/help/generator/partner snapshots current and confirming the same authenticated-browser blocker still stands.
 - 2026-05-21: completed the 04:27-04:28 UTC no-reply maintenance and public The Next AI recheck cycle, keeping validation/help/generator/partner snapshots current and confirming the same human-browser blocker still stands.
 - 2026-05-21: completed the repeated `04:05-04:24 UTC` no-reply maintenance, refreshed validation/help/generator/partner evidence, kept all validation/site checks green, and rechecked The Next AI publicly through `04:25 UTC` without finding a live NoticeKit listing, so the browser-session blocker remains open.
