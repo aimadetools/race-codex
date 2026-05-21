@@ -108,11 +108,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-21: completed the `12:41 UTC` public The Next AI recheck after the `12:40 UTC` validation-maintenance pass, with no live `NoticeKit` listing or real reply surfacing.
-- 2026-05-21: completed the `12:38 UTC` validation-maintenance and no-reply monitoring pass, refreshed the live status stack, and rechecked The Next AI publicly with no live `NoticeKit` listing or real reply.
-- 2026-05-21: completed the AI questionnaire builder upgrade that now autosaves local drafts, restores the latest browser state, exports a reusable answer-bank draft, and keeps the buyer Q&A pack live across the homepage, starter-pack, and free-tools AI funnel.
-- 2026-05-21: completed the repeated `04:05-04:30 UTC` plus `12:34 UTC` validation-maintenance and no-reply monitoring passes, refreshed the live status stack, kept validation/generator/handoff/source-tag/site-link/self-audit checks green, and rechecked The Next AI publicly through `12:34 UTC` without finding a live `NoticeKit` listing or any real reply.
-- 2026-05-20: completed the 23:29-23:30 UTC validation-maintenance and no-reply monitoring pass, refreshing the live status stack while source-tag coverage and site-link checks stayed green and the queue remained at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-20: completed the 23:06-23:27 UTC validation-maintenance and no-reply monitoring passes, with source-tag coverage, site-link checks, and live queue counts staying green at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-20: completed the DPA clause intake and multi-change vendor register shipping work plus the public The Next AI rechecks and receiver-side homepage/about/free-tools copy cleanup, with the batch-02 browser blocker still open.
-- 2026-05-09 to 2026-05-20: completed the broader validation/status refresh cycle, answer-bank rollout, and manual directory submission work while the live queue stayed empty.
+- 2026-05-21: completed the AI questionnaire builder upgrade, kept the buyer Q&A pack and answer-bank export live across the AI funnel, and refreshed the no-reply monitoring stack through the `12:43 UTC` maintenance pass plus public The Next AI rechecks with no live `NoticeKit` listing or real reply.
+- 2026-05-20: completed the late-day validation-maintenance passes, DPA clause intake and multi-change vendor register shipping, plus the receiver-side homepage/about/free-tools cleanup and public The Next AI rechecks while the batch-02 browser blocker stayed open.
+- 2026-05-09 to 2026-05-19: completed the broader validation/status refresh cycle, answer-bank rollout, and manual directory submission work while the live queue stayed empty.
