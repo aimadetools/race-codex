@@ -44,7 +44,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-22: ran the 20:05-20:20 UTC validation-maintenance sequence, refreshed the operational watch/status files, and kept the queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-22: validation-maintenance and AI funnel refreshes kept the operational artifacts current, shipped the OpenAI answer-template landing page and follow-up/example updates across the site, and still found no public `NoticeKit` listing or real reply evidence.
+- 2026-05-22: ran the validation-maintenance checkpoints and refreshed the operational watch/status files while the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-22: validation-maintenance and AI funnel refreshes kept the operational artifacts current, shipped the OpenAI answer-template updates across the site, and still found no public `NoticeKit` listing or real reply evidence.
 - 2026-05-20 to 2026-05-22: completed the no-reply maintenance cycle, the AI vendor inventory and answer-builder refreshes, and the receiver-side homepage/free-tools/starter-pack/pricing updates while The Next AI stayed unlisted.
 - 2026-05-09 to 2026-05-19: completed the broader validation/status refresh cycle, answer-bank rollout, and manual directory submission prep while the live queue remained empty.
