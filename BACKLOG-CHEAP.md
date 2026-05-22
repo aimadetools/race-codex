@@ -108,7 +108,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-22: ran the validation-maintenance checkpoints, refreshed the operational watch/status files, and kept the queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-22: published the OpenAI answer-template and follow-up-question updates across the main site entry points and kept source-tag coverage green.
+- 2026-05-22: completed the validation-maintenance and OpenAI answer-template refresh cycle, keeping the operational watch/status files current, source-tag coverage green, and the queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-20 to 2026-05-21: completed the broader no-reply maintenance cycle, generated artifact refreshes, and AI builder/free-tools/starter-pack shipping while The Next AI still showed no live `NoticeKit` listing.
 - 2026-05-09 to 2026-05-19: completed the broader validation/status refresh cycle, answer-bank rollout, and manual directory submission prep while the live queue stayed empty.
