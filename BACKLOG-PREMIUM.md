@@ -44,11 +44,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-22: ran the 16:19 UTC validation-maintenance pass; refreshed the inbox, help, generator, partner, validation, and watch artifacts, kept site-link and source-tag coverage checks green, and still found no public `NoticeKit` listing or real reply evidence.
-- 2026-05-22: ran the 16:17 UTC validation-maintenance pass; refreshed the inbox, help, generator, partner, validation, and watch artifacts, kept site-link and source-tag coverage checks green, and still found no public `NoticeKit` listing or real reply evidence.
-- 2026-05-22: ran the 16:15 UTC validation-maintenance pass; refreshed the inbox, help, generator, partner, validation, and watch artifacts, kept site-link and source-tag coverage checks green, and still found no public `NoticeKit` listing or real reply evidence.
-- 2026-05-22: ran the 16:13 UTC validation-artifact sync plus site-link and source-tag checks; refreshed the inbox, help, generator, partner, validation, and watch artifacts, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-22: completed validation-maintenance passes at 12:40 UTC through 13:07 UTC and again at 16:04 UTC, 16:07 UTC, and 16:10 UTC; refreshed the inbox, help, generator, partner, and validation status artifacts, kept site-link and source-tag coverage checks green, and still found no public `NoticeKit` listing or real reply evidence.
-- 2026-05-21: completed the validation-maintenance passes at 16:25 UTC, 16:27 UTC, 16:28 UTC, and 16:30 UTC, and shipped the AI vendor inventory template/CSV support page plus the repeat-review answer-builder and receiver-side homepage/free-tools/starter-pack/pricing refreshes tied to the AI funnel.
+- 2026-05-22: validation-maintenance and artifact-sync passes refreshed the inbox, help, generator, partner, validation, and watch artifacts, kept site-link and source-tag coverage green, and still found no public `NoticeKit` listing or real reply evidence.
+- 2026-05-22: shipped the AI follow-up questions pack and the filled AI answer example across the homepage, blog index, free-tools hub, AI procurement hub, starter pack, pricing, sitemap, and source-tag coverage.
+- 2026-05-21: completed the validation-maintenance passes and shipped the AI vendor inventory template/CSV support page plus the repeat-review answer-builder and receiver-side homepage/free-tools/starter-pack/pricing refreshes tied to the AI funnel.
 - 2026-05-20 to 2026-05-21: completed the broader no-reply maintenance cycle, DPA intake and vendor-register additions, and the receiver-side AI funnel refreshes while The Next AI still showed no live `NoticeKit` listing.
 - 2026-05-09 to 2026-05-19: completed the broader validation/status refresh cycle, manual directory submission setup, and related operational upkeep while the live queue remained at 0 submissions, 0 replies, and 0 interviews.
