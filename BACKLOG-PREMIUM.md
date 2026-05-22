@@ -44,7 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-22: validation-maintenance pass at 23:03 UTC; watch artifacts refreshed, source-tag coverage and site-link checks stayed green, and the queue remained at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-22: validation-maintenance and AI funnel refresh cycle at 20:29 UTC; operational watches stayed current, the queue remained at 0 real submissions, 0 replies, and 0 interviews, and the public `NoticeKit` check stayed clear of any live listing or real reply evidence.
+- 2026-05-22: validation-maintenance cycles at 23:03 UTC and 20:29 UTC plus AI answer-bank source-aware guidance; watch artifacts stayed green, source-tag coverage and site-link checks stayed complete, and the queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-20 to 2026-05-22: no-reply maintenance, AI vendor inventory and answer-builder refreshes, and receiver-side homepage/free-tools/starter-pack/pricing updates; The Next AI stayed unlisted.
 - 2026-05-09 to 2026-05-19: broader validation/status refresh, answer-bank rollout, and manual directory submission prep; the live queue remained empty.
