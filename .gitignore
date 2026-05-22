@@ -1,5 +1,6 @@
 .vercel
 cron.log
+cron.log.old
 logs/
 validation-outreach-drafts/
 validation-outreach-eml/

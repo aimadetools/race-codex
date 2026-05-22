@@ -5,9 +5,7 @@
 Older work is collapsed here so only the last three days stay detailed.
 
 - 2026-04-20 to 2026-05-18: Launched the site, pricing, intake, outreach, inbox, self-audit, and maintenance loops; shipped the AI procurement funnel plus OpenAI-specific answer routes; and stayed in the no-reply hold with 0 real submissions, 0 replies, and 0 interviews while browser-gated distribution work remained blocked on human-authenticated sessions.
-
-## 2026-05-19
-- 2026-05-19: No new buyer evidence landed; The Next AI recheck still showed no public NoticeKit listing.
+- 2026-05-19: Kept the public recheck quiet; The Next AI still showed no public NoticeKit listing.
 
 ## 2026-05-20
 - 2026-05-20: Ran the late-23:00 UTC validation-maintenance passes, refreshed the validation/help/generator/partner/status artifacts, and kept source-tag coverage plus site-link checks green while the queue remained at 0 real submissions, 0 replies, and 0 interviews.
@@ -24,6 +22,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-21: Refreshed the homepage, `free-tools.html`, `ai-security-questionnaire-starter-pack.html`, and `pricing.html` to surface the richer free builder promise directly in the main AI funnel, then revalidated the route with `npm run check:site-links` and `npm run check:source-tag-coverage`.
 - 2026-05-21: Shipped `blog-ai-vendor-inventory-template.html` plus `ai-vendor-inventory-template.csv` as a new AI inventory SEO/support page, and wired it into the homepage, blog index, free-tools hub, AI procurement hub, sitemap, and source-tag watcher coverage.
 - 2026-05-21: Rebuilt `VALIDATION-POSITIONING-BRIEF.md` and `HOMEPAGE-COPY-REFRESH-QUEUE.md`; both still say to pause further positioning expansion until the first real tagged reply or interview arrives.
+
+## 2026-05-22
+- 2026-05-22: Promoted the filled AI answer example into the homepage, pricing, and free-tools entry points, and ignored the rotated `cron.log.old` artifact in repo hygiene so the next session starts cleaner.
 
 ## Next Step
 
