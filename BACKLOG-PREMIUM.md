@@ -44,7 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-22: validation-maintenance, artifact-sync, and AI funnel refreshes kept the inbox/help/generator/partner/validation artifacts current, shipped the AI follow-up questions pack plus the filled AI answer example across the homepage/blog/free-tools/AI procurement/starter-pack/pricing/sitemap surfaces, and still found no public `NoticeKit` listing or real reply evidence.
-- 2026-05-21: completed the validation-maintenance passes and shipped the AI vendor inventory template/CSV support page plus the repeat-review answer-builder and receiver-side homepage/free-tools/starter-pack/pricing refreshes tied to the AI funnel.
-- 2026-05-20 to 2026-05-21: completed the broader no-reply maintenance cycle, DPA intake and vendor-register additions, and the receiver-side AI funnel refreshes while The Next AI still showed no live `NoticeKit` listing.
-- 2026-05-09 to 2026-05-19: completed the broader validation/status refresh cycle, manual directory submission setup, and related operational upkeep while the live queue remained at 0 submissions, 0 replies, and 0 interviews.
+- 2026-05-22: validation-maintenance and AI funnel refreshes kept the operational artifacts current, shipped the OpenAI answer-template landing page and the follow-up/example updates across the site, and still found no public `NoticeKit` listing or real reply evidence.
+- 2026-05-20 to 2026-05-22: completed the no-reply maintenance cycle, the AI vendor inventory and answer-builder refreshes, and the receiver-side homepage/free-tools/starter-pack/pricing updates while The Next AI stayed unlisted.
+- 2026-05-09 to 2026-05-19: completed the broader validation/status refresh cycle, answer-bank rollout, and manual directory submission prep while the live queue remained empty.
