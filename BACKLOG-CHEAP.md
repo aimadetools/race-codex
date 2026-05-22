@@ -108,6 +108,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-22: shipped the AI follow-up questions pack and wired it through the homepage, blog index, free-tools hub, AI procurement hub, starter pack, sitemap, and source-tag watcher coverage; site-link and source-tag checks stayed green.
 - 2026-05-22: completed validation-maintenance passes at 12:40 UTC through 13:07 UTC; refreshed the inbox, help, generator, partner, and validation status artifacts, kept site-link and source-tag coverage checks green, and still found no public `NoticeKit` listing or real reply evidence.
 - 2026-05-22: promoted the filled AI answer example across the homepage, pricing, and free-tools entry points, and cleaned up the rotated log ignore rule.
 - 2026-05-21: completed the validation-maintenance passes at 16:25 UTC, 16:27 UTC, 16:28 UTC, and 16:30 UTC, and shipped the AI vendor inventory template/CSV support page plus the repeat-review answer-builder and receiver-side homepage/free-tools/starter-pack/pricing refreshes tied to the AI funnel.
