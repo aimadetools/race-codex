@@ -113,6 +113,17 @@
           </div>
         </section>
 
+        <section class="section" id="source-context-section" hidden>
+          <div class="context-band" aria-live="polite">
+            <div>
+              <span class="eyebrow">Source context</span>
+              <h2 id="source-context-title">Keep the named-vendor answer bank close when OpenAI comes up again.</h2>
+              <p id="source-context-copy">This page is strongest when the reviewer names OpenAI directly and the team needs one reusable source file instead of reworking the same answer for every deal.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+          </div>
+        </section>
+
         <section class="section">
           <div class="section-head">
             <h2>What a named-vendor OpenAI answer bank fixes</h2>
@@ -237,5 +248,78 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+<script>
+  const query = new URLSearchParams(window.location.search);
+  const normalizedSource = (query.get("source") || "").trim().toLowerCase();
+  const sourceContextSection = document.querySelector("#source-context-section");
+  const sourceContextTitle = document.querySelector("#source-context-title");
+  const sourceContextCopy = document.querySelector("#source-context-copy");
+  const sourceContextPoints = document.querySelector("#source-context-points");
+
+  const sourceContexts = [
+    {
+      match: (source) =>
+        source.startsWith("openai-answer-bank-builder") ||
+        source.startsWith("openai-security-questionnaire-answer-bank") ||
+        source.startsWith("openai-security-questionnaire-template") ||
+        source.startsWith("homepage-job-repeat-review") ||
+        source.startsWith("homepage-hero") ||
+        source.startsWith("pricing-ai-answer-bank") ||
+        source.startsWith("free-tools-openai-answer-bank"),
+      title: "You are already in named-vendor repeat-review territory.",
+      copy: "Keep the reusable OpenAI source file here. That is the lowest-friction way to preserve approved wording, proof links, owner notes, and customer-scope variants for the next buyer thread.",
+      points: [
+        "Download the template if you want a plain Markdown source file.",
+        "Open the builder if you need one live answer before polishing the bank.",
+        "Move to the packet guide when the review widens beyond one reusable file."
+      ]
+    },
+    {
+      match: (source) =>
+        source.startsWith("openai-answer-bank-template") ||
+        source.startsWith("openai-answer-bank-example") ||
+        source.startsWith("openai-answer-bank-vs-builder") ||
+        source.startsWith("ai-security-questionnaire-starter-pack-openai-answer-bank") ||
+        source.startsWith("ai-security-questionnaire-starter-pack-openai-answer-template") ||
+        source.startsWith("ai-security-questionnaire-starter-pack-openai-answer-example"),
+      title: "You already have a named-vendor artifact, so keep the reusable file next to it.",
+      copy: "If the thread already brought you through the OpenAI template, example, or comparison page, the answer bank is the right place to store the recurring wording and proof path for the next review.",
+      points: [
+        "Use the template or example when the wording is still being shaped.",
+        "Use the answer bank when the same OpenAI review prompt keeps returning.",
+        "Use teardown when you want a blunt read on whether the proof path still needs work."
+      ]
+    },
+    {
+      match: (source) =>
+        source.startsWith("ai-security-questionnaire-answer-builder") ||
+        source.startsWith("ai-questionnaire-builder") ||
+        source.startsWith("ai-security-questionnaire-starter-pack") ||
+        source.startsWith("blog-openai-security-questionnaire-answer-template") ||
+        source.startsWith("blog-openai-security-questionnaire-answer-example"),
+      title: "You came from an answer-creation route and landed on the reusable file.",
+      copy: "Use the bank to preserve the approved OpenAI answer after the live response is written. If one questionnaire row is still blocking the deal, the builder or starter pack should stay first.",
+      points: [
+        "Keep the builder first when the live answer is still missing.",
+        "Move the approved OpenAI wording into the bank after the first answer lands.",
+        "Switch to the packet guide only when the review widens into a broader handoff."
+      ]
+    }
+  ];
+
+  const matchedContext = sourceContexts.find((context) => context.match(normalizedSource));
+  if (matchedContext) {
+    sourceContextTitle.textContent = matchedContext.title;
+    sourceContextCopy.textContent = matchedContext.copy;
+    sourceContextPoints.replaceChildren(
+      ...matchedContext.points.map((point) => {
+        const item = document.createElement("li");
+        item.textContent = point;
+        return item;
+      })
+    );
+    sourceContextSection.hidden = false;
+  }
+</script>
   </body>
 </html>

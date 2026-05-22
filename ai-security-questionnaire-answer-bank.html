@@ -113,6 +113,17 @@
           </div>
         </section>
 
+        <section class="section" id="source-context-section" hidden>
+          <div class="context-band" aria-live="polite">
+            <div>
+              <span class="eyebrow">Source context</span>
+              <h2 id="source-context-title">Use the answer bank when repeated review is the real blocker.</h2>
+              <p id="source-context-copy">This page is strongest when the same AI questionnaire questions keep coming back and the team needs one reusable source file instead of rewriting the answer from scratch.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+          </div>
+        </section>
+
         <section class="section">
           <div class="section-head">
             <h2>What an answer bank actually fixes</h2>
@@ -259,5 +270,81 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+<script>
+  const query = new URLSearchParams(window.location.search);
+  const normalizedSource = (query.get("source") || "").trim().toLowerCase();
+  const sourceContextSection = document.querySelector("#source-context-section");
+  const sourceContextTitle = document.querySelector("#source-context-title");
+  const sourceContextCopy = document.querySelector("#source-context-copy");
+  const sourceContextPoints = document.querySelector("#source-context-points");
+
+  const sourceContexts = [
+    {
+      match: (source) =>
+        source.startsWith("ai-security-questionnaire-answer-builder") ||
+        source.startsWith("ai-questionnaire-builder") ||
+        source.startsWith("homepage-job-one-answer") ||
+        source.startsWith("homepage-hero") ||
+        source.startsWith("free-tools-ai-answer-builder") ||
+        source.startsWith("pricing-ai-answer-builder") ||
+        source.startsWith("ai-procurement-hub-answer-builder"),
+      title: "You came from a one-answer route, so do not overbuild the response.",
+      copy: "Use the answer bank to preserve the approved wording after the live answer is written. If one questionnaire row is still blocking the deal, the builder stays the better first stop.",
+      points: [
+        "Keep the builder first when the live answer is still missing.",
+        "Move the approved wording and proof links into the bank after the first answer lands.",
+        "Use teardown only if the real issue is whether the proof path is still too weak."
+      ]
+    },
+    {
+      match: (source) =>
+        source.startsWith("ai-security-questionnaire-starter-pack") ||
+        source.startsWith("ai-security-questionnaire-template") ||
+        source.startsWith("blog-ai-security-questionnaire-answer-template") ||
+        source.startsWith("blog-ai-security-questionnaire-answer-example") ||
+        source.startsWith("blog-ai-security-questionnaire-follow-up-questions") ||
+        source.startsWith("free-tools-ai-deal-blocker") ||
+        source.startsWith("free-tools-ai-answer-bank"),
+      title: "You already found the blocker, and the bank is the repeat-review path.",
+      copy: "If the thread started with a starter pack, template, or example, the answer bank is the next step only when the same questions keep coming back across deals or customer segments.",
+      points: [
+        "Use the starter pack when you still need to choose the right artifact.",
+        "Use the answer bank when the same AI questions keep recurring.",
+        "Use the Pro kit when the repeat-review problem now needs matrix, packet, and intake files too."
+      ]
+    },
+    {
+      match: (source) =>
+        source.startsWith("homepage-job-repeat-review") ||
+        source.startsWith("pricing-ai-answer-bank") ||
+        source.startsWith("blog-index-ai-answer-bank") ||
+        source.startsWith("ai-security-questionnaire-answer-bank") ||
+        source.startsWith("start-here-ai-answer-bank") ||
+        source.startsWith("ai-questionnaire-builder-answer-bank") ||
+        source.startsWith("ai-procurement-hub-answer-bank"),
+      title: "You are already on the repeat-review route.",
+      copy: "Keep the reusable source file here. That is the lowest-friction way to preserve approved wording, proof links, owner notes, and customer-scope variants for the next buyer thread.",
+      points: [
+        "Download the template if you want a plain Markdown source file.",
+        "Open the builder if you need one live answer before polishing the bank.",
+        "Move to the packet guide when the review widens beyond one reusable file."
+      ]
+    }
+  ];
+
+  const matchedContext = sourceContexts.find((context) => context.match(normalizedSource));
+  if (matchedContext) {
+    sourceContextTitle.textContent = matchedContext.title;
+    sourceContextCopy.textContent = matchedContext.copy;
+    sourceContextPoints.replaceChildren(
+      ...matchedContext.points.map((point) => {
+        const item = document.createElement("li");
+        item.textContent = point;
+        return item;
+      })
+    );
+    sourceContextSection.hidden = false;
+  }
+</script>
   </body>
 </html>
