@@ -44,6 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-22: completed the validation-maintenance and AI funnel refresh cycle, keeping the operational watch/status files current, the queue at 0 real submissions, 0 replies, and 0 interviews, and the public `NoticeKit` check clear of any live listing or real reply evidence.
-- 2026-05-20 to 2026-05-22: completed the no-reply maintenance cycle, the AI vendor inventory and answer-builder refreshes, and the receiver-side homepage/free-tools/starter-pack/pricing updates while The Next AI stayed unlisted.
-- 2026-05-09 to 2026-05-19: completed the broader validation/status refresh cycle, answer-bank rollout, and manual directory submission prep while the live queue remained empty.
+- 2026-05-22: validation-maintenance and AI funnel refresh cycle; operational watches stayed current, the queue remained at 0 real submissions, 0 replies, and 0 interviews, and the public `NoticeKit` check stayed clear of any live listing or real reply evidence.
+- 2026-05-20 to 2026-05-22: no-reply maintenance, AI vendor inventory and answer-builder refreshes, and receiver-side homepage/free-tools/starter-pack/pricing updates; The Next AI stayed unlisted.
+- 2026-05-09 to 2026-05-19: broader validation/status refresh, answer-bank rollout, and manual directory submission prep; the live queue remained empty.
