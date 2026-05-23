@@ -19,6 +19,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-22: Added source-aware answer-bank context, published the OpenAI answer-template and follow-up-questions pages, promoted the filled AI example across the core entry points, and cleaned up the rotated `cron.log.old` artifact.
 
 ## 2026-05-23
+- 2026-05-23: Ran `npm run run:validation-maintenance` at `08:25 UTC`; the validation watch, self-audit follow-up, contact webhook shape, free-teardown handoff, self-audit production verify, source-tag coverage, and site-link checks stayed green, and the maintenance pass refreshed the inbox/help/generator/partner/validation artifacts plus the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - 2026-05-23: Ran `npm run run:validation-maintenance` from `08:04 UTC` through `08:18 UTC`; the validation, self-audit, contact, source-tag, and site-link checks stayed green, the inbox/help/generator/partner/validation artifacts refreshed, `COMMUNITY-FEEDBACK.md` logged the deduplicated no-reply checkpoint, and the queue still held at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-23: Rechecked The Next AI at `08:16 UTC`; the homepage and `/ai-tools/` directory still showed no public `NoticeKit` listing, so the batch-02 re-entry remains blocked on the human-owned authenticated browser session.
 - 2026-05-23: Ran the 08:23 UTC maintenance refresh; the validation watch, source-tag coverage, site-link sweep, contact inbox, help-request, generator, partner, and self-audit artifacts all refreshed cleanly, and The Next AI still showed no public `NoticeKit` listing.
@@ -31,8 +32,6 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Next Step
 
 - Keep running `npm run run:validation-maintenance` while no real replies are landing, then update the memory files with the first real reply or intake that appears.
-- Watch whether the new builder workspace and 12-question pack start attracting cleaner builder-led demand before changing the free promise again.
-- Watch whether the new follow-up pack starts attracting cleaner AI-questionnaire clicks before moving it above the generic example or starter-pack routes.
-- Recheck The Next AI during no-reply maintenance windows, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real builder-led, homepage-route, inventory-route, pricing-route, or free-tools-route signal before changing the copy again.
 - Watch the OpenAI-specific example, answer bank, and comparison pages against the generic AI routes before moving named-vendor framing higher.
+- Recheck The Next AI during no-reply maintenance windows, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`.
