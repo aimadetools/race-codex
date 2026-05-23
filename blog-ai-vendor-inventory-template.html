@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Vendor Inventory Template for SaaS Teams | NoticeKit</title>
-    <meta name="description" content="Build an AI vendor inventory before the questionnaire arrives. Capture model providers, support tools, data categories, regions, owners, and proof links in one simple template.">
+    <title>AI Vendor Inventory Workspace for SaaS Teams | NoticeKit</title>
+    <meta name="description" content="Build an AI vendor inventory before the questionnaire arrives. Capture model providers, support tools, data categories, regions, owners, proof links, and notes in a browser-only workspace plus CSV template.">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="NoticeKit">
     <meta property="og:url" content="https://noticekit.tech/blog-ai-vendor-inventory-template.html">
-    <meta property="og:title" content="AI Vendor Inventory Template for SaaS Teams">
-    <meta property="og:description" content="A practical template for the vendor inventory that sits underneath AI security questionnaires, proof links, and review packets.">
+    <meta property="og:title" content="AI Vendor Inventory Workspace for SaaS Teams">
+    <meta property="og:description" content="A browser-only inventory workspace plus CSV template for the vendor list that sits underneath AI security questionnaires, proof links, and review packets.">
     <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit AI vendor inventory template">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Vendor Inventory Template for SaaS Teams">
-    <meta name="twitter:description" content="Keep your AI vendors, data categories, regions, owners, and proof links in one review-ready inventory before procurement asks for the answer.">
+    <meta name="twitter:title" content="AI Vendor Inventory Workspace for SaaS Teams">
+    <meta name="twitter:description" content="Keep your AI vendors, data categories, regions, owners, proof links, and notes in one local review-ready inventory before procurement asks for the answer.">
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/blog-ai-vendor-inventory-template.html">
@@ -25,8 +25,8 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "AI Vendor Inventory Template for SaaS Teams",
-        "description": "A practical template for the vendor inventory that sits underneath AI security questionnaires, proof links, and review packets.",
+        "headline": "AI Vendor Inventory Workspace for SaaS Teams",
+        "description": "A browser-only inventory workspace plus CSV template for the vendor list that sits underneath AI security questionnaires, proof links, and review packets.",
         "author": {
           "@type": "Organization",
           "name": "NoticeKit"
@@ -37,7 +37,7 @@
           "url": "https://noticekit.tech/"
         },
         "datePublished": "2026-05-21",
-        "dateModified": "2026-05-21",
+        "dateModified": "2026-05-23",
         "mainEntityOfPage": "https://noticekit.tech/blog-ai-vendor-inventory-template.html",
         "about": [
           "AI vendor inventory",
@@ -67,10 +67,11 @@
         <article class="article">
           <header class="article-header">
             <span class="eyebrow">AI review</span>
-            <h1>AI vendor inventory template for SaaS teams</h1>
-            <p>Before you can answer the AI section of a questionnaire, you need a clean inventory of the vendors behind the workflow. That means the model provider, hosting, analytics, support tools, data categories, processing region, owner, and proof trail all live in one place instead of scattered across Slack and half-finished docs.</p>
+            <h1>AI vendor inventory workspace for SaaS teams</h1>
+            <p>Before you can answer the AI section of a questionnaire, you need a clean inventory of the vendors behind the workflow. That means the model provider, hosting, analytics, support tools, data categories, processing region, owner, proof trail, and open review notes all live in one place instead of scattered across Slack and half-finished docs.</p>
             <div class="hero-actions">
-              <a class="button" href="ai-vendor-inventory-template.csv" download>Download inventory CSV</a>
+              <a class="button" href="#inventory-workspace">Open local inventory workspace</a>
+              <a class="button secondary" href="ai-vendor-inventory-template.csv" download>Download inventory CSV</a>
               <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=ai-vendor-inventory-builder">Open answer builder</a>
               <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-vendor-inventory-starter-pack">Open starter pack</a>
               <a class="button secondary" href="blog-ai-vendor-risk-assessment.html?source=ai-vendor-inventory-risk-assessment">Open risk checklist</a>
@@ -82,6 +83,75 @@
             <strong>Operational template, not legal advice.</strong>
             <p>This page helps you organize vendor facts before procurement or security asks for a review-ready answer. Your contracts, privacy team, and counsel still decide the final disclosure and notice steps.</p>
           </div>
+
+          <section id="inventory-workspace">
+            <h2>Build the inventory in your browser first</h2>
+            <p>Use this workspace when you need a working draft before moving into the builder, answer bank, or packet path. It saves locally in your browser, never asks for email, and exports a clean handoff when the facts are ready.</p>
+            <div class="demo-panel">
+              <div class="panel-header">
+                <strong>Inventory workspace</strong>
+                <span class="status">Local only</span>
+              </div>
+              <div class="demo-body">
+                <div class="field-grid">
+                  <label>Vendor
+                    <input id="inventory-vendor" value="OpenAI">
+                  </label>
+                  <label>Role
+                    <input id="inventory-role" value="Model provider for support drafting">
+                  </label>
+                  <label>Data categories
+                    <input id="inventory-data" value="Prompt text; generated outputs; account metadata">
+                  </label>
+                  <label>Region
+                    <input id="inventory-region" value="United States">
+                  </label>
+                  <label>Status
+                    <select id="inventory-status">
+                      <option value="active">Active</option>
+                      <option value="planned">Planned</option>
+                      <option value="under review">Under review</option>
+                      <option value="replacing">Replacing</option>
+                    </select>
+                  </label>
+                  <label>Owner
+                    <input id="inventory-owner" value="Founder">
+                  </label>
+                  <label>Proof link or note
+                    <input id="inventory-proof" value="Trust center URL or internal review note">
+                  </label>
+                  <label>Open review note
+                    <input id="inventory-note" value="Confirm retention toggle and enterprise plan stance">
+                  </label>
+                </div>
+                <div class="hero-actions" style="margin-top:12px;">
+                  <button class="button" type="button" id="inventory-add">Add vendor</button>
+                  <button class="button secondary" type="button" id="inventory-load-sample">Load sample stack</button>
+                  <button class="button secondary" type="button" id="inventory-copy-markdown">Copy markdown table</button>
+                  <button class="button secondary" type="button" id="inventory-download-csv">Download CSV</button>
+                  <button class="button secondary" type="button" id="inventory-clear">Clear local draft</button>
+                </div>
+                <div id="inventory-summary" class="notice-output" aria-live="polite"></div>
+                <div class="table-wrap" style="margin-top:16px;">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Vendor</th>
+                        <th>Role</th>
+                        <th>Data categories</th>
+                        <th>Region</th>
+                        <th>Status</th>
+                        <th>Owner</th>
+                        <th>Proof</th>
+                        <th>Note</th>
+                      </tr>
+                    </thead>
+                    <tbody id="inventory-table-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <section>
             <h2>What the inventory should answer</h2>
@@ -146,7 +216,7 @@
                 </tbody>
               </table>
             </div>
-            <p>Keep the public version readable. Put the decision notes, proof links, and approval trail in a private tracker.</p>
+            <p>Keep the public version readable. Put the decision notes, proof links, approval trail, and unresolved reviewer questions in a private tracker or in the local workspace above.</p>
           </section>
 
           <section>
@@ -190,12 +260,12 @@
             <div class="grid-3">
               <article class="card">
                 <h3>One live answer now</h3>
-                <p>Move into the answer builder when the inventory is ready and procurement needs one copy-ready response.</p>
+                <p>Move into the answer builder when the inventory is ready and procurement needs one copy-ready response plus one clean handoff brief.</p>
                 <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=ai-vendor-inventory-builder">Open answer builder</a>
               </article>
               <article class="card">
                 <h3>Repeated review pressure</h3>
-                <p>Use the answer bank when the same AI questions keep returning and the inventory needs reusable wording behind it.</p>
+                <p>Use the answer bank when the same AI questions keep returning and the inventory needs reusable wording, proof links, and owner notes behind it.</p>
                 <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=ai-vendor-inventory-answer-bank">Open answer bank</a>
               </article>
               <article class="card">
@@ -230,5 +300,241 @@
       </footer>
     </div>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      (() => {
+        const storageKey = "noticekit-ai-vendor-inventory";
+        const sampleRows = [
+          {
+            vendor: "OpenAI",
+            role: "Model provider for support drafting",
+            data: "Prompt text; generated outputs; account metadata",
+            region: "United States",
+            status: "active",
+            owner: "Founder",
+            proof: "Trust center URL or enterprise plan note",
+            note: "Confirm retention toggle and enterprise plan stance"
+          },
+          {
+            vendor: "Vercel",
+            role: "Hosting and edge delivery",
+            data: "Site requests; log metadata; deployment data",
+            region: "United States; global edge network",
+            status: "active",
+            owner: "Engineering",
+            proof: "Public trust page",
+            note: "Confirm log retention window"
+          },
+          {
+            vendor: "Zendesk",
+            role: "Support workflow and case handling",
+            data: "Support tickets; contact details; case notes",
+            region: "United States",
+            status: "under review",
+            owner: "Support lead",
+            proof: "Vendor security overview",
+            note: "Check AI add-on usage and disablement scope"
+          }
+        ];
+
+        const defaultDraft = {
+          vendor: "OpenAI",
+          role: "Model provider for support drafting",
+          data: "Prompt text; generated outputs; account metadata",
+          region: "United States",
+          status: "active",
+          owner: "Founder",
+          proof: "Trust center URL or internal review note",
+          note: "Confirm retention toggle and enterprise plan stance"
+        };
+
+        const fields = {
+          vendor: document.querySelector("#inventory-vendor"),
+          role: document.querySelector("#inventory-role"),
+          data: document.querySelector("#inventory-data"),
+          region: document.querySelector("#inventory-region"),
+          status: document.querySelector("#inventory-status"),
+          owner: document.querySelector("#inventory-owner"),
+          proof: document.querySelector("#inventory-proof"),
+          note: document.querySelector("#inventory-note")
+        };
+
+        const tableBody = document.querySelector("#inventory-table-body");
+        const summary = document.querySelector("#inventory-summary");
+        const addButton = document.querySelector("#inventory-add");
+        const sampleButton = document.querySelector("#inventory-load-sample");
+        const copyButton = document.querySelector("#inventory-copy-markdown");
+        const csvButton = document.querySelector("#inventory-download-csv");
+        const clearButton = document.querySelector("#inventory-clear");
+
+        let rows = loadRows();
+        let draft = loadDraft();
+        writeDraft(draft);
+        render();
+
+        addButton.addEventListener("click", () => {
+          rows.push(readDraft());
+          persistState();
+          render();
+        });
+
+        sampleButton.addEventListener("click", () => {
+          rows = sampleRows.map((row) => ({ ...row }));
+          draft = { ...sampleRows[0] };
+          writeDraft(draft);
+          persistState();
+          render();
+        });
+
+        copyButton.addEventListener("click", async () => {
+          const markdown = toMarkdown(rows);
+          try {
+            await navigator.clipboard.writeText(markdown);
+            summary.innerHTML = "<strong>Copied.</strong><p>Markdown inventory table copied to your clipboard for the next procurement, security, or counsel handoff.</p>";
+          } catch (error) {
+            summary.innerHTML = "<strong>Clipboard unavailable.</strong><p>Select and copy the generated table from the browser if clipboard access is blocked.</p>";
+          }
+        });
+
+        csvButton.addEventListener("click", () => {
+          const blob = new Blob([toCsv(rows)], { type: "text/csv;charset=utf-8" });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = "noticekit-ai-vendor-inventory.csv";
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          URL.revokeObjectURL(url);
+        });
+
+        clearButton.addEventListener("click", () => {
+          rows = [];
+          draft = { ...defaultDraft };
+          writeDraft(draft);
+          persistState();
+          render();
+        });
+
+        Object.values(fields).forEach((field) => {
+          field.addEventListener("input", () => {
+            draft = readDraft();
+            persistState();
+          });
+        });
+
+        function readDraft() {
+          return {
+            vendor: fields.vendor.value.trim(),
+            role: fields.role.value.trim(),
+            data: fields.data.value.trim(),
+            region: fields.region.value.trim(),
+            status: fields.status.value.trim(),
+            owner: fields.owner.value.trim(),
+            proof: fields.proof.value.trim(),
+            note: fields.note.value.trim()
+          };
+        }
+
+        function writeDraft(row) {
+          fields.vendor.value = row.vendor || defaultDraft.vendor;
+          fields.role.value = row.role || defaultDraft.role;
+          fields.data.value = row.data || defaultDraft.data;
+          fields.region.value = row.region || defaultDraft.region;
+          fields.status.value = row.status || defaultDraft.status;
+          fields.owner.value = row.owner || defaultDraft.owner;
+          fields.proof.value = row.proof || defaultDraft.proof;
+          fields.note.value = row.note || defaultDraft.note;
+        }
+
+        function loadRows() {
+          try {
+            const parsed = JSON.parse(window.localStorage.getItem(storageKey) || "[]");
+            return Array.isArray(parsed) ? parsed.filter(isRow) : [];
+          } catch (error) {
+            return [];
+          }
+        }
+
+        function loadDraft() {
+          try {
+            const parsed = JSON.parse(window.localStorage.getItem(`${storageKey}-draft`) || "null");
+            return isRow(parsed) ? parsed : { ...defaultDraft };
+          } catch (error) {
+            return { ...defaultDraft };
+          }
+        }
+
+        function persistState() {
+          try {
+            window.localStorage.setItem(storageKey, JSON.stringify(rows));
+            window.localStorage.setItem(`${storageKey}-draft`, JSON.stringify(readDraft()));
+          } catch (error) {
+          }
+        }
+
+        function render() {
+          tableBody.innerHTML = "";
+          rows.forEach((row) => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td>${escapeHtml(row.vendor)}</td>
+              <td>${escapeHtml(row.role)}</td>
+              <td>${escapeHtml(row.data)}</td>
+              <td>${escapeHtml(row.region)}</td>
+              <td>${escapeHtml(row.status)}</td>
+              <td>${escapeHtml(row.owner)}</td>
+              <td>${escapeHtml(row.proof)}</td>
+              <td>${escapeHtml(row.note)}</td>
+            `;
+            tableBody.appendChild(tr);
+          });
+
+          const activeCount = rows.filter((row) => row.status === "active").length;
+          const reviewCount = rows.filter((row) => row.status === "under review").length;
+          const plannedCount = rows.filter((row) => row.status === "planned" || row.status === "replacing").length;
+          const missingProof = rows.filter((row) => !row.proof).length;
+          const missingOwner = rows.filter((row) => !row.owner).length;
+          summary.innerHTML = `
+            <strong>${rows.length} saved vendor ${rows.length === 1 ? "row" : "rows"} in local draft.</strong>
+            <p>${activeCount} active, ${reviewCount} under review, ${plannedCount} planned or replacing. ${missingOwner} missing an owner. ${missingProof} missing a proof note.</p>
+            <p>Current draft vendor: ${escapeHtml(readDraft().vendor || "unsaved")}. When the list feels stable, move into the builder for one answer, the answer bank for repeated reviews, or the starter pack if the deal is already blocked.</p>
+          `;
+        }
+
+        function toMarkdown(sourceRows) {
+          const header = "| Vendor | Role | Data categories | Region | Status | Owner | Proof | Note |";
+          const separator = "| --- | --- | --- | --- | --- | --- | --- | --- |";
+          const lines = sourceRows.map((row) => `| ${cleanCell(row.vendor)} | ${cleanCell(row.role)} | ${cleanCell(row.data)} | ${cleanCell(row.region)} | ${cleanCell(row.status)} | ${cleanCell(row.owner)} | ${cleanCell(row.proof)} | ${cleanCell(row.note)} |`);
+          return [header, separator, ...lines].join("\n");
+        }
+
+        function toCsv(sourceRows) {
+          const header = ["vendor", "role", "data_categories", "region", "status", "owner", "proof", "open_review_note"];
+          const lines = sourceRows.map((row) => [row.vendor, row.role, row.data, row.region, row.status, row.owner, row.proof, row.note].map(csvCell).join(","));
+          return [header.join(","), ...lines].join("\n");
+        }
+
+        function csvCell(value) {
+          const text = String(value || "");
+          return `"${text.replaceAll("\"", "\"\"")}"`;
+        }
+
+        function cleanCell(value) {
+          return String(value || "").replaceAll("|", "/").replaceAll("\n", " ");
+        }
+
+        function escapeHtml(value) {
+          return String(value || "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll("\"", "&quot;");
+        }
+
+        function isRow(row) {
+          return row && typeof row === "object";
+        }
+      })();
+    </script>
   </body>
 </html>
