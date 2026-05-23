@@ -187,7 +187,7 @@
           <aside class="result-panel" aria-live="polite">
             <span class="eyebrow">Local output</span>
             <div class="score-row generator-summary">
-              <strong id="coverage-score">5/5</strong>
+              <strong id="coverage-score">9/9</strong>
               <span id="coverage-state">Review-ready answer</span>
             </div>
             <p id="coverage-summary">The current draft names the vendor chain, scope, stance, customer impact, and proof links.</p>
@@ -209,7 +209,7 @@
               <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces a primary answer, checklist, handoff, full reviewer workspace, reusable answer-bank draft, and 12 common buyer-question responses.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces a primary answer, checklist, handoff, full reviewer workspace, reusable answer-bank draft, and 20 common buyer-question responses.</p>
           </aside>
         </section>
 
@@ -224,7 +224,7 @@
         <section class="section">
           <div class="section-head">
             <h2>Common buyer-question answer pack</h2>
-            <p>Use this when the buyer thread asks the same follow-up questions in slightly different wording. The pack turns one fact-gathering pass into 12 reusable response blocks you can paste into procurement, security, privacy, or counsel threads.</p>
+            <p>Use this when the buyer thread asks the same follow-up questions in slightly different wording. The pack turns one fact-gathering pass into 20 reusable response blocks you can paste into procurement, security, privacy, or counsel threads.</p>
           </div>
           <div id="qa-pack-output" class="template-box" aria-live="polite"></div>
         </section>
@@ -411,6 +411,7 @@
       const builderTemplateLink = document.querySelector("#builder-template-link");
       const builderExampleLink = document.querySelector("#builder-example-link");
       const builderStorageKey = "noticekit-ai-questionnaire-builder-draft-v2";
+      const reusableQuestionCount = 20;
 
       function value(id) {
         return document.querySelector(`#${id}`).value.trim();
@@ -584,7 +585,15 @@
           `9. When should this answer be rechecked or refreshed?\n${reviewCadence}`,
           `10. Does this trigger notice, escalation, or counsel review?\n${noticeImpact}`,
           `11. What decision still needs to be made before broader reuse?\n${decisionNeeded}`,
-          `12. What proof and owner notes sit behind the answer?\nProof: ${proofLinks}\nOwner and open questions: ${replyOwner}. ${openQuestions}`
+          `12. What proof and owner notes sit behind the answer?\nProof: ${proofLinks}\nOwner and open questions: ${replyOwner}. ${openQuestions}`,
+          `13. Is this workflow planned, active, or replacing another vendor flow?\nThe workflow is currently ${statusLabel}.`,
+          `14. Which supporting vendors touch the workflow around ${primaryVendor}?\nSupporting systems in the reviewed path include ${supportingVendors}.`,
+          `15. What exact workflow boundary should the reviewer assume?\nThis answer covers ${workflow}. Anything outside that reviewed workflow stays out of scope: ${scopeBoundaries}`,
+          `16. Which customer segment needs the closest contract or DPA check?\nCustomer scope needing the closest review: ${customerScope}`,
+          `17. What would force the answer to change before the next deal?\nRefresh the answer when this trigger changes: ${reviewCadence}`,
+          `18. What broader notice or rollout issue sits behind the answer?\nNotice or escalation impact: ${noticeImpact}`,
+          `19. Who owns the response if the buyer asks for more proof tomorrow?\n${replyOwner} owns the next response, with this approval path behind the answer: ${approvalPath}`,
+          `20. What is the current safe-to-send position in one line?\n${shortAnswer}. Next decision still open: ${decisionNeeded}`
         ].join("\n\n");
 
         const workspace = [
@@ -775,11 +784,13 @@
           handoff,
           answerBank,
           completedCount: completenessChecks.filter(Boolean).length,
+          completenessTarget: completenessChecks.length,
           company,
           workflow,
           primaryVendor,
           customerScope,
-          bankSlug: slugify(`${company}-${primaryVendor}-answer-bank`, "noticekit-ai-answer-bank")
+          bankSlug: slugify(`${company}-${primaryVendor}-answer-bank`, "noticekit-ai-answer-bank"),
+          reusableQuestionCount
         };
       }
 
@@ -802,12 +813,12 @@
         checklistOutput.innerHTML = markdownToHtml(payload.checklist);
         handoffOutput.innerHTML = markdownToHtml(payload.handoff);
         syncTeardownLink(payload);
-        coverageScore.textContent = `${payload.completedCount}/8`;
+        coverageScore.textContent = `${payload.completedCount}/${payload.completenessTarget}`;
 
-        if (payload.completedCount === 8) {
+        if (payload.completedCount === payload.completenessTarget) {
           coverageState.textContent = "Review-ready answer";
           coverageSummary.textContent = "The current draft names the vendor chain, scope, stance, approval path, review trigger, customer impact, and proof links.";
-          answerSummaryCopy.textContent = "Copy the answer into the questionnaire now, then reuse the 12-question pack, workspace export, and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.";
+          answerSummaryCopy.textContent = `Copy the answer into the questionnaire now, then reuse the ${payload.reusableQuestionCount}-question pack, workspace export, and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.`;
           return;
         }
 

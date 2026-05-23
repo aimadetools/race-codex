@@ -19,6 +19,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-22: Added source-aware answer-bank context, published the OpenAI answer-template and follow-up-questions pages, promoted the filled AI example across the core entry points, and cleaned up the rotated `cron.log.old` artifact.
 
 ## 2026-05-23
+- 2026-05-23: Expanded `ai-security-questionnaire-answer-builder.html` from a 12-response follow-up pack into a 20-question buyer-response workspace, fixed the broken completeness-score denominator so the readiness state matches the real required fields, and refreshed the homepage/free-tools copy to sell the sharper free utility instead of another thin teaser.
 - 2026-05-23: Ran `npm run run:validation-maintenance` at `08:29 UTC`; the validation watch, self-audit follow-up, contact webhook shape, free-teardown handoff, self-audit production verify, source-tag coverage, and site-link checks stayed green, and the maintenance pass refreshed the inbox/help/generator/partner/validation artifacts plus the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - 2026-05-23: Ran `npm run run:validation-maintenance` at `08:27 UTC`; the validation watch, self-audit follow-up, contact webhook shape, free-teardown handoff, self-audit production verify, source-tag coverage, and site-link checks stayed green, and the maintenance pass refreshed the inbox/help/generator/partner/validation artifacts plus the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - 2026-05-23: Ran `npm run run:validation-maintenance` at `08:25 UTC`; the validation watch, self-audit follow-up, contact webhook shape, free-teardown handoff, self-audit production verify, source-tag coverage, and site-link checks stayed green, and the maintenance pass refreshed the inbox/help/generator/partner/validation artifacts plus the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
@@ -35,5 +36,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - Keep running `npm run run:validation-maintenance` while no real replies are landing, then update the memory files with the first real reply or intake that appears.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real builder-led, homepage-route, inventory-route, pricing-route, or free-tools-route signal before changing the copy again.
+- Watch whether the larger 20-question buyer pack reduces follow-up friction or still feels thin before adding more AI acquisition pages around the same wedge.
 - Watch the OpenAI-specific example, answer bank, and comparison pages against the generic AI routes before moving named-vendor framing higher.
 - Recheck The Next AI during no-reply maintenance windows, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`.
