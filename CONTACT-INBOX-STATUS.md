@@ -145,6 +145,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-openai-answer-template: 0
 - free-tools-openai-answer-example: 0
 - free-tools-openai-answer-bank: 0
+- free-tools-openai-answer-comparison: 0
 - free-tools-ai-questionnaire-template: 0
 - free-tools-ai-questionnaire-example: 0
 - free-tools-ai-questionnaire: 0
@@ -216,6 +217,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-openai-template: 0
 - homepage-ai-route-openai-example: 0
 - homepage-ai-route-openai-answer-bank: 0
+- homepage-ai-route-openai-comparison: 0
 - homepage-ai-route-broader-handoff: 0
 - audit-request-ai-packet: 0
 - audit-request-ai-stack: 0
@@ -232,6 +234,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-comparison: 0
 - pricing-openai-answer-template: 0
 - pricing-openai-answer-bank: 0
+- pricing-openai-answer-comparison: 0
 - pricing-ai-questionnaire: 0
 - pricing-ai-questionnaire-example: 0
 - pricing-ai-packet-sample: 0
