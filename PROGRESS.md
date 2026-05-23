@@ -27,6 +27,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-23: Ran another `npm run run:validation-maintenance` pass at `12:47 UTC`; the validation watch, self-audit/contact/teardown checks, live generator smoke, source-tag coverage, and site-link sweep all stayed green, the inbox/help/generator/partner status artifacts refreshed again, and the queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-23: Ran `npm run run:validation-maintenance` again at `12:50 UTC`; the validation watch, self-audit follow-up, contact webhook shape, free-teardown handoff, self-audit production verify, source-tag coverage, and site-link sweep all stayed green, the inbox/help/generator/partner artifacts refreshed again, and the queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-23: Rechecked The Next AI at `12:50 UTC`; the homepage still showed no public `NoticeKit` listing and `/ai-tools/` returned a public `Page not found`, so the manual batch-02 re-entry remains blocked on the human-owned authenticated browser session.
+- 2026-05-23: Ran `npm run run:validation-maintenance` again at `12:52 UTC`; the validation watch, self-audit follow-up, contact webhook shape, free-teardown handoff, self-audit production verify, source-tag coverage, and site-link sweep all stayed green, the inbox/help/generator/partner artifacts refreshed again, and the queue remained at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-23: Rechecked The Next AI at `12:52 UTC`; the `thenextai.toolspedia.io` host failed DNS resolution for both the homepage and `/ai-tools/` (`Name or service not known`), so no public `NoticeKit` listing could be verified and the manual batch-02 re-entry remains blocked on the human-owned authenticated browser session.
 
 ## Next Step
 
@@ -34,4 +36,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real builder-led, hub-route, blog-route, homepage-route, inventory-route, pricing-route, or free-tools-route signal before changing the copy again.
 - Watch whether the larger 20-question buyer pack reduces follow-up friction or still feels thin before adding more AI acquisition pages around the same wedge.
 - Watch the OpenAI-specific example, answer bank, and comparison pages against the generic AI routes before moving named-vendor framing higher.
-- Recheck The Next AI during no-reply maintenance windows, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`.
+- Recheck The Next AI during no-reply maintenance windows, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected` or if the public host behavior changes again.
