@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-23 13:00 UTC
+Checked at: 2026-05-23 16:07 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -311,7 +311,16 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-vendor-inventory-teardown: 0
 - ai-vendor-inventory-risk-assessment: 0
 - ai-procurement-hub-follow-up-pack: 0
+- ai-procurement-hub-training-stance: 0
 - blog-ai-questionnaire-follow-up-questions: 0
+- blog-index-ai-training-stance: 0
+- free-tools-ai-training-stance: 0
+- ai-training-stance-template-builder: 0
+- ai-training-stance-template-answer-bank: 0
+- ai-training-stance-template-follow-up-pack: 0
+- ai-training-stance-template-starter-pack: 0
+- ai-training-stance-template-openai-template: 0
+- ai-training-stance-template-teardown: 0
 - openai-security-questionnaire-template-builder: 0
 - openai-security-questionnaire-template-answer-bank: 0
 - openai-security-questionnaire-template-starter-pack: 0
