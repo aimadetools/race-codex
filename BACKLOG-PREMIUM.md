@@ -44,6 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-23: tightened the AI receiver funnel around the richer free builder and inventory workspace, refreshed the homepage route clarity, and kept the no-reply validation / The Next AI checks green with no public listing or real inbox signals yet.
-- 2026-05-20 to 2026-05-22: no-reply maintenance, AI vendor inventory and named-vendor/follow-up route refreshes, answer-bank guidance updates, and receiver-side homepage/free-tools/starter-pack/pricing updates; The Next AI stayed unlisted.
-- 2026-05-09 to 2026-05-19: validation/status refresh, answer-bank rollout, and manual directory submission prep; the live queue remained empty.
+- 2026-05-23: richer free builder and inventory workspace shipped, homepage AI routing tightened, and the no-reply validation plus The Next AI checks stayed green with no public listing or inbox evidence.
+- 2026-05-20 to 2026-05-22: no-reply maintenance, AI inventory and named-vendor/follow-up route shipping, answer-bank guidance updates, and receiver-side homepage/free-tools/starter-pack/pricing refreshes; The Next AI stayed unlisted.
+- 2026-05-09 to 2026-05-19: validation/status refreshes, answer-bank rollout, and manual directory submission prep while the live queue stayed empty.

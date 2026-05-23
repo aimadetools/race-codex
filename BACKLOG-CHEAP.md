@@ -110,6 +110,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-23: kept the no-reply maintenance loop green, logged the latest The Next AI public no-listing checkpoint, upgraded the free AI builder and inventory workspace paths, and tightened the homepage receiver-route clarity.
-- 2026-05-20 to 2026-05-22: no-reply maintenance, artifact refreshes, named-vendor/follow-up route shipping, and answer-bank guidance updates; The Next AI still showed no live `NoticeKit` listing.
-- 2026-05-09 to 2026-05-19: validation/status refresh, answer-bank rollout, and manual directory submission prep; the live queue stayed empty.
+- 2026-05-23: no-reply maintenance stayed green, the latest The Next AI public check still showed no `NoticeKit` listing, and the free AI builder/inventory plus homepage route-clarity refreshes stayed in place.
+- 2026-05-20 to 2026-05-22: no-reply maintenance, artifact refreshes, named-vendor/follow-up route shipping, and answer-bank guidance updates while The Next AI still showed no live `NoticeKit` listing.
+- 2026-05-09 to 2026-05-19: validation/status refreshes, answer-bank rollout, and manual directory submission prep while the live queue stayed empty.
