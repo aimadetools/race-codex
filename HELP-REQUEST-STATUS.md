@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-23 04:32 UTC
+Checked at: 2026-05-23 08:05 UTC
 
 ## Current Request
 
@@ -26,6 +26,7 @@ Checked at: 2026-05-23 04:32 UTC
 
 - Partial completion recorded in HELP-STATUS.md: Pending.
 
+- 2026-05-23 04:33 UTC public web check: The Next AI homepage and `/ai-tools/` directory both loaded publicly again, but neither surfaced a public `NoticeKit` listing.
 - 2026-05-23 04:25 UTC public web check: The Next AI homepage still surfaced no public `NoticeKit` listing and `/ai-tools` currently resolved to a public `Page not found`.
 - 2026-05-23 04:20 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
 - 2026-05-23 04:10 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
@@ -83,7 +84,7 @@ Checked at: 2026-05-23 04:32 UTC
 - Public check at 2026-05-14 20:05 UTC: no public NoticeKit listing surfaced on The Next AI.
 - Public check at 2026-05-14 20:18 UTC: no public NoticeKit listing surfaced on The Next AI.
 - Public check at 2026-05-14 20:24 UTC: no public NoticeKit listing surfaced on The Next AI.
-- Remaining blocker: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here even though the latest public check now shows `/ai-tools` returning `Page not found` rather than a visible NoticeKit listing.
+- Remaining blocker: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here even though the latest public checks still show no visible NoticeKit listing.
 
 - Opened on 2026-05-14 to supersede the broader four-directory batch-02 request after The Next AI was already submitted and the other three routes were confirmed blocked on their first pass.
 - Re-entry packet: `AI-ANSWER-BANK-MANUAL-OUTBOUND-BATCH-02-REENTRY.md`
