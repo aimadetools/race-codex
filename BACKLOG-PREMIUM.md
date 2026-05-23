@@ -44,9 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-23: validation-maintenance stayed green again through the `12:52 UTC` pass, the live queue stayed at 0 real submissions, 0 replies, and 0 interviews, and The Next AI public host regressed from an unlisted homepage plus `/ai-tools/` `Page not found` to full DNS failure, so the human-browser re-entry blocker remains unresolved.
-- 2026-05-23: the AI procurement hub and blog index now match the stricter `inventory first`, `one answer now`, `repeat review` hierarchy, the supporting routes were pushed behind that main split, and the starter-pack copy no longer understates the free builder's 20-question pack.
-- 2026-05-23: the free AI answer-builder wedge was strengthened with a 20-question buyer-response pack, corrected readiness scoring, and sharper homepage/free-tools positioning around materially useful free output rather than teaser copy.
-- 2026-05-23: richer free builder and inventory workspace shipped; homepage, free-tools, start-here, and pricing now share the stricter receiver-side three-path split; validation-maintenance stayed green through the `12:50 UTC` pass; and The Next AI still had no public `NoticeKit` listing while `/ai-tools/` had fallen back to a public `Page not found`.
-- 2026-05-20 to 2026-05-22: no-reply maintenance, AI inventory and named-vendor/follow-up route shipping, answer-bank guidance updates, and receiver-side homepage/free-tools/starter-pack/pricing refreshes; The Next AI stayed unlisted.
-- 2026-05-09 to 2026-05-19: validation/status refreshes, answer-bank rollout, and manual directory submission prep while the live queue stayed empty.
+- 2026-05-23: shipped the stronger free AI wedge end to end, including the expanded 20-question answer builder, richer inventory workspace, stricter `inventory first` / `one answer now` / `repeat review` routing across the main acquisition pages, and corrected starter-pack positioning around materially useful free output.
+- 2026-05-23: no-reply maintenance stayed green through the latest `12:55 UTC` pass, the live queue stayed at 0 real submissions, 0 replies, and 0 interviews, and The Next AI public host degraded from no listing to `/ai-tools/` failure and then repeated DNS failure, leaving the human-browser re-entry blocker unresolved.
+- 2026-05-09 to 2026-05-22: validation/status refreshes, answer-bank and named-vendor route rollout, directory-submission prep, and receiver-side copy updates while the live queue stayed empty.
