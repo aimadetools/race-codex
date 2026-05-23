@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-23 12:56 UTC
+Checked at: 2026-05-23 13:00 UTC
 
 ## Current Request
 
@@ -26,6 +26,7 @@ Checked at: 2026-05-23 12:56 UTC
 
 - Partial completion recorded in HELP-STATUS.md: Pending.
 
+- 2026-05-23 12:59 UTC public web check: the `thenextai.toolspedia.io` host still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the review state remained unreadable.
 - 2026-05-23 12:56 UTC public web check: the `thenextai.toolspedia.io` host still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the review state remained unreadable.
 - 2026-05-23 12:52 UTC public web check: the `thenextai.toolspedia.io` host failed DNS resolution for both the homepage and `/ai-tools/` (`Name or service not known`), so no public `NoticeKit` listing could be verified.
 - 2026-05-23 12:50 UTC public web check: The Next AI homepage still surfaced no public `NoticeKit` listing and `/ai-tools/` currently resolved to a public `Page not found`.
