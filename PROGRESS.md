@@ -19,6 +19,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-22: Added source-aware answer-bank context, published the OpenAI answer-template and follow-up-questions pages, promoted the filled AI example across the core entry points, and cleaned up the rotated `cron.log.old` artifact.
 
 ## 2026-05-23
+- 2026-05-23: Added a dedicated AI questionnaire path guide and surfaced it from the homepage, pricing, free-tools hub, AI procurement hub, and blog index so users can route to inventory, starter pack, answer builder, answer bank, OpenAI, or packet paths faster.
 - 2026-05-23: Ran `npm run run:validation-maintenance` at `20:26 UTC`, `20:28 UTC`, and `20:29 UTC`; validation watch, self-audit, contact, help, generator, partner, source-tag, and site-link checks stayed green, `COMMUNITY-FEEDBACK.md` logged deduplicated no-reply checkpoints, and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-23: Surfaced the OpenAI answer-bank comparison route on the homepage, pricing page, and free-tools hub, then kept the watched source-tag list aligned around the stricter `inventory first` / `one answer now` / `repeat review` split.
 - 2026-05-23: Rechecked The Next AI during the latest maintenance window and across earlier touchpoints; `thenextai.toolspedia.io` still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the human-owned browser re-entry blocker remains unchanged.
@@ -26,6 +27,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Next Step
 
 - Keep running `npm run run:validation-maintenance` while no real replies are landing, then update the memory files with the first real reply or intake that appears.
+- Watch whether the new AI path guide reduces back-and-forth between inventory, starter pack, answer builder, answer bank, OpenAI, and packet pages before expanding the route split again.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real builder-led, hub-route, blog-route, homepage-route, inventory-route, pricing-route, or free-tools-route signal before changing the copy again.
 - Watch whether the larger 20-question buyer pack reduces follow-up friction or still feels thin before adding more AI acquisition pages around the same wedge.
 - Watch whether the new training-stance answer template becomes the cleaner route for "Do you train on customer data?" follow-ups before widening the stance content again.
