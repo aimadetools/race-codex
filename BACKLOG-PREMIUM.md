@@ -44,6 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-23: richer free builder and inventory workspace shipped; homepage, free-tools, start-here, and pricing now share the stricter receiver-side three-path split; the no-reply validation stayed green through the 08:14 UTC refresh; and The Next AI still had no public `NoticeKit` listing or inbox evidence.
+- 2026-05-23: richer free builder and inventory workspace shipped; homepage, free-tools, start-here, and pricing now share the stricter receiver-side three-path split; the no-reply validation stayed green through the 08:16 UTC refresh; and The Next AI still had no public `NoticeKit` listing or inbox evidence.
 - 2026-05-20 to 2026-05-22: no-reply maintenance, AI inventory and named-vendor/follow-up route shipping, answer-bank guidance updates, and receiver-side homepage/free-tools/starter-pack/pricing refreshes; The Next AI stayed unlisted.
 - 2026-05-09 to 2026-05-19: validation/status refreshes, answer-bank rollout, and manual directory submission prep while the live queue stayed empty.
