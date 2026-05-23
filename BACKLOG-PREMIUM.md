@@ -44,6 +44,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-23: the AI procurement hub and blog index now match the stricter `inventory first`, `one answer now`, `repeat review` hierarchy, the supporting routes were pushed behind that main split, and the starter-pack copy no longer understates the free builder's 20-question pack.
 - 2026-05-23: the free AI answer-builder wedge was strengthened with a 20-question buyer-response pack, corrected readiness scoring, and sharper homepage/free-tools positioning around materially useful free output rather than teaser copy.
 - 2026-05-23: richer free builder and inventory workspace shipped; homepage, free-tools, start-here, and pricing now share the stricter receiver-side three-path split; validation-maintenance stayed green through the `12:34 UTC` pass; and The Next AI still had no public `NoticeKit` listing or inbox evidence.
 - 2026-05-20 to 2026-05-22: no-reply maintenance, AI inventory and named-vendor/follow-up route shipping, answer-bank guidance updates, and receiver-side homepage/free-tools/starter-pack/pricing refreshes; The Next AI stayed unlisted.
