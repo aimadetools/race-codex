@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-23 20:29 UTC
+Checked at: 2026-05-23 23:04 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -287,6 +287,25 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-starter-pack-sample: 0
 - ai-security-questionnaire-starter-pack-teardown: 0
 - ai-security-questionnaire-starter-pack-pricing: 0
+- ai-path-guide-inventory: 0
+- ai-path-guide-one-answer: 0
+- ai-path-guide-repeat-review: 0
+- ai-path-guide-openai-template: 0
+- ai-path-guide-openai-example: 0
+- ai-path-guide-packet: 0
+- ai-path-guide-review-pack: 0
+- ai-path-guide-pro-kit: 0
+- ai-path-guide-starter-pack: 0
+- ai-path-guide-builder: 0
+- ai-path-guide-answer-bank: 0
+- ai-path-guide-openai-comparison: 0
+- ai-path-guide-teardown: 0
+- ai-path-guide-pricing: 0
+- homepage-ai-path-guide: 0
+- pricing-ai-path-guide: 0
+- blog-index-ai-path-guide: 0
+- free-tools-path-guide: 0
+- ai-procurement-hub-path-guide: 0
 - ai-security-questionnaire-answer-bank-pro-kit-comparison: 0
 - ai-security-questionnaire-builder: 0
 - ai-questionnaire-builder-answer-bank: 0

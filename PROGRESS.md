@@ -23,10 +23,12 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-23: Ran `npm run run:validation-maintenance` at `20:26 UTC`, `20:28 UTC`, and `20:29 UTC`; validation watch, self-audit, contact, help, generator, partner, source-tag, and site-link checks stayed green, `COMMUNITY-FEEDBACK.md` logged deduplicated no-reply checkpoints, and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-23: Surfaced the OpenAI answer-bank comparison route on the homepage, pricing page, and free-tools hub, then kept the watched source-tag list aligned around the stricter `inventory first` / `one answer now` / `repeat review` split.
 - 2026-05-23: Rechecked The Next AI during the latest maintenance window and across earlier touchpoints; `thenextai.toolspedia.io` still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the human-owned browser re-entry blocker remains unchanged.
+- 2026-05-23: Fixed the watched source-tag registry for the new AI path guide, reran the full validation maintenance pass at `23:04 UTC`, and confirmed source-tag coverage and site-link checks returned green.
 
 ## Next Step
 
 - Keep running `npm run run:validation-maintenance` while no real replies are landing, then update the memory files with the first real reply or intake that appears.
+- Keep the watched source-tag registry in sync whenever a new route is added, then rerun validation maintenance to confirm coverage stays green.
 - Watch whether the new AI path guide reduces back-and-forth between inventory, starter pack, answer builder, answer bank, OpenAI, and packet pages before expanding the route split again.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real builder-led, hub-route, blog-route, homepage-route, inventory-route, pricing-route, or free-tools-route signal before changing the copy again.
 - Watch whether the larger 20-question buyer pack reduces follow-up friction or still feels thin before adding more AI acquisition pages around the same wedge.
