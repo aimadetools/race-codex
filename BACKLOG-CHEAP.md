@@ -26,6 +26,8 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If the first real visit, reply, or teardown request references `ai-security-questionnaire-answer-builder.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the static answer-template and questionnaire-guide routes.
 - If the first real builder-led reply, teardown request, or audit request mentions repeated buyer questions, reusable answers, or the new free Q&A pack, copy the exact wording into `COMMUNITY-FEEDBACK.md` before adjusting the builder promise again.
 - If the first real builder-led reply says the local autosave, restored draft, or browser-only persistence is why the free path felt usable, copy the exact wording into `COMMUNITY-FEEDBACK.md` before changing the builder promise again.
+- If the first real builder-led reply says the new reviewer workspace, approval path, or recheck-trigger coverage made the free path feel complete, copy the exact wording into `COMMUNITY-FEEDBACK.md` before changing the builder promise again.
+- If the first real builder-led reply says the 12-question buyer pack removed a follow-up round, preserve the exact question or phrasing it solved in `COMMUNITY-FEEDBACK.md` before reshuffling the starter-pack or builder CTA order.
 - If the first real builder-led reply says the answer-bank export or reusable Markdown draft resolved the repeat-review pain, copy the exact wording into `COMMUNITY-FEEDBACK.md` before changing the answer-bank or Pro-kit CTA order.
 - If the first real builder-led reply still says the free path feels too thin after the answer-bank export, preserve the missing artifact they asked for in `COMMUNITY-FEEDBACK.md` before adding more AI funnel pages.
 - If the first real visit, reply, or teardown request references `ai-security-questionnaire-answer-bank.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the starter-pack and answer-builder routes.
@@ -108,7 +110,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-22: validation-maintenance cycle at 23:30 UTC plus the latest no-reply checkpoint; watch artifacts stayed green, source-tag coverage and site-link checks stayed complete, and the queue remained at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-22: validation-maintenance cycles at 23:03-23:27 UTC plus source-aware answer-bank guidance; watch artifacts stayed green, source-tag coverage stayed complete, and the queue remained at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-20 to 2026-05-21: no-reply maintenance, artifact refreshes, and AI builder/free-tools/starter-pack shipping; The Next AI still showed no live `NoticeKit` listing.
+- 2026-05-23: expanded the free AI answer builder into a 12-question buyer pack plus reviewer workspace export, refreshed the main AI funnel copy, and kept site-link plus source-tag checks green.
+- 2026-05-20 to 2026-05-22: no-reply maintenance, artifact refreshes, named-vendor/follow-up route shipping, and answer-bank guidance updates; The Next AI still showed no live `NoticeKit` listing.
 - 2026-05-09 to 2026-05-19: validation/status refresh, answer-bank rollout, and manual directory submission prep; the live queue stayed empty.

@@ -163,6 +163,15 @@
               <label>Decision needed next
                 <textarea id="decision-needed">Confirm whether the current answer is sufficient for buyer review or whether the workflow needs packet expansion, subprocessor-page updates, or counsel review before rollout.</textarea>
               </label>
+              <label>Approval path or human review
+                <textarea id="approval-path">Privacy ops drafts the response, the product owner confirms the workflow boundaries, and counsel reviews any contract or notice implications before the final answer is reused broadly.</textarea>
+              </label>
+              <label>Out-of-scope boundaries or exclusions
+                <textarea id="scope-boundaries">This answer covers the named workflow only. It does not cover unrelated product features, customer-specific attachments unless confirmed, or any future workflow changes that have not been reviewed yet.</textarea>
+              </label>
+              <label>Recheck cadence or trigger
+                <textarea id="review-cadence">Recheck this answer before each enterprise review, after any vendor or workflow change, and whenever contract, retention, or customer-segment assumptions change.</textarea>
+              </label>
               <label>Proof links
                 <textarea id="proof-links">Public subprocessor page URL, draft internal review packet, vendor terms link, screenshot of current workflow, tracker row, and owner notes.</textarea>
               </label>
@@ -191,14 +200,16 @@
               <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
               <button class="button secondary" id="copy-handoff" type="button">Copy handoff</button>
               <button class="button secondary" id="copy-qa-pack" type="button">Copy Q&A pack</button>
+              <button class="button secondary" id="copy-workspace" type="button">Copy workspace</button>
               <button class="button secondary" id="copy-answer-bank" type="button">Copy answer bank</button>
               <button class="button secondary" id="download-answer" type="button">Download answer</button>
               <button class="button secondary" id="download-qa-pack" type="button">Download Q&A pack</button>
+              <button class="button secondary" id="download-workspace" type="button">Download workspace</button>
               <button class="button secondary" id="download-answer-bank" type="button">Download answer bank</button>
               <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces a primary answer, checklist, handoff, reusable answer-bank draft, and 8 common buyer-question responses.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces a primary answer, checklist, handoff, full reviewer workspace, reusable answer-bank draft, and 12 common buyer-question responses.</p>
           </aside>
         </section>
 
@@ -213,7 +224,7 @@
         <section class="section">
           <div class="section-head">
             <h2>Common buyer-question answer pack</h2>
-            <p>Use this when the buyer thread asks the same follow-up questions in slightly different wording. The pack turns one fact-gathering pass into eight reusable response blocks you can paste into procurement, security, privacy, or counsel threads.</p>
+            <p>Use this when the buyer thread asks the same follow-up questions in slightly different wording. The pack turns one fact-gathering pass into 12 reusable response blocks you can paste into procurement, security, privacy, or counsel threads.</p>
           </div>
           <div id="qa-pack-output" class="template-box" aria-live="polite"></div>
         </section>
@@ -235,6 +246,14 @@
               <div id="handoff-output" class="template-box" aria-live="polite"></div>
             </article>
           </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Reviewer workspace export</h2>
+            <p>Use this when the next step is keeping the answer, approval path, review triggers, and reusable buyer wording in one file instead of scattering it across Slack threads and notes.</p>
+          </div>
+          <div id="workspace-output" class="template-box" aria-live="polite"></div>
         </section>
 
         <section class="section">
@@ -362,6 +381,7 @@
       const builderForm = document.querySelector("#builder-form");
       const answerOutput = document.querySelector("#answer-output");
       const qaPackOutput = document.querySelector("#qa-pack-output");
+      const workspaceOutput = document.querySelector("#workspace-output");
       const checklistOutput = document.querySelector("#checklist-output");
       const handoffOutput = document.querySelector("#handoff-output");
       const coverageScore = document.querySelector("#coverage-score");
@@ -373,9 +393,11 @@
       const copyChecklistButton = document.querySelector("#copy-checklist");
       const copyHandoffButton = document.querySelector("#copy-handoff");
       const copyQaPackButton = document.querySelector("#copy-qa-pack");
+      const copyWorkspaceButton = document.querySelector("#copy-workspace");
       const copyAnswerBankButton = document.querySelector("#copy-answer-bank");
       const downloadAnswerButton = document.querySelector("#download-answer");
       const downloadQaPackButton = document.querySelector("#download-qa-pack");
+      const downloadWorkspaceButton = document.querySelector("#download-workspace");
       const downloadAnswerBankButton = document.querySelector("#download-answer-bank");
       const clearSavedDraftButton = document.querySelector("#clear-saved-draft");
       const sendToTeardown = document.querySelector("#send-to-teardown");
@@ -500,6 +522,9 @@
         const reviewerAsk = sentence(value("reviewer-ask"), "The reviewer ask still needs to be clarified.");
         const noticeImpact = sentence(value("notice-impact"), "Notice or escalation impact is still being confirmed.");
         const decisionNeeded = sentence(value("decision-needed"), "The next internal decision still needs to be clarified.");
+        const approvalPath = sentence(value("approval-path"), "The internal approval path still needs to be clarified.");
+        const scopeBoundaries = sentence(value("scope-boundaries"), "The workflow boundaries and exclusions still need to be clarified.");
+        const reviewCadence = sentence(value("review-cadence"), "The next review trigger still needs to be clarified.");
         const proofLinks = sentence(value("proof-links"), "The source-of-truth links still need to be collected.");
         const openQuestions = sentence(value("open-questions"), "No open reviewer notes were added.");
         const replyOwner = sentence(value("reply-owner"), "Owner not provided");
@@ -516,6 +541,9 @@
           `Reviewer ask: ${reviewerAsk}`,
           `Retention and training stance: ${retentionStance}`,
           `Customer scope: ${customerScope}`,
+          `Approval path: ${approvalPath}`,
+          `Out-of-scope boundaries: ${scopeBoundaries}`,
+          `Recheck cadence or trigger: ${reviewCadence}`,
           `Notice or escalation impact: ${noticeImpact}`,
           `Decision needed next: ${decisionNeeded}`,
           `Proof links: ${proofLinks}`,
@@ -527,6 +555,7 @@
           "Link the current public subprocessor page or note why no public page exists yet.",
           "Attach the proof for the current retention or training stance.",
           "State the exact customer segment, region, or agreement class affected.",
+          "Name the approval path, scope boundaries, and the next recheck trigger.",
           "Preserve the owner, unresolved questions, and the next internal reviewer."
         ].join("\n");
 
@@ -534,6 +563,9 @@
           `Current blocker: ${workflow} needs a review-ready answer tied to ${primaryVendor}.`,
           `Reviewer ask: ${reviewerAsk}`,
           `Decision needed next: ${decisionNeeded}`,
+          `Approval path: ${approvalPath}`,
+          `Out-of-scope boundaries: ${scopeBoundaries}`,
+          `Recheck cadence or trigger: ${reviewCadence}`,
           "Escalate to packet path if the reviewer wants broader proof beyond this answer block.",
           "Escalate to teardown if one live page and one customer segment need a blunt gap read.",
           `Owner: ${replyOwner}.`,
@@ -547,9 +579,47 @@
           `4. What is the current retention or training stance?\n${retentionStance}`,
           `5. Which customers or agreements are affected?\n${customerScope}`,
           `6. Why is this answer being requested?\n${reviewerAsk}`,
-          `7. Does this trigger notice, escalation, or counsel review?\n${noticeImpact}`,
-          `8. What proof and next decision sit behind the answer?\nProof: ${proofLinks}\nNext decision: ${decisionNeeded}\nOwner and open questions: ${replyOwner}. ${openQuestions}`
+          `7. What human review or approval sits behind this answer?\n${approvalPath}`,
+          `8. What is explicitly out of scope for this answer?\n${scopeBoundaries}`,
+          `9. When should this answer be rechecked or refreshed?\n${reviewCadence}`,
+          `10. Does this trigger notice, escalation, or counsel review?\n${noticeImpact}`,
+          `11. What decision still needs to be made before broader reuse?\n${decisionNeeded}`,
+          `12. What proof and owner notes sit behind the answer?\nProof: ${proofLinks}\nOwner and open questions: ${replyOwner}. ${openQuestions}`
         ].join("\n\n");
+
+        const workspace = [
+          `# ${company} AI questionnaire reviewer workspace`,
+          "",
+          "## Live answer block",
+          "",
+          answer,
+          "",
+          "## Approval and scope notes",
+          "",
+          `- Approval path: ${approvalPath}`,
+          `- Out-of-scope boundaries: ${scopeBoundaries}`,
+          `- Recheck cadence or trigger: ${reviewCadence}`,
+          `- Decision needed next: ${decisionNeeded}`,
+          "",
+          "## Proof and owner notes",
+          "",
+          `- Proof links: ${proofLinks}`,
+          `- Reply owner: ${replyOwner}`,
+          `- Open questions: ${openQuestions}`,
+          `- Notice or escalation impact: ${noticeImpact}`,
+          "",
+          "## Common buyer-question pack",
+          "",
+          qaPack,
+          "",
+          "## Internal handoff brief",
+          "",
+          handoff,
+          "",
+          "## Proof checklist",
+          "",
+          checklist
+        ].join("\n");
 
         const shortAnswer = `For ${workflow}, ${company} currently lists ${primaryVendor} as the primary AI vendor with ${supportingVendors} supporting the workflow. Data in scope: ${dataCategories}. Customer scope: ${customerScope}. Retention/training stance: ${retentionStance}`;
 
@@ -588,6 +658,12 @@
             buyerWording: "What is the current retention or training stance and which customers or agreements are affected?",
             short: `Retention/training stance: ${retentionStance} Customer scope: ${customerScope}`,
             long: `Retention and training stance: ${retentionStance}\n\nCustomer scope / segment: ${customerScope}\n\nNotice or escalation impact: ${noticeImpact}`
+          },
+          {
+            label: "Approval path, boundaries, and review triggers",
+            buyerWording: "What human review sits behind this answer, what is out of scope, and when do you recheck it?",
+            short: `Approval path: ${approvalPath} Out-of-scope boundaries: ${scopeBoundaries} Recheck trigger: ${reviewCadence}`,
+            long: `Approval path: ${approvalPath}\n\nOut-of-scope boundaries: ${scopeBoundaries}\n\nRecheck cadence or trigger: ${reviewCadence}`
           },
           {
             label: "Proof, owner, and next decision",
@@ -634,6 +710,9 @@
             `- Data categories: ${dataCategories}`,
             `- Retention / training stance: ${retentionStance}`,
             `- Customer scope / segment: ${customerScope}`,
+            `- Approval path: ${approvalPath}`,
+            `- Out-of-scope boundaries: ${scopeBoundaries}`,
+            `- Recheck cadence or trigger: ${reviewCadence}`,
             "- Public page or packet links: [Add current public page, packet, or trust-center link]",
             `- Internal proof links: ${proofLinks}`,
             `- Owner: ${replyOwner}`,
@@ -678,15 +757,20 @@
 
         const completenessChecks = [
           value("primary-vendor"),
+          value("supporting-vendors"),
           value("data-categories"),
           value("retention-stance"),
           value("customer-scope"),
+          value("approval-path"),
+          value("scope-boundaries"),
+          value("review-cadence"),
           value("proof-links")
         ];
 
         return {
           answer,
           qaPack,
+          workspace,
           checklist,
           handoff,
           answerBank,
@@ -714,28 +798,29 @@
         const payload = buildAnswerPayload();
         answerOutput.innerHTML = markdownToHtml(payload.answer);
         qaPackOutput.innerHTML = markdownToHtml(payload.qaPack);
+        workspaceOutput.innerHTML = markdownToHtml(payload.workspace);
         checklistOutput.innerHTML = markdownToHtml(payload.checklist);
         handoffOutput.innerHTML = markdownToHtml(payload.handoff);
         syncTeardownLink(payload);
-        coverageScore.textContent = `${payload.completedCount}/5`;
+        coverageScore.textContent = `${payload.completedCount}/8`;
 
-        if (payload.completedCount === 5) {
+        if (payload.completedCount === 8) {
           coverageState.textContent = "Review-ready answer";
-          coverageSummary.textContent = "The current draft names the vendor chain, scope, stance, customer impact, and proof links.";
-          answerSummaryCopy.textContent = "Copy the answer into the questionnaire now, then reuse the Q&A pack and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.";
+          coverageSummary.textContent = "The current draft names the vendor chain, scope, stance, approval path, review trigger, customer impact, and proof links.";
+          answerSummaryCopy.textContent = "Copy the answer into the questionnaire now, then reuse the 12-question pack, workspace export, and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.";
           return;
         }
 
-        if (payload.completedCount >= 3) {
+        if (payload.completedCount >= 5) {
           coverageState.textContent = "Needs a tighter proof pass";
-          coverageSummary.textContent = "The answer is usable, but at least one of the core reviewer facts is still too vague.";
-          answerSummaryCopy.textContent = "Tighten the missing proof or scope fields before sending this into procurement. The wording is close, but the evidence path, repeated-question pack, and internal handoff are still thin.";
+          coverageSummary.textContent = "The answer is usable, but at least one of the proof, approval, or scope-boundary facts is still too vague.";
+          answerSummaryCopy.textContent = "Tighten the missing proof, approval, or boundary fields before sending this into procurement. The wording is close, but the reviewer workspace and repeated-question pack are still thin.";
           return;
         }
 
         coverageState.textContent = "Too thin for buyer review";
         coverageSummary.textContent = "The answer still needs core facts before it is safe to send into a live questionnaire thread.";
-        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the vendor chain, scope, stance, and proof cleanly enough for the answer, repeated-question pack, and handoff to hold up.";
+        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the vendor chain, scope, stance, approval path, and proof cleanly enough for the answer, repeated-question pack, workspace, and handoff to hold up.";
       }
 
       const presets = {
@@ -1017,6 +1102,9 @@
       copyQaPackButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().qaPack, "Q&A pack copied.");
       });
+      copyWorkspaceButton.addEventListener("click", () => {
+        copyText(buildAnswerPayload().workspace, "Reviewer workspace copied.");
+      });
       copyAnswerBankButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().answerBank, "Answer bank draft copied.");
       });
@@ -1031,6 +1119,11 @@
         const content = `# ${payload.company} AI security questionnaire common buyer-question pack\n\n${payload.qaPack}\n`;
         downloadFile("noticekit-ai-questionnaire-qa-pack.md", content);
         builderStatus.textContent = "Q&A pack downloaded as Markdown.";
+      });
+      downloadWorkspaceButton.addEventListener("click", () => {
+        const payload = buildAnswerPayload();
+        downloadFile("noticekit-ai-questionnaire-reviewer-workspace.md", payload.workspace);
+        builderStatus.textContent = "Reviewer workspace downloaded as Markdown.";
       });
       downloadAnswerBankButton.addEventListener("click", () => {
         const payload = buildAnswerPayload();
