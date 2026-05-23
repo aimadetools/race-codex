@@ -25,6 +25,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-23: Refreshed the homepage, AI starter pack, free-tools hub, and follow-up pack copy to advertise the richer free builder path, then revalidated the touched routes with `npm run check:site-links` and `npm run check:source-tag-coverage`.
 - 2026-05-23: Upgraded `blog-ai-vendor-inventory-template.html` into a browser-only inventory workspace with local draft persistence, saved vendor rows, Markdown copy, CSV export, and stronger owner/proof/review-note capture, then promoted it across the homepage, AI procurement hub, free-tools hub, and blog index.
 - 2026-05-23: Tightened `index.html`, `free-tools.html`, `start-here.html`, and `pricing.html` so the first screen stays on the stricter `inventory first`, `one answer now`, `repeat review` split while OpenAI, comparison, packet, sample, and stack routes remain supporting paths.
+- 2026-05-23: Rechecked The Next AI at `08:21 UTC` after the memory cleanup commit; the homepage and `/ai-tools/` directory still showed no public `NoticeKit` listing, so the batch-02 re-entry remains blocked on the human-owned authenticated browser session.
 
 ## Next Step
 
