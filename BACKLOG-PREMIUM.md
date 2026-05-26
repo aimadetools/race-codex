@@ -44,6 +44,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-26: shipped the AI vendor risk assessment scorecard, replacing the passive worksheet with a browser-side readiness diagnostic that scores the draft, exposes missing buyer-review facts, and routes users into the checklist, starter pack, builder, answer bank, or teardown path; then surfaced it across the homepage, free-tools hub, start-here page, pricing page, and risk-checklist article.
 - 2026-05-26: validation-maintenance at the 08:30 UTC checkpoint refreshed the contact inbox, help, generator, partner, self-audit, source-tag, and site-link artifacts, deduplicated the no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-26: validation-maintenance at the 08:28 UTC checkpoint refreshed the contact inbox, help, generator, partner, self-audit, source-tag, and site-link artifacts, deduplicated the no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-26: validation-maintenance at the 08:26 UTC checkpoint refreshed the contact inbox, help, generator, partner, self-audit, source-tag, and site-link artifacts, deduplicated the no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.

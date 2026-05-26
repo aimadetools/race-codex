@@ -3,24 +3,68 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Vendor Risk Assessment Worksheet | NoticeKit</title>
-    <meta name="description" content="Use this AI vendor risk assessment worksheet to capture named vendors, downstream providers, customer scope, retention stance, notice timing, and proof before procurement or security review stalls the deal.">
-    <meta property="og:type" content="article">
+    <title>AI Vendor Risk Assessment Worksheet + Scorecard | NoticeKit</title>
+    <meta name="description" content="Score your AI vendor review readiness in the browser. Capture named vendors, downstream providers, customer scope, training stance, notice impact, and proof before procurement or security review stalls the deal.">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="NoticeKit">
     <meta property="og:url" content="https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html">
-    <meta property="og:title" content="AI Vendor Risk Assessment Worksheet">
-    <meta property="og:description" content="A working worksheet for founders packaging AI vendor facts, downstream providers, customer scope, and proof into one review-ready handoff.">
+    <meta property="og:title" content="AI Vendor Risk Assessment Worksheet + Scorecard">
+    <meta property="og:description" content="A browser-only AI review worksheet and readiness scorecard for SaaS teams answering buyer security questionnaires.">
     <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="NoticeKit AI vendor risk assessment worksheet">
+    <meta property="og:image:alt" content="NoticeKit AI vendor risk assessment worksheet and scorecard">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Vendor Risk Assessment Worksheet">
-    <meta name="twitter:description" content="Capture the AI vendor review facts buyers ask for before you branch into a packet, sample, or teardown.">
+    <meta name="twitter:title" content="AI Vendor Risk Assessment Worksheet + Scorecard">
+    <meta name="twitter:description" content="Score your AI vendor review readiness and route into the right answer, packet, or teardown path without sending your inputs to a server.">
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "NoticeKit AI Vendor Risk Assessment Worksheet + Scorecard",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html",
+            "description": "Browser-only worksheet and readiness scorecard for SaaS teams packaging AI vendor facts, downstream providers, customer scope, notice impact, and proof before buyer review."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use the AI vendor risk assessment worksheet?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use it when the buyer, procurement team, security reviewer, or counsel wants operating facts before approving the AI workflow. The worksheet helps you capture the named vendor, downstream providers, customer scope, training stance, notice impact, and proof in one browser-only pass."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does the score mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The score measures whether the current draft names the vendor chain, workflow scope, customer impact, ownership, proof, and open issues cleanly enough for a buyer review thread. Lower scores usually mean the team should keep working in the worksheet before jumping into a final answer."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this send my inputs to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The worksheet runs locally in the browser and keeps your draft on the current device only."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div class="site-shell">
@@ -37,144 +81,172 @@
       </nav>
 
       <main id="main-content">
-        <article class="article">
-          <header class="article-header">
-            <span class="eyebrow">AI review worksheet</span>
-            <h1>AI vendor risk assessment worksheet</h1>
-            <p>Use this worksheet when a buyer, procurement lead, security reviewer, or counsel wants operating facts instead of another policy link. It keeps the named vendor, downstream providers, customer scope, retention stance, notice timing, and proof in one handoff.</p>
+        <section class="page-hero">
+          <span class="eyebrow">Browser-only AI review scorecard</span>
+          <h1>Score the AI vendor review before procurement scores you.</h1>
+          <p>Use this worksheet when your SaaS team is answering the buyer's AI questionnaire and the real blocker is still the operating facts. Fill the vendor chain, workflow scope, training stance, customer impact, notice path, and proof once, then get a readiness score, gap list, and the shortest next NoticeKit route without sending your inputs to a server.</p>
+          <div class="hero-actions">
+            <a class="button" href="#worksheet">Open worksheet</a>
+            <a class="button secondary" href="blog-ai-vendor-risk-assessment.html?source=ai-vendor-risk-assessment-worksheet-checklist">Open checklist</a>
+            <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-vendor-risk-assessment-starter-pack">Open starter pack</a>
+            <a class="button secondary" href="free-teardown.html?source=ai-vendor-risk-assessment-worksheet-teardown">Request free teardown</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice-band">
+            <strong>For the company answering the questionnaire.</strong>
+            <p>This worksheet is for the SaaS team receiving buyer AI review pressure, not the buyer sending the questionnaire. It is operational packaging, not legal advice.</p>
+          </div>
+        </section>
+
+        <section class="section audit-layout" id="worksheet">
+          <form class="audit-card" id="risk-worksheet-form">
+            <div class="section-head compact-head">
+              <h2>Worksheet inputs</h2>
+              <p>Keep this focused on one workflow. The goal is to make the buyer thread review-ready, not to write a broad policy document.</p>
+              <div class="route-presets" aria-label="Quick presets">
+                <button class="button secondary" type="button" data-preset="customer-facing">Customer-facing AI feature</button>
+                <button class="button secondary" type="button" data-preset="support-copilot">Support copilot</button>
+                <button class="button secondary" type="button" data-preset="internal-assistant">Internal assistant</button>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label>Company
+                <input id="company" value="Example SaaS">
+              </label>
+              <label>Named AI vendor
+                <input id="named-vendor" value="OpenAI">
+              </label>
+              <label>Workflow reviewed
+                <input id="workflow" value="Support drafting assistant for customer-facing ticket replies">
+              </label>
+              <label>Workflow status
+                <select id="workflow-status">
+                  <option value="planned">Planned rollout under review</option>
+                  <option value="active">Active workflow in production</option>
+                  <option value="replacement">Replacing an older workflow</option>
+                </select>
+              </label>
+              <label>Downstream providers
+                <textarea id="downstream">Vercel, Supabase, Zendesk, PostHog</textarea>
+              </label>
+              <label>Data categories touched
+                <textarea id="data-categories">Support ticket text, account identifiers, internal agent prompts, and response drafts.</textarea>
+              </label>
+              <label>Customer scope
+                <textarea id="customer-scope">Enterprise and EU customers using the support workflow, with extra review for signed DPA accounts.</textarea>
+              </label>
+              <label>Training or retention stance
+                <textarea id="training-stance">Current operating position: no training on our customer content in this workflow, with vendor terms and internal review notes kept as proof.</textarea>
+              </label>
+              <label>Notice or contract impact
+                <textarea id="notice-impact">The team is checking whether this workflow changes the public subprocessor page, triggers customer notice, or needs contract-specific reviewer approval before launch.</textarea>
+              </label>
+              <label>Approval owner
+                <input id="approval-owner" value="Privacy ops lead with counsel review">
+              </label>
+              <label>Proof links or evidence
+                <textarea id="proof-links">Public subprocessor page URL, vendor terms link, internal review brief, workflow screenshot, and approval tracker row.</textarea>
+              </label>
+              <label>Open questions
+                <textarea id="open-questions">Confirm whether attachments are in scope for the first release and whether any customer-specific agreement adds notice requirements before activation.</textarea>
+              </label>
+            </div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Readiness result</span>
+            <div class="score-row generator-summary">
+              <strong id="readiness-score">9/10</strong>
+              <span id="readiness-state">Review-ready</span>
+            </div>
+            <div class="score-meter" aria-hidden="true">
+              <span id="readiness-meter"></span>
+            </div>
+            <p id="readiness-summary">The draft names the vendor chain, workflow scope, customer impact, owner, proof, and unresolved issues well enough to support a buyer review thread.</p>
+            <div class="tier-guidance">
+              <strong id="next-step-title">Best next step</strong>
+              <p id="next-step-copy">Use the starter pack if the live blocker is still one buyer answer, or move into the builder now if the current facts are clean enough for a copy-ready response.</p>
+            </div>
+            <div class="result-list">
+              <div>
+                <strong>What is still thin</strong>
+                <ul id="gap-list"></ul>
+              </div>
+              <div>
+                <strong>What already holds up</strong>
+                <ul id="strength-list"></ul>
+              </div>
+            </div>
+            <div class="generator-actions">
+              <button class="button" id="copy-brief" type="button">Copy review brief</button>
+              <button class="button secondary" id="copy-gaps" type="button">Copy gap list</button>
+              <button class="button secondary" id="download-brief" type="button">Download brief</button>
+              <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
+            </div>
+            <p class="fine-print" id="worksheet-status">This worksheet runs in your browser. Inputs stay local and autosave on this device only.</p>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article>
+              <div class="section-head">
+                <h2>Review brief</h2>
+                <p>Use this to hand the current state to procurement, privacy, or the next reviewer without rewriting the same facts again.</p>
+              </div>
+              <div class="template-box" id="brief-output" aria-live="polite"></div>
+            </article>
+            <article>
+              <div class="section-head">
+                <h2>Gap checklist</h2>
+                <p>Use this to tighten the worksheet before you jump into a final answer or paid packet route.</p>
+              </div>
+              <div class="template-box" id="gaps-output" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>How to route the score</h2>
+            <p>Do not buy or build the wrong artifact too early. Use the score to decide whether the facts need more cleanup, one answer block, or a broader packet.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card">
+              <span class="tag">0-5</span>
+              <h3>Still messy</h3>
+              <p>The vendor chain, scope, proof, or owner path is still too fuzzy. Keep working in the worksheet, use the checklist, or request a teardown before drafting the answer.</p>
+            </article>
+            <article class="card">
+              <span class="tag">6-8</span>
+              <h3>Answer path is close</h3>
+              <p>The facts are mostly there, but one or two gaps can still create buyer follow-up loops. Use the starter pack or builder once the missing items are patched.</p>
+            </article>
+            <article class="card">
+              <span class="tag">9-10</span>
+              <h3>Ready to package</h3>
+              <p>The facts are tight enough for the answer builder, repeat-review answer bank, or the broader packet path if procurement already wants more than one response block.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <h2>Need the next artifact now?</h2>
+              <p>Use the starter pack when the live blocker is still one AI questionnaire thread. Use the answer builder when the facts above are strong enough for a copy-ready response. Use teardown if one page or one customer segment still needs an outside read.</p>
+            </div>
             <div class="hero-actions">
-              <a class="button" href="noticekit-ai-vendor-risk-assessment-worksheet.md" download>Download Markdown worksheet</a>
-              <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-vendor-risk-assessment-starter-pack">Open starter pack</a>
-              <a class="button secondary" href="sample-ai-vendor-disclosure-packet.html?source=ai-vendor-risk-assessment-worksheet-sample">See filled packet</a>
-              <a class="button secondary" href="blog-ai-vendor-disclosure-packet.html?source=ai-vendor-risk-assessment-worksheet-guide">Open packet guide</a>
+              <a class="button" id="route-primary" href="ai-security-questionnaire-starter-pack.html?source=ai-vendor-risk-assessment-starter-pack">Open starter pack</a>
+              <a class="button secondary" id="route-secondary" href="ai-security-questionnaire-answer-builder.html?source=ai-vendor-risk-assessment-builder">Open answer builder</a>
+              <a class="button secondary" href="blog-ai-vendor-risk-assessment.html?source=ai-vendor-risk-assessment-worksheet-checklist">Open checklist</a>
               <a class="button secondary" href="free-teardown.html?source=ai-vendor-risk-assessment-worksheet-teardown">Request free teardown</a>
             </div>
-          </header>
-
-          <div class="notice-band">
-            <strong>Operational worksheet, not legal advice.</strong>
-            <p>Use the worksheet to organize the review cleanly. Your agreements, privacy team, procurement process, and counsel still decide the final disclosure and notice path.</p>
           </div>
-
-          <section>
-            <div class="download-band">
-              <div>
-                <span class="eyebrow">Working copy</span>
-                <h2>What belongs in the worksheet</h2>
-                <p>Capture only the facts that move the review forward: who is in the chain, what data they touch, which customers are affected, what changed, who owns the answer, and what proof exists already.</p>
-              </div>
-              <div class="download-actions">
-                <a class="button gold" href="noticekit-ai-vendor-risk-assessment-worksheet.md" download>Download worksheet</a>
-                <a class="button secondary" href="blog-ai-vendor-risk-assessment.html?source=ai-vendor-risk-assessment-worksheet-checklist">Open checklist</a>
-                <a class="button secondary" href="blog-ai-saas-subprocessor-list-template.html?source=ai-vendor-risk-assessment-worksheet-stack">Open AI stack guide</a>
-                <a class="button secondary" href="pricing.html?source=ai-vendor-risk-assessment-worksheet-pricing">See paid paths</a>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2>Use this structure before the thread sprawls</h2>
-            <div class="template-box">
-              <pre><code># AI vendor risk assessment
-
-## 1. Vendor and workflow
-- Named vendor:
-- Product workflow:
-- Customer-facing, internal, or both:
-- New vendor, replacement, or expanded use:
-
-## 2. Downstream chain
-- Model provider:
-- Cloud host:
-- Observability / logging vendors:
-- Other subprocessors in the path:
-
-## 3. Data and customer scope
-- Data categories touched:
-- Product area affected:
-- Customer segment affected:
-- Regions or contract cohorts affected:
-
-## 4. Retention and training stance
-- Current retention position:
-- Training / model-improvement stance:
-- Supporting link, contract fact, or vendor statement:
-- Open exceptions or unresolved questions:
-
-## 5. Notice and reviewer path
-- Does the change trigger notice review:
-- Proposed notice date:
-- Effective date:
-- Accountable owner:
-- Procurement / privacy / counsel reviewers:
-
-## 6. Proof links
-- Public subprocessor page:
-- Internal packet or review brief:
-- Draft customer notice:
-- Screenshot or archived proof:
-- Open reviewer questions:</code></pre>
-            </div>
-          </section>
-
-          <section>
-            <h2>When to branch out of the worksheet</h2>
-            <div class="grid-3">
-              <article class="card">
-                <h3>Use the starter pack</h3>
-                <p>Best when the live blocker is the AI questionnaire itself and you need the shortest route into the right answer, example, packet, or teardown path.</p>
-                <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-vendor-risk-assessment-starter-pack">Open starter pack</a>
-              </article>
-              <article class="card">
-                <h3>Use the sample packet</h3>
-                <p>Best when the blank worksheet is still too abstract and the team needs to see a finished review artifact first.</p>
-                <a class="button secondary" href="sample-ai-vendor-disclosure-packet.html?source=ai-vendor-risk-assessment-worksheet-sample">See filled packet</a>
-              </article>
-              <article class="card">
-                <h3>Use the packet guide</h3>
-                <p>Best when the worksheet is complete but the buyer still needs the packet sections in a cleaner review order.</p>
-                <a class="button secondary" href="blog-ai-vendor-disclosure-packet.html?source=ai-vendor-risk-assessment-worksheet-guide">Open packet guide</a>
-              </article>
-              <article class="card">
-                <h3>Use the AI stack guide</h3>
-                <p>Best when the public vendor list is still too generic and hides the model, host, analytics, or support vendors reviewers care about.</p>
-                <a class="button secondary" href="blog-ai-saas-subprocessor-list-template.html?source=ai-vendor-risk-assessment-worksheet-stack">Open AI stack guide</a>
-              </article>
-            </div>
-          </section>
-
-          <section>
-            <h2>Three signs the worksheet is enough</h2>
-            <div class="grid-3">
-              <article class="card">
-                <h3>You can name the full vendor chain</h3>
-                <p>The surface vendor, model provider, cloud host, and any supporting vendors are all explicit.</p>
-              </article>
-              <article class="card">
-                <h3>You can isolate the customer scope</h3>
-                <p>The worksheet says which product area, agreements, accounts, or regions are actually affected.</p>
-              </article>
-              <article class="card">
-                <h3>You can point to proof</h3>
-                <p>The reviewer can open the public page, internal packet, draft notice, or archived evidence without chasing people in Slack.</p>
-              </article>
-            </div>
-          </section>
-
-          <section>
-            <div class="cta-band">
-              <div>
-                <h2>Need the shortest next step after the worksheet?</h2>
-                <p>Use the teardown if you already have one live page and one live vendor change. Use the paid path when you need the finished operating files instead of another explanation.</p>
-              </div>
-              <div class="hero-actions">
-                <a class="button" href="free-teardown.html?source=ai-vendor-risk-assessment-worksheet-teardown">Request free teardown</a>
-                <a class="button secondary" href="pricing.html?source=ai-vendor-risk-assessment-worksheet-pricing">See paid paths</a>
-                <a class="button secondary" href="noticekit-ai-vendor-risk-assessment-worksheet.md" download>Download worksheet</a>
-              </div>
-            </div>
-          </section>
-        </article>
+        </section>
       </main>
 
       <footer class="footer">
@@ -188,5 +260,370 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      const STORAGE_KEY = "noticekit-ai-risk-worksheet-v2";
+      const fieldIds = [
+        "company",
+        "named-vendor",
+        "workflow",
+        "workflow-status",
+        "downstream",
+        "data-categories",
+        "customer-scope",
+        "training-stance",
+        "notice-impact",
+        "approval-owner",
+        "proof-links",
+        "open-questions"
+      ];
+      const weightedChecks = [
+        {
+          id: "named-vendor",
+          label: "Name the exact AI vendor instead of using generic AI wording.",
+          strength: "Named vendor is explicit."
+        },
+        {
+          id: "workflow",
+          label: "Define the exact workflow under review.",
+          strength: "Workflow boundary is explicit."
+        },
+        {
+          id: "downstream",
+          label: "List the downstream providers in the chain.",
+          strength: "Downstream provider chain is captured."
+        },
+        {
+          id: "data-categories",
+          label: "Describe the data categories touched.",
+          strength: "Data categories are concrete."
+        },
+        {
+          id: "customer-scope",
+          label: "State which customer segment or agreements are affected.",
+          strength: "Customer scope is isolated."
+        },
+        {
+          id: "training-stance",
+          label: "Capture the current training or retention stance.",
+          strength: "Training or retention stance is documented."
+        },
+        {
+          id: "notice-impact",
+          label: "Clarify whether notice, contract review, or escalation is in play.",
+          strength: "Notice and escalation path is stated."
+        },
+        {
+          id: "approval-owner",
+          label: "Name the accountable owner or approver.",
+          strength: "Approval ownership is explicit."
+        },
+        {
+          id: "proof-links",
+          label: "Attach proof links, pages, or internal evidence.",
+          strength: "Proof trail is attached."
+        },
+        {
+          id: "open-questions",
+          label: "Write the unresolved questions instead of hiding them.",
+          strength: "Open questions are documented."
+        }
+      ];
+      const presetValues = {
+        "customer-facing": {
+          "named-vendor": "OpenAI",
+          "workflow": "Customer-facing drafting assistant inside the support console",
+          "workflow-status": "planned",
+          "downstream": "Vercel, Supabase, Zendesk, PostHog",
+          "data-categories": "Support ticket text, account identifiers, and response drafts",
+          "customer-scope": "Enterprise and EU support workflows, with extra review for signed DPA accounts",
+          "training-stance": "Current operating position: no training on our customer content in this workflow, with vendor terms and internal notes kept as proof.",
+          "notice-impact": "Need to confirm whether this workflow changes the public subprocessor page or triggers customer notice before launch.",
+          "approval-owner": "Privacy ops lead with product and counsel review",
+          "proof-links": "Public subprocessor page, vendor terms, internal review brief, and workflow screenshots",
+          "open-questions": "Confirm whether attachments are in scope for launch and whether any enterprise contract adds notice requirements."
+        },
+        "support-copilot": {
+          "named-vendor": "OpenAI",
+          "workflow": "Internal support copilot that drafts reply suggestions for agents",
+          "workflow-status": "active",
+          "downstream": "Zendesk, Vercel, Supabase, PostHog",
+          "data-categories": "Support ticket text, customer identifiers, and agent edits",
+          "customer-scope": "Support conversations across all paid plans, with enterprise contract review for EU accounts",
+          "training-stance": "Current operating position: customer content is processed under the business offering and is not used for training, subject to current vendor terms and internal approval notes.",
+          "notice-impact": "Need to confirm whether activation changed the public vendor list and whether any contract-specific disclosure follow-up is still required.",
+          "approval-owner": "Support operations lead with privacy review",
+          "proof-links": "Vendor terms, support workflow screenshot, internal rollout note, and subprocessor page URL",
+          "open-questions": "Need a final call on transcript retention and whether attachments are excluded from the current workflow."
+        },
+        "internal-assistant": {
+          "named-vendor": "Anthropic",
+          "workflow": "Internal product and operations assistant used for drafting and research",
+          "workflow-status": "replacement",
+          "downstream": "Vercel, Linear, Notion",
+          "data-categories": "Internal product notes, support summaries, and planning documents",
+          "customer-scope": "No direct customer-facing workflow, but customer-derived internal notes may appear in prompts",
+          "training-stance": "Current operating position: use the vendor business offering with internal guidance to avoid pasting unnecessary customer content.",
+          "notice-impact": "Need to check whether internal-only use still changes vendor disclosures or enterprise questionnaire wording.",
+          "approval-owner": "Operations lead with privacy and counsel review",
+          "proof-links": "Internal use policy, vendor terms, and the current AI stack inventory",
+          "open-questions": "Need a final answer on whether internal notes that summarize customer issues count as in-scope customer content."
+        }
+      };
+
+      const form = document.querySelector("#risk-worksheet-form");
+      const scoreNode = document.querySelector("#readiness-score");
+      const stateNode = document.querySelector("#readiness-state");
+      const meterNode = document.querySelector("#readiness-meter");
+      const summaryNode = document.querySelector("#readiness-summary");
+      const nextStepTitleNode = document.querySelector("#next-step-title");
+      const nextStepCopyNode = document.querySelector("#next-step-copy");
+      const gapListNode = document.querySelector("#gap-list");
+      const strengthListNode = document.querySelector("#strength-list");
+      const briefOutputNode = document.querySelector("#brief-output");
+      const gapsOutputNode = document.querySelector("#gaps-output");
+      const statusNode = document.querySelector("#worksheet-status");
+      const routePrimary = document.querySelector("#route-primary");
+      const routeSecondary = document.querySelector("#route-secondary");
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
+      function textToHtml(value) {
+        return escapeHtml(value).replace(/\n/g, "<br>");
+      }
+
+      function readDraft() {
+        const draft = {};
+        fieldIds.forEach((id) => {
+          const field = document.getElementById(id);
+          draft[id] = field ? field.value.trim() : "";
+        });
+        return draft;
+      }
+
+      function writeDraft(draft) {
+        fieldIds.forEach((id) => {
+          const field = document.getElementById(id);
+          if (field && Object.prototype.hasOwnProperty.call(draft, id)) {
+            field.value = draft[id];
+          }
+        });
+      }
+
+      function saveDraft() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(readDraft()));
+      }
+
+      function loadDraft() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          return;
+        }
+
+        try {
+          writeDraft(JSON.parse(raw));
+          statusNode.textContent = "Saved draft restored from this device. Inputs still stay local.";
+        } catch {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+      }
+
+      function buildPayload() {
+        const draft = readDraft();
+        const strengths = [];
+        const gaps = [];
+
+        weightedChecks.forEach((check) => {
+          if (draft[check.id]) {
+            strengths.push(check.strength);
+          } else {
+            gaps.push(check.label);
+          }
+        });
+
+        const score = strengths.length;
+        let scoreState = "Still messy";
+        let summary = "The current draft still has enough missing context that a buyer review will probably turn into more clarification loops.";
+        let nextStepTitle = "Best next step";
+        let nextStepCopy = "Stay in the worksheet, patch the missing facts, and use the checklist or teardown before drafting the final answer.";
+        let primaryRoute = {
+          href: "blog-ai-vendor-risk-assessment.html?source=ai-vendor-risk-assessment-worksheet-checklist",
+          label: "Open checklist"
+        };
+        let secondaryRoute = {
+          href: "free-teardown.html?source=ai-vendor-risk-assessment-worksheet-teardown",
+          label: "Request free teardown"
+        };
+
+        if (score >= 6) {
+          scoreState = "Close to answer-ready";
+          summary = "The draft has the main buyer-review facts, but a couple of weak spots can still create follow-up loops or internal confusion.";
+          nextStepCopy = "Patch the remaining gaps, then use the starter pack or builder for the live answer path instead of expanding into a full packet too early.";
+          primaryRoute = {
+            href: "ai-security-questionnaire-starter-pack.html?source=ai-vendor-risk-assessment-starter-pack",
+            label: "Open starter pack"
+          };
+          secondaryRoute = {
+            href: "ai-security-questionnaire-answer-builder.html?source=ai-vendor-risk-assessment-builder",
+            label: "Open answer builder"
+          };
+        }
+
+        if (score >= 9) {
+          scoreState = "Review-ready";
+          summary = "The draft names the vendor chain, workflow scope, customer impact, owner, proof, and unresolved issues well enough to support a buyer review thread.";
+          nextStepCopy = "Use the answer builder now if the job is one live buyer response. Use the answer bank or broader packet route only if the same review keeps repeating.";
+          primaryRoute = {
+            href: "ai-security-questionnaire-answer-builder.html?source=ai-vendor-risk-assessment-builder",
+            label: "Open answer builder"
+          };
+          secondaryRoute = {
+            href: "ai-security-questionnaire-answer-bank.html?source=ai-vendor-risk-assessment-answer-bank",
+            label: "Open answer bank"
+          };
+        }
+
+        const reviewBrief = [
+          `# ${draft.company || "Company"} AI vendor review brief`,
+          "",
+          `Readiness score: ${score}/10 (${scoreState})`,
+          "",
+          "## Workflow",
+          `- Named vendor: ${draft["named-vendor"] || "[missing]"}`,
+          `- Workflow reviewed: ${draft.workflow || "[missing]"}`,
+          `- Workflow status: ${draft["workflow-status"] || "[missing]"}`,
+          "",
+          "## Chain and scope",
+          `- Downstream providers: ${draft.downstream || "[missing]"}`,
+          `- Data categories: ${draft["data-categories"] || "[missing]"}`,
+          `- Customer scope: ${draft["customer-scope"] || "[missing]"}`,
+          "",
+          "## Operating stance",
+          `- Training or retention stance: ${draft["training-stance"] || "[missing]"}`,
+          `- Notice or contract impact: ${draft["notice-impact"] || "[missing]"}`,
+          `- Approval owner: ${draft["approval-owner"] || "[missing]"}`,
+          "",
+          "## Proof and open questions",
+          `- Proof links: ${draft["proof-links"] || "[missing]"}`,
+          `- Open questions: ${draft["open-questions"] || "[missing]"}`,
+          "",
+          "## Gaps to close",
+          ...(gaps.length ? gaps.map((gap) => `- ${gap}`) : ["- No major field gaps in the current worksheet draft."])
+        ].join("\n");
+
+        const gapChecklist = gaps.length
+          ? gaps.map((gap) => `- ${gap}`).join("\n")
+          : "- No major field gaps. Route into the builder, starter pack, or answer bank based on whether the job is one answer or repeat review.";
+
+        return {
+          draft,
+          score,
+          scoreState,
+          summary,
+          nextStepTitle,
+          nextStepCopy,
+          strengths,
+          gaps,
+          reviewBrief,
+          gapChecklist,
+          primaryRoute,
+          secondaryRoute
+        };
+      }
+
+      function renderList(node, items, fallback) {
+        node.innerHTML = "";
+        const values = items.length ? items : [fallback];
+        values.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          node.appendChild(li);
+        });
+      }
+
+      function renderPayload() {
+        const payload = buildPayload();
+        scoreNode.textContent = `${payload.score}/10`;
+        stateNode.textContent = payload.scoreState;
+        meterNode.style.width = `${payload.score * 10}%`;
+        summaryNode.textContent = payload.summary;
+        nextStepTitleNode.textContent = payload.nextStepTitle;
+        nextStepCopyNode.textContent = payload.nextStepCopy;
+        renderList(gapListNode, payload.gaps, "No major field gaps in the current worksheet draft.");
+        renderList(strengthListNode, payload.strengths, "Add a few facts to turn this into a cleaner buyer-review brief.");
+        briefOutputNode.innerHTML = `<p>${textToHtml(payload.reviewBrief)}</p>`;
+        gapsOutputNode.innerHTML = `<p>${textToHtml(payload.gapChecklist)}</p>`;
+        routePrimary.href = payload.primaryRoute.href;
+        routePrimary.textContent = payload.primaryRoute.label;
+        routeSecondary.href = payload.secondaryRoute.href;
+        routeSecondary.textContent = payload.secondaryRoute.label;
+      }
+
+      function copyText(text, message) {
+        navigator.clipboard.writeText(text).then(() => {
+          statusNode.textContent = message;
+        }).catch(() => {
+          statusNode.textContent = "Clipboard copy failed on this browser. Use the text below instead.";
+        });
+      }
+
+      function downloadText(filename, text) {
+        const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        link.click();
+        URL.revokeObjectURL(url);
+        statusNode.textContent = `${filename} downloaded.`;
+      }
+
+      document.querySelectorAll("[data-preset]").forEach((button) => {
+        button.addEventListener("click", () => {
+          writeDraft(presetValues[button.dataset.preset] || {});
+          saveDraft();
+          renderPayload();
+          statusNode.textContent = "Preset applied. Adjust the fields to match the real buyer thread.";
+        });
+      });
+
+      form.addEventListener("input", () => {
+        saveDraft();
+        renderPayload();
+      });
+
+      document.querySelector("#copy-brief").addEventListener("click", () => {
+        copyText(buildPayload().reviewBrief, "Review brief copied.");
+      });
+
+      document.querySelector("#copy-gaps").addEventListener("click", () => {
+        copyText(buildPayload().gapChecklist, "Gap checklist copied.");
+      });
+
+      document.querySelector("#download-brief").addEventListener("click", () => {
+        const companySlug = (document.querySelector("#company").value || "noticekit")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+        downloadText(`${companySlug || "noticekit"}-ai-vendor-review-brief.md`, buildPayload().reviewBrief);
+      });
+
+      document.querySelector("#clear-draft").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        form.reset();
+        writeDraft(presetValues["customer-facing"]);
+        renderPayload();
+        statusNode.textContent = "Local draft cleared. Default example restored.";
+      });
+
+      writeDraft(presetValues["customer-facing"]);
+      loadDraft();
+      renderPayload();
+    </script>
   </body>
 </html>

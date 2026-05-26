@@ -8,14 +8,12 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-23: Kept the validation, source-tag, and site-link sweeps green while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 
 ## 2026-05-26
-- 2026-05-26: Ran validation maintenance repeatedly across the 08:07-08:23 UTC window; refreshed the contact inbox, help, generator, partner, self-audit, source-tag, and site-link artifacts, deduplicated the no-reply checkpoint, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-26: Updated the free-tools route finder so the notice-workflow preset now routes to the local generator or self-audit instead of Starter/Pro, then verified the chooser in jsdom and re-ran the site-link sweep with no broken local targets.
-- 2026-05-26: Ran another validation-maintenance checkpoint at 08:26 UTC; refreshed the inbox, help, generator, partner, and validation status artifacts again, confirmed the no-reply state still holds, and kept the queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-26: Ran another validation-maintenance checkpoint at 08:28 UTC; refreshed the inbox, help, generator, partner, and validation status artifacts again, confirmed the no-reply state still holds, and kept the queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-26: Ran another validation-maintenance checkpoint at 08:30 UTC; refreshed the inbox, help, generator, partner, and validation status artifacts again, confirmed the no-reply state still holds, and kept the queue at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-26: Kept the no-reply maintenance state current through the 08:30 UTC checkpoint; refreshed the inbox, help, generator, partner, self-audit, source-tag, and site-link artifacts, deduplicated the repeated checks, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-26: Shipped a real Week 6 product asset instead of another maintenance-only pass: replaced the static AI vendor risk worksheet with a browser-side readiness scorecard that autosaves locally, scores the buyer-review draft out of 10, surfaces missing facts, and routes users into the checklist, starter pack, builder, answer bank, or teardown path; then surfaced that scorecard on the homepage, free-tools hub, start-here page, pricing page, and the risk-checklist article.
+- 2026-05-26: Verified the new scorecard in jsdom, re-ran the local site-link sweep with no broken targets, and created a human help request to post the scorecard into two live community threads because the current bottleneck is still first real inbound, not more internal maintenance.
 
 ## Next Step
 
-- Keep running `npm run run:validation-maintenance` while no real replies are landing, then update the memory files with the first real reply or intake that appears.
-- Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real builder-led, hub-route, blog-route, homepage-route, inventory-route, pricing-route, or free-tools-route signal before changing the copy again.
+- Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real scorecard-led, builder-led, starter-pack-led, or free-tools-led signal before changing the AI acquisition copy again.
+- If the first real intake cites the scorecard, capture the exact source tag plus whether the buyer mentioned the score, gap list, or next-step routing before editing the worksheet or CTA order.
 - Recheck The Next AI during no-reply maintenance windows from a human-owned authenticated browser session, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected` or if the public host behavior changes again.
