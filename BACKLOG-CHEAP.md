@@ -116,9 +116,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-26: production self-audit verification reran successfully and refreshed the inbox, verification, and validation snapshots without changing the live queue.
-- 2026-05-26: pricing page now emits `pricing-ai-route-repeat-review`, restoring source-tag watcher coverage for the repeat-review route.
-- 2026-05-26: pricing-page route cleanup surfaced inventory-first earlier in the hero and removed a duplicate AI route section while the site-link sweep stayed clean.
-- 2026-05-26: validation maintenance passes through 23:10 UTC and public Next AI rechecks kept source-tag and site-link coverage clean while `https://www.thenextai.com/ai-tools/` still showed no `NoticeKit` listing, so the batch-02 directory re-entry blocker remains open until a human-authenticated browser pass is available.
-- 2026-05-23: validation-maintenance sweeps kept the watch artifacts green and the live queue empty while The Next AI still required a human-owned browser session.
+- 2026-05-26: validation maintenance and production self-audit verification reran at 23:13 UTC; the inbox, verification, and validation snapshots stayed clean, the live queue remained empty, and the known batch-02 directory blocker remained open.
+- 2026-05-26: pricing-page cleanup surfaced inventory-first earlier in the hero, removed a duplicate AI route section, and restored `pricing-ai-route-repeat-review` source-tag coverage.
+- 2026-05-23 to 2026-05-26: validation maintenance and public Next AI rechecks kept the watch artifacts green while the batch-02 directory re-entry blocker remained open until a human-authenticated browser pass is available.
 - 2026-05-09 to 2026-05-22: no-reply maintenance, artifact refreshes, answer-bank and named-vendor route rollout, and manual directory-submission prep kept the live queue empty.
