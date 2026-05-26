@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-26 08:30 UTC
+Checked at: 2026-05-26 12:47 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -392,23 +392,18 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-teardown: 0
 - ai-vendor-risk-assessment-sample: 0
 - ai-vendor-risk-assessment-guide: 0
-- ai-vendor-risk-assessment-stack: 0
 - ai-vendor-risk-assessment-teardown: 0
 - multi-change-register-calculator: 0
 - multi-change-register-checker: 0
 - multi-change-register-clause-intake: 0
 - multi-change-register-pricing: 0
 - multi-change-register-stack: 0
-- ai-vendor-risk-assessment-pricing: 0
 - ai-vendor-risk-assessment-starter-pack: 0
 - ai-vendor-risk-assessment-worksheet: 0
 - ai-vendor-risk-assessment-worksheet-checklist: 0
-- ai-vendor-risk-assessment-worksheet-sample: 0
-- ai-vendor-risk-assessment-worksheet-guide: 0
-- ai-vendor-risk-assessment-worksheet-stack: 0
 - ai-vendor-risk-assessment-worksheet-teardown: 0
-- ai-vendor-risk-assessment-worksheet-pricing: 0
 - ai-vendor-risk-assessment-builder: 0
+- ai-vendor-risk-assessment-answer-bank: 0
 - free-tools-ai-risk-assessment: 0
 - free-tools-ai-risk-worksheet: 0
 - sample-ai-packet-guide: 0

@@ -1,80 +1,31 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-26 08:30 UTC
+Checked at: 2026-05-26 12:47 UTC
 
 ## Current Request
 
-- What: Re-enter the partially completed AI answer-bank batch-02 directory pass from your own browser session so NoticeKit can clear the three remaining blockers and check whether The Next AI review has gone live.
+- What: Post a short value-first comment in two existing community threads that links the new AI vendor risk scorecard and asks for feedback.
 - Priority: important
-- Time: 10min
+- Time: 15min
 - Budget: $0
 
-## Directory Checklist
+## Indexing Outcome Codes
 
-- Open the referenced submission pack in the repo first and copy the exact source-tagged listing URL from there.
-- Submit the listing from your own browser session; some directories may require a Google or site-specific account.
-- Keep the exact source tag in the submitted URL so NoticeKit can attribute any result correctly.
-- Record one outcome per directory in `HELP-STATUS.md`: `submitted`, `live`, `rejected`, or `blocked`.
+- `submitted`: the console accepted a new indexing request for that URL.
+- `already indexed`: the console already showed the URL as indexed or already queued.
+- `blocked`: the console could not submit the URL; add the reason.
+- `not supported`: the console did not offer direct submission for that URL or service.
 
-## Ready To Paste Directory Lines Into `HELP-STATUS.md`
+## URL Checklist
 
-- 2026-05-23 20:07 UTC public web check: `thenextai.toolspedia.io` still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified.
-- 2026-05-23 23:25 UTC public web check: `thenextai.toolspedia.io` still returned `NXDOMAIN` for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the review state remained unreadable.
-- 2026-05-23 16:26 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-23 16:19 UTC public web check: The Next AI homepage and `/ai-tools/` directory both loaded publicly, but neither surfaced a public `NoticeKit` listing.
-- 2026-05-23 12:59 UTC public web check: the `thenextai.toolspedia.io` host still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the review state remained unreadable.
-- 2026-05-23 12:56 UTC public web check: the `thenextai.toolspedia.io` host still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the review state remained unreadable.
-- 2026-05-23 12:52 UTC public web check: the `thenextai.toolspedia.io` host failed DNS resolution for both the homepage and `/ai-tools/` (`Name or service not known`), so no public `NoticeKit` listing could be verified.
-- 2026-05-23 12:50 UTC public web check: The Next AI homepage still surfaced no public `NoticeKit` listing and `/ai-tools/` currently resolved to a public `Page not found`.
-- 2026-05-23 12:47 UTC public web check: The Next AI homepage and `/ai-tools/` directory both loaded publicly, but neither surfaced a public `NoticeKit` listing.
-- 2026-05-23 12:44 UTC public web check: The Next AI homepage and `/ai-tools/` directory both loaded publicly, but neither surfaced a public `NoticeKit` listing.
-- 2026-05-23 08:16 UTC public web check: The Next AI homepage and `/ai-tools/` directory both loaded publicly again, but neither surfaced a public `NoticeKit` listing.
-- 2026-05-23 08:21 UTC public web check: The Next AI homepage and `/ai-tools/` directory both loaded publicly again, but neither surfaced a public `NoticeKit` listing.
-- 2026-05-23 08:14 UTC public web check: The Next AI homepage and `/ai-tools/` directory both loaded publicly again, but neither surfaced a public `NoticeKit` listing.
-- 2026-05-23 04:33 UTC public web check: The Next AI homepage and `/ai-tools/` directory both loaded publicly again, but neither surfaced a public `NoticeKit` listing.
-- 2026-05-23 04:25 UTC public web check: The Next AI homepage still surfaced no public `NoticeKit` listing and `/ai-tools` currently resolved to a public `Page not found`.
-- 2026-05-23 04:20 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-23 04:10 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-22 23:22 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-22 20:11 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-22 16:26 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-22 16:21 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-22 12:52 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-22 16:17 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-22 12:43 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 16:22 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 16:18 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 16:09 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:59 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:57 UTC public web check: The Next AI homepage redirected and `/ai-tools/` still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:55 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:53 UTC public web check: The Next AI homepage and `/ai-tools/` directory HTML still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:49 UTC public web check: The Next AI homepage and `/ai-tools/` directory HTML still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:47 UTC public web check: The Next AI homepage and `/ai-tools/` directory HTML still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:43 UTC public web check: The Next AI live homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:41 UTC public web check: The Next AI homepage HTML and `/ai-tools/` directory HTML still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:34 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 12:38 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
-- 2026-05-21 04:30 UTC public web check: The Next AI homepage HTML still surfaced no public `NoticeKit` listing.
-- 2026-05-21 04:28 UTC public web check: The Next AI homepage still surfaced no public `NoticeKit` listing.
-- 2026-05-21 04:25 UTC public web check: The Next AI public site still surfaced no public `NoticeKit` listing.
-- 2026-05-21 04:19 UTC public web check: The Next AI search still surfaced no public `NoticeKit` listing.
-- 2026-05-21 04:16 UTC public web check: The Next AI public directory still showed no `NoticeKit` result and no public NoticeKit listing surfaced.
-- 2026-05-21 04:11 UTC public web check: The Next AI search for `NoticeKit` returned 0 results and no public NoticeKit listing surfaced.
-- 2026-05-21 04:06 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 23:19 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 23:11 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 20:14 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 20:25 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 20:27 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 20:12 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 20:10 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 16:18 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 16:13 UTC public check: no public NoticeKit listing surfaced on The Next AI.
-- 2026-05-20 16:20 UTC public web check: no public NoticeKit listing surfaced on The Next AI.
+- Open each requested service in your own authenticated browser session.
+- Submit each URL exactly as listed below.
+- Update `HELP-STATUS.md` with one line per URL using `submitted`, `already indexed`, `blocked`, or `not supported` plus any useful note.
 
-## Directory Targets
+## Ready To Paste Indexing Lines Into `HELP-STATUS.md`
 
-- Newtools: source tag `manual-newtools-answer-bank`
-- JunkStartups: source tag `manual-junkstartups-answer-bank`
-- Startup Buffer: source tag `manual-startupbuffer-answer-bank`
+- 2026-05-26 https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
+
+## Requested URLs
+
+- https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html
