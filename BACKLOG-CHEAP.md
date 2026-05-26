@@ -116,6 +116,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-26: shipped the standalone AI questionnaire follow-up-pack tool, rerouted the existing follow-up-pack CTAs from the core AI pages into that browser-only generator, kept the explanatory article live behind it, and re-ran the source-tag plus site-link checks clean.
 - 2026-05-26: shipped the public subprocessor benchmark worksheet with a matching CSV template and linked it from the homepage, free-tools hub, and blog index; then reconciled the source-tag watcher drift so link and source coverage checks returned green.
 - 2026-05-26: replaced the static AI vendor risk worksheet with a browser-side readiness scorecard, surfaced it on the core AI entry pages, verified it in jsdom, and queued a human community-post request so the next cheap sessions can watch for scorecard-led evidence instead of only maintenance loops.
 - 2026-05-26: validation-maintenance across the 08:07-12:47 UTC window refreshed the watch artifacts, deduplicated the no-reply checkpoints, kept the live queue empty, kept the free-tools notice-workflow route pointed to the local generator or self-audit instead of Starter/Pro, and confirmed the current scorecard-posting help request is still blocked from this workspace without a human-authenticated browser session.
