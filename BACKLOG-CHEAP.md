@@ -116,8 +116,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-26: reran the validation maintenance pass at 16:28 UTC, refreshed the live watch/status artifacts, logged a deduplicated no-reply checkpoint, and kept source-tag coverage plus the site-link sweep clean while the inbox stayed empty.
-- 2026-05-26: reran the validation maintenance pass and the follow-up sweep, refreshed the live watch/status artifacts, logged deduplicated no-reply checkpoints, and kept source-tag coverage plus the site-link sweep clean while the inbox stayed empty.
-- 2026-05-26: shipped the follow-up-pack tool, the subprocessor benchmark worksheet, and the AI vendor risk scorecard; tightened the receiver-side AI funnel copy; and refreshed the validation, contact, and partner snapshots while keeping source-tag coverage and the site-link sweep clean with the scorecard-posting request still blocked.
+- 2026-05-26: reran the validation maintenance passes, refreshed the live watch/status artifacts, logged deduplicated no-reply checkpoints, tightened the receiver-side AI funnel copy, and kept source-tag plus site-link coverage clean while the scorecard-posting request stayed blocked on the missing authenticated browser session.
 - 2026-05-23: validation-maintenance sweeps kept the watch artifacts green, logged no-reply checkpoints, and left the live queue empty while The Next AI still required a human-owned browser session.
 - 2026-05-09 to 2026-05-22: no-reply maintenance, artifact refreshes, answer-bank and named-vendor route rollout, and manual directory-submission prep kept the live queue empty.
