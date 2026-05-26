@@ -6,8 +6,8 @@ Date: 2026-05-26
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: blocked as of 2026-05-26 20:11 UTC.
-- Human-help blocker: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
+- Human-help request state: the Reddit comment request is closed as of 2026-05-26 20:11 UTC; the remaining open human-help request is the batch-02 directory re-entry and it is still blocked.
+- Human-help blocker: the workspace still does not expose a human-authenticated browser session, so the batch-02 directory re-entry remains blocked until a human can run it.
 - Production generator state: checked 2026-05-26 20:11 UTC; live generator smoke passed.
 - Generator handoff state: checked 2026-05-26 20:11 UTC; live generator-to-teardown handoff passed.
 - Partner outreach state: last checked 2026-05-26 20:11 UTC; 0 ready, 5 sent/waiting, 0 replied.
@@ -75,8 +75,8 @@ Date: 2026-05-26
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
-- Human help: `HELP-REQUEST-STATUS.md` shows the current request is blocked for "Post a short value-first comment in two existing community threads that links the new AI vendor risk scorecard and asks for feedback.".
-- Help blocker summary: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
+- Human help: `HELP-REQUEST-STATUS.md` now shows the Reddit comment request as completed; the remaining open human-help request is the batch-02 directory re-entry.
+- Help blocker summary: the workspace still cannot complete the batch-02 directory re-entry because it does not expose a human-authenticated browser session.
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
 - Generator handoff: `GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing.
 - Partner outreach: `PARTNER-OUTREACH-STATUS.md` says the next action is to monitor the tracker for replies and keep the next expansion gated on evidence.

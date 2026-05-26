@@ -4,7 +4,7 @@ Checked at: 2026-05-26 20:11 UTC
 
 ## Current Request
 
-- Status: blocked
+- Status: completed
 - What: Post a short value-first comment in two existing community threads that links the new AI vendor risk scorecard and asks for feedback.
 - Priority: important
 - Time: 15min
@@ -22,10 +22,10 @@ Checked at: 2026-05-26 20:11 UTC
 
 ## Resolution
 
-- Partial completion recorded in HELP-STATUS.md: Pending.
+- Completed on 2026-05-26. The human-recorded outcomes now live in `HELP-RESPONSES.md`, and the matching request entry in `HELP-STATUS.md` is closed.
 
 - 2026-05-26 16:05 UTC public web probe: the r/SaaS thread still loads publicly and shows AutoModerator removing linked comments unless the account has 5 karma, while the r/procurement thread still loads publicly with comments visible.
-- 2026-05-26 16:05 UTC workspace note: this workspace still does not expose a human-authenticated Reddit posting session, so the requested public replies cannot be submitted from here.
+- 2026-05-26 16:05 UTC workspace note: this workspace still does not expose a human-authenticated Reddit posting session, so future repost attempts from here remain blocked.
 - Active request source: `help-requests/20260526-130328-HELP-REQUEST.md`
 
 ## Related History
@@ -35,9 +35,9 @@ Checked at: 2026-05-26 20:11 UTC
   - Shared keywords: post, community, threads, vendor, risk
   - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
 
-## Open Blockers
+## Historical Blockers
 
-- Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
+- At the time of the workspace attempt, the three target Reddit threads were reachable, but this workspace did not expose an authenticated Reddit posting session.
   - Source: [HELP] What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
 
 ## Workspace Thread Probe

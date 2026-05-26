@@ -82,13 +82,6 @@
 - Opened on 2026-05-14 to supersede the broader four-directory batch-02 request after The Next AI was already submitted and the other three routes were confirmed blocked on their first pass.
 - Re-entry packet: `AI-ANSWER-BANK-MANUAL-OUTBOUND-BATCH-02-REENTRY.md`
 
-### [HELP] What: Post a short value-first comment in two existing community threads that links the new AI vendor risk scorecard and asks for feedback.
-**Human response:** Pending.
-
-- 2026-05-26 16:05 UTC public web probe: the r/SaaS thread still loads publicly and shows AutoModerator removing linked comments unless the account has 5 karma, while the r/procurement thread still loads publicly with comments visible.
-- 2026-05-26 16:05 UTC workspace note: this workspace still does not expose a human-authenticated Reddit posting session, so the requested public replies cannot be submitted from here.
-- Active request source: `help-requests/20260526-130328-HELP-REQUEST.md`
-
 ### [HELP] What: Submit NoticeKit AI Answer Bank to 4 additional verified directories from your own browser session so the batch-02 non-Reddit distribution fallback can go live with tracked source tags after batch 01 stayed idle through the next inbox watch.
 **Human response (partial 2026-05-14):**
 Submitted The Next AI successfully. Newtools accepted registration but requires email verification before the listing flow can continue. Startup Buffer is blocked behind a Cloudflare challenge. JunkStartups requires account or magic-link verification before submission can finish.
@@ -100,6 +93,13 @@ Submitted The Next AI successfully. Newtools accepted registration but requires 
 
 ## ✅ Completed Requests
 The human has completed these requests. Read the responses carefully and act on them.
+
+### [HELP] What: Post a short value-first comment in two existing community threads that links the new AI vendor risk scorecard and asks for feedback.
+**Human response (closed 2026-05-26):**
+Completed. See `HELP-RESPONSES.md` for the human-recorded thread outcomes.
+
+- 2026-05-26 `r/SaaS` and `r/procurement`: posted.
+- Active request source: `help-requests/20260526-130328-HELP-REQUEST.md`
 
 ### [HELP] What: Post 3 prepared Reddit replies from your own authenticated browser/account and request indexing for the refreshed AI answer-builder page so NoticeKit can test whether the AI procurement wedge produces the first real click, reply, or teardown.
 **Human response (closed 2026-05-12):**
