@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-26 16:05 UTC
+Checked at: 2026-05-26 16:09 UTC
 
 ## Current Request
 
@@ -18,11 +18,13 @@ Checked at: 2026-05-26 16:05 UTC
 - If the thread is still open for comments and the account is allowed to reply, post this comment exactly:
 - If either thread is locked, removed, or the comment is blocked, do not improvise. Instead, note which URL failed and why in `HELP-RESPONSES.md`.
 
-- Active request source: HELP-REQUEST.md
+- Active request source: help-requests/20260526-130328-HELP-REQUEST.md
 
 ## Resolution
 
-- The active request is still blocked by an unresolved blocker already recorded in `HELP-STATUS.md`.
+- The active request is still blocked by the unresolved Reddit posting blocker already recorded in `HELP-STATUS.md`.
+- 2026-05-26 16:05 UTC public web probe: the r/SaaS thread still loads publicly and shows AutoModerator removing linked comments unless the account has 5 karma, while the r/procurement thread still loads publicly with comments visible.
+- 2026-05-26 16:05 UTC workspace note: this workspace still does not expose a human-authenticated Reddit posting session, so the requested public replies cannot be submitted from here.
 
 ## Related History
 
@@ -39,12 +41,6 @@ Checked at: 2026-05-26 16:05 UTC
 ## Workspace Thread Probe
 
 - These checks come from the current workspace only; they do not prove whether a human-authenticated browser can still reply.
-- Checked at: 2026-05-26 16:05 UTC
+- Checked at: 2026-05-26 16:09 UTC
 - https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
 - https://www.reddit.com/r/procurement/comments/1r3kbj9/how_do_you_actually_assess_ai_vendor_risk/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
-
-## Public Web Probe
-
-- Checked at: 2026-05-26 16:05 UTC
-- `r/SaaS` thread still loads publicly and shows AutoModerator removing linked comments unless the account has earned 5 karma in the subreddit.
-- `r/procurement` thread still loads publicly with comments visible, but the workspace still cannot complete the posting step here.
