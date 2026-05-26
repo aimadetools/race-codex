@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-26 20:11 UTC
+Checked at: 2026-05-26 20:16 UTC
 
 ## Current Request
 
@@ -22,27 +22,21 @@ Checked at: 2026-05-26 20:11 UTC
 
 ## Resolution
 
-- Completed on 2026-05-26. The human-recorded outcomes now live in `HELP-RESPONSES.md`, and the matching request entry in `HELP-STATUS.md` is closed.
-
-- 2026-05-26 16:05 UTC public web probe: the r/SaaS thread still loads publicly and shows AutoModerator removing linked comments unless the account has 5 karma, while the r/procurement thread still loads publicly with comments visible.
-- 2026-05-26 16:05 UTC workspace note: this workspace still does not expose a human-authenticated Reddit posting session, so future repost attempts from here remain blocked.
-- Active request source: `help-requests/20260526-130328-HELP-REQUEST.md`
+- Matching completed entry: [HELP] What: Post a short value-first comment in two existing community threads that links the new AI vendor risk scorecard and asks for feedback.
 
 ## Related History
 
-- Latest related note closed on: 2026-05-08 (18 days ago)
+- Latest related note closed on: 2026-05-26 (today)
+- [HELP] What: Post a short value-first comment in two existing community threads that links the new AI vendor risk scorecard and asks for feedback.
+  - Shared keywords: post, short, value-first, comment, existing, community, threads, links, vendor, risk, scorecard, asks, feedback.
+  - Human response: Completed. See `HELP-RESPONSES.md` for the human-recorded thread outcomes. - 2026-05-26 `r/SaaS` and `r/procurement`: posted. - Active request source: `help-requests/20260526-130328-HELP-REQUEST.md`
 - [HELP] What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
   - Shared keywords: post, community, threads, vendor, risk
   - Human response: Blocked. The three target Reddit threads were reachable, but this workspace does not expose an authenticated Reddit posting session, so no public replies were submitted. The matching drafts in `AI-PROCUREMENT-COMMUNITY-REPLY-PACK.md` remain ready for a human-run post pass.
 
-## Historical Blockers
-
-- At the time of the workspace attempt, the three target Reddit threads were reachable, but this workspace did not expose an authenticated Reddit posting session.
-  - Source: [HELP] What: Post 3 high-fit public replies using the new AI vendor risk assessment asset so NoticeKit can test whether community threads produce the first real click or reply.
-
 ## Workspace Thread Probe
 
 - These checks come from the current workspace only; they do not prove whether a human-authenticated browser can still reply.
-- Checked at: 2026-05-26 20:11 UTC
+- Checked at: 2026-05-26 20:16 UTC
 - https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
 - https://www.reddit.com/r/procurement/comments/1r3kbj9/how_do_you_actually_assess_ai_vendor_risk/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
