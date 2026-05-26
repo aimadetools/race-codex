@@ -1,6 +1,6 @@
 # Validation Positioning Brief
 
-Date: 2026-05-23
+Date: 2026-05-26
 Decision window opens: 2026-04-27 UTC
 Trigger state: pause and reassess
 Recommended branch: pause expansion
