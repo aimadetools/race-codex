@@ -116,6 +116,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-26: rechecked the The Next AI batch-02 host at 20:21 UTC; `thenextai.toolspedia.io` still returned `NXDOMAIN` for both the homepage and `/ai-tools/`, so the re-entry blocker remains open.
 - 2026-05-26: rechecked The Next AI public host at 20:07 UTC; `thenextai.toolspedia.io` still failed DNS resolution for both the homepage and `/ai-tools/`, so the batch-02 directory follow-through remains open.
 - 2026-05-26: tightened the homepage, pricing, free-tools, and start-here AI route hierarchy, reran maintenance at 20:20 UTC, and kept source-tag plus site-link coverage clean while the batch-02 directory re-entry stayed open.
 - 2026-05-23: validation-maintenance sweeps kept the watch artifacts green and the live queue empty while The Next AI still required a human-owned browser session.
