@@ -116,6 +116,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-26: pricing page now emits `pricing-ai-route-repeat-review`, restoring source-tag watcher coverage for the repeat-review route.
 - 2026-05-26: pricing-page route cleanup surfaced inventory-first earlier in the hero and removed a duplicate AI route section while the site-link sweep stayed clean.
 - 2026-05-26: public Next AI recheck at 20:29 UTC still showed no `NoticeKit` listing on `https://www.thenextai.com/ai-tools/`, so the batch-02 directory re-entry blocker remains open until a human-authenticated browser pass is available.
 - 2026-05-26: validation maintenance at 20:27 UTC refreshed the live watch/status artifacts, kept source-tag plus site-link coverage clean, and left the batch-02 directory re-entry blocker open.

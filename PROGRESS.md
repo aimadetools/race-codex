@@ -16,6 +16,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - No new buyer signal landed; monitoring stayed on the inbox, community, help, and validation watch files while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 
 ## 2026-05-26
+- 2026-05-26: Added the missing `pricing-ai-route-repeat-review` source link to `pricing.html`, then reran `check:source-tag-coverage` and `check:site-links` clean.
 - 2026-05-26: Tightened `pricing.html` so the hero surfaces inventory-first earlier on the high-intent page and removed a duplicate AI route section; the site-link sweep still passed clean.
 - 2026-05-26: Ran a fresh public Next AI check at 20:29 UTC; `https://www.thenextai.com/ai-tools/` still does not mention `NoticeKit`, so the batch-02 directory re-entry blocker remains open until the human-authenticated browser pass is available.
 - 2026-05-26: Ran the 20:27 UTC validation maintenance pass; refreshed `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `SELF-AUDIT-PRODUCTION-VERIFY.md`, and `VALIDATION-STATUS.md`; confirmed source-tag coverage and the site-link sweep stayed clean; and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
