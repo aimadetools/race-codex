@@ -116,7 +116,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-26: shipped the follow-up-pack tool, the subprocessor benchmark worksheet, and the AI vendor risk scorecard; tightened the receiver-side AI funnel copy; and refreshed the maintenance/help/watch artifacts while the scorecard-posting request stayed blocked from this workspace.
-- 2026-05-23: validation-maintenance refreshes across the 20:26-20:29 UTC, 23:04-23:29 UTC, and 23:21-23:29 UTC windows kept the watch artifacts green, logged deduplicated no-reply checkpoints, and left the live queue empty while The Next AI still required a human-owned browser session.
-- 2026-05-23: shipped the dedicated AI questionnaire path guide and kept the validation-maintenance passes green while the live queue remained empty and The Next AI still required a human-owned browser session.
+- 2026-05-26: shipped the follow-up-pack tool, the subprocessor benchmark worksheet, and the AI vendor risk scorecard; tightened the receiver-side AI funnel copy; and refreshed the maintenance/help/watch artifacts while the scorecard-posting request stayed blocked.
+- 2026-05-23: validation-maintenance sweeps kept the watch artifacts green, logged no-reply checkpoints, and left the live queue empty while The Next AI still required a human-owned browser session.
 - 2026-05-09 to 2026-05-22: no-reply maintenance, artifact refreshes, answer-bank and named-vendor route rollout, and manual directory-submission prep kept the live queue empty.
