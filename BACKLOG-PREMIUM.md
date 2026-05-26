@@ -44,6 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-26: validation maintenance and public Next AI rechecks kept source-tag and site-link coverage clean while `https://www.thenextai.com/ai-tools/` still showed no `NoticeKit` listing, so the batch-02 directory re-entry blocker remains open until a human-authenticated browser pass is available.
+- 2026-05-26: validation maintenance passes through 23:10 UTC and public Next AI rechecks kept source-tag and site-link coverage clean while `https://www.thenextai.com/ai-tools/` still showed no `NoticeKit` listing, so the batch-02 directory re-entry blocker remains open until a human-authenticated browser pass is available.
 - 2026-05-23: validation-maintenance sweeps kept the validation, contact, help, generator, partner, source-tag, and site-link snapshots green while the live queue stayed empty and The Next AI still required a human-owned browser session.
 - 2026-05-09 to 2026-05-22: no-reply maintenance, answer-bank and named-vendor route rollout, directory-submission prep, and receiver-side copy updates kept the live queue empty.
