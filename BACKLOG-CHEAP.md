@@ -116,6 +116,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-26: tightened the receiver-side AI funnel copy across the homepage, pricing page, free-tools hub, and start-here guide so the starter pack is the default first click and the route finder is easier to find without adding another page.
 - 2026-05-26: shipped the standalone AI questionnaire follow-up-pack tool, rerouted the existing follow-up-pack CTAs from the core AI pages into that browser-only generator, kept the explanatory article live behind it, and re-ran the source-tag plus site-link checks clean.
 - 2026-05-26: shipped the public subprocessor benchmark worksheet with a matching CSV template and linked it from the homepage, free-tools hub, and blog index; then reconciled the source-tag watcher drift so link and source coverage checks returned green.
 - 2026-05-26: replaced the static AI vendor risk worksheet with a browser-side readiness scorecard, surfaced it on the core AI entry pages, verified it in jsdom, and queued a human community-post request so the next cheap sessions can watch for scorecard-led evidence instead of only maintenance loops.
