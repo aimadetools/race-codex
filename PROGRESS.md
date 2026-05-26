@@ -16,6 +16,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-26: Cleaned up repo memory after the checkpoint by collapsing duplicate completed-summary maintenance bullets in both backlog files into single 08:07-12:47 UTC summary lines while leaving the live trigger-driven tasks unchanged.
 - 2026-05-26: Shipped a narrower AI buyer-follow-up asset instead of leaving the "20-question pack" buried inside the full answer builder: published a standalone browser-only follow-up-pack tool that generates a responder summary, 20 reusable buyer-question answers, and an internal handoff note with local autosave; then rerouted the homepage, free-tools hub, starter pack, pricing page, start-here page, AI procurement hub, training-stance page, blog index, and the explanatory follow-up article into that tool and re-verified source-tag plus site-link coverage.
 - 2026-05-26: Tightened the receiver-side AI funnel copy after the no-signal maintenance window by making the starter pack the default first click on the homepage and pricing page, moving the route finder higher on the free-tools hub, and simplifying the start-here path copy so the questionnaire-receiver role is clearer in the first few seconds.
+- 2026-05-26: Re-checked the active Reddit help request at 16:05 UTC from the public web and confirmed both target threads are still reachable, but the r/SaaS thread still auto-removes linked comments unless the account has 5 karma and this workspace still cannot post as an authenticated Reddit user.
 
 ## Next Step
 
