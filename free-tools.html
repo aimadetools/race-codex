@@ -733,33 +733,61 @@
             };
           }
         } else if (need === "files-now") {
-          recommendation = frequency === "repeat"
-            ? {
-                title: "Buy Pro.",
-                summary: "Repeated changes or segmented customers point to the repeatable workflow in Pro.",
-                bullets: [
-                  "Best for recurring or segmented notice work",
-                  "Includes the stronger workflow packet",
-                  "Fastest path if you already know the tier"
-                ],
-                primaryHref: "https://buy.stripe.com/cNieVd3Gw7X858680feEo08",
-                primaryLabel: "Buy Pro",
-                secondaryHref: "kit-preview.html",
-                secondaryLabel: "See exact preview",
-              }
-            : {
-                title: "Buy Starter.",
-                summary: "One vendor change and one notice workflow fit the one-time Starter kit.",
-                bullets: [
-                  "Best for a single vendor change",
-                  "Matches the one-time operating packet",
-                  "Pairs well with the kit preview"
-                ],
-                primaryHref: "https://buy.stripe.com/5kQbJ16SIgtE7ge80feEo09",
-                primaryLabel: "Buy Starter",
-                secondaryHref: "kit-preview.html",
-                secondaryLabel: "See exact preview",
-              };
+          recommendation = topic === "ai-procurement"
+            ? frequency === "repeat"
+              ? {
+                  title: "Open the AI Pro kit.",
+                  summary: "You need reusable AI review files, and the paid Pro path is the shortest route when the repeat-review problem now needs matrix, packet, intake, and calendar files around the answer bank.",
+                  bullets: [
+                    "Best for repeated procurement, security, or counsel review",
+                    "Adds repeat-review operating files around the reusable answer bank",
+                    "Keeps the builder and disclosure packet path one click away"
+                  ],
+                  primaryHref: "ai-security-questionnaire-pro-kit.html?source=free-tools-route-finder",
+                  primaryLabel: "Open AI Pro kit",
+                  secondaryHref: "blog-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open packet guide",
+                }
+              : {
+                  title: "Start with the AI vendor inventory workspace.",
+                  summary: "You need the raw working facts first, so the inventory workspace is the shortest route to providers, regions, owners, proof links, and review notes before you draft the answer.",
+                  bullets: [
+                    "Best when the vendor story is still scattered",
+                    "Creates one local source of truth before writing",
+                    "Keeps the risk checklist and worksheet one click away"
+                  ],
+                  primaryHref: "blog-ai-vendor-inventory-template.html?source=free-tools-route-finder",
+                  primaryLabel: "Open inventory workspace",
+                  secondaryHref: "blog-ai-vendor-risk-assessment.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open risk checklist",
+                }
+            : frequency === "repeat"
+              ? {
+                  title: "Run the self-audit first.",
+                  summary: "Repeated notice work should get a readiness score before you pick the paid kit or ask for a teardown.",
+                  bullets: [
+                    "Best when the workflow still has gaps",
+                    "Shows whether the packet is ready for send",
+                    "Keeps the generator and teardown one click away"
+                  ],
+                  primaryHref: "self-audit.html?source=free-tools-route-finder",
+                  primaryLabel: "Run self-audit",
+                  secondaryHref: "generator.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open generator",
+                }
+              : {
+                  title: "Open the local generator.",
+                  summary: "You need the notice draft, objection deadline, and evidence checklist now, so the generator is the shortest path.",
+                  bullets: [
+                    "Best when you need the notice copy now",
+                    "Drafts the objection deadline and proof checklist locally",
+                    "Keeps teardown one click away if the workflow still looks brittle"
+                  ],
+                  primaryHref: "generator.html?source=free-tools-route-finder",
+                  primaryLabel: "Open local generator",
+                  secondaryHref: "self-audit.html?source=free-tools-route-finder",
+                  secondaryLabel: "Run self-audit",
+                };
         } else if (need === "public-page") {
           recommendation = frequency === "repeat"
             ? {
@@ -801,20 +829,6 @@
             primaryLabel: "Open kit preview",
             secondaryHref: "pricing.html",
             secondaryLabel: "Compare pricing",
-          };
-        } else if (need === "written-answer" && frequency === "repeat") {
-          recommendation = {
-            title: "Run the self-audit first.",
-            summary: "Repeated changes usually need a quick readiness score before a teardown or purchase.",
-            bullets: [
-              "Best when the workflow is still getting clarified",
-              "Helps decide whether teardown or paid files come next",
-              "Fastest route to a structured internal answer"
-            ],
-            primaryHref: "self-audit.html?source=free-tools-route-finder",
-            primaryLabel: "Run self-audit",
-            secondaryHref: "free-teardown.html?source=free-tools-route-finder",
-            secondaryLabel: "Request free teardown",
           };
         } else if (frequency === "repeat") {
           recommendation = {
