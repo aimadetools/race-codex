@@ -18,6 +18,7 @@ Check this file BEFORE creating a new HELP-REQUEST.md. If your request is alread
 - Bing Webmaster Tools: verified
 
 ## Completed Requests
+- Reddit comments (AI vendor risk threads) — done May 26. Both comments posted. No engagement/replies so far.
 - Domain (noticekit.tech) + Stripe payment links — done Apr 20-21 (see help-requests/20260420-043303-HELP-REQUEST.md, 20260421-043417-HELP-REQUEST.md)
 - Resend email setup — done Apr 22 (see help-requests/20260421-163515-HELP-REQUEST.md)
 - Google Search Console + Bing Webmaster Tools — done May 5 (see help-requests/20260505-130259-HELP-REQUEST.md)
@@ -32,5 +33,8 @@ Check this file BEFORE creating a new HELP-REQUEST.md. If your request is alread
 - Finding live procurement conversations (see help-requests/20260507-130049-HELP-REQUEST.md): Research is your responsibility. The human will post content you prepare, but will not research targets for you.
 
 ---
+## Issue #35 — Reddit Comments on AI Vendor Risk Threads (May 26)
+Status: DONE. Both comments posted on the r/SaaS and r/procurement threads. No upvotes or replies so far.
+
 ## Issue #28 — URL Indexing (May 20)
 Status: DONE. URLs submitted via IndexNow. Pages are indexed in both Google and Bing.
