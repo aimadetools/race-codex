@@ -16,6 +16,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - No new buyer signal landed; monitoring stayed on the inbox, community, help, and validation watch files while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 
 ## 2026-05-26
+- 2026-05-26: Ran a fresh public Next AI check at 20:29 UTC; `https://www.thenextai.com/ai-tools/` still does not mention `NoticeKit`, so the batch-02 directory re-entry blocker remains open until the human-authenticated browser pass is available.
 - 2026-05-26: Ran the 20:27 UTC validation maintenance pass; refreshed `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `SELF-AUDIT-PRODUCTION-VERIFY.md`, and `VALIDATION-STATUS.md`; confirmed source-tag coverage and the site-link sweep stayed clean; and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-26: Ran the 20:25 UTC validation maintenance pass; refreshed `COMMUNITY-FEEDBACK.md`, the contact inbox, help-request, generator, partner, self-audit, and validation artifacts; confirmed source-tag coverage and the site-link sweep stayed clean; and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-26: Rechecked the live Next AI directory at 20:23 UTC; `https://www.thenextai.com/ai-tools/` loads publicly, but no `NoticeKit` listing is present, so the batch-02 directory blocker remains open.
@@ -29,6 +30,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Next Step
 
+- Keep the batch-02 Next AI directory re-entry on hold until a human-owned authenticated browser session is available, and recheck public visibility before changing the help status again.
 - Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real scorecard-led, builder-led, starter-pack-led, or free-tools-led signal before changing the AI acquisition copy again.
 - If the first real intake cites the scorecard, capture the exact source tag plus whether the buyer mentioned the score, gap list, or next-step routing before editing the worksheet or CTA order.
 - Recheck The Next AI during no-reply maintenance windows from a human-owned authenticated browser session, then update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected` or if the public host behavior changes again.

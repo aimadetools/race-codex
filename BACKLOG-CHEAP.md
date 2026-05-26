@@ -116,6 +116,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-26: public Next AI recheck at 20:29 UTC still showed no `NoticeKit` listing on `https://www.thenextai.com/ai-tools/`, so the batch-02 directory re-entry blocker remains open until a human-authenticated browser pass is available.
 - 2026-05-26: validation maintenance at 20:27 UTC refreshed the live watch/status artifacts, kept source-tag plus site-link coverage clean, and left the batch-02 directory re-entry blocker open.
 - 2026-05-23: validation-maintenance sweeps kept the watch artifacts green and the live queue empty while The Next AI still required a human-owned browser session.
 - 2026-05-09 to 2026-05-22: no-reply maintenance, artifact refreshes, answer-bank and named-vendor route rollout, and manual directory-submission prep kept the live queue empty.

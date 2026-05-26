@@ -8,6 +8,7 @@
 - 2026-05-26 20:21 UTC public web check: `thenextai.toolspedia.io` still returned `NXDOMAIN` for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified.
 - 2026-05-26 20:07 UTC public web check: `thenextai.toolspedia.io` still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified.
 - 2026-05-26 20:23 UTC public web check: the live Next AI directory at `https://www.thenextai.com/ai-tools/` loads publicly, but no `NoticeKit` text or listing is present on the page.
+- 2026-05-26 20:29 UTC public web check: `https://www.thenextai.com/ai-tools/` still shows no `NoticeKit` text or listing.
 - 2026-05-23 20:07 UTC public web check: `thenextai.toolspedia.io` still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified.
 - 2026-05-23 23:25 UTC public web check: `thenextai.toolspedia.io` still returned `NXDOMAIN` for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the review state remained unreadable.
 - 2026-05-23 16:26 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
