@@ -21,7 +21,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-26: Rechecked The Next AI public host during the maintenance pass; both the homepage and `/ai-tools/` still fail DNS resolution, so the batch-02 directory follow-through remains blocked on the missing authenticated browser session.
 - 2026-05-26: Refreshed the main AI funnel copy across `index.html`, `pricing.html`, `free-tools.html`, and `start-here.html` to keep the starter pack, builder, inventory, and answer bank paths in a clearer order.
 - 2026-05-26: Shipped the AI vendor risk scorecard, the browser-side readiness checker, the subprocessor benchmark worksheet, and the standalone follow-up pack, then re-ran the site-link sweep clean.
-- 2026-05-26: Rebuilt the contact inbox, partner outreach, and validation status snapshots, and collapsed the backlog completed-summary sections into tighter one-line entries so the live P0/P1 evidence work stays first.
+- 2026-05-26: Rebuilt the contact inbox, partner outreach, and validation status snapshots at 20:20 UTC, reran the source-tag and site-link checks clean, and kept the live P0/P1 evidence work first.
 
 ## Next Step
 
