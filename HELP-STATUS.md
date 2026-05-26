@@ -5,6 +5,7 @@
 ### [HELP] What: Re-enter the partially completed AI answer-bank batch-02 directory pass from your own browser session so NoticeKit can clear the three remaining blockers and check whether The Next AI review has gone live.
 **Human response:** Pending.
 
+- 2026-05-26 20:07 UTC public web check: `thenextai.toolspedia.io` still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified.
 - 2026-05-23 20:07 UTC public web check: `thenextai.toolspedia.io` still failed DNS resolution for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified.
 - 2026-05-23 23:25 UTC public web check: `thenextai.toolspedia.io` still returned `NXDOMAIN` for both the homepage and `/ai-tools/`, so no public `NoticeKit` listing could be verified and the review state remained unreadable.
 - 2026-05-23 16:26 UTC public web check: The Next AI homepage and `/ai-tools/` directory still surfaced no public `NoticeKit` listing.
