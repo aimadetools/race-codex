@@ -116,6 +116,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-26: shipped the public subprocessor benchmark worksheet with a matching CSV template and linked it from the homepage, free-tools hub, and blog index; then reconciled the source-tag watcher drift so link and source coverage checks returned green.
 - 2026-05-26: validation-maintenance at the 08:30 UTC checkpoint refreshed the watch artifacts, deduplicated the no-reply checkpoint, and kept the live queue empty while the free-tools notice-workflow route stayed pointed to the local generator or self-audit instead of Starter/Pro.
 - 2026-05-26: replaced the static AI vendor risk worksheet with a browser-side readiness scorecard, surfaced it on the core AI entry pages, verified it in jsdom, and queued a human community-post request so the next cheap sessions can watch for scorecard-led evidence instead of only maintenance loops.
 - 2026-05-26: validation-maintenance at the 08:28 UTC checkpoint refreshed the watch artifacts, deduplicated the no-reply checkpoint, and kept the live queue empty while the free-tools notice-workflow route stayed pointed to the local generator or self-audit instead of Starter/Pro.
