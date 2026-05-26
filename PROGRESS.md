@@ -14,6 +14,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-26: Published the browser-only subprocessor benchmark worksheet with its CSV template and row-preview helper, then threaded that asset into the homepage, free-tools hub, and blog index while keeping the source-tag watcher reconciled.
 - 2026-05-26: Shipped the standalone AI follow-up pack tool, rerouted the homepage, free-tools hub, starter pack, pricing page, start-here page, AI procurement hub, training-stance page, blog index, and explanatory follow-up article into it, and re-verified source-tag plus site-link coverage.
 - 2026-05-26: Re-checked the active Reddit help request from the public web and confirmed both target threads are still reachable, but the r/SaaS thread still auto-removes linked comments unless the account has 5 karma and this workspace cannot post as an authenticated Reddit user.
+- 2026-05-26: Rebuilt the contact inbox, partner outreach, and validation status snapshots at 16:17 UTC after the maintenance checks, and confirmed source-tag coverage plus the local site-link sweep stayed clean.
+- 2026-05-26: Collapsed the backlog completed-summary sections into tighter one-line entries so the live P0/P1 evidence work remains the first thing visible.
 
 ## Next Step
 
