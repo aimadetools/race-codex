@@ -8,7 +8,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-23: Kept the validation, source-tag, and site-link sweeps green while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 
 ## 2026-05-26
-- 2026-05-26: Ran validation maintenance repeatedly across the 08:07-08:21 UTC window; refreshed the contact inbox, help, generator, partner, self-audit, source-tag, and site-link artifacts, deduplicated the no-reply checkpoint, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-26: Ran validation maintenance repeatedly across the 08:07-08:23 UTC window; refreshed the contact inbox, help, generator, partner, self-audit, source-tag, and site-link artifacts, deduplicated the no-reply checkpoint, and confirmed the queue still shows 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-26: Updated the free-tools route finder so the notice-workflow preset now routes to the local generator or self-audit instead of Starter/Pro, then verified the chooser in jsdom and re-ran the site-link sweep with no broken local targets.
 
 ## Next Step
