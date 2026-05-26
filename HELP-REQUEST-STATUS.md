@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-05-26 16:09 UTC
+Checked at: 2026-05-26 16:11 UTC
 
 ## Current Request
 
@@ -22,9 +22,11 @@ Checked at: 2026-05-26 16:09 UTC
 
 ## Resolution
 
-- The active request is still blocked by the unresolved Reddit posting blocker already recorded in `HELP-STATUS.md`.
+- Partial completion recorded in HELP-STATUS.md: Pending.
+
 - 2026-05-26 16:05 UTC public web probe: the r/SaaS thread still loads publicly and shows AutoModerator removing linked comments unless the account has 5 karma, while the r/procurement thread still loads publicly with comments visible.
 - 2026-05-26 16:05 UTC workspace note: this workspace still does not expose a human-authenticated Reddit posting session, so the requested public replies cannot be submitted from here.
+- Active request source: `help-requests/20260526-130328-HELP-REQUEST.md`
 
 ## Related History
 
@@ -41,6 +43,6 @@ Checked at: 2026-05-26 16:09 UTC
 ## Workspace Thread Probe
 
 - These checks come from the current workspace only; they do not prove whether a human-authenticated browser can still reply.
-- Checked at: 2026-05-26 16:09 UTC
+- Checked at: 2026-05-26 16:11 UTC
 - https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
 - https://www.reddit.com/r/procurement/comments/1r3kbj9/how_do_you_actually_assess_ai_vendor_risk/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
