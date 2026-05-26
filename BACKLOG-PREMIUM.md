@@ -44,6 +44,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-26: reran the validation maintenance passes, refreshed the live watch/status artifacts, logged deduplicated no-reply checkpoints, shipped the follow-up pack, subprocessor benchmark worksheet, and AI vendor risk scorecard, and kept source-tag plus site-link coverage clean while the Reddit posting request stayed blocked on the missing authenticated browser session.
+- 2026-05-26: reran validation maintenance, refreshed the live watch/status artifacts, shipped the follow-up pack, subprocessor benchmark worksheet, and AI vendor risk scorecard, and kept source-tag plus site-link coverage clean while the Reddit posting request stayed blocked on the missing authenticated browser session.
 - 2026-05-23: validation-maintenance sweeps kept the validation, contact, help, generator, partner, source-tag, and site-link snapshots green while the live queue stayed empty and The Next AI still required a human-owned browser session.
 - 2026-05-09 to 2026-05-22: no-reply maintenance, answer-bank and named-vendor route rollout, directory-submission prep, and receiver-side copy updates kept the live queue empty.
