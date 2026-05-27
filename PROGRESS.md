@@ -20,6 +20,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-27
 
+- Surfaced the exact Starter and Pro bundle preview earlier on `index.html` and `free-tools.html` so first-time visitors can inspect what is inside before dropping into pricing.
+- Re-ran `npm run check:site-links` after the copy update and confirmed all 77 HTML files still have valid local targets.
 - Ran `npm run run:validation-maintenance` at `2026-05-27 16:30 UTC`; refreshed the inbox, generator, partner, validation, community-feedback, and watch artifacts again, and the live checks stayed green.
 - Ran `npm run run:validation-maintenance` at `2026-05-27 16:27 UTC`; refreshed the inbox, generator, partner, validation, community-feedback, and watch artifacts, and the live checks stayed green.
 - Rechecked the open benchmark-comment/indexing help request after the maintenance pass; the Reddit threads still load publicly, but the workspace still cannot post or request indexing because it has no authenticated external session.
