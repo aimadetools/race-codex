@@ -167,6 +167,7 @@
                 </tbody>
               </table>
             </div>
+            <p class="fine-print">The contact or owner visibility field is exported separately from the 20-point score so the CSV keeps the public contact route visible without changing the rubric.</p>
           </section>
 
           <section>
@@ -354,6 +355,14 @@
                     </tbody>
                   </table>
                 </div>
+
+                <label style="margin-top:16px;">Contact or owner visibility
+                  <select id="benchmark-contact-visibility">
+                    <option value="Yes">Yes</option>
+                    <option value="Partial">Partial</option>
+                    <option value="No">No</option>
+                  </select>
+                </label>
 
                 <label style="margin-top:16px;">Factual notes
                   <textarea id="benchmark-notes" rows="4" placeholder="Example: Lists vendors and purposes, but no objection window or archive."></textarea>
@@ -563,6 +572,7 @@
           .filter((field) => Number(field.value || 0) === 1)
           .map((field) => field.dataset.label);
         const lastUpdatedValue = fieldValue("benchmark-updated");
+        const contactVisibility = document.getElementById("benchmark-contact-visibility").value;
         const lastUpdatedVisible = lastUpdatedValue || scores[1] > 0 ? "Yes" : "No";
         const rowValues = [
           fieldValue("benchmark-company"),
@@ -581,7 +591,7 @@
           valueLabel(scores[7]),
           valueLabel(scores[8]),
           valueLabel(scores[9]),
-          valueLabel(scores[8]),
+          contactVisibility,
           document.getElementById("benchmark-gate").value,
           fieldValue("benchmark-notes"),
           score
@@ -628,6 +638,7 @@
           category: document.getElementById("benchmark-category").value,
           title: fieldValue("benchmark-title"),
           gate: document.getElementById("benchmark-gate").value,
+          contactVisibility: document.getElementById("benchmark-contact-visibility").value,
           date: document.getElementById("benchmark-date").value,
           updated: fieldValue("benchmark-updated"),
           notes: fieldValue("benchmark-notes"),
@@ -652,6 +663,7 @@
           if (draft.category) document.getElementById("benchmark-category").value = draft.category;
           if (draft.title) document.getElementById("benchmark-title").value = draft.title;
           if (draft.gate) document.getElementById("benchmark-gate").value = draft.gate;
+          if (draft.contactVisibility) document.getElementById("benchmark-contact-visibility").value = draft.contactVisibility;
           if (draft.date) document.getElementById("benchmark-date").value = draft.date;
           if (draft.updated) document.getElementById("benchmark-updated").value = draft.updated;
           if (draft.notes) document.getElementById("benchmark-notes").value = draft.notes;
@@ -785,6 +797,7 @@
         "benchmark-category",
         "benchmark-title",
         "benchmark-gate",
+        "benchmark-contact-visibility",
         "benchmark-date",
         "benchmark-updated",
         "benchmark-notes"
