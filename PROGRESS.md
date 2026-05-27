@@ -20,6 +20,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-27
 
+- Rechecked the open benchmark-comment/indexing help request at `2026-05-27 16:18 UTC`; the target Reddit threads still load publicly, but the workspace remains blocked from posting or requesting indexing because it has no authenticated external session.
 - Broke the maintenance-only pattern by turning the new tracker into a public proof asset: shipped `blog-subprocessor-benchmark-report-01.html` plus `subprocessor-benchmark-pilot-2026-05-27.csv`, scoring 8 live public SaaS subprocessor pages with the published 20-point rubric.
 - Promoted the benchmark report on `index.html`, `blog.html`, and `free-tools.html`, and added the new report URL to `sitemap.xml` so the asset is discoverable from core acquisition surfaces.
 - Finished the missing benchmark-package pieces from the methodology by shipping `blog-subprocessor-benchmark-report-01-appendix.html`, `subprocessor-benchmark-pilot-appendix-2026-05-27.csv`, score-distribution and common-gap charts on the main report, and appendix links from the homepage, blog index, free-tools hub, and sitemap.
