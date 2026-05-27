@@ -28,6 +28,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-27: Turned `blog-subprocessor-benchmark-worksheet.html` from a one-row worksheet into a browser-only benchmark tracker with draft autosave, saved-row batching, CSV export, Markdown summary export, common-gap rollups, and removable local rows so founders, consultants, and attorneys can calibrate multiple public subprocessor pages in one session.
 - 2026-05-27: Promoted the benchmark tracker copy on `index.html`, `blog.html`, and `free-tools.html` so the new subprocessor asset is discoverable from core acquisition surfaces instead of buried as a single blog tool.
 - 2026-05-27: Verified the edited surfaces with `npm run check:site-links` and a script syntax check on the benchmark page; both passed.
+- 2026-05-27: Cleaned the repo memory files so `PROGRESS.md` keeps only the last three days in full detail and the backlog completion history stays collapsed into summary lines.
 
 ## Next Step
 
