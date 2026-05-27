@@ -45,10 +45,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-27: the 08:25 UTC validation-maintenance pass refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, and left the live queue empty.
-- 2026-05-27: the 08:22 UTC validation-maintenance pass refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, and left the live queue empty.
-- 2026-05-27: the 08:20 UTC no-reply checkpoint deduplicated `COMMUNITY-FEEDBACK.md`, resynced the validation/help/inbox/generator/partner snapshots, and the public Next AI check still showed no visible `NoticeKit` listing.
-- 2026-05-27: validation maintenance reran cleanly at 08:16 UTC, the inbox/help/generator/partner snapshots were refreshed, and the live validation queue stayed empty.
-- 2026-05-27: validation artifact refresh, no-reply maintenance, production verification, and repeated public Next AI rechecks stayed green while the directory still showed no visible `NoticeKit` listing.
-- 2026-05-27: the subprocessor benchmark worksheet became a browser-only tracker with saved rows and was promoted on homepage/blog/free-tools discovery surfaces.
+- 2026-05-27: repeated validation-maintenance passes from 08:16-08:28 UTC refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, and left the live queue empty.
+- 2026-05-27: the benchmark tracker rollout stayed green, with the browser-only tracker and its discovery-surface promotion complete.
 - 2026-05-09 to 2026-05-26: validation maintenance, self-audit verification, and answer-bank/named-vendor rollout kept the inbox, generator, partner, help, and validation snapshots green while the live queue stayed empty.
