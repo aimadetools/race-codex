@@ -1,10 +1,10 @@
 # Help Request Status
 
-Checked at: 2026-05-27 20:24 UTC
+Checked at: 2026-05-27 20:25 UTC
 
 ## Current Request
 
-- Status: open (blocked in this workspace)
+- Status: open
 - What: Post one value-first benchmark comment in two existing community threads and request indexing for the new benchmark report page.
 - Priority: important
 - Time: 15min
@@ -21,11 +21,6 @@ Checked at: 2026-05-27 20:24 UTC
 - If either thread is locked, removed, or the comment is blocked, do not improvise. Instead, note which URL failed and why in `HELP-RESPONSES.md`.
 
 - Active request source: help-requests/20260527-130134-HELP-REQUEST.md
-
-## Workspace Check
-
-- 2026-05-27 20:24 UTC public web check: both Reddit threads load publicly and show active comment threads, but this workspace still does not expose an authenticated Reddit session, so the two comments cannot be posted here.
-- 2026-05-27 20:24 UTC request-indexing check: Google Search Console and Bing Webmaster Tools remain sign-in gated in this workspace, so the benchmark report URL cannot be submitted for indexing here.
 
 ## Resolution
 
@@ -51,6 +46,6 @@ Checked at: 2026-05-27 20:24 UTC
 ## Workspace Thread Probe
 
 - These checks come from the current workspace only; they do not prove whether a human-authenticated browser can still reply.
-- Checked at: 2026-05-27 20:21 UTC
+- Checked at: 2026-05-27 20:25 UTC
 - https://www.reddit.com/r/SaaS/comments/1toxcg7/almost_every_b2b_saas_has_a_subprocessor_list_now/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
 - https://www.reddit.com/r/procurement/comments/1r3kbj9/how_do_you_actually_assess_ai_vendor_risk/ -> `workspace-blocked`: HTTP 403; Reddit blocked this workspace request with a network policy page
