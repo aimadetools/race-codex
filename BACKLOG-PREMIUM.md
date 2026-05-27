@@ -45,5 +45,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-27: validation maintenance stayed green through the 23:24-23:25 UTC refresh; the browser-only tracker, public benchmark package, watcher sync, and site-link checks all held while the live queue stayed empty and the benchmark-comment help request remained externally blocked.
+- 2026-05-27: validation maintenance held through the 23:24-23:25 UTC refresh, with the tracker, benchmark package, watcher sync, and site-link checks all green while the live queue stayed empty.
 - 2026-05-09 to 2026-05-26: validation maintenance, self-audit verification, and answer-bank/named-vendor rollout kept the inbox, generator, partner, help, and validation snapshots green with no live replies.
