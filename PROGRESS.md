@@ -21,6 +21,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-05-27
 
 - Ran `npm run run:validation-maintenance` repeatedly at `2026-05-27 23:14 UTC`, `23:15 UTC`, `23:17 UTC`, `23:19 UTC`, and `23:21 UTC`; each pass kept `check:source-tag-coverage` and `check:site-links` green, refreshed the contact/help/generator/partner/self-audit/validation ledgers, and left the live queue at 0 while the benchmark-comment help request stayed externally blocked.
+- Ran `npm run run:validation-maintenance` again at `2026-05-27 23:22 UTC`; the watch, source-tag coverage, site-link, self-audit, generator, partner, and help refreshes all stayed green, `COMMUNITY-FEEDBACK.md` picked up the deduplicated no-reply checkpoint, and the status artifacts were rewritten with the live queue still at 0.
 - Rechecked the live The Next AI public pages and the two Reddit watch threads; both directory pages still load publicly without a visible `NoticeKit` listing, and the threads still do not expose a real reply that changes the validation state.
 - Checked the benchmark-comment request at `2026-05-27 23:14 UTC` against the public Reddit pages; both target threads are open, but this workspace still lacks the authenticated Reddit and Search Console/Bing sessions needed to post the comments or request indexing directly, so the request remains externally blocked.
 - Surfaced the exact Starter and Pro bundle preview earlier on `index.html` and `free-tools.html` so first-time visitors can inspect what is inside before dropping into pricing.
