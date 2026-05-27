@@ -20,6 +20,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-27
 
+- Refreshed `HELP-REQUEST-STATUS.md`, `HELP-REQUEST-LAUNCHPAD.md`, `VALIDATION-STATUS.md`, and `VALIDATION-REPLY-WATCH.md` at 20:12 UTC after confirming the Reddit target URLs still load publicly but the workspace remains blocked from authenticated commenting and Search Console/Bing submission.
 - Surfaced the exact Starter and Pro bundle preview earlier on `index.html` and `free-tools.html` so first-time visitors can inspect what is inside before dropping into pricing.
 - Ran `npm run run:validation-maintenance` at `2026-05-27 20:10 UTC` after the earlier 16:24, 16:27, 16:30, 20:03, and 20:08 UTC passes; refreshed the inbox, generator, partner, validation, community-feedback, and watch artifacts again, rechecked site links, and kept the live checks green.
 - Re-ran `npm run check:site-links` after the copy update and maintenance pass and confirmed all 77 HTML files still have valid local targets.
