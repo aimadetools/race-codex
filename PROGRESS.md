@@ -27,6 +27,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Filed a new `HELP-REQUEST.md` asking for one benchmark-report community pass plus indexing so the new asset can get outside the repo quickly.
 - Fixed the stale help/request memory after `HELP-REQUEST.md` changed, then ran a full green validation-maintenance pass that refreshed the inbox/help/generator/partner snapshots, advanced the no-reply checkpoint to `2026-05-27 12:57 UTC`, and added the missing benchmark report, appendix, and community source tags to watched coverage so the new acquisition lane is trackable.
 - Ran another full green validation-maintenance pass after the benchmark package shipped, refreshing the inbox/help/generator/partner/self-audit snapshots again, advancing the no-reply checkpoint to `2026-05-27 12:59 UTC`, and confirming `check:self-audit-follow-up`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` still pass with no real submissions or replies.
+- Surfaced the benchmark proof asset much higher on the homepage, free-tools hub, blog index, and the report itself so the new public evidence is visible before the older workflow pages.
+- Re-ran `npm run check:site-links` after the copy refresh and confirmed all 77 HTML files still have valid local targets.
 - The live queue still has 0 real submissions, 0 replies, and 0 interviews, but the site now has a fresh distribution asset instead of another maintenance-only pass.
 
 ## Next Step
