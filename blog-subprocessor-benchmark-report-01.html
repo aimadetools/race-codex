@@ -21,6 +21,14 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/blog-subprocessor-benchmark-report-01.html">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .chart-stack { display:grid; gap:14px; }
+      .chart-row { display:grid; gap:8px; }
+      .chart-label { display:flex; align-items:baseline; justify-content:space-between; gap:12px; color:var(--text); font-size:.95rem; }
+      .chart-bar { overflow:hidden; height:12px; border:1px solid rgba(85,214,190,.25); border-radius:999px; background:rgba(255,255,255,.06); }
+      .chart-bar span { display:block; height:100%; border-radius:inherit; background:linear-gradient(90deg, rgba(85,214,190,.92), rgba(244,201,93,.88)); }
+      .chart-bar.danger span { background:linear-gradient(90deg, rgba(255,125,112,.95), rgba(244,201,93,.88)); }
+    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -89,6 +97,8 @@
             <p>This is a pilot benchmark, not a gotcha list. The goal is to test one visible rubric against public subprocessor pages and see what a customer, founder, consultant, or attorney can actually learn without a login, trust-center request, or contract PDF.</p>
             <div class="hero-actions">
               <a class="button" href="subprocessor-benchmark-pilot-2026-05-27.csv" download>Download scored CSV</a>
+              <a class="button secondary" href="blog-subprocessor-benchmark-report-01-appendix.html?source=benchmark-report-appendix">Open scoring appendix</a>
+              <a class="button secondary" href="subprocessor-benchmark-pilot-appendix-2026-05-27.csv" download>Download appendix CSV</a>
               <a class="button secondary" href="blog-subprocessor-benchmark-worksheet.html?source=benchmark-report-tracker">Open tracker</a>
               <a class="button secondary" href="BENCHMARK-REPORT-METHODOLOGY.md" download>Download methodology</a>
               <a class="button secondary" href="free-teardown.html?source=benchmark-report-teardown">Request free teardown</a>
@@ -238,6 +248,60 @@
           </section>
 
           <section>
+            <h2>Score distribution and common gaps</h2>
+            <div class="grid-2">
+              <article class="template-box">
+                <strong>Distribution across the 8-page pilot</strong>
+                <div class="chart-stack" aria-label="Benchmark score distribution">
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Adequate</span><span>3 pages</span></div>
+                    <div class="chart-bar"><span style="width:37.5%;"></span></div>
+                  </div>
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Thin</span><span>5 pages</span></div>
+                    <div class="chart-bar"><span style="width:62.5%;"></span></div>
+                  </div>
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Strong</span><span>0 pages</span></div>
+                    <div class="chart-bar"><span style="width:0%;"></span></div>
+                  </div>
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Risky</span><span>0 pages</span></div>
+                    <div class="chart-bar"><span style="width:0%;"></span></div>
+                  </div>
+                </div>
+                <p class="fine-print">Average score: 11.6 / 20. Median score: 11.5 / 20.</p>
+              </article>
+              <article class="template-box">
+                <strong>What was missing most often</strong>
+                <div class="chart-stack" aria-label="Most common benchmark gaps">
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Objection path</span><span>8 of 8</span></div>
+                    <div class="chart-bar danger"><span style="width:100%;"></span></div>
+                  </div>
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Public history</span><span>8 of 8</span></div>
+                    <div class="chart-bar danger"><span style="width:100%;"></span></div>
+                  </div>
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Notice method</span><span>6 of 8</span></div>
+                    <div class="chart-bar danger"><span style="width:75%;"></span></div>
+                  </div>
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Customer action path</span><span>5 of 8</span></div>
+                    <div class="chart-bar"><span style="width:62.5%;"></span></div>
+                  </div>
+                  <div class="chart-row">
+                    <div class="chart-label"><span>Scope detail</span><span>4 of 8</span></div>
+                    <div class="chart-bar"><span style="width:50%;"></span></div>
+                  </div>
+                </div>
+                <p class="fine-print">Open the appendix for the criterion-by-criterion point breakdown on every reviewed page.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
             <h2>What a founder should add before enterprise review</h2>
             <div class="grid-2">
               <article class="card">
@@ -264,6 +328,8 @@
             <p>This pilot uses the same 20-point rubric published in the NoticeKit benchmark methodology and tracker. Scores were assigned from public pages only. No gated trust-center material, private notices, or contract PDFs were used in the scoring.</p>
             <p>The sample is intentionally small. It is enough to test the rubric and publish a concrete example, but not enough to claim market-wide averages. The broader 50-page benchmark still remains the target if this pilot produces useful buyer or advisor feedback.</p>
             <div class="hero-actions">
+              <a class="button secondary" href="blog-subprocessor-benchmark-report-01-appendix.html?source=benchmark-report-methodology-appendix">Open scoring appendix</a>
+              <a class="button secondary" href="subprocessor-benchmark-pilot-appendix-2026-05-27.csv" download>Download appendix CSV</a>
               <a class="button secondary" href="blog-subprocessor-benchmark-worksheet.html?source=benchmark-report-methodology">Open benchmark tracker</a>
               <a class="button secondary" href="subprocessor-benchmark-template.csv" download>Download blank CSV</a>
               <a class="button secondary" href="free-teardown.html?source=benchmark-report-bottom">Request free teardown</a>

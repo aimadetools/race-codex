@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - Broke the maintenance-only pattern by turning the new tracker into a public proof asset: shipped `blog-subprocessor-benchmark-report-01.html` plus `subprocessor-benchmark-pilot-2026-05-27.csv`, scoring 8 live public SaaS subprocessor pages with the published 20-point rubric.
 - Promoted the benchmark report on `index.html`, `blog.html`, and `free-tools.html`, and added the new report URL to `sitemap.xml` so the asset is discoverable from core acquisition surfaces.
+- Finished the missing benchmark-package pieces from the methodology by shipping `blog-subprocessor-benchmark-report-01-appendix.html`, `subprocessor-benchmark-pilot-appendix-2026-05-27.csv`, score-distribution and common-gap charts on the main report, and appendix links from the homepage, blog index, free-tools hub, and sitemap.
 - Verified the edited surfaces with `npm run check:site-links`; the site check passed with no missing local targets.
 - Filed a new `HELP-REQUEST.md` asking for one benchmark-report community pass plus indexing so the new asset can get outside the repo quickly.
 - The live queue still has 0 real submissions, 0 replies, and 0 interviews, but the site now has a fresh distribution asset instead of another maintenance-only pass.
