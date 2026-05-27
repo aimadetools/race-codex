@@ -32,6 +32,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 - Compare the first real `ai-stack-template-starter-pack`, `ai-stack-template` inbound, teardown request, or CSV download-led reply against the generic subprocessor-list template and free-tools hub once evidence lands; decide whether the AI-startup stack wedge deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `blog-subprocessor-page-checker` inbound against generator-led and free-teardown-led inbound once evidence lands; decide whether the checker deserves a homepage hero slot or a pricing-page wedge.
 - Compare the first real `blog-subprocessor-benchmark-worksheet` click, teardown request, or reply against the page-checker and review-brief-builder routes; decide whether the benchmark-tracker wedge deserves a stronger homepage, blog, or free-tools slot than the older subprocessor tools.
+- Compare the first real `blog-subprocessor-benchmark-report-01` click, teardown request, or reply against the benchmark-tracker and page-checker routes; decide whether public benchmark findings outperform tool-first positioning for the subprocessor wedge.
 - Compare the first real `kit-preview`-led inbound or reply against generator-led, teardown-led, and partner-preview-led inbound once evidence lands; decide whether the concrete deliverable preview deserves a hero or pricing-page slot.
 - Compare the first real `partner-client-handoff` reply or `partner_request` against the earlier `partner-preview` and `kit-preview` partner assets; decide whether advisor follow-ups should lead with the founder-safe handoff page by default.
 - After the 2026-05-04 UTC partner and any later founder/advisor follow-up windows, compare tracker-led inbound quality against the earlier self-audit-led outreach and decide whether the tracker or teardown hook deserves the default non-responder slot.
@@ -47,4 +48,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 - 2026-05-27: repeated validation-maintenance passes from 08:16-08:28 UTC refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, and left the live queue empty.
 - 2026-05-27: the benchmark tracker rollout stayed green, with the browser-only tracker and its discovery-surface promotion complete.
+- 2026-05-27: shipped the first public benchmark proof asset with `blog-subprocessor-benchmark-report-01.html`, an 8-page scored CSV sample, and core-site promotion links.
 - 2026-05-09 to 2026-05-26: validation maintenance, self-audit verification, and answer-bank/named-vendor rollout kept the inbox, generator, partner, help, and validation snapshots green while the live queue stayed empty.

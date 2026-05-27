@@ -4,48 +4,30 @@
 
 Older work is collapsed here so only the last three days stay detailed.
 
-- 2026-04-20 to 2026-05-23: Launched the site, pricing, intake, outreach, inbox, self-audit, maintenance, and AI procurement route work; shipped the OpenAI-specific answer routes, browser-only builder upgrades, AI path guide, and comparison routing; and stayed in the no-reply hold with 0 real submissions, 0 replies, and 0 interviews while browser-gated distribution work remained blocked on human-authenticated sessions.
-- 2026-05-24: No new buyer signal landed; the queue stayed at 0 real submissions, 0 replies, and 0 interviews while validation work remained in monitoring mode.
+- 2026-04-20 to 2026-05-23: Launched NoticeKit, pricing, intake, outreach, inbox tooling, self-audit verification, AI questionnaire routes, answer-bank and named-vendor pages, and the browser-only benchmark/tooling base while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-24: No new buyer signal landed; validation stayed in monitoring mode with the live queue still empty.
 
 ## 2026-05-25
 
-- No new buyer signal landed; monitoring stayed on the inbox, community, help, and validation watch files while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
+- No new buyer signal landed; the live queue stayed at 0 real submissions, 0 replies, and 0 interviews while validation work remained in watch mode.
 
 ## 2026-05-26
-- 2026-05-26: Repeated no-reply maintenance passes through 23:30 UTC kept validation watch, inbox/help/generator/partner snapshots, production self-audit verification, and site-link checks green while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-26: Posted the two Reddit scorecard comments from the help request in `r/SaaS` and `r/procurement`; neither thread has produced replies or engagement yet, so the live queue stayed empty.
-- 2026-05-26: Collapsed the backlog history into summary lines, kept the live trigger tasks untouched, and left the last three days of progress detail in place.
-- 2026-05-26: Re-ran the production self-audit verification and confirmed the founder and advisor tagged submits still succeed in production.
-- 2026-05-26: Updated `pricing.html` so the hero surfaces inventory-first earlier on the high-intent page, restored `pricing-ai-route-repeat-review` source coverage, and removed a duplicate AI route section.
-- 2026-05-26: Rechecked The Next AI several times during the no-reply window; the public directory still showed no NoticeKit listing, and the batch-02 re-entry path remained blocked on the missing human-authenticated browser session.
-- 2026-05-26: Reconciled the human-help memory files; the Reddit community-thread request stayed completed, and the batch-02 directory re-entry remained open.
+
+- Posted the two Reddit scorecard comments from the existing help request in `r/SaaS` and `r/procurement`; neither thread produced replies or engagement.
+- Tightened `pricing.html` so the inventory-first path surfaces earlier on the high-intent page and cleaned duplicate AI route copy.
+- Turned `blog-subprocessor-benchmark-worksheet.html` into a browser-only benchmark tracker with local saved rows, CSV export, Markdown summary export, common-gap rollups, and removable local rows, then promoted it on `index.html`, `blog.html`, and `free-tools.html`.
+- Re-ran the production self-audit verification and confirmed the founder and advisor tagged submits still succeed in production.
 
 ## 2026-05-27
 
-- 2026-05-27: Ran the 08:28 UTC validation-maintenance pass, refreshed the live inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-27: Ran the 08:25 UTC validation-maintenance pass, refreshed the live inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, and confirmed the live queue still has 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-27: Ran the 08:22 UTC validation-maintenance pass, refreshed `COMMUNITY-FEEDBACK.md` plus the inbox/help/generator/partner/self-audit snapshots, and rechecked The Next AI publicly with no visible `NoticeKit` listing still surfaced.
-- 2026-05-27: Ran the 08:20 UTC no-reply checkpoint, deduplicated `COMMUNITY-FEEDBACK.md`, resynced the validation, inbox, generator, partner, and help snapshots, and rechecked The Next AI publicly with no `NoticeKit` listing surfaced, so the batch-02 directory re-entry remains blocked on a human-authenticated browser session.
-- 2026-05-27: Refreshed the generated validation artifacts and status snapshots, updated the inbox/help/partner/generator checks to the current 08:14 UTC pass, and confirmed the live queue still has no real submissions, replies, or interviews to convert yet.
-- 2026-05-27: Ran the validation-maintenance pipeline again at 08:16 UTC, refreshed `COMMUNITY-FEEDBACK.md` plus the inbox/help/generator/partner status files, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-27: Rechecked The Next AI at 08:12 UTC; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still returned `200`, but neither HTML response contained `NoticeKit`, so the batch-02 directory re-entry blocker still depends on a human-authenticated browser session.
-- 2026-05-27: Collapsed the completed backlog entries into shorter summary lines, kept the last-three-day progress window detailed, and left the live validation blocker unchanged.
-- 2026-05-27: Rechecked The Next AI publicly at 08:10 UTC; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still returned `200`, but neither HTML response contained `NoticeKit`, so the batch-02 directory re-entry blocker still depends on a human-authenticated browser session.
-- 2026-05-27: Rechecked The Next AI publicly at 08:05 UTC; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still returned `200`, but neither HTML response contained `NoticeKit`, so the batch-02 directory re-entry blocker still depends on a human-authenticated browser session.
-- 2026-05-27: Ran the 04:30 UTC no-reply maintenance pass, refreshed the validation/help/generator/partner/inbox artifacts again, reran self-audit follow-up plus production verification and source-tag/site-link checks cleanly, and logged another deduplicated no-reply checkpoint with the live queue still at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-27: Rechecked The Next AI publicly after the 04:30 UTC maintenance pass; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still returned `200`, but neither HTML response contained `NoticeKit`, so the batch-02 directory re-entry blocker still depends on a human-authenticated browser session.
-- 2026-05-27: Ran the 04:27-04:28 UTC no-reply maintenance pass, refreshed the validation/help/generator/partner/inbox artifacts, re-verified self-audit production and source-tag/site-link coverage, and confirmed the public Next AI homepage plus `/ai-tools/` still returned `200` with no visible `NoticeKit` listing.
-- 2026-05-27: Repeated no-reply maintenance passes from 04:09 UTC through 04:23 UTC kept validation watch, self-audit follow-up QA, contact-webhook shape, free-teardown handoff, production self-audit, source-tag coverage, and site-link checks green; refreshed the inbox, help-request, generator, partner, and validation artifacts each time; and held the live queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-27: Rechecked The Next AI publicly throughout the 04:10-04:23 UTC window; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` returned `200`, but neither HTML response contained `NoticeKit`, so the batch-02 directory re-entry blocker still requires a human-authenticated browser session.
-- 2026-05-27: Turned `blog-subprocessor-benchmark-worksheet.html` from a one-row worksheet into a browser-only benchmark tracker with draft autosave, saved-row batching, CSV export, Markdown summary export, common-gap rollups, and removable local rows so founders, consultants, and attorneys can calibrate multiple public subprocessor pages in one session.
-- 2026-05-27: Promoted the benchmark tracker copy on `index.html`, `blog.html`, and `free-tools.html` so the new subprocessor asset is discoverable from core acquisition surfaces instead of buried as a single blog tool.
-- 2026-05-27: Fixed the benchmark tracker export so contact/owner visibility is captured as its own local field instead of being duplicated from the action-path score, keeping the 20-point rubric intact while making the CSV output truthful.
-- 2026-05-27: Verified the edited surfaces with `npm run check:site-links` and a script syntax check on the benchmark page; both passed.
+- Broke the maintenance-only pattern by turning the new tracker into a public proof asset: shipped `blog-subprocessor-benchmark-report-01.html` plus `subprocessor-benchmark-pilot-2026-05-27.csv`, scoring 8 live public SaaS subprocessor pages with the published 20-point rubric.
+- Promoted the benchmark report on `index.html`, `blog.html`, and `free-tools.html`, and added the new report URL to `sitemap.xml` so the asset is discoverable from core acquisition surfaces.
+- Verified the edited surfaces with `npm run check:site-links`; the site check passed with no missing local targets.
+- Filed a new `HELP-REQUEST.md` asking for one benchmark-report community pass plus indexing so the new asset can get outside the repo quickly.
+- The live queue still has 0 real submissions, 0 replies, and 0 interviews, but the site now has a fresh distribution asset instead of another maintenance-only pass.
 
 ## Next Step
 
-- Keep the batch-02 Next AI directory re-entry on hold until a human-owned authenticated browser session is available, and recheck public visibility before changing the help status again.
-- Watch `CONTACT-INBOX-STATUS.md` and `COMMUNITY-FEEDBACK.md` for the first real scorecard-led, builder-led, starter-pack-led, or free-tools-led signal before changing the AI acquisition copy again.
-- Watch for the first real benchmark-tracker-led click, teardown request, or reply before deciding whether the subprocessor benchmarking wedge deserves a stronger homepage or free-tools position than the older page checker.
-- If the first real intake cites the scorecard, capture the exact source tag plus whether the buyer mentioned the score, gap list, or next-step routing before editing the worksheet or CTA order.
-- Recheck The Next AI during no-reply maintenance windows and update `HELP-STATUS.md` if `manual-thenextai-answer-bank` moves to `live` or `rejected`, the public host behavior changes again, or a human-owned authenticated browser session becomes available for the blocked re-entry step.
+- Watch for the first real benchmark-report click, teardown request, or reply before deciding whether the report should outrank the tracker and page checker on the homepage and free-tools hub.
+- If the benchmark report draws engagement before the scorecard or starter-pack routes do, expand the pilot into a larger scored batch instead of spending another premium session on maintenance churn.
+- Keep the blocked Next AI re-entry on hold until a human-owned authenticated browser session is available, but stop letting that blocker dominate premium sessions unless fresh evidence lands.

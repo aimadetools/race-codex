@@ -81,6 +81,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If the first real `partner_request` lands from `partner-preview-hero`, `partner-preview-cta`, or `partner-outreach-batch-01`, log the qualification outcome in `consultant-partner-outreach-tracker.csv`.
 - If the first real `partner_request` lands from `partner-client-handoff-hero` or `partner-client-handoff-cta`, preserve the exact source tag and whether the advisor wanted referral-only, client-delivery, or white-label access before replying.
 - If the first real intake lands with source tag `blog-subprocessor-page-checker-teardown`, `blog-subprocessor-page-checker-pricing`, or `blog-subprocessor-page-checker-partner`, preserve the exact source tag and whether the lead asked for teardown, pricing, or partner help before replying.
+- If the first real visit, reply, or teardown request references `blog-subprocessor-benchmark-report-01.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the tracker and page-checker routes.
+- If the first real intake lands with source tag `homepage-benchmark-report`, `blog-index-benchmark-report`, `free-tools-benchmark-report`, `community-benchmark-report`, or `community-benchmark-report-procurement`, preserve the exact source tag and whether the buyer mentioned the score distribution, missing objection path, or missing change history before replying.
+- If the benchmark report drives three real visits, forwards, or replies before the tracker or page checker does, move the report into the stronger homepage and free-tools slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real intake lands with source tag `blog-dpa-objection-window-template` or `blog-dpa-objection-window-cta`, record it in `COMMUNITY-FEEDBACK.md` and preserve the exact source tag before replying.
 - If the first tracker-led intake lands, compare whether it came from the download CTA or the teardown CTA and note that in `COMMUNITY-FEEDBACK.md`.
 - If the first real intake lands with source tag `review-brief-builder-teardown` or `review-brief-builder-partner`, preserve the exact source tag plus whether the requester role was founder, operator, consultant, fractional DPO, or attorney before replying.
@@ -121,5 +124,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - 2026-05-27: repeated validation-maintenance passes from 08:16-08:28 UTC refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, and left the live queue empty.
 - 2026-05-27: the benchmark tracker export fix and public Next AI rechecks stayed green, with no visible NoticeKit listing surfacing.
+- 2026-05-27: shipped the public benchmark report pilot plus its scored CSV and added report discovery links across the homepage, blog index, and free-tools hub.
 - 2026-05-26: Reddit scorecard comments, validation maintenance, self-audit verification, and pricing cleanup stayed green while the live queue remained empty.
 - 2026-05-09 to 2026-05-26: repeated validation maintenance, public Next AI rechecks, directory follow-through, and no-reply maintenance kept the watch artifacts green while the live queue stayed empty.
