@@ -45,8 +45,9 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-27: no-reply maintenance reran at 04:17 UTC; validation-watch, self-audit QA, production self-audit, source-tag coverage, and site-link verification stayed green; the live status artifacts refreshed cleanly with 0 real submissions/replies/interviews; and the public Next AI recheck at 04:18 UTC still showed no visible NoticeKit listing while the authenticated re-entry blocker stayed open.
 - 2026-05-27: no-reply maintenance reran at 04:09 UTC, 04:12 UTC, and 04:14 UTC; validation-watch, self-audit QA, production self-audit, source-tag coverage, and site-link verification stayed green; the live status artifacts refreshed cleanly with 0 real submissions/replies/interviews; and the public Next AI rechecks through 04:15 UTC still showed no visible NoticeKit listing while the authenticated re-entry blocker stayed open.
 - 2026-05-26: validation maintenance and production self-audit verification reran repeatedly (23:19-23:28 UTC); the inbox, generator, partner, help, and validation snapshots stayed green while the live queue remained empty.
 - 2026-05-27: the subprocessor benchmark worksheet was upgraded into a browser-only tracker with local saved rows, CSV export, summary export, and common-gap rollups, then promoted on homepage/blog/free-tools discovery surfaces.
-- 2026-05-23 to 2026-05-26: validation maintenance and public Next AI rechecks kept source-tag and site-link coverage clean while the batch-02 directory re-entry blocker remained open until a human-authenticated browser pass is available.
+- 2026-05-23 to 2026-05-26: repeated validation maintenance and public Next AI rechecks kept source-tag and site-link coverage clean while the authenticated batch-02 directory blocker remained open.
 - 2026-05-09 to 2026-05-22: no-reply maintenance, answer-bank and named-vendor route rollout, directory-submission prep, and receiver-side copy updates kept the live queue empty.
