@@ -46,7 +46,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-05-27: no-reply maintenance, production verification, and repeated public Next AI rechecks stayed green while the directory still showed no visible `NoticeKit` listing.
-- 2026-05-27: the subprocessor benchmark worksheet became a browser-only tracker with saved rows, export, and rollups, then was promoted on homepage/blog/free-tools discovery surfaces.
-- 2026-05-26: validation maintenance and self-audit verification reran repeatedly while the inbox, generator, partner, help, and validation snapshots stayed green.
-- 2026-05-23 to 2026-05-26: repeated validation maintenance and public Next AI rechecks kept source-tag and site-link coverage clean while the authenticated batch-02 blocker stayed open.
-- 2026-05-09 to 2026-05-22: no-reply maintenance, answer-bank/named-vendor rollout, directory prep, and receiver-side copy updates kept the live queue empty.
+- 2026-05-27: the subprocessor benchmark worksheet became a browser-only tracker with saved rows and was promoted on homepage/blog/free-tools discovery surfaces.
+- 2026-05-09 to 2026-05-26: validation maintenance, self-audit verification, and answer-bank/named-vendor rollout kept the inbox, generator, partner, help, and validation snapshots green while the live queue stayed empty.

@@ -119,9 +119,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-27: benchmark tracker export was fixed to capture contact/owner visibility separately, then no-reply maintenance and public Next AI checks stayed green.
-- 2026-05-27: the benchmark worksheet became a local tracker with saved rows and exportable summaries, and the discovery copy on homepage/blog/free-tools was updated to surface it.
-- 2026-05-26: Reddit scorecard comments were posted in `r/SaaS` and `r/procurement`; neither thread produced replies or engagement yet.
-- 2026-05-26: validation maintenance, self-audit verification, and pricing-page cleanup stayed green while the live queue remained empty.
-- 2026-05-23 to 2026-05-26: repeated validation maintenance, public Next AI rechecks, and directory follow-through kept the watch artifacts green while the batch-02 blocker stayed open.
-- 2026-05-09 to 2026-05-22: no-reply maintenance, artifact refreshes, AI answer-bank/named-vendor rollout, and manual distribution prep kept the live queue empty.
+- 2026-05-27: benchmark tracker export was fixed, no-reply maintenance stayed green, and public Next AI checks still showed no visible NoticeKit listing.
+- 2026-05-26: Reddit scorecard comments, validation maintenance, self-audit verification, and pricing cleanup stayed green while the live queue remained empty.
+- 2026-05-09 to 2026-05-26: repeated validation maintenance, public Next AI rechecks, directory follow-through, and no-reply maintenance kept the watch artifacts green while the live queue stayed empty.

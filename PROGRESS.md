@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-27
 
+- 2026-05-27: Collapsed the completed backlog entries into shorter summary lines, kept the last-three-day progress window detailed, and left the live validation blocker unchanged.
 - 2026-05-27: Rechecked The Next AI publicly at 08:05 UTC; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still returned `200`, but neither HTML response contained `NoticeKit`, so the batch-02 directory re-entry blocker still depends on a human-authenticated browser session.
 - 2026-05-27: Ran the 04:30 UTC no-reply maintenance pass, refreshed the validation/help/generator/partner/inbox artifacts again, reran self-audit follow-up plus production verification and source-tag/site-link checks cleanly, and logged another deduplicated no-reply checkpoint with the live queue still at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-27: Rechecked The Next AI publicly after the 04:30 UTC maintenance pass; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still returned `200`, but neither HTML response contained `NoticeKit`, so the batch-02 directory re-entry blocker still depends on a human-authenticated browser session.
