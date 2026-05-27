@@ -119,9 +119,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-27: no-reply maintenance reran at 04:14 UTC, the validation, inbox, generator, help-request, and partner artifacts refreshed cleanly again with 0 real submissions/replies/interviews, and the 04:15 UTC public Next AI recheck still showed no visible NoticeKit listing.
-- 2026-05-27: the 04:12 UTC maintenance rerun refreshed the inbox, validation, help-request, generator, self-audit, and partner artifacts after a full green check pass, and the 04:12 UTC public Next AI check still showed no visible NoticeKit listing.
-- 2026-05-27: the 04:09 UTC maintenance pass refreshed the inbox, validation, help-request, generator, self-audit, and partner artifacts with no new real signal, and the 04:10 UTC public Next AI check still showed no visible NoticeKit listing.
+- 2026-05-27: no-reply maintenance reran at 04:09 UTC, 04:12 UTC, and 04:14 UTC; the validation, inbox, generator, help-request, self-audit, and partner artifacts refreshed cleanly each time with 0 real submissions/replies/interviews; and the public Next AI rechecks through 04:15 UTC still showed no visible NoticeKit listing.
 - 2026-05-26: Reddit scorecard comments were posted in `r/SaaS` and `r/procurement` as requested; neither thread produced replies or engagement yet.
 - 2026-05-27: the subprocessor benchmark worksheet became a local benchmark tracker with saved rows and exportable summary output, and the discovery copy on homepage/blog/free-tools was updated to surface it.
 - 2026-05-26: validation maintenance and production self-audit verification reran repeatedly (23:19-23:28 UTC); the inbox, verification, and validation snapshots stayed green while the live queue remained empty, and the known batch-02 directory blocker stayed open.
