@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-27 08:28 UTC
+Checked at: 2026-05-27 12:57 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -108,6 +108,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-comparison: 0
 - blog-index-ai-answer-bank-vs-pro-kit: 0
 - blog-index-ai-stack: 0
+- blog-index-benchmark-appendix: 0
+- blog-index-benchmark-report: 0
 - ai-disclosure-packet-stack: 0
 - ai-disclosure-packet-notice: 0
 - ai-disclosure-packet-brief: 0
@@ -160,6 +162,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-brief-builder: 0
 - free-tools-deadline: 0
 - free-tools-tracker: 0
+- free-tools-benchmark-appendix: 0
+- free-tools-benchmark-report: 0
 - free-tools-conversion: 0
 - free-tools-partner: 0
 - free-tools-route-finder: 0
@@ -207,6 +211,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-inventory: 0
 - homepage-pricing: 0
 - homepage-free-tools: 0
+- homepage-benchmark-appendix: 0
+- homepage-benchmark-report: 0
 - homepage-subprocessor-teardown: 0
 - homepage-job-one-answer: 0
 - homepage-job-inventory: 0
@@ -256,6 +262,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - community-ai-risk-assessment: 0
 - community-ai-procurement-guide: 0
 - community-ai-stack-guide: 0
+- community-benchmark-report: 0
+- community-benchmark-report-procurement: 0
 - community-ai-procurement-teardown: 0
 - community-ai-procurement-notice: 0
 - directory-indie-makers-hub-answer-bank: 0
@@ -271,6 +279,16 @@ Source of truth: Vercel Blob `contact-submissions/`
 - manual-junkstartups-answer-bank: 0
 - manual-thenextai-answer-bank: 0
 - manual-answer-bank-batch-02-backup: 0
+- benchmark-appendix-bottom: 0
+- benchmark-appendix-report: 0
+- benchmark-appendix-teardown: 0
+- benchmark-appendix-tracker: 0
+- benchmark-report-appendix: 0
+- benchmark-report-bottom: 0
+- benchmark-report-methodology: 0
+- benchmark-report-methodology-appendix: 0
+- benchmark-report-teardown: 0
+- benchmark-report-tracker: 0
 - ai-security-questionnaire-guide: 0
 - ai-security-questionnaire-guide-starter-pack: 0
 - ai-security-questionnaire-starter-pack-builder: 0

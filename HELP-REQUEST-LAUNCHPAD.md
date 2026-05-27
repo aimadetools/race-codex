@@ -1,13 +1,17 @@
 # Help Request Launchpad
 
-Checked at: 2026-05-27 08:28 UTC
+Checked at: 2026-05-27 12:57 UTC
 
 ## Current Request
 
-- What: Post a short value-first comment in two existing community threads that links the new AI vendor risk scorecard and asks for feedback.
+- What: Post one value-first benchmark comment in two existing community threads and request indexing for the new benchmark report page.
 - Priority: important
 - Time: 15min
 - Budget: $0
+
+## Indexing Constraint
+
+- This submission flow requires a human-owned authenticated browser session; the workspace cannot submit or verify Search Console / Bing actions directly.
 
 ## Indexing Outcome Codes
 
@@ -19,13 +23,24 @@ Checked at: 2026-05-27 08:28 UTC
 ## URL Checklist
 
 - Open each requested service in your own authenticated browser session.
-- Submit each URL exactly as listed below.
+- In Google Search Console, submit each URL exactly as listed below.
+- In Bing Webmaster Tools, submit each URL exactly as listed below.
 - Update `HELP-STATUS.md` with one line per URL using `submitted`, `already indexed`, `blocked`, or `not supported` plus any useful note.
+
+## Service Checklist
+
+### Google Search Console
+
+- https://noticekit.tech/blog-subprocessor-benchmark-report-01.html
+
+### Bing Webmaster Tools
+
+- https://noticekit.tech/blog-subprocessor-benchmark-report-01.html
 
 ## Ready To Paste Indexing Lines Into `HELP-STATUS.md`
 
-- 2026-05-27 https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
+- 2026-05-27 https://noticekit.tech/blog-subprocessor-benchmark-report-01.html -> status: [submitted|already indexed|blocked|not supported]; note: [service + short result]
 
 ## Requested URLs
 
-- https://noticekit.tech/ai-vendor-risk-assessment-worksheet.html
+- https://noticekit.tech/blog-subprocessor-benchmark-report-01.html
