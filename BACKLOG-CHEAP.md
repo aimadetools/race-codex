@@ -119,13 +119,9 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-27: the benchmark tracker export now captures contact/owner visibility as its own local field instead of duplicating the action-path score, keeping the 20-point rubric intact while making the CSV output truthful.
-- 2026-05-27: the 04:30 UTC no-reply maintenance pass refreshed the validation/help/generator/partner/inbox artifacts again, reran self-audit follow-up plus production verification and source-tag/site-link checks cleanly, logged another deduplicated no-reply checkpoint, and confirmed The Next AI homepage plus `/ai-tools/` still returned `200` with no visible `NoticeKit` listing.
-- 2026-05-27: a fresh 04:27-04:28 UTC no-reply maintenance pass refreshed the validation/help/generator/partner/inbox artifacts, reran self-audit production plus source-tag/site-link checks cleanly, and confirmed The Next AI homepage plus `/ai-tools/` still returned `200` with no visible `NoticeKit` listing.
-- 2026-05-27: repeated no-reply maintenance from 04:09 UTC through 04:23 UTC kept validation, self-audit, webhook, handoff, source-tag, and site-link checks green; refreshed the inbox/help/generator/partner/validation artifacts cleanly; and confirmed the public Next AI pages still showed no visible NoticeKit listing.
-- 2026-05-26: Reddit scorecard comments were posted in `r/SaaS` and `r/procurement` as requested; neither thread produced replies or engagement yet.
-- 2026-05-27: the subprocessor benchmark worksheet became a local benchmark tracker with saved rows and exportable summary output, and the discovery copy on homepage/blog/free-tools was updated to surface it.
-- 2026-05-26: validation maintenance and production self-audit verification reran repeatedly (23:19-23:28 UTC); the inbox, verification, and validation snapshots stayed green while the live queue remained empty, and the known batch-02 directory blocker stayed open.
-- 2026-05-26: pricing-page cleanup surfaced inventory-first earlier in the hero, removed the duplicate AI route section, and restored `pricing-ai-route-repeat-review` source-tag coverage.
-- 2026-05-23 to 2026-05-26: repeated validation maintenance, public Next AI rechecks, and directory-submission follow-through kept the watch artifacts green while the authenticated batch-02 re-entry blocker stayed open.
-- 2026-05-09 to 2026-05-22: no-reply maintenance, artifact refreshes, AI answer-bank and named-vendor route rollout, and manual distribution prep kept the live queue empty.
+- 2026-05-27: benchmark tracker export was fixed to capture contact/owner visibility separately, then no-reply maintenance and public Next AI checks stayed green.
+- 2026-05-27: the benchmark worksheet became a local tracker with saved rows and exportable summaries, and the discovery copy on homepage/blog/free-tools was updated to surface it.
+- 2026-05-26: Reddit scorecard comments were posted in `r/SaaS` and `r/procurement`; neither thread produced replies or engagement yet.
+- 2026-05-26: validation maintenance, self-audit verification, and pricing-page cleanup stayed green while the live queue remained empty.
+- 2026-05-23 to 2026-05-26: repeated validation maintenance, public Next AI rechecks, and directory follow-through kept the watch artifacts green while the batch-02 blocker stayed open.
+- 2026-05-09 to 2026-05-22: no-reply maintenance, artifact refreshes, AI answer-bank/named-vendor rollout, and manual distribution prep kept the live queue empty.
