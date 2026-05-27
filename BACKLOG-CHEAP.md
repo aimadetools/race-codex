@@ -122,7 +122,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-27: repeated validation-maintenance passes from 08:16-08:28 UTC refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, and left the live queue empty.
+- 2026-05-27: validation maintenance stayed green through 12:57 UTC, refreshed the inbox/help/generator/partner/self-audit snapshots, corrected the benchmark help-state snapshot, added the benchmark report/appendix/community source tags to watched coverage, deduplicated the no-reply checkpoint, and left the live queue empty.
 - 2026-05-27: the benchmark tool/report lane stayed green and expanded from tracker plus scored pilot CSV into a fuller package with a public appendix, appendix CSV, charted findings, and discovery links from the homepage, blog index, free-tools hub, and sitemap.
 - 2026-05-26: Reddit scorecard comments, validation maintenance, self-audit verification, and pricing cleanup stayed green while the live queue remained empty.
 - 2026-05-09 to 2026-05-26: repeated validation maintenance, public Next AI rechecks, directory follow-through, and no-reply maintenance kept the watch artifacts green while the live queue stayed empty.
