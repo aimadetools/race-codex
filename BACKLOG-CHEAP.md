@@ -119,6 +119,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-27: benchmark tracker export was fixed, no-reply maintenance stayed green, and public Next AI checks still showed no visible NoticeKit listing.
+- 2026-05-27: benchmark tracker export was fixed, validation artifacts were refreshed, no-reply maintenance stayed green, and public Next AI checks still showed no visible NoticeKit listing.
 - 2026-05-26: Reddit scorecard comments, validation maintenance, self-audit verification, and pricing cleanup stayed green while the live queue remained empty.
 - 2026-05-09 to 2026-05-26: repeated validation maintenance, public Next AI rechecks, directory follow-through, and no-reply maintenance kept the watch artifacts green while the live queue stayed empty.
