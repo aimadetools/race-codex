@@ -122,6 +122,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-27: validation maintenance stayed green through 16:12 UTC, refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, kept the benchmark report/appendix/community source tags in watched coverage, and confirmed `check:site-links` still passed while the live queue stayed empty.
 - 2026-05-27: raised the benchmark proof asset higher on the homepage, free-tools hub, blog index, and report page so the latest public evidence is visible before the older workflow pages.
 - 2026-05-27: validation maintenance stayed green through 16:10 UTC, refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, kept the benchmark report/appendix/community source tags in watched coverage, and confirmed `check:site-links` still passed while the live queue stayed empty.
 - 2026-05-27: the benchmark tool/report lane stayed green and expanded from tracker plus scored pilot CSV into a fuller package with a public appendix, appendix CSV, charted findings, and discovery links from the homepage, blog index, free-tools hub, and sitemap.

@@ -45,6 +45,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-27: validation maintenance stayed green through 16:12 UTC, refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, kept benchmark report/appendix/community source-tag watch coverage in sync, and confirmed `check:site-links` still passed while the live queue stayed empty.
 - 2026-05-27: validation maintenance stayed green through 16:10 UTC, refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, kept benchmark report/appendix/community source-tag watch coverage in sync, and confirmed `check:site-links` still passed while the live queue stayed empty.
 - 2026-05-27: shipped the benchmark package by keeping the browser-only tracker green, publishing the first public benchmark report, and adding the scoring appendix, appendix CSV, charts, and discovery links.
 - 2026-05-09 to 2026-05-26: validation maintenance, self-audit verification, and answer-bank/named-vendor rollout kept the inbox, generator, partner, help, and validation snapshots green while the live queue stayed empty.
