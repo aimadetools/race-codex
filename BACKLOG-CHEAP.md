@@ -123,5 +123,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-27: Added a direct public-benchmark route to the free-tools decision helper so calibration intent now reaches the report, tracker, or page checker without detouring through the secondary notice section.
-- 2026-05-27: validation maintenance stayed green through the 23:11 UTC refresh; the exact Starter and Pro bundle preview stayed surfaced earlier on the homepage and free-tools hub, the benchmark/report lane remained live, `check:site-links` stayed green, and the queue stayed empty while the benchmark-comment help request remained externally blocked.
+- 2026-05-27: validation maintenance stayed green through the 23:14 UTC refresh; the exact Starter and Pro bundle preview stayed surfaced earlier on the homepage and free-tools hub, the benchmark/report lane remained live, `check:site-links` stayed green, and the queue stayed empty while the benchmark-comment help request remained externally blocked.
 - 2026-05-09 to 2026-05-26: Reddit scorecard comments, validation maintenance, self-audit verification, pricing cleanup, public Next AI rechecks, directory follow-through, and no-reply maintenance all stayed green while the live queue remained empty.
