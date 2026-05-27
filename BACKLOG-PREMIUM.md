@@ -36,7 +36,6 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 - Compare the first real `kit-preview`-led inbound or reply against generator-led, teardown-led, and partner-preview-led inbound once evidence lands; decide whether the concrete deliverable preview deserves a hero or pricing-page slot.
 - Compare the first real `partner-client-handoff` reply or `partner_request` against the earlier `partner-preview` and `kit-preview` partner assets; decide whether advisor follow-ups should lead with the founder-safe handoff page by default.
 - After the 2026-05-04 UTC partner and any later founder/advisor follow-up windows, compare tracker-led inbound quality against the earlier self-audit-led outreach and decide whether the tracker or teardown hook deserves the default non-responder slot.
-- Prepare the first benchmark report only after at least one reply clarifies whether founders or advisors are the sharper wedge for public teardown content.
 
 ## P2
 
@@ -47,6 +46,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-05-27: repeated validation-maintenance passes from 08:16-08:28 UTC refreshed the inbox/help/generator/partner/self-audit snapshots, deduplicated the no-reply checkpoint, and left the live queue empty.
-- 2026-05-27: the benchmark tracker rollout stayed green, with the browser-only tracker and its discovery-surface promotion complete.
-- 2026-05-27: shipped the first public benchmark proof asset with `blog-subprocessor-benchmark-report-01.html`, an 8-page scored CSV sample, and core-site promotion links.
+- 2026-05-27: finished the benchmark package by keeping the browser-only tracker green, shipping the first public benchmark report, and adding the scoring appendix, appendix CSV, charts, and discovery-surface links.
 - 2026-05-09 to 2026-05-26: validation maintenance, self-audit verification, and answer-bank/named-vendor rollout kept the inbox, generator, partner, help, and validation snapshots green while the live queue stayed empty.
