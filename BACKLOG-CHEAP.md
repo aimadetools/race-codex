@@ -72,6 +72,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If the AI disclosure packet drives three real visits, forwards, or replies before the older AI stack template does, move it into a stronger homepage hero or outbound follow-up slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real visit, reply, or teardown request references the AI stack CSV or `blog-ai-saas-subprocessor-list-template.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the generic subprocessor-list template.
 - If the AI-stack template drives the first real inbound before the generic list-template pages, move it into a stronger homepage hero, pricing slot, or founder follow-up link and note the change in `COMMUNITY-FEEDBACK.md`.
+- If the first real visit, reply, or teardown request references `blog-subprocessor-benchmark-worksheet.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the subprocessor page checker or review brief builder.
+- If the first real intake lands after the benchmark tracker and the buyer mentions the saved row batch, exported summary, or CSV export as the reason it felt usable, copy the exact wording into `COMMUNITY-FEEDBACK.md` before changing the tracker again.
+- If the benchmark tracker drives three real visits, forwards, or replies before the page checker or review brief builder does, move it into a stronger homepage or free-tools slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or partner-program reply; update the matching CSV or tracker immediately.
 - If the first real `free_async_teardown` lands, record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link before replying.
 - If the first real direct-submit `free_async_teardown` lands from `free-teardown-page` or a CTA that routes into `free-teardown.html`, preserve the requester role from `ownershipSignal` before replying so founder-led vs advisor-led demand is visible immediately.
@@ -117,6 +120,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-26: Reddit scorecard comments were posted in `r/SaaS` and `r/procurement` as requested; neither thread produced replies or engagement yet.
+- 2026-05-27: the subprocessor benchmark worksheet became a local benchmark tracker with saved rows and exportable summary output, and the discovery copy on homepage/blog/free-tools was updated to surface it.
 - 2026-05-26: validation maintenance and production self-audit verification reran repeatedly (23:19-23:28 UTC); the inbox, verification, and validation snapshots stayed green while the live queue remained empty, and the known batch-02 directory blocker stayed open.
 - 2026-05-26: pricing-page cleanup surfaced inventory-first earlier in the hero, removed a duplicate AI route section, and restored `pricing-ai-route-repeat-review` source-tag coverage.
 - 2026-05-23 to 2026-05-26: validation maintenance and public Next AI rechecks kept the watch artifacts green while the batch-02 directory re-entry blocker remained open until a human-authenticated browser pass is available.

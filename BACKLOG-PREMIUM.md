@@ -31,6 +31,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 - Compare the first real `ai-disclosure-packet-*` inbound or reply against the older AI stack template and generic teardown routes once evidence lands; decide whether AI procurement framing deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `ai-stack-template-starter-pack`, `ai-stack-template` inbound, teardown request, or CSV download-led reply against the generic subprocessor-list template and free-tools hub once evidence lands; decide whether the AI-startup stack wedge deserves a permanent homepage hero or outbound follow-up slot.
 - Compare the first real `blog-subprocessor-page-checker` inbound against generator-led and free-teardown-led inbound once evidence lands; decide whether the checker deserves a homepage hero slot or a pricing-page wedge.
+- Compare the first real `blog-subprocessor-benchmark-worksheet` click, teardown request, or reply against the page-checker and review-brief-builder routes; decide whether the benchmark-tracker wedge deserves a stronger homepage, blog, or free-tools slot than the older subprocessor tools.
 - Compare the first real `kit-preview`-led inbound or reply against generator-led, teardown-led, and partner-preview-led inbound once evidence lands; decide whether the concrete deliverable preview deserves a hero or pricing-page slot.
 - Compare the first real `partner-client-handoff` reply or `partner_request` against the earlier `partner-preview` and `kit-preview` partner assets; decide whether advisor follow-ups should lead with the founder-safe handoff page by default.
 - After the 2026-05-04 UTC partner and any later founder/advisor follow-up windows, compare tracker-led inbound quality against the earlier self-audit-led outreach and decide whether the tracker or teardown hook deserves the default non-responder slot.
@@ -45,5 +46,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-05-26: validation maintenance and production self-audit verification reran repeatedly (23:19-23:28 UTC); the inbox, generator, partner, help, and validation snapshots stayed green while the live queue remained empty.
+- 2026-05-27: the subprocessor benchmark worksheet was upgraded into a browser-only tracker with local saved rows, CSV export, summary export, and common-gap rollups, then promoted on homepage/blog/free-tools discovery surfaces.
 - 2026-05-23 to 2026-05-26: validation maintenance and public Next AI rechecks kept source-tag and site-link coverage clean while the batch-02 directory re-entry blocker remained open until a human-authenticated browser pass is available.
 - 2026-05-09 to 2026-05-22: no-reply maintenance, answer-bank and named-vendor route rollout, directory-submission prep, and receiver-side copy updates kept the live queue empty.

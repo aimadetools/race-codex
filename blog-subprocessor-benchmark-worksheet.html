@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Subprocessor Benchmark Worksheet for SaaS Teams | NoticeKit</title>
-    <meta name="description" content="Use this local worksheet to score a SaaS subprocessor page for vendor clarity, notice mechanics, objection path, and evidence history before you publish a benchmark or teardown.">
+    <title>Subprocessor Benchmark Tracker for SaaS Teams | NoticeKit</title>
+    <meta name="description" content="Score multiple public subprocessor pages locally, keep a saved benchmark queue in your browser, and export the CSV plus summary before you publish a benchmark or teardown.">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="NoticeKit">
     <meta property="og:url" content="https://noticekit.tech/blog-subprocessor-benchmark-worksheet.html">
-    <meta property="og:title" content="Subprocessor Benchmark Worksheet for SaaS Teams">
-    <meta property="og:description" content="A practical 20-point worksheet and CSV template for reviewing public subprocessor pages without making legal claims.">
+    <meta property="og:title" content="Subprocessor Benchmark Tracker for SaaS Teams">
+    <meta property="og:description" content="A practical 20-point local tracker and CSV template for reviewing public subprocessor pages without making legal claims.">
     <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit subprocessor benchmark worksheet">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Subprocessor Benchmark Worksheet for SaaS Teams">
-    <meta name="twitter:description" content="Score public subprocessor pages for vendor clarity, notice mechanics, objection path, and evidence history with a browser-only worksheet.">
+    <meta name="twitter:title" content="Subprocessor Benchmark Tracker for SaaS Teams">
+    <meta name="twitter:description" content="Score public subprocessor pages, save a local queue, and export a benchmark summary from one browser-only tracker.">
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/blog-subprocessor-benchmark-worksheet.html">
@@ -27,8 +27,8 @@
         "@graph": [
           {
             "@type": "Article",
-            "headline": "Subprocessor Benchmark Worksheet for SaaS Teams",
-            "description": "A practical 20-point worksheet and CSV template for reviewing public subprocessor pages without making legal claims.",
+            "headline": "Subprocessor Benchmark Tracker for SaaS Teams",
+            "description": "A practical 20-point tracker and CSV template for reviewing public subprocessor pages without making legal claims.",
             "author": {
               "@type": "Organization",
               "name": "NoticeKit"
@@ -39,7 +39,7 @@
               "url": "https://noticekit.tech/"
             },
             "datePublished": "2026-05-26",
-            "dateModified": "2026-05-26",
+            "dateModified": "2026-05-27",
             "mainEntityOfPage": "https://noticekit.tech/blog-subprocessor-benchmark-worksheet.html"
           },
           {
@@ -93,11 +93,12 @@
         <article class="article">
           <header class="article-header">
             <span class="eyebrow">Benchmark prep</span>
-            <h1>Subprocessor benchmark worksheet for SaaS teams</h1>
-            <p>If you want to review public subprocessor pages without drifting into vague opinions or legal claims, use one visible rubric. This worksheet scores page clarity, notice mechanics, objection path, and evidence history in the browser, then gives you a clean CSV row shape for a later benchmark or teardown pass.</p>
+            <h1>Subprocessor benchmark tracker for SaaS teams</h1>
+            <p>If you want to review public subprocessor pages without drifting into vague opinions or legal claims, use one visible rubric and one saved queue. This browser-only tracker scores page clarity, notice mechanics, objection path, and evidence history, then keeps your reviewed pages, CSV rows, and summary stats on the current device.</p>
             <div class="hero-actions">
               <a class="button" href="subprocessor-benchmark-template.csv" download>Download benchmark CSV</a>
               <a class="button secondary" href="BENCHMARK-REPORT-METHODOLOGY.md" download>Download methodology</a>
+              <a class="button secondary" href="#benchmark-tracker">Open tracker</a>
               <a class="button secondary" href="blog-subprocessor-page-checker.html">Open page checker</a>
               <a class="button secondary" href="sample-subprocessor-teardown.html">See sample teardown</a>
             </div>
@@ -113,10 +114,11 @@
               <div>
                 <span class="eyebrow">Why use it</span>
                 <h2>Turn the benchmark into a repeatable review instead of a vibe check.</h2>
-                <p>The worksheet is built for the awkward middle ground between a one-off teardown and a 50-page benchmark. Capture the company, page, visible fields, and trust-center status once, then score the same ten criteria every time.</p>
+                <p>The tracker is built for the awkward middle ground between a one-off teardown and a 50-page benchmark. Capture the company, page, visible fields, and trust-center status once, then save the row locally and keep scoring the same ten criteria every time.</p>
               </div>
               <div class="download-actions">
                 <a class="button gold" href="subprocessor-benchmark-template.csv" download>Download CSV template</a>
+                <a class="button secondary" href="#benchmark-batch">Jump to saved rows</a>
                 <a class="button secondary" href="blog-subprocessor-review-brief-builder.html">Open brief builder</a>
                 <a class="button secondary" href="free-teardown.html">Request teardown</a>
               </div>
@@ -194,12 +196,12 @@
             <p class="fine-print">Use `2` for clearly visible, `1` for partial or vague, and `0` when a reviewer cannot rely on the page.</p>
           </section>
 
-          <section>
-            <h2>Local benchmark scorer</h2>
-            <p>Enter one page, pick the ten criterion scores, and keep the result in your browser. This is useful for calibration before you touch the larger spreadsheet.</p>
+          <section id="benchmark-tracker">
+            <h2>Local benchmark tracker</h2>
+            <p>Enter one page, pick the ten criterion scores, then save it into a local batch. This is useful when you want to calibrate ten pages in one sitting before publishing a benchmark post, consultant memo, or teardown queue.</p>
             <div class="demo-panel">
               <div class="panel-header">
-                <strong>Worksheet</strong>
+                <strong>Tracker</strong>
                 <span class="status">Local only</span>
               </div>
               <div class="demo-body">
@@ -357,8 +359,47 @@
                   <textarea id="benchmark-notes" rows="4" placeholder="Example: Lists vendors and purposes, but no objection window or archive."></textarea>
                 </label>
 
+                <div class="hero-actions" style="margin-top:16px;">
+                  <button class="button" id="save-benchmark-row" type="button">Save row to local batch</button>
+                  <button class="button secondary" id="copy-benchmark-row" type="button">Copy CSV row</button>
+                  <button class="button secondary" id="download-benchmark-batch" type="button">Download saved CSV</button>
+                  <button class="button secondary" id="download-benchmark-summary" type="button">Download summary</button>
+                  <button class="button secondary" id="clear-benchmark-batch" type="button">Clear saved rows</button>
+                </div>
+
                 <div id="benchmark-output" class="notice-output" aria-live="polite" style="margin-top:16px;"></div>
+                <p class="fine-print" id="benchmark-status">The current draft and saved rows stay on this device only.</p>
               </div>
+            </div>
+          </section>
+
+          <section id="benchmark-batch">
+            <h2>Saved benchmark batch</h2>
+            <p>Use this section to see whether the batch is converging on one pattern before you publish. The summary is generated from the rows saved in this browser only.</p>
+            <div class="grid-2">
+              <article class="card">
+                <h3>Batch summary</h3>
+                <div id="benchmark-batch-summary" class="template-box" aria-live="polite"></div>
+              </article>
+              <article class="card">
+                <h3>Common gaps</h3>
+                <div id="benchmark-gap-summary" class="template-box" aria-live="polite"></div>
+              </article>
+            </div>
+            <div class="table-wrap" style="margin-top:16px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Company</th>
+                    <th>Category</th>
+                    <th>Score</th>
+                    <th>Band</th>
+                    <th>Missing</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody id="benchmark-saved-rows"></tbody>
+              </table>
             </div>
           </section>
 
@@ -413,16 +454,68 @@
     </div>
 
     <script>
+      const BENCHMARK_DRAFT_KEY = "noticekit-benchmark-draft-v1";
+      const BENCHMARK_ROWS_KEY = "noticekit-benchmark-rows-v1";
+      const CSV_HEADER = [
+        "company_name",
+        "homepage_url",
+        "subprocessor_url",
+        "category",
+        "page_title",
+        "date_reviewed",
+        "last_updated_visible",
+        "last_updated_value",
+        "vendor_names_listed",
+        "service_purpose_listed",
+        "data_categories_listed",
+        "processing_region_listed",
+        "change_notice_method_listed",
+        "objection_window_listed",
+        "customer_action_path_listed",
+        "archive_or_change_log_visible",
+        "contact_or_owner_visible",
+        "trust_center_gate",
+        "notes",
+        "score"
+      ];
+
       const reviewDateField = document.getElementById("benchmark-date");
       const today = new Date().toISOString().slice(0, 10);
       reviewDateField.value = today;
 
       const scoreFields = Array.from(document.querySelectorAll("[data-benchmark-score]"));
       const output = document.getElementById("benchmark-output");
+      const statusNode = document.getElementById("benchmark-status");
+      const summaryNode = document.getElementById("benchmark-batch-summary");
+      const gapSummaryNode = document.getElementById("benchmark-gap-summary");
+      const savedRowsNode = document.getElementById("benchmark-saved-rows");
+      const saveButton = document.getElementById("save-benchmark-row");
+      const copyRowButton = document.getElementById("copy-benchmark-row");
+      const downloadBatchButton = document.getElementById("download-benchmark-batch");
+      const downloadSummaryButton = document.getElementById("download-benchmark-summary");
+      const clearBatchButton = document.getElementById("clear-benchmark-batch");
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
 
       function csvValue(value) {
         const safeValue = String(value ?? "").replace(/"/g, "\"\"");
         return `"${safeValue}"`;
+      }
+
+      function downloadFile(filename, content, type) {
+        const blob = new Blob([content], { type });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
       }
 
       function scoreBand(score) {
@@ -438,48 +531,250 @@
         return "Risky";
       }
 
-      function updateBenchmarkSummary() {
-        const score = scoreFields.reduce((sum, field) => sum + Number(field.value || 0), 0);
+      function valueLabel(score) {
+        if (score === 2) {
+          return "Yes";
+        }
+        if (score === 1) {
+          return "partial";
+        }
+        return "no";
+      }
+
+      function fieldValue(id) {
+        return document.getElementById(id).value.trim();
+      }
+
+      function currentScores() {
+        return scoreFields.map((field) => Number(field.value || 0));
+      }
+
+      function serializeCsvRow(values) {
+        return values.map(csvValue).join(",");
+      }
+
+      function buildCurrentRow() {
+        const scores = currentScores();
+        const score = scores.reduce((sum, current) => sum + current, 0);
         const missing = scoreFields
           .filter((field) => Number(field.value || 0) === 0)
           .map((field) => field.dataset.label);
         const partial = scoreFields
           .filter((field) => Number(field.value || 0) === 1)
           .map((field) => field.dataset.label);
-        const lastUpdatedValue = document.getElementById("benchmark-updated").value.trim();
-        const lastUpdatedVisible = lastUpdatedValue ? "Yes" : Number(scoreFields[1].value || 0) > 0 ? "Yes" : "No";
-        const row = [
-          document.getElementById("benchmark-company").value.trim(),
-          document.getElementById("benchmark-homepage").value.trim(),
-          document.getElementById("benchmark-page").value.trim(),
+        const lastUpdatedValue = fieldValue("benchmark-updated");
+        const lastUpdatedVisible = lastUpdatedValue || scores[1] > 0 ? "Yes" : "No";
+        const rowValues = [
+          fieldValue("benchmark-company"),
+          fieldValue("benchmark-homepage"),
+          fieldValue("benchmark-page"),
           document.getElementById("benchmark-category").value,
-          document.getElementById("benchmark-title").value.trim(),
+          fieldValue("benchmark-title"),
           document.getElementById("benchmark-date").value,
           lastUpdatedVisible,
           lastUpdatedValue,
-          Number(scoreFields[2].value || 0) === 2 ? "Yes" : Number(scoreFields[2].value || 0) === 1 ? "partial" : "no",
-          Number(scoreFields[3].value || 0) === 2 ? "Yes" : Number(scoreFields[3].value || 0) === 1 ? "partial" : "no",
-          Number(scoreFields[4].value || 0) === 2 ? "Yes" : Number(scoreFields[4].value || 0) === 1 ? "partial" : "no",
-          Number(scoreFields[5].value || 0) === 2 ? "Yes" : Number(scoreFields[5].value || 0) === 1 ? "partial" : "no",
-          Number(scoreFields[6].value || 0) === 2 ? "Yes" : Number(scoreFields[6].value || 0) === 1 ? "partial" : "no",
-          Number(scoreFields[7].value || 0) === 2 ? "Yes" : Number(scoreFields[7].value || 0) === 1 ? "partial" : "no",
-          Number(scoreFields[8].value || 0) === 2 ? "Yes" : Number(scoreFields[8].value || 0) === 1 ? "partial" : "no",
-          Number(scoreFields[9].value || 0) === 2 ? "Yes" : Number(scoreFields[9].value || 0) === 1 ? "partial" : "no",
-          Number(scoreFields[8].value || 0) === 2 ? "Yes" : Number(scoreFields[8].value || 0) === 1 ? "partial" : "no",
+          valueLabel(scores[2]),
+          valueLabel(scores[3]),
+          valueLabel(scores[4]),
+          valueLabel(scores[5]),
+          valueLabel(scores[6]),
+          valueLabel(scores[7]),
+          valueLabel(scores[8]),
+          valueLabel(scores[9]),
+          valueLabel(scores[8]),
           document.getElementById("benchmark-gate").value,
-          document.getElementById("benchmark-notes").value.trim(),
+          fieldValue("benchmark-notes"),
           score
-        ].map(csvValue).join(",");
+        ];
 
+        return {
+          id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+          company: fieldValue("benchmark-company") || "Untitled company",
+          category: document.getElementById("benchmark-category").value,
+          pageTitle: fieldValue("benchmark-title"),
+          reviewDate: document.getElementById("benchmark-date").value,
+          score,
+          band: scoreBand(score),
+          missing,
+          partial,
+          notes: fieldValue("benchmark-notes"),
+          csvRow: serializeCsvRow(rowValues),
+          rowValues
+        };
+      }
+
+      function readSavedRows() {
+        try {
+          const raw = window.localStorage.getItem(BENCHMARK_ROWS_KEY);
+          if (!raw) {
+            return [];
+          }
+          const parsed = JSON.parse(raw);
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function writeSavedRows(rows) {
+        window.localStorage.setItem(BENCHMARK_ROWS_KEY, JSON.stringify(rows));
+      }
+
+      function saveDraft() {
+        const payload = {
+          company: fieldValue("benchmark-company"),
+          homepage: fieldValue("benchmark-homepage"),
+          page: fieldValue("benchmark-page"),
+          category: document.getElementById("benchmark-category").value,
+          title: fieldValue("benchmark-title"),
+          gate: document.getElementById("benchmark-gate").value,
+          date: document.getElementById("benchmark-date").value,
+          updated: fieldValue("benchmark-updated"),
+          notes: fieldValue("benchmark-notes"),
+          scores: currentScores()
+        };
+        window.localStorage.setItem(BENCHMARK_DRAFT_KEY, JSON.stringify(payload));
+      }
+
+      function restoreDraft() {
+        try {
+          const raw = window.localStorage.getItem(BENCHMARK_DRAFT_KEY);
+          if (!raw) {
+            return;
+          }
+          const draft = JSON.parse(raw);
+          if (!draft || typeof draft !== "object") {
+            return;
+          }
+          if (draft.company) document.getElementById("benchmark-company").value = draft.company;
+          if (draft.homepage) document.getElementById("benchmark-homepage").value = draft.homepage;
+          if (draft.page) document.getElementById("benchmark-page").value = draft.page;
+          if (draft.category) document.getElementById("benchmark-category").value = draft.category;
+          if (draft.title) document.getElementById("benchmark-title").value = draft.title;
+          if (draft.gate) document.getElementById("benchmark-gate").value = draft.gate;
+          if (draft.date) document.getElementById("benchmark-date").value = draft.date;
+          if (draft.updated) document.getElementById("benchmark-updated").value = draft.updated;
+          if (draft.notes) document.getElementById("benchmark-notes").value = draft.notes;
+          if (Array.isArray(draft.scores)) {
+            draft.scores.forEach((score, index) => {
+              if (scoreFields[index]) {
+                scoreFields[index].value = String(score);
+              }
+            });
+          }
+        } catch (error) {
+          window.localStorage.removeItem(BENCHMARK_DRAFT_KEY);
+        }
+      }
+
+      function renderSavedBatch() {
+        const rows = readSavedRows();
+        if (rows.length === 0) {
+          summaryNode.innerHTML = "<p>No saved rows yet. Score a page above and save it into the local batch.</p>";
+          gapSummaryNode.innerHTML = "<p>No common gaps yet.</p>";
+          savedRowsNode.innerHTML = "<tr><td colspan=\"6\">No saved rows yet.</td></tr>";
+          return;
+        }
+
+        const averageScore = (rows.reduce((sum, row) => sum + Number(row.score || 0), 0) / rows.length).toFixed(1);
+        const bandCounts = {
+          Strong: 0,
+          Adequate: 0,
+          Thin: 0,
+          Risky: 0
+        };
+        const gapCounts = new Map();
+
+        rows.forEach((row) => {
+          bandCounts[row.band] = (bandCounts[row.band] || 0) + 1;
+          (row.missing || []).forEach((gap) => {
+            gapCounts.set(gap, (gapCounts.get(gap) || 0) + 1);
+          });
+        });
+
+        const commonGaps = Array.from(gapCounts.entries())
+          .sort((left, right) => right[1] - left[1])
+          .slice(0, 5);
+
+        summaryNode.innerHTML = [
+          `<p><strong>${rows.length}</strong> saved pages</p>`,
+          `<p><strong>${averageScore}/20</strong> average score</p>`,
+          `<p><strong>${bandCounts.Strong}</strong> Strong, <strong>${bandCounts.Adequate}</strong> Adequate, <strong>${bandCounts.Thin}</strong> Thin, <strong>${bandCounts.Risky}</strong> Risky</p>`
+        ].join("");
+
+        gapSummaryNode.innerHTML = commonGaps.length === 0
+          ? "<p>No repeated missing fields yet.</p>"
+          : commonGaps.map(([gap, count]) => `<p><strong>${count}x</strong> ${escapeHtml(gap)}</p>`).join("");
+
+        savedRowsNode.innerHTML = rows.map((row) => {
+          const missingText = row.missing && row.missing.length > 0 ? row.missing.join(", ") : "none";
+          return [
+            "<tr>",
+            `<td>${escapeHtml(row.company)}</td>`,
+            `<td>${escapeHtml(row.category)}</td>`,
+            `<td>${escapeHtml(String(row.score))}</td>`,
+            `<td>${escapeHtml(row.band)}</td>`,
+            `<td>${escapeHtml(missingText)}</td>`,
+            `<td><button class="button secondary" type="button" data-remove-benchmark-row="${escapeHtml(row.id)}">Remove</button></td>`,
+            "</tr>"
+          ].join("");
+        }).join("");
+      }
+
+      function benchmarkSummaryText() {
+        const rows = readSavedRows();
+        if (rows.length === 0) {
+          return "No saved rows yet.\n";
+        }
+
+        const averageScore = (rows.reduce((sum, row) => sum + Number(row.score || 0), 0) / rows.length).toFixed(1);
+        const gapCounts = new Map();
+
+        rows.forEach((row) => {
+          (row.missing || []).forEach((gap) => {
+            gapCounts.set(gap, (gapCounts.get(gap) || 0) + 1);
+          });
+        });
+
+        const commonGaps = Array.from(gapCounts.entries())
+          .sort((left, right) => right[1] - left[1])
+          .slice(0, 5);
+
+        return [
+          "# NoticeKit Benchmark Batch Summary",
+          "",
+          `Reviewed pages: ${rows.length}`,
+          `Average score: ${averageScore}/20`,
+          "",
+          "Top gaps:",
+          ...(commonGaps.length === 0 ? ["- None yet"] : commonGaps.map(([gap, count]) => `- ${gap}: ${count}`)),
+          "",
+          "Saved rows:",
+          ...rows.map((row) => `- ${row.company} | ${row.category} | ${row.score}/20 | ${row.band}`)
+        ].join("\n");
+      }
+
+      async function copyText(text, successMessage) {
+        try {
+          await navigator.clipboard.writeText(text);
+          statusNode.textContent = successMessage;
+        } catch (error) {
+          statusNode.textContent = "Clipboard copy failed in this browser. Use the download option instead.";
+        }
+      }
+
+      function updateBenchmarkSummary() {
+        const currentRow = buildCurrentRow();
         const summaryParts = [
-          `<strong>${score}/20 (${scoreBand(score)})</strong>`,
-          `<p>Missing: ${missing.length > 0 ? missing.join(", ") : "none"}</p>`,
-          `<p>Partial: ${partial.length > 0 ? partial.join(", ") : "none"}</p>`,
+          `<strong>${currentRow.score}/20 (${currentRow.band})</strong>`,
+          `<p>Missing: ${currentRow.missing.length > 0 ? currentRow.missing.map(escapeHtml).join(", ") : "none"}</p>`,
+          `<p>Partial: ${currentRow.partial.length > 0 ? currentRow.partial.map(escapeHtml).join(", ") : "none"}</p>`,
           `<p>CSV row preview:</p>`,
-          `<pre>${row}</pre>`
+          `<pre>${escapeHtml(currentRow.csvRow)}</pre>`
         ];
 
         output.innerHTML = summaryParts.join("");
+        saveDraft();
       }
 
       scoreFields.forEach((field) => field.addEventListener("change", updateBenchmarkSummary));
@@ -498,7 +793,52 @@
         document.getElementById(id).addEventListener("change", updateBenchmarkSummary);
       });
 
+      saveButton.addEventListener("click", () => {
+        const currentRow = buildCurrentRow();
+        const rows = readSavedRows();
+        rows.push(currentRow);
+        writeSavedRows(rows);
+        renderSavedBatch();
+        statusNode.textContent = `${currentRow.company} saved to the local benchmark batch.`;
+      });
+
+      copyRowButton.addEventListener("click", () => {
+        copyText(buildCurrentRow().csvRow, "CSV row copied to the clipboard.");
+      });
+
+      downloadBatchButton.addEventListener("click", () => {
+        const rows = readSavedRows();
+        const content = [CSV_HEADER.join(","), ...rows.map((row) => row.csvRow)].join("\n");
+        downloadFile("noticekit-subprocessor-benchmark-batch.csv", `${content}\n`, "text/csv;charset=utf-8");
+        statusNode.textContent = "Saved benchmark CSV downloaded.";
+      });
+
+      downloadSummaryButton.addEventListener("click", () => {
+        downloadFile("noticekit-subprocessor-benchmark-summary.md", `${benchmarkSummaryText()}\n`, "text/markdown;charset=utf-8");
+        statusNode.textContent = "Benchmark summary downloaded.";
+      });
+
+      clearBatchButton.addEventListener("click", () => {
+        window.localStorage.removeItem(BENCHMARK_ROWS_KEY);
+        renderSavedBatch();
+        statusNode.textContent = "Saved benchmark rows cleared from this device.";
+      });
+
+      savedRowsNode.addEventListener("click", (event) => {
+        const target = event.target.closest("[data-remove-benchmark-row]");
+        if (!target) {
+          return;
+        }
+        const rowId = target.getAttribute("data-remove-benchmark-row");
+        const nextRows = readSavedRows().filter((row) => row.id !== rowId);
+        writeSavedRows(nextRows);
+        renderSavedBatch();
+        statusNode.textContent = "Saved benchmark row removed.";
+      });
+
+      restoreDraft();
       updateBenchmarkSummary();
+      renderSavedBatch();
     </script>
   </body>
 </html>
