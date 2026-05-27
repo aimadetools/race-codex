@@ -193,6 +193,7 @@
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="once">AI answer now</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="repeat">AI repeated review</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="public-page" data-route-frequency="repeat">AI broader handoff</button>
+                <button class="button secondary" type="button" data-route-topic="general" data-route-role="founder" data-route-need="benchmark" data-route-frequency="repeat">Public benchmark</button>
                 <button class="button secondary" type="button" data-route-topic="general" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">Notice workflow</button>
                 <button class="button secondary" type="button" data-route-topic="general" data-route-role="consultant" data-route-need="package-preview" data-route-frequency="repeat">Advisor or counsel</button>
               </div>
@@ -215,6 +216,7 @@
                     <option value="written-answer">A written answer before I buy</option>
                     <option value="files-now">The files to use right away</option>
                     <option value="public-page">A review of the public page or workflow</option>
+                    <option value="benchmark">A public benchmark or calibration read</option>
                     <option value="package-preview">A look at what is inside the kit</option>
                   </select>
                 </label>
@@ -657,7 +659,21 @@
           secondaryLabel: "Compare pricing",
         };
 
-        if (role === "consultant") {
+        if (need === "benchmark") {
+          recommendation = {
+            title: "Read the benchmark report first.",
+            summary: "You want a calibration read before rewriting a public subprocessor page, so the pilot report shows what is usually visible and what still goes missing.",
+            bullets: [
+              "Best when you need a reality check before a rewrite",
+              "Pairs the report with the tracker for your own sample",
+              "Use the page checker next if you want to score one page"
+            ],
+            primaryHref: "blog-subprocessor-benchmark-report-01.html?source=free-tools-route-finder",
+            primaryLabel: "Read benchmark report",
+            secondaryHref: "blog-subprocessor-benchmark-worksheet.html?source=free-tools-route-finder",
+            secondaryLabel: "Open tracker",
+          };
+        } else if (role === "consultant") {
           recommendation = {
             title: "Open the partner path first.",
             summary: "You are selling or delivering this for clients, so the partner preview is the fastest way to check referral, delivery, or white-label fit.",
