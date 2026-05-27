@@ -28,6 +28,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Filed the benchmark-report community/indexing help request and kept the watched benchmark report, appendix, and community source tags in sync so the new acquisition lane stays trackable outside the repo.
 - Verified the edited surfaces with `npm run check:site-links` after the copy refresh, confirming all 77 HTML files still have valid local targets.
 - The live queue still has 0 real submissions, 0 replies, and 0 interviews, but the site now has a public benchmark package instead of another maintenance-only pass.
+- Collapsed the completed backlog summaries into shorter lines and kept the last three days detailed so the live evidence gates remain easier to scan on the next pass.
 
 ## Next Step
 
