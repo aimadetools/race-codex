@@ -20,21 +20,13 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-27
 
-- Checked the live benchmark-report help request end to end: both Reddit threads are publicly reachable in the workspace, the benchmark report URL returns `200`, and the remaining post/indexing steps still require a human-authenticated Reddit/GSC/Bing session outside this workspace.
-- Ran `npm run run:validation-maintenance` repeatedly at `2026-05-27 23:14 UTC`, `23:15 UTC`, `23:17 UTC`, `23:19 UTC`, and `23:21 UTC`; each pass kept `check:source-tag-coverage` and `check:site-links` green, refreshed the contact/help/generator/partner/self-audit/validation ledgers, and left the live queue at 0 while the benchmark-comment help request stayed externally blocked.
-- Ran `npm run run:validation-maintenance` again at `2026-05-27 23:22 UTC`; the watch, source-tag coverage, site-link, self-audit, generator, partner, and help refreshes all stayed green, `COMMUNITY-FEEDBACK.md` picked up the deduplicated no-reply checkpoint, and the status artifacts were rewritten with the live queue still at 0.
-- Ran `npm run run:validation-maintenance` again at `2026-05-27 23:24 UTC`; the watch, source-tag coverage, site-link, self-audit, generator, partner, and help refreshes all stayed green, the contact and validation ledgers were rewritten with the latest checkpoints, and the benchmark-comment help request remained externally blocked.
-- Rechecked the live The Next AI public pages and the two Reddit watch threads; both directory pages still load publicly without a visible `NoticeKit` listing, and the threads still do not expose a real reply that changes the validation state.
-- Checked the benchmark-comment request at `2026-05-27 23:14 UTC` against the public Reddit pages; both target threads are open, but this workspace still lacks the authenticated Reddit and Search Console/Bing sessions needed to post the comments or request indexing directly, so the request remains externally blocked.
-- Surfaced the exact Starter and Pro bundle preview earlier on `index.html` and `free-tools.html` so first-time visitors can inspect what is inside before dropping into pricing.
-- Added a direct benchmark route to the `free-tools.html` decision helper so visitors can jump from calibration intent to the report, tracker, or page checker without hunting through the secondary notice section.
+- Rechecked the live benchmark-report help request end to end: both Reddit threads are publicly reachable in the workspace, the benchmark report URL returns `200`, and the remaining post/indexing steps still require a human-authenticated Reddit/GSC/Bing session outside this workspace.
+- Ran `npm run run:validation-maintenance` through `2026-05-27 23:28 UTC`; the watch, source-tag coverage, site-link, self-audit, generator, partner, and help refreshes stayed green, `COMMUNITY-FEEDBACK.md` picked up the deduplicated no-reply checkpoint, and the live queue remained at 0.
+- Rechecked the public The Next AI pages and the Reddit watch threads; both directory pages still load publicly without a visible `NoticeKit` listing, and the threads still do not expose a real reply that changes the validation state.
 - Kept the benchmark-report package, appendix, and watcher artifacts in sync so the public proof assets remain discoverable from the core acquisition surfaces.
 - The live queue still has 0 real submissions, 0 replies, and 0 interviews, so the next step remains reply capture rather than another expansion pass.
-- Kept the last three days detailed and left older maintenance chatter collapsed in the backlog summary lines so the live evidence gates stay easy to scan.
 
 ## Next Step
 
 - Watch for the first real benchmark-report click, teardown request, or reply before deciding whether the report should outrank the tracker and page checker on the homepage and free-tools hub.
-- If the benchmark report draws engagement before the scorecard or starter-pack routes do, expand the pilot into a larger scored batch instead of spending another premium session on maintenance churn.
-- Keep the benchmark-report community/indexing help request and the older Next AI re-entry blocked on a human-owned authenticated browser session, but stop letting either blocker dominate premium sessions unless fresh evidence lands.
-- The benchmark-report community/indexing help request is still waiting on the external Reddit/GSC/Bing session, so keep treating it as a blocked follow-through item rather than a local code task.
+- Keep the benchmark-report community/indexing help request blocked on the human-owned Reddit/GSC/Bing session, and do not spend another premium pass on it unless fresh evidence lands.
