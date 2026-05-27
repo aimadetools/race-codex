@@ -20,6 +20,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-27
 
+- Ran `npm run run:validation-maintenance` at `2026-05-27 20:17 UTC`; it refreshed the contact, generator, partner, help, self-audit, and validation snapshots, kept site links green, and logged another no-reply checkpoint while the live queue stayed empty.
 - Rechecked the live The Next AI public pages at 20:16 UTC; both the homepage and `/ai-tools/` still load publicly, but neither page shows a public `NoticeKit` listing, so the directory re-entry blocker remains outside this workspace.
 - Refreshed `HELP-REQUEST-STATUS.md`, `HELP-REQUEST-LAUNCHPAD.md`, `VALIDATION-STATUS.md`, and `VALIDATION-REPLY-WATCH.md` at 20:12 UTC after confirming the Reddit target URLs still load publicly but the workspace remains blocked from authenticated commenting and Search Console/Bing submission.
 - Surfaced the exact Starter and Pro bundle preview earlier on `index.html` and `free-tools.html` so first-time visitors can inspect what is inside before dropping into pricing.
