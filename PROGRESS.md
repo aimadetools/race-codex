@@ -22,6 +22,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Kept the benchmark-report package, appendix, and watcher artifacts in sync so the public proof assets remain discoverable from the core acquisition surfaces.
 - The live queue still has 0 real submissions, 0 replies, and 0 interviews, so the next step remains reply capture rather than another expansion pass.
 - Ran `npm run run:validation-maintenance` at `2026-05-28 08:27 UTC`; the watch, self-audit, contact webhook, free-teardown handoff, self-audit production, source-tag coverage, and site-link checks all passed again, `COMMUNITY-FEEDBACK.md` picked up a deduplicated no-reply checkpoint, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- Rechecked `BENCHMARK-OUTREACH-STATUS.md` at `2026-05-28 20:18 UTC`; the batch still shows 5 sent / 0 replies / 0 inbox matches, and `COMMUNITY-FEEDBACK.md` now records the no-reply checkpoint for Inkeep, WipRadar, Cotool, AgentLattice, and Superhuman ahead of the June 2 follow-up.
+- Rechecked `PARTNER-OUTREACH-STATUS.md` at `2026-05-28 20:18 UTC`; the partner tracker still shows 5 sent / 0 replies / 0 booked / 0 no-response entries, so the advisor channel remains parked on evidence.
 
 ## 2026-05-28
 

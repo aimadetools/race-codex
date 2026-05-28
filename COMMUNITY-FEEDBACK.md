@@ -46,3 +46,5 @@ Rechecked on 2026-05-27 23:28 UTC: no advisor replies have been posted here yet.
 Rechecked on 2026-05-28 20:15 UTC: no founder/operator replies have been posted here yet across the active outreach batches. Keep `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-03.csv`, and `buyer-validation-outreach-batch-04.csv` unchanged until a specific reply, bounce, referral, or interview is available.
 
 Rechecked on 2026-05-28 20:15 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+
+Rechecked the benchmark outreach batch on 2026-05-28 20:18 UTC: Inkeep, WipRadar, Cotool, AgentLattice, and Superhuman are still marked `sent`, with no reply, redirect, teardown request, or inbox match recorded yet; keep the June 2 follow-up as the next benchmark action.
