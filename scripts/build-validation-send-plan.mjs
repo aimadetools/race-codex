@@ -4,6 +4,7 @@ import { join } from "node:path";
 const ROOT = process.cwd();
 const OUTPUT = join(ROOT, "VALIDATION-OUTREACH-SEND-PLAN.md");
 const TODAY = new Date().toISOString().slice(0, 10);
+const BENCHMARK_FOLLOW_UP_PASS = "BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md";
 
 function parseCsv(text) {
   const rows = [];
@@ -130,6 +131,26 @@ function extractFirstEventDate(rows) {
   return preferred.sort()[0];
 }
 
+function extractSentDate(notes) {
+  const match = String(notes || "").match(/Sent\s+(20\d{2}-\d{2}-\d{2})/);
+  return match ? match[1] : "";
+}
+
+function addBusinessDays(isoDate, businessDays) {
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  let added = 0;
+
+  while (added < businessDays) {
+    date.setUTCDate(date.getUTCDate() + 1);
+    const day = date.getUTCDay();
+    if (day !== 0 && day !== 6) {
+      added += 1;
+    }
+  }
+
+  return date.toISOString().slice(0, 10);
+}
+
 function describeBatchStatus(rows, { contingencyLabel = "" } = {}) {
   const counts = countStatuses(rows);
   const ready = counts.ready_for_send || 0;
@@ -179,6 +200,7 @@ function planSection(title, rows) {
 
 const batch01 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-01.csv"), "utf8"));
 const batch02 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-02.csv"), "utf8"));
+const benchmarkBatch = parseCsv(await readFile(join(ROOT, "ai-benchmark-outreach-batch-01.csv"), "utf8"));
 let batch03 = [];
 let batch04 = [];
 
@@ -230,21 +252,40 @@ const normalized04 = batch04.map((row) => ({
   sendMethod: classifyRoute(row.public_contact_route)
 }));
 
-const directEmailCount = [...normalized01, ...normalized02, ...normalized03, ...normalized04].filter(
+const normalizedBenchmark = benchmarkBatch.map((row) => ({
+  priority: row.priority,
+  target: row.company,
+  segment: row.segment,
+  route: row.public_contact_route,
+  sendMethod: classifyRoute(row.public_contact_route),
+  status: row.status,
+  followUpDate: extractSentDate(row.notes) ? addBusinessDays(extractSentDate(row.notes), 3) : "n/a"
+}));
+
+const directEmailCount = [...normalized01, ...normalized02, ...normalized03, ...normalized04, ...normalizedBenchmark].filter(
   (row) => row.sendMethod === "direct-email"
 ).length;
 
-const allRows = [batch01, batch02, batch03, batch04].flat();
+const allRows = [batch01, batch02, batch03, batch04, benchmarkBatch].flat();
 const totalWaitingForReplies = allRows.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 const totalReplyRows = allRows.reduce((total, row) => {
   return total + (["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim()) ? 1 : 0);
 }, 0);
+const benchmarkWaiting = benchmarkBatch.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
+const benchmarkFollowUpDate = normalizedBenchmark
+  .filter((row) => row.status === "sent" && row.followUpDate !== "n/a")
+  .map((row) => row.followUpDate)
+  .sort()[0] || "";
 
 let currentPriority = "Monitor the active outreach queue for the first real reply and convert any real reply into a scored interview immediately.";
 if (totalReplyRows > 0) {
   currentPriority = "Review the recorded reply rows, log the exact evidence, and convert any real conversation or referral into a scored interview.";
 } else if (totalWaitingForReplies > 0) {
   currentPriority = `Monitor replies across the ${totalWaitingForReplies} active outbound row(s); no additional expansion is unlocked until evidence lands.`;
+}
+
+if (benchmarkWaiting > 0 && benchmarkFollowUpDate) {
+  currentPriority += ` Benchmark batch 01 follow-up is due on ${benchmarkFollowUpDate} UTC if replies stay at zero.`;
 }
 
 const batch03Section = normalized03.length
@@ -264,6 +305,22 @@ const batch04Section = normalized04.length
       describeBatchStatus(batch04, { contingencyLabel: "Batch 04 contingency" }),
       "",
       planSection("", normalized04)
+    ].join("\n")
+  : "";
+
+const benchmarkSection = normalizedBenchmark.length
+  ? [
+      "## Benchmark batch 01",
+      "",
+      describeBatchStatus(benchmarkBatch),
+      "",
+      "| Priority | Target | Segment | Route | Send method | Status | Follow-up date |",
+      "|---:|---|---|---|---|---|---|",
+      ...normalizedBenchmark.map(
+        (row) =>
+          `| ${row.priority} | ${row.target} | ${row.segment} | ${row.route} | ${row.sendMethod} | ${row.status} | ${row.followUpDate} |`
+      ),
+      ""
     ].join("\n")
   : "";
 
@@ -295,12 +352,14 @@ const output = [
   ].join("\n"),
   batch03Section,
   batch04Section,
+  benchmarkSection,
   "## Notes",
   "",
   "- `direct-email` means the public route is a real email address or `mailto:` link.",
   "- `manual-form` means the public route is a contact page, support widget, or contact-sales flow that needs human submission.",
   "- `manual` means the route needs a different delivery path before it can be sent.",
-  `- Total reply, bounce, or interview rows already recorded across all batches: ${countReplyRows(batch01) + countReplyRows(batch02) + countReplyRows(batch03) + countReplyRows(batch04)}.`,
+  `- Total reply, bounce, or interview rows already recorded across all batches: ${countReplyRows(batch01) + countReplyRows(batch02) + countReplyRows(batch03) + countReplyRows(batch04) + countReplyRows(benchmarkBatch)}.`,
+  `- Use \`${BENCHMARK_FOLLOW_UP_PASS}\` for the June 2 benchmark follow-up send guardrails and row-specific teardown links.`,
   "- Convert any real reply into repo evidence before changing positioning or expanding the list again.",
   ""
 ].join("\n");
