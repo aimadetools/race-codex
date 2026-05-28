@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-28 08:30 UTC
+Checked at: 2026-05-28 12:39 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -276,6 +276,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - community-ai-stack-guide: 0
 - community-benchmark-report: 0
 - community-benchmark-report-procurement: 0
+- benchmark-outreach-batch-01: 0
+- benchmark-outreach-report: 0
 - community-ai-procurement-teardown: 0
 - community-ai-procurement-notice: 0
 - directory-indie-makers-hub-answer-bank: 0

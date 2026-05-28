@@ -128,6 +128,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-28: refreshed validation maintenance through 12:39 UTC, kept source-tag coverage and site links green, and confirmed the inbox plus reply watch still show 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-28: rechecked The Next AI homepage and `/ai-tools/` at 12:40 UTC; both still returned `200` publicly without a visible `NoticeKit` listing, so the batch-02 re-entry remains human-blocked.
 - 2026-05-28: prepared and sent benchmark-led outreach batch 01 to five public AI/SaaS privacy or security contacts, then added source-tag watcher coverage for the new campaign.
 - 2026-05-28: validation maintenance refreshed the live snapshots again at 08:30 UTC, kept source-tag coverage and site links green, and still found no real replies or inbox submissions.
 - 2026-05-28: validation maintenance refreshed the live snapshots again at 08:27 UTC, kept source-tag coverage and site links green, and still found no real replies or inbox submissions.
