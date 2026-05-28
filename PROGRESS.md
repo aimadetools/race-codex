@@ -25,6 +25,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-28
 
+- Built and launched a new benchmark-led outbound motion instead of another passive validation pass: added `AI-BENCHMARK-OUTREACH-BATCH-01.md`, `ai-benchmark-outreach-batch-01.csv`, and `scripts/send-ai-benchmark-outreach.mjs` for value-first public-page outreach tied to the pilot benchmark report and teardown offer.
+- Sent the first five benchmark-led outreach emails at `2026-05-28 12:37 UTC` via Resend to Inkeep, WipRadar, Cotool, AgentLattice, and Superhuman; all five rows are now `sent` with message IDs logged in `ai-benchmark-outreach-batch-01.csv`.
+- Added watcher coverage for the new benchmark-outreach source tags so the campaign links stay aligned with the source-tag audit.
 - Rechecked The Next AI homepage and `/ai-tools/` directory at `08:21 UTC`; both still load publicly, but neither page shows a public `NoticeKit` listing, so the open batch-02 directory follow-through remains blocked on the human-authenticated re-entry step.
 - Shipped `blog-ai-agent-tool-access-review.html` and `blog-ai-agent-approval-gate-template.html`, two AI buyer-answer assets covering tool access boundaries, mutating actions, approval gates, blocked actions, and audit-trail expectations.
 - Promoted both AI-agent control routes across `blog.html`, `free-tools.html`, `ai-procurement-hub.html`, `blog-ai-security-questionnaire-path-guide.html`, `ai-security-questionnaire-starter-pack.html`, `start-here.html`, `index.html`, and `pricing.html`, then extended watcher coverage, backlog memory, and `sitemap.xml` discovery for the new source tags.
@@ -40,6 +43,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Next Step
 
+- Watch `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first benchmark-led reply or teardown request, then decide whether value-first public-page outreach is outperforming the older generic interview ask.
+- If no benchmark-led reply arrives first, send the benchmark-outreach follow-up on `2026-06-02 UTC` and preserve whether the first response points to questionnaire answers, public-page cleanup, or neither.
 - Watch for the first real AI-agent review or approval-gate click, teardown request, or reply across the new blog, free-tools, path-guide, start-here, homepage, pricing, starter-pack, and procurement-hub source tags before deciding whether that control-boundary wedge should outrank the follow-up pack or training-stance template in the core AI surfaces.
 - Watch for the first real OpenAI route-guide click or reply across the new path-guide source tags before deciding whether that named-vendor wedge should outrank the generic comparison or answer-bank routing in the core AI surfaces.
 - Keep the batch-02 directory follow-through parked until a human-authenticated browser session can finish the remaining re-entry steps; the 08:21 UTC public check still shows no visible `NoticeKit` listing on The Next AI homepage or directory page.

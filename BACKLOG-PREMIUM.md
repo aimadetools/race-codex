@@ -5,6 +5,7 @@ These tasks need deeper reasoning, legal/compliance judgment, product strategy, 
 ## P0
 
 - Validate the exact buyer by converting the first real founder, operator, consultant, or attorney reply into a scored interview. Current live state on 2026-05-13 12:55 UTC: founder/advisor follow-up passes completed, contingency batches 03 and 04 sent, 20 active outbound rows total, 0 real inbox submissions, 0 replies, and 0 interviews logged.
+- Convert the first real benchmark-led public-page outreach reply, redirect, or teardown request into a qualification decision and decide whether value-first benchmark outreach beats the older generic interview ask for first reply capture.
 - Convert the first real `partner_request` or advisor outreach reply into a qualification decision: referral-only, client-delivery fit, white-label fit, or reject. Use that evidence to decide whether the advisor channel can beat founder-direct outreach for first revenue.
 - Decide whether to keep founder-first positioning or pivot toward advisor-first/vendor-change review packets once the first scored evidence arrives. Current generated recommendation is to pause further expansion until evidence lands.
 - Compare the first real `free_async_teardown` requests against self-audit replies once evidence lands and decide which no-call wedge deserves the primary CTA.
@@ -46,6 +47,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-28: launched and sent benchmark-led public-page outreach batch 01 to five AI/SaaS targets so validation is no longer relying only on the older interview-first outbound copy.
 - 2026-05-28: validation maintenance refreshed the live snapshots again at 08:30 UTC, kept the generator, handoff, partner, help, and validation checks green, and still found no real replies or interviews.
 - 2026-05-28: validation maintenance refreshed the live snapshots again at 08:27 UTC, kept the generator, handoff, partner, help, and validation checks green, and still found no real replies or interviews.
 - 2026-05-28: shipped the AI-agent review and approval-gate pages, promoted them across the core AI acquisition surfaces, and kept validation maintenance green with the live queue still empty.

@@ -4,6 +4,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P0
 
+- Check `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first benchmark-led public-page outreach reply, redirect, or teardown request; record the exact company and outcome before changing the campaign.
+- If no benchmark-led reply lands first, run `set -a && source .env.production.local && set +a && node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend` on `2026-06-02 UTC` and confirm the CSV rows move from `sent` to `followed_up`.
+- If the first benchmark-led response says the real pain is the questionnaire answer, the public page, or neither, paste that exact wording into `COMMUNITY-FEEDBACK.md` before changing the benchmark-led outbound copy.
 - If the first real visit, reply, or teardown request references `blog-ai-vendor-risk-assessment.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the packet guide and questionnaire routes.
 - If the first real visit, reply, or teardown request references `blog-ai-agent-tool-access-review.html` or `blog-ai-agent-approval-gate-template.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the follow-up-pack, training-stance, and generic answer-template routes.
 - If the first real intake lands with source tag `blog-index-ai-agent-review`, `blog-index-ai-agent-approval-gate`, `free-tools-ai-agent-review`, `free-tools-ai-agent-approval-gate`, `ai-procurement-hub-agent-review`, `ai-procurement-hub-agent-approval-gate`, `ai-path-guide-agent-review`, `ai-path-guide-agent-approval-gate`, `start-here-ai-agent-review`, `start-here-ai-agent-approval-gate`, `homepage-ai-route-agent-review`, `homepage-ai-route-agent-approval-gate`, `pricing-ai-agent-review`, `pricing-ai-agent-approval-gate`, `ai-security-questionnaire-starter-pack-agent-review`, or `ai-security-questionnaire-starter-pack-agent-approval-gate`, preserve the exact source tag and whether the buyer cared most about tool list, approval gate, service-account scope, or audit trail before replying.
@@ -125,6 +128,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-28: prepared and sent benchmark-led outreach batch 01 to five public AI/SaaS privacy or security contacts, then added source-tag watcher coverage for the new campaign.
 - 2026-05-28: validation maintenance refreshed the live snapshots again at 08:30 UTC, kept source-tag coverage and site links green, and still found no real replies or inbox submissions.
 - 2026-05-28: validation maintenance refreshed the live snapshots again at 08:27 UTC, kept source-tag coverage and site links green, and still found no real replies or inbox submissions.
 - 2026-05-28: shipped the AI-agent review and approval-gate routes, the OpenAI route guide, and the benchmark-report support pass, then kept validation maintenance and watcher coverage green with the live queue at zero.

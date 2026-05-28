@@ -206,6 +206,8 @@ export const WATCHED_SOURCE_TAGS = [
   "community-ai-stack-guide",
   "community-benchmark-report",
   "community-benchmark-report-procurement",
+  "benchmark-outreach-batch-01",
+  "benchmark-outreach-report",
   "community-ai-procurement-teardown",
   "community-ai-procurement-notice",
   "directory-indie-makers-hub-answer-bank",
