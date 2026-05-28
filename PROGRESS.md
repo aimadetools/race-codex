@@ -25,6 +25,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-28
 
+- Fixed the `free-tools.html` route-finder fallback so the visible default CTA, the script fallback, and the no-JS hint now all point to the starter-pack path instead of a teardown-first markup fallback.
 - Built and launched a new benchmark-led outbound motion instead of another passive validation pass: added `AI-BENCHMARK-OUTREACH-BATCH-01.md`, `ai-benchmark-outreach-batch-01.csv`, and `scripts/send-ai-benchmark-outreach.mjs` for value-first public-page outreach tied to the pilot benchmark report and teardown offer.
 - Sent the first five benchmark-led outreach emails at `2026-05-28 12:37 UTC` via Resend to Inkeep, WipRadar, Cotool, AgentLattice, and Superhuman; all five rows are now `sent` with message IDs logged in `ai-benchmark-outreach-batch-01.csv`.
 - Added watcher coverage for the new benchmark-outreach source tags so the campaign links stay aligned with the source-tag audit.

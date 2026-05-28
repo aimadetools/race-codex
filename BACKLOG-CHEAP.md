@@ -128,6 +128,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-28: fixed the free-tools route-finder fallback so the starter-pack path now matches the visible default CTA and the no-JS hint.
 - 2026-05-28: refreshed validation maintenance again at 12:59 UTC, kept the benchmark watch at 5 sent / 0 replies with follow-up still due on 2026-06-02 UTC, and confirmed the inbox plus reply watch still show 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-28: refreshed validation maintenance through 12:39 UTC, kept source-tag coverage and site links green, and confirmed the inbox plus reply watch still show 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-28: refreshed validation maintenance again at 12:42 UTC, advanced the deduplicated no-reply checkpoint, and added a generated `BENCHMARK-OUTREACH-STATUS.md` snapshot so the benchmark batch now has a durable 5-sent / 0-reply / follow-up-due-2026-06-02 watch file.

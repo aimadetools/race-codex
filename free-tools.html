@@ -227,11 +227,16 @@
                   </select>
                 </label>
               </div>
-              <div id="route-output" class="notice-output" aria-live="polite" role="status"></div>
-              <div class="hero-actions">
-                <a id="route-primary" class="button" href="free-teardown.html?source=free-tools-route-finder">Use recommended path</a>
-                <a id="route-secondary" class="button secondary" href="pricing.html">Compare pricing</a>
+              <div id="route-output" class="notice-output" aria-live="polite" role="status">
+                <p class="fine-print">Choose a preset or adjust the controls to see the shortest AI-review path.</p>
               </div>
+              <div class="hero-actions">
+                <a id="route-primary" class="button" href="ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder">Open starter pack</a>
+                <a id="route-secondary" class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder">Open answer builder</a>
+              </div>
+              <noscript>
+                <p class="fine-print" style="margin-top:12px;">JavaScript is disabled. The default path is the AI starter pack; use the answer builder next if you need one copy-ready answer right away.</p>
+              </noscript>
             </div>
           </div>
         </section>
@@ -657,17 +662,17 @@
         const frequency = routeFrequency.value;
 
         let recommendation = {
-          title: "Request the free async teardown.",
-          summary: "You want the shortest written answer before buying. One URL, one change, and one customer segment is enough to get a blunt gap read.",
+          title: "Start with the AI questionnaire starter pack.",
+          summary: "You want a clean written answer path first, so the starter pack keeps the builder, example, and teardown routes close together.",
           bullets: [
-            "Best when you want a fast written answer",
-            "Keeps you on the no-call path",
-            "Source tags stay attached for triage"
+            "Best when one live questionnaire is blocking the deal",
+            "Keeps the builder and answer bank one click away",
+            "Drops into teardown only if the blocker is still fuzzy"
           ],
-          primaryHref: "free-teardown.html?source=free-tools-route-finder",
-          primaryLabel: "Request free teardown",
-          secondaryHref: "pricing.html",
-          secondaryLabel: "Compare pricing",
+          primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+          primaryLabel: "Open starter pack",
+          secondaryHref: "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
+          secondaryLabel: "Open answer builder",
         };
 
         if (need === "benchmark") {
