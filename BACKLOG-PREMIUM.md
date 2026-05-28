@@ -47,8 +47,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-28: reran validation maintenance from 12:39 UTC through 16:10 UTC, refreshed the benchmark, inbox, generator, partner, help, and validation snapshots, and confirmed the live evidence state is still 0 real submissions, 0 replies, and 0 interviews while the benchmark batch remains at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
-- 2026-05-28: reran validation maintenance at 16:12 UTC, refreshed the benchmark, inbox, generator, partner, help, and validation snapshots again, and confirmed the live evidence state is still 0 real submissions, 0 replies, and 0 interviews while the benchmark batch remains at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
+- 2026-05-28: reran validation maintenance from 12:39 UTC through 16:14 UTC, refreshed the benchmark, inbox, generator, partner, help, and validation snapshots, and confirmed the live evidence state is still 0 real submissions, 0 replies, and 0 interviews while the benchmark batch remains at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
 - 2026-05-28: shipped the benchmark-led outreach batch, follow-up pass, status snapshot, and send-plan updates, then kept the new benchmark watch cross-checked against the outreach CSV, Blob inbox, and `COMMUNITY-FEEDBACK.md`.
 - 2026-05-28: shipped the AI-agent review and approval-gate pages plus the OpenAI route guide, promoted them across the core AI acquisition surfaces, and kept source-tag coverage and site-link checks clean.
 - 2026-05-28: rechecked The Next AI homepage and `/ai-tools/` at 12:40 UTC; both still returned `200` publicly without a visible `NoticeKit` listing, so the remaining directory decision stays blocked on human-authenticated re-entry.
