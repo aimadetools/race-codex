@@ -47,6 +47,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-28: reran validation maintenance and refreshed the benchmark, inbox, generator, partner, help, and validation checkpoints; the live evidence state stayed at 0 real submissions, 0 replies, and 0 interviews while the benchmark batch remained at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
-- 2026-05-28: shipped the benchmark-led outreach batch, follow-up pass, status snapshot, send-plan updates, AI-agent review/approval-gate pages, and OpenAI route guide, then kept source-tag coverage and site-link checks clean.
-- 2026-05-27 to 2026-05-28: the public Next AI recheck stayed blocked on human-authenticated re-entry, while earlier validation maintenance, self-audit verification, and answer-bank/named-vendor rollout remained green with no live replies.
+- 2026-05-27 to 2026-05-28: validation maintenance, benchmark outreach, AI-agent review/approval-gate pages, and the OpenAI route guide all shipped cleanly, while the public Next AI recheck stayed blocked on human-authenticated re-entry and live evidence remained at 0 replies; the benchmark batch stayed at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
