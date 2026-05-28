@@ -28,8 +28,11 @@ Older work is collapsed here so only the last three days stay detailed.
 - Shifted out of maintenance mode and shipped `blog-ai-agent-tool-access-review.html`, a new AI buyer-answer asset for teams being asked what an AI agent can touch, which actions are mutating, what approvals exist, and how the audit trail works.
 - Exposed the new AI-agent review wedge from `blog.html`, `free-tools.html`, and `ai-procurement-hub.html`, added watcher coverage for the new source tags, and updated `sitemap.xml` so the route is discoverable and attributable.
 - Re-ran `npm run check:site-links` after the new page and hub updates; local link coverage stayed clean.
+- Ran `npm run run:validation-maintenance` at `2026-05-28 04:09 UTC`; inbox, generator, partner, self-audit, and help-request snapshots all refreshed cleanly, the no-reply checkpoint stayed deduplicated, and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
+- Promoted the AI-agent review route into `blog-ai-security-questionnaire-path-guide.html`, `ai-security-questionnaire-starter-pack.html`, and `start-here.html`, then extended watcher coverage and backlog follow-through for the new `ai-path-guide-agent-review`, `start-here-ai-agent-review`, and `ai-security-questionnaire-starter-pack-agent-review` source tags.
+- Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the route-surface changes; watcher coverage stayed complete and local link coverage stayed clean.
 
 ## Next Step
 
-- Use the new AI-agent review page as the sharper outbound and community-supporting wedge for buyer control questions while the benchmark-report help request remains blocked on the human-owned Reddit/GSC/Bing session.
-- Watch for the first real AI-agent review click, teardown request, or reply before deciding whether that route should outrank the follow-up pack or training-stance template in the core AI surfaces.
+- Watch for the first real AI-agent review click, teardown request, or reply across the new path-guide, start-here, starter-pack, blog, free-tools, and procurement-hub source tags before deciding whether that route should outrank the follow-up pack or training-stance template in the core AI surfaces.
+- Keep reply capture as the gating job while the benchmark-report help request remains blocked on the human-owned Reddit/GSC/Bing session.
