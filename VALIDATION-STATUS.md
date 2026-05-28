@@ -6,7 +6,7 @@ Date: 2026-05-28
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: open as of 2026-05-28 08:18 UTC.
+- Human-help request state: open as of 2026-05-28 08:21 UTC.
 - Human-help blocker: This request requires a human-owned authenticated browser session outside this workspace.
 - Production generator state: checked 2026-05-28 08:18 UTC; live generator smoke passed.
 - Generator handoff state: checked 2026-05-28 08:19 UTC; live generator-to-teardown handoff passed.
@@ -19,9 +19,9 @@ Date: 2026-05-28
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-05-28 08:18 UTC (1 minute ago)
-- Contact inbox snapshot: 2026-05-28 08:18 UTC (1 minute ago)
-- Human-help snapshot: 2026-05-28 08:18 UTC (1 minute ago)
+- Community feedback checkpoint: 2026-05-28 08:18 UTC (3 minutes ago)
+- Contact inbox snapshot: 2026-05-28 08:18 UTC (3 minutes ago)
+- Human-help snapshot: 2026-05-28 08:21 UTC (less than 1 minute ago)
 - Generator production snapshot: 2026-05-28 08:18 UTC (1 minute ago)
 - Generator handoff snapshot: 2026-05-28 08:19 UTC (less than 1 minute ago)
 - Partner-outreach snapshot: 2026-05-28 08:19 UTC (less than 1 minute ago)
@@ -76,6 +76,7 @@ Date: 2026-05-28
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
 - Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Post one value-first benchmark comment in two existing community threads and request indexing for the new benchmark report page.".
+- Human help follow-through: The batch-02 directory re-entry request remains open, and the latest public web check at 2026-05-28 08:21 UTC still shows no visible NoticeKit listing on The Next AI homepage or `/ai-tools/`.
 - Help blocker summary: This request requires a human-owned authenticated browser session outside this workspace.
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
 - Generator handoff: `GENERATOR-HANDOFF-STATUS.md` shows the live generator-to-teardown handoff passing.

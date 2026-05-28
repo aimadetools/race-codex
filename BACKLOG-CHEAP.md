@@ -125,6 +125,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-28: reran the public The Next AI homepage and `/ai-tools/` check; both still load publicly without a visible `NoticeKit` listing, so the batch-02 directory follow-through remains blocked on human-authenticated re-entry.
 - 2026-05-28: ran validation-maintenance at 08:18 UTC, confirmed the watch stayed clean with no new replies, and refreshed the generated status artifacts.
 - 2026-05-28: ran validation-maintenance at 08:11, 08:14, and 08:16 UTC, confirmed the watch stayed clean with no new replies, and refreshed the generated status artifacts.
 - 2026-05-27: added the public-benchmark route to the free-tools helper, refreshed the benchmark help-request status, and ran the 23:28 UTC validation maintenance pass; the report, tracker, and page-checker routes stay exposed while the Reddit/GSC/Bing action remains external-only.
