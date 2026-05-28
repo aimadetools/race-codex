@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-28 04:28 UTC
+Checked at: 2026-05-28 08:12 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -106,6 +106,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-openai-answer-template: 0
 - blog-index-openai-answer-example: 0
 - blog-index-openai-answer-bank: 0
+- blog-index-openai-path-guide: 0
 - blog-index-ai-questionnaire-example: 0
 - blog-index-ai-comparison: 0
 - blog-index-ai-answer-bank-vs-pro-kit: 0
@@ -152,6 +153,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-openai-answer-example: 0
 - free-tools-openai-answer-bank: 0
 - free-tools-openai-answer-comparison: 0
+- free-tools-openai-path-guide: 0
 - free-tools-ai-questionnaire-template: 0
 - free-tools-ai-questionnaire-example: 0
 - free-tools-ai-questionnaire: 0
@@ -231,7 +233,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-openai-template: 0
 - homepage-ai-route-openai-example: 0
 - homepage-ai-route-openai-answer-bank: 0
-- homepage-ai-route-openai-comparison: 0
+- homepage-ai-route-openai-path-guide: 0
 - homepage-ai-route-broader-handoff: 0
 - audit-request-ai-packet: 0
 - audit-request-ai-stack: 0
@@ -250,7 +252,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-comparison: 0
 - pricing-openai-answer-template: 0
 - pricing-openai-answer-bank: 0
-- pricing-openai-answer-comparison: 0
+- pricing-openai-path-guide: 0
 - pricing-ai-questionnaire: 0
 - pricing-ai-questionnaire-example: 0
 - pricing-ai-packet-sample: 0
@@ -313,6 +315,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-starter-pack-openai-answer-template: 0
 - ai-security-questionnaire-starter-pack-openai-answer-example: 0
 - ai-security-questionnaire-starter-pack-openai-answer-bank: 0
+- ai-security-questionnaire-starter-pack-openai-path-guide: 0
 - ai-security-questionnaire-starter-pack-packet: 0
 - ai-security-questionnaire-starter-pack-sample: 0
 - ai-security-questionnaire-starter-pack-teardown: 0
@@ -324,6 +327,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-path-guide-agent-approval-gate: 0
 - ai-path-guide-openai-template: 0
 - ai-path-guide-openai-example: 0
+- ai-path-guide-openai-route-guide: 0
 - ai-path-guide-packet: 0
 - ai-path-guide-review-pack: 0
 - ai-path-guide-pro-kit: 0
@@ -342,7 +346,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-agent-approval-gate-follow-up-pack: 0
 - ai-agent-approval-gate-answer-bank: 0
 - ai-agent-approval-gate-teardown: 0
-- ai-path-guide-openai-comparison: 0
 - ai-procurement-hub-agent-approval-gate: 0
 - ai-path-guide-teardown: 0
 - ai-path-guide-pricing: 0
@@ -495,9 +498,15 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-answer-bank-vs-builder-starter-pack: 0
 - openai-answer-bank-vs-builder-teardown: 0
 - openai-answer-bank-vs-builder-pricing: 0
-- blog-index-openai-answer-comparison: 0
-- ai-procurement-hub-openai-answer-comparison: 0
-- ai-security-questionnaire-starter-pack-openai-answer-comparison: 0
+- openai-path-guide-template: 0
+- openai-path-guide-example: 0
+- openai-path-guide-answer-bank: 0
+- openai-path-guide-answer-comparison: 0
+- openai-path-guide-builder: 0
+- openai-path-guide-generic: 0
+- openai-path-guide-pricing: 0
+- openai-path-guide-hub: 0
+- ai-procurement-hub-openai-path-guide: 0
 - openai-security-questionnaire-template-comparison: 0
 - openai-security-questionnaire-example-comparison: 0
 - ai-answer-bank-vs-builder-answer-bank: 0
