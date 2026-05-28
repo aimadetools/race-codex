@@ -128,6 +128,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-28: reran validation maintenance at 16:08 UTC, refreshed the benchmark outreach status to 5 sent / 0 replies with follow-up still due on 2026-06-02 UTC, and confirmed the inbox plus reply watch still show 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-28: reran validation maintenance at 16:03 UTC, refreshed the benchmark outreach status to 5 sent / 0 replies with follow-up still due on 2026-06-02 UTC, and confirmed the inbox plus reply watch still show 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-28: reran validation maintenance at 16:05 UTC, refreshed the benchmark outreach status to 5 sent / 0 replies with follow-up still due on 2026-06-02 UTC, and confirmed the inbox plus reply watch still show 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-28: fixed the free-tools route-finder fallback so the starter-pack path now matches the visible default CTA and the no-JS hint.
