@@ -126,5 +126,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-27: added the public-benchmark route to the free-tools helper, refreshed the benchmark help-request status, and ran the 23:28 UTC validation maintenance pass; the report, tracker, and page-checker routes stay exposed while the Reddit/GSC/Bing action remains external-only.
-- 2026-05-28: added the AI-agent tool-access review and approval-gate routes, promoted them into the path-guide, start-here, homepage, pricing, starter-pack, blog, free-tools, and procurement-hub AI surfaces, refreshed watcher coverage and sitemap discovery for the new source tags, then completed the 04:25-04:26 UTC inbox/partner/outreach recheck plus validation-maintenance refresh with the live queue still at zero.
+- 2026-05-28: shipped the AI-agent review and approval-gate routes, promoted them across the core AI surfaces, refreshed watcher coverage and sitemap discovery, and finished the 04:28 UTC reply-capture plus validation-maintenance sweep with the live queue still at zero.
 - 2026-05-09 to 2026-05-26: Reddit scorecard comments, validation maintenance, self-audit verification, pricing cleanup, public Next AI rechecks, directory follow-through, and no-reply maintenance stayed green with no live queue activity.
