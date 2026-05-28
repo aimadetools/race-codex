@@ -11,6 +11,7 @@ const TASKS = [
   { label: "Generator production status", script: "build-generator-production-status.mjs" },
   { label: "Generator handoff status", script: "build-generator-handoff-status.mjs" },
   { label: "Partner outreach status", script: "build-partner-outreach-status.mjs" },
+  { label: "Benchmark outreach status", script: "build-benchmark-outreach-status.mjs" },
   { label: "Founder follow-up pass", script: "build-founder-follow-up-pass.mjs" },
   { label: "Advisor follow-up pass", script: "build-advisor-follow-up-pass.mjs" },
   { label: "Validation send plan", script: "build-validation-send-plan.mjs" },
