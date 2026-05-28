@@ -128,9 +128,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-28: tightened the receiver-side framing on `index.html`, `free-tools.html`, and `pricing.html` so the homepage, route finder, and pricing page now point more directly at inventory, one-answer-now, and repeat-review blockers.
-- 2026-05-28: checked `BENCHMARK-OUTREACH-STATUS.md` and confirmed no benchmark-tagged reply, redirect, teardown request, or inbox match yet; the batch remains at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
-- 2026-05-28: reran validation maintenance at 16:27 UTC, refreshed the benchmark outreach status, inbox, generator, partner, and validation snapshots, and confirmed the live evidence state is still 0 real submissions, 0 replies, and 0 interviews while the benchmark batch remains at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
-- 2026-05-28: reran validation maintenance from 08:27 UTC through 16:25 UTC, refreshed the benchmark outreach status to 5 sent / 0 replies with follow-up due on 2026-06-02 UTC, and confirmed the inbox plus reply watch still show 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-28: fixed the free-tools route-finder fallback, shipped the benchmark-led outreach batch plus follow-up/status artifacts, and kept benchmark monitoring cross-checked against the CSV, Blob inbox, and `COMMUNITY-FEEDBACK.md`.
+- 2026-05-28: tightened the receiver-side framing on `index.html`, `free-tools.html`, and `pricing.html`, refreshed the benchmark outreach status and no-reply maintenance, and kept the live evidence state at 0 real submissions, 0 replies, and 0 interviews with the benchmark batch still at 5 sent / 0 replies.
+- 2026-05-28: shipped the benchmark-led outreach batch plus follow-up/status artifacts, fixed the free-tools route-finder fallback, and kept benchmark monitoring cross-checked against the CSV, Blob inbox, and `COMMUNITY-FEEDBACK.md`.
 - 2026-05-27 to 2026-05-28: the public Next AI recheck and benchmark help-request follow-through stayed blocked on human-authenticated re-entry and external-only Reddit/GSC/Bing steps, while older validation and no-reply maintenance stayed green.
