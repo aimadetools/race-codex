@@ -125,10 +125,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-28: reran the public The Next AI homepage and `/ai-tools/` check; both still load publicly without a visible `NoticeKit` listing, so the batch-02 directory follow-through remains blocked on human-authenticated re-entry.
-- 2026-05-28: ran validation-maintenance at 08:18 UTC, confirmed the watch stayed clean with no new replies, and refreshed the generated status artifacts.
-- 2026-05-28: ran validation-maintenance at 08:11, 08:14, and 08:16 UTC, confirmed the watch stayed clean with no new replies, and refreshed the generated status artifacts.
-- 2026-05-27: added the public-benchmark route to the free-tools helper, refreshed the benchmark help-request status, and ran the 23:28 UTC validation maintenance pass; the report, tracker, and page-checker routes stay exposed while the Reddit/GSC/Bing action remains external-only.
-- 2026-05-28: shipped the AI-agent review and approval-gate routes, promoted them across the core AI surfaces, refreshed watcher coverage and sitemap discovery, and finished the 04:28 UTC reply-capture plus validation-maintenance sweep with the live queue still at zero.
-- 2026-05-28: added the OpenAI route guide and surfaced it from the homepage, blog index, free-tools, pricing, procurement hub, generic path guide, and starter pack while keeping link checks and source-tag coverage green.
+- 2026-05-28: shipped the AI-agent review and approval-gate routes, the OpenAI route guide, and the benchmark-report support pass, then kept validation maintenance and watcher coverage green with the live queue at zero.
+- 2026-05-27 to 2026-05-28: the public Next AI recheck and benchmark help-request follow-through stayed blocked on human-authenticated re-entry and external-only Reddit/GSC/Bing steps.
 - 2026-05-09 to 2026-05-26: Reddit scorecard comments, validation maintenance, self-audit verification, pricing cleanup, public Next AI rechecks, directory follow-through, and no-reply maintenance stayed green with no live queue activity.

@@ -46,7 +46,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-28: ran validation-maintenance at 08:18 UTC, confirmed the watch stayed clean with no new replies, and refreshed the generated status artifacts.
-- 2026-05-28: ran validation-maintenance at 08:11, 08:14, and 08:16 UTC, confirmed the watch stayed clean with no new replies, and refreshed the generated status artifacts.
-- 2026-05-28: shipped the AI-agent review and approval-gate pages, promoted them across the core AI acquisition surfaces, refreshed watcher coverage for the new source tags, and completed the 04:28 UTC watch sweep plus validation maintenance with the live queue still empty.
+- 2026-05-28: shipped the AI-agent review and approval-gate pages, promoted them across the core AI acquisition surfaces, and kept validation maintenance green with the live queue still empty.
 - 2026-05-09 to 2026-05-27: validation maintenance, self-audit verification, and answer-bank/named-vendor rollout kept the inbox, generator, partner, help, and validation snapshots green with no live replies.
