@@ -30,6 +30,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-05-28
 
 - Tightened the receiver-side framing on `index.html`, `free-tools.html`, and `pricing.html` so the homepage, route finder, and paid-path page now spell out which blocker maps to inventory, one-answer-now, or repeat-review paths.
+- Tightened `self-audit.html` so the structured in-page form is the first-class share path and email is explicitly the fallback, then updated `ops-contact-inbox.html` so self-audit reply drafts preserve the selected checklist items alongside the score, source tag, channel, and top gaps.
 - Checked `BENCHMARK-OUTREACH-STATUS.md` at `2026-05-28 16:27 UTC`; no benchmark-tagged replies, teardowns, or inbox matches landed yet, so the batch stayed at 5 sent / 0 replies with follow-up due on `2026-06-02 UTC`.
 - Fixed the `free-tools.html` route-finder fallback so the visible default CTA, the script fallback, and the no-JS hint now all point to the starter-pack path instead of a teardown-first markup fallback.
 - Built and launched a new benchmark-led outbound motion instead of another passive validation pass: added `AI-BENCHMARK-OUTREACH-BATCH-01.md`, `ai-benchmark-outreach-batch-01.csv`, and `scripts/send-ai-benchmark-outreach.mjs` for value-first public-page outreach tied to the pilot benchmark report and teardown offer.

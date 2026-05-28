@@ -267,11 +267,14 @@
         const topGaps = Array.isArray(record.topGaps) && record.topGaps.length
           ? record.topGaps.join(", ")
           : "None";
+        const selectedChecks = Array.isArray(record.selectedChecks) && record.selectedChecks.length
+          ? record.selectedChecks.join(", ")
+          : "None";
         const optionalNote = record.reviewNeed ? ` | Details: ${record.reviewNeed}` : "";
         const summary = record.summary || `Self-audit feedback received from ${record.company}.`;
 
         return [
-          `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | self-audit reply | ${record.company} | ${record.segmentGuess || "unknown"} | Summary: ${summary}${optionalNote} | Source tag: ${record.sourceTag || "site"} | Channel: ${record.submissionChannel || "unknown"} | Score band: ${record.scoreBand || "Not provided"} | Ownership: ${record.ownershipSignal || "unknown"} | Signal: score ${score}; top gaps ${topGaps}`
+          `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | self-audit reply | ${record.company} | ${record.segmentGuess || "unknown"} | Summary: ${summary}${optionalNote} | Source tag: ${record.sourceTag || "site"} | Channel: ${record.submissionChannel || "unknown"} | Score band: ${record.scoreBand || "Not provided"} | Ownership: ${record.ownershipSignal || "unknown"} | Selected checks: ${selectedChecks} | Signal: score ${score}; top gaps ${topGaps}`
         ].join("");
       }
 

@@ -144,10 +144,10 @@
             </div>
             <div class="share-card">
               <strong>Send the score, not a vague reply</strong>
-              <p id="share-copy">Email the score and top gaps. Async feedback is enough.</p>
-              <p id="reply-hint" class="fine-print">Add the next-step detail: Starter, Pro, teardown, or partner access.</p>
+              <p id="share-copy">Use the form first so the score, role, and top gaps stay structured. Email is the fallback if you need it.</p>
+              <p id="reply-hint" class="fine-print">Add the next-step detail: Starter, Pro, teardown, or partner access. The form keeps that context attached.</p>
               <div class="result-actions">
-                <a class="button secondary" id="email-score-link" href="mailto:hello@noticekit.tech">Email this score</a>
+                <a class="button secondary" id="email-score-link" href="mailto:hello@noticekit.tech">Email fallback</a>
                 <button class="button secondary" id="copy-score-button" type="button">Copy summary</button>
               </div>
               <p class="fine-print" id="copy-status" aria-live="polite"></p>
@@ -426,9 +426,9 @@
 
         const source = sourceLabel();
         shareCopy.textContent = source
-          ? `If you came here from the ${source}, email the score and top gaps. Async feedback is enough.`
-          : "Email the score and top gaps if you want blunt feedback without a call.";
-        replyHint.textContent = replyPrompt();
+          ? `If you came here from the ${source}, use the form first so the score and top gaps stay structured. Email is the fallback.`
+          : "Use the form first if you want blunt feedback without a call. Email is the fallback.";
+        replyHint.textContent = `${replyPrompt()} The form keeps that context attached.`;
         copyStatus.textContent = "";
 
         const emailSummary = buildSummary(score, label, missing, "mailto");
