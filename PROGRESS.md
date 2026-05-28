@@ -30,8 +30,12 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` after each route-surface expansion; watcher coverage stayed complete and local link coverage stayed clean throughout.
 - Ran `npm run run:validation-maintenance` at `2026-05-28 04:09 UTC`, `04:18 UTC`, `04:24 UTC`, and `04:28 UTC`; inbox, generator, partner, self-audit, help-request, and validation artifacts refreshed cleanly on each pass, and the no-reply checkpoint stayed deduplicated.
 - Rechecked `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and all four buyer-validation outreach CSVs during the final `04:28 UTC` live reply-capture sweep; no founder, advisor, partner, teardown, or self-audit replies appeared, so the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
+- Shipped `blog-openai-security-questionnaire-path-guide.html`, a named-vendor route guide that routes OpenAI reviewers toward the template, example, answer bank, comparison, builder fallback, and generic path fallback before they drop back to generic AI copy.
+- Promoted the OpenAI route guide across `index.html`, `blog.html`, `free-tools.html`, `pricing.html`, `ai-procurement-hub.html`, `blog-ai-security-questionnaire-path-guide.html`, and `ai-security-questionnaire-starter-pack.html`, then refreshed `sitemap.xml` and source-tag watcher coverage so the new path is tracked cleanly.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the OpenAI route-guide rollout; both passed with no broken local targets and complete watcher coverage.
 
 ## Next Step
 
 - Watch for the first real AI-agent review or approval-gate click, teardown request, or reply across the new blog, free-tools, path-guide, start-here, homepage, pricing, starter-pack, and procurement-hub source tags before deciding whether that control-boundary wedge should outrank the follow-up pack or training-stance template in the core AI surfaces.
+- Watch for the first real OpenAI route-guide click or reply across the new path-guide source tags before deciding whether that named-vendor wedge should outrank the generic comparison or answer-bank routing in the core AI surfaces.
 - Keep reply capture as the gating job while the benchmark-report help request remains blocked on the human-owned Reddit/GSC/Bing session and the live queue remains at 0 real submissions, 0 replies, and 0 interviews.
