@@ -21,6 +21,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Rechecked the public The Next AI pages and the Reddit watch threads; both directory pages still load publicly without a visible `NoticeKit` listing, and the threads still do not expose a real reply that changes the validation state.
 - Kept the benchmark-report package, appendix, and watcher artifacts in sync so the public proof assets remain discoverable from the core acquisition surfaces.
 - The live queue still has 0 real submissions, 0 replies, and 0 interviews, so the next step remains reply capture rather than another expansion pass.
+- Ran `npm run run:validation-maintenance` at `2026-05-28 08:27 UTC`; the watch, self-audit, contact webhook, free-teardown handoff, self-audit production, source-tag coverage, and site-link checks all passed again, `COMMUNITY-FEEDBACK.md` picked up a deduplicated no-reply checkpoint, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 
 ## 2026-05-28
 
@@ -41,4 +42,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - Watch for the first real AI-agent review or approval-gate click, teardown request, or reply across the new blog, free-tools, path-guide, start-here, homepage, pricing, starter-pack, and procurement-hub source tags before deciding whether that control-boundary wedge should outrank the follow-up pack or training-stance template in the core AI surfaces.
 - Watch for the first real OpenAI route-guide click or reply across the new path-guide source tags before deciding whether that named-vendor wedge should outrank the generic comparison or answer-bank routing in the core AI surfaces.
 - Keep the batch-02 directory follow-through parked until a human-authenticated browser session can finish the remaining re-entry steps; the 08:21 UTC public check still shows no visible `NoticeKit` listing on The Next AI homepage or directory page.
-- Keep reply capture as the gating job while the benchmark-report help request remains blocked on the human-owned Reddit/GSC/Bing session; the 08:18 UTC maintenance pass still showed 0 real submissions, 0 replies, and 0 interviews.
+- Keep reply capture as the gating job while the benchmark-report help request remains blocked on the human-owned Reddit/GSC/Bing session; the 08:27 UTC maintenance pass still showed 0 real submissions, 0 replies, and 0 interviews.
