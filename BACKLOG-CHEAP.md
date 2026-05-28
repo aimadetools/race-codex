@@ -4,7 +4,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P0
 
-- Check `BENCHMARK-OUTREACH-STATUS.md`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first benchmark-led public-page outreach reply, redirect, or teardown request; record the exact company and outcome before changing the campaign.
+- Check `BENCHMARK-OUTREACH-STATUS.md` for the first benchmark-led public-page outreach reply, redirect, or teardown request; it now cross-checks `ai-benchmark-outreach-batch-01.csv`, the Blob inbox, and `COMMUNITY-FEEDBACK.md`, so record the exact company and outcome there before changing the campaign.
 - If no benchmark-led reply lands first, run `set -a && source .env.production.local && set +a && node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend` on `2026-06-02 UTC` and confirm the CSV rows move from `sent` to `followed_up`.
 - If the first benchmark-led response says the real pain is the questionnaire answer, the public page, or neither, paste that exact wording into `COMMUNITY-FEEDBACK.md` before changing the benchmark-led outbound copy.
 - If the first real visit, reply, or teardown request references `blog-ai-vendor-risk-assessment.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the packet guide and questionnaire routes.
@@ -130,6 +130,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - 2026-05-28: refreshed validation maintenance through 12:39 UTC, kept source-tag coverage and site links green, and confirmed the inbox plus reply watch still show 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-28: refreshed validation maintenance again at 12:42 UTC, advanced the deduplicated no-reply checkpoint, and added a generated `BENCHMARK-OUTREACH-STATUS.md` snapshot so the benchmark batch now has a durable 5-sent / 0-reply / follow-up-due-2026-06-02 watch file.
+- 2026-05-28: expanded the benchmark watch so `BENCHMARK-OUTREACH-STATUS.md` now cross-checks the outreach CSV, Blob inbox, and `COMMUNITY-FEEDBACK.md`, then reran validation maintenance at 12:50 UTC and confirmed 0 benchmark-tagged inbox submissions, 0 benchmark-tagged teardown requests, and 0 real replies.
 - 2026-05-28: rechecked The Next AI homepage and `/ai-tools/` at 12:40 UTC; both still returned `200` publicly without a visible `NoticeKit` listing, so the batch-02 re-entry remains human-blocked.
 - 2026-05-28: prepared and sent benchmark-led outreach batch 01 to five public AI/SaaS privacy or security contacts, then added source-tag watcher coverage for the new campaign.
 - 2026-05-28: validation maintenance refreshed the live snapshots again at 08:30 UTC, kept source-tag coverage and site links green, and still found no real replies or inbox submissions.
