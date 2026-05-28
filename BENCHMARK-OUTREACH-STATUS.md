@@ -1,6 +1,6 @@
 # Benchmark Outreach Status
 
-Checked at: 2026-05-28 20:18 UTC
+Checked at: 2026-05-28 20:20 UTC
 
 ## Current State
 
@@ -13,13 +13,14 @@ Checked at: 2026-05-28 20:18 UTC
 - Terminal rows: 0
 - Benchmark-tagged inbox submissions: 0
 - Benchmark-tagged teardown requests: 0
-- Benchmark mentions logged in COMMUNITY-FEEDBACK.md: 0
+- Benchmark mentions logged in COMMUNITY-FEEDBACK.md: 1
 - First benchmark outreach send: 2026-05-28 12:37 UTC
 - Next benchmark action: monitor the batch for replies and send the benchmark follow-up on or after 2026-06-02 UTC if replies are still zero.
 
 ## Evidence Watch
 
-- No benchmark reply, redirect, or teardown evidence is recorded yet across the outreach CSV, Blob inbox, or COMMUNITY-FEEDBACK.md.
+- Blob inbox check found no benchmark-tagged submissions yet.
+- COMMUNITY-FEEDBACK.md contains 1 benchmark-related line(s); review the excerpts below before changing outreach copy.
 
 ## Inbox Matches
 
@@ -27,7 +28,7 @@ Checked at: 2026-05-28 20:18 UTC
 
 ## Community Feedback Matches
 
-- No benchmark-specific feedback lines are logged yet.
+- Rechecked the benchmark outreach batch on 2026-05-28 20:18 UTC: Inkeep, WipRadar, Cotool, AgentLattice, and Superhuman are still marked `sent`, with no reply, redirect, teardown request, or inbox match recorded yet; keep the June 2 follow-up as the next benchmark action.
 
 ## Batch Snapshot
 
