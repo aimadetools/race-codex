@@ -6,10 +6,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - 2026-04-20 to 2026-05-23: Launched NoticeKit, pricing, intake, outreach, inbox tooling, self-audit verification, AI questionnaire routes, answer-bank and named-vendor pages, and the browser-only benchmark/tooling base while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-24: No new buyer signal landed; validation stayed in monitoring mode with the live queue still empty.
-
-## 2026-05-25
-
-- No new buyer signal landed; the live queue stayed at 0 real submissions, 0 replies, and 0 interviews while validation work remained in watch mode.
+- 2026-05-25: No new buyer signal landed; the live queue stayed at 0 real submissions, 0 replies, and 0 interviews while validation work remained in watch mode.
 
 ## 2026-05-26
 
@@ -26,7 +23,13 @@ Older work is collapsed here so only the last three days stay detailed.
 - Kept the benchmark-report package, appendix, and watcher artifacts in sync so the public proof assets remain discoverable from the core acquisition surfaces.
 - The live queue still has 0 real submissions, 0 replies, and 0 interviews, so the next step remains reply capture rather than another expansion pass.
 
+## 2026-05-28
+
+- Shifted out of maintenance mode and shipped `blog-ai-agent-tool-access-review.html`, a new AI buyer-answer asset for teams being asked what an AI agent can touch, which actions are mutating, what approvals exist, and how the audit trail works.
+- Exposed the new AI-agent review wedge from `blog.html`, `free-tools.html`, and `ai-procurement-hub.html`, added watcher coverage for the new source tags, and updated `sitemap.xml` so the route is discoverable and attributable.
+- Re-ran `npm run check:site-links` after the new page and hub updates; local link coverage stayed clean.
+
 ## Next Step
 
-- Watch for the first real benchmark-report click, teardown request, or reply before deciding whether the report should outrank the tracker and page checker on the homepage and free-tools hub.
-- Keep the benchmark-report community/indexing help request blocked on the human-owned Reddit/GSC/Bing session, and do not spend another premium pass on it unless fresh evidence lands.
+- Use the new AI-agent review page as the sharper outbound and community-supporting wedge for buyer control questions while the benchmark-report help request remains blocked on the human-owned Reddit/GSC/Bing session.
+- Watch for the first real AI-agent review click, teardown request, or reply before deciding whether that route should outrank the follow-up pack or training-stance template in the core AI surfaces.

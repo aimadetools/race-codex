@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Agent Tool Access Security Review Template | NoticeKit</title>
+    <meta name="description" content="Use this AI security questionnaire template when buyers ask how your AI agents use tools, approvals, service accounts, audit trails, and failure controls.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:url" content="https://noticekit.tech/blog-ai-agent-tool-access-review.html">
+    <meta property="og:title" content="AI Agent Tool Access Security Review Template">
+    <meta property="og:description" content="A practical review template for SaaS teams answering buyer questions about AI agents with tool access.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit AI agent tool access review template">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Agent Tool Access Security Review Template">
+    <meta name="twitter:description" content="Answer buyer questions about AI agents, tool permissions, approval paths, audit trails, and failure controls without rebuilding the same response from scratch.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://noticekit.tech/blog-ai-agent-tool-access-review.html">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "AI Agent Tool Access Security Review Template",
+            "description": "A practical review template for SaaS teams answering buyer questions about AI agents with tool access.",
+            "author": {
+              "@type": "Organization",
+              "name": "NoticeKit"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "NoticeKit",
+              "url": "https://noticekit.tech/"
+            },
+            "datePublished": "2026-05-28",
+            "dateModified": "2026-05-28",
+            "mainEntityOfPage": "https://noticekit.tech/blog-ai-agent-tool-access-review.html"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use this AI agent review template?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use it when a buyer asks what your AI agent can do, which tools it can call, what approvals exist, how actions are audited, and how risky actions are contained."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does the reviewer usually want to know first?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The shortest high-signal answer is usually the tool list, whether those tools are read-only or mutating, the approval path for high-risk actions, the service-account scope, and the audit trail."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should this replace the broader AI answer builder?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Use this as the focused answer shape for tool-access questions. Use the broader builder or answer bank when the buyer thread still needs the vendor chain, customer scope, training stance, notice impact, and proof links around it."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="free-tools.html">Free tools</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <article class="article">
+          <header class="article-header">
+            <span class="eyebrow">AI agent review</span>
+            <h1>Answer "what can your AI agent actually do?" without hand-waving.</h1>
+            <p>Use this page when the buyer is no longer asking broad AI governance questions and is now asking about an AI agent that can call tools, update records, trigger workflows, or touch customer data. The fastest credible answer usually names the tool surface, the read-versus-write boundary, the approval path, the service-account scope, and the audit trail in one place.</p>
+            <div class="hero-actions">
+              <a class="button" href="ai-security-questionnaire-answer-builder.html?source=ai-agent-review-builder">Open answer builder</a>
+              <a class="button secondary" href="ai-security-questionnaire-follow-up-pack.html?source=ai-agent-review-follow-up-pack">Open follow-up pack</a>
+              <a class="button secondary" href="ai-vendor-risk-assessment-worksheet.html?source=ai-agent-review-risk-worksheet">Open risk worksheet</a>
+              <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-agent-review-starter-pack">Open starter pack</a>
+              <a class="button secondary" href="free-teardown.html?source=ai-agent-review-teardown">Request free teardown</a>
+            </div>
+          </header>
+
+          <div class="notice-band">
+            <strong>Operational answer shape, not legal advice.</strong>
+            <p>Use this to package the current workflow and controls cleanly for procurement, security, privacy, or counsel review. Your team still decides the final wording, approval, and customer-notice position.</p>
+          </div>
+
+          <section class="section">
+            <div class="section-head">
+              <h2>What the reviewer usually means by "tool access"</h2>
+              <p>The buyer is usually trying to understand what the agent can touch, how risky actions are constrained, and whether there is enough evidence to trust the workflow in production.</p>
+            </div>
+            <div class="grid-3">
+              <article class="card">
+                <span class="tag">Surface</span>
+                <h3>What tools can the agent call?</h3>
+                <p>Name the actual systems: CRM, ticketing, payments, email, internal admin tools, databases, or third-party APIs. Generic "integrations" language is not enough.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Boundary</span>
+                <h3>Are they read-only or mutating?</h3>
+                <p>Separate lookup actions from actions that create, update, send, refund, delete, or trigger workflows. That boundary is often the first risk decision.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Control</span>
+                <h3>What approvals exist before a risky action?</h3>
+                <p>Explain whether a human must approve, whether policy gates block the action, and what the agent can never do directly.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Identity</span>
+                <h3>Which account actually performs the action?</h3>
+                <p>Name the service account or delegated identity, the permission scope, and the environment or tenant boundary that applies.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Audit</span>
+                <h3>What gets logged?</h3>
+                <p>State how the user request, proposed action, arguments, final execution, and reviewer decision are preserved for later review.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Containment</span>
+                <h3>What stops a bad prompt from becoming a bad action?</h3>
+                <p>Call out tool restrictions, approval gates, retries, idempotency rules, scope checks, and the rollback or escalation path if something still goes wrong.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <h2>Copy-paste answer block</h2>
+              <p>Keep the answer grounded in one workflow. Buyers usually trust a narrow, specific answer more than a broad platform promise.</p>
+            </div>
+            <div class="template-box">
+              <p><strong>AI agent workflow reviewed:</strong> [Name the product feature or internal process, what triggers it, and whether it is active, limited, or under review.]</p>
+              <p><strong>Tools the agent can call:</strong> [List each connected system or API the agent may access in this workflow.]</p>
+              <p><strong>Read versus write boundary:</strong> [State which actions are read-only and which actions can create, update, send, refund, delete, or otherwise change data.]</p>
+              <p><strong>Approval or policy gate:</strong> [State which actions require human approval, which policy checks run before execution, and what the agent is never allowed to do directly.]</p>
+              <p><strong>Execution identity and scope:</strong> [Name the service account or delegated identity, the least-privilege scope, and any tenant, environment, or customer boundary.]</p>
+              <p><strong>Audit trail:</strong> [State what is logged for the request, proposed action, arguments, approval, execution result, and any exception handling.]</p>
+              <p><strong>Failure containment:</strong> [State how retries, idempotency, rollback, escalation, and high-risk action blocking work in this flow.]</p>
+              <p><strong>Proof links:</strong> [Link the internal review note, architecture diagram, policy line, audit screenshot, public page, and owner for the workflow.]</p>
+              <p><strong>Open review question:</strong> [Name the unresolved control, vendor, customer-scope, or approval issue if the answer is not finalized.]</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <h2>What to fill before you send it</h2>
+              <p>These are the points that usually turn a weak AI-agent answer into a usable one.</p>
+            </div>
+            <ol class="article-list">
+              <li>Name the exact tools the agent can touch instead of saying it has "tool access."</li>
+              <li>Separate read-only actions from mutating actions so the reviewer can judge blast radius quickly.</li>
+              <li>Show the approval or policy gate for high-risk actions instead of implying every action is autonomous.</li>
+              <li>State the service-account scope and customer or tenant boundary so the identity model is visible.</li>
+              <li>Attach one concrete audit-trail example or proof link instead of claiming logging exists somewhere else.</li>
+              <li>Leave the unresolved question visible if the workflow or permission model is still changing.</li>
+            </ol>
+          </section>
+
+          <section class="section">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Buyer concern</th>
+                    <th>What your answer should show</th>
+                    <th>Best NoticeKit path</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>What systems can the agent touch?</td>
+                    <td>Named tools, owners, and workflow scope</td>
+                    <td><a href="ai-security-questionnaire-answer-builder.html?source=ai-agent-review-builder">Builder</a></td>
+                  </tr>
+                  <tr>
+                    <td>Can it make changes on its own?</td>
+                    <td>Read-versus-write boundary and approval gate</td>
+                    <td><a href="ai-security-questionnaire-follow-up-pack.html?source=ai-agent-review-follow-up-pack">Follow-up pack</a></td>
+                  </tr>
+                  <tr>
+                    <td>How is customer data protected?</td>
+                    <td>Data scope, identity boundary, and proof links</td>
+                    <td><a href="ai-vendor-risk-assessment-worksheet.html?source=ai-agent-review-risk-worksheet">Risk worksheet</a></td>
+                  </tr>
+                  <tr>
+                    <td>How do you answer repeated versions of this?</td>
+                    <td>Reusable wording and attached evidence</td>
+                    <td><a href="ai-security-questionnaire-answer-bank.html?source=ai-agent-review-answer-bank">Answer bank</a></td>
+                  </tr>
+                  <tr>
+                    <td>How do you explain the whole thread fast?</td>
+                    <td>Starter artifact and escalation route</td>
+                    <td><a href="ai-security-questionnaire-starter-pack.html?source=ai-agent-review-starter-pack">Starter pack</a></td>
+                  </tr>
+                  <tr>
+                    <td>We need an outside read on the current setup</td>
+                    <td>One live workflow, one blunt next-step response</td>
+                    <td><a href="free-teardown.html?source=ai-agent-review-teardown">Free teardown</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="cta-band">
+              <div>
+                <h2>Need the full buyer-ready response around this?</h2>
+                <p>Use the builder when one live questionnaire answer is due now. Use the follow-up pack when the buyer keeps asking adjacent control questions. Use the risk worksheet when the operating facts are still too messy to trust the answer.</p>
+              </div>
+              <div class="hero-actions">
+                <a class="button" href="ai-security-questionnaire-answer-builder.html?source=ai-agent-review-builder">Open builder</a>
+                <a class="button secondary" href="ai-security-questionnaire-follow-up-pack.html?source=ai-agent-review-follow-up-pack">Open follow-up pack</a>
+                <a class="button secondary" href="ai-vendor-risk-assessment-worksheet.html?source=ai-agent-review-risk-worksheet">Open risk worksheet</a>
+                <a class="button secondary" href="free-teardown.html?source=ai-agent-review-teardown">Request free teardown</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="grid-3">
+              <article class="card">
+                <span class="tag">One answer now</span>
+                <h3>Builder</h3>
+                <p>Use it when the buyer thread needs one copy-ready response with the proof prompts and handoff note in the same browser pass.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Repeated control asks</span>
+                <h3>Answer bank</h3>
+                <p>Use it when the same agent-control questions keep coming back and you need reusable wording with proof links and owner notes.</p>
+              </article>
+              <article class="card">
+                <span class="tag">Need calibration first</span>
+                <h3>Risk worksheet</h3>
+                <p>Use it when the workflow and control story still need cleanup before you trust the final answer.</p>
+              </article>
+            </div>
+          </section>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

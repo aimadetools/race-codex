@@ -5,6 +5,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 ## P0
 
 - If the first real visit, reply, or teardown request references `blog-ai-vendor-risk-assessment.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the packet guide and questionnaire routes.
+- If the first real visit, reply, or teardown request references `blog-ai-agent-tool-access-review.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the follow-up-pack, training-stance, and generic answer-template routes.
+- If the first real intake lands with source tag `blog-index-ai-agent-review`, `free-tools-ai-agent-review`, or `ai-procurement-hub-agent-review`, preserve the exact source tag and whether the buyer cared most about tool list, approval gate, service-account scope, or audit trail before replying.
+- If the AI-agent review page drives three real visits, forwards, or replies before the follow-up pack or training-stance template does, move it into a stronger homepage, free-tools, or pricing slot and note the shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real intake lands with source tag `community-ai-risk-assessment`, `blog-index-ai-risk-assessment`, `free-tools-ai-risk-assessment`, or `ai-procurement-hub-risk-assessment`, preserve the exact source tag and whether the buyer wanted a framework, sample packet, or live teardown before replying.
 - If the first real intake lands with source tag `ai-vendor-risk-assessment-worksheet-checklist`, `ai-vendor-risk-assessment-worksheet-pricing`, `ai-vendor-risk-assessment-worksheet-teardown`, `homepage-ai-route-inventory`, `free-tools-route-inventory`, `start-here-ai-risk-worksheet`, or `pricing-ai-risk-worksheet`, preserve the exact source tag and whether the buyer mentioned the score, the gap list, or the next-step routing before replying.
 - If the first real visit, reply, or teardown request explicitly mentions the new scorecard or readiness score, copy the exact wording into `COMMUNITY-FEEDBACK.md` before changing the worksheet fields, scoring thresholds, or CTA order.
@@ -123,4 +126,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-27: added the public-benchmark route to the free-tools helper, refreshed the benchmark help-request status, and ran the 23:28 UTC validation maintenance pass; the report, tracker, and page-checker routes stay exposed while the Reddit/GSC/Bing action remains external-only.
+- 2026-05-28: added the AI-agent tool-access review route, exposed it from the main AI hubs, and queued source-tag and reply-capture follow-ups for the new wedge.
 - 2026-05-09 to 2026-05-26: Reddit scorecard comments, validation maintenance, self-audit verification, pricing cleanup, public Next AI rechecks, directory follow-through, and no-reply maintenance stayed green with no live queue activity.
