@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-05-28 04:18 UTC
+Checked at: 2026-05-28 04:24 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -226,6 +226,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-job-subprocessor: 0
 - homepage-ai-route-one-answer: 0
 - homepage-ai-route-repeat-review: 0
+- homepage-ai-route-agent-review: 0
+- homepage-ai-route-agent-approval-gate: 0
 - homepage-ai-route-openai-template: 0
 - homepage-ai-route-openai-example: 0
 - homepage-ai-route-openai-answer-bank: 0
@@ -243,6 +245,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-answer-bank: 0
 - pricing-ai-answer-bank-vs-pro-kit: 0
 - pricing-ai-answer-builder: 0
+- pricing-ai-agent-review: 0
+- pricing-ai-agent-approval-gate: 0
 - pricing-ai-comparison: 0
 - pricing-openai-answer-template: 0
 - pricing-openai-answer-bank: 0

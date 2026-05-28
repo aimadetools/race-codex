@@ -36,6 +36,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:source-tag-coverage`, `npm run check:site-links`, and `npm run run:validation-maintenance` at `2026-05-28 04:18 UTC`; watcher coverage stayed complete, local link coverage stayed clean, self-audit and generator checks passed, and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - Added the AI-agent control wedge to `index.html` and `pricing.html` so the homepage secondary AI routes and the pricing blocker map now surface `blog-ai-agent-tool-access-review.html` and `blog-ai-agent-approval-gate-template.html` directly, then extended watched source tags and backlog memory for the new `homepage-ai-route-agent-review`, `homepage-ai-route-agent-approval-gate`, `pricing-ai-agent-review`, and `pricing-ai-agent-approval-gate` attribution paths.
 - Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the homepage and pricing updates; watcher coverage stayed complete and local link coverage stayed clean.
+- Ran `npm run run:validation-maintenance` at `2026-05-28 04:24 UTC`; the inbox, help, generator, partner, self-audit, and validation artifacts refreshed cleanly again, the deduplicated no-reply checkpoint stayed current, and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 
 ## Next Step
 

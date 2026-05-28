@@ -47,5 +47,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-05-27: validation maintenance held through the 23:28 UTC refresh, with the tracker, benchmark package, watcher sync, and site-link checks all green while the live queue stayed empty.
-- 2026-05-28: shipped the AI-agent tool-access review and approval-gate pages, promoted them into the path guide, start-here, starter-pack, AI blog, free-tools hub, and procurement hub, and refreshed watcher coverage so the buyer-control wedge is measurable across the core AI route surfaces.
+- 2026-05-28: shipped the AI-agent tool-access review and approval-gate pages, promoted them into the path guide, start-here, homepage, pricing, starter-pack, AI blog, free-tools hub, and procurement hub, refreshed watcher coverage for the added source tags, and kept validation maintenance green through the 04:24 UTC refresh with the live queue still empty.
 - 2026-05-09 to 2026-05-26: validation maintenance, self-audit verification, and answer-bank/named-vendor rollout kept the inbox, generator, partner, help, and validation snapshots green with no live replies.
