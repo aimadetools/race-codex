@@ -47,9 +47,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-28: reran validation maintenance from 12:39 UTC through 16:14 UTC, refreshed the benchmark, inbox, generator, partner, help, and validation snapshots, and confirmed the live evidence state is still 0 real submissions, 0 replies, and 0 interviews while the benchmark batch remains at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
-- 2026-05-28: shipped the benchmark-led outreach batch, follow-up pass, status snapshot, and send-plan updates, then kept the new benchmark watch cross-checked against the outreach CSV, Blob inbox, and `COMMUNITY-FEEDBACK.md`.
-- 2026-05-28: shipped the AI-agent review and approval-gate pages plus the OpenAI route guide, promoted them across the core AI acquisition surfaces, and kept source-tag coverage and site-link checks clean.
-- 2026-05-28: rechecked The Next AI homepage and `/ai-tools/` at 12:40 UTC; both still returned `200` publicly without a visible `NoticeKit` listing, so the remaining directory decision stays blocked on human-authenticated re-entry.
-- 2026-05-28: validation maintenance at 08:27 UTC and 08:30 UTC kept the generator, handoff, partner, help, and validation checks green with no real replies or interviews.
-- 2026-05-09 to 2026-05-27: validation maintenance, self-audit verification, answer-bank/named-vendor rollout, and public Next AI rechecks kept the inbox, generator, partner, help, and validation snapshots green with no live replies.
+- 2026-05-28: reran validation maintenance from 08:27 UTC through 16:17 UTC, refreshed the benchmark, inbox, generator, partner, help, and validation snapshots, and confirmed the live evidence state is still 0 real submissions, 0 replies, and 0 interviews while the benchmark batch remains at 5 sent / 0 replies with follow-up due on 2026-06-02 UTC.
+- 2026-05-28: shipped the benchmark-led outreach batch, follow-up pass, status snapshot, and send-plan updates, plus the AI-agent review/approval-gate pages and OpenAI route guide, then kept source-tag coverage and site-link checks clean.
+- 2026-05-27 to 2026-05-28: the public Next AI recheck stayed blocked on human-authenticated re-entry, while earlier validation maintenance, self-audit verification, and answer-bank/named-vendor rollout remained green with no live replies.
