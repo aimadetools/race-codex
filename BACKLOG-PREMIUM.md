@@ -49,12 +49,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-29: the 23:12 validation-maintenance pass refreshed the status stack again and left the benchmark and AI-agent-review follow-up windows parked on zero replies.
-- 2026-05-29: rechecked the benchmark and AI-agent-review outreach status files at 23:09 UTC; both batches remained at 5 sent / 0 replies and the June 2 follow-ups stayed queued.
-- 2026-05-29: the 23:09 validation-maintenance pass refreshed the status stack again and left the benchmark and AI-agent-review follow-up windows parked on zero replies.
-- 2026-05-29: repeated validation-maintenance passes at 23:02, 23:03, 23:05, and 23:07 refreshed the status stack again and left the benchmark and AI-agent-review follow-up windows parked on zero replies.
-- 2026-05-29: the 20:30 validation-maintenance pass refreshed the status stack again and left the benchmark and AI-agent-review follow-up windows parked on zero replies.
-- 2026-05-29: repeated validation maintenance and status refreshes kept the reply-watch, status stack, and both June 2 follow-up windows parked on zero replies.
-- 2026-05-29: shipped the AI-agent-review checklist, outreach, follow-up-pass, and reply-watch/no-reply logging updates while the live queue stayed empty.
-- 2026-05-29: fixed the stale nav mismatch, expanded validation-status coverage, corrected the generator smoke assertion, refreshed the evidence stack, and kept watcher coverage aligned with the new route tags.
+- 2026-05-29: repeated validation-maintenance passes through 23:14 UTC refreshed the status stack and left the benchmark and AI-agent-review follow-up windows parked on zero replies.
+- 2026-05-29: benchmark and AI-agent-review outreach both remained at 5 sent / 0 replies, with June 2 follow-ups still queued.
+- 2026-05-29: the AI-agent-review checklist, outreach, follow-up-pass, and reply-watch/no-reply logging updates shipped cleanly while the live queue stayed empty.
 - 2026-05-27 to 2026-05-28: benchmark outreach, AI-agent review/approval-gate pages, the OpenAI route guide, and the remaining AI-first cleanup shipped cleanly while follow-up remained gated on reply evidence.

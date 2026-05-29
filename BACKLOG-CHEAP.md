@@ -132,13 +132,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-29: the 23:12 validation-maintenance pass refreshed the reply-watch, status stack, and June 2 follow-up windows again while the live queue stayed on zero replies.
-- 2026-05-29: rechecked the benchmark and AI-agent-review outreach status files at 23:09 UTC; both batches remained at 5 sent / 0 replies and the June 2 follow-ups stayed queued.
-- 2026-05-29: the 23:09 validation-maintenance pass refreshed the reply-watch and status stack again and left the benchmark and AI-agent-review follow-up windows parked on zero replies.
-- 2026-05-29: repeated validation-maintenance passes at 23:02, 23:03, 23:05, and 23:07 refreshed the reply-watch, status stack, and June 2 follow-up windows again while the live queue stayed at zero replies.
-- 2026-05-29: added a compact top-of-page pricing decision block so buyers can pick Starter, Pro, or Concierge faster before the longer comparison copy.
-- 2026-05-29: the 20:30 validation-maintenance pass refreshed the reply-watch, status stack, and June 2 follow-up windows again while the live queue stayed at zero replies.
-- 2026-05-29: repeated validation maintenance and status refreshes kept the reply-watch, self-audit QA, artifact-sync, and June 2 follow-up windows parked on zero replies.
-- 2026-05-29: elevated the AI agent review path onto the homepage, pricing page, and free-tools hero CTAs while the site-link and source-tag coverage checks stayed clean.
-- 2026-05-29: fixed the stale nav mismatch, corrected the generator smoke assertion, and refreshed the benchmark/help/inbox/generator/partner/validation evidence stack.
+- 2026-05-29: repeated validation-maintenance passes through 23:14 UTC kept the reply-watch, self-audit, contact-webhook, free-teardown, generator, partner, benchmark, and agent-review artifacts aligned while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-29: benchmark outreach remained at 5 sent / 0 replies, and the June 2 follow-up stayed queued.
+- 2026-05-29: AI agent review outreach remained at 5 sent / 0 replies, and the June 2 follow-up stayed queued.
 - 2026-05-28 to 2026-05-29: tightened receiver-side homepage, free-tools, and pricing copy; shipped the benchmark outreach batch and follow-up artifacts; and kept validation monitoring blocked on no-reply evidence plus human-authenticated re-entry.
