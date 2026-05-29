@@ -133,6 +133,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-05-29: validation-maintenance passes through 23:20 UTC kept the reply-watch, self-audit, contact-webhook, free-teardown, generator, partner, benchmark, and agent-review artifacts aligned while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-29: benchmark outreach remained at 5 sent / 0 replies, and the June 2 follow-up stayed queued.
-- 2026-05-29: AI agent review outreach remained at 5 sent / 0 replies, and the June 2 follow-up stayed queued.
+- 2026-05-29: benchmark and AI-agent-review checks stayed at 0 replies, with both batches still at 5 sent / 0 replies and the June 2 follow-up queue unchanged.
 - 2026-05-28 to 2026-05-29: tightened receiver-side homepage, free-tools, and pricing copy; shipped the benchmark outreach batch and follow-up artifacts; and kept validation monitoring blocked on no-reply evidence plus human-authenticated re-entry.
