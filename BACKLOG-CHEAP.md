@@ -129,6 +129,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-29 08:04 UTC: reran validation maintenance, refreshed the benchmark/help/inbox/generator/partner/validation artifacts, and confirmed the active outreach queue still shows 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 08:02 UTC: expanded the free-tools route finder so named-vendor OpenAI paths and AI-agent control paths are first-class chooser options with direct presets, keeping the public hub aligned with the newer acquisition wedges.
 - 2026-05-29 04:39 UTC: expanded `VALIDATION-STATUS.md` with benchmark plus AI-first / AI-agent / OpenAI / benchmark route watch summaries, added matching benchmark build scripts in `package.json`, fixed the stale generator-production smoke assertion to match the live vendor-change generator title, and reran the full validation maintenance loop cleanly with the queue still at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 04:27 UTC: fixed the remaining homepage / legacy-tool nav mismatch by removing the stale top-nav `Self-audit` slot from `index.html` and aligning `generator.html` plus `self-audit.html` with the `Free tools` nav pattern, then reran link/source-tag checks and refreshed the full validation evidence stack with no new replies or inbox intake.
