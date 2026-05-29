@@ -1,6 +1,6 @@
 # Generator Production Status
 
-Checked at: 2026-05-28 23:30 UTC
+Checked at: 2026-05-29 04:17 UTC
 URL: https://noticekit.tech/generator.html
 HTTP status: 200
 
@@ -10,7 +10,7 @@ HTTP status: 200
 - Browser execution: passed through `jsdom` with inline generator logic enabled.
 - Rendered title: Local Subprocessor Notice Generator | NoticeKit
 - Timeline state: Review-ready window
-- Deadline label: June 27, 2026
+- Deadline label: June 28, 2026
 
 ## Assertions
 
