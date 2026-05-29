@@ -132,10 +132,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-29 20:26 to 20:27 UTC: ran another validation maintenance pass, refreshed the reply-watch and status stack, and kept the benchmark and AI-agent-review follow-up windows parked on zero replies.
-- 2026-05-29 20:24 to 20:25 UTC: ran another validation maintenance pass, refreshed the reply-watch and status stack, and kept the benchmark and AI-agent-review follow-up windows parked on zero replies.
-- 2026-05-29 20:04 to 20:22 UTC: repeated validation maintenance passes kept the reply-watch, self-audit QA, contact-webhook, free-teardown handoff, source-tag coverage, site-link, no-reply logging, and artifact-sync checks green while the live queue stayed at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29: elevated the AI agent review path onto the homepage, pricing page, and free-tools hero CTAs so the control-boundary route is visible alongside the starter pack, builder, answer bank, and inventory paths; site-link and source-tag coverage rechecked cleanly after the copy shift.
-- 2026-05-29 04:17 to 16:29 UTC: fixed the stale nav mismatch, expanded validation-status coverage, corrected the generator smoke assertion, refreshed the benchmark/help/inbox/generator/partner/validation evidence stack, and kept the AI-agent-review checklist, outreach, and follow-up-pass artifacts plus the repeated maintenance passes aligned on zero replies.
-- 2026-05-28 20:19 to 2026-05-28 23:30 UTC: repeated validation maintenance stayed green, preserved the self-audit share-copy fix, and left the benchmark batch at 5 sent / 0 replies.
-- 2026-05-27 to 2026-05-28: tightened receiver-side homepage, free-tools, and pricing copy; shipped the benchmark outreach batch and follow-up artifacts; and kept validation monitoring blocked on no-reply evidence plus human-authenticated re-entry.
+- 2026-05-29: repeated validation maintenance and status refreshes kept the reply-watch, self-audit QA, artifact-sync, and June 2 follow-up windows parked on zero replies.
+- 2026-05-29: elevated the AI agent review path onto the homepage, pricing page, and free-tools hero CTAs while the site-link and source-tag coverage checks stayed clean.
+- 2026-05-29: fixed the stale nav mismatch, corrected the generator smoke assertion, and refreshed the benchmark/help/inbox/generator/partner/validation evidence stack.
+- 2026-05-28 to 2026-05-29: tightened receiver-side homepage, free-tools, and pricing copy; shipped the benchmark outreach batch and follow-up artifacts; and kept validation monitoring blocked on no-reply evidence plus human-authenticated re-entry.
