@@ -192,6 +192,9 @@
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">AI inventory first</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="once">AI answer now</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="repeat">AI repeated review</button>
+                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="named-vendor" data-route-frequency="once">OpenAI template</button>
+                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="named-vendor" data-route-frequency="repeat">OpenAI answer bank</button>
+                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="agent-controls" data-route-frequency="once">AI agent controls</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="public-page" data-route-frequency="repeat">AI broader handoff</button>
                 <button class="button secondary" type="button" data-route-topic="general" data-route-role="founder" data-route-need="benchmark" data-route-frequency="repeat">Public benchmark</button>
                 <button class="button secondary" type="button" data-route-topic="general" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">Notice workflow</button>
@@ -215,6 +218,8 @@
                   <select id="route-need">
                     <option value="written-answer">A written answer before I buy</option>
                     <option value="files-now">The files to use right away</option>
+                    <option value="named-vendor">A named-vendor answer</option>
+                    <option value="agent-controls">An AI agent control review</option>
                     <option value="public-page">A review of the public page or workflow</option>
                     <option value="benchmark">A public benchmark or calibration read</option>
                     <option value="package-preview">A look at what is inside the kit</option>
@@ -675,25 +680,67 @@
           secondaryLabel: "Open answer builder",
         };
 
-        if (need === "benchmark") {
-          recommendation = {
-            title: "Read the benchmark report first.",
-            summary: "You want a calibration read before rewriting a public subprocessor page, so the pilot report shows what is usually visible and what still goes missing.",
-            bullets: [
+          if (need === "benchmark") {
+            recommendation = {
+              title: "Read the benchmark report first.",
+              summary: "You want a calibration read before rewriting a public subprocessor page, so the pilot report shows what is usually visible and what still goes missing.",
+              bullets: [
               "Best when you need a reality check before a rewrite",
               "Pairs the report with the tracker for your own sample",
               "Use the page checker next if you want to score one page"
             ],
-            primaryHref: "blog-subprocessor-benchmark-report-01.html?source=free-tools-route-finder",
-            primaryLabel: "Read benchmark report",
-            secondaryHref: "blog-subprocessor-benchmark-worksheet.html?source=free-tools-route-finder",
-            secondaryLabel: "Open tracker",
-          };
-        } else if (role === "consultant") {
-          recommendation = {
-            title: "Open the partner path first.",
-            summary: "You are selling or delivering this for clients, so the partner preview is the fastest way to check referral, delivery, or white-label fit.",
-            bullets: [
+              primaryHref: "blog-subprocessor-benchmark-report-01.html?source=free-tools-route-finder",
+              primaryLabel: "Read benchmark report",
+              secondaryHref: "blog-subprocessor-benchmark-worksheet.html?source=free-tools-route-finder",
+              secondaryLabel: "Open tracker",
+            };
+          } else if (need === "named-vendor") {
+            recommendation = frequency === "repeat"
+              ? {
+                  title: "Open the OpenAI answer bank.",
+                  summary: "The reviewer named OpenAI directly, and the repeat-review path keeps reusable wording, proof links, and owner notes in one source file.",
+                  bullets: [
+                    "Best when the same named-vendor question keeps returning",
+                    "Keeps the template and route guide one click away",
+                    "Avoids rewriting generic AI copy from scratch"
+                  ],
+                  primaryHref: "openai-security-questionnaire-answer-bank.html?source=free-tools-route-finder",
+                  primaryLabel: "Open OpenAI answer bank",
+                  secondaryHref: "openai-security-questionnaire-answer-template.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open OpenAI template",
+                }
+              : {
+                  title: "Open the OpenAI template.",
+                  summary: "You need one named-vendor answer now, and the template is the shortest route to a copy-ready response with the right vendor framing.",
+                  bullets: [
+                    "Best when OpenAI is explicitly named in the questionnaire",
+                    "Keeps the example and answer bank one click away",
+                    "Works well before the thread widens into repeat review"
+                  ],
+                  primaryHref: "openai-security-questionnaire-answer-template.html?source=free-tools-route-finder",
+                  primaryLabel: "Open OpenAI template",
+                  secondaryHref: "blog-openai-security-questionnaire-path-guide.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open route guide",
+                };
+          } else if (need === "agent-controls") {
+            recommendation = {
+              title: "Open the AI agent tool-access review.",
+              summary: "You need the control-boundary path, not the generic questionnaire path, so the review and approval-gate pages stay together.",
+              bullets: [
+                "Best when the buyer asks about tools, approval gates, or audit trail",
+                "Keeps mutating actions and service-account scope in view",
+                "Pairs with the approval gate template if the thread needs stricter controls"
+              ],
+              primaryHref: "blog-ai-agent-tool-access-review.html?source=free-tools-route-finder",
+              primaryLabel: "Open AI agent review",
+              secondaryHref: "blog-ai-agent-approval-gate-template.html?source=free-tools-route-finder",
+              secondaryLabel: "Open approval gate template",
+            };
+          } else if (role === "consultant") {
+            recommendation = {
+              title: "Open the partner path first.",
+              summary: "You are selling or delivering this for clients, so the partner preview is the fastest way to check referral, delivery, or white-label fit.",
+              bullets: [
               "Shows referral, delivery, and white-label boundaries",
               "Best for consultants, fractional DPOs, and attorneys",
               "Keeps client work separate from founder pricing"
