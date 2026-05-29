@@ -48,6 +48,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-29 04:27 UTC: closed the remaining public AI-first nav mismatch on `index.html`, `generator.html`, and `self-audit.html`, reran local link/source-tag checks, refreshed the generated validation evidence stack, and reconfirmed the queue still sits at 0 real submissions / 0 replies / 0 interviews with the benchmark follow-up still due on 2026-06-02 UTC.
 - 2026-05-29 04:17 to 04:24 UTC: reran validation maintenance, refreshed the generated benchmark/help/inbox/generator/partner/validation evidence stack, logged the latest deduplicated no-reply checkpoints, and confirmed the queue still sits at 0 real submissions / 0 replies / 0 interviews with the benchmark follow-up still due on 2026-06-02 UTC.
 - 2026-05-29: closed the remaining top-nav consistency gap on the changelog and older subprocessor content pages so the public AI-first acquisition path now routes through `start-here.html` instead of the older `Self-audit` or `Generator` nav slot.
 - 2026-05-29: completed the AI-first cleanup across the final legacy entry pages, including the previously root-owned teardown, kit-preview, founder-handoff, sample-packet, and AI stack guide surfaces, and kept watcher coverage aligned with the new route tags.
