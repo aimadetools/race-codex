@@ -53,7 +53,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - Repositioned the main public navigation on the writable core acquisition surfaces so `index.html`, `free-tools.html`, `pricing.html`, `about.html`, `start-here.html`, `blog.html`, `audit-request.html`, and `partner-preview.html` now point visitors to `start-here.html` instead of surfacing the legacy generator as a top-nav primary path.
 - Tightened public support copy on `about.html`, `partner-preview.html`, and `disclaimer.html` so those pages now describe NoticeKit as an AI questionnaire answer and reviewer-handoff workflow first, with notice and packet operations explicitly framed as secondary.
 - Added a dated positioning decision to `DECISIONS.md` to record the AI-first receiver-side consolidation and keep the repo memory aligned with the live site direction.
-- Tried to extend the same nav cleanup to older legacy pages such as `free-teardown.html`, `kit-preview.html`, `partner-client-handoff.html`, and several subprocessor tool pages, but those files are owned by `root` in this workspace and could not be patched from the current session.
+- Extended the same `Start here` nav cleanup across the remaining writable legacy pages: `self-audit.html`, `generator.html`, `blog-noticekit-vs-page-change-monitoring.html`, `blog-vendor-change-review-packet.html`, `blog-subprocessor-page-checker.html`, `blog-subprocessor-review-brief-builder.html`, and `sample-subprocessor-teardown.html` now replace the old top-nav `Generator` primary path with `Start here`; the two subprocessor utility result panels also route fallback traffic to `start-here.html` instead of the generator.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the legacy-page nav pass; both checks stayed green with no missing local targets and complete watcher coverage.
+- `free-teardown.html`, `kit-preview.html`, `partner-client-handoff.html`, `sample-ai-vendor-disclosure-packet.html`, and `blog-ai-saas-subprocessor-list-template.html` are still blocked from the same nav cleanup because they remain owned by `root` in this workspace.
 
 ## Next Step
 
