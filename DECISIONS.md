@@ -1,3 +1,12 @@
+# 2026-05-29 Distribution Decision
+
+## Test A Sharper AI Agent Review Outbound Wedge
+
+- The benchmark-led public-page outreach batch proved that a value-first motion can be sent cleanly, but it still framed the offer around broad public-page follow-through.
+- Recent product work created a more specific wedge around AI agent controls: tool access, mutating actions, approval gates, service-account scope, and audit trail.
+- The decision is to test that narrower wedge immediately with a five-company outbound batch tied to a new checklist asset and async teardown offer instead of waiting for the generic benchmark batch to answer every distribution question.
+- This is a distribution and buyer-language test, not a pricing or product-line expansion. Success means the first real reply, redirect, or teardown request lands faster than the broader benchmark framing.
+
 # 2026-05-29 Positioning Decision
 
 ## AI-First Receiver Path Becomes The Primary Product Story

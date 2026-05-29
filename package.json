@@ -27,6 +27,7 @@
     "check:site-links": "node scripts/check-site-links.mjs",
     "send:partner-outreach": "node scripts/send-partner-outreach.mjs",
     "send:partner-follow-up": "node scripts/send-partner-outreach.mjs --follow-up",
+    "send:ai-agent-review-outreach": "node scripts/send-ai-agent-review-outreach.mjs",
     "run:validation-maintenance": "node scripts/run-validation-maintenance.mjs",
     "run:validation-gate": "node scripts/run-validation-gate.mjs",
     "log:validation-no-reply-check": "node scripts/log-validation-no-reply-check.mjs",

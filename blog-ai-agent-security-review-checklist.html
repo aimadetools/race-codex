@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Agent Security Review Checklist for SaaS Teams | NoticeKit</title>
+    <meta name="description" content="Use this AI agent security review checklist when buyers ask what your agent can access, what it can change, what stops for human approval, and how the audit trail works.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:url" content="https://noticekit.tech/blog-ai-agent-security-review-checklist.html">
+    <meta property="og:title" content="AI Agent Security Review Checklist for SaaS Teams">
+    <meta property="og:description" content="A practical checklist for SaaS teams answering buyer AI agent security reviews with tool access, mutating actions, approval gates, service-account boundaries, and audit-trail details.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit AI agent security review checklist">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Agent Security Review Checklist for SaaS Teams">
+    <meta name="twitter:description" content="A practical checklist for buyers asking what your AI agent can access, what it can change, and how human review works.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://noticekit.tech/blog-ai-agent-security-review-checklist.html">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "AI Agent Security Review Checklist for SaaS Teams",
+            "description": "A practical checklist for SaaS teams answering buyer AI agent security reviews with tool access, mutating actions, approval gates, service-account boundaries, and audit-trail details.",
+            "author": {
+              "@type": "Organization",
+              "name": "NoticeKit"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "NoticeKit",
+              "url": "https://noticekit.tech/"
+            },
+            "datePublished": "2026-05-29",
+            "dateModified": "2026-05-29",
+            "mainEntityOfPage": "https://noticekit.tech/blog-ai-agent-security-review-checklist.html"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use this AI agent security review checklist?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use it when a buyer, security reviewer, privacy lead, or counsel is no longer asking broad AI questions and instead wants the exact tool access, write boundaries, human approvals, service-account scope, and audit trail behind your agent workflow."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if the reviewer only needs one answer block?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use the checklist to gather the control facts first, then move into the AI agent tool-access review or approval-gate template for the final wording."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this replace security review or legal advice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. NoticeKit helps package the operating facts and control boundaries clearly. Your security team, privacy team, and counsel still decide the final answer and risk position."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="start-here.html">Start here</a>
+          <a href="free-tools.html">Free tools</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <article class="article">
+          <header class="article-header">
+            <span class="eyebrow">AI agent controls</span>
+            <h1>Use this checklist before you answer an AI agent security review.</h1>
+            <p>Buyer AI reviews usually get harder when the thread moves past generic model policy and into system access. The real blocker becomes narrower: which tools the agent can touch, which actions can mutate state, where human approval interrupts execution, how service accounts are scoped, what gets logged, and what is blocked outright. Use this checklist to package those facts before you draft the final answer.</p>
+            <div class="hero-actions">
+              <a class="button" href="blog-ai-agent-tool-access-review.html?source=agent-review-checklist-tool-access">Open AI agent review</a>
+              <a class="button secondary" href="blog-ai-agent-approval-gate-template.html?source=agent-review-checklist-approval-gate">Open approval gate template</a>
+              <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=agent-review-checklist-builder">Open answer builder</a>
+              <a class="button secondary" href="free-teardown.html?source=agent-review-checklist-teardown">Request free teardown</a>
+            </div>
+          </header>
+
+          <div class="notice-band">
+            <strong>For the team answering the review.</strong>
+            <p>This checklist is for the SaaS team receiving the buyer or counsel questionnaire, not the buyer sending it. It is operational packaging, not legal advice.</p>
+          </div>
+
+          <section>
+            <h2>The seven control questions you need to answer cleanly</h2>
+            <div class="grid-3">
+              <article class="card">
+                <span class="tag">1</span>
+                <h3>Connected systems</h3>
+                <p>Name every system the agent can access in the reviewed workflow: product DB, CRM, ticketing, docs, cloud storage, email, CI, analytics, or internal tooling. Buyers lose trust when the tool list is implied instead of explicit.</p>
+              </article>
+              <article class="card">
+                <span class="tag">2</span>
+                <h3>Read versus write boundary</h3>
+                <p>Separate retrieval from mutation. The reviewer wants to know whether the agent can only read data, draft recommendations, create records, change configuration, send messages, or execute commands.</p>
+              </article>
+              <article class="card">
+                <span class="tag">3</span>
+                <h3>Approval gates</h3>
+                <p>List which actions stop for human review, which roles can approve them, and what evidence the approver sees before release. "Human in the loop" is too vague on its own.</p>
+              </article>
+              <article class="card">
+                <span class="tag">4</span>
+                <h3>Blocked actions</h3>
+                <p>State what the agent cannot do: production deploys, billing changes, outbound communications, deletion, privilege escalation, or customer-visible writes without approval.</p>
+              </article>
+              <article class="card">
+                <span class="tag">5</span>
+                <h3>Credential scope</h3>
+                <p>Explain whether the agent uses per-user auth, service accounts, API keys, or delegated tokens, and how those credentials are limited by role, workspace, environment, or endpoint.</p>
+              </article>
+              <article class="card">
+                <span class="tag">6</span>
+                <h3>Audit trail</h3>
+                <p>Show what gets logged: prompts, tool calls, inputs, outputs, approvals, execution results, failures, retries, and owner notes. A reviewer wants to know what can be reconstructed after an incident.</p>
+              </article>
+              <article class="card">
+                <span class="tag">7</span>
+                <h3>Recheck triggers</h3>
+                <p>Document when the answer must be refreshed: new tool access, a broader workflow, model-provider change, customer-segment expansion, privilege change, or a new mutating action.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2>Practical checklist</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Control area</th>
+                    <th>What to capture</th>
+                    <th>What weak answers sound like</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tool inventory</td>
+                    <td>Name the exact apps, APIs, databases, queues, and file stores in scope.</td>
+                    <td>"The agent connects to internal systems."</td>
+                  </tr>
+                  <tr>
+                    <td>Action boundary</td>
+                    <td>State which actions are read-only, draft-only, or mutating.</td>
+                    <td>"The agent helps automate workflows."</td>
+                  </tr>
+                  <tr>
+                    <td>Approval model</td>
+                    <td>Show who approves what, before which action, and in what interface.</td>
+                    <td>"Humans supervise the output."</td>
+                  </tr>
+                  <tr>
+                    <td>Credential model</td>
+                    <td>Describe service-account scope, role mapping, and secret handling.</td>
+                    <td>"Access is secured."</td>
+                  </tr>
+                  <tr>
+                    <td>Logging</td>
+                    <td>List the execution events, approvals, and failures preserved for review.</td>
+                    <td>"We keep logs."</td>
+                  </tr>
+                  <tr>
+                    <td>Failure behavior</td>
+                    <td>Explain what happens on timeout, unsafe response, missing context, or blocked action.</td>
+                    <td>"The system handles errors automatically."</td>
+                  </tr>
+                  <tr>
+                    <td>Scope exclusions</td>
+                    <td>State what the answer does not cover yet.</td>
+                    <td>"This applies generally to our AI."</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <h2>Use the shortest follow-on route</h2>
+            <div class="grid-3">
+              <article class="card">
+                <span class="tag">Need one answer</span>
+                <h3>Tool-access review</h3>
+                <p>Use this when the checklist is complete and the buyer wants one written explanation of systems touched, write boundary, service-account scope, and auditability.</p>
+                <a class="button secondary" href="blog-ai-agent-tool-access-review.html?source=agent-review-checklist-tool-access">Open AI agent review</a>
+              </article>
+              <article class="card">
+                <span class="tag">Need the stop points</span>
+                <h3>Approval gate template</h3>
+                <p>Use this when the real objection is autonomy itself and the reviewer wants the exact human-review stops, blocked actions, and escalation rules.</p>
+                <a class="button secondary" href="blog-ai-agent-approval-gate-template.html?source=agent-review-checklist-approval-gate">Open approval gate template</a>
+              </article>
+              <article class="card">
+                <span class="tag">Need an outside read</span>
+                <h3>Free async teardown</h3>
+                <p>Use teardown when the public trust page or live buyer thread still feels fuzzy and you want a blunt 3-bullet gap read before you answer.</p>
+                <a class="button secondary" href="free-teardown.html?source=agent-review-checklist-teardown">Request free teardown</a>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2>Copy this internal prompt before drafting the answer</h2>
+            <div class="template-box">
+              <p>Workflow reviewed: [name the exact agent workflow]</p>
+              <p>Connected systems: [list every system or API the agent can touch]</p>
+              <p>Read-only actions: [list]</p>
+              <p>Mutating actions: [list]</p>
+              <p>Approval gates: [what stops for review, who approves, where]</p>
+              <p>Blocked actions: [list what is not allowed]</p>
+              <p>Credential scope: [service account, role, environment, token limits]</p>
+              <p>Audit trail: [what is logged and where]</p>
+              <p>Failure path: [what happens on unsafe action, timeout, or missing context]</p>
+              <p>Scope exclusions: [what this answer does not cover]</p>
+              <p>Next recheck trigger: [what change forces review of this answer]</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>FAQ</h2>
+            <div class="grid-3">
+              <article class="card">
+                <h3>When is this the right first step?</h3>
+                <p>Use it when the buyer stopped asking broad questionnaire questions and started asking about tool access, autonomous action, approval stops, or service-account scope.</p>
+              </article>
+              <article class="card">
+                <h3>When is the broader packet better?</h3>
+                <p>Use the packet route when procurement, security, privacy, and counsel all need the same fuller artifact, not just the agent-control answer block.</p>
+              </article>
+              <article class="card">
+                <h3>What if the workflow changes often?</h3>
+                <p>Keep the checklist as the stable internal fact set, then refresh the answer whenever the tool list, write boundary, model provider, or approval model changes.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="cta-band">
+            <div>
+              <h2>Need the answer itself, not just the checklist?</h2>
+              <p>Use the tool-access review for the main answer, the approval-gate template for autonomy objections, or the answer builder if this needs to sit beside the broader AI questionnaire response.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="button" href="blog-ai-agent-tool-access-review.html?source=agent-review-checklist-tool-access">Open AI agent review</a>
+              <a class="button secondary" href="blog-ai-agent-approval-gate-template.html?source=agent-review-checklist-approval-gate">Open approval gate template</a>
+              <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=agent-review-checklist-builder">Open builder</a>
+              <a class="button secondary" href="ai-procurement-hub.html?source=agent-review-checklist-hub">Open AI review pack</a>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
+      </footer>
+    </div>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>
