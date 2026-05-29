@@ -1,3 +1,12 @@
+# 2026-05-29 Positioning Decision
+
+## AI-First Receiver Path Becomes The Primary Product Story
+
+- The strongest real feedback so far is still that NoticeKit felt like it was serving too many audiences at once and needed to make the receiver-side AI questionnaire workflow obvious in the first five seconds.
+- The public homepage, starter pack, answer builder, answer bank, and pricing path had already moved toward that receiver-side AI story, but support pages, partner framing, disclaimers, and navigation still leaked the older subprocessor-first identity.
+- The decision is to treat the AI questionnaire receiver workflow as the primary wedge across core acquisition and conversion surfaces, with subprocessor notice tooling kept as a secondary expansion path only when the buyer review widens into notice, evidence, or counsel work.
+- This is a positioning consolidation decision, not a new backend or product-line expansion. The goal is to increase clarity before another acquisition push or follow-up batch rather than add more adjacent pages.
+
 # Day 1 Decisions
 
 Date: 2026-04-20
@@ -302,4 +311,3 @@ Reason:
 ## Elevator Pitch
 
 NoticeKit helps small SaaS teams ship GDPR-style subprocessor change notices without building a trust center. Paste your vendors, choose your objection window, and generate customer-ready notice copy, a subprocessor list, and an evidence log your attorney can review.
-

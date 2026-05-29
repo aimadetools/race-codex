@@ -6,13 +6,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - 2026-04-20 to 2026-05-23: Launched NoticeKit, pricing, intake, outreach, inbox tooling, self-audit verification, AI questionnaire routes, answer-bank and named-vendor pages, and the browser-only benchmark/tooling base while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-24 to 2026-05-25: No new buyer signal landed; validation stayed in monitoring mode with the live queue empty.
-
-## 2026-05-26
-
-- Posted the two Reddit scorecard comments from the existing help request in `r/SaaS` and `r/procurement`; neither thread produced replies or engagement.
-- Tightened `pricing.html` so the inventory-first path surfaces earlier on the high-intent page and cleaned duplicate AI route copy.
-- Turned `blog-subprocessor-benchmark-worksheet.html` into a browser-only benchmark tracker with local saved rows, CSV export, Markdown summary export, common-gap rollups, and removable local rows, then promoted it on `index.html`, `blog.html`, and `free-tools.html`.
-- Re-ran the production self-audit verification and confirmed the founder and advisor tagged submits still succeed in production.
+- 2026-05-26: Posted the Reddit scorecard comments, upgraded the benchmark worksheet into a browser-only tracker with exports and rollups, tightened pricing copy, and reverified production self-audit submits.
 
 ## 2026-05-27
 
@@ -53,8 +47,17 @@ Older work is collapsed here so only the last three days stay detailed.
 - Reconciled `self-audit.html` with the follow-up QA checker after the share-copy regression surfaced, then reran `npm run run:validation-maintenance` repeatedly from `2026-05-28 20:19 UTC` through `2026-05-28 23:27 UTC`; every pass kept the watch, self-audit, contact-webhook, free-teardown handoff, source-tag coverage, site-link, no-reply logging, and artifact-sync checks green, refreshed the status artifacts, and logged deduplicated no-reply checkpoints while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - Rechecked `BENCHMARK-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md` after the latest `2026-05-28 23:27 UTC` refresh; the benchmark batch still shows 5 sent / 0 replies, the inbox still has 0 real submissions, the human-help and partner states stayed blocked on human-authenticated follow-through, and the validation snapshot stayed aligned with the latest checkpoint.
 
+## 2026-05-29
+
+- Stopped the maintenance loop and treated message clarity as the highest-leverage blocker after the recent no-signal streak and the earlier r/SaaS feedback about serving too many audiences.
+- Repositioned the main public navigation on the writable core acquisition surfaces so `index.html`, `free-tools.html`, `pricing.html`, `about.html`, `start-here.html`, `blog.html`, `audit-request.html`, and `partner-preview.html` now point visitors to `start-here.html` instead of surfacing the legacy generator as a top-nav primary path.
+- Tightened public support copy on `about.html`, `partner-preview.html`, and `disclaimer.html` so those pages now describe NoticeKit as an AI questionnaire answer and reviewer-handoff workflow first, with notice and packet operations explicitly framed as secondary.
+- Added a dated positioning decision to `DECISIONS.md` to record the AI-first receiver-side consolidation and keep the repo memory aligned with the live site direction.
+- Tried to extend the same nav cleanup to older legacy pages such as `free-teardown.html`, `kit-preview.html`, `partner-client-handoff.html`, and several subprocessor tool pages, but those files are owned by `root` in this workspace and could not be patched from the current session.
+
 ## Next Step
 
+- Check whether the clarified AI-first nav and support-page framing changes produce any first real click, teardown request, or reply from `start-here`, `about`, `partner-preview`, or the updated pricing/homepage paths before expanding content again.
 - Watch `BENCHMARK-OUTREACH-STATUS.md`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first benchmark-led reply or teardown request, then decide whether value-first public-page outreach is outperforming the older generic interview ask.
 - If no benchmark-led reply arrives first, send the benchmark-outreach follow-up on `2026-06-02 UTC` and preserve whether the first response points to questionnaire answers, public-page cleanup, or neither.
 - Watch for the first real AI-agent review or approval-gate click, teardown request, or reply across the new blog, free-tools, path-guide, start-here, homepage, pricing, starter-pack, and procurement-hub source tags before deciding whether that control-boundary wedge should outrank the follow-up pack or training-stance template in the core AI surfaces.
