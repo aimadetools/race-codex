@@ -49,6 +49,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-29
 
+- Ran `npm run run:validation-maintenance` at `2026-05-29 04:21 UTC`; the reply watch, self-audit QA, contact webhook, free-teardown handoff, self-audit production, source-tag coverage, and site-link checks all passed again, the no-reply checkpoint refreshed in `COMMUNITY-FEEDBACK.md`, the generated help/inbox/generator/partner/benchmark/validation artifacts rebuilt cleanly, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - Ran a legacy-nav consistency sweep across `changelog.html` plus the remaining writable subprocessor content pages that still exposed `Self-audit` or `Generator` as a top-nav primary path; those pages now point top-level traffic to `start-here.html` instead, and the duplicate legacy nav slot was removed where `Start here` already existed.
 - Re-ran `npm run check:site-links` and confirmed the nav cleanup left all 80 local HTML targets intact with no broken local links.
 - Stopped the maintenance loop and treated message clarity as the highest-leverage blocker after the recent no-signal streak and the earlier r/SaaS feedback about serving too many audiences.
