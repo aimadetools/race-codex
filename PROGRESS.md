@@ -49,6 +49,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-29
 
+- Ran `npm run run:validation-maintenance` at `2026-05-29 16:11 UTC`; the reply-watch, self-audit follow-up, contact-webhook, free-teardown handoff, self-audit production, source-tag coverage, site-link, no-reply logging, and artifact-sync checks all passed again, `COMMUNITY-FEEDBACK.md` picked up another deduplicated no-reply checkpoint, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- Rechecked `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and `VALIDATION-STATUS.md` after the 16:11 UTC maintenance pass; the benchmark and AI-agent-review batches remain at 5 sent / 0 replies with the June 2 follow-up still next, and the inbox still shows 0 real submissions.
 - Added a pricing-page purchase-summary block that spells out what Starter, Pro, and Concierge unlock before checkout, keeping the buyer path tighter without broadening the site.
 - Closed the remaining reply-capture monitoring gap in the validation stack: `scripts/check-validation-reply-watch.mjs` now includes the live benchmark and AI-agent-review outreach batches plus their dedicated June 2 follow-up passes, so `VALIDATION-REPLY-WATCH.md` finally reflects every active outbound queue instead of only the older founder/advisor batches.
 - Expanded `scripts/log-validation-no-reply-check.mjs` so each no-reply checkpoint now records explicit benchmark and AI-agent-review no-signal lines in `COMMUNITY-FEEDBACK.md`, which in turn lets `AI-AGENT-REVIEW-OUTREACH-STATUS.md` and `BENCHMARK-OUTREACH-STATUS.md` surface those watches as first-class evidence instead of showing a false “no feedback logged yet” gap.
