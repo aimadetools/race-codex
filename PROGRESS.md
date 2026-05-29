@@ -57,7 +57,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the legacy-page nav pass; both checks stayed green with no missing local targets and complete watcher coverage.
 - Refreshed the stale subprocessor-first metadata and hero framing on the writable legacy fallback pages so `self-audit.html`, `generator.html`, `blog-subprocessor-page-checker.html`, `sample-subprocessor-teardown.html`, `blog-noticekit-vs-page-change-monitoring.html`, and `blog-vendor-change-review-packet.html` now describe NoticeKit as the operational follow-through path when an AI questionnaire or reviewer handoff expands into vendor-change, notice, and proof work.
 - Re-ran `npm run check:site-links` after the metadata and hero-copy pass; local link coverage stayed clean.
-- `free-teardown.html`, `kit-preview.html`, `partner-client-handoff.html`, `sample-ai-vendor-disclosure-packet.html`, and `blog-ai-saas-subprocessor-list-template.html` are still blocked from the same nav cleanup because they remain owned by `root` in this workspace.
+- Finished the remaining legacy-page cleanup by replacing the last previously root-owned pages with writable copies: `free-teardown.html`, `kit-preview.html`, `partner-client-handoff.html`, `sample-ai-vendor-disclosure-packet.html`, and `blog-ai-saas-subprocessor-list-template.html` now use the AI-first `Start here` / `Free tools` nav pattern and frame the older notice workflow as follow-through after the main AI review path is clear.
+- Added the new `free-teardown-ai-answer-bank` and `ai-stack-template-inventory` source tags to `scripts/watched-source-tags.mjs`, then re-ran `npm run check:site-links` and `npm run check:source-tag-coverage`; both checks passed with clean local targets and complete watcher coverage.
 
 ## Next Step
 
