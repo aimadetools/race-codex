@@ -129,6 +129,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-29: finished the legacy nav consistency sweep by replacing the remaining top-nav `Self-audit` and `Generator` links on the changelog and older subprocessor content pages with the AI-first `Start here` path, then reverified local link coverage.
 - 2026-05-29 04:17 UTC: ran the full validation maintenance pass again, refreshed the help/inbox/generator/partner/benchmark/validation artifacts, logged the new no-reply checkpoint, and confirmed the benchmark batch is still 5 sent / 0 replies with no real inbox intake.
 - 2026-05-29: finished the remaining legacy-page AI-first cleanup by replacing the last previously root-owned pages, shifting `free-teardown.html`, `kit-preview.html`, `partner-client-handoff.html`, `sample-ai-vendor-disclosure-packet.html`, and `blog-ai-saas-subprocessor-list-template.html` onto the `Start here` / `Free tools` nav pattern, reframing the older notice workflow as secondary follow-through, and extending watcher coverage for the new `free-teardown-ai-answer-bank` and `ai-stack-template-inventory` tags.
 - 2026-05-29: extended the `Start here` nav cleanup across every writable legacy page still exposing `Generator` as a top-nav primary path, rerouted the writable subprocessor-utility fallback actions toward `start-here.html`, and reverified local links/source-tag coverage before the final legacy-page replacement pass closed the remaining gap.

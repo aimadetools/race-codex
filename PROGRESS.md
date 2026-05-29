@@ -49,6 +49,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-29
 
+- Ran a legacy-nav consistency sweep across `changelog.html` plus the remaining writable subprocessor content pages that still exposed `Self-audit` or `Generator` as a top-nav primary path; those pages now point top-level traffic to `start-here.html` instead, and the duplicate legacy nav slot was removed where `Start here` already existed.
+- Re-ran `npm run check:site-links` and confirmed the nav cleanup left all 80 local HTML targets intact with no broken local links.
 - Stopped the maintenance loop and treated message clarity as the highest-leverage blocker after the recent no-signal streak and the earlier r/SaaS feedback about serving too many audiences.
 - Repositioned the main public navigation on the writable core acquisition surfaces so `index.html`, `free-tools.html`, `pricing.html`, `about.html`, `start-here.html`, `blog.html`, `audit-request.html`, and `partner-preview.html` now point visitors to `start-here.html` instead of surfacing the legacy generator as a top-nav primary path.
 - Tightened public support copy on `about.html`, `partner-preview.html`, and `disclaimer.html` so those pages now describe NoticeKit as an AI questionnaire answer and reviewer-handoff workflow first, with notice and packet operations explicitly framed as secondary.
