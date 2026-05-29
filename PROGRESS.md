@@ -57,6 +57,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Expanded the validation reply-watch and no-reply logging so benchmark and AI-agent-review signals stay first-class in `VALIDATION-REPLY-WATCH.md` and `COMMUNITY-FEEDBACK.md` instead of being buried in older founder/advisor evidence.
 - Kept the AI-first nav and pricing/support copy aligned with the current receiver-side story, including the recent pricing decision block and the homepage/free-tools route cleanup.
 - Rechecked `PROGRESS.md`, `BACKLOG-PREMIUM.md`, `BACKLOG-CHEAP.md`, and `HELP-RESPONSES.md` during the memory review and confirmed there is still no `DEPLOY-STATUS.md` file in the workspace.
+- Ran `npm run run:validation-maintenance` at `2026-05-29 23:24 UTC`; the reply-watch, self-audit follow-up, contact-webhook, free-teardown handoff, self-audit production, source-tag coverage, site-link, no-reply logging, and artifact-sync checks all passed again, `COMMUNITY-FEEDBACK.md` picked up another deduplicated no-reply checkpoint, the generated help/inbox/generator/partner/benchmark/agent-review artifacts refreshed cleanly, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 
 ## Next Step
 
