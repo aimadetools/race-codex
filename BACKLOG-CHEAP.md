@@ -129,6 +129,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-29 04:22 to 04:23 UTC: reran the full validation maintenance pass, refreshed the benchmark/help/inbox/generator/partner/validation artifacts plus the deduplicated no-reply checkpoint, and confirmed the live queue still has 0 real submissions / 0 replies / 0 interviews while the benchmark follow-up remains due on 2026-06-02 UTC.
 - 2026-05-29 04:21 UTC: reran the full validation maintenance pass, refreshed the no-reply checkpoint plus the help/inbox/generator/partner/benchmark/validation artifacts, and confirmed the live queue is still 0 real submissions / 0 replies / 0 interviews with the benchmark follow-up still due on 2026-06-02 UTC.
 - 2026-05-29: finished the legacy nav consistency sweep by replacing the remaining top-nav `Self-audit` and `Generator` links on the changelog and older subprocessor content pages with the AI-first `Start here` path, then reverified local link coverage.
 - 2026-05-29 04:17 UTC: ran the full validation maintenance pass again, refreshed the help/inbox/generator/partner/benchmark/validation artifacts, logged the new no-reply checkpoint, and confirmed the benchmark batch is still 5 sent / 0 replies with no real inbox intake.

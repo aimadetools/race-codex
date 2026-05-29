@@ -48,6 +48,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-29 04:22 to 04:23 UTC: reran validation maintenance, refreshed the generated benchmark/help/inbox/generator/partner/validation evidence stack, logged another deduplicated no-reply checkpoint, and confirmed the queue still sits at 0 real submissions / 0 replies / 0 interviews with the benchmark follow-up still due on 2026-06-02 UTC.
 - 2026-05-29: closed the remaining top-nav consistency gap on the changelog and older subprocessor content pages so the public AI-first acquisition path now routes through `start-here.html` instead of the older `Self-audit` or `Generator` nav slot.
 - 2026-05-29 04:17 UTC: refreshed validation maintenance after the AI-first cleanup, reverified the help/inbox/benchmark/partner/generated status stack, and confirmed the live queue still sits at 0 real submissions, 0 replies, and 0 interviews, so evidence capture remains the gating P0 job.
 - 2026-05-29: completed the AI-first cleanup across the final legacy entry pages, including the previously root-owned teardown, kit-preview, founder-handoff, sample-packet, and AI stack guide surfaces, and kept watcher coverage aligned with the new route tags.
