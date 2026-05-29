@@ -132,20 +132,10 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-29 16:22 UTC: reran validation maintenance again, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:20 UTC: reran validation maintenance again, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:19 UTC: reran validation maintenance again, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:16 UTC: reran validation maintenance again, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:14 UTC: reran validation maintenance again, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:11 to 16:12 UTC: reran validation maintenance again, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:02 to 16:08 UTC: reran validation maintenance multiple times, refreshed the reply-watch and generated status stack, logged deduplicated no-reply checkpoints, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29: tightened the pricing page with a concise Starter / Pro / Concierge purchase-summary block so buyers can see what each checkout unlocks before they click through.
-- 2026-05-29 12:42 to 13:01 UTC: added the AI-agent-review outreach status and follow-up-pass artifacts, widened the validation reply watch/no-reply logging to cover the live benchmark and AI-agent-review batches, reran validation maintenance, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 12:36 UTC: shipped the AI agent security review checklist, linked it across the AI acquisition surfaces, and sent the first five-company AI agent review outreach batch with follow-up due on 2026-06-02 UTC.
-- 2026-05-29 08:02 to 08:30 UTC: expanded the free-tools route finder for named-vendor OpenAI and AI-agent control paths, then reran validation maintenance in repeated passes and kept the active queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 04:17 to 04:39 UTC: fixed the stale nav mismatch, expanded validation-status coverage, corrected the generator smoke assertion, and refreshed the benchmark/help/inbox/generator/partner/validation evidence stack cleanly.
-- 2026-05-29: finished the legacy nav and content cleanup across the remaining writable pages, reverified link/source-tag coverage, and recorded the AI-first receiver-story consolidation.
+- 2026-05-29 16:24 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged a deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
+- 2026-05-29 12:36 to 13:01 UTC: added the AI-agent-review outreach status and follow-up-pass artifacts, widened the validation reply watch/no-reply logging, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
+- 2026-05-29 12:36 UTC: shipped the AI agent security review checklist and sent the first five-company AI agent review outreach batch with follow-up due on 2026-06-02 UTC.
+- 2026-05-29 08:02 to 08:30 UTC: expanded the free-tools route finder for named-vendor OpenAI and AI-agent control paths, then reran validation maintenance while the active queue stayed at 0 real submissions / 0 replies / 0 interviews.
+- 2026-05-29 04:17 to 04:39 UTC: fixed the stale nav mismatch, expanded validation-status coverage, corrected the generator smoke assertion, and refreshed the benchmark/help/inbox/generator/partner/validation evidence stack.
 - 2026-05-28 20:19 to 2026-05-28 23:30 UTC: repeated validation maintenance stayed green, preserved the self-audit share-copy fix, and left the benchmark batch at 5 sent / 0 replies.
 - 2026-05-27 to 2026-05-28: tightened receiver-side homepage, free-tools, and pricing copy; shipped the benchmark outreach batch and follow-up artifacts; and kept validation monitoring blocked on no-reply evidence plus human-authenticated re-entry.
-- 2026-05-28: tightened the self-audit share path and ops reply draft while keeping email as fallback and preserving the selected checklist items in the reply draft.
-- 2026-05-29: shifted the writable core nav and support pages to an explicit AI-first receiver story, recorded the consolidation decision, and finished the remaining legacy-page cleanup plus source-tag monitoring setup.
