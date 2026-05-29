@@ -63,8 +63,8 @@ const csvOutput = document.querySelector("#csv-output")?.textContent?.trim() || 
 const generatorStatus = document.querySelector("#generator-status")?.textContent?.trim() || "";
 const deadlineLabel = document.querySelector("#deadline-label")?.textContent?.trim() || "";
 
-assert(title === "Local Subprocessor Notice Generator | NoticeKit", "Unexpected production generator title.");
-assert(hero.includes("Draft the notice packet"), "Generator hero heading did not render.");
+assert(title === "Local Vendor-Change Notice Generator | NoticeKit", "Unexpected production generator title.");
+assert(hero.includes("Draft the vendor-change notice packet"), "Generator hero heading did not render.");
 assert(subject.includes("Example SaaS: subprocessor update notice for Acme Email Cloud"), "Generator subject line did not render the default packet.");
 assert(timelineState === "Review-ready window", "Generator timeline state is not review-ready on default load.");
 assert(timelineSummary.includes("leaves enough time"), "Generator timeline summary did not render the ready-state copy.");

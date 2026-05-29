@@ -7,6 +7,8 @@
     "build:generator-production-status": "node scripts/build-generator-production-status.mjs",
     "build:generator-handoff-status": "node scripts/build-generator-handoff-status.mjs",
     "build:partner-outreach-status": "node scripts/build-partner-outreach-status.mjs",
+    "build:benchmark-outreach-status": "node scripts/build-benchmark-outreach-status.mjs",
+    "build:benchmark-follow-up-pass": "node scripts/build-benchmark-follow-up-pass.mjs",
     "build:validation-decision-brief": "node scripts/build-validation-decision-brief.mjs",
     "build:validation-positioning-brief": "node scripts/build-validation-positioning-brief.mjs",
     "build:paid-kits": "node scripts/build-paid-kit-fulfillment.mjs",

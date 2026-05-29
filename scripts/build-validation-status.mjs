@@ -17,6 +17,7 @@ const HELP_REQUEST_STATUS_FILE = join(ROOT, "HELP-REQUEST-STATUS.md");
 const GENERATOR_PRODUCTION_STATUS_FILE = join(ROOT, "GENERATOR-PRODUCTION-STATUS.md");
 const GENERATOR_HANDOFF_STATUS_FILE = join(ROOT, "GENERATOR-HANDOFF-STATUS.md");
 const PARTNER_OUTREACH_STATUS_FILE = join(ROOT, "PARTNER-OUTREACH-STATUS.md");
+const BENCHMARK_OUTREACH_STATUS_FILE = join(ROOT, "BENCHMARK-OUTREACH-STATUS.md");
 const HOMEPAGE_QUEUE_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
 const DECISION_BRIEF_FILE = join(ROOT, "VALIDATION-DECISION-BRIEF.md");
 const POSITIONING_BRIEF_FILE = join(ROOT, "VALIDATION-POSITIONING-BRIEF.md");
@@ -85,6 +86,22 @@ function parseCsv(text) {
     });
     return record;
   });
+}
+
+function extractBenchmarkMetric(text, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = text.match(new RegExp(`- ${escaped}: (\\d+)`, "i"));
+  return match ? Number(match[1]) : null;
+}
+
+function extractBenchmarkAction(text) {
+  const match = text.match(/- Next benchmark action:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
+}
+
+function extractBenchmarkCheckedAt(text) {
+  const match = text.match(/Checked at:\s*([^\n]+)/i);
+  return match ? match[1].trim() : "unknown";
 }
 
 function countBy(rows, key, value) {
@@ -296,6 +313,27 @@ function sumMetrics(values) {
   return values.reduce((total, value) => total + value, 0);
 }
 
+function formatMetric(value) {
+  return value == null ? "unknown" : String(value);
+}
+
+function buildWatchedSourceGroup(text, entries) {
+  const items = entries.map(({ tag, label }) => ({
+    label,
+    count: extractInboxBreakdownMetric(text, "Watched Source Tags", tag)
+  }));
+
+  return {
+    total: sumMetrics(items.map((item) => item.count)),
+    items
+  };
+}
+
+function renderWatchedSourceGroup(label, group) {
+  const breakdown = group.items.map((item) => `${formatMetric(item.count)} ${item.label}`).join(", ");
+  return `- ${label}: ${formatMetric(group.total)} (${breakdown})`;
+}
+
 function extractHelpRequestStatus(text) {
   const match = text.match(/- Status:\s*([^\n]+)/i);
   return match ? match[1].trim().toLowerCase() : "unknown";
@@ -479,6 +517,7 @@ const helpRequestStatusText = await readFile(HELP_REQUEST_STATUS_FILE, "utf8").c
 const generatorProductionStatusText = await readFile(GENERATOR_PRODUCTION_STATUS_FILE, "utf8").catch(() => "");
 const generatorHandoffStatusText = await readFile(GENERATOR_HANDOFF_STATUS_FILE, "utf8").catch(() => "");
 const partnerOutreachStatusText = await readFile(PARTNER_OUTREACH_STATUS_FILE, "utf8").catch(() => "");
+const benchmarkOutreachStatusText = await readFile(BENCHMARK_OUTREACH_STATUS_FILE, "utf8").catch(() => "");
 const homepageQueueText = await readFile(HOMEPAGE_QUEUE_FILE, "utf8").catch(() => "");
 const decisionBriefText = await readFile(DECISION_BRIEF_FILE, "utf8").catch(() => "");
 const positioningBriefText = await readFile(POSITIONING_BRIEF_FILE, "utf8").catch(() => "");
@@ -656,6 +695,82 @@ const partnerSentWaiting = extractPartnerMetric(partnerOutreachStatusText, "Sent
 const partnerReplied = extractPartnerMetric(partnerOutreachStatusText, "Replied");
 const partnerFollowUpReadiness = extractPartnerReadiness(partnerOutreachStatusText);
 const partnerNextAction = extractPartnerAction(partnerOutreachStatusText);
+const benchmarkOutreachCheckedAt = extractBenchmarkCheckedAt(benchmarkOutreachStatusText);
+const benchmarkSentWaiting = extractBenchmarkMetric(benchmarkOutreachStatusText, "Sent and waiting on reply");
+const benchmarkFollowedUpWaiting = extractBenchmarkMetric(benchmarkOutreachStatusText, "Followed up and waiting on reply");
+const benchmarkInboxSubmissions = extractBenchmarkMetric(benchmarkOutreachStatusText, "Benchmark-tagged inbox submissions");
+const benchmarkNextAction = extractBenchmarkAction(benchmarkOutreachStatusText);
+const aiFirstEntryWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "start-here-card", label: "start-here teardown" },
+  { tag: "about-page", label: "about teardown" },
+  { tag: "partner-preview-hero", label: "partner-preview hero" },
+  { tag: "partner-preview-cta", label: "partner-preview cta" },
+  { tag: "homepage-hero", label: "homepage hero" },
+  { tag: "homepage-shortcut", label: "homepage shortcut" },
+  { tag: "homepage-job-one-answer", label: "homepage one-answer" },
+  { tag: "homepage-job-repeat-review", label: "homepage repeat-review" },
+  { tag: "homepage-ai-route-one-answer", label: "homepage route one-answer" },
+  { tag: "homepage-ai-route-repeat-review", label: "homepage route repeat-review" },
+  { tag: "homepage-ai-route-broader-handoff", label: "homepage broader-handoff" },
+  { tag: "pricing-ai-deal-blocker", label: "pricing starter-pack" },
+  { tag: "pricing-ai-route-one-answer", label: "pricing route one-answer" },
+  { tag: "pricing-ai-route-repeat-review", label: "pricing route repeat-review" },
+  { tag: "pricing-ai-route-broader-handoff", label: "pricing broader-handoff" }
+]);
+const aiAgentWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "blog-index-ai-agent-review", label: "blog review" },
+  { tag: "blog-index-ai-agent-approval-gate", label: "blog approval-gate" },
+  { tag: "free-tools-ai-agent-review", label: "free-tools review" },
+  { tag: "free-tools-ai-agent-approval-gate", label: "free-tools approval-gate" },
+  { tag: "ai-procurement-hub-agent-review", label: "hub review" },
+  { tag: "ai-procurement-hub-agent-approval-gate", label: "hub approval-gate" },
+  { tag: "ai-path-guide-agent-review", label: "path-guide review" },
+  { tag: "ai-path-guide-agent-approval-gate", label: "path-guide approval-gate" },
+  { tag: "start-here-ai-agent-review", label: "start-here review" },
+  { tag: "start-here-ai-agent-approval-gate", label: "start-here approval-gate" },
+  { tag: "homepage-ai-route-agent-review", label: "homepage review" },
+  { tag: "homepage-ai-route-agent-approval-gate", label: "homepage approval-gate" },
+  { tag: "pricing-ai-agent-review", label: "pricing review" },
+  { tag: "pricing-ai-agent-approval-gate", label: "pricing approval-gate" },
+  { tag: "ai-security-questionnaire-starter-pack-agent-review", label: "starter-pack review" },
+  { tag: "ai-security-questionnaire-starter-pack-agent-approval-gate", label: "starter-pack approval-gate" }
+]);
+const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "blog-index-openai-answer-template", label: "blog template" },
+  { tag: "blog-index-openai-answer-example", label: "blog example" },
+  { tag: "blog-index-openai-answer-bank", label: "blog answer-bank" },
+  { tag: "blog-index-openai-path-guide", label: "blog path-guide" },
+  { tag: "free-tools-openai-answer-template", label: "free-tools template" },
+  { tag: "free-tools-openai-answer-example", label: "free-tools example" },
+  { tag: "free-tools-openai-answer-bank", label: "free-tools answer-bank" },
+  { tag: "free-tools-openai-path-guide", label: "free-tools path-guide" },
+  { tag: "ai-procurement-hub-openai-answer-template", label: "hub template" },
+  { tag: "ai-procurement-hub-openai-answer-example", label: "hub example" },
+  { tag: "ai-procurement-hub-openai-answer-bank", label: "hub answer-bank" },
+  { tag: "ai-procurement-hub-openai-path-guide", label: "hub path-guide" },
+  { tag: "homepage-ai-route-openai-template", label: "homepage template" },
+  { tag: "homepage-ai-route-openai-example", label: "homepage example" },
+  { tag: "homepage-ai-route-openai-answer-bank", label: "homepage answer-bank" },
+  { tag: "homepage-ai-route-openai-path-guide", label: "homepage path-guide" },
+  { tag: "pricing-openai-answer-template", label: "pricing template" },
+  { tag: "pricing-openai-answer-bank", label: "pricing answer-bank" },
+  { tag: "pricing-openai-path-guide", label: "pricing path-guide" },
+  { tag: "ai-security-questionnaire-starter-pack-openai-answer-template", label: "starter-pack template" },
+  { tag: "ai-security-questionnaire-starter-pack-openai-answer-example", label: "starter-pack example" },
+  { tag: "ai-security-questionnaire-starter-pack-openai-answer-bank", label: "starter-pack answer-bank" },
+  { tag: "ai-security-questionnaire-starter-pack-openai-path-guide", label: "starter-pack path-guide" }
+]);
+const benchmarkRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "benchmark-outreach-batch-01", label: "outreach batch" },
+  { tag: "benchmark-outreach-report", label: "outreach report" },
+  { tag: "community-benchmark-report", label: "community report" },
+  { tag: "community-benchmark-report-procurement", label: "community procurement" },
+  { tag: "homepage-benchmark-report", label: "homepage report" },
+  { tag: "free-tools-benchmark-report", label: "free-tools report" },
+  { tag: "blog-index-benchmark-report", label: "blog-index report" },
+  { tag: "benchmark-report-teardown", label: "report teardown" },
+  { tag: "benchmark-report-tracker", label: "report tracker" }
+]);
 const shouldQueueAdvisorCopyRefresh = feedbackSignals.advisorOwnership > feedbackSignals.founderOwnership && feedbackSignals.advisorOwnership > 0;
 const homepageQueueState = extractQueueState(homepageQueueText);
 const decisionHeadline = extractDecisionHeadline(decisionBriefText);
@@ -675,6 +790,7 @@ const output = [
   `- Human-help blocker: ${helpRequestDependencyNotes.length > 0 ? helpRequestDependencyNotes[0] : "no related blocker or active constraint is called out in the current help snapshot."}`,
   `- Production generator state: ${generatorProductionCheckedAt === "unknown" ? "missing; run \`npm run build:generator-production-status\`." : generatorProductionStatus === "ok" ? `checked ${generatorProductionCheckedAt}; live generator smoke passed.` : `checked ${generatorProductionCheckedAt}; status ${generatorProductionStatus}.`}`,
   `- Generator handoff state: ${generatorHandoffCheckedAt === "unknown" ? "missing; run \`npm run build:generator-handoff-status\`." : generatorHandoffStatus === "ok" ? `checked ${generatorHandoffCheckedAt}; live generator-to-teardown handoff passed.` : `checked ${generatorHandoffCheckedAt}; status ${generatorHandoffStatus}.`}`,
+  `- Benchmark outreach state: ${benchmarkOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:benchmark-outreach-status\`." : `last checked ${benchmarkOutreachCheckedAt}; ${formatMetric(benchmarkSentWaiting)} sent/waiting, ${formatMetric(benchmarkFollowedUpWaiting)} followed_up/waiting, ${formatMetric(benchmarkInboxSubmissions)} inbox submission(s), next action ${benchmarkNextAction.replace(/\.$/, "")}.`}`,
   `- Partner outreach state: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}; ${partnerReadyToSend == null ? "unknown" : partnerReadyToSend} ready, ${partnerSentWaiting == null ? "unknown" : partnerSentWaiting} sent/waiting, ${partnerReplied == null ? "unknown" : partnerReplied} replied.`}`,
   `- Partner follow-up readiness: ${partnerFollowUpReadiness === "unknown" ? "missing from the current partner status snapshot." : partnerFollowUpReadiness}`,
   describeFollowUpState("Founder follow-up pass", followUpDate, founderBatchRows),
@@ -689,6 +805,7 @@ const output = [
   `- Human-help snapshot: ${describeFreshness(helpRequestCheckedAt, currentDate)}`,
   `- Generator production snapshot: ${describeFreshness(generatorProductionCheckedAt, currentDate)}`,
   `- Generator handoff snapshot: ${describeFreshness(generatorHandoffCheckedAt, currentDate)}`,
+  `- Benchmark-outreach snapshot: ${describeFreshness(benchmarkOutreachCheckedAt, currentDate)}`,
   `- Partner-outreach snapshot: ${describeFreshness(partnerOutreachCheckedAt, currentDate)}`,
   "",
   "## Batch Snapshot",
@@ -697,6 +814,13 @@ const output = [
   renderBatchSummary(BATCH_FILES[1].label, advisorBatchRows),
   renderBatchSummary(BATCH_FILES[2].label, contingencyRows),
   renderBatchSummary(BATCH_FILES[3].label, contingencyTwoRows),
+  "",
+  "## Priority Route Watch",
+  "",
+  renderWatchedSourceGroup("AI-first entry-point inbox submissions", aiFirstEntryWatch),
+  renderWatchedSourceGroup("AI-agent-control inbox submissions", aiAgentWatch),
+  renderWatchedSourceGroup("OpenAI route inbox submissions", openAiWatch),
+  renderWatchedSourceGroup("Benchmark-led route inbox submissions", benchmarkRouteWatch),
   "",
   "## Reply Watch",
   "",

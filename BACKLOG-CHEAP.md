@@ -129,6 +129,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-29 04:39 UTC: expanded `VALIDATION-STATUS.md` with benchmark plus AI-first / AI-agent / OpenAI / benchmark route watch summaries, added matching benchmark build scripts in `package.json`, fixed the stale generator-production smoke assertion to match the live vendor-change generator title, and reran the full validation maintenance loop cleanly with the queue still at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 04:27 UTC: fixed the remaining homepage / legacy-tool nav mismatch by removing the stale top-nav `Self-audit` slot from `index.html` and aligning `generator.html` plus `self-audit.html` with the `Free tools` nav pattern, then reran link/source-tag checks and refreshed the full validation evidence stack with no new replies or inbox intake.
 - 2026-05-29 04:17 to 04:24 UTC: reran the full validation maintenance loop, refreshed the benchmark/help/inbox/generator/partner/validation artifacts plus the deduplicated no-reply checkpoints, and reconfirmed the live queue still has 0 real submissions / 0 replies / 0 interviews while the benchmark follow-up remains due on 2026-06-02 UTC.
 - 2026-05-29: finished the legacy nav consistency sweep by replacing the remaining top-nav `Self-audit` and `Generator` links on the changelog and older subprocessor content pages with the AI-first `Start here` path, then reverified local link coverage.

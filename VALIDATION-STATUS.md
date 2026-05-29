@@ -6,11 +6,12 @@ Date: 2026-05-29
 
 - Highest-priority incomplete work: exact buyer validation through real interviews.
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
-- Human-help request state: open as of 2026-05-29 04:28 UTC.
+- Human-help request state: open as of 2026-05-29 04:39 UTC.
 - Human-help blocker: This request requires a human-owned authenticated browser session outside this workspace.
-- Production generator state: checked 2026-05-29 04:28 UTC; live generator smoke passed.
-- Generator handoff state: checked 2026-05-29 04:28 UTC; live generator-to-teardown handoff passed.
-- Partner outreach state: last checked 2026-05-29 04:28 UTC; 0 ready, 5 sent/waiting, 0 replied.
+- Production generator state: checked 2026-05-29 04:39 UTC; live generator smoke passed.
+- Generator handoff state: checked 2026-05-29 04:39 UTC; live generator-to-teardown handoff passed.
+- Benchmark outreach state: last checked 2026-05-29 04:39 UTC; 5 sent/waiting, 0 followed_up/waiting, 0 inbox submission(s), next action monitor the batch for replies and send the benchmark follow-up on or after 2026-06-02 UTC if replies are still zero.
+- Partner outreach state: last checked 2026-05-29 04:39 UTC; 0 ready, 5 sent/waiting, 0 replied.
 - Partner follow-up readiness: no partner follow-ups are currently queued.
 - Founder follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
 - Advisor follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
@@ -19,12 +20,13 @@ Date: 2026-05-29
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-05-29 04:27 UTC (1 minute ago)
-- Contact inbox snapshot: 2026-05-29 04:28 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-05-29 04:28 UTC (less than 1 minute ago)
-- Generator production snapshot: 2026-05-29 04:28 UTC (less than 1 minute ago)
-- Generator handoff snapshot: 2026-05-29 04:28 UTC (less than 1 minute ago)
-- Partner-outreach snapshot: 2026-05-29 04:28 UTC (less than 1 minute ago)
+- Community feedback checkpoint: 2026-05-29 04:39 UTC (1 minute ago)
+- Contact inbox snapshot: 2026-05-29 04:39 UTC (1 minute ago)
+- Human-help snapshot: 2026-05-29 04:39 UTC (1 minute ago)
+- Generator production snapshot: 2026-05-29 04:39 UTC (1 minute ago)
+- Generator handoff snapshot: 2026-05-29 04:39 UTC (1 minute ago)
+- Benchmark-outreach snapshot: 2026-05-29 04:39 UTC (1 minute ago)
+- Partner-outreach snapshot: 2026-05-29 04:39 UTC (1 minute ago)
 
 ## Batch Snapshot
 
@@ -32,6 +34,13 @@ Date: 2026-05-29
 - Advisor batch 02: 0 sent, 5 followed_up, first sent on 2026-04-22
 - Contingency batch 03: 5 sent, first sent on 2026-04-28
 - Contingency batch 04: 5 sent, first sent on 2026-04-28
+
+## Priority Route Watch
+
+- AI-first entry-point inbox submissions: 0 (0 start-here teardown, 0 about teardown, 0 partner-preview hero, 0 partner-preview cta, 0 homepage hero, 0 homepage shortcut, 0 homepage one-answer, 0 homepage repeat-review, 0 homepage route one-answer, 0 homepage route repeat-review, 0 homepage broader-handoff, 0 pricing starter-pack, 0 pricing route one-answer, 0 pricing route repeat-review, 0 pricing broader-handoff)
+- AI-agent-control inbox submissions: 0 (0 blog review, 0 blog approval-gate, 0 free-tools review, 0 free-tools approval-gate, 0 hub review, 0 hub approval-gate, 0 path-guide review, 0 path-guide approval-gate, 0 start-here review, 0 start-here approval-gate, 0 homepage review, 0 homepage approval-gate, 0 pricing review, 0 pricing approval-gate, 0 starter-pack review, 0 starter-pack approval-gate)
+- OpenAI route inbox submissions: 0 (0 blog template, 0 blog example, 0 blog answer-bank, 0 blog path-guide, 0 free-tools template, 0 free-tools example, 0 free-tools answer-bank, 0 free-tools path-guide, 0 hub template, 0 hub example, 0 hub answer-bank, 0 hub path-guide, 0 homepage template, 0 homepage example, 0 homepage answer-bank, 0 homepage path-guide, 0 pricing template, 0 pricing answer-bank, 0 pricing path-guide, 0 starter-pack template, 0 starter-pack example, 0 starter-pack answer-bank, 0 starter-pack path-guide)
+- Benchmark-led route inbox submissions: 0 (0 outreach batch, 0 outreach report, 0 community report, 0 community procurement, 0 homepage report, 0 free-tools report, 0 blog-index report, 0 report teardown, 0 report tracker)
 
 ## Reply Watch
 
@@ -43,11 +52,11 @@ Date: 2026-05-29
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Self-audit score bands logged: 0 low (0-4), 0 medium (5-7), 0 high (8-10)
 - Ownership signals logged: 0 founder/operator, 0 consultant/attorney
-- Contact inbox check: last checked 2026-05-29 04:28 UTC
-- Human-help request check: last checked 2026-05-29 04:28 UTC
-- Generator production check: last checked 2026-05-29 04:28 UTC
-- Generator handoff check: last checked 2026-05-29 04:28 UTC
-- Partner-outreach check: last checked 2026-05-29 04:28 UTC
+- Contact inbox check: last checked 2026-05-29 04:39 UTC
+- Human-help request check: last checked 2026-05-29 04:39 UTC
+- Generator production check: last checked 2026-05-29 04:39 UTC
+- Generator handoff check: last checked 2026-05-29 04:39 UTC
+- Partner-outreach check: last checked 2026-05-29 04:39 UTC
 - Real inbox submissions: 0
 - Inbox ownership signals: 0 (0 founder, 0 operator, 0 privacy consultant, 0 fractional dpo, 0 attorney, 0 other, 0 unknown)
 - Real free async teardown submissions: 0
