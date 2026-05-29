@@ -51,7 +51,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 - 2026-05-29 20:04 to 20:18 UTC: repeated validation maintenance and status refreshes kept the reply-watch and generated status stack clean, with both benchmark and AI-agent-review batches still at 5 sent / 0 replies.
 - 2026-05-29 12:36 to 16:29 UTC: shipped the AI-agent-review checklist, outreach, and follow-up-pass artifacts, widened the validation reply watch and no-reply logging, and kept both June 2 follow-up windows pending on zero replies.
-- 2026-05-29 08:04 to 08:30 UTC: expanded the free-tools route finder and reran validation maintenance in repeated passes while the benchmark, inbox, partner, generator, self-audit, site-link, source-tag, and no-reply checks stayed green.
-- 2026-05-29 04:17 to 04:39 UTC: fixed the stale nav mismatch, expanded validation-status coverage, corrected the generator smoke assertion, and refreshed the benchmark/help/inbox/generator/partner/validation evidence stack.
+- 2026-05-29 04:17 to 08:30 UTC: fixed the stale nav mismatch, expanded validation-status coverage, corrected the generator smoke assertion, refreshed the benchmark/help/inbox/generator/partner/validation evidence stack, and then expanded the free-tools route finder while repeated maintenance passes stayed green.
 - 2026-05-29: finished the remaining legacy AI-first cleanup across the writable entry pages, kept watcher coverage aligned with the new route tags, and recorded the receiver-side consolidation in `DECISIONS.md`.
 - 2026-05-27 to 2026-05-28: validation maintenance, benchmark outreach, AI-agent review/approval-gate pages, and the OpenAI route guide shipped cleanly while follow-up remained gated on reply evidence.
