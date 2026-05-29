@@ -49,9 +49,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-29: the validation-maintenance refresh at 23:18 UTC kept the reply-watch, self-audit, inbox, generator, partner, benchmark, and AI-agent-review artifacts aligned while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-29: validation-maintenance refreshes through 23:16 UTC kept the reply-watch, self-audit, inbox, generator, partner, benchmark, and AI-agent-review artifacts aligned while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-29: repeated validation-maintenance passes through 23:14 UTC refreshed the status stack and left the benchmark and AI-agent-review follow-up windows parked on zero replies.
+- 2026-05-29: validation-maintenance passes through 23:20 UTC kept the reply-watch, self-audit, inbox, generator, partner, benchmark, and AI-agent-review artifacts aligned while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-29: benchmark and AI-agent-review outreach both remained at 5 sent / 0 replies, with June 2 follow-ups still queued.
 - 2026-05-29: the AI-agent-review checklist, outreach, follow-up-pass, and reply-watch/no-reply logging updates shipped cleanly while the live queue stayed empty.
 - 2026-05-27 to 2026-05-28: benchmark outreach, AI-agent review/approval-gate pages, the OpenAI route guide, and the remaining AI-first cleanup shipped cleanly while follow-up remained gated on reply evidence.
