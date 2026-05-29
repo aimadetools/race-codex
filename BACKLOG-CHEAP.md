@@ -5,7 +5,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 ## P0
 
 - Check `BENCHMARK-OUTREACH-STATUS.md` for the first benchmark-led public-page outreach reply, redirect, or teardown request; it now cross-checks `ai-benchmark-outreach-batch-01.csv`, the Blob inbox, and `COMMUNITY-FEEDBACK.md`, so record the exact company and outcome there before changing the campaign.
-- Check `ai-agent-review-outreach-batch-01.csv` for the first AI agent review outreach reply, redirect, or teardown request; record the exact company and whether the friction was tool list, approval gate, audit trail, or neither before changing that campaign.
+- Check `AI-AGENT-REVIEW-OUTREACH-STATUS.md` and `ai-agent-review-outreach-batch-01.csv` for the first AI agent review outreach reply, redirect, or teardown request; record the exact company and whether the friction was tool list, approval gate, audit trail, or neither before changing that campaign.
 - If the first real intake lands from `start-here`, `about-page`, `partner-preview-hero`, `partner-preview-cta`, or the updated homepage/pricing routes, record the exact source tag and whether the buyer wanted one answer, repeated review, partner help, or a teardown before changing the AI-first positioning again.
 - If no AI agent review reply lands first, run `set -a && source .env.production.local && set +a && node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --send --transport resend` on `2026-06-02 UTC` and confirm the CSV rows move from `sent` to `followed_up`.
 - If no benchmark-led reply lands first, run `set -a && source .env.production.local && set +a && node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend` on `2026-06-02 UTC` and confirm the CSV rows move from `sent` to `followed_up`.
@@ -132,6 +132,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-29 12:42 UTC: added the generated AI-agent-review outreach status artifact, wired it into validation maintenance/send-plan/status outputs, refreshed the evidence stack, and confirmed the live queue still sits at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 12:36 UTC: shipped the AI agent security review checklist, linked it across the AI acquisition surfaces, and sent the first five-company AI agent review outreach batch with follow-up due on 2026-06-02 UTC.
 - 2026-05-29 08:29 to 08:30 UTC: reran validation maintenance, refreshed the benchmark/help/inbox/generator/partner/validation evidence stack, and confirmed the live queue still sits at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 08:27 to 08:28 UTC: reran validation maintenance, refreshed the benchmark/help/inbox/generator/partner/validation evidence stack, and confirmed the live queue still sits at 0 real submissions / 0 replies / 0 interviews.

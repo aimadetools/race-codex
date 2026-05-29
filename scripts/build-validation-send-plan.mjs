@@ -5,6 +5,7 @@ const ROOT = process.cwd();
 const OUTPUT = join(ROOT, "VALIDATION-OUTREACH-SEND-PLAN.md");
 const TODAY = new Date().toISOString().slice(0, 10);
 const BENCHMARK_FOLLOW_UP_PASS = "BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md";
+const AGENT_REVIEW_STATUS = "AI-AGENT-REVIEW-OUTREACH-STATUS.md";
 
 function parseCsv(text) {
   const rows = [];
@@ -201,6 +202,7 @@ function planSection(title, rows) {
 const batch01 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-01.csv"), "utf8"));
 const batch02 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-02.csv"), "utf8"));
 const benchmarkBatch = parseCsv(await readFile(join(ROOT, "ai-benchmark-outreach-batch-01.csv"), "utf8"));
+const agentReviewBatch = parseCsv(await readFile(join(ROOT, "ai-agent-review-outreach-batch-01.csv"), "utf8"));
 let batch03 = [];
 let batch04 = [];
 
@@ -262,17 +264,32 @@ const normalizedBenchmark = benchmarkBatch.map((row) => ({
   followUpDate: extractSentDate(row.notes) ? addBusinessDays(extractSentDate(row.notes), 3) : "n/a"
 }));
 
-const directEmailCount = [...normalized01, ...normalized02, ...normalized03, ...normalized04, ...normalizedBenchmark].filter(
+const normalizedAgentReview = agentReviewBatch.map((row) => ({
+  priority: row.priority,
+  target: row.company,
+  segment: row.segment,
+  route: row.public_contact_route,
+  sendMethod: classifyRoute(row.public_contact_route),
+  status: row.status,
+  followUpDate: extractSentDate(row.notes) ? addBusinessDays(extractSentDate(row.notes), 2) : "n/a"
+}));
+
+const directEmailCount = [...normalized01, ...normalized02, ...normalized03, ...normalized04, ...normalizedBenchmark, ...normalizedAgentReview].filter(
   (row) => row.sendMethod === "direct-email"
 ).length;
 
-const allRows = [batch01, batch02, batch03, batch04, benchmarkBatch].flat();
+const allRows = [batch01, batch02, batch03, batch04, benchmarkBatch, agentReviewBatch].flat();
 const totalWaitingForReplies = allRows.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 const totalReplyRows = allRows.reduce((total, row) => {
   return total + (["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim()) ? 1 : 0);
 }, 0);
 const benchmarkWaiting = benchmarkBatch.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
+const agentReviewWaiting = agentReviewBatch.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 const benchmarkFollowUpDate = normalizedBenchmark
+  .filter((row) => row.status === "sent" && row.followUpDate !== "n/a")
+  .map((row) => row.followUpDate)
+  .sort()[0] || "";
+const agentReviewFollowUpDate = normalizedAgentReview
   .filter((row) => row.status === "sent" && row.followUpDate !== "n/a")
   .map((row) => row.followUpDate)
   .sort()[0] || "";
@@ -286,6 +303,9 @@ if (totalReplyRows > 0) {
 
 if (benchmarkWaiting > 0 && benchmarkFollowUpDate) {
   currentPriority += ` Benchmark batch 01 follow-up is due on ${benchmarkFollowUpDate} UTC if replies stay at zero.`;
+}
+if (agentReviewWaiting > 0 && agentReviewFollowUpDate) {
+  currentPriority += ` AI agent review batch 01 follow-up is due on ${agentReviewFollowUpDate} UTC if replies stay at zero.`;
 }
 
 const batch03Section = normalized03.length
@@ -324,6 +344,22 @@ const benchmarkSection = normalizedBenchmark.length
     ].join("\n")
   : "";
 
+const agentReviewSection = normalizedAgentReview.length
+  ? [
+      "## AI agent review batch 01",
+      "",
+      describeBatchStatus(agentReviewBatch),
+      "",
+      "| Priority | Target | Segment | Route | Send method | Status | Follow-up date |",
+      "|---:|---|---|---|---|---|---|",
+      ...normalizedAgentReview.map(
+        (row) =>
+          `| ${row.priority} | ${row.target} | ${row.segment} | ${row.route} | ${row.sendMethod} | ${row.status} | ${row.followUpDate} |`
+      ),
+      ""
+    ].join("\n")
+  : "";
+
 const output = [
   "# NoticeKit Validation Outreach Send Plan",
   "",
@@ -353,13 +389,15 @@ const output = [
   batch03Section,
   batch04Section,
   benchmarkSection,
+  agentReviewSection,
   "## Notes",
   "",
   "- `direct-email` means the public route is a real email address or `mailto:` link.",
   "- `manual-form` means the public route is a contact page, support widget, or contact-sales flow that needs human submission.",
   "- `manual` means the route needs a different delivery path before it can be sent.",
-  `- Total reply, bounce, or interview rows already recorded across all batches: ${countReplyRows(batch01) + countReplyRows(batch02) + countReplyRows(batch03) + countReplyRows(batch04) + countReplyRows(benchmarkBatch)}.`,
+  `- Total reply, bounce, or interview rows already recorded across all batches: ${countReplyRows(batch01) + countReplyRows(batch02) + countReplyRows(batch03) + countReplyRows(batch04) + countReplyRows(benchmarkBatch) + countReplyRows(agentReviewBatch)}.`,
   `- Use \`${BENCHMARK_FOLLOW_UP_PASS}\` for the June 2 benchmark follow-up send guardrails and row-specific teardown links.`,
+  `- Use \`${AGENT_REVIEW_STATUS}\` as the live AI-agent-review outreach monitor until the first real reply or intake lands.`,
   "- Convert any real reply into repo evidence before changing positioning or expanding the list again.",
   ""
 ].join("\n");

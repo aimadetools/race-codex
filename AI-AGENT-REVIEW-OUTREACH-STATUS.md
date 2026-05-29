@@ -1,0 +1,39 @@
+# AI Agent Review Outreach Status
+
+Checked at: 2026-05-29 12:43 UTC
+
+## Current State
+
+- Sent and waiting on reply: 5
+- Followed up and waiting on reply: 0
+- Positive replies in outreach CSV: 0
+- Negative replies in outreach CSV: 0
+- Bounces in outreach CSV: 0
+- Interviews completed: 0
+- Terminal rows: 0
+- Agent-review-tagged inbox submissions: 0
+- Agent-review-tagged teardown requests: 0
+- Agent-review mentions logged in COMMUNITY-FEEDBACK.md: 0
+- First AI agent review outreach send: 2026-05-29 12:36 UTC
+- Next AI agent review action: monitor the batch for replies and send the AI agent review follow-up on or after 2026-06-02 UTC if replies are still zero.
+
+## Evidence Watch
+
+- Blob inbox check found 0 agent-review-tagged submission(s) so far.
+- COMMUNITY-FEEDBACK.md does not contain an agent-review-specific reply or outcome yet.
+
+## Inbox Matches
+
+- No real agent-review-tagged submissions are stored in the inbox yet.
+
+## Community Feedback Matches
+
+- No agent-review-specific feedback is logged yet.
+
+## Batch Snapshot
+
+- Choicely: sent; follow-up due 2026-06-02; contact privacy@choicely.com.
+- Specteron: sent; follow-up due 2026-06-02; contact security@specteron.com.
+- Agent.ai: sent; follow-up due 2026-06-02; contact support@agent.ai.
+- Letswhisper.ai: sent; follow-up due 2026-06-02; contact hello@letswhisper.ai.
+- LizzyAI: sent; follow-up due 2026-06-02; contact privacy@lizzyai.com.

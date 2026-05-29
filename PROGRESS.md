@@ -49,6 +49,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-29
 
+- Added `scripts/build-ai-agent-review-outreach-status.mjs` plus generated `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, then wired that new status artifact into `scripts/sync-validation-artifacts.mjs`, `scripts/build-validation-send-plan.mjs`, `scripts/build-validation-status.mjs`, and `package.json` so the new 12:36 UTC AI-agent-review outreach batch is tracked with the same monitor-first rigor as the benchmark batch.
+- Ran `npm run run:validation-maintenance` at `2026-05-29 12:42 UTC`; the validation checks stayed green, the refreshed evidence stack now includes the AI-agent-review outreach status snapshot, `COMMUNITY-FEEDBACK.md` logged another deduplicated no-reply checkpoint, and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - Stopped the maintenance-only loop and shipped a new founder-style distribution test instead: launched `blog-ai-agent-security-review-checklist.html`, a sharper proof asset for buyers asking what an AI agent can access, what it can change, what requires approval, and what gets logged.
 - Wired the new AI agent checklist into `index.html`, `start-here.html`, `free-tools.html`, `pricing.html`, `ai-security-questionnaire-starter-pack.html`, `ai-procurement-hub.html`, `blog.html`, `sitemap.xml`, and `scripts/watched-source-tags.mjs`, then re-ran `npm run check:site-links` and `npm run check:source-tag-coverage`; both passed with 81 local HTML targets intact and complete watcher coverage across 481 emitted source tags.
 - Built and sent a new value-first outbound batch instead of waiting on passive evidence alone: added `AI-AGENT-REVIEW-OUTREACH-BATCH-01.md`, `ai-agent-review-outreach-batch-01.csv`, and `scripts/send-ai-agent-review-outreach.mjs`, then sent five live emails at `2026-05-29 12:36 UTC` via Resend to Choicely, Specteron, Agent.ai, Letswhisper.ai, and LizzyAI; all five rows are now `sent` with message IDs logged and follow-up due on `2026-06-02 UTC`.
@@ -95,6 +97,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Next Step
 
 - Check `ai-agent-review-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real reply, redirect, or teardown request from the new AI agent review outreach batch before broadening that wedge further.
+- Use `AI-AGENT-REVIEW-OUTREACH-STATUS.md` as the primary live monitor for the new batch, with the raw CSV and inbox artifacts as the row-level source of truth behind it.
 - If no AI agent review reply lands first, send the follow-up on `2026-06-02 UTC` and preserve whether the first response points to tool list, approval path, audit trail, or neither.
 - Check whether the clarified AI-first nav and support-page framing changes produce any first real click, teardown request, or reply from `start-here`, `about`, `partner-preview`, or the updated pricing/homepage paths before expanding content again.
 - Watch `BENCHMARK-OUTREACH-STATUS.md`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first benchmark-led reply or teardown request, then decide whether value-first public-page outreach is outperforming the older generic interview ask.
