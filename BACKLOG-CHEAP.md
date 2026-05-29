@@ -132,6 +132,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-29: the 20:30 validation-maintenance pass refreshed the reply-watch, status stack, and June 2 follow-up windows again while the live queue stayed at zero replies.
 - 2026-05-29: repeated validation maintenance and status refreshes kept the reply-watch, self-audit QA, artifact-sync, and June 2 follow-up windows parked on zero replies.
 - 2026-05-29: elevated the AI agent review path onto the homepage, pricing page, and free-tools hero CTAs while the site-link and source-tag coverage checks stayed clean.
 - 2026-05-29: fixed the stale nav mismatch, corrected the generator smoke assertion, and refreshed the benchmark/help/inbox/generator/partner/validation evidence stack.
