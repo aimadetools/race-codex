@@ -10,6 +10,7 @@
     "build:benchmark-outreach-status": "node scripts/build-benchmark-outreach-status.mjs",
     "build:ai-agent-review-outreach-status": "node scripts/build-ai-agent-review-outreach-status.mjs",
     "build:benchmark-follow-up-pass": "node scripts/build-benchmark-follow-up-pass.mjs",
+    "build:ai-agent-review-follow-up-pass": "node scripts/build-ai-agent-review-follow-up-pass.mjs",
     "build:validation-decision-brief": "node scripts/build-validation-decision-brief.mjs",
     "build:validation-positioning-brief": "node scripts/build-validation-positioning-brief.mjs",
     "build:paid-kits": "node scripts/build-paid-kit-fulfillment.mjs",

@@ -90,5 +90,6 @@ Status: active outbound on 2026-05-29; 5 sent, 0 followed_up, 0 terminal row(s).
 - `manual` means the route needs a different delivery path before it can be sent.
 - Total reply, bounce, or interview rows already recorded across all batches: 0.
 - Use `BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md` for the June 2 benchmark follow-up send guardrails and row-specific teardown links.
-- Use `AI-AGENT-REVIEW-OUTREACH-STATUS.md` as the live AI-agent-review outreach monitor until the first real reply or intake lands.
+- Use `AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md` for the June 2 AI-agent-review follow-up send guardrails and row-specific teardown links.
+- Use `AI-AGENT-REVIEW-OUTREACH-STATUS.md` as the live AI-agent-review outreach monitor between maintenance passes and until the first real reply or intake lands.
 - Convert any real reply into repo evidence before changing positioning or expanding the list again.

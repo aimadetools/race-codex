@@ -14,6 +14,7 @@ const TASKS = [
   { label: "Benchmark outreach status", script: "build-benchmark-outreach-status.mjs" },
   { label: "AI agent review outreach status", script: "build-ai-agent-review-outreach-status.mjs" },
   { label: "Benchmark follow-up pass", script: "build-benchmark-follow-up-pass.mjs" },
+  { label: "AI agent review follow-up pass", script: "build-ai-agent-review-follow-up-pass.mjs" },
   { label: "Founder follow-up pass", script: "build-founder-follow-up-pass.mjs" },
   { label: "Advisor follow-up pass", script: "build-advisor-follow-up-pass.mjs" },
   { label: "Validation send plan", script: "build-validation-send-plan.mjs" },

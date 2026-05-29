@@ -5,6 +5,7 @@ const ROOT = process.cwd();
 const OUTPUT = join(ROOT, "VALIDATION-OUTREACH-SEND-PLAN.md");
 const TODAY = new Date().toISOString().slice(0, 10);
 const BENCHMARK_FOLLOW_UP_PASS = "BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md";
+const AGENT_REVIEW_FOLLOW_UP_PASS = "AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md";
 const AGENT_REVIEW_STATUS = "AI-AGENT-REVIEW-OUTREACH-STATUS.md";
 
 function parseCsv(text) {
@@ -397,7 +398,8 @@ const output = [
   "- `manual` means the route needs a different delivery path before it can be sent.",
   `- Total reply, bounce, or interview rows already recorded across all batches: ${countReplyRows(batch01) + countReplyRows(batch02) + countReplyRows(batch03) + countReplyRows(batch04) + countReplyRows(benchmarkBatch) + countReplyRows(agentReviewBatch)}.`,
   `- Use \`${BENCHMARK_FOLLOW_UP_PASS}\` for the June 2 benchmark follow-up send guardrails and row-specific teardown links.`,
-  `- Use \`${AGENT_REVIEW_STATUS}\` as the live AI-agent-review outreach monitor until the first real reply or intake lands.`,
+  `- Use \`${AGENT_REVIEW_FOLLOW_UP_PASS}\` for the June 2 AI-agent-review follow-up send guardrails and row-specific teardown links.`,
+  `- Use \`${AGENT_REVIEW_STATUS}\` as the live AI-agent-review outreach monitor between maintenance passes and until the first real reply or intake lands.`,
   "- Convert any real reply into repo evidence before changing positioning or expanding the list again.",
   ""
 ].join("\n");
