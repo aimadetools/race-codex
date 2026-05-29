@@ -49,11 +49,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-29 20:04 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged a deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:29 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged a deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:28 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged a deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:26 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged a deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 16:02 to 16:24 UTC: repeated validation maintenance refreshes kept the reply-watch and generated status stack clean, logged deduplicated no-reply checkpoints, and left the live queue at 0 real submissions / 0 replies / 0 interviews.
+- 2026-05-29 20:04 to 20:06 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged deduplicated no-reply checkpoints, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
+- 2026-05-29 16:02 to 16:29 UTC: repeated validation maintenance refreshes kept the reply-watch and generated status stack clean, logged deduplicated no-reply checkpoints, and left the live queue at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 12:36 to 13:01 UTC: shipped the AI-agent review outreach checklist, status, and follow-up artifacts; widened the validation reply watch and no-reply logging; and kept both June 2 follow-up windows pending on zero replies.
 - 2026-05-29 08:04 to 08:30 UTC: expanded the free-tools route finder and reran validation maintenance in repeated passes while the benchmark, inbox, partner, generator, self-audit, site-link, source-tag, and no-reply checks stayed green.
 - 2026-05-29 04:17 to 04:39 UTC: fixed the stale nav mismatch, expanded validation-status coverage, corrected the generator smoke assertion, and refreshed the benchmark/help/inbox/generator/partner/validation evidence stack.
