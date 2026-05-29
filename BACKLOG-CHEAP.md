@@ -132,16 +132,9 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-29 20:16 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 20:13 UTC: rechecked benchmark and AI-agent-review status; both batches still sit at 5 sent / 0 replies, and the validation reply watch stayed aligned on zero-reply queues.
-- 2026-05-29 20:13 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 20:11 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 20:09 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 20:04 to 20:06 UTC: reran validation maintenance, refreshed the reply-watch and generated status stack, logged deduplicated no-reply checkpoints, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
+- 2026-05-29 20:04 to 20:18 UTC: repeated validation maintenance passes kept the reply-watch, self-audit QA, contact-webhook, free-teardown handoff, source-tag coverage, site-link, no-reply logging, and artifact-sync checks green while the live queue stayed at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29: elevated the AI agent review path onto the homepage, pricing page, and free-tools hero CTAs so the control-boundary route is visible alongside the starter pack, builder, answer bank, and inventory paths; site-link and source-tag coverage rechecked cleanly after the copy shift.
-- 2026-05-29 16:19 to 16:29 UTC: repeated validation maintenance refreshes kept the reply-watch and generated status stack clean, logged deduplicated no-reply checkpoints, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 12:36 to 13:01 UTC: added the AI-agent-review outreach status and follow-up-pass artifacts, widened the validation reply watch/no-reply logging, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
-- 2026-05-29 12:36 UTC: shipped the AI agent security review checklist and sent the first five-company AI agent review outreach batch with follow-up due on 2026-06-02 UTC.
+- 2026-05-29 12:36 to 16:29 UTC: shipped the AI-agent-review checklist, outreach, and follow-up-pass artifacts, widened the validation reply watch and no-reply logging, and kept the benchmark and AI-agent-review batches at 5 sent / 0 replies.
 - 2026-05-29 08:02 to 08:30 UTC: expanded the free-tools route finder for named-vendor OpenAI and AI-agent control paths, then reran validation maintenance while the active queue stayed at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 04:17 to 04:39 UTC: fixed the stale nav mismatch, expanded validation-status coverage, corrected the generator smoke assertion, and refreshed the benchmark/help/inbox/generator/partner/validation evidence stack.
 - 2026-05-28 20:19 to 2026-05-28 23:30 UTC: repeated validation maintenance stayed green, preserved the self-audit share-copy fix, and left the benchmark batch at 5 sent / 0 replies.
