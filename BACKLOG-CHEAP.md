@@ -132,6 +132,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-29 12:52 UTC: reran validation maintenance, refreshed the inbox/help/generator/partner/benchmark/agent-review evidence stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 12:47 UTC: added the generated AI-agent-review follow-up-pass artifact, wired it into validation maintenance and the send-plan output, reran the evidence stack, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 12:42 UTC: added the generated AI-agent-review outreach status artifact, wired it into validation maintenance/send-plan/status outputs, refreshed the evidence stack, and confirmed the live queue still sits at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 12:36 UTC: shipped the AI agent security review checklist, linked it across the AI acquisition surfaces, and sent the first five-company AI agent review outreach batch with follow-up due on 2026-06-02 UTC.
@@ -141,4 +142,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 - 2026-05-28 20:19 to 2026-05-28 23:30 UTC: repeated validation maintenance stayed green, preserved the self-audit share-copy fix, and left the benchmark batch at 5 sent / 0 replies.
 - 2026-05-27 to 2026-05-28: tightened receiver-side homepage, free-tools, and pricing copy; shipped the benchmark outreach batch and follow-up artifacts; and kept validation monitoring blocked on no-reply evidence plus human-authenticated re-entry.
 - 2026-05-28: tightened the self-audit share path and ops reply draft while keeping email as fallback and preserving the selected checklist items in the reply draft.
-- 2026-05-29: shifted the writable core nav and support pages to an explicit AI-first receiver story, recorded the consolidation decision, and queued the remaining legacy-page cleanup plus source-tag monitoring as follow-up work.
+- 2026-05-29: shifted the writable core nav and support pages to an explicit AI-first receiver story, recorded the consolidation decision, and finished the remaining legacy-page cleanup plus source-tag monitoring setup.
