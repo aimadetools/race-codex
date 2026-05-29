@@ -10,10 +10,14 @@ const BATCH_FILES = [
   join(ROOT, "buyer-validation-outreach-batch-01.csv"),
   join(ROOT, "buyer-validation-outreach-batch-02.csv"),
   join(ROOT, "buyer-validation-outreach-batch-03.csv"),
-  join(ROOT, "buyer-validation-outreach-batch-04.csv")
+  join(ROOT, "buyer-validation-outreach-batch-04.csv"),
+  join(ROOT, "ai-benchmark-outreach-batch-01.csv"),
+  join(ROOT, "ai-agent-review-outreach-batch-01.csv")
 ];
 const FOUNDER_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no founder\/operator replies have been posted here yet(?:[^\n.]*)\.[^\n]*/i;
 const ADVISOR_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no advisor replies have been posted here yet(?:[^\n.]*)\.[^\n]*/i;
+const BENCHMARK_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no benchmark outreach replies, redirects, or teardown requests have been recorded yet(?:[^\n.]*)\.[^\n]*/i;
+const AGENT_REVIEW_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no ai agent review replies, redirects, or teardown requests have been recorded yet(?:[^\n.]*)\.[^\n]*/i;
 const RECHECK_TIMESTAMP_PATTERN = /^Rechecked on (.+? UTC):/i;
 
 function parseArgs(argv) {
@@ -164,7 +168,12 @@ function findLatestSectionCheckpoint(lines) {
   let latestDate = null;
 
   for (const line of lines) {
-    if (!FOUNDER_NOTE_PATTERN.test(line) && !ADVISOR_NOTE_PATTERN.test(line)) {
+    if (
+      !FOUNDER_NOTE_PATTERN.test(line) &&
+      !ADVISOR_NOTE_PATTERN.test(line) &&
+      !BENCHMARK_NOTE_PATTERN.test(line) &&
+      !AGENT_REVIEW_NOTE_PATTERN.test(line)
+    ) {
       continue;
     }
 
@@ -186,6 +195,14 @@ function findLatestSectionCheckpoint(lines) {
 function buildNote(timestamp, segment) {
   if (segment === "founder") {
     return `Rechecked on ${timestamp}: no founder/operator replies have been posted here yet across the active outreach batches. Keep \`buyer-validation-outreach-batch-01.csv\`, \`buyer-validation-outreach-batch-03.csv\`, and \`buyer-validation-outreach-batch-04.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
+  }
+
+  if (segment === "benchmark") {
+    return `Rechecked on ${timestamp}: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep \`ai-benchmark-outreach-batch-01.csv\` unchanged and leave the June 2 benchmark follow-up as the next action unless a specific reply or inbox match appears first.`;
+  }
+
+  if (segment === "agent-review") {
+    return `Rechecked on ${timestamp}: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep \`ai-agent-review-outreach-batch-01.csv\` unchanged and leave the June 2 AI agent review follow-up as the next action unless a specific reply or inbox match appears first.`;
   }
 
   return `Rechecked on ${timestamp}: no advisor replies have been posted here yet. Keep \`buyer-validation-outreach-batch-02.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
@@ -225,7 +242,12 @@ function replaceSectionBody(lines, sectionDate, nextBodyLines) {
 
 function cleanSectionLines(lines) {
   return lines.filter((line, index, source) => {
-    if (FOUNDER_NOTE_PATTERN.test(line) || ADVISOR_NOTE_PATTERN.test(line)) {
+    if (
+      FOUNDER_NOTE_PATTERN.test(line) ||
+      ADVISOR_NOTE_PATTERN.test(line) ||
+      BENCHMARK_NOTE_PATTERN.test(line) ||
+      AGENT_REVIEW_NOTE_PATTERN.test(line)
+    ) {
       return false;
     }
 
@@ -303,6 +325,10 @@ async function main() {
     buildNote(timestamp, "founder"),
     "",
     buildNote(timestamp, "advisor"),
+    "",
+    buildNote(timestamp, "benchmark"),
+    "",
+    buildNote(timestamp, "agent-review"),
     "",
     ...preservedSectionLines
   ];

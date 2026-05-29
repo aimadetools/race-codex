@@ -7,14 +7,18 @@ const ROOT = process.cwd();
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
 const OUTPUT_FILE = join(ROOT, "VALIDATION-REPLY-WATCH.md");
 const FOLLOW_UP_FILES = [
-  { label: "Founder follow-up pass", path: join(ROOT, "BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md") },
-  { label: "Advisor follow-up pass", path: join(ROOT, "BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md") }
+  { label: "Founder follow-up pass", path: join(ROOT, "BUYER-VALIDATION-FOUNDER-FOLLOW-UP-PASS.md"), type: "founder" },
+  { label: "Advisor follow-up pass", path: join(ROOT, "BUYER-VALIDATION-ADVISOR-FOLLOW-UP-PASS.md"), type: "advisor" },
+  { label: "Benchmark outreach follow-up pass", path: join(ROOT, "BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md"), type: "benchmark" },
+  { label: "AI agent review follow-up pass", path: join(ROOT, "AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md"), type: "agent-review" }
 ];
 const BATCH_FILES = [
-  { label: "Founder/operator batch 01", path: join(ROOT, "buyer-validation-outreach-batch-01.csv") },
-  { label: "Advisor batch 02", path: join(ROOT, "buyer-validation-outreach-batch-02.csv") },
-  { label: "Contingency batch 03", path: join(ROOT, "buyer-validation-outreach-batch-03.csv") },
-  { label: "Contingency batch 04", path: join(ROOT, "buyer-validation-outreach-batch-04.csv") }
+  { label: "Founder/operator batch 01", path: join(ROOT, "buyer-validation-outreach-batch-01.csv"), type: "founder" },
+  { label: "Advisor batch 02", path: join(ROOT, "buyer-validation-outreach-batch-02.csv"), type: "advisor" },
+  { label: "Contingency batch 03", path: join(ROOT, "buyer-validation-outreach-batch-03.csv"), type: "contingency-03" },
+  { label: "Contingency batch 04", path: join(ROOT, "buyer-validation-outreach-batch-04.csv"), type: "contingency-04" },
+  { label: "Benchmark outreach batch 01", path: join(ROOT, "ai-benchmark-outreach-batch-01.csv"), type: "benchmark" },
+  { label: "AI agent review batch 01", path: join(ROOT, "ai-agent-review-outreach-batch-01.csv"), type: "agent-review" }
 ];
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
 const GATE_DATE = "2026-04-27";
@@ -120,6 +124,14 @@ function describeFollowUpStatus(label, due, pending, followedUp) {
   return `- ${label}: ${due === "unknown" ? "status unknown" : `due ${due}; no active follow-up rows remain`}`;
 }
 
+function hasFollowUpType(followUps, type) {
+  return followUps.some((item) => item.type === type);
+}
+
+function findFollowUpDue(followUps, type) {
+  return followUps.find((item) => item.type === type)?.due || "the due date";
+}
+
 function extractSignals(text) {
   const channelMatches = [...text.matchAll(/Channel:\s*([^\n|]+)/g)];
   const ownershipMatches = [...text.matchAll(/Ownership:\s*([^\n|]+)/g)];
@@ -151,6 +163,8 @@ function buildActionQueue({
   founderReplies,
   founderPendingFollowUps,
   advisorPendingFollowUps,
+  benchmarkPendingFollowUps,
+  agentReviewPendingFollowUps,
   contingencyReady,
   contingencyTwoReady,
   signals
@@ -168,8 +182,10 @@ function buildActionQueue({
   }
 
   if (dueFollowUps.length > 0) {
-    const founderDue = dueFollowUps.some((item) => item.label === "Founder follow-up pass") && founderPendingFollowUps > 0;
-    const advisorDue = dueFollowUps.some((item) => item.label === "Advisor follow-up pass") && advisorPendingFollowUps > 0;
+    const founderDue = hasFollowUpType(dueFollowUps, "founder") && founderPendingFollowUps > 0;
+    const advisorDue = hasFollowUpType(dueFollowUps, "advisor") && advisorPendingFollowUps > 0;
+    const benchmarkDue = hasFollowUpType(dueFollowUps, "benchmark") && benchmarkPendingFollowUps > 0;
+    const agentReviewDue = hasFollowUpType(dueFollowUps, "agent-review") && agentReviewPendingFollowUps > 0;
 
     if (founderDue || advisorDue) {
       actions.push("Run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` is passing before any non-responder follow-up send.");
@@ -183,6 +199,16 @@ function buildActionQueue({
     if (advisorDue) {
       actions.push("Dry-run the advisor follow-up queue with `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend`.");
       actions.push("Send the advisor follow-up queue with `node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend`.");
+    }
+
+    if (benchmarkDue) {
+      actions.push("Dry-run the benchmark follow-up queue with `node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --transport resend`.");
+      actions.push("Send the benchmark follow-up queue with `node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend`.");
+    }
+
+    if (agentReviewDue) {
+      actions.push("Dry-run the AI agent review follow-up queue with `node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --transport resend`.");
+      actions.push("Send the AI agent review follow-up queue with `node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --send --transport resend`.");
     }
   }
 
@@ -215,6 +241,8 @@ function buildUpcomingQueue({
   founderReplies,
   founderPendingFollowUps,
   advisorPendingFollowUps,
+  benchmarkPendingFollowUps,
+  agentReviewPendingFollowUps,
   contingencyReady,
   contingencyTwoReady,
   signals
@@ -232,19 +260,33 @@ function buildUpcomingQueue({
   if (futureFollowUps.length > 0) {
     upcoming.push("Before the next due follow-up window, keep `SELF-AUDIT-FOLLOW-UP-QA.md` current with `npm run check:self-audit-follow-up`.");
 
-    const founderDue = futureFollowUps.some((item) => item.label === "Founder follow-up pass");
-    const advisorDue = futureFollowUps.some((item) => item.label === "Advisor follow-up pass");
+    const founderDue = hasFollowUpType(futureFollowUps, "founder");
+    const advisorDue = hasFollowUpType(futureFollowUps, "advisor");
+    const benchmarkDue = hasFollowUpType(futureFollowUps, "benchmark");
+    const agentReviewDue = hasFollowUpType(futureFollowUps, "agent-review");
 
     if (founderDue && founderPendingFollowUps > 0) {
-      const dueDate = futureFollowUps.find((item) => item.label === "Founder follow-up pass")?.due || "the due date";
+      const dueDate = findFollowUpDue(futureFollowUps, "founder");
       upcoming.push(`On ${dueDate}, dry-run founder follow-ups with \`node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --transport resend\`.`);
       upcoming.push(`On ${dueDate}, send founder follow-ups with \`node scripts/send-validation-batch.mjs --batch 01 --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
     }
 
     if (advisorDue && advisorPendingFollowUps > 0) {
-      const dueDate = futureFollowUps.find((item) => item.label === "Advisor follow-up pass")?.due || "the due date";
+      const dueDate = findFollowUpDue(futureFollowUps, "advisor");
       upcoming.push(`On ${dueDate}, dry-run advisor follow-ups with \`node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --transport resend\`.`);
       upcoming.push(`On ${dueDate}, send advisor follow-ups with \`node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
+    }
+
+    if (benchmarkDue && benchmarkPendingFollowUps > 0) {
+      const dueDate = findFollowUpDue(futureFollowUps, "benchmark");
+      upcoming.push(`On ${dueDate}, dry-run benchmark follow-ups with \`node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --transport resend\`.`);
+      upcoming.push(`On ${dueDate}, send benchmark follow-ups with \`node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
+    }
+
+    if (agentReviewDue && agentReviewPendingFollowUps > 0) {
+      const dueDate = findFollowUpDue(futureFollowUps, "agent-review");
+      upcoming.push(`On ${dueDate}, dry-run AI agent review follow-ups with \`node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --transport resend\`.`);
+      upcoming.push(`On ${dueDate}, send AI agent review follow-ups with \`node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
     }
   }
 
@@ -285,7 +327,7 @@ async function main() {
   }));
   const parsedInterviews = parseCsv(interviewRows).filter((row) => Object.values(row).some((value) => String(value || "").trim() !== ""));
   const followUps = followUpTexts.map((text, index) => ({
-    label: FOLLOW_UP_FILES[index].label,
+    ...FOLLOW_UP_FILES[index],
     due: extractFollowUpDate(text)
   }));
   const totalReplyRows = parsedBatches.reduce((total, batch) => total + countReplies(batch.rows), 0);
@@ -306,8 +348,12 @@ async function main() {
   const advisorWaiting = countWaiting(parsedBatches[1].rows);
   const founderPendingFollowUps = countPendingFollowUps(parsedBatches[0].rows);
   const advisorPendingFollowUps = countPendingFollowUps(parsedBatches[1].rows);
+  const benchmarkPendingFollowUps = countPendingFollowUps(parsedBatches[4].rows);
+  const agentReviewPendingFollowUps = countPendingFollowUps(parsedBatches[5].rows);
   const founderFollowedUp = countByStatus(parsedBatches[0].rows, ["followed_up"]);
   const advisorFollowedUp = countByStatus(parsedBatches[1].rows, ["followed_up"]);
+  const benchmarkFollowedUp = countByStatus(parsedBatches[4].rows, ["followed_up"]);
+  const agentReviewFollowedUp = countByStatus(parsedBatches[5].rows, ["followed_up"]);
 
   const lines = [
     "# Validation Reply Watch",
@@ -319,6 +365,8 @@ async function main() {
     `- Self-audit channels logged: ${signals.channels.length} (${signals.inPageFormChannels} in-page-form, ${signals.mailtoChannels} mailto)`,
     describeFollowUpStatus(followUps[0].label, followUps[0].due, founderPendingFollowUps, founderFollowedUp),
     describeFollowUpStatus(followUps[1].label, followUps[1].due, advisorPendingFollowUps, advisorFollowedUp),
+    describeFollowUpStatus(followUps[2].label, followUps[2].due, benchmarkPendingFollowUps, benchmarkFollowedUp),
+    describeFollowUpStatus(followUps[3].label, followUps[3].due, agentReviewPendingFollowUps, agentReviewFollowedUp),
     "",
     "## Next Action",
     ""
@@ -333,6 +381,8 @@ async function main() {
     founderReplies,
     founderPendingFollowUps,
     advisorPendingFollowUps,
+    benchmarkPendingFollowUps,
+    agentReviewPendingFollowUps,
     contingencyReady,
     contingencyTwoReady,
     signals
@@ -350,6 +400,8 @@ async function main() {
     founderReplies,
     founderPendingFollowUps,
     advisorPendingFollowUps,
+    benchmarkPendingFollowUps,
+    agentReviewPendingFollowUps,
     contingencyReady,
     contingencyTwoReady,
     signals

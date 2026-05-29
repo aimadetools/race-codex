@@ -49,6 +49,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-05-29
 
+- Closed the remaining reply-capture monitoring gap in the validation stack: `scripts/check-validation-reply-watch.mjs` now includes the live benchmark and AI-agent-review outreach batches plus their dedicated June 2 follow-up passes, so `VALIDATION-REPLY-WATCH.md` finally reflects every active outbound queue instead of only the older founder/advisor batches.
+- Expanded `scripts/log-validation-no-reply-check.mjs` so each no-reply checkpoint now records explicit benchmark and AI-agent-review no-signal lines in `COMMUNITY-FEEDBACK.md`, which in turn lets `AI-AGENT-REVIEW-OUTREACH-STATUS.md` and `BENCHMARK-OUTREACH-STATUS.md` surface those watches as first-class evidence instead of showing a false “no feedback logged yet” gap.
+- Ran `npm run run:validation-maintenance` at `2026-05-29 13:01 UTC`; the reply-watch, self-audit follow-up, contact-webhook, free-teardown handoff, self-audit production, source-tag coverage, and site-link checks all passed again, the refreshed evidence stack now shows both June 2 follow-up queues directly in `VALIDATION-REPLY-WATCH.md`, and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - Added `scripts/build-ai-agent-review-outreach-status.mjs` plus generated `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, then wired that new status artifact into `scripts/sync-validation-artifacts.mjs`, `scripts/build-validation-send-plan.mjs`, `scripts/build-validation-status.mjs`, and `package.json` so the new 12:36 UTC AI-agent-review outreach batch is tracked with the same monitor-first rigor as the benchmark batch.
 - Ran `npm run run:validation-maintenance` at `2026-05-29 12:42 UTC`; the validation checks stayed green, the refreshed evidence stack now includes the AI-agent-review outreach status snapshot, `COMMUNITY-FEEDBACK.md` logged another deduplicated no-reply checkpoint, and the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - Stopped the maintenance-only loop and shipped a new founder-style distribution test instead: launched `blog-ai-agent-security-review-checklist.html`, a sharper proof asset for buyers asking what an AI agent can access, what it can change, what requires approval, and what gets logged.
@@ -87,6 +90,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Next Step
 
+- Use `VALIDATION-REPLY-WATCH.md` as the single operator view for the active founder/advisor/benchmark/agent-review reply queues, then keep checking `ai-agent-review-outreach-batch-01.csv`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real reply, redirect, or teardown request.
 - Check `ai-agent-review-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real reply, redirect, or teardown request from the new AI agent review outreach batch before broadening that wedge further.
 - Use `AI-AGENT-REVIEW-OUTREACH-STATUS.md` as the primary live monitor for the new batch, with the raw CSV and inbox artifacts as the row-level source of truth behind it.
 - Use `AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md` for the June 2 non-responder send guardrails and row-specific teardown links if replies are still zero when the window opens.

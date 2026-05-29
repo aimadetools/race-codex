@@ -1,6 +1,6 @@
 # AI Agent Review Outreach Status
 
-Checked at: 2026-05-29 12:54 UTC
+Checked at: 2026-05-29 13:02 UTC
 
 ## Current State
 
@@ -13,14 +13,14 @@ Checked at: 2026-05-29 12:54 UTC
 - Terminal rows: 0
 - Agent-review-tagged inbox submissions: 0
 - Agent-review-tagged teardown requests: 0
-- Agent-review mentions logged in COMMUNITY-FEEDBACK.md: 0
+- Agent-review mentions logged in COMMUNITY-FEEDBACK.md: 1
 - First AI agent review outreach send: 2026-05-29 12:36 UTC
 - Next AI agent review action: monitor the batch for replies and send the AI agent review follow-up on or after 2026-06-02 UTC if replies are still zero.
 
 ## Evidence Watch
 
 - Blob inbox check found 0 agent-review-tagged submission(s) so far.
-- COMMUNITY-FEEDBACK.md does not contain an agent-review-specific reply or outcome yet.
+- COMMUNITY-FEEDBACK.md contains 1 agent-review-related line(s); review the excerpts below before changing outreach copy.
 
 ## Inbox Matches
 
@@ -28,7 +28,7 @@ Checked at: 2026-05-29 12:54 UTC
 
 ## Community Feedback Matches
 
-- No agent-review-specific feedback is logged yet.
+- Rechecked on 2026-05-29 13:01 UTC: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep `ai-agent-review-outreach-batch-01.csv` unchanged and leave the June 2 AI agent review follow-up as the next action unless a specific reply or inbox match appears first.
 
 ## Batch Snapshot
 

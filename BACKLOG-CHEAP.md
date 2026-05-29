@@ -132,6 +132,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-29 13:01 UTC: upgraded the validation reply watch and no-reply checkpoint logger so the live benchmark and AI-agent-review batches now show up in the consolidated monitor and `COMMUNITY-FEEDBACK.md`, reran validation maintenance, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 12:54 UTC: reran validation maintenance, refreshed the inbox/help/generator/partner/benchmark/agent-review evidence stack, logged another deduplicated no-reply checkpoint, rechecked the live benchmark/agent-review/partner/inbox monitors, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 12:52 UTC: reran validation maintenance, refreshed the inbox/help/generator/partner/benchmark/agent-review evidence stack, logged another deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
 - 2026-05-29 12:47 UTC: added the generated AI-agent-review follow-up-pass artifact, wired it into validation maintenance and the send-plan output, reran the evidence stack, and kept the live queue at 0 real submissions / 0 replies / 0 interviews.
