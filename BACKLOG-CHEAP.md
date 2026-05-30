@@ -135,6 +135,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-30: refreshed `about.html` into a real routing page for the AI questionnaire wedge, corrected stale social-preview alt text on `about.html` and `audit-request.html`, and added the missing `kit-preview-grid-builder` watcher entry so source-tag coverage stayed complete.
 - 2026-05-30: fixed the false `localStorage` claim and refreshed `pricing.html`, `kit-preview.html`, and `purchase-next-steps.html` so the high-intent buyer path now matches the AI-first receiver workflow instead of legacy notice-first packaging.
 - 2026-05-29: the 23:29 UTC validation-maintenance pass refreshed the monitoring artifacts again, kept the benchmark and AI-agent-review batches at 5 sent / 0 replies, and left the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-29: the self-audit follow-up QA stayed current and the 23:27 UTC validation-maintenance pass refreshed the monitoring artifacts while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.

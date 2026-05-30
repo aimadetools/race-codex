@@ -122,6 +122,7 @@ export const WATCHED_SOURCE_TAGS = [
   "sample-teardown-ai-deal-blocker",
   "kit-preview-hero",
   "kit-preview-grid",
+  "kit-preview-grid-builder",
   "kit-preview-bottom",
   "kit-preview-ai-deal-blocker",
   "kit-preview-ai-packet",

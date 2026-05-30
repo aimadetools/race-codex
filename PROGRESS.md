@@ -57,6 +57,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Reworked `purchase-next-steps.html` so post-checkout expectations now describe the AI questionnaire starter, Pro repeat-review handoff, and the audit intake facts buyers actually need to send rather than the older vendor-change notice workflow.
 - Tightened the lower pricing-page proof and package sections so the high-intent buyer path now points to AI answer templates, answer-bank previews, builder/starter-pack evaluation, and an accurate on-device autosave explanation instead of subprocessor-first sample/notice framing.
 - Ran `npm run check:site-links` after the edits; all 81 HTML files still passed local link validation with no missing targets.
+- Refreshed `about.html` into a real routing page for the AI questionnaire wedge, corrected stale social-preview alt text on `about.html` and `audit-request.html`, and added the missing `kit-preview-grid-builder` watcher entry so source-tag coverage stayed complete.
+- Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; both passed after the about/audit-request and watcher updates.
 
 ## Next Step
 
