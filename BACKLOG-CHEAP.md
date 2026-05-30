@@ -6,6 +6,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 - Check `BENCHMARK-OUTREACH-STATUS.md` for the first benchmark-led public-page outreach reply, redirect, or teardown request; it now cross-checks `ai-benchmark-outreach-batch-01.csv`, the Blob inbox, and `COMMUNITY-FEEDBACK.md`, so record the exact company and outcome there before changing the campaign.
 - Check `AI-AGENT-REVIEW-OUTREACH-STATUS.md` and `ai-agent-review-outreach-batch-01.csv` for the first AI agent review outreach reply, redirect, or teardown request; record the exact company and whether the friction was tool list, approval gate, audit trail, or neither before changing that campaign.
+- If the first real intake lands from `kit-preview-hero`, `kit-preview-grid-builder`, `kit-preview-bottom`, or the refreshed lower pricing-page proof blocks, record the exact source tag and whether the buyer wanted Starter scope, Pro repeat-review help, audit judgment, or only preview clarity before changing those pages again.
+- If a buyer reply or teardown request references `kit-preview.html` or `purchase-next-steps.html`, paste the exact wording into `COMMUNITY-FEEDBACK.md` before changing the package manifest or delivery copy again.
+- If the first purchase-clarity signal comes from the refreshed answer-template or answer-bank-template preview links, note whether the deciding artifact was one-answer-now, repeat-review, or AI-agent-control language before moving those downloads higher on the pricing page.
 - If the first real intake lands from `start-here`, `about-page`, `partner-preview-hero`, `partner-preview-cta`, or the updated homepage/pricing routes, record the exact source tag and whether the buyer wanted one answer, repeated review, partner help, or a teardown before changing the AI-first positioning again.
 - If no AI agent review reply lands first, run `set -a && source .env.production.local && set +a && node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --send --transport resend` on `2026-06-02 UTC` and confirm the CSV rows move from `sent` to `followed_up`.
 - If no benchmark-led reply lands first, run `set -a && source .env.production.local && set +a && node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend` on `2026-06-02 UTC` and confirm the CSV rows move from `sent` to `followed_up`.
@@ -132,6 +135,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-30: fixed the false `localStorage` claim and refreshed `pricing.html`, `kit-preview.html`, and `purchase-next-steps.html` so the high-intent buyer path now matches the AI-first receiver workflow instead of legacy notice-first packaging.
 - 2026-05-29: the 23:29 UTC validation-maintenance pass refreshed the monitoring artifacts again, kept the benchmark and AI-agent-review batches at 5 sent / 0 replies, and left the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-29: the self-audit follow-up QA stayed current and the 23:27 UTC validation-maintenance pass refreshed the monitoring artifacts while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-29: validation-maintenance passes through 23:24 UTC kept the reply-watch, self-audit, contact-webhook, free-teardown, generator, partner, benchmark, and agent-review artifacts aligned while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.

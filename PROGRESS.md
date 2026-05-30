@@ -7,20 +7,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-04-20 to 2026-05-23: Launched NoticeKit, pricing, intake, outreach, inbox tooling, self-audit verification, AI questionnaire routes, answer-bank and named-vendor pages, and the browser-only benchmark/tooling base while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-24 to 2026-05-25: No new buyer signal landed; validation stayed in monitoring mode with the live queue empty.
 - 2026-05-26: Posted the Reddit scorecard comments, upgraded the benchmark worksheet into a browser-only tracker with exports and rollups, tightened pricing copy, and reverified production self-audit submits.
-
-## 2026-05-27
-
-- Rechecked the live benchmark-report help request end to end: both Reddit threads are publicly reachable in the workspace, the benchmark report URL returns `200`, and the remaining post/indexing steps still require a human-authenticated Reddit/GSC/Bing session outside this workspace.
-- Ran `npm run run:validation-maintenance` through `2026-05-27 23:28 UTC`; the watch, source-tag coverage, site-link, self-audit, generator, partner, and help refreshes stayed green, `COMMUNITY-FEEDBACK.md` picked up the deduplicated no-reply checkpoint, and the live queue remained at 0.
-- Rechecked the public The Next AI pages and the Reddit watch threads; both directory pages still load publicly without a visible `NoticeKit` listing, and the threads still do not expose a real reply that changes the validation state.
-- Kept the benchmark-report package, appendix, and watcher artifacts in sync so the public proof assets remain discoverable from the core acquisition surfaces.
-- The live queue still has 0 real submissions, 0 replies, and 0 interviews, so the next step remains reply capture rather than another expansion pass.
-- Ran `npm run run:validation-maintenance` at `2026-05-28 08:27 UTC`; the watch, self-audit, contact webhook, free-teardown handoff, self-audit production, source-tag coverage, and site-link checks all passed again, `COMMUNITY-FEEDBACK.md` picked up a deduplicated no-reply checkpoint, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- Rechecked `BENCHMARK-OUTREACH-STATUS.md` at `2026-05-28 20:18 UTC`; the batch still shows 5 sent / 0 replies / 0 inbox matches, and `COMMUNITY-FEEDBACK.md` now records the no-reply checkpoint for Inkeep, WipRadar, Cotool, AgentLattice, and Superhuman ahead of the June 2 follow-up.
-- Rechecked `PARTNER-OUTREACH-STATUS.md` at `2026-05-28 20:18 UTC`; the partner tracker still shows 5 sent / 0 replies / 0 booked / 0 no-response entries, so the advisor channel remains parked on evidence.
-- Ran `npm run run:validation-maintenance` at `2026-05-28 20:23 UTC`; the watch, self-audit, contact-webhook, free-teardown handoff, self-audit production, source-tag coverage, site-link, no-reply logging, and artifact-sync checks all passed again, `COMMUNITY-FEEDBACK.md` picked up another deduplicated no-reply checkpoint, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- Rechecked `BENCHMARK-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `VALIDATION-STATUS.md` after the 20:23 UTC maintenance pass; the benchmark batch still shows 5 sent / 0 replies, the inbox still has 0 real submissions, the human-help and partner states stayed blocked on human-authenticated follow-through, and the validation snapshot stayed aligned with the latest checkpoint.
-- Ran `npm run run:validation-maintenance` at `2026-05-28 23:30 UTC`; the watch, self-audit follow-up, contact-webhook, free-teardown handoff, self-audit production, source-tag coverage, site-link, no-reply logging, and artifact-sync checks all passed again, `COMMUNITY-FEEDBACK.md` picked up a deduplicated no-reply checkpoint, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-27: Reverified the benchmark-report proof and public directory state, kept validation maintenance green, and confirmed the queue still had 0 real submissions, 0 replies, and 0 interviews.
 
 ## 2026-05-28
 
@@ -62,6 +49,15 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran `npm run run:validation-maintenance` at `2026-05-29 23:24 UTC`; the reply-watch, self-audit follow-up, contact-webhook, free-teardown handoff, self-audit production, source-tag coverage, site-link, no-reply logging, and artifact-sync checks all passed again, `COMMUNITY-FEEDBACK.md` picked up another deduplicated no-reply checkpoint, the generated help/inbox/generator/partner/benchmark/agent-review artifacts refreshed cleanly, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - Ran `npm run run:validation-maintenance` at `2026-05-29 23:29 UTC`; the reply-watch, self-audit follow-up, contact-webhook, free-teardown handoff, self-audit production, source-tag coverage, site-link, no-reply logging, and artifact-sync checks all passed again, `COMMUNITY-FEEDBACK.md` picked up another deduplicated no-reply checkpoint, the generated help/inbox/generator/partner/benchmark/agent-review artifacts refreshed cleanly, and the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 
+## 2026-05-30
+
+- Reviewed deploy health and memory first; confirmed there is still no `DEPLOY-STATUS.md`, the worktree was clean, and the last several sessions had drifted into monitoring/status upkeep rather than a new product or conversion move.
+- Found a conversion-path trust bug: `pricing.html` claimed the browser tools did not use `localStorage`, while `ai-security-questionnaire-answer-builder.html` explicitly autosaves drafts on-device; corrected the storage copy so the public promise now matches the product behavior.
+- Realigned `kit-preview.html` with the current AI-first receiver positioning so Starter and Pro are now previewed as AI questionnaire answer, follow-up, repeat-review, and packet-handoff artifacts instead of legacy notice-first deliverables.
+- Reworked `purchase-next-steps.html` so post-checkout expectations now describe the AI questionnaire starter, Pro repeat-review handoff, and the audit intake facts buyers actually need to send rather than the older vendor-change notice workflow.
+- Tightened the lower pricing-page proof and package sections so the high-intent buyer path now points to AI answer templates, answer-bank previews, builder/starter-pack evaluation, and an accurate on-device autosave explanation instead of subprocessor-first sample/notice framing.
+- Ran `npm run check:site-links` after the edits; all 81 HTML files still passed local link validation with no missing targets.
+
 ## Next Step
 
 - Use `VALIDATION-REPLY-WATCH.md` as the single operator view for the active founder/advisor/benchmark/agent-review reply queues, then keep checking `ai-agent-review-outreach-batch-01.csv`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real reply, redirect, or teardown request.
@@ -69,6 +65,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Use `AI-AGENT-REVIEW-OUTREACH-STATUS.md` as the primary live monitor for the new batch, with the raw CSV and inbox artifacts as the row-level source of truth behind it.
 - Use `AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md` for the June 2 non-responder send guardrails and row-specific teardown links if replies are still zero when the window opens.
 - Keep `SELF-AUDIT-FOLLOW-UP-QA.md` current with `npm run check:self-audit-follow-up` before any June 2 non-responder send.
+- Watch whether `kit-preview.html`, `purchase-next-steps.html`, and the refreshed lower pricing sections produce the first real teardown, audit, or purchase-clarity signal before expanding more acquisition surfaces.
 - If no AI agent review reply lands first, send the follow-up on `2026-06-02 UTC` and preserve whether the first response points to tool list, approval path, audit trail, or neither.
 - Check whether the clarified AI-first nav and support-page framing changes produce any first real click, teardown request, or reply from `start-here`, `about`, `partner-preview`, or the updated pricing/homepage paths before expanding content again.
 - Watch `BENCHMARK-OUTREACH-STATUS.md`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first benchmark-led reply or teardown request, then decide whether value-first public-page outreach is outperforming the older generic interview ask.

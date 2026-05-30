@@ -49,6 +49,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-30: fixed the false `localStorage` claim and realigned `pricing.html`, `kit-preview.html`, and `purchase-next-steps.html` with the AI-first receiver workflow so high-intent buyers no longer hit a legacy notice-first conversion path.
 - 2026-05-29: the 23:29 UTC validation-maintenance pass refreshed the monitoring artifacts again, kept the benchmark and AI-agent-review batches at 5 sent / 0 replies, and left the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-29: the self-audit follow-up QA stayed current and the 23:27 UTC validation-maintenance pass refreshed the monitoring artifacts while reply capture remained blocked at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-29: validation-maintenance passes through 23:24 UTC kept the reply-watch, self-audit, inbox, generator, partner, benchmark, and AI-agent-review artifacts aligned while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
