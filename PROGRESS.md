@@ -59,10 +59,16 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran `npm run check:site-links` after the edits; all 81 HTML files still passed local link validation with no missing targets.
 - Refreshed `about.html` into a real routing page for the AI questionnaire wedge, corrected stale social-preview alt text on `about.html` and `audit-request.html`, and added the missing `kit-preview-grid-builder` watcher entry so source-tag coverage stayed complete.
 - Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; both passed after the about/audit-request and watcher updates.
+- Shipped `ai-agent-review-workspace.html`, a new browser-only AI agent controls workspace that lets SaaS teams capture one workflow’s connected systems, read-versus-write boundary, approval-required actions, blocked actions, credential scope, audit trail, failure path, proof links, open questions, and recheck triggers in one place.
+- The new workspace now outputs a tool-access answer, approval-gate answer, internal control brief, and gap checklist with local autosave, presets, copy actions, Markdown download, readiness scoring, and route guidance to the answer builder, answer bank, checklist, or teardown path.
+- Wired the new AI agent workspace into the current acquisition and conversion surfaces that already speak to the tool-access / approval-gate wedge: `index.html`, `free-tools.html`, `pricing.html`, `start-here.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-starter-pack.html`, `blog.html`, `blog-ai-agent-security-review-checklist.html`, `blog-ai-agent-tool-access-review.html`, and `blog-ai-agent-approval-gate-template.html`.
+- Added watcher coverage for the new workspace source tags in `scripts/watched-source-tags.mjs` and added the page to `sitemap.xml` so the new route can be attributed and discovered cleanly.
+- Ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the workspace rollout; source-tag coverage stayed complete and all 82 HTML files passed local link validation with no missing targets.
 
 ## Next Step
 
 - Use `VALIDATION-REPLY-WATCH.md` as the single operator view for the active founder/advisor/benchmark/agent-review reply queues, then keep checking `ai-agent-review-outreach-batch-01.csv`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real reply, redirect, or teardown request.
+- Watch whether the new AI agent workspace produces the first real tool-access, approval-gate, or audit-trail click, teardown request, or reply before the static checklist/template pages do.
 - Check `ai-agent-review-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real reply, redirect, or teardown request from the new AI agent review outreach batch before broadening that wedge further.
 - Use `AI-AGENT-REVIEW-OUTREACH-STATUS.md` as the primary live monitor for the new batch, with the raw CSV and inbox artifacts as the row-level source of truth behind it.
 - Use `AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md` for the June 2 non-responder send guardrails and row-specific teardown links if replies are still zero when the window opens.

@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Agent Review Workspace | NoticeKit</title>
+    <meta name="description" content="Map AI agent tool access, write boundaries, approval gates, service-account scope, and audit trail in the browser, then copy buyer-ready answers without sending data to a server.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:url" content="https://noticekit.tech/ai-agent-review-workspace.html">
+    <meta property="og:title" content="AI Agent Review Workspace">
+    <meta property="og:description" content="A browser-only workspace for SaaS teams answering buyer AI agent reviews with tool access, approval gate, and audit-trail details.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit AI agent review workspace">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Agent Review Workspace">
+    <meta name="twitter:description" content="Capture AI agent controls locally and turn them into copy-ready buyer answers, approval-gate wording, and a review brief.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://noticekit.tech/ai-agent-review-workspace.html">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "NoticeKit AI Agent Review Workspace",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://noticekit.tech/ai-agent-review-workspace.html",
+            "description": "Browser-only workspace for SaaS teams packaging AI agent tool access, mutating actions, approval gates, credential scope, and audit trail into buyer-ready answers."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use the AI agent review workspace?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use it when a buyer, security reviewer, privacy lead, or counsel asks what your AI agent can access, which actions can mutate data, what approvals are required, what is blocked, and what gets logged."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this send my inputs to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The workspace runs locally in your browser, autosaves on the current device, and does not send the draft to a server."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What outputs does it create?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It creates a tool-access answer, an approval-gate answer, a control brief for internal review, plus a gap list and route guidance for the next NoticeKit step."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="free-tools.html">Free tools</a>
+          <a class="button secondary" href="audit-request.html">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <span class="eyebrow">Browser-only AI agent controls workspace</span>
+          <h1 id="hero-title">Turn AI agent control facts into buyer-ready answers.</h1>
+          <p id="hero-copy">Use this workspace when your SaaS team is answering a buyer review that narrowed from broad AI policy into agent controls. Capture the connected systems, read-versus-write boundary, approval stops, blocked actions, credential scope, audit trail, and failure path once, then copy the tool-access answer, approval-gate answer, and internal control brief without sending your inputs to a server.</p>
+          <div class="hero-actions">
+            <a class="button" href="#workspace">Open workspace</a>
+            <a class="button secondary" href="blog-ai-agent-security-review-checklist.html?source=ai-agent-workspace-checklist">Open checklist</a>
+            <a class="button secondary" href="blog-ai-agent-tool-access-review.html?source=ai-agent-workspace-tool-access">Open tool-access template</a>
+            <a class="button secondary" href="blog-ai-agent-approval-gate-template.html?source=ai-agent-workspace-approval-gate">Open approval-gate template</a>
+          </div>
+        </section>
+
+        <section class="section" id="source-context-section" hidden>
+          <div class="context-band" aria-live="polite">
+            <div>
+              <span class="eyebrow">Source context</span>
+              <h2 id="source-context-title">Keep this draft tied to one live AI agent workflow.</h2>
+              <p id="source-context-copy">The fastest credible answer is still one workflow, one control boundary, and one proof trail.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice-band">
+            <strong>Local-only control drafting.</strong>
+            <p>This workspace is for the SaaS team answering the review, not the buyer sending it. It packages operating facts and answer structure; your team still owns the final security, privacy, and legal position.</p>
+          </div>
+        </section>
+
+        <section class="section audit-layout" id="workspace">
+          <form class="audit-card" id="agent-workspace-form">
+            <div class="section-head compact-head">
+              <h2>Control inputs</h2>
+              <p>Keep this focused on one workflow. If the agent has multiple roles, split them into separate drafts instead of collapsing them into one vague answer.</p>
+              <div class="route-presets" aria-label="Quick presets">
+                <button class="button secondary" type="button" data-preset="support-copilot">Support copilot</button>
+                <button class="button secondary" type="button" data-preset="internal-ops">Internal ops agent</button>
+                <button class="button secondary" type="button" data-preset="customer-facing">Customer-facing automation</button>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label>Company
+                <input id="company" value="Example SaaS">
+              </label>
+              <label>Workflow reviewed
+                <input id="workflow" value="Support copilot that drafts replies and suggests ticket updates">
+              </label>
+              <label>Workflow status
+                <select id="workflow-status">
+                  <option value="active">Active in production</option>
+                  <option value="limited">Limited rollout under review</option>
+                  <option value="planned">Planned workflow under review</option>
+                </select>
+              </label>
+              <label>Primary reviewer concern
+                <select id="primary-concern">
+                  <option value="tool-access">Tool access and scope</option>
+                  <option value="approval-gate">Approval gate and autonomy</option>
+                  <option value="audit-trail">Audit trail and proof</option>
+                </select>
+              </label>
+              <label>Connected systems
+                <textarea id="systems">Zendesk, CRM, internal knowledge base, and product analytics.</textarea>
+              </label>
+              <label>Read-only actions
+                <textarea id="read-actions">Retrieve ticket context, summarize account history, and suggest reply language.</textarea>
+              </label>
+              <label>Mutating actions
+                <textarea id="write-actions">Create draft replies, add internal tags, and propose ticket-priority updates after review.</textarea>
+              </label>
+              <label>Approval-required actions
+                <textarea id="approval-actions">Sending a customer-facing reply, changing ticket status, and escalating priority require a human approver.</textarea>
+              </label>
+              <label>Blocked actions
+                <textarea id="blocked-actions">No billing changes, no account deletion, no outbound send without approval, and no production-config changes.</textarea>
+              </label>
+              <label>Approver and interface
+                <textarea id="approver">Support lead approves in the ticketing UI after reviewing the proposed action and cited context.</textarea>
+              </label>
+              <label>Credential model and scope
+                <textarea id="credential-scope">Service account with scoped ticket-read access plus draft-only write permissions in the support workspace.</textarea>
+              </label>
+              <label>Audit trail
+                <textarea id="audit-trail">We log the user request, retrieved context, proposed action, approver decision, final execution result, and exception handling in the support review log.</textarea>
+              </label>
+              <label>Failure and escalation path
+                <textarea id="failure-path">If context is missing or the action looks unsafe, the workflow pauses, flags the request, and escalates to the named support owner for manual handling.</textarea>
+              </label>
+              <label>Proof links
+                <textarea id="proof-links">Internal control review note, ticket workflow screenshot, permission map, and policy line for approval-required actions.</textarea>
+              </label>
+              <label>Open questions
+                <textarea id="open-questions">Confirm whether attachment access is needed in phase one and whether enterprise tenants need a stricter approval path.</textarea>
+              </label>
+              <label>Recheck triggers
+                <textarea id="recheck-triggers">New tool access, broader write scope, new customer-facing action, or a change to service-account permissions.</textarea>
+              </label>
+            </div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Control readiness</span>
+            <div class="score-row generator-summary">
+              <strong id="readiness-score">9/10</strong>
+              <span id="readiness-state">Review-ready</span>
+            </div>
+            <div class="score-meter" aria-hidden="true">
+              <span id="readiness-meter"></span>
+            </div>
+            <p id="readiness-summary">This draft cleanly names the systems, action boundary, approvals, blocked actions, credential scope, audit trail, and recheck trigger needed for a buyer review.</p>
+            <div class="tier-guidance">
+              <strong id="next-step-title">Best next step</strong>
+              <p id="next-step-copy">Copy the tool-access or approval-gate answer now, then move into the answer bank if the same reviewer question keeps coming back.</p>
+            </div>
+            <div class="result-list">
+              <div>
+                <strong>What is still thin</strong>
+                <ul id="gap-list"></ul>
+              </div>
+              <div>
+                <strong>What already holds up</strong>
+                <ul id="strength-list"></ul>
+              </div>
+            </div>
+            <div class="generator-actions">
+              <button class="button" id="copy-tool-access" type="button">Copy tool-access answer</button>
+              <button class="button secondary" id="copy-approval-gate" type="button">Copy approval answer</button>
+              <button class="button secondary" id="copy-control-brief" type="button">Copy control brief</button>
+              <button class="button secondary" id="download-workspace" type="button">Download workspace</button>
+              <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
+            </div>
+            <p class="fine-print" id="workspace-status">This workspace runs in your browser. Inputs stay local and autosave on this device only.</p>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article>
+              <div class="section-head">
+                <h2>Tool-access answer</h2>
+                <p>Use this when the buyer wants the exact systems touched, read-versus-write line, credential scope, and auditability.</p>
+              </div>
+              <div class="template-box" id="tool-access-output" aria-live="polite"></div>
+            </article>
+            <article>
+              <div class="section-head">
+                <h2>Approval-gate answer</h2>
+                <p>Use this when the real objection is autonomy and the reviewer wants the human stop points, blocked actions, and escalation path.</p>
+              </div>
+              <div class="template-box" id="approval-gate-output" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article>
+              <div class="section-head">
+                <h2>Internal control brief</h2>
+                <p>Use this to hand the workflow to procurement, security, privacy, or counsel without rebuilding the same facts.</p>
+              </div>
+              <div class="template-box" id="control-brief-output" aria-live="polite"></div>
+            </article>
+            <article>
+              <div class="section-head">
+                <h2>Gap checklist</h2>
+                <p>Patch these gaps before claiming the workflow is fully review-ready.</p>
+              </div>
+              <div class="template-box" id="gaps-output" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <h2>Need the next route after this draft?</h2>
+              <p>Use the answer builder when this agent-control answer is part of a broader questionnaire response. Use the answer bank when the same control questions keep coming back across deals. Use teardown when the workflow or public proof still feels too fuzzy to trust.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="button" id="route-primary" href="ai-security-questionnaire-answer-builder.html?source=ai-agent-workspace-builder">Open answer builder</a>
+              <a class="button secondary" id="route-secondary" href="ai-security-questionnaire-answer-bank.html?source=ai-agent-workspace-answer-bank">Open answer bank</a>
+              <a class="button secondary" href="blog-ai-agent-security-review-checklist.html?source=ai-agent-workspace-checklist">Open checklist</a>
+              <a class="button secondary" href="free-teardown.html?source=ai-agent-workspace-teardown">Request free teardown</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="free-tools.html">Free tools</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const STORAGE_KEY = "noticekit-ai-agent-review-workspace-v1";
+      const form = document.querySelector("#agent-workspace-form");
+      const fields = Array.from(form.querySelectorAll("input, textarea, select"));
+      const readinessScoreNode = document.querySelector("#readiness-score");
+      const readinessStateNode = document.querySelector("#readiness-state");
+      const readinessSummaryNode = document.querySelector("#readiness-summary");
+      const readinessMeterNode = document.querySelector("#readiness-meter");
+      const nextStepTitleNode = document.querySelector("#next-step-title");
+      const nextStepCopyNode = document.querySelector("#next-step-copy");
+      const gapListNode = document.querySelector("#gap-list");
+      const strengthListNode = document.querySelector("#strength-list");
+      const toolAccessOutputNode = document.querySelector("#tool-access-output");
+      const approvalGateOutputNode = document.querySelector("#approval-gate-output");
+      const controlBriefOutputNode = document.querySelector("#control-brief-output");
+      const gapsOutputNode = document.querySelector("#gaps-output");
+      const workspaceStatusNode = document.querySelector("#workspace-status");
+      const routePrimaryNode = document.querySelector("#route-primary");
+      const routeSecondaryNode = document.querySelector("#route-secondary");
+      const sourceContextSection = document.querySelector("#source-context-section");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+
+      const presetMap = {
+        "support-copilot": {
+          workflow: "Support copilot that drafts replies and suggests ticket updates",
+          workflowStatus: "active",
+          primaryConcern: "approval-gate",
+          systems: "Zendesk, CRM, internal knowledge base, and product analytics.",
+          readActions: "Retrieve ticket context, summarize account history, and suggest reply language.",
+          writeActions: "Create draft replies, add internal tags, and propose ticket-priority updates after review.",
+          approvalActions: "Sending a customer-facing reply, changing ticket status, and escalating priority require a human approver.",
+          blockedActions: "No billing changes, no account deletion, no outbound send without approval, and no production-config changes.",
+          approver: "Support lead approves in the ticketing UI after reviewing the proposed action and cited context.",
+          credentialScope: "Service account with scoped ticket-read access plus draft-only write permissions in the support workspace.",
+          auditTrail: "We log the user request, retrieved context, proposed action, approver decision, final execution result, and exception handling in the support review log.",
+          failurePath: "If context is missing or the action looks unsafe, the workflow pauses, flags the request, and escalates to the named support owner for manual handling.",
+          proofLinks: "Internal control review note, ticket workflow screenshot, permission map, and policy line for approval-required actions.",
+          openQuestions: "Confirm whether attachment access is needed in phase one and whether enterprise tenants need a stricter approval path.",
+          recheckTriggers: "New tool access, broader write scope, new customer-facing action, or a change to service-account permissions."
+        },
+        "internal-ops": {
+          workflow: "Internal ops assistant that drafts vendor-review summaries and queue updates",
+          workflowStatus: "limited",
+          primaryConcern: "tool-access",
+          systems: "Internal admin dashboard, vendor inventory sheet, document store, and issue tracker.",
+          readActions: "Retrieve vendor records, summarize open issues, and draft status notes for internal review.",
+          writeActions: "Create draft issue comments and queue summaries after policy checks.",
+          approvalActions: "Publishing an external-facing update or changing a production vendor record requires owner approval.",
+          blockedActions: "No customer outreach, no payment actions, no permission changes, and no direct production edits.",
+          approver: "Ops lead approves publish or record-change actions in the internal dashboard.",
+          credentialScope: "Service account limited to internal read access plus draft-note creation in the issue tracker.",
+          auditTrail: "The workflow logs source records read, generated summary text, approver decision, and final publish result.",
+          failurePath: "Unsafe or incomplete requests stop in draft mode and route to ops review instead of executing.",
+          proofLinks: "Access policy doc, admin role matrix, and queue-review screenshot.",
+          openQuestions: "Verify whether contractor users need a separate approval role.",
+          recheckTriggers: "New admin tool access, broader publish permissions, or a change in who can approve."
+        },
+        "customer-facing": {
+          workflow: "Customer-facing AI workflow that proposes account actions inside the product",
+          workflowStatus: "planned",
+          primaryConcern: "audit-trail",
+          systems: "Product database, workflow engine, support console, and customer event log.",
+          readActions: "Retrieve account context, eligibility checks, and product-state summaries.",
+          writeActions: "Propose configuration changes and prepare account-workflow updates within a limited ruleset.",
+          approvalActions: "Any customer-visible configuration change requires manual approval before execution.",
+          blockedActions: "No deletion, no billing change, no privilege escalation, and no customer-visible send without approval.",
+          approver: "Operations reviewer approves in the admin console after checking the proposed action and account scope.",
+          credentialScope: "Scoped service account limited to the reviewed workflow and environment.",
+          auditTrail: "We log the trigger, retrieved facts, proposed change, approval event, execution status, and rollback outcome.",
+          failurePath: "Low-confidence or out-of-policy requests are rejected and escalated for manual handling.",
+          proofLinks: "Architecture diagram, admin-console screenshot, event-log sample, and approval policy note.",
+          openQuestions: "Confirm whether sandbox and production environments share the same approval path.",
+          recheckTriggers: "Any new customer-facing action, broader account scope, or approval-policy change."
+        }
+      };
+
+      const sourceConfigs = {
+        "homepage-ai-agent-workspace": {
+          title: "You came from the homepage AI-agent-control route.",
+          copy: "Stay narrow: answer the specific control question first, then widen into the generic questionnaire flow only if the reviewer asks for more.",
+          points: [
+            "Use one workflow, not your whole AI platform story.",
+            "Make the read-versus-write boundary explicit.",
+            "Attach one proof link for the approval path or audit trail."
+          ]
+        },
+        "free-tools-ai-agent-workspace": {
+          title: "You came from the free-tools AI-agent path.",
+          copy: "This workspace is the shortest local tool for turning AI-agent control facts into actual response language.",
+          points: [
+            "Draft the control answers here first.",
+            "Move into the answer bank only if the same review repeats.",
+            "Use teardown if the public proof is still weak."
+          ]
+        },
+        "pricing-ai-agent-workspace": {
+          title: "You came from the pricing-page AI-agent path.",
+          copy: "Use this before buying if the blocker is still clarity around tool access, autonomy, or auditability rather than package scope.",
+          points: [
+            "If this draft stays thin, do not force a stronger claim.",
+            "If the score is high, the answer bank becomes the next repeat-review path.",
+            "If the workflow is still changing, preserve the open question visibly."
+          ]
+        },
+        "agent-review-checklist-workspace": {
+          title: "You came from the AI-agent checklist.",
+          copy: "You already know the control categories. This page turns them into working buyer answers and an internal brief.",
+          points: [
+            "Keep the tool list concrete.",
+            "Separate approval-required actions from blocked actions.",
+            "Write the failure path as an operational sentence, not a slogan."
+          ]
+        },
+        "ai-agent-review-workspace-tool-access": {
+          title: "You came from the tool-access template.",
+          copy: "Fill the underlying facts here first so the final tool-access answer is not just another polished placeholder.",
+          points: [
+            "Name the systems touched.",
+            "Name the execution identity and scope.",
+            "Name what gets logged after execution."
+          ]
+        },
+        "ai-agent-review-workspace-approval-gate": {
+          title: "You came from the approval-gate template.",
+          copy: "Use this to make the approval path auditable instead of relying on a vague human-in-the-loop claim.",
+          points: [
+            "List the actions that require approval.",
+            "List the actions blocked outright.",
+            "List who approves and where."
+          ]
+        },
+        "ai-procurement-hub-agent-workspace": {
+          title: "You came from the AI procurement hub.",
+          copy: "The current blocker is the AI-agent-control branch, not the broader packet or generic questionnaire branch.",
+          points: [
+            "Stay with one agent workflow.",
+            "Keep proof links attached to the answer.",
+            "Only widen into the full builder if the reviewer asks beyond controls."
+          ]
+        },
+        "start-here-ai-agent-workspace": {
+          title: "You came from the start-here AI-agent route.",
+          copy: "This is the shortest product path for a buyer asking about tool access, autonomy, or auditability.",
+          points: [
+            "Use the workspace before jumping into broader copy.",
+            "Treat blocked actions as first-class information.",
+            "Preserve the recheck trigger for the next review."
+          ]
+        },
+        "blog-index-ai-agent-workspace": {
+          title: "You came from the blog AI-agent collection.",
+          copy: "The content already framed the control problem; this page turns it into usable artifacts.",
+          points: [
+            "Copy the answer only after the gaps are patched.",
+            "Use the control brief for internal handoff.",
+            "Use the answer bank if the same objection keeps coming back."
+          ]
+        },
+        "ai-security-questionnaire-starter-pack-agent-workspace": {
+          title: "You came from the starter-pack AI-agent route.",
+          copy: "This workspace is the fastest way to answer the control branch before the deal thread sprawls.",
+          points: [
+            "Keep the draft tied to the live deal blocker.",
+            "Use the approval answer if autonomy is the real objection.",
+            "Use the tool-access answer if system scope is the real objection."
+          ]
+        }
+      };
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
+      function slugify(value) {
+        return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "noticekit-ai-agent-review";
+      }
+
+      function readDraft() {
+        return {
+          company: document.querySelector("#company").value.trim(),
+          workflow: document.querySelector("#workflow").value.trim(),
+          workflowStatus: document.querySelector("#workflow-status").value,
+          primaryConcern: document.querySelector("#primary-concern").value,
+          systems: document.querySelector("#systems").value.trim(),
+          readActions: document.querySelector("#read-actions").value.trim(),
+          writeActions: document.querySelector("#write-actions").value.trim(),
+          approvalActions: document.querySelector("#approval-actions").value.trim(),
+          blockedActions: document.querySelector("#blocked-actions").value.trim(),
+          approver: document.querySelector("#approver").value.trim(),
+          credentialScope: document.querySelector("#credential-scope").value.trim(),
+          auditTrail: document.querySelector("#audit-trail").value.trim(),
+          failurePath: document.querySelector("#failure-path").value.trim(),
+          proofLinks: document.querySelector("#proof-links").value.trim(),
+          openQuestions: document.querySelector("#open-questions").value.trim(),
+          recheckTriggers: document.querySelector("#recheck-triggers").value.trim()
+        };
+      }
+
+      function applyDraft(draft) {
+        document.querySelector("#company").value = draft.company || "";
+        document.querySelector("#workflow").value = draft.workflow || "";
+        document.querySelector("#workflow-status").value = draft.workflowStatus || "active";
+        document.querySelector("#primary-concern").value = draft.primaryConcern || "tool-access";
+        document.querySelector("#systems").value = draft.systems || "";
+        document.querySelector("#read-actions").value = draft.readActions || "";
+        document.querySelector("#write-actions").value = draft.writeActions || "";
+        document.querySelector("#approval-actions").value = draft.approvalActions || "";
+        document.querySelector("#blocked-actions").value = draft.blockedActions || "";
+        document.querySelector("#approver").value = draft.approver || "";
+        document.querySelector("#credential-scope").value = draft.credentialScope || "";
+        document.querySelector("#audit-trail").value = draft.auditTrail || "";
+        document.querySelector("#failure-path").value = draft.failurePath || "";
+        document.querySelector("#proof-links").value = draft.proofLinks || "";
+        document.querySelector("#open-questions").value = draft.openQuestions || "";
+        document.querySelector("#recheck-triggers").value = draft.recheckTriggers || "";
+      }
+
+      function saveDraft() {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(readDraft()));
+      }
+
+      function loadDraft() {
+        try {
+          const raw = window.localStorage.getItem(STORAGE_KEY);
+          if (!raw) {
+            return;
+          }
+          const parsed = JSON.parse(raw);
+          applyDraft(parsed);
+        } catch (error) {
+          window.localStorage.removeItem(STORAGE_KEY);
+        }
+      }
+
+      function copyText(text, message) {
+        navigator.clipboard.writeText(text).then(() => {
+          workspaceStatusNode.textContent = message;
+        }).catch(() => {
+          workspaceStatusNode.textContent = "Clipboard copy failed on this browser. Use the text output below instead.";
+        });
+      }
+
+      function downloadFile(name, content) {
+        const blob = new Blob([content], { type: "text/markdown;charset=utf-8" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = name;
+        document.body.append(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(link.href);
+      }
+
+      function evaluateDraft(draft) {
+        const checks = [
+          { key: "systems", label: "Connected systems are named." },
+          { key: "readActions", label: "Read-only actions are separated." },
+          { key: "writeActions", label: "Mutating actions are visible." },
+          { key: "approvalActions", label: "Approval-required actions are listed." },
+          { key: "blockedActions", label: "Blocked actions are explicit." },
+          { key: "approver", label: "The approver path is named." },
+          { key: "credentialScope", label: "Credential scope is stated." },
+          { key: "auditTrail", label: "Audit trail details are present." },
+          { key: "proofLinks", label: "Proof links or artifacts are attached." },
+          { key: "recheckTriggers", label: "Recheck triggers are documented." }
+        ];
+
+        const strengths = [];
+        const gaps = [];
+        let score = 0;
+
+        checks.forEach((check) => {
+          if (draft[check.key]) {
+            score += 1;
+            strengths.push(check.label);
+          } else {
+            gaps.push(check.label.replace(" are ", " need to be ").replace(" is ", " needs to be "));
+          }
+        });
+
+        if (!draft.openQuestions) {
+          gaps.push("Open questions need to stay visible if the workflow is still changing.");
+        } else {
+          strengths.push("Open questions are preserved instead of hidden.");
+        }
+
+        return { score, strengths, gaps };
+      }
+
+      function buildOutputs() {
+        const draft = readDraft();
+        const evaluation = evaluateDraft(draft);
+        const score = evaluation.score;
+        const status = score >= 9 ? "Review-ready" : score >= 6 ? "Close, but still patch gaps" : "Still too thin";
+        const summary = score >= 9
+          ? "This draft cleanly names the systems, action boundary, approvals, blocked actions, credential scope, audit trail, and recheck trigger needed for a buyer review."
+          : score >= 6
+            ? "The draft is close, but one or two weak control details can still trigger follow-up loops or weaken trust."
+            : "The current draft is still missing too many control details to claim a credible AI-agent review answer yet.";
+
+        readinessScoreNode.textContent = score + "/10";
+        readinessStateNode.textContent = status;
+        readinessSummaryNode.textContent = summary;
+        readinessMeterNode.style.width = (score * 10) + "%";
+
+        if (score >= 9) {
+          nextStepTitleNode.textContent = "Best next step";
+          nextStepCopyNode.textContent = "Copy the tool-access or approval-gate answer now, then move into the answer bank if the same reviewer question keeps coming back.";
+          routePrimaryNode.href = "ai-security-questionnaire-answer-bank.html?source=ai-agent-workspace-answer-bank";
+          routePrimaryNode.textContent = "Open answer bank";
+          routeSecondaryNode.href = "ai-security-questionnaire-answer-builder.html?source=ai-agent-workspace-builder";
+          routeSecondaryNode.textContent = "Open answer builder";
+        } else if (score >= 6) {
+          nextStepTitleNode.textContent = "Best next step";
+          nextStepCopyNode.textContent = "Use the draft below as the base answer now, but patch the visible control gaps before you reuse it across deals.";
+          routePrimaryNode.href = "ai-security-questionnaire-answer-builder.html?source=ai-agent-workspace-builder";
+          routePrimaryNode.textContent = "Open answer builder";
+          routeSecondaryNode.href = "blog-ai-agent-security-review-checklist.html?source=ai-agent-workspace-checklist";
+          routeSecondaryNode.textContent = "Open checklist";
+        } else {
+          nextStepTitleNode.textContent = "Best next step";
+          nextStepCopyNode.textContent = "Do not oversell the workflow yet. Tighten the control facts, use the checklist, or request a teardown before treating this as review-ready.";
+          routePrimaryNode.href = "blog-ai-agent-security-review-checklist.html?source=ai-agent-workspace-checklist";
+          routePrimaryNode.textContent = "Open checklist";
+          routeSecondaryNode.href = "free-teardown.html?source=ai-agent-workspace-teardown";
+          routeSecondaryNode.textContent = "Request free teardown";
+        }
+
+        gapListNode.innerHTML = evaluation.gaps.length
+          ? evaluation.gaps.map((item) => "<li>" + escapeHtml(item) + "</li>").join("")
+          : "<li>No obvious structural gaps remain in this draft.</li>";
+        strengthListNode.innerHTML = evaluation.strengths.length
+          ? evaluation.strengths.map((item) => "<li>" + escapeHtml(item) + "</li>").join("")
+          : "<li>No strength signals yet.</li>";
+
+        const workflowStateMap = {
+          active: "active in production",
+          limited: "in a limited rollout under review",
+          planned: "planned and still under review"
+        };
+
+        const toolAccessAnswer = [
+          "AI agent workflow reviewed: " + draft.workflow + " (" + workflowStateMap[draft.workflowStatus] + ").",
+          "Connected systems: " + draft.systems,
+          "Read-only actions: " + draft.readActions,
+          "Mutating actions: " + draft.writeActions,
+          "Approval or policy boundary: " + draft.approvalActions,
+          "Blocked actions: " + draft.blockedActions,
+          "Execution identity and scope: " + draft.credentialScope,
+          "Audit trail: " + draft.auditTrail,
+          "Failure containment: " + draft.failurePath,
+          "Proof links: " + draft.proofLinks,
+          "Open review question: " + draft.openQuestions
+        ].join("\n\n");
+
+        const approvalGateAnswer = [
+          "AI agent workflow reviewed: " + draft.workflow + " (" + workflowStateMap[draft.workflowStatus] + ").",
+          "Read-only actions: " + draft.readActions,
+          "Actions requiring approval: " + draft.approvalActions,
+          "Blocked actions: " + draft.blockedActions,
+          "Approver and interface: " + draft.approver,
+          "Credential scope after approval: " + draft.credentialScope,
+          "Audit trail and reviewer evidence: " + draft.auditTrail,
+          "Failure and escalation path: " + draft.failurePath,
+          "Proof links: " + draft.proofLinks,
+          "Open review question: " + draft.openQuestions
+        ].join("\n\n");
+
+        const controlBrief = [
+          "# " + draft.company + " AI agent control brief",
+          "",
+          "- Workflow: " + draft.workflow,
+          "- Status: " + workflowStateMap[draft.workflowStatus],
+          "- Primary reviewer concern: " + draft.primaryConcern,
+          "- Connected systems: " + draft.systems,
+          "- Read-only actions: " + draft.readActions,
+          "- Mutating actions: " + draft.writeActions,
+          "- Approval-required actions: " + draft.approvalActions,
+          "- Blocked actions: " + draft.blockedActions,
+          "- Approver and interface: " + draft.approver,
+          "- Credential scope: " + draft.credentialScope,
+          "- Audit trail: " + draft.auditTrail,
+          "- Failure path: " + draft.failurePath,
+          "- Proof links: " + draft.proofLinks,
+          "- Open questions: " + draft.openQuestions,
+          "- Recheck triggers: " + draft.recheckTriggers
+        ].join("\n");
+
+        const gapChecklist = evaluation.gaps.length
+          ? evaluation.gaps.map((item, index) => (index + 1) + ". " + item).join("\n")
+          : "1. No obvious structural gaps remain in this draft.";
+
+        toolAccessOutputNode.innerHTML = toolAccessAnswer.split("\n\n").map((paragraph) => "<p>" + escapeHtml(paragraph) + "</p>").join("");
+        approvalGateOutputNode.innerHTML = approvalGateAnswer.split("\n\n").map((paragraph) => "<p>" + escapeHtml(paragraph) + "</p>").join("");
+        controlBriefOutputNode.innerHTML = controlBrief.split("\n").map((line) => line ? "<p>" + escapeHtml(line) + "</p>" : "").join("");
+        gapsOutputNode.innerHTML = gapChecklist.split("\n").map((line) => "<p>" + escapeHtml(line) + "</p>").join("");
+
+        return {
+          toolAccessAnswer,
+          approvalGateAnswer,
+          controlBrief,
+          gapChecklist,
+          slug: slugify(draft.company + "-" + draft.workflow)
+        };
+      }
+
+      function applyPreset(name) {
+        const preset = presetMap[name];
+        if (!preset) {
+          return;
+        }
+        applyDraft(preset);
+        saveDraft();
+        buildOutputs();
+        workspaceStatusNode.textContent = "Preset loaded and saved locally.";
+      }
+
+      function applySourceContext() {
+        const params = new URLSearchParams(window.location.search);
+        const source = params.get("source");
+        if (!source) {
+          return;
+        }
+        const config = sourceConfigs[source];
+        if (!config) {
+          return;
+        }
+        sourceContextSection.hidden = false;
+        sourceContextTitle.textContent = config.title;
+        sourceContextCopy.textContent = config.copy;
+        sourceContextPoints.innerHTML = config.points.map((item) => "<li>" + escapeHtml(item) + "</li>").join("");
+      }
+
+      fields.forEach((field) => {
+        field.addEventListener("input", () => {
+          saveDraft();
+          buildOutputs();
+          workspaceStatusNode.textContent = "Draft autosaved on this device only.";
+        });
+        field.addEventListener("change", () => {
+          saveDraft();
+          buildOutputs();
+          workspaceStatusNode.textContent = "Draft autosaved on this device only.";
+        });
+      });
+
+      document.querySelectorAll("[data-preset]").forEach((button) => {
+        button.addEventListener("click", () => applyPreset(button.dataset.preset));
+      });
+
+      document.querySelector("#copy-tool-access").addEventListener("click", () => {
+        copyText(buildOutputs().toolAccessAnswer, "Tool-access answer copied.");
+      });
+      document.querySelector("#copy-approval-gate").addEventListener("click", () => {
+        copyText(buildOutputs().approvalGateAnswer, "Approval-gate answer copied.");
+      });
+      document.querySelector("#copy-control-brief").addEventListener("click", () => {
+        copyText(buildOutputs().controlBrief, "Control brief copied.");
+      });
+      document.querySelector("#download-workspace").addEventListener("click", () => {
+        const payload = buildOutputs();
+        const content = [
+          payload.controlBrief,
+          "",
+          "## Tool-access answer",
+          "",
+          payload.toolAccessAnswer,
+          "",
+          "## Approval-gate answer",
+          "",
+          payload.approvalGateAnswer,
+          "",
+          "## Gap checklist",
+          "",
+          payload.gapChecklist
+        ].join("\n");
+        downloadFile(payload.slug + ".md", content);
+        workspaceStatusNode.textContent = "Workspace downloaded as Markdown.";
+      });
+      document.querySelector("#clear-draft").addEventListener("click", () => {
+        window.localStorage.removeItem(STORAGE_KEY);
+        applyPreset("support-copilot");
+        workspaceStatusNode.textContent = "Saved draft cleared from this device.";
+      });
+
+      loadDraft();
+      applySourceContext();
+      buildOutputs();
+    </script>
+  </body>
+</html>
