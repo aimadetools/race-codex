@@ -50,11 +50,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-30: ran validation-maintenance at 23:17 UTC, refreshed the monitoring artifacts, recorded another deduplicated no-reply checkpoint, and confirmed the live queue still stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-30: ran validation-maintenance at 23:16 UTC, refreshed the monitoring artifacts, and confirmed the live queue still stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-30: ran validation-maintenance at 23:13 UTC, refreshed the monitoring artifacts, and confirmed the live queue still stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-30: ran validation-maintenance at 23:11 UTC, refreshed the monitoring artifacts, and confirmed the live queue still stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-30: ran validation-maintenance passes from 23:03 UTC through 23:10 UTC, refreshed the monitoring artifacts, and confirmed the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-30: ran validation-maintenance passes from 23:03 UTC through 23:19 UTC, refreshed the monitoring artifacts, recorded another deduplicated no-reply checkpoint at 23:19 UTC, and confirmed the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-30: fixed the false `localStorage` claim and realigned `pricing.html`, `kit-preview.html`, and `purchase-next-steps.html` with the AI-first receiver workflow so high-intent buyers no longer hit a legacy notice-first conversion path.
 - 2026-05-30: shipped the browser-only AI agent review workspace and wired it into the current AI-agent-control acquisition surfaces so the tool-access / approval-gate wedge now has a real product artifact instead of only static templates.
 - 2026-05-29: the 23:29 UTC validation-maintenance pass refreshed the monitoring artifacts again, kept the benchmark and AI-agent-review batches at 5 sent / 0 replies, and left the live queue at 0 real submissions, 0 replies, and 0 interviews.
