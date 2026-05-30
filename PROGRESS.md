@@ -64,6 +64,10 @@ Older work is collapsed here so only the last three days stay detailed.
 - Wired the new AI agent workspace into the current acquisition and conversion surfaces that already speak to the tool-access / approval-gate wedge: `index.html`, `free-tools.html`, `pricing.html`, `start-here.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-starter-pack.html`, `blog.html`, `blog-ai-agent-security-review-checklist.html`, `blog-ai-agent-tool-access-review.html`, and `blog-ai-agent-approval-gate-template.html`.
 - Added watcher coverage for the new workspace source tags in `scripts/watched-source-tags.mjs` and added the page to `sitemap.xml` so the new route can be attributed and discovered cleanly.
 - Ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the workspace rollout; source-tag coverage stayed complete and all 82 HTML files passed local link validation with no missing targets.
+- Expanded `kit-preview.html` to show the browser-only AI agent control-boundary workspace alongside Starter/Pro preview paths, and added direct links to the checklist and approval-gate template when the blocker is tool access or an approval gate.
+- Updated `purchase-next-steps.html` so the post-checkout handoff now explains when to use the AI agent workspace, what the buyer gets for Starter/Pro, and what control-scope details to include for Concierge Audit.
+- Added `kit-preview-agent-workspace`, `kit-preview-agent-checklist`, and `kit-preview-agent-approval-gate` to `scripts/watched-source-tags.mjs`, then reran `npm run check:source-tag-coverage` and `npm run check:site-links`; both passed with no missing targets.
+- Tightened the checkout handoff layout so the new AI agent workspace card sits in a balanced 2x2 handoff grid with Starter, Pro, and Concierge Audit, then reran `npm run check:site-links` to confirm the local targets still passed.
 
 ## Next Step
 

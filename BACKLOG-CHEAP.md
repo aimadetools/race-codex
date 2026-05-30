@@ -138,6 +138,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-30: clarified `kit-preview.html` and `purchase-next-steps.html` around the browser-only AI agent workspace, added the new kit-preview control-boundary source tags to watcher coverage, and reran the site validation checks.
 - 2026-05-30: refreshed `about.html` into a real routing page for the AI questionnaire wedge, corrected stale social-preview alt text on `about.html` and `audit-request.html`, and added the missing `kit-preview-grid-builder` watcher entry so source-tag coverage stayed complete.
 - 2026-05-30: fixed the false `localStorage` claim and refreshed `pricing.html`, `kit-preview.html`, and `purchase-next-steps.html` so the high-intent buyer path now matches the AI-first receiver workflow instead of legacy notice-first packaging.
 - 2026-05-30: shipped `ai-agent-review-workspace.html`, wired it into the AI-agent-control acquisition surfaces, and extended watcher coverage plus sitemap discovery so the new workspace can be measured cleanly.
