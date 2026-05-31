@@ -51,6 +51,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-31: ran validation maintenance at 08:25 UTC, refreshed the inbox, help-request, outreach, partner, benchmark, AI-agent-review, follow-up-pass, generator, and validation artifacts, reran self-audit and site checks, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-31: ran validation maintenance at 08:10, 08:15, 08:18, 08:20, and 08:23 UTC, refreshed the inbox, help-request, outreach, partner, benchmark, AI-agent-review, follow-up-pass, generator, and validation artifacts, reran self-audit and site checks, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-31: shipped the browser-only AI security review evidence map and routed it through the homepage, free-tools, pricing, starter-pack, AI-agent-workspace, and proof-first support paths, then extended it into repeat-review, named-vendor, and generic answer routes.
 - 2026-05-30: validation maintenance plus the pricing/kit-preview/purchase-next-steps fixups kept the self-audit, contact inbox, help, partner, benchmark, and AI-agent-review checks green while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
