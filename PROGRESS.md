@@ -77,6 +77,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Wired the evidence map into `ai-vendor-risk-assessment-worksheet.html`, `blog-ai-vendor-risk-assessment.html`, `blog-ai-security-questionnaire.html`, `blog-ai-agent-security-review-checklist.html`, `blog-ai-training-stance-answer-template.html`, and `blog-ai-security-questionnaire-answer-bank-vs-pro-kit.html`, including a mid-score worksheet route that now branches into the evidence map when proof, owner, or review-date gaps remain.
 - Replaced the two `root`-owned generic AI guide/comparison pages with identical user-owned copies before editing them, then added the new `ai-vendor-risk-assessment-worksheet-evidence-map`, `ai-vendor-risk-assessment-evidence-map`, `ai-security-questionnaire-guide-evidence-map`, `agent-review-checklist-evidence-map`, `ai-training-stance-template-evidence-map`, and `ai-answer-bank-vs-pro-kit-evidence-map` watcher tags plus matching source-context handling in `ai-security-review-evidence-map.html`.
 - Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the remaining proof-first routing pass; watcher coverage stayed complete at 541 emitted tags and all 83 HTML files still passed local link validation.
+- Trimmed the top-of-funnel clutter on `index.html` and `pricing.html` so the first screen now shows fewer equal-weight choices and pushes proof, named-vendor, and AI-agent routes into the supporting sections below while keeping the same live destinations reachable.
+- Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the hero cleanup; watcher coverage stayed complete at 541 emitted tags and all 83 HTML files still passed local link validation.
 
 ## Next Step
 
