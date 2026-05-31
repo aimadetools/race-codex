@@ -211,6 +211,7 @@
               <div class="route-presets" aria-label="Quick route presets">
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">AI inventory first</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="once">AI answer now</button>
+                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="proof-pack" data-route-frequency="once">AI proof first</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="repeat">AI repeated review</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="named-vendor" data-route-frequency="once">OpenAI template</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="named-vendor" data-route-frequency="repeat">OpenAI answer bank</button>
@@ -238,6 +239,7 @@
                   <select id="route-need">
                     <option value="written-answer">A written answer before I buy</option>
                     <option value="files-now">The files to use right away</option>
+                    <option value="proof-pack">Proof, owner, or review metadata</option>
                     <option value="named-vendor">A named-vendor answer</option>
                     <option value="agent-controls">An AI agent control review</option>
                     <option value="public-page">A review of the public page or workflow</option>
@@ -715,6 +717,44 @@
               secondaryHref: "blog-subprocessor-benchmark-worksheet.html?source=free-tools-route-finder",
               secondaryLabel: "Open tracker",
             };
+          } else if (need === "proof-pack") {
+            recommendation = topic === "ai-procurement"
+              ? {
+                  title: "Open the evidence map first.",
+                  summary: frequency === "repeat"
+                    ? "The blocker is proof, owner, review-date, or approval metadata, so package one claim with its evidence before you widen into a reusable answer-bank workflow."
+                    : "The blocker is proof, owner, review-date, or approval metadata, so package one claim with its evidence before you keep polishing the paragraph.",
+                  bullets: frequency === "repeat"
+                    ? [
+                        "Best when reviewers keep asking for proof and accountability details",
+                        "Keeps the reusable answer bank one click away after the evidence is clean",
+                        "Prevents another repeat-review thread from drifting into vague trust language"
+                      ]
+                    : [
+                        "Best when the buyer wants proof assets, owner, review date, or approval path",
+                        "Packages one claim, its evidence, and the next recheck trigger together",
+                        "Keeps the answer builder one click away after the evidence is coherent"
+                      ],
+                  primaryHref: "ai-security-review-evidence-map.html?source=free-tools-route-finder-evidence-map",
+                  primaryLabel: "Open evidence map",
+                  secondaryHref: frequency === "repeat"
+                    ? "ai-security-questionnaire-answer-bank.html?source=free-tools-route-finder"
+                    : "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
+                  secondaryLabel: frequency === "repeat" ? "Open answer bank" : "Open answer builder",
+                }
+              : {
+                  title: "Open the proof-packet checklist first.",
+                  summary: "The blocker is proof collection and review metadata rather than the draft itself, so start with the checklist and evidence log before you rewrite the notice copy.",
+                  bullets: [
+                    "Best when customer notice or counsel review needs a coherent proof trail",
+                    "Keeps the evidence log one click away for dates, owners, and artifact links",
+                    "Prevents the notice workflow from relying on scattered screenshots and notes"
+                  ],
+                  primaryHref: "blog-subprocessor-proof-packet-checklist.html?source=free-tools-route-finder",
+                  primaryLabel: "Open proof-packet checklist",
+                  secondaryHref: "blog-subprocessor-evidence-log-template.html?source=free-tools-route-finder",
+                  secondaryLabel: "Open evidence log",
+                };
           } else if (need === "named-vendor") {
             recommendation = frequency === "repeat"
               ? {
