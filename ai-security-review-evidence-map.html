@@ -428,6 +428,51 @@
             "Pair the claim with concrete proof assets and a named owner.",
             "Use teardown if the evidence still feels too weak to send."
           ]
+        },
+        "ai-security-questionnaire-answer-bank-evidence-map": {
+          title: "You came from the repeat-review answer-bank route.",
+          copy: "Use this when the team already has reusable wording, but one weak proof chain could poison the whole answer bank if it gets copied forward.",
+          points: [
+            "Fix one claim at a time before you promote it into the reusable bank.",
+            "Name the proof assets, owner, and review date behind the reusable answer.",
+            "Move back into the answer bank only after this evidence trail is stable."
+          ]
+        },
+        "openai-answer-bank-evidence-map": {
+          title: "You came from the named-vendor OpenAI answer-bank route.",
+          copy: "The blocker is not repeated wording anymore. It is whether one OpenAI-specific claim has enough proof, ownership, and review metadata to reuse safely.",
+          points: [
+            "Keep the claim tied to one OpenAI workflow and customer scope.",
+            "Attach the vendor terms, internal notes, and owner before you copy the answer again.",
+            "Return to the OpenAI answer bank only after the named-vendor proof trail is coherent."
+          ]
+        },
+        "openai-security-questionnaire-template-evidence-map": {
+          title: "You came from the named-vendor OpenAI template route.",
+          copy: "The OpenAI answer shape already exists. Use this to package the proof trail behind that named-vendor claim before the buyer asks the same follow-up twice.",
+          points: [
+            "Keep the map tied to one OpenAI-backed workflow and one reviewer question.",
+            "Name the proof assets, owner, and review cadence behind the vendor-specific answer.",
+            "Return to the OpenAI template or answer bank only after the evidence trail is defensible."
+          ]
+        },
+        "ai-agent-review-evidence-map": {
+          title: "You came from the AI agent tool-access route.",
+          copy: "The control answer already names tools and scope. Use this page when the buyer now wants proof, ownership, review date, or approval evidence behind that control story.",
+          points: [
+            "Keep the claim tied to one workflow and one control boundary.",
+            "Attach the audit, policy, or architecture proof behind the tool-access answer.",
+            "Move back into the workspace or answer bank only after the evidence chain is solid."
+          ]
+        },
+        "ai-agent-approval-gate-evidence-map": {
+          title: "You came from the AI agent approval-gate route.",
+          copy: "Use this when the autonomy answer is close, but the buyer still wants the proof assets, owner, review date, or approval evidence behind one approval-boundary claim.",
+          points: [
+            "Keep the claim limited to one approval stop or blocked action set.",
+            "Attach the policy line, workflow proof, and owner before you reuse the answer.",
+            "Return to the approval-gate or workspace route only after the evidence path is explicit."
+          ]
         }
       };
 
