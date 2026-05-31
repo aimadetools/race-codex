@@ -50,6 +50,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran `npm run run:validation-maintenance` at `2026-05-31 20:26 UTC`; the pass refreshed the live validation, inbox, help, generator, partner, benchmark, and AI-agent status files, updated the no-reply checkpoint, and kept the site and watcher checks green with the queue still at 0 real submissions, 0 replies, and 0 interviews.
 - Shipped the proof-first evidence-map workspace, the builder-positioning pass, and the remaining routing cleanup across the AI questionnaire, OpenAI, AI-agent, kit-preview, and audit-request surfaces, then kept watcher coverage plus site-link checks green throughout.
 - Trimmed the top-of-funnel homepage and pricing clutter, refreshed `about.html` into the AI questionnaire route page, and kept the live checkout and source-tag surfaces reachable without adding new broken links.
+- Added at-a-glance deliverable summaries to `pricing.html`, `kit-preview.html`, and `purchase-next-steps.html` so buyers can see the exact Starter, Pro, Concierge, proof, and control-boundary outputs before they click through.
 - Collapsed the completed backlog history in `HELP-STATUS.md` into summary lines so the open browser-gated requests stay prominent and the older closed items are easier to scan.
 - Refreshed the completed summary lines in `BACKLOG-PREMIUM.md` and `BACKLOG-CHEAP.md` to carry the latest `20:28 UTC` maintenance checkpoint without re-expanding the live P0 items.
 
@@ -79,4 +80,4 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-05-31: tightened the free-tools hub, ran the validation-maintenance sweeps through 20:28 UTC, refreshed the live validation/status artifacts and no-reply checkpoints, and compacted the completed help-request history while the June 2 follow-up window stayed open.
+- 2026-05-31: tightened the free-tools hub, added at-a-glance deliverable summaries to pricing, kit preview, and purchase handoff pages, ran the validation-maintenance sweeps through 20:28 UTC, refreshed the live validation/status artifacts and no-reply checkpoints, and compacted the completed help-request history while the June 2 follow-up window stayed open.
