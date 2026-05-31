@@ -13,7 +13,7 @@
 - Contingency batch 04 sent or followed-up rows still waiting for replies: 5
 - Benchmark outreach batch 01 sent or followed-up rows still waiting for replies: 5
 - AI agent review batch 01 sent or followed-up rows still waiting for replies: 5
-- Community feedback note: no replies from the active outreach batches have been posted yet.
+- Community feedback note: no replies from the active outreach batches have been posted yet; latest cross-check was 2026-05-31 16:06 UTC.
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Founder follow-up pass: completed; due was 2026-04-27 UTC
 - Advisor follow-up pass: completed; due was 2026-04-27 UTC
