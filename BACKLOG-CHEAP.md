@@ -144,6 +144,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-31: finished the remaining proof-first routing pass across the AI risk worksheet/checklist, AI questionnaire guide, AI agent checklist, training-stance template, and answer-bank-vs-Pro comparison, replaced the two `root`-owned generic AI pages with writable copies, and kept watcher coverage plus site-link checks green at 541 emitted tags / 83 passing HTML files.
 - 2026-05-31: extended the proof-first evidence-map branch into the buyer follow-up tool/article plus the named-vendor OpenAI path guide, template, and filled-example pages, replaced the two `root`-owned OpenAI blog files with writable copies, and kept watcher coverage plus site-link checks green at 535 emitted tags / 83 passing HTML files.
 - 2026-05-31: ran repeated validation-maintenance passes, refreshed the inbox/help/outreach/partner/benchmark/AI-agent-review/self-audit artifacts, reran site checks, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-31: shipped the builder-positioning pass across the core receiver-side acquisition surfaces so the free layer now clearly advertises one answer block, 20 reusable follow-up responses, a reviewer workspace export, and an answer-bank draft.

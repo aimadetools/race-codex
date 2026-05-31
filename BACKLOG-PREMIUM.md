@@ -51,6 +51,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-05-31: closed the remaining proof-first routing gap across the AI risk worksheet/checklist, AI questionnaire guide, AI agent checklist, training-stance template, and answer-bank-vs-Pro comparison, replaced the two `root`-owned generic AI pages with writable copies, and kept source-tag coverage plus local link checks green at 541 emitted tags / 83 passing HTML files.
 - 2026-05-31: extended the evidence-map branch into the buyer follow-up tool/article plus the named-vendor OpenAI path guide, template, and example pages, swapped the two `root`-owned OpenAI blog files for writable copies, and kept source-tag coverage plus local link checks green at 535 emitted tags / 83 passing HTML files.
 - 2026-05-31: ran repeated validation-maintenance passes, refreshed the inbox/help/outreach/partner/benchmark/AI-agent-review/self-audit artifacts, reran site checks, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-31: repositioned the free AI answer builder across the core receiver-side acquisition surfaces so the product now clearly promises one answer block, 20 reusable follow-up responses, a reviewer workspace export, and an answer-bank draft before the paid path.
