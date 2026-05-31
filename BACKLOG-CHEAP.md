@@ -141,6 +141,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-05-31: added proof-first routing to the generic and OpenAI answer-bank-vs-builder comparison pages, then updated evidence-map source-context handling and watcher coverage; site-link and source-tag checks stayed green.
 - 2026-05-30: validation maintenance and follow-up QA refreshes at 23:03-23:28 UTC kept the self-audit, contact inbox, validation, benchmark, and AI-agent-review checks green; the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-30: the 23:27-23:22 UTC passes and the 23:03-23:21 UTC sweep refreshed the monitoring artifacts, kept the no-reply checkpoint deduplicated, and left the live queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-30: the receiver-side pricing, kit-preview, purchase-next-steps, about, and AI-agent-workspace updates shipped cleanly and the watcher / site-link checks stayed green.

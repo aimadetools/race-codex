@@ -57,6 +57,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the repeat-review and AI-agent routing pass; watcher coverage stayed complete and all 83 HTML files still passed local link validation.
 - Replaced the two `root`-owned generic answer-first pages with identical user-owned copies, then finished wiring the evidence map into `blog-ai-security-questionnaire-answer-template.html` and `blog-ai-security-questionnaire-answer-example.html` so the generic answer-template and filled-example routes now feed the same proof-first path as the repeat-review, named-vendor, and AI-agent surfaces.
 - Added `ai-security-questionnaire-template-evidence-map` and `ai-security-questionnaire-example-evidence-map` watcher tags plus matching source-context copy in `ai-security-review-evidence-map.html`, then re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; watcher coverage stayed complete at 522 emitted tags and all 83 HTML files still passed local link validation.
+- Added proof-first routing to the generic and OpenAI answer-bank-vs-builder comparison pages, then taught `ai-security-review-evidence-map.html` and `scripts/watched-source-tags.mjs` to recognize the new comparison-page evidence-map source tags.
+- Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; watcher coverage stayed complete at 524 emitted tags and all 83 HTML files still passed local link validation.
 
 ## Next Step
 
