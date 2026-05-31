@@ -39,11 +39,12 @@
       <main id="main-content">
         <section class="page-hero">
           <span class="eyebrow">Audit and access request</span>
-          <h1>Send one vendor-change URL and get a blunt async read.</h1>
-          <p>Use this intake to request a free async teardown, prepare a paid Concierge Audit, or ask about Starter, Pro, and partner access. NoticeKit uses the details to scope the next step and reply by email, no call required. For teardown requests, include the live subprocessor page URL and the affected customer segment so the reply can stay specific.</p>
+          <h1>Send one blocked review thread and get a blunt async read.</h1>
+          <p>Use this intake to request a free async teardown, prepare a paid Concierge Audit, or ask about Starter, Pro, and partner access. NoticeKit uses the details to scope the next step and reply by email, no call required. For teardown requests, include the live questionnaire, packet, trust page, or subprocessor URL plus the affected workflow or customer segment so the reply can stay specific.</p>
           <div class="hero-actions">
             <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=audit-request-ai-deal-blocker">Need the shortest AI questionnaire path?</a>
-            <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=audit-request-ai-answer-builder">Need one answer block first?</a>
+            <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=audit-request-ai-answer-builder">Need one answer block plus handoff first?</a>
+            <a class="button secondary" href="ai-security-review-evidence-map.html?source=audit-request-ai-evidence-map">Need proof or owner metadata first?</a>
             <a class="button secondary" href="blog-ai-security-questionnaire-answer-example.html?source=audit-request-ai-answer-builder">Need a filled AI answer example?</a>
             <a class="button secondary" href="blog-ai-vendor-disclosure-packet.html?source=audit-request-ai-packet">Need a procurement-ready packet first?</a>
             <a class="button secondary" href="blog-ai-saas-subprocessor-list-template.html?source=audit-request-ai-stack">Start with the AI stack guide</a>
@@ -65,32 +66,33 @@
           <div class="grid-2">
             <article class="panel legal-panel">
               <h2>Best low-friction ask</h2>
-              <p>Not ready to buy or book a call? Send the current subprocessor page URL, the planned vendor change, and the affected customer segment. NoticeKit can reply with a short async gap read, usually in three bullets, instead of a meeting request.</p>
+              <p>Not ready to buy or book a call? Send the current questionnaire prompt, trust page, packet draft, or subprocessor URL plus the blocked workflow and customer context. NoticeKit can reply with a short async gap read, usually in three bullets, instead of a meeting request.</p>
               <ul class="feature-list">
-                <li>Free async teardown: one live URL, one vendor change, one blunt gap note</li>
-                <li>Paid audit: prioritized fix plan for an urgent or customer-facing change</li>
+                <li>Free async teardown: one live URL or question, one blocker, one blunt gap note</li>
+                <li>Paid audit: prioritized fix plan for an urgent or customer-facing review blocker</li>
                 <li>Partner request: consultant and advisor workflow fit check</li>
               </ul>
               <h2>What happens next</h2>
               <ul class="feature-list">
-                <li>We read the URL, vendor change, and affected customer segment first.</li>
+                <li>We read the live URL or question, the blocker, and the affected customer segment first.</li>
                 <li>We reply by email with the next best step: teardown, audit intake, or partner fit check.</li>
                 <li>We keep the source tag attached so follow-up notes stay attributable in repo memory.</li>
               </ul>
               <h2>What to prepare</h2>
               <ul class="feature-list">
                 <li>Company name and website</li>
-                <li>Current subprocessor page URL or closest live page</li>
-                <li>Vendor being added, removed, or replaced</li>
-                <li>Planned effective date and customer notice window</li>
-                <li>Customer segment affected by the change</li>
-                <li>Anything counsel has already asked you to preserve</li>
+                <li>Current questionnaire prompt, packet, trust page, or closest live review URL</li>
+                <li>Workflow, vendor, or proof blocker that is holding up the review</li>
+                <li>Procurement deadline, review date, or customer notice window</li>
+                <li>Customer segment or contract class affected by the answer</li>
+                <li>Anything procurement, security, privacy, or counsel has already asked you to preserve</li>
               </ul>
               <h2>If procurement is the blocker</h2>
-              <p>Use the AI questionnaire starter pack first when the deal is stuck on the AI section and you need the shortest route into the answer builder, example, packet, or teardown path. Use the disclosure packet guide when the real problem is packaging vendor facts, notice timing, and proof into one review artifact instead of sending another scattered intake email.</p>
+              <p>Use the AI questionnaire starter pack first when the deal is stuck on the AI section and you need the shortest route into the answer builder, evidence map, example, packet, or teardown path. Use the disclosure packet guide when the real problem is packaging workflow facts, timing, approvals, and proof into one review artifact instead of sending another scattered intake email.</p>
               <div class="hero-actions">
                 <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=audit-request-ai-deal-blocker">Open starter pack</a>
                 <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=audit-request-ai-answer-builder">Open answer builder</a>
+                <a class="button secondary" href="ai-security-review-evidence-map.html?source=audit-request-ai-evidence-map">Open evidence map</a>
                 <a class="button secondary" href="blog-ai-security-questionnaire-answer-example.html?source=audit-request-ai-answer-builder">Open answer example</a>
                 <a class="button secondary" href="blog-ai-vendor-disclosure-packet.html?source=audit-request-ai-packet">Open disclosure packet guide</a>
                 <a class="button secondary" href="noticekit-ai-vendor-disclosure-packet-template.md" download>Download packet template</a>
@@ -130,14 +132,14 @@
                     <option value="unknown">Other</option>
                   </select>
                 </label>
-                <label>Subprocessor page URL
-                  <input id="subprocessor-url" name="subprocessor-url" type="url" placeholder="https://example.com/privacy/subprocessors">
+                <label>Live page or thread URL
+                  <input id="subprocessor-url" name="subprocessor-url" type="url" placeholder="https://example.com/security-questionnaire or https://example.com/privacy/subprocessors">
                 </label>
-                <label>Vendor change
-                  <textarea id="vendor-change" name="vendor-change" placeholder="Example: Adding Acme Email Cloud for transactional email delivery on May 20."></textarea>
+                <label>Vendor, workflow, or review blocker
+                  <textarea id="vendor-change" name="vendor-change" placeholder="Example: Buyer wants proof assets and named owner behind our OpenAI retention answer for the support copilot workflow."></textarea>
                 </label>
-                <label>Customer segment and notice window
-                  <textarea id="deadline" name="deadline" placeholder="Example: EU customers on signed DPA, 30-day notice window, effective May 20."></textarea>
+                <label>Customer segment, deadline, or review window
+                  <textarea id="deadline" name="deadline" placeholder="Example: Enterprise prospect, security review due June 4, legal follow-up expected if the proof trail is still thin."></textarea>
                 </label>
                 <label>What you need reviewed
                   <textarea id="review-need" name="review-need" placeholder="Example: Notice copy, objection-window tracker, evidence trail, and public subprocessor page."></textarea>
