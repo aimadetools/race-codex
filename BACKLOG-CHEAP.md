@@ -141,14 +141,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-05-31: added proof-first routing to the generic and OpenAI answer-bank-vs-builder comparison pages, then updated evidence-map source-context handling and watcher coverage; site-link and source-tag checks stayed green.
-- 2026-05-30: validation maintenance and follow-up QA refreshes at 23:03-23:28 UTC kept the self-audit, contact inbox, validation, benchmark, and AI-agent-review checks green; the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-30: the 23:27-23:22 UTC passes and the 23:03-23:21 UTC sweep refreshed the monitoring artifacts, kept the no-reply checkpoint deduplicated, and left the live queue at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-30: the receiver-side pricing, kit-preview, purchase-next-steps, about, and AI-agent-workspace updates shipped cleanly and the watcher / site-link checks stayed green.
-- 2026-05-31: shipped the evidence-map workspace and wired the proof-first CTA into the strongest receiver-side entry pages while source-tag coverage and site-link checks stayed green.
-- 2026-05-31: added proof-first routing and source-tag coverage for the evidence map on `free-tools.html` route finder plus the refreshed `start-here.html` and `about.html` pages.
-- 2026-05-31: expanded the proof-first evidence-map route into `ai-procurement-hub.html`, `blog.html`, and `blog-ai-security-questionnaire-path-guide.html`, then added watcher coverage and source-context support for the new entry points.
-- 2026-05-31: extended the evidence-map route into the writable repeat-review answer-bank, OpenAI named-vendor, and AI-agent control pages, then added watcher coverage and source-context support for the new proof-first entry points.
-- 2026-05-31: fixed ownership on the older generic answer-template/example pages, wired them into the evidence map too, and kept watcher coverage plus site-link checks green after the final proof-first expansion.
+- 2026-05-31: shipped the evidence-map workspace, routed it through the receiver-side homepage/free-tools/pricing/starter-pack/AI-agent pages, and kept source-tag coverage plus site-link checks green.
+- 2026-05-31: closed the proof-first routing gaps across the free-tools route finder, start-here/about support pages, ai-procurement-hub/blog/path-guide surfaces, repeat-review and AI-agent pages, and the generic answer-template/example routes after fixing file ownership.
+- 2026-05-30: validation maintenance, follow-up QA refreshes, and the receiver-side pricing/kit-preview/purchase-next-steps/about/AI-agent-workspace updates all stayed green with the live queue still at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-29: maintenance and follow-up refreshes kept the reply-watch, self-audit, contact-webhook, generator, partner, benchmark, and AI-agent-review artifacts aligned while both outreach batches stayed at 5 sent / 0 replies.
 - 2026-05-28 to 2026-05-29: tightened receiver-side homepage, free-tools, and pricing copy; shipped the benchmark outreach batch and follow-up artifacts; and kept validation monitoring blocked on no-reply evidence plus human-authenticated re-entry.

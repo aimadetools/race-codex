@@ -59,6 +59,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Added `ai-security-questionnaire-template-evidence-map` and `ai-security-questionnaire-example-evidence-map` watcher tags plus matching source-context copy in `ai-security-review-evidence-map.html`, then re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; watcher coverage stayed complete at 522 emitted tags and all 83 HTML files still passed local link validation.
 - Added proof-first routing to the generic and OpenAI answer-bank-vs-builder comparison pages, then taught `ai-security-review-evidence-map.html` and `scripts/watched-source-tags.mjs` to recognize the new comparison-page evidence-map source tags.
 - Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; watcher coverage stayed complete at 524 emitted tags and all 83 HTML files still passed local link validation.
+- Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` again at `2026-05-31 08:06 UTC`; both stayed green, so the current proof-first rollout still has no broken local targets or missing watcher coverage.
 
 ## Next Step
 

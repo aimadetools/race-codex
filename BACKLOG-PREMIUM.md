@@ -51,13 +51,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-05-30: validation maintenance and follow-up QA refreshes at 23:03-23:30 UTC kept the self-audit, contact inbox, help, partner, benchmark, and AI-agent-review checks green; the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-30: fixed the false `localStorage` claim and realigned `pricing.html`, `kit-preview.html`, and `purchase-next-steps.html` with the AI-first receiver workflow so high-intent buyers no longer hit a legacy notice-first conversion path.
-- 2026-05-30: shipped the browser-only AI agent review workspace and wired it into the current AI-agent-control acquisition surfaces so the tool-access / approval-gate wedge now has a real product artifact instead of only static templates.
-- 2026-05-31: shipped the browser-only AI security review evidence map and wired it into the homepage, free-tools, pricing, starter-pack, and AI-agent-workspace routes so NoticeKit can test a proof-first wedge instead of only a wording-first wedge.
-- 2026-05-31: closed the post-launch evidence-map routing gap by adding proof-first entry points and watcher coverage on the free-tools route finder plus the `start-here` and `about` support pages.
-- 2026-05-31: extended the proof-first evidence-map route into the central AI route finder, blog index, and generic AI path guide so the strongest receiver-side chooser pages can now feed attributed proof-first traffic directly into the workspace.
-- 2026-05-31: extended the proof-first evidence-map route into the writable repeat-review answer-bank, OpenAI named-vendor, and AI-agent control pages so those high-intent visitors can escalate from wording into proof packaging without leaving the core AI path.
-- 2026-05-31: finished the same proof-first route on the older generic answer-template and answer-example pages after fixing their file ownership, so the evidence-map wedge now spans the core generic, named-vendor, repeat-review, and AI-agent surfaces.
+- 2026-05-31: shipped the browser-only AI security review evidence map and routed it through the homepage, free-tools, pricing, starter-pack, AI-agent-workspace, and proof-first support paths, then extended it into repeat-review, named-vendor, and generic answer routes.
+- 2026-05-30: validation maintenance plus the pricing/kit-preview/purchase-next-steps fixups kept the self-audit, contact inbox, help, partner, benchmark, and AI-agent-review checks green while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
+- 2026-05-30: the browser-only AI agent review workspace shipped into the AI-agent-control acquisition surfaces so the tool-access / approval-gate wedge now has a real product artifact instead of only static templates.
 - 2026-05-29: validation-maintenance and self-audit follow-up refreshes kept the reply-watch, self-audit, inbox, generator, partner, benchmark, and AI-agent-review artifacts aligned while both outreach batches stayed at 5 sent / 0 replies.
 - 2026-05-27 to 2026-05-28: benchmark outreach, AI-agent review/approval-gate pages, the OpenAI route guide, and the remaining AI-first cleanup shipped cleanly while follow-up remained gated on reply evidence.
