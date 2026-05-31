@@ -31,7 +31,7 @@ node scripts/send-validation-batch.mjs --batch 03 --limit 5 --send --transport r
 
 When `--send` succeeds for direct-email rows, the script marks those rows `sent` in the matching CSV and appends the UTC send timestamp plus route to `notes`. Use `--no-update-csv` only for a deliberate one-off send where status will be recorded manually.
 
-The sender enforces the current first-touch date gates: batch 02 cannot be sent before 2026-04-23 UTC, and contingency batches 03 and 04 cannot be sent before the 2026-04-27 no-reply check. Batch 04 also stays blocked until batch 03 has no `ready_for_send` rows left and founder/operator reply rows are still zero. Use `--force-date` only after a documented operator override; it does not bypass the batch 04 prerequisite check.
+The sender enforces the current first-touch date gates: batch 02 cannot be sent before 2026-04-23 UTC, and contingency batches 03 and 04 cannot be sent before the no-reply check. Batch 04 also stays blocked until batch 03 has no `ready_for_send` rows left and founder/operator reply rows are still zero. Use `--force-date` only after a documented operator override; it does not bypass the batch 04 prerequisite check.
 
 Use `--follow-up` for the three-business-day non-responder pass:
 
@@ -43,11 +43,11 @@ node scripts/send-validation-batch.mjs --batch 02 --follow-up --limit 5 --send -
 ```
 
 Follow-up mode selects only rows still marked `sent`, refuses to send before three business days have elapsed from the first send date in `notes`, and marks successful direct-email rows `followed_up`. Use `--force-date` only after a documented operator override.
-The generated follow-up pass files prefer the actual inbox recorded in CSV `notes` when the first send already discovered a direct-email route, so re-read those files before the 2026-04-27 window instead of assuming the broader public contact path is still the best follow-up route.
+The generated follow-up pass files prefer the actual inbox recorded in CSV `notes` when the first send already discovered a direct-email route, so re-read those files before the next follow-up window instead of assuming the broader public contact path is still the best follow-up route.
 Batch 03 now also refuses to send if founder/operator replies, bounces, or interviews already exist in batch 01, so the contingency expansion cannot accidentally override a real founder signal after the no-reply gate date.
 For manual-form sends or follow-ups, use `npm run update:validation-outreach-status -- --batch <id> --company "<name>" --status sent|followed_up --transport manual --route "<form URL or path>" --timestamp "<ISO timestamp>"` instead of hand-editing the CSV; the helper appends the note and syncs the validation artifacts automatically.
 
-Before sending either follow-up pass, run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` shows the founder desktop and advisor mobile tagged paths both passing. That keeps the score-summary mailto path and copy-summary fallback verified right before the 2026-04-27 window.
+Before sending either follow-up pass, run `npm run check:self-audit-follow-up` and confirm `SELF-AUDIT-FOLLOW-UP-QA.md` shows the founder desktop and advisor mobile tagged paths both passing. That keeps the score-summary mailto path and copy-summary fallback verified right before the next follow-up window.
 
 ## Send Prerequisites
 
@@ -98,7 +98,7 @@ Use `npm run log:validation-no-reply-check` for a no-reply checkpoint so the cur
 Use `npm run run:validation-maintenance` for the routine no-reply monitoring pass. It runs the watch, self-audit QA, artifact sync, and no-reply logger together, and it automatically uses a non-regressive UTC checkpoint if repo memory is temporarily ahead of the local system clock. Same-day future timestamps are clamped back to the current UTC time so a later note from the same calendar date does not make the pass look artificially future-dated.
 `record-validation-feedback.mjs`, `append-validation-interview.mjs`, and `send-validation-batch.mjs` now auto-run `npm run sync:validation-artifacts` after any non-dry-run CSV or status update, so the follow-up queues, homepage pivot queue, validation status, and validation watch stay synchronized without a separate rebuild step.
 `update-validation-outreach-status.mjs` uses the same sync path for manual-route status changes, so manual contact-form sends and follow-ups do not need a separate rebuild pass.
-That sync now also refreshes `VALIDATION-POSITIONING-BRIEF.md` and `VALIDATION-DECISION-BRIEF.md`, so the 2026-04-27 window has both an evidence-backed founder-vs-advisor positioning read and the immediate execution queue for follow-ups, batch 03, batch 04, and homepage-pivot checks.
+That sync now also refreshes `VALIDATION-POSITIONING-BRIEF.md` and `VALIDATION-DECISION-BRIEF.md`, so the next follow-up window has both an evidence-backed founder-vs-advisor positioning read and the immediate execution queue for follow-ups, batch 03, batch 04, and homepage-pivot checks.
 `VALIDATION-REPLY-WATCH.md` is the checked-in monitoring artifact from that sync; read it first when the goal is only to know whether replies, due follow-ups, or batch-unlock conditions changed, and use the listed commands when the queue opens.
 
 ## Tagged Self-Audit Triage

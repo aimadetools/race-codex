@@ -177,7 +177,7 @@ const output = [
   "",
   `Date: ${TODAY} UTC`,
   "",
-  "This check validates the tagged self-audit follow-up entry points before the 2026-04-27 non-responder send window.",
+  "This check validates the tagged self-audit follow-up entry points before the next non-responder send window.",
   "",
   "## Coverage",
   "",
