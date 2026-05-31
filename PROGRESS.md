@@ -44,6 +44,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Reran `npm run check:self-audit-follow-up`, fixed the stale follow-up QA wording in `scripts/check-self-audit-follow-up-links.mjs` and `VALIDATION-OUTREACH-SEND-RUNBOOK.md`, and logged a fresh no-reply checkpoint at `2026-05-31 16:20 UTC`.
 - Shipped the proof-first evidence-map workspace, the builder-positioning pass, and the remaining routing cleanup across the AI questionnaire, OpenAI, AI-agent, kit-preview, and audit-request surfaces, then kept watcher coverage plus site-link checks green throughout.
 - Trimmed the top-of-funnel homepage and pricing clutter, refreshed `about.html` into the AI questionnaire route page, and kept the live checkout and source-tag surfaces reachable without adding new broken links.
+- Collapsed the completed backlog history in `HELP-STATUS.md` into summary lines so the open browser-gated requests stay prominent and the older closed items are easier to scan.
 
 ## Next Step
 
@@ -72,3 +73,4 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Completed Summary
 
 - 2026-05-31: ran the 16:23 UTC validation-maintenance sweep, refreshed the live validation/status artifacts, and kept the queue at zero while site-link and source-tag checks stayed green.
+- 2026-05-31: compacted the completed help-request history into summary lines and left the remaining browser-gated outreach/indexing batches in open status.
