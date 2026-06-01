@@ -149,6 +149,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-01: surfaced the public starter-bundle sample on the remaining high-intent AI route and comparison pages (`ai-procurement-hub`, `about`, `blog`, AI bank-vs-builder, and OpenAI bank-vs-builder), added watcher coverage for the new source tags, and revalidated source-tag coverage plus site links.
+- 2026-06-01: refreshed the pre-`2026-06-02 UTC` outreach queue artifacts with the self-audit follow-up QA, validation watch, benchmark status, AI-agent-review status, and validation status rebuilds; replies still sat at zero and both AI follow-up batches remained queued for June 2.
 - 2026-06-01: ran the validation-maintenance cycle at 08:05, 08:08, 08:12, 08:15, 08:18, 08:21, 08:28, and 12:39 UTC; refreshed the outreach/status/watch, inbox, generator, partner, help-request, self-audit, and no-reply checkpoint artifacts while the queue stayed at zero and the June 2 follow-up window remained queued.
 - 2026-05-31: ran the 23:30 UTC validation-maintenance pass, refreshed the live outreach and status artifacts, and kept the reply queue at zero while site-link and source-tag checks stayed green.
 - 2026-05-31: re-ran the self-audit follow-up QA and production verifier, refreshed the contact inbox and validation status snapshots to 23:28 UTC, and kept the live reply queue at zero while the June 2 follow-up windows remained open.

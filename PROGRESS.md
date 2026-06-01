@@ -49,6 +49,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-01
 
+- Refreshed the June 2 outreach queue artifacts with `npm run check:self-audit-follow-up`, `npm run check:validation-watch`, `npm run build:validation-watch`, `npm run build:benchmark-outreach-status`, `npm run build:ai-agent-review-outreach-status`, and `npm run build:validation-status`; the live state stayed at 0 real replies, both AI outreach batches remained due for follow-up on `2026-06-02 UTC`, and the queue docs were brought back into sync before the send window opens.
 - Extended the public starter-bundle sample into the remaining high-intent AI route and comparison surfaces that were still making readers trust the richer builder promise abstractly: `ai-procurement-hub.html`, `about.html`, `blog.html`, `blog-ai-security-questionnaire-answer-bank-vs-builder.html`, and `blog-openai-security-questionnaire-answer-bank-vs-builder.html` now link directly to the concrete sample bundle where the "show me the exact artifact" objection is most likely.
 - Added watcher coverage for the new sample-bundle source tags in `scripts/watched-source-tags.mjs` and reran `npm run check:source-tag-coverage` plus `npm run check:site-links`; coverage stayed complete and all 84 HTML files passed local link validation.
 - Confirmed the recent sessions had slipped into validation upkeep with no new conversion asset, so the highest-value move for this session was to make the free "starter bundle" promise concrete instead of running another monitoring pass.
