@@ -9,12 +9,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-26: Posted the Reddit scorecard comments, upgraded the benchmark worksheet into a browser-only tracker with exports and rollups, tightened pricing copy, and reverified production self-audit submits.
 - 2026-05-27: Reverified the benchmark-report proof and public directory state, kept validation maintenance green, and confirmed the queue still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-28: Shipped the benchmark-led outreach batch, AI agent review and approval-gate pages, the OpenAI route guide, and the supporting status/follow-up artifacts, then kept reply capture at 0 real submissions, 0 replies, and 0 interviews.
-
-## 2026-05-29
-
-- Revalidated `SELF-AUDIT-FOLLOW-UP-QA.md` and reran validation maintenance; the reply-watch, contact-webhook, free-teardown, source-tag, site-link, and artifact-sync checks all stayed green while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
-- Refreshed the AI-agent-review outreach status stack and follow-up pass so the new control-boundary batch stayed tracked alongside the benchmark batch with the same `2026-06-02 UTC` follow-up guardrails.
-- Expanded `VALIDATION-REPLY-WATCH.md` and `COMMUNITY-FEEDBACK.md` handling so benchmark and AI-agent-review signals stay first-class instead of getting buried in older founder/advisor monitoring noise.
+- 2026-05-29: Revalidated the follow-up and reply-watch stack, refreshed the benchmark plus AI-agent-review tracking/follow-up docs, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
 
 ## 2026-05-30
 
@@ -52,11 +47,20 @@ Older work is collapsed here so only the last three days stay detailed.
 - Collapsed the completed backlog history in `HELP-STATUS.md` into summary lines so the open browser-gated requests stay prominent and the older closed items are easier to scan.
 - Refreshed the completed summary lines in `BACKLOG-PREMIUM.md` and `BACKLOG-CHEAP.md` to carry the latest `23:24 UTC` maintenance checkpoint without re-expanding the live P0 items.
 
+## 2026-06-01
+
+- Reviewed deploy health and memory first; confirmed there is still no `DEPLOY-STATUS.md`, the worktree began clean, and the recent sessions had over-indexed on monitoring instead of shipping new conversion value.
+- Found and fixed a production builder bug in `ai-security-questionnaire-answer-builder.html`: the generated 20-question Q&A pack referenced `shortAnswer` before it was defined, which risked breaking render on page load.
+- Upgraded the free AI questionnaire builder so one browser-only pass can now copy or download a single full starter bundle file containing the answer block, Q&A pack, proof checklist, internal handoff, reviewer workspace export, and answer-bank draft.
+- Updated `ai-security-questionnaire-starter-pack.html`, `free-tools.html`, and `pricing.html` so the free-path promise now explicitly advertises the new downloadable bundle instead of underselling the builder as a scattered set of separate exports.
+- Re-ran `npm run check:site-links`, `npm run check:source-tag-coverage`, and a `jsdom` render check for `ai-security-questionnaire-answer-builder.html`; all passed, and the builder rendered a review-ready answer with the new full-bundle control present.
+
 ## Next Step
 
 - Watch whether the expanded evidence-map route produces the first real proof-first click, teardown request, or reply from `homepage-ai-evidence-map`, `free-tools-ai-evidence-map`, `free-tools-route-finder-evidence-map`, `pricing-ai-evidence-map`, `ai-security-questionnaire-starter-pack-evidence-map`, `ai-agent-workspace-evidence-map`, `start-here-ai-evidence-map`, `about-page-evidence-map`, `ai-procurement-hub-evidence-map`, `blog-index-ai-evidence-map`, `ai-path-guide-evidence-map`, `ai-security-questionnaire-answer-bank-evidence-map`, `openai-answer-bank-evidence-map`, `openai-security-questionnaire-template-evidence-map`, `ai-vendor-risk-assessment-worksheet-evidence-map`, `ai-vendor-risk-assessment-evidence-map`, `ai-security-questionnaire-guide-evidence-map`, `agent-review-checklist-evidence-map`, `ai-training-stance-template-evidence-map`, `ai-answer-bank-vs-pro-kit-evidence-map`, `ai-agent-review-evidence-map`, `ai-agent-approval-gate-evidence-map`, `kit-preview-evidence-map`, `kit-preview-route-evidence-map`, `kit-preview-grid-evidence-map`, `purchase-next-steps-evidence-map`, `audit-request-ai-evidence-map`, or `ai-security-questionnaire-pro-kit-evidence-map` before broadening the wedge again.
 - Watch whether the new follow-up and named-vendor proof-first routes produce the first real click, teardown request, or reply from `blog-openai-template-evidence-map`, `blog-openai-example-evidence-map`, `openai-path-guide-evidence-map`, `blog-ai-questionnaire-follow-up-evidence-map`, or `ai-follow-up-pack-evidence-map` before widening the evidence-map branch any further.
 - Watch whether the clarified builder promise produces the first real click, teardown request, or reply from `homepage-hero`, `homepage-job-one-answer`, `free-tools-ai-answer-builder`, `pricing-ai-answer-builder`, `start-here-ai-answer-builder`, `about-page`, or `ai-security-questionnaire-starter-pack-builder` before changing the free-vs-paid boundary again.
+- Watch whether the new full-bundle builder promise produces the first real click, teardown request, or reply from `free-tools-ai-answer-builder`, `pricing-ai-answer-builder`, `start-here-ai-answer-builder`, `about-page`, or `ai-security-questionnaire-starter-pack-builder` before adding another free AI-review tool.
 - If the first builder-driven signal lands, preserve whether the deciding value was the one answer block, the 20 follow-up responses, the reviewer workspace export, or the answer-bank draft before editing those pages again.
 - If the first evidence-map-driven signal lands, preserve whether the buyer asked for proof assets, named owner, review date, approval path, or framework-reference help before changing the page or moving the CTA higher.
 - Use `VALIDATION-REPLY-WATCH.md` as the single operator view for the active founder/advisor/benchmark/agent-review reply queues, then keep checking `ai-agent-review-outreach-batch-01.csv`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real reply, redirect, or teardown request.
@@ -83,3 +87,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-31: re-ran the self-audit follow-up QA and production verifier, refreshed the contact inbox and validation status snapshots to 23:28 UTC, and kept the live reply queue at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-31: refreshed the validation-maintenance stack at 23:26 UTC, rewrote the benchmark and AI-agent outreach status docs plus contact inbox and generator/partner validation artifacts, deduplicated the no-reply checkpoint, and kept site-link and source-tag checks green.
 - 2026-05-31: tightened the free-tools hub, added at-a-glance deliverable summaries to pricing, kit preview, and purchase handoff pages, ran the validation-maintenance sweeps through 23:24 UTC, refreshed the live validation/status artifacts and no-reply checkpoints, and compacted the completed help-request history while the June 2 follow-up window stayed open.
+- 2026-06-01: fixed the AI questionnaire builder render-order bug, added one-click full-bundle export to the free builder, updated core conversion copy to advertise that bundle, and revalidated links, source-tag coverage, and browser-like rendering.
