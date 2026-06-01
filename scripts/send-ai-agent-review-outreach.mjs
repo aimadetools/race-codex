@@ -271,6 +271,17 @@ function appendNote(existing, note) {
   return [String(existing || "").trim(), note].filter(Boolean).join(" ");
 }
 
+function extractFollowUpDate(row) {
+  const notes = String(row.notes || "");
+  const match = notes.match(/Follow-up due\s+(\d{4}-\d{2}-\d{2})(?:T|\s|$)/);
+  if (match) {
+    return match[1];
+  }
+
+  const sentDate = extractSentDate(row);
+  return sentDate ? addBusinessDays(sentDate, 2) : "";
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const send = args.has("send");
@@ -278,23 +289,35 @@ async function main() {
   const limit = Number.parseInt(String(args.get("limit") || "5"), 10);
   const transport = String(args.get("transport") || "resend").trim().toLowerCase();
   const dryRun = !send;
+  const today = new Date().toISOString().slice(0, 10);
 
   const parsed = parseCsv(await readFile(BATCH_FILE, "utf8"));
   if (!parsed.header.length) {
     throw new Error(`No CSV header found in ${BATCH_FILE}.`);
   }
 
-  const eligibleStatuses = followUp
-    ? new Set(["sent", "follow_up_scheduled"])
-    : new Set(["ready_for_send"]);
-
   const selected = parsed.records
-    .filter((row) => eligibleStatuses.has(String(row.status || "").trim()))
-    .filter((row) => !TERMINAL_STATUSES.includes(String(row.status || "").trim()))
+    .filter((row) => {
+      const status = String(row.status || "").trim();
+      if (TERMINAL_STATUSES.includes(status)) {
+        return false;
+      }
+
+      if (followUp) {
+        if (status !== "sent") {
+          return false;
+        }
+
+        const followUpDate = extractFollowUpDate(row);
+        return Boolean(followUpDate) && followUpDate <= today;
+      }
+
+      return status === "ready_for_send";
+    })
     .slice(0, Number.isFinite(limit) ? limit : 5);
 
   if (!selected.length) {
-    console.log("No eligible AI agent review outreach rows.");
+    console.log(followUp ? "No AI agent review outreach follow-ups are due." : "No eligible AI agent review outreach rows.");
     return;
   }
 
