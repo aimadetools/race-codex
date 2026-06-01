@@ -149,6 +149,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-01: ran the 23:30 UTC validation-maintenance pass, refreshed the live watches plus site-link, source-tag, and validation checks, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
 - 2026-06-01: ran the 23:28, 23:26, 23:24, 23:21, 23:19, 23:17, 23:15, 23:09, 23:08, 23:06, and 23:04 UTC validation-maintenance passes, refreshed the live watch files plus site-link, source-tag, and validation checks, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
 - 2026-06-01: completed the starter-pack-vs-builder comparison and related product-surface cleanup across the homepage, start-here, about, kit-preview, pricing, free-tools, route-finder, blog, comparison, builder, evidence-map, AI-agent workspace, answer-bank, and Pro-kit surfaces.
 - 2026-05-31 to 2026-05-27: carried the free-tools, pricing, kit-preview, purchase-next-steps, evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review refreshes through repeated no-reply validation-maintenance passes while checks stayed green.
