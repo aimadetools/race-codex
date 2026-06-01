@@ -49,6 +49,11 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-01
 
+- Confirmed the recent sessions had slipped into validation upkeep with no new conversion asset, so the highest-value move for this session was to make the free "starter bundle" promise concrete instead of running another monitoring pass.
+- Shipped `ai-security-questionnaire-starter-bundle-sample.html` plus `noticekit-ai-security-questionnaire-starter-bundle-sample.md`, a public AI starter-bundle sample that shows the answer block, buyer follow-up pack, proof checklist, internal handoff, reviewer workspace export, and reusable answer-bank draft in one inspectable artifact.
+- Wired the new sample-bundle asset into the highest-intent AI conversion surfaces: homepage, pricing, start-here, free-tools, starter-pack, answer builder, answer example, and kit preview, so buyers can inspect the bundle shape before choosing builder, kit preview, Starter, or Pro.
+- Added watcher coverage for the new sample-bundle source tags and added the page to `sitemap.xml` so the experiment is attributable and indexable once traffic reaches it.
+- Ran `npm run check:source-tag-coverage` and `npm run check:site-links`; source-tag coverage stayed complete and all 84 HTML files passed local link validation with no missing targets.
 - Reviewed deploy health and memory first; confirmed there is still no `DEPLOY-STATUS.md`, the worktree began clean, and the recent sessions had over-indexed on monitoring instead of shipping new conversion value.
 - Ran the 08:21 UTC validation-maintenance pass; refreshed the benchmark outreach, AI-agent review outreach, contact inbox, generator, partner, help-request, validation, and no-reply checkpoint artifacts, then revalidated self-audit QA, production verification, source-tag coverage, and site links while the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
 - Ran the 08:28 UTC validation-maintenance pass; refreshed the benchmark outreach, AI-agent review outreach, contact inbox, generator, partner, help-request, validation, and no-reply checkpoint artifacts, then revalidated self-audit QA, production verification, source-tag coverage, and site links while the queue stayed at 0 real submissions, 0 replies, and 0 interviews.
