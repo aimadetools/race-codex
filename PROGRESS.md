@@ -99,6 +99,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Found a June 2 operator-risk bug in `scripts/send-ai-agent-review-outreach.mjs`: its `--follow-up` mode would select any `sent` row immediately instead of waiting for the due date, which could have triggered an early AI-agent follow-up send.
 - Fixed the AI agent review sender so `--follow-up` now requires a due follow-up date derived from the recorded send note, and added `scripts/run-ai-outreach-follow-up-gate.mjs` plus `npm run run:ai-outreach-follow-up-gate` to dry-run or send the benchmark and AI-agent June 2 queues from one guarded command.
 - Dry-ran `node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5`, `node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5`, and `npm run run:ai-outreach-follow-up-gate` on `2026-06-01 UTC`; all three correctly held the queues, refreshed the operator snapshots, and confirmed both outreach batches remain due on `2026-06-02 UTC`.
+- Refreshed the live benchmark and AI-agent review watches at `16:24 UTC`, confirmed the queue is still at 0 replies and 0 inbox submissions, and kept the June 2 follow-up window parked while the monitoring files were brought current.
 
 ## Next Step
 
