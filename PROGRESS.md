@@ -64,6 +64,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the route/comparison copy refresh; both passed with no broken local targets and complete watcher coverage across 541 emitted source tags.
 - Standardized the remaining high-intent builder CTAs across `index.html`, `pricing.html`, `about.html`, `ai-procurement-hub.html`, `blog.html`, `blog-ai-security-questionnaire-answer-bank-vs-builder.html`, `blog-openai-security-questionnaire-answer-bank-vs-builder.html`, `start-here.html`, `free-tools.html`, `ai-security-questionnaire-starter-pack.html`, and `ai-security-questionnaire-answer-builder.html` so the action now consistently sells “Build answer + bundle” / “starter bundle” instead of mixing older `Open builder`, `Build one answer`, or `handoff` language into the upgraded free path.
 - Re-ran a targeted CTA wording search plus `npm run check:site-links` after the label standardization; the stale builder labels were removed from the main AI conversion surfaces and all 83 HTML files still passed local link validation.
+- Finished the next builder-consistency rollout across `kit-preview.html`, the AI agent checklist/tool-access/approval-gate pages, the follow-up-question page, the AI path guide, the training-stance page, the vendor-risk route, and the OpenAI path guide so those high-intent long-tail routes now describe the free builder as the full local starter bundle instead of an older thin `Open builder` action.
+- Re-ran a stale-label search, `npm run check:site-links`, and `npm run check:source-tag-coverage`; the last remaining `Open builder` CTA on the AI-review wedge was removed and the local validation checks stayed green.
 
 ## Next Step
 
