@@ -49,6 +49,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-01
 
+- Extended the public starter-bundle sample into the remaining high-intent AI route and comparison surfaces that were still making readers trust the richer builder promise abstractly: `ai-procurement-hub.html`, `about.html`, `blog.html`, `blog-ai-security-questionnaire-answer-bank-vs-builder.html`, and `blog-openai-security-questionnaire-answer-bank-vs-builder.html` now link directly to the concrete sample bundle where the "show me the exact artifact" objection is most likely.
+- Added watcher coverage for the new sample-bundle source tags in `scripts/watched-source-tags.mjs` and reran `npm run check:source-tag-coverage` plus `npm run check:site-links`; coverage stayed complete and all 84 HTML files passed local link validation.
 - Confirmed the recent sessions had slipped into validation upkeep with no new conversion asset, so the highest-value move for this session was to make the free "starter bundle" promise concrete instead of running another monitoring pass.
 - Shipped `ai-security-questionnaire-starter-bundle-sample.html` plus `noticekit-ai-security-questionnaire-starter-bundle-sample.md`, a public AI starter-bundle sample that shows the answer block, buyer follow-up pack, proof checklist, internal handoff, reviewer workspace export, and reusable answer-bank draft in one inspectable artifact.
 - Wired the new sample-bundle asset into the highest-intent AI conversion surfaces: homepage, pricing, start-here, free-tools, starter-pack, answer builder, answer example, and kit preview, so buyers can inspect the bundle shape before choosing builder, kit preview, Starter, or Pro.
