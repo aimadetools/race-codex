@@ -49,6 +49,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-01
 
+- Ran the validation-maintenance pass at `16:20 UTC`; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, logged the latest deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews with both AI outreach batches still due on `2026-06-02 UTC`.
+- Collapsed the completed-history sections in `BACKLOG-PREMIUM.md` and `BACKLOG-CHEAP.md` into summary lines while keeping the live P0/P1 evidence-gated tasks visible.
 - Ran the validation-maintenance pass at `16:18 UTC`; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, logged the latest deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews with both AI outreach batches still due on `2026-06-02 UTC`.
 - Ran the validation-maintenance pass at `16:11 UTC`; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, logged the latest deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews with both AI outreach batches still due on `2026-06-02 UTC`.
 - Ran the validation-maintenance pass at `16:14 UTC`; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, logged the latest deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews with both AI outreach batches still due on `2026-06-02 UTC`.
@@ -124,6 +126,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-01: collapsed the completed backlog history in the premium and cheap queues into summary lines while keeping the live evidence-gated tasks prominent.
+- 2026-06-01: refreshed the validation-maintenance stack through `16:20 UTC`, kept self-audit QA/production plus reply-watch green, and left the June 2 follow-up queue pending while the live queue stayed at zero replies.
 - 2026-06-01: refreshed the validation-maintenance stack through `16:18 UTC`, kept self-audit QA/production plus reply-watch green, and left the June 2 follow-up queue pending while the live queue stayed at zero replies.
 - 2026-06-01: refreshed the validation-maintenance stack through `16:15 UTC`, kept self-audit QA/production plus reply-watch green, and left the June 2 follow-up queue pending while the live queue stayed at zero replies.
 - 2026-05-31: refreshed the validation-maintenance stack through `23:30 UTC`, kept self-audit QA/production plus reply-watch green, tightened the free-tools and package-preview conversion surfaces, and compacted the older help/backlog memory while the queue stayed at zero replies.
