@@ -149,6 +149,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-01: sharpened the starter-bundle proof path by spelling out the exact artifact stack on the homepage, pricing, free-tools, and sample-bundle pages so the free preview is easier to trust before checkout.
 - 2026-06-01: kept the benchmark, AI-agent-review, inbox, generator, partner, help-request, and validation artifacts current through `12:57 UTC`, with zero real replies logged and the June 2 follow-up queue still pending for both AI outreach batches.
 - 2026-06-01: finished the starter-bundle/product-surface cleanup across the sample-bundle rollout, route-finder/about/blog/comparison pages, long-tail CTA wording, and route-context fixes for builder, evidence-map, AI-agent workspace, answer-bank, and Pro-kit paths.
 - 2026-06-01: hardened the June 2 AI outreach window by fixing the AI-agent due-date guard and adding the combined benchmark + AI-agent follow-up gate command.
