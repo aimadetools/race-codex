@@ -49,6 +49,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-01
 
+- Added `blog-ai-security-questionnaire-starter-pack-vs-builder.html`, a new comparison page that helps SaaS teams choose between route clarity and one live answer bundle before the review widens.
+- Wired the new comparison into `blog.html`, `free-tools.html`, `pricing.html`, and `ai-procurement-hub.html`, then added the matching route to `sitemap.xml` and `scripts/watched-source-tags.mjs` for attribution coverage.
+- Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; both passed after the new comparison route shipped.
 - Ran the 20:29 UTC validation-maintenance pass; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, logged a deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews with the June 2 follow-up window still pending.
 - Ran the 20:27 UTC validation-maintenance pass; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, logged a deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews with the June 2 follow-up window still pending.
 - Ran the 20:24 UTC validation-maintenance pass; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, logged a deduplicated no-reply checkpoint, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews with the June 2 follow-up window still pending.
