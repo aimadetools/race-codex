@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-01 23:09 UTC
+Checked at: 2026-06-01 23:15 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -79,6 +79,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - about-page: 0
 - about-page-bundle-sample: 0
 - about-page-evidence-map: 0
+- about-page-starter-pack-comparison: 0
 - generator-page: 0
 - generator-ai-deal-blocker: 0
 - generator-cta: 0
@@ -219,6 +220,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - kit-preview-route-broader-handoff: 0
 - kit-preview-grid-evidence-map: 0
 - kit-preview-bundle-sample: 0
+- kit-preview-starter-pack-comparison: 0
 - start-here-card: 0
 - start-here-ai-risk-assessment: 0
 - start-here-ai-deal-blocker: 0
@@ -232,6 +234,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-ai-disclosure-packet: 0
 - start-here-ai-packet-sample: 0
 - start-here-ai-stack-guide: 0
+- start-here-ai-starter-pack-comparison: 0
 - monitoring-comparison: 0
 - partner-preview-hero: 0
 - partner-preview-ai-deal-blocker: 0
@@ -264,6 +267,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-openai-example: 0
 - homepage-ai-route-openai-answer-bank: 0
 - homepage-ai-route-openai-path-guide: 0
+- homepage-ai-route-openai-comparison: 0
+- homepage-ai-starter-pack-comparison: 0
 - homepage-ai-route-broader-handoff: 0
 - homepage-ai-bundle-sample: 0
 - audit-request-ai-packet: 0
@@ -385,6 +390,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-guide: 0
 - ai-security-questionnaire-guide-starter-pack: 0
 - ai-security-questionnaire-starter-pack-builder: 0
+- ai-security-questionnaire-starter-pack-comparison: 0
 - ai-security-questionnaire-starter-pack-answer-bank: 0
 - ai-security-questionnaire-starter-pack-agent-checklist: 0
 - ai-security-questionnaire-starter-pack-follow-up-pack: 0
