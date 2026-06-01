@@ -149,8 +149,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-01: ran the 23:24 UTC validation-maintenance pass, refreshed the live watch files, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
-- 2026-06-01: ran the 23:04, 23:06, 23:08, 23:09, 23:15, 23:17, 23:19, and 23:21 UTC validation-maintenance passes, refreshed the live watch files, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
+- 2026-06-01: ran the 23:26, 23:24, 23:21, 23:19, 23:17, 23:15, 23:09, 23:08, 23:06, and 23:04 UTC validation-maintenance passes, refreshed the live watch files plus site-link, source-tag, and validation checks, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
 - 2026-06-01: widened the starter-pack-vs-builder comparison route across the homepage, start-here, about, kit-preview, and starter-pack surfaces, then registered the new source tags and refreshed sitemap lastmod values.
 - 2026-06-01: added the AI starter-pack vs builder comparison page, wired it into the main discovery surfaces, and revalidated source-tag coverage plus site links.
 - 2026-06-01: tightened the free-tools hub and starter-bundle proof path, then revalidated site links and source-tag coverage.
