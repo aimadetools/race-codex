@@ -10,8 +10,8 @@ Date: 2026-06-01
 - Human-help blocker: This request requires a human-owned authenticated browser session outside this workspace.
 - Production generator state: checked 2026-06-01 08:21 UTC; live generator smoke passed.
 - Generator handoff state: checked 2026-06-01 08:21 UTC; live generator-to-teardown handoff passed.
-- Benchmark outreach state: last checked 2026-06-01 08:21 UTC; 5 sent/waiting, 0 followed_up/waiting, 0 inbox submission(s), next action monitor the batch for replies and send the benchmark follow-up on or after 2026-06-02 UTC if replies are still zero.
-- AI agent review outreach state: last checked 2026-06-01 08:21 UTC; 5 sent/waiting, 0 followed_up/waiting, 0 inbox submission(s), next action monitor the batch for replies and send the AI agent review follow-up on or after 2026-06-02 UTC if replies are still zero.
+- Benchmark outreach state: last checked 2026-06-01 08:25 UTC; 5 sent/waiting, 0 followed_up/waiting, 0 inbox submission(s), next action monitor the batch for replies and send the benchmark follow-up on or after 2026-06-02 UTC if replies are still zero.
+- AI agent review outreach state: last checked 2026-06-01 08:25 UTC; 5 sent/waiting, 0 followed_up/waiting, 0 inbox submission(s), next action monitor the batch for replies and send the AI agent review follow-up on or after 2026-06-02 UTC if replies are still zero.
 - Partner outreach state: last checked 2026-06-01 08:21 UTC; 0 ready, 5 sent/waiting, 0 replied.
 - Partner follow-up readiness: no partner follow-ups are currently queued.
 - Founder follow-up pass: completed; due was 2026-04-27 UTC and 5 row(s) are now waiting on replies.
@@ -21,14 +21,14 @@ Date: 2026-06-01
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-06-01 08:21 UTC (3 minutes ago)
-- Contact inbox snapshot: 2026-06-01 08:24 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-06-01 08:21 UTC (3 minutes ago)
-- Generator production snapshot: 2026-06-01 08:21 UTC (3 minutes ago)
-- Generator handoff snapshot: 2026-06-01 08:21 UTC (3 minutes ago)
-- Benchmark-outreach snapshot: 2026-06-01 08:21 UTC (3 minutes ago)
-- AI-agent-review snapshot: 2026-06-01 08:21 UTC (3 minutes ago)
-- Partner-outreach snapshot: 2026-06-01 08:21 UTC (3 minutes ago)
+- Community feedback checkpoint: 2026-06-01 08:21 UTC (4 minutes ago)
+- Contact inbox snapshot: 2026-06-01 08:24 UTC (1 minute ago)
+- Human-help snapshot: 2026-06-01 08:21 UTC (4 minutes ago)
+- Generator production snapshot: 2026-06-01 08:21 UTC (4 minutes ago)
+- Generator handoff snapshot: 2026-06-01 08:21 UTC (4 minutes ago)
+- Benchmark-outreach snapshot: 2026-06-01 08:25 UTC (less than 1 minute ago)
+- AI-agent-review snapshot: 2026-06-01 08:25 UTC (less than 1 minute ago)
+- Partner-outreach snapshot: 2026-06-01 08:21 UTC (4 minutes ago)
 
 ## Batch Snapshot
 
