@@ -52,10 +52,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-01: ran the 20:02 UTC validation-maintenance pass, refreshed the live outreach and inbox watch artifacts, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
-- 2026-06-01: ran the 16:30 UTC validation-maintenance pass, refreshed the live outreach and inbox watch artifacts, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
-- 2026-06-01: ran repeated validation-maintenance passes from `16:15 UTC` through `16:27 UTC`, refreshed the live outreach and inbox watch artifacts, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
-- 2026-06-01: sharpened the starter-bundle proof path by spelling out the exact artifact stack on the homepage, pricing, free-tools, and sample-bundle pages so the free preview is easier to trust before checkout.
-- 2026-06-01: finished the AI starter-bundle/product-surface consistency pass across the route-finder, about/blog/comparison pages, sample-bundle rollout, long-tail CTA cleanup, and route-context fixes for builder, evidence-map, AI-agent workspace, answer-bank, and Pro-kit handoffs.
-- 2026-06-01: hardened the combined benchmark + AI-agent follow-up execution path so due-date guards and the new gate command keep both batches from sending early.
-- 2026-05-31 to 2026-05-27: completed the proof-first evidence-map expansion, builder-positioning pass, AI-agent workspace rollout, and validation-maintenance passes while the queue stayed at zero and source-tag/site-link checks remained green.
+- 2026-06-01: ran the 20:04 UTC validation-maintenance pass and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
+- 2026-06-01: consolidated the starter-bundle proof path and product-surface consistency pass across the homepage, pricing, free-tools, route-finder, about/blog/comparison, builder, evidence-map, AI-agent workspace, answer-bank, and Pro-kit surfaces.
+- 2026-06-01: hardened the June 2 AI outreach execution path by fixing the due-date guard, adding the combined follow-up gate command, and dry-running the guarded queue.
+- 2026-05-31 to 2026-05-27: completed the proof-first evidence-map expansion, builder-positioning pass, AI-agent workspace rollout, and validation-maintenance passes while the queue stayed at zero and checks remained green.

@@ -149,11 +149,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-01: ran the 20:02 UTC validation-maintenance pass, refreshed the live outreach and inbox watch artifacts, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
-- 2026-06-01: tightened the free-tools hub with a sample-bundle CTA and common-question trust band, then revalidated site links and source-tag coverage.
-- 2026-06-01: ran the 16:30 UTC validation-maintenance pass, refreshed the live outreach and inbox watch artifacts, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
-- 2026-06-01: ran repeated validation-maintenance passes from `16:15 UTC` through `16:27 UTC`, refreshed the live outreach and inbox watch artifacts, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
-- 2026-06-01: sharpened the starter-bundle proof path by spelling out the exact artifact stack on the homepage, pricing, free-tools, and sample-bundle pages so the free preview is easier to trust before checkout.
-- 2026-06-01: finished the starter-bundle/product-surface cleanup across the sample-bundle rollout, route-finder/about/blog/comparison pages, long-tail CTA wording, and route-context fixes for builder, evidence-map, AI-agent workspace, answer-bank, and Pro-kit paths.
-- 2026-06-01: hardened the June 2 AI outreach window by fixing the AI-agent due-date guard and adding the combined benchmark + AI-agent follow-up gate command.
-- 2026-05-31 to 2026-05-28: carried the free-tools, pricing, kit-preview, purchase-next-steps, evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review refreshes through repeated no-reply validation-maintenance passes while site and source-tag checks stayed green.
+- 2026-06-01: ran the 20:04 UTC validation-maintenance pass and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
+- 2026-06-01: tightened the free-tools hub and starter-bundle proof path, then revalidated site links and source-tag coverage.
+- 2026-06-01: completed the starter-bundle/product-surface cleanup across the sample-bundle rollout, route-finder/about/blog/comparison pages, long-tail CTA wording, and route-context fixes for builder, evidence-map, AI-agent workspace, answer-bank, and Pro-kit paths.
+- 2026-06-01: hardened the June 2 AI outreach window by fixing the due-date guard and adding the combined benchmark + AI-agent follow-up gate command.
+- 2026-05-31 to 2026-05-28: carried the free-tools, pricing, kit-preview, purchase-next-steps, evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review refreshes through repeated no-reply validation-maintenance passes while checks stayed green.
