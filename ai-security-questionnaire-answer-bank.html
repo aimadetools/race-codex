@@ -290,11 +290,20 @@
       match: (source) =>
         source.startsWith("ai-security-questionnaire-answer-builder") ||
         source.startsWith("ai-questionnaire-builder") ||
+        source.startsWith("about-page") ||
+        source.startsWith("free-teardown-ai-answer-bank") ||
         source.startsWith("homepage-job-one-answer") ||
         source.startsWith("homepage-hero") ||
         source.startsWith("free-tools-ai-answer-builder") ||
         source.startsWith("pricing-ai-answer-builder") ||
-        source.startsWith("ai-procurement-hub-answer-builder"),
+        source.startsWith("ai-procurement-hub-answer-builder") ||
+        source.startsWith("ai-agent-review-answer-bank") ||
+        source.startsWith("ai-agent-approval-gate-answer-bank") ||
+        source.startsWith("ai-agent-workspace-answer-bank") ||
+        source.startsWith("ai-training-stance-template-answer-bank") ||
+        source.startsWith("ai-vendor-inventory-answer-bank") ||
+        source.startsWith("ai-vendor-risk-assessment-answer-bank") ||
+        source.startsWith("blog-ai-questionnaire-follow-up-questions"),
       title: "You came from a one-answer route, so do not overbuild the response.",
       copy: "Use the answer bank to preserve the approved wording after the live answer is written. If one questionnaire row is still blocking the deal, the builder stays the better first stop.",
       points: [
@@ -311,7 +320,8 @@
         source.startsWith("blog-ai-security-questionnaire-answer-example") ||
         source.startsWith("blog-ai-security-questionnaire-follow-up-questions") ||
         source.startsWith("free-tools-ai-deal-blocker") ||
-        source.startsWith("free-tools-ai-answer-bank"),
+        source.startsWith("free-tools-ai-answer-bank") ||
+        source.startsWith("free-tools-route-finder"),
       title: "You already found the blocker, and the bank is the repeat-review path.",
       copy: "If the thread started with a starter pack, template, or example, the answer bank is the next step only when the same questions keep coming back across deals or customer segments.",
       points: [
@@ -323,18 +333,52 @@
     {
       match: (source) =>
         source.startsWith("homepage-job-repeat-review") ||
+        source.startsWith("homepage-ai-route-repeat-review") ||
+        source.startsWith("homepage-shortcut") ||
         source.startsWith("pricing-ai-answer-bank") ||
+        source.startsWith("pricing-ai-route-repeat-review") ||
         source.startsWith("blog-index-ai-answer-bank") ||
         source.startsWith("ai-security-questionnaire-answer-bank") ||
         source.startsWith("start-here-ai-answer-bank") ||
         source.startsWith("ai-questionnaire-builder-answer-bank") ||
-        source.startsWith("ai-procurement-hub-answer-bank"),
+        source.startsWith("ai-procurement-hub-answer-bank") ||
+        source.startsWith("ai-procurement-hub-card") ||
+        source.startsWith("ai-procurement-hub-table") ||
+        source.startsWith("ai-path-guide-answer-bank") ||
+        source.startsWith("ai-path-guide-repeat-review") ||
+        source.startsWith("free-tools-route-repeat-review") ||
+        source.startsWith("kit-preview-route-repeat-review") ||
+        source.startsWith("ai-answer-bank-vs-builder-answer-bank") ||
+        source.startsWith("ai-answer-bank-vs-builder-bank") ||
+        source.startsWith("ai-answer-bank-vs-pro-kit-answer-bank") ||
+        source.startsWith("ai-answer-bank-vs-pro-kit-bank") ||
+        source.startsWith("ai-security-questionnaire-pro-kit-answer-bank"),
       title: "You are already on the repeat-review route.",
       copy: "Keep the reusable source file here. That is the lowest-friction way to preserve approved wording, proof links, owner notes, and customer-scope variants for the next buyer thread.",
       points: [
         "Download the template if you want a plain Markdown source file.",
         "Open the builder if you need one live answer before polishing the bank.",
         "Move to the packet guide when the review widens beyond one reusable file."
+      ]
+    },
+    {
+      match: (source) =>
+        source.startsWith("ai-procurement-hub-openai-answer-bank") ||
+        source.startsWith("blog-index-openai-answer-bank") ||
+        source.startsWith("free-tools-openai-answer-bank") ||
+        source.startsWith("homepage-ai-route-openai-answer-bank") ||
+        source.startsWith("openai-answer-bank-builder") ||
+        source.startsWith("openai-answer-bank-vs-builder-bank") ||
+        source.startsWith("openai-path-guide-answer-bank") ||
+        source.startsWith("openai-security-questionnaire-example-answer-bank") ||
+        source.startsWith("openai-security-questionnaire-template-answer-bank") ||
+        source.startsWith("pricing-openai-answer-bank"),
+      title: "You came from a named-vendor repeat-review route.",
+      copy: "Keep the generic AI answer bank focused on the reusable structure, then branch into the OpenAI-specific bank when the buyer keeps naming that vendor directly and the wording needs named-vendor precision.",
+      points: [
+        "Use this bank for the cross-vendor answer spine that survives across reviews.",
+        "Open the OpenAI answer bank when the recurring question now needs named-vendor wording and proof notes.",
+        "Use the builder only if one live row still needs to be written before the reusable file is stable."
       ]
     }
   ];
