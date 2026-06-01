@@ -27,7 +27,5 @@
 ## Upcoming Queue
 
 - Before the next due follow-up window, keep `SELF-AUDIT-FOLLOW-UP-QA.md` current with `npm run check:self-audit-follow-up`.
-- On 2026-06-02 UTC, dry-run benchmark follow-ups with `node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --transport resend`.
-- On 2026-06-02 UTC, send benchmark follow-ups with `node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend` if replies are still zero.
-- On 2026-06-02 UTC, dry-run AI agent review follow-ups with `node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --transport resend`.
-- On 2026-06-02 UTC, send AI agent review follow-ups with `node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --send --transport resend` if replies are still zero.
+- On 2026-06-02 UTC, dry-run the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --transport resend`.
+- On 2026-06-02 UTC, send the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --send --transport resend` if replies are still zero.

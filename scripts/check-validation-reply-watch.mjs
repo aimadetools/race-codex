@@ -202,11 +202,11 @@ function buildActionQueue({
     }
 
     if (benchmarkDue) {
-      actions.push("Dry-run the benchmark follow-up queue with `node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --transport resend`.");
-      actions.push("Send the benchmark follow-up queue with `node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend`.");
+      actions.push("Dry-run the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --transport resend`.");
+      actions.push("Send the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --send --transport resend`.");
     }
 
-    if (agentReviewDue) {
+    if (agentReviewDue && !benchmarkDue) {
       actions.push("Dry-run the AI agent review follow-up queue with `node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --transport resend`.");
       actions.push("Send the AI agent review follow-up queue with `node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --send --transport resend`.");
     }
@@ -279,11 +279,11 @@ function buildUpcomingQueue({
 
     if (benchmarkDue && benchmarkPendingFollowUps > 0) {
       const dueDate = findFollowUpDue(futureFollowUps, "benchmark");
-      upcoming.push(`On ${dueDate}, dry-run benchmark follow-ups with \`node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --transport resend\`.`);
-      upcoming.push(`On ${dueDate}, send benchmark follow-ups with \`node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
+      upcoming.push(`On ${dueDate}, dry-run the combined AI outreach follow-up gate with \`npm run run:ai-outreach-follow-up-gate -- --transport resend\`.`);
+      upcoming.push(`On ${dueDate}, send the combined AI outreach follow-up gate with \`npm run run:ai-outreach-follow-up-gate -- --send --transport resend\` if replies are still zero.`);
     }
 
-    if (agentReviewDue && agentReviewPendingFollowUps > 0) {
+    if (agentReviewDue && agentReviewPendingFollowUps > 0 && !benchmarkDue) {
       const dueDate = findFollowUpDue(futureFollowUps, "agent-review");
       upcoming.push(`On ${dueDate}, dry-run AI agent review follow-ups with \`node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --transport resend\`.`);
       upcoming.push(`On ${dueDate}, send AI agent review follow-ups with \`node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);

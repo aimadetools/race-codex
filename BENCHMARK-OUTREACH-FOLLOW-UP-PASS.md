@@ -54,11 +54,12 @@ Use the row-specific teardown URL listed below so the source tag and public page
 
 ## Send Command
 
-`set -a && source .env.production.local && set +a && node scripts/send-ai-benchmark-outreach.mjs --follow-up --limit 5 --send --transport resend`
+`set -a && source .env.production.local && set +a && npm run run:ai-outreach-follow-up-gate -- --send --transport resend`
 
 ## Send Guardrails
 
 - Do not send before 2026-06-02 UTC.
 - Do not send to any target that has already replied, bounced, redirected, or submitted a teardown request.
+- Dry-run `npm run run:ai-outreach-follow-up-gate -- --transport resend` first if you need to confirm both AI follow-up queues before the live send.
 - Rebuild `BENCHMARK-OUTREACH-STATUS.md` immediately after the send so the queue flips from `sent` to `followed_up`.
 - Record the first real benchmark reply or redirect in `COMMUNITY-FEEDBACK.md` before changing the benchmark copy or target list.
