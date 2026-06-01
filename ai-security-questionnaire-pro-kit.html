@@ -111,6 +111,17 @@
           </div>
         </section>
 
+        <section class="section" id="source-context-section" hidden>
+          <div class="context-band" aria-live="polite">
+            <div>
+              <span class="eyebrow">Source context</span>
+              <h2 id="source-context-title">Use Pro when the repeat-review chore is already bigger than one answer.</h2>
+              <p id="source-context-copy">This page is strongest when the blocker has clearly shifted from one live response into repeated review, customer variants, or cross-reviewer handoff.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
+          </div>
+        </section>
+
         <section class="section">
           <div class="section-head">
             <h2>Buy this when the blocker is repeatability, not just wording.</h2>
@@ -257,6 +268,87 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+    <script>
+      const query = new URLSearchParams(window.location.search);
+      const normalizedSource = (query.get("source") || "").trim().toLowerCase();
+      const sourceContextSection = document.querySelector("#source-context-section");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+
+      const sourceContexts = [
+        {
+          match: (source) =>
+            source.startsWith("homepage-job-repeat-review") ||
+            source.startsWith("homepage-ai-route-repeat-review") ||
+            source.startsWith("pricing-ai-pro-kit") ||
+            source.startsWith("free-tools-ai-pro-kit") ||
+            source.startsWith("start-here-ai-pro-kit") ||
+            source.startsWith("ai-path-guide-pro-kit") ||
+            source.startsWith("free-tools-route-repeat-review") ||
+            source.startsWith("kit-preview-route-repeat-review"),
+          title: "You are already on the repeat-review route.",
+          copy: "Use Pro when the free answer bank is no longer enough because the same AI review work now needs variants, deadlines, packet files, and cross-reviewer handoff around it.",
+          points: [
+            "Keep the answer bank as the reusable wording source file inside the broader workflow.",
+            "Use Pro when customer variants, packet handoff, or operating deadlines keep reopening the same review.",
+            "Stay on the free builder only if the real blocker is still one live answer rather than the repeat-review system."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-answer-bank-vs-builder-pro-kit") ||
+            source.startsWith("ai-answer-bank-vs-pro-kit-pro-kit") ||
+            source.startsWith("ai-security-questionnaire-answer-bank-pro-kit") ||
+            source.startsWith("ai-procurement-hub-pro-kit"),
+          title: "You already compared the reusable-file path against the paid operating layer.",
+          copy: "The decision here is not whether you need reusable wording. It is whether that wording now needs the surrounding matrix, packet, intake, and closeout files to stop the review loop from reopening.",
+          points: [
+            "Keep the free answer bank if one reusable file is still enough to run the process.",
+            "Choose Pro when the review now needs customer segmentation, procurement summary, or counsel handoff around that file.",
+            "Use the kit preview or teardown first if you still need a blunt read on whether the paid layer is justified."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("ai-security-questionnaire-starter-pack-pro-kit") ||
+            source.startsWith("blog-ai-questionnaire-follow-up-questions") ||
+            source.startsWith("free-tools-route-finder"),
+          title: "You came from a broader route-finder or follow-up path, so keep the paid step narrow.",
+          copy: "Move into Pro only if the one-answer and follow-up work already proved that the blocker is ongoing repeat-review cleanup rather than one live buyer thread.",
+          points: [
+            "Stay with the starter pack or follow-up tools if the current deal still only needs one answer pass.",
+            "Use Pro when the same follow-up pack, owner notes, or packet handoff is repeating across deals.",
+            "Use teardown first if you still need help separating one-thread urgency from a real repeat-review process problem."
+          ]
+        },
+        {
+          match: (source) =>
+            source.startsWith("openai-answer-bank-pro-kit"),
+          title: "You came from a named-vendor repeat-review route.",
+          copy: "Use Pro when the recurring OpenAI-specific answer bank now needs customer variants, review summaries, and counsel-ready packaging around it instead of another isolated source file.",
+          points: [
+            "Keep the OpenAI answer bank as the named-vendor wording source.",
+            "Use Pro when that named-vendor path now repeats across deals or reviewer groups.",
+            "Go back to the free builder only if one live OpenAI answer is still the real blocker."
+          ]
+        }
+      ];
+
+      const matchedContext = sourceContexts.find((context) => context.match(normalizedSource));
+      if (matchedContext) {
+        sourceContextTitle.textContent = matchedContext.title;
+        sourceContextCopy.textContent = matchedContext.copy;
+        sourceContextPoints.replaceChildren(
+          ...matchedContext.points.map((point) => {
+            const item = document.createElement("li");
+            item.textContent = point;
+            return item;
+          })
+        );
+        sourceContextSection.hidden = false;
+      }
+    </script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
