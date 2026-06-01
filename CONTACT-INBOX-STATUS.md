@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-01 20:30 UTC
+Checked at: 2026-06-01 23:04 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -97,6 +97,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-evidence-map: 0
 - blog-index-ai-follow-up-pack: 0
 - blog-index-ai-answer-bank: 0
+- blog-index-ai-starter-pack-comparison: 0
 - blog-index-ai-packet: 0
 - blog-index-ai-packet-sample: 0
 - blog-index-ai-risk-assessment: 0
@@ -153,6 +154,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-pro-kit: 0
 - free-tools-ai-answer-bank: 0
 - free-tools-ai-answer-builder: 0
+- free-tools-ai-starter-pack-comparison: 0
 - free-tools-ai-follow-up-pack: 0
 - free-tools-ai-evidence-map: 0
 - free-tools-ai-agent-workspace: 0
@@ -277,12 +279,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-answer-bank: 0
 - pricing-ai-answer-bank-vs-pro-kit: 0
 - pricing-ai-answer-builder: 0
+- pricing-ai-starter-pack-comparison: 0
 - pricing-ai-bundle-sample: 0
 - pricing-ai-evidence-map: 0
 - ai-procurement-hub-agent-checklist: 0
 - ai-procurement-hub-agent-workspace: 0
 - ai-procurement-hub-evidence-map: 0
 - ai-procurement-hub-bundle-sample: 0
+- ai-procurement-hub-starter-pack-comparison: 0
 - pricing-ai-agent-review: 0
 - pricing-ai-agent-checklist: 0
 - pricing-ai-agent-approval-gate: 0
@@ -508,6 +512,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-openai-answer-template: 0
 - ai-procurement-hub-openai-answer-example: 0
 - ai-procurement-hub-openai-answer-bank: 0
+- ai-starter-pack-vs-builder: 0
 - ai-procurement-hub-answer-example: 0
 - ai-procurement-hub-answer-builder: 0
 - ai-procurement-hub-answer-bank: 0
