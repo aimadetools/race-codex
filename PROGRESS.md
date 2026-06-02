@@ -40,6 +40,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Found and fixed a second operator-memory bug in `scripts/log-validation-no-reply-check.mjs`: fresh no-reply checkpoints were still writing pre-send June 2 follow-up instructions into `COMMUNITY-FEEDBACK.md` after the follow-up had already been sent.
 - Tightened `free-teardown.html` so the direct async teardown intake now requires the live URL, blocker, and customer segment before submission, which should reduce missing-fact requests on the first response path.
 - Ran the 08:05-12:40 UTC validation-maintenance windows, refreshed the live inbox/help/generator/partner/benchmark/AI-agent status files, kept `check:site-links` and `check:source-tag-coverage` green, and confirmed the queues still sat at 0 real replies, 0 bounces, 0 teardown requests, 0 inbox submissions, and 0 interviews while the next dated campaign recheck remains 2026-06-03 UTC.
+- Ran a fresh validation-gate refresh at 16:03 UTC. The regenerated status files stayed green, the human-help snapshot still shows no active request, and the benchmark, AI-agent, partner, and inbox watches remain at zero real replies or submissions.
 
 ## Next Step
 
@@ -51,6 +52,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Completed Summary
 
 - 2026-06-02: tightened the homepage, free-tools hub, and pricing first-screen route hierarchy so the core AI paths are easier to choose while keeping the deeper proof, named-vendor, agent-control, and notice routes intact.
+- 2026-06-02: ran a fresh validation-gate refresh at 16:03 UTC, regenerated the live operator artifacts, and confirmed the benchmark, AI-agent, partner, inbox, and human-help watches still show zero real replies or submissions.
 - 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, shipped the AI-agent gap-read route, fixed the stale post-send operator messaging plus the remaining followed-up snapshot bug, added explicit AI-agent gap-read monitoring to the inbox/status builders, corrected the phantom human-help request state by routing help-status generation through `HELP-RESPONSES.md`, tightened the free-teardown intake, and carried clean validation-maintenance/gate refreshes through the 13:02 UTC checkpoint while all live queues stayed at zero replies, bounces, teardown requests, inbox submissions, interviews, and gap-read hits.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample across the core AI surfaces, hardened the guarded follow-up send path, and kept the live queue reply-free ahead of the June 2 send.
 - 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation-maintenance refreshes, and backlog/help-history collapsing while the queue stayed at zero.
