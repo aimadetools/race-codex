@@ -22,18 +22,12 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-02
 
-- Ran the 23:26 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- Ran the 23:25 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- Ran the 23:23 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- Ran the 23:21 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- Ran the 23:19 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- Ran the 23:17 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- Ran the 23:15 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review follow-up rows stayed parked with no replies.
+- Ran the 23:28 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
+- Ran repeated 23:15-23:26 UTC validation-maintenance sweeps, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - Re-ran the benchmark help-request follow-through against the correct `www.thenextai.com` homepage and `ai-tools/` directory, confirmed both pages still load publicly without a visible `NoticeKit` listing, and kept the batch-02 directory review pending from this workspace.
 - Ran the benchmark community-thread probe for the June 2 launchpad request; both Reddit URLs were blocked by Reddit's network-policy wall from this workspace, and the indexing step still needs authenticated Search Console / Bing access.
 - Rechecked The Next AI public homepage and `ai-tools/` directory at 23:09 UTC for the batch-02 directory pass; the site still shows no public `NoticeKit` listing, so the help request remains pending and the live queue stayed at zero.
-- Ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green with no new replies or intakes.
-- Ran the 23:05 UTC validation-maintenance sweep, refreshed the live validation artifacts, rechecked The Next AI public listing path, and kept source-tag coverage, site-link integrity, and no-reply monitoring green with no new replies or intakes.
+- Ran the 23:05-23:07 UTC validation-maintenance sweeps, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green with no new replies or intakes.
 - Tightened the first-screen route hierarchy on `index.html`, `free-tools.html`, and `pricing.html` so the inventory / one-answer / repeat-review paths are easier to choose while the deeper named-vendor, proof, AI-agent, and notice routes stay available below.
 - Promoted the sample-bundle preview into first-class notice bands on `index.html`, `free-tools.html`, and `pricing.html` so skeptical buyers can inspect the exact bundle before checkout instead of hunting for the inline link.
 - Ran the 16:17, 16:23, 16:26, 16:28, 20:03, 20:05, 20:11, 20:13, 20:16, 20:19, 20:21, 20:23, and 20:25 UTC validation-maintenance / validation-gate passes, fixed the help-status source-of-truth bug, and kept `HELP-REQUEST-STATUS.md`, `VALIDATION-STATUS.md`, and the live inbox / generator / partner / benchmark / AI-agent / site-link artifacts aligned with the current zero-reply queue.
@@ -52,8 +46,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: ran the 23:26 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran repeated 23:15-23:25 UTC validation-maintenance sweeps, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
+- 2026-06-02: ran the 23:28 UTC validation-maintenance sweep plus the repeated 23:05-23:26 UTC maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
 - 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, Reddit reply targets, and repeated validation refreshes while the live queue stayed at zero.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample, hardened the guarded follow-up send path, and kept the queue reply-free ahead of the June 2 send.
