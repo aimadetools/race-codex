@@ -4,8 +4,6 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P0
 
-- Check `BENCHMARK-OUTREACH-STATUS.md` for the first benchmark-led public-page outreach reply, redirect, or teardown request; it now cross-checks `ai-benchmark-outreach-batch-01.csv`, the Blob inbox, and `COMMUNITY-FEEDBACK.md`, so record the exact company and outcome there before changing the campaign.
-- Check `AI-AGENT-REVIEW-OUTREACH-STATUS.md` and `ai-agent-review-outreach-batch-01.csv` for the first AI agent review outreach reply, redirect, or teardown request; record the exact company and whether the friction was tool list, approval gate, audit trail, or neither before changing that campaign.
 - Recheck the benchmark and AI-agent-review batches on `2026-06-03 UTC` after the June 2 follow-up send; if any row now has a reply, bounce, redirect, or teardown request, update the matching CSV, status file, and `COMMUNITY-FEEDBACK.md` before touching copy or target lists.
 - If any June 2 benchmark or AI-agent-review follow-up email bounces, preserve the exact company, recipient, and timestamp in the outreach CSV notes before changing status or swapping the contact route.
 - If the benchmark and AI-agent-review batches are still at 0 replies by `2026-06-05 UTC` after the June 2 follow-up send, record that the current angle exhausted its second touch and leave the batch parked until a new outreach offer or segment decision is made.
@@ -154,6 +152,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: rechecked `BENCHMARK-OUTREACH-STATUS.md` and `AI-AGENT-REVIEW-OUTREACH-STATUS.md` at the 16:20 UTC maintenance checkpoint; both batches still had 0 replies, redirects, or teardown requests, so the live monitoring items moved to summary and the active queue remained unchanged.
 - 2026-06-02: ran validation-maintenance and validation-gate refreshes through the 16:17 UTC checkpoint, regenerated the live operator artifacts, and kept the reply, inbox, and submission queues at zero while the watch, source-tag, and site-link guards stayed green.
 - 2026-06-02: tightened the homepage / free-tools / pricing first-screen route hierarchy, fixed the help-status source-of-truth bug, shipped the dedicated AI-agent gap-read path, and corrected the post-send operator-state bugs so the June 2 follow-up state now reads accurately as followed_up.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send path hardening, and repeated validation-maintenance passes while the benchmark and AI-agent queues stayed reply-free.
