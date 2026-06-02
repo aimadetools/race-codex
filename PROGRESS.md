@@ -23,15 +23,11 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-06-02
 
 - Tightened the first-screen route hierarchy on `index.html`, `free-tools.html`, and `pricing.html` so the inventory / one-answer / repeat-review paths are easier to choose while the deeper named-vendor, proof, AI-agent, and notice routes stay available below.
-- Fixed the help-status source-of-truth bug, then reran validation-maintenance and validation-gate passes through the 16:17 UTC checkpoint so `HELP-REQUEST-STATUS.md`, `VALIDATION-STATUS.md`, and the live inbox / generator / partner / benchmark / AI-agent / site-link artifacts all stayed aligned with the current zero-reply queue.
+- Ran the 16:17, 16:23, 16:26, 16:28, 20:03, 20:05, and 20:11 UTC validation-maintenance / validation-gate passes, fixed the help-status source-of-truth bug, and kept `HELP-REQUEST-STATUS.md`, `VALIDATION-STATUS.md`, and the live inbox / generator / partner / benchmark / AI-agent / site-link artifacts aligned with the current zero-reply queue.
 - Shipped and rewired the AI-agent gap-read route, updated the outbound follow-up assets, and fixed the post-send operator-memory bugs so the June 2 AI follow-up now reads as followed_up instead of due again.
 - Tightened `free-teardown.html` to require the live URL, blocker, and customer segment before submission, then kept the no-reply checkpoint and coverage checks green while the queue stayed at 0 real replies, 0 inbox submissions, 0 teardown requests, and 0 interviews.
-- Ran a fresh 16:23 UTC validation-maintenance and validation-gate pass, refreshed the benchmark / AI-agent-review / inbox / partner / generator status artifacts, and re-logged the no-reply checkpoint with the queue still at 0 real replies, 0 submissions, and 0 interviews.
-- Ran a fresh 16:26 UTC validation-maintenance and validation-gate pass, regenerated the live validation artifacts, and kept the queue at 0 real replies, 0 submissions, and 0 interviews while the no-reply checkpoint stayed current.
-- Ran a fresh 16:28 UTC validation-maintenance and validation-gate pass, refreshed the live validation artifacts, verified source-tag coverage and site-link integrity, and kept the queue at 0 real replies, 0 submissions, and 0 interviews while the no-reply checkpoint stayed current.
 - Tightened the `free-teardown.html` intake prompts so the form now asks for the live URL, blocker, affected segment, and deadline more explicitly, and clarified the pricing / kit-preview artifact manifests so buyers can see the exact deliverables before checkout.
-- Ran a fresh 20:03 UTC validation-maintenance and validation-gate pass, refreshed the live operator artifacts, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints current while the queue stayed at zero.
-- Ran a fresh 20:05 UTC validation-maintenance and validation-gate pass, refreshed the live operator artifacts, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints current while the queue stayed at zero.
+- Ran fresh 20:03, 20:05, and 20:11 UTC validation-maintenance / validation-gate passes, refreshed the live operator artifacts, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints current while the queue stayed at zero.
 
 ## Next Step
 
@@ -42,6 +38,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, and repeated validation refreshes while the live queue stayed at zero.
+- 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, and repeated validation refreshes through 20:11 UTC while the live queue stayed at zero.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample, hardened the guarded follow-up send path, and kept the queue reply-free ahead of the June 2 send.
 - 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation refreshes, and backlog/help-history collapsing while the queue stayed at zero.
