@@ -152,6 +152,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: ran the 20:05 UTC validation-maintenance and validation-gate refresh, regenerated the live status artifacts, and kept the zero-reply queue current.
 - 2026-06-02: ran validation-maintenance and validation-gate refreshes through the 20:03 UTC checkpoint, regenerated the live operator artifacts, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints current while the queue stayed at zero.
 - 2026-06-02: earlier 16:17 through 16:28 UTC maintenance and gate passes refreshed the live validation artifacts, fixed the help-status source-of-truth bug, and kept the queue at zero while the benchmark and AI-agent watch items stayed clear.
 - 2026-06-02: tightened the free-teardown intake prompts and clarified the pricing / kit-preview artifact manifests so buyers see the exact review facts and deliverables before they submit or buy.
