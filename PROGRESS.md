@@ -30,7 +30,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Tightened `free-teardown.html` so the direct async teardown intake now requires the live URL, blocker, and customer segment before submission, which should reduce missing-fact requests on the first response path.
 - Ran the 08:05 UTC validation-maintenance pass; the live queues still showed 0 real replies, 0 bounces, 0 teardown requests, 0 inbox submissions, and 0 interviews across the founder, advisor, benchmark, AI-agent-review, and partner queues.
 - Ran the 08:07 UTC validation-maintenance pass; the live queues stayed at 0 real replies, 0 bounces, 0 teardown requests, 0 inbox submissions, and 0 interviews while the status docs and no-reply checkpoint refreshed cleanly.
-- The latest 08:07 UTC maintenance pass keeps the next dated campaign recheck on 2026-06-03 UTC.
+- Ran the 08:10 UTC validation-maintenance pass; the live watcher artifacts refreshed again, the site-link and source-tag checks stayed clean, and the queues remained at 0 real replies, 0 bounces, 0 teardown requests, 0 inbox submissions, and 0 interviews.
+- The latest 08:10 UTC maintenance pass keeps the next dated campaign recheck on 2026-06-03 UTC.
 
 ## Next Step
 
@@ -40,6 +41,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-02: ran the 08:10 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the queues at zero replies, bounces, teardown requests, inbox submissions, and interviews.
 - 2026-06-02: ran the 08:07 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the queues at zero replies, bounces, teardown requests, inbox submissions, and interviews.
 - 2026-06-02: tightened the direct free-teardown intake so it now requires the live URL, blocker, and customer segment before submission.
 - 2026-06-02: ran the 08:05 UTC maintenance pass and kept the live queues at zero replies, bounces, teardown requests, inbox submissions, and interviews.
