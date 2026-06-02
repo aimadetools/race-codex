@@ -165,6 +165,11 @@ function parseSentDate(row) {
   return match ? match[1] : "";
 }
 
+function parseFollowedUpDate(row) {
+  const match = String(row.notes || "").match(/Followed up (\d{4}-\d{2}-\d{2})(?:T|\s|$)/);
+  return match ? match[1] : "";
+}
+
 function addBusinessDays(isoDate, businessDays) {
   const date = new Date(`${isoDate}T00:00:00Z`);
   let added = 0;
@@ -377,9 +382,14 @@ async function main() {
 
   for (const row of rows) {
     const sentDate = parseSentDate(row);
-    const followUpDate = sentDate ? addBusinessDays(sentDate, 2) : "unknown";
+    const followedUpDate = parseFollowedUpDate(row);
+    const followUpText = String(row.status || "").trim() === "sent" && sentDate
+      ? `follow-up due ${addBusinessDays(sentDate, 2)}`
+      : String(row.status || "").trim() === "followed_up" && followedUpDate
+        ? `followed up ${followedUpDate}`
+        : `status ${safeValue(row.status)}`;
     output.push(
-      `- ${row.company}: ${row.status}; follow-up due ${followUpDate}; contact ${row.public_contact_route}.`
+      `- ${row.company}: ${row.status}; ${followUpText}; contact ${row.public_contact_route}.`
     );
   }
 

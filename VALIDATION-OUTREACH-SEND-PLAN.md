@@ -63,25 +63,25 @@ Status: active outbound on 2026-04-28; 5 sent, 0 followed_up, 0 terminal row(s).
 
 Status: active outbound on 2026-05-28; 0 sent, 5 followed_up, 0 terminal row(s).
 
-| Priority | Target | Segment | Route | Send method | Status | Follow-up date |
+| Priority | Target | Segment | Route | Send method | Status | Follow-up state |
 |---:|---|---|---|---|---|---|
-| 1 | Inkeep | Founder/operator or privacy lead | privacy@inkeep.com | direct-email | followed_up | 2026-06-02 |
-| 2 | WipRadar | Founder/operator or privacy lead | legal@wipradar.com | direct-email | followed_up | 2026-06-02 |
-| 3 | Cotool | Founder/operator or security lead | info@cotool.ai | direct-email | followed_up | 2026-06-02 |
-| 4 | AgentLattice | Founder/operator or security lead | security@agentlattice.com | direct-email | followed_up | 2026-06-02 |
-| 5 | Superhuman | Founder/operator or privacy lead | privacy@superhuman.com | direct-email | followed_up | 2026-06-02 |
+| 1 | Inkeep | Founder/operator or privacy lead | privacy@inkeep.com | direct-email | followed_up | sent 2026-06-02 |
+| 2 | WipRadar | Founder/operator or privacy lead | legal@wipradar.com | direct-email | followed_up | sent 2026-06-02 |
+| 3 | Cotool | Founder/operator or security lead | info@cotool.ai | direct-email | followed_up | sent 2026-06-02 |
+| 4 | AgentLattice | Founder/operator or security lead | security@agentlattice.com | direct-email | followed_up | sent 2026-06-02 |
+| 5 | Superhuman | Founder/operator or privacy lead | privacy@superhuman.com | direct-email | followed_up | sent 2026-06-02 |
 
 ## AI agent review batch 01
 
 Status: active outbound on 2026-05-29; 0 sent, 5 followed_up, 0 terminal row(s).
 
-| Priority | Target | Segment | Route | Send method | Status | Follow-up date |
+| Priority | Target | Segment | Route | Send method | Status | Follow-up state |
 |---:|---|---|---|---|---|---|
-| 1 | Choicely | Founder/operator or privacy lead | privacy@choicely.com | direct-email | followed_up | 2026-06-02 |
-| 2 | Specteron | Founder/operator or security lead | security@specteron.com | direct-email | followed_up | 2026-06-02 |
-| 3 | Agent.ai | Founder/operator or support lead | support@agent.ai | direct-email | followed_up | 2026-06-02 |
-| 4 | Letswhisper.ai | Founder/operator or privacy lead | hello@letswhisper.ai | direct-email | followed_up | 2026-06-02 |
-| 5 | LizzyAI | Founder/operator or privacy lead | privacy@lizzyai.com | direct-email | followed_up | 2026-06-02 |
+| 1 | Choicely | Founder/operator or privacy lead | privacy@choicely.com | direct-email | followed_up | sent 2026-06-02 |
+| 2 | Specteron | Founder/operator or security lead | security@specteron.com | direct-email | followed_up | sent 2026-06-02 |
+| 3 | Agent.ai | Founder/operator or support lead | support@agent.ai | direct-email | followed_up | sent 2026-06-02 |
+| 4 | Letswhisper.ai | Founder/operator or privacy lead | hello@letswhisper.ai | direct-email | followed_up | sent 2026-06-02 |
+| 5 | LizzyAI | Founder/operator or privacy lead | privacy@lizzyai.com | direct-email | followed_up | sent 2026-06-02 |
 
 ## Notes
 

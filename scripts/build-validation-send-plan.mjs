@@ -138,6 +138,11 @@ function extractSentDate(notes) {
   return match ? match[1] : "";
 }
 
+function extractFollowedUpDate(notes) {
+  const match = String(notes || "").match(/Followed up\s+(20\d{2}-\d{2}-\d{2})/);
+  return match ? match[1] : "";
+}
+
 function addBusinessDays(isoDate, businessDays) {
   const date = new Date(`${isoDate}T00:00:00Z`);
   let added = 0;
@@ -262,7 +267,11 @@ const normalizedBenchmark = benchmarkBatch.map((row) => ({
   route: row.public_contact_route,
   sendMethod: classifyRoute(row.public_contact_route),
   status: row.status,
-  followUpDate: extractSentDate(row.notes) ? addBusinessDays(extractSentDate(row.notes), 3) : "n/a"
+  nextStep: String(row.status || "").trim() === "sent" && extractSentDate(row.notes)
+    ? `due ${addBusinessDays(extractSentDate(row.notes), 3)}`
+    : String(row.status || "").trim() === "followed_up" && extractFollowedUpDate(row.notes)
+      ? `sent ${extractFollowedUpDate(row.notes)}`
+      : "n/a"
 }));
 
 const normalizedAgentReview = agentReviewBatch.map((row) => ({
@@ -272,7 +281,11 @@ const normalizedAgentReview = agentReviewBatch.map((row) => ({
   route: row.public_contact_route,
   sendMethod: classifyRoute(row.public_contact_route),
   status: row.status,
-  followUpDate: extractSentDate(row.notes) ? addBusinessDays(extractSentDate(row.notes), 2) : "n/a"
+  nextStep: String(row.status || "").trim() === "sent" && extractSentDate(row.notes)
+    ? `due ${addBusinessDays(extractSentDate(row.notes), 2)}`
+    : String(row.status || "").trim() === "followed_up" && extractFollowedUpDate(row.notes)
+      ? `sent ${extractFollowedUpDate(row.notes)}`
+      : "n/a"
 }));
 
 const directEmailCount = [...normalized01, ...normalized02, ...normalized03, ...normalized04, ...normalizedBenchmark, ...normalizedAgentReview].filter(
@@ -287,12 +300,12 @@ const totalReplyRows = allRows.reduce((total, row) => {
 const benchmarkWaiting = benchmarkBatch.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 const agentReviewWaiting = agentReviewBatch.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 const benchmarkFollowUpDate = normalizedBenchmark
-  .filter((row) => row.status === "sent" && row.followUpDate !== "n/a")
-  .map((row) => row.followUpDate)
+  .filter((row) => row.status === "sent" && row.nextStep.startsWith("due "))
+  .map((row) => row.nextStep.replace(/^due /, ""))
   .sort()[0] || "";
 const agentReviewFollowUpDate = normalizedAgentReview
-  .filter((row) => row.status === "sent" && row.followUpDate !== "n/a")
-  .map((row) => row.followUpDate)
+  .filter((row) => row.status === "sent" && row.nextStep.startsWith("due "))
+  .map((row) => row.nextStep.replace(/^due /, ""))
   .sort()[0] || "";
 
 let currentPriority = "Monitor the active outreach queue for the first real reply and convert any real reply into a scored interview immediately.";
@@ -335,11 +348,11 @@ const benchmarkSection = normalizedBenchmark.length
       "",
       describeBatchStatus(benchmarkBatch),
       "",
-      "| Priority | Target | Segment | Route | Send method | Status | Follow-up date |",
+      "| Priority | Target | Segment | Route | Send method | Status | Follow-up state |",
       "|---:|---|---|---|---|---|---|",
       ...normalizedBenchmark.map(
         (row) =>
-          `| ${row.priority} | ${row.target} | ${row.segment} | ${row.route} | ${row.sendMethod} | ${row.status} | ${row.followUpDate} |`
+          `| ${row.priority} | ${row.target} | ${row.segment} | ${row.route} | ${row.sendMethod} | ${row.status} | ${row.nextStep} |`
       ),
       ""
     ].join("\n")
@@ -351,11 +364,11 @@ const agentReviewSection = normalizedAgentReview.length
       "",
       describeBatchStatus(agentReviewBatch),
       "",
-      "| Priority | Target | Segment | Route | Send method | Status | Follow-up date |",
+      "| Priority | Target | Segment | Route | Send method | Status | Follow-up state |",
       "|---:|---|---|---|---|---|---|",
       ...normalizedAgentReview.map(
         (row) =>
-          `| ${row.priority} | ${row.target} | ${row.segment} | ${row.route} | ${row.sendMethod} | ${row.status} | ${row.followUpDate} |`
+          `| ${row.priority} | ${row.target} | ${row.segment} | ${row.route} | ${row.sendMethod} | ${row.status} | ${row.nextStep} |`
       ),
       ""
     ].join("\n")
