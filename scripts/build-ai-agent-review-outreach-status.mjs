@@ -19,8 +19,21 @@ const AGENT_REVIEW_SOURCE_TAGS = new Set([
   "agent-review-checklist-approval-gate",
   "agent-review-checklist-builder",
   "agent-review-checklist-teardown",
-  "agent-review-checklist-hub"
+  "agent-review-checklist-hub",
+  "agent-review-checklist-workspace",
+  "ai-agent-review-teardown",
+  "ai-agent-approval-gate-teardown",
+  "ai-agent-workspace-teardown",
+  "ai-agent-review-workspace-tool-access",
+  "ai-agent-review-workspace-approval-gate"
 ]);
+const AI_AGENT_GAP_READ_SOURCE_TAGS = [
+  "agent-review-outreach-batch-01",
+  "ai-agent-review-teardown",
+  "ai-agent-approval-gate-teardown",
+  "agent-review-checklist-teardown",
+  "ai-agent-workspace-teardown"
+];
 
 function parseCsv(text) {
   const rows = [];
@@ -87,6 +100,10 @@ function parseCsv(text) {
 
 function countBy(rows, key, value) {
   return rows.filter((row) => String(row[key] || "").trim() === value).length;
+}
+
+function countBySourceTag(records, sourceTag) {
+  return records.filter((record) => String(record.sourceTag || "").trim() === sourceTag).length;
 }
 
 async function loadEnvFile(envPath) {
@@ -282,7 +299,7 @@ function extractFeedbackMatches(text) {
   return text
     .split(/\r?\n/)
     .map((line) => line.trim())
-    .filter((line) => /agent review|tool access|approval gate|audit trail/i.test(line));
+    .filter((line) => /agent review|tool access|approval gate|approval path|blocked action|scope|audit trail/i.test(line));
 }
 
 async function main() {
@@ -303,6 +320,11 @@ async function main() {
   const inboxSubmissions = inbox.records.length;
   const teardownRequests = inbox.records.filter((record) => String(record.type || "").trim() === "free_async_teardown").length;
   const feedbackMentions = extractFeedbackMatches(feedbackText);
+  const latestInboxRecord = inbox.records[0] || null;
+  const gapReadSourceBreakdown = AI_AGENT_GAP_READ_SOURCE_TAGS.map((sourceTag) => ({
+    sourceTag,
+    count: countBySourceTag(inbox.records, sourceTag)
+  }));
   const firstSendAt = rows
     .map((row) => parseSentTimestamp(row))
     .filter(Boolean)
@@ -347,33 +369,51 @@ async function main() {
     "",
     "## Evidence Watch",
     "",
-    inbox.available
-      ? `- Blob inbox check found ${inboxSubmissions} agent-review-tagged submission(s) so far.`
-      : "- Blob inbox check is unavailable because no Blob token is configured in the current environment.",
+    terminalRows === 0 && inboxSubmissions === 0 && feedbackMentions.length === 0
+      ? "- No AI-agent-control reply, redirect, or gap-read evidence is recorded yet across the outreach CSV, Blob inbox, or COMMUNITY-FEEDBACK.md."
+      : null,
+    terminalRows > 0
+      ? `- Outreach CSV evidence exists: ${positiveReplies} positive reply row(s), ${negativeReplies} negative reply row(s), ${bounces} bounce row(s), and ${interviewsCompleted} interview row(s).`
+      : null,
+    latestInboxRecord
+      ? `- Latest agent-review-tagged inbox submission: ${safeValue(latestInboxRecord.submittedAt || latestInboxRecord.uploadedAt)} | ${safeValue(latestInboxRecord.type)} | ${safeValue(latestInboxRecord.sourceTag)} | ${safeValue(latestInboxRecord.company)}.`
+      : inbox.available
+        ? "- Blob inbox check found no agent-review-tagged submissions yet."
+        : "- Blob inbox check is unavailable because no Blob token is configured in the current environment.",
     feedbackMentions.length > 0
       ? `- COMMUNITY-FEEDBACK.md contains ${feedbackMentions.length} agent-review-related line(s); review the excerpts below before changing outreach copy.`
-      : "- COMMUNITY-FEEDBACK.md does not contain an agent-review-specific reply or outcome yet.",
+      : terminalRows === 0 && inboxSubmissions === 0
+        ? null
+        : "- COMMUNITY-FEEDBACK.md does not contain an agent-review-specific reply or outcome yet.",
     "",
     "## Inbox Matches",
     ""
-  ];
+  ].filter(Boolean);
 
-  if (inbox.records.length === 0) {
+  if (!inbox.available) {
+    output.push("- Blob inbox unavailable in the current environment; AI-agent intake cross-check could not be completed here.");
+  } else if (inbox.records.length === 0) {
     output.push("- No real agent-review-tagged submissions are stored in the inbox yet.");
   } else {
-    for (const record of inbox.records) {
+    for (const record of inbox.records.slice(0, 5)) {
       output.push(
-        `- ${safeValue(record.uploadedAt)}: ${safeValue(record.type)} from ${safeValue(record.sourceTag)} for ${safeValue(record.company)} (${safeValue(record.email)}).`
+        `- ${safeValue(record.submittedAt || record.uploadedAt)} | ${safeValue(record.type)} | ${safeValue(record.sourceTag)} | ${safeValue(record.company)} | role ${safeValue(record.ownershipSignal, "unknown")}`
       );
     }
+  }
+
+  output.push("", "## Gap-Read Source Breakdown", "");
+
+  for (const { sourceTag, count } of gapReadSourceBreakdown) {
+    output.push(`- ${sourceTag}: ${count}`);
   }
 
   output.push("", "## Community Feedback Matches", "");
 
   if (feedbackMentions.length === 0) {
-    output.push("- No agent-review-specific feedback is logged yet.");
+  output.push("- No agent-review-specific feedback is logged yet.");
   } else {
-    for (const line of feedbackMentions) {
+    for (const line of feedbackMentions.slice(-5)) {
       output.push(`- ${line}`);
     }
   }

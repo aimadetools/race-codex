@@ -42,6 +42,13 @@ const PARTNER_GOAL_BUCKET_ORDER = [
   "other",
   "unknown"
 ];
+const AI_AGENT_GAP_READ_SOURCE_TAGS = [
+  "agent-review-outreach-batch-01",
+  "ai-agent-review-teardown",
+  "ai-agent-approval-gate-teardown",
+  "agent-review-checklist-teardown",
+  "ai-agent-workspace-teardown"
+];
 
 function formatUtcTimestamp(date) {
   const year = date.getUTCFullYear();
@@ -362,6 +369,10 @@ async function main() {
     bucket,
     realPartnerRequests.filter((record) => normalizePartnerGoal(record.partnerGoal) === bucket).length
   ]);
+  const aiAgentGapReadCounts = AI_AGENT_GAP_READ_SOURCE_TAGS.map((sourceTag) => [
+    sourceTag,
+    realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
+  ]);
   const watchedSourceCounts = WATCHED_SOURCE_TAGS.map((sourceTag) => [
     sourceTag,
     realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
@@ -412,6 +423,10 @@ async function main() {
     "### Partner Request Goals",
     "",
     ...partnerGoalCounts.map(([bucket, count]) => `- ${bucket}: ${count}`),
+    "",
+    "### AI Agent Gap-Read Source Tags",
+    "",
+    ...aiAgentGapReadCounts.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`),
     "",
     "### Watched Source Tags",
     "",

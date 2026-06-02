@@ -748,6 +748,13 @@ const aiAgentWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "ai-security-questionnaire-starter-pack-agent-review", label: "starter-pack review" },
   { tag: "ai-security-questionnaire-starter-pack-agent-approval-gate", label: "starter-pack approval-gate" }
 ]);
+const aiAgentGapReadWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "agent-review-outreach-batch-01", label: "outreach gap-read" },
+  { tag: "ai-agent-review-teardown", label: "tool-access gap-read" },
+  { tag: "ai-agent-approval-gate-teardown", label: "approval-gate gap-read" },
+  { tag: "agent-review-checklist-teardown", label: "checklist gap-read" },
+  { tag: "ai-agent-workspace-teardown", label: "workspace gap-read" }
+]);
 const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-openai-answer-template", label: "blog template" },
   { tag: "blog-index-openai-answer-example", label: "blog example" },
@@ -834,6 +841,7 @@ const output = [
   "",
   renderWatchedSourceGroup("AI-first entry-point inbox submissions", aiFirstEntryWatch),
   renderWatchedSourceGroup("AI-agent-control inbox submissions", aiAgentWatch),
+  renderWatchedSourceGroup("AI-agent gap-read inbox submissions", aiAgentGapReadWatch),
   renderWatchedSourceGroup("OpenAI route inbox submissions", openAiWatch),
   renderWatchedSourceGroup("Benchmark-led route inbox submissions", benchmarkRouteWatch),
   "",

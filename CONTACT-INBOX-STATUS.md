@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-02 12:54 UTC
+Checked at: 2026-06-02 12:58 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -66,6 +66,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - white_label: 0
 - other: 0
 - unknown: 0
+
+### AI Agent Gap-Read Source Tags
+
+- agent-review-outreach-batch-01: 0
+- ai-agent-review-teardown: 0
+- ai-agent-approval-gate-teardown: 0
+- agent-review-checklist-teardown: 0
+- ai-agent-workspace-teardown: 0
 
 ### Watched Source Tags
 

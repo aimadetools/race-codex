@@ -21,14 +21,14 @@ Date: 2026-06-02
 
 ## Watch Freshness
 
-- Community feedback checkpoint: 2026-06-02 12:52 UTC (2 minutes ago)
-- Contact inbox snapshot: 2026-06-02 12:54 UTC (less than 1 minute ago)
-- Human-help snapshot: 2026-06-02 12:54 UTC (less than 1 minute ago)
-- Generator production snapshot: 2026-06-02 12:54 UTC (less than 1 minute ago)
-- Generator handoff snapshot: 2026-06-02 12:54 UTC (less than 1 minute ago)
-- Benchmark-outreach snapshot: 2026-06-02 12:54 UTC (less than 1 minute ago)
-- AI-agent-review snapshot: 2026-06-02 12:54 UTC (less than 1 minute ago)
-- Partner-outreach snapshot: 2026-06-02 12:54 UTC (less than 1 minute ago)
+- Community feedback checkpoint: 2026-06-02 12:52 UTC (6 minutes ago)
+- Contact inbox snapshot: 2026-06-02 12:54 UTC (4 minutes ago)
+- Human-help snapshot: 2026-06-02 12:54 UTC (4 minutes ago)
+- Generator production snapshot: 2026-06-02 12:54 UTC (4 minutes ago)
+- Generator handoff snapshot: 2026-06-02 12:54 UTC (4 minutes ago)
+- Benchmark-outreach snapshot: 2026-06-02 12:54 UTC (4 minutes ago)
+- AI-agent-review snapshot: 2026-06-02 12:54 UTC (4 minutes ago)
+- Partner-outreach snapshot: 2026-06-02 12:54 UTC (4 minutes ago)
 
 ## Batch Snapshot
 
@@ -41,6 +41,7 @@ Date: 2026-06-02
 
 - AI-first entry-point inbox submissions: 0 (0 start-here teardown, 0 about teardown, 0 partner-preview hero, 0 partner-preview cta, 0 homepage hero, 0 homepage shortcut, 0 homepage one-answer, 0 homepage repeat-review, 0 homepage route one-answer, 0 homepage route repeat-review, 0 homepage broader-handoff, 0 pricing starter-pack, 0 pricing route one-answer, 0 pricing route repeat-review, 0 pricing broader-handoff)
 - AI-agent-control inbox submissions: 0 (0 blog review, 0 blog approval-gate, 0 free-tools review, 0 free-tools approval-gate, 0 hub review, 0 hub approval-gate, 0 path-guide review, 0 path-guide approval-gate, 0 start-here review, 0 start-here approval-gate, 0 homepage review, 0 homepage approval-gate, 0 pricing review, 0 pricing approval-gate, 0 starter-pack review, 0 starter-pack approval-gate)
+- AI-agent gap-read inbox submissions: 0 (0 outreach gap-read, 0 tool-access gap-read, 0 approval-gate gap-read, 0 checklist gap-read, 0 workspace gap-read)
 - OpenAI route inbox submissions: 0 (0 blog template, 0 blog example, 0 blog answer-bank, 0 blog path-guide, 0 free-tools template, 0 free-tools example, 0 free-tools answer-bank, 0 free-tools path-guide, 0 hub template, 0 hub example, 0 hub answer-bank, 0 hub path-guide, 0 homepage template, 0 homepage example, 0 homepage answer-bank, 0 homepage path-guide, 0 pricing template, 0 pricing answer-bank, 0 pricing path-guide, 0 starter-pack template, 0 starter-pack example, 0 starter-pack answer-bank, 0 starter-pack path-guide)
 - Benchmark-led route inbox submissions: 0 (0 outreach batch, 0 outreach report, 0 community report, 0 community procurement, 0 homepage report, 0 free-tools report, 0 blog-index report, 0 report teardown, 0 report tracker)
 
