@@ -53,7 +53,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-02: ran the 20:03-20:16 UTC validation refreshes, fixed the help-status source-of-truth bug, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints at zero.
+- 2026-06-02: ran the 20:03-20:19 UTC validation refreshes, fixed the help-status source-of-truth bug, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints at zero.
 - 2026-06-02: tightened the homepage / free-tools / pricing first-screen route hierarchy, shipped the dedicated AI-agent gap-read path, and corrected the post-send operator-state bugs.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes.
 - 2026-05-31 to 2026-05-27: completed the proof-first evidence-map expansion, builder-positioning pass, AI-agent workspace rollout, and repeated validation-maintenance passes.
