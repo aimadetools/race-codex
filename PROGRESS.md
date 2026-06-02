@@ -42,9 +42,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: ran the 20:05 UTC validation-maintenance and validation-gate refresh, regenerated the live status artifacts, and kept the zero-reply queue current.
-- 2026-06-02: ran validation-maintenance and validation-gate refreshes through the 20:03 UTC checkpoint, regenerated the live operator artifacts, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints current while the queue stayed at zero.
-- 2026-06-02: earlier 16:17 through 16:28 UTC maintenance and gate passes refreshed the live validation artifacts, fixed the help-status source-of-truth bug, updated the AI-agent follow-up state, and kept the queue at zero.
-- 2026-06-02: tightened the free-teardown intake prompts and clarified the pricing / kit-preview artifact manifests so the exact deliverables and required review facts are more obvious before submission or checkout.
-- 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample across the core AI surfaces, hardened the guarded follow-up send path, and kept the live queue reply-free ahead of the June 2 send.
-- 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation-maintenance refreshes, and backlog/help-history collapsing while the queue stayed at zero.
+- 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, and repeated validation refreshes while the live queue stayed at zero.
+- 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample, hardened the guarded follow-up send path, and kept the queue reply-free ahead of the June 2 send.
+- 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation refreshes, and backlog/help-history collapsing while the queue stayed at zero.

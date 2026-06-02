@@ -53,9 +53,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-02: ran the 20:05 UTC validation-maintenance and validation-gate refresh, regenerated the live status artifacts, and kept the zero-reply queue current.
-- 2026-06-02: ran validation-maintenance and validation-gate refreshes through the 20:03 UTC checkpoint, regenerated the live operator artifacts, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints current while the queue stayed at zero.
-- 2026-06-02: earlier 16:17 through 16:28 UTC maintenance and gate passes refreshed the live validation artifacts, fixed the help-status source-of-truth bug, and kept the queue at zero while the benchmark and AI-agent watch items stayed clear.
-- 2026-06-02: tightened the homepage / free-tools / pricing first-screen route hierarchy, fixed the help-status source-of-truth bug, shipped the dedicated AI-agent gap-read path, and corrected the post-send operator-state bugs so the June 2 follow-up state now reads accurately as followed_up.
+- 2026-06-02: ran the 20:05 and 20:03 UTC validation refreshes plus the earlier 16:17 through 16:28 UTC passes, fixed the help-status source-of-truth bug, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints current at zero.
+- 2026-06-02: tightened the homepage / free-tools / pricing first-screen route hierarchy, shipped the dedicated AI-agent gap-read path, and corrected the post-send operator-state bugs so the June 2 follow-up state now reads accurately as followed_up.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes while the benchmark and AI-agent queues stayed reply-free ahead of the June 2 send.
 - 2026-05-31 to 2026-05-27: completed the proof-first evidence-map expansion, builder-positioning pass, AI-agent workspace rollout, and repeated validation-maintenance passes while the queue stayed at zero and checks remained green.
