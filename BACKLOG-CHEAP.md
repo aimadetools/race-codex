@@ -154,6 +154,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: tightened the homepage, free-tools hub, and pricing first-screen route hierarchy so the inventory / one-answer / repeat-review paths are easier to choose while the deeper proof, named-vendor, agent-control, and notice routes stay available below.
 - 2026-06-02: sent the benchmark and AI-agent follow-up batches, shipped the dedicated AI-agent gap-read path, fixed the stale post-send operator-memory bugs plus the remaining followed-up snapshot bug, corrected the phantom human-help request state by routing help-status generation through `HELP-RESPONSES.md`, added explicit AI-agent gap-read monitoring to the inbox/status builders, tightened the free-teardown intake, and carried clean validation-maintenance/gate refreshes through the 13:02 UTC checkpoint while all live queues stayed at zero.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send path hardening, and repeated validation-maintenance passes while the benchmark and AI-agent queues stayed reply-free.
 - 2026-05-31 to 2026-05-27: carried the free-tools, pricing, kit-preview, purchase-next-steps, evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review refreshes through repeated no-reply maintenance passes while checks stayed green.

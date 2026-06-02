@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-02
 
+- Tightened the first-screen route hierarchy on `index.html`, `free-tools.html`, and `pricing.html` so the inventory / one-answer / repeat-review paths are easier to choose while the deeper named-vendor, proof, AI-agent, and notice routes stay available below.
 - Fixed a stale operator-memory path in the help snapshot flow. `scripts/build-help-request-status-wrapper.mjs` now treats `HELP-RESPONSES.md` as the source of truth when there is no live `HELP-REQUEST.md`, `package.json` plus `scripts/sync-validation-artifacts.mjs` now call that wrapper, and the regenerated `HELP-REQUEST-STATUS.md` / `VALIDATION-STATUS.md` no longer claim a phantom open human-help request from an archived `help-requests/*.md` file.
 - Ran `run:validation-gate` after the help-status fix. The refreshed operator artifacts stayed green, the human-help state now correctly reads "no active request", and the live queues still show 0 real replies, 0 inbox submissions, 0 bounces, 0 teardown requests, and both benchmark plus AI-agent follow-up batches parked in reply-watch mode.
 - Closed an AI-agent operator blind spot in the monitoring stack: `scripts/build-ai-agent-review-outreach-status.mjs` now treats the dedicated gap-read and workspace source tags as real AI-agent evidence, `CONTACT-INBOX-STATUS.md` now breaks out those five gap-read tags explicitly, and `VALIDATION-STATUS.md` now shows a dedicated AI-agent gap-read watch line so the first real intake cannot hide inside the generic inbox dump.
@@ -49,6 +50,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-02: tightened the homepage, free-tools hub, and pricing first-screen route hierarchy so the core AI paths are easier to choose while keeping the deeper proof, named-vendor, agent-control, and notice routes intact.
 - 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, shipped the AI-agent gap-read route, fixed the stale post-send operator messaging plus the remaining followed-up snapshot bug, added explicit AI-agent gap-read monitoring to the inbox/status builders, corrected the phantom human-help request state by routing help-status generation through `HELP-RESPONSES.md`, tightened the free-teardown intake, and carried clean validation-maintenance/gate refreshes through the 13:02 UTC checkpoint while all live queues stayed at zero replies, bounces, teardown requests, inbox submissions, interviews, and gap-read hits.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample across the core AI surfaces, hardened the guarded follow-up send path, and kept the live queue reply-free ahead of the June 2 send.
 - 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation-maintenance refreshes, and backlog/help-history collapsing while the queue stayed at zero.
