@@ -97,3 +97,5 @@ Rechecked on 2026-06-02 23:07 UTC: no advisor replies have been posted here yet.
 Rechecked on 2026-06-02 23:07 UTC: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep `ai-benchmark-outreach-batch-01.csv` unchanged and monitor the followed-up benchmark rows for the first real reply, redirect, or teardown request before expanding the list.
 
 Rechecked on 2026-06-02 23:07 UTC: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep `ai-agent-review-outreach-batch-01.csv` unchanged and monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list.
+
+Rechecked on 2026-06-02 23:09 UTC: The Next AI homepage and `ai-tools/` directory still load publicly, but neither HTML response contains `NoticeKit`, so no public listing surfaced.
