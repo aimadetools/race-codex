@@ -152,12 +152,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: ran validation-maintenance and validation-gate refreshes through the 20:03 UTC checkpoint, regenerated the live operator artifacts, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints current while the queue stayed at zero.
+- 2026-06-02: earlier 16:17 through 16:28 UTC maintenance and gate passes refreshed the live validation artifacts, fixed the help-status source-of-truth bug, and kept the queue at zero while the benchmark and AI-agent watch items stayed clear.
 - 2026-06-02: tightened the free-teardown intake prompts and clarified the pricing / kit-preview artifact manifests so buyers see the exact review facts and deliverables before they submit or buy.
-- 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:28/16:29 UTC checkpoint, regenerated the live operator artifacts, verified source-tag coverage and site-link integrity, and kept the queue at zero while the no-reply checkpoint stayed current.
-- 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:26 UTC checkpoint, regenerated the live operator artifacts, and kept the queue at zero while the no-reply checkpoint stayed current.
-- 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:23 UTC checkpoint, updated the live status artifacts, and kept the queue at zero while the no-reply checkpoint stayed current.
-- 2026-06-02: rechecked `BENCHMARK-OUTREACH-STATUS.md` and `AI-AGENT-REVIEW-OUTREACH-STATUS.md` at the 16:20 UTC maintenance checkpoint; both batches still had 0 replies, redirects, or teardown requests, so the live monitoring items moved to summary and the active queue remained unchanged.
-- 2026-06-02: ran validation-maintenance and validation-gate refreshes through the 16:17 UTC checkpoint, regenerated the live operator artifacts, and kept the reply, inbox, and submission queues at zero while the watch, source-tag, and site-link guards stayed green.
-- 2026-06-02: tightened the homepage / free-tools / pricing first-screen route hierarchy, fixed the help-status source-of-truth bug, shipped the dedicated AI-agent gap-read path, and corrected the post-send operator-state bugs so the June 2 follow-up state now reads accurately as followed_up.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send path hardening, and repeated validation-maintenance passes while the benchmark and AI-agent queues stayed reply-free.
 - 2026-05-31 to 2026-05-27: carried the free-tools, pricing, kit-preview, purchase-next-steps, evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review refreshes through repeated no-reply maintenance passes while checks stayed green.
