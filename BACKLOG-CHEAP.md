@@ -28,7 +28,6 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If the sample bundle drives three real visits, forwards, or replies before the kit preview, blank template, or filled example does on the same surfaces, move the sample bundle into the strongest homepage and pricing slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first evidence-map-driven reply says the real blocker is citations, proof links, named owner, stale review date, or approval evidence, paste that exact wording into `COMMUNITY-FEEDBACK.md` before changing the evidence-map fields or CTA order.
 - If the evidence map drives three real visits, forwards, or replies before the builder or AI-agent workspace does on the same receiver-side surfaces, move the evidence map into the stronger homepage and pricing slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
-- If no benchmark-led or AI agent review reply lands first, run `set -a && source .env.production.local && set +a && npm run run:ai-outreach-follow-up-gate -- --send --transport resend` on `2026-06-02 UTC` and confirm the benchmark and AI-agent CSV rows move from `sent` to `followed_up`.
 - If the first AI agent review outreach response says the real pain is tool access, approval path, audit trail, or something else, paste that exact wording into `COMMUNITY-FEEDBACK.md` before changing the checklist copy or outreach angle.
 - If the first benchmark-led response says the real pain is the questionnaire answer, the public page, or neither, paste that exact wording into `COMMUNITY-FEEDBACK.md` before changing the benchmark-led outbound copy.
 - If the first real visit, reply, or teardown request references `blog-ai-vendor-risk-assessment.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the packet guide and questionnaire routes.
@@ -152,6 +151,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: ran the 04:05 UTC validation-maintenance pass after the live AI follow-up send, refreshed the benchmark / AI-agent / inbox / self-audit status files, and confirmed the followed-up batches still had 0 replies, 0 bounces, and 0 teardown requests.
 - 2026-06-02: sent the benchmark and AI-agent-review June 2 follow-up batches, moved all 10 AI outreach rows to `followed_up`, fixed the stale post-send operator-state bug in the outreach/reply-watch builders, and rebuilt the validation watch artifacts.
 - 2026-06-01: ran the 23:30 UTC validation-maintenance pass, refreshed the live watches plus site-link, source-tag, and validation checks, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
 - 2026-06-01: ran the 23:28, 23:26, 23:24, 23:21, 23:19, 23:17, 23:15, 23:09, 23:08, 23:06, and 23:04 UTC validation-maintenance passes, refreshed the live watch files plus site-link, source-tag, and validation checks, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.

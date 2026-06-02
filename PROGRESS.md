@@ -125,6 +125,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Found and fixed an operator-trust bug in the generated status artifacts: after the follow-up send, the benchmark status, AI-agent-review status, and reply-watch output still told the operator to send the June 2 follow-up again.
 - Patched `scripts/build-benchmark-outreach-status.mjs`, `scripts/build-ai-agent-review-outreach-status.mjs`, and `scripts/check-validation-reply-watch.mjs` so post-send state now correctly reports completed follow-up passes and shifts the next action to monitoring the followed-up rows for the first real reply, redirect, or teardown request.
 - Rebuilt `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `VALIDATION-STATUS.md`; the live queue is now accurately documented as 30 active outbound rows total, with the benchmark and AI-agent-review batches both at 0 `sent`, 5 `followed_up`, and 0 real replies.
+- Ran the 04:05 UTC validation-maintenance pass after the live send; self-audit QA and production verification rewrote cleanly, source-tag coverage stayed complete across 573 watched tags, site-link validation stayed green across 85 HTML files, and the refreshed benchmark / AI-agent status files plus `COMMUNITY-FEEDBACK.md` confirmed there are still 0 replies, 0 bounces, and 0 teardown requests after the June 2 follow-up.
 
 ## Next Step
 
@@ -138,21 +139,17 @@ Older work is collapsed here so only the last three days stay detailed.
 - Watch whether the new AI agent workspace produces the first real tool-access, approval-gate, or audit-trail click, teardown request, or reply before the static checklist/template pages do.
 - Check `ai-agent-review-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real reply, redirect, or teardown request from the new AI agent review outreach batch before broadening that wedge further.
 - Use `AI-AGENT-REVIEW-OUTREACH-STATUS.md` as the primary live monitor for the new batch, with the raw CSV and inbox artifacts as the row-level source of truth behind it.
-- Use `AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md` for the June 2 non-responder send guardrails and row-specific teardown links if replies are still zero when the window opens.
-- Keep `SELF-AUDIT-FOLLOW-UP-QA.md` current with `npm run check:self-audit-follow-up` before any June 2 non-responder send.
 - Watch whether `kit-preview.html`, `purchase-next-steps.html`, and the refreshed lower pricing sections produce the first real teardown, audit, or purchase-clarity signal before expanding more acquisition surfaces.
-- If no AI agent review reply lands first, send the follow-up on `2026-06-02 UTC` and preserve whether the first response points to tool list, approval path, audit trail, or neither.
 - Check whether the clarified AI-first nav and support-page framing changes produce any first real click, teardown request, or reply from `start-here`, `about`, `partner-preview`, or the updated pricing/homepage paths before expanding content again.
 - Watch `BENCHMARK-OUTREACH-STATUS.md`, `ai-benchmark-outreach-batch-01.csv`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first benchmark-led reply or teardown request, then decide whether value-first public-page outreach is outperforming the older generic interview ask.
-- If no benchmark-led reply arrives first, send the benchmark-outreach follow-up on `2026-06-02 UTC` and preserve whether the first response points to questionnaire answers, public-page cleanup, or neither.
 - Watch for the first real AI-agent review or approval-gate click, teardown request, or reply across the new blog, free-tools, path-guide, start-here, homepage, pricing, starter-pack, and procurement-hub source tags before deciding whether that control-boundary wedge should outrank the follow-up pack or training-stance template in the core AI surfaces.
 - Watch for the first real OpenAI route-guide click or reply across the new path-guide source tags before deciding whether that named-vendor wedge should outrank the generic comparison or answer-bank routing in the core AI surfaces.
 - Keep the batch-02 directory follow-through parked until a human-authenticated browser session can finish the remaining re-entry steps; the `2026-05-28 12:40 UTC` public check still showed no visible `NoticeKit` listing on The Next AI homepage or directory page.
 - Keep reply capture as the gating job while the benchmark-report help request remains blocked on the human-owned Reddit/GSC/Bing session; the live queue still shows 0 real submissions, 0 replies, and 0 interviews after the new `2026-05-29 12:36 UTC` agent-review send.
-- Keep the June 2 follow-up window on deck for the benchmark and AI-agent review batches if no replies land first, then fold any new evidence into the watch/status files before broadening the wedge again.
 
 ## Completed Summary
 
+- 2026-06-02: ran the 04:05 UTC validation-maintenance pass after the live AI follow-up send, refreshed the self-audit, inbox, generator, partner, help-request, benchmark, AI-agent-review, and validation artifacts, and confirmed the queue still had 0 replies, 0 bounces, and 0 teardown requests.
 - 2026-06-01: ran the 23:30 UTC validation-maintenance pass, refreshed the live watches plus site-link, source-tag, and validation checks, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
 - 2026-06-01: ran the 23:28, 23:26, and 23:24 UTC validation-maintenance passes, refreshed the live watches plus site-link, source-tag, and validation checks, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
 - 2026-06-01: ran the 23:21, 23:19, 23:17, and 23:15 UTC validation-maintenance passes, refreshed the live watches, and kept the benchmark and AI-agent review queues reply-free ahead of the June 2 follow-up window.
