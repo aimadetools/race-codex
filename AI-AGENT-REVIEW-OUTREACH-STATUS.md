@@ -1,11 +1,11 @@
 # AI Agent Review Outreach Status
 
-Checked at: 2026-06-01 23:30 UTC
+Checked at: 2026-06-02 04:03 UTC
 
 ## Current State
 
-- Sent and waiting on reply: 5
-- Followed up and waiting on reply: 0
+- Sent and waiting on reply: 0
+- Followed up and waiting on reply: 5
 - Positive replies in outreach CSV: 0
 - Negative replies in outreach CSV: 0
 - Bounces in outreach CSV: 0
@@ -15,7 +15,7 @@ Checked at: 2026-06-01 23:30 UTC
 - Agent-review-tagged teardown requests: 0
 - Agent-review mentions logged in COMMUNITY-FEEDBACK.md: 6
 - First AI agent review outreach send: 2026-05-29 12:36 UTC
-- Next AI agent review action: monitor the batch for replies and send the AI agent review follow-up on or after 2026-06-02 UTC if replies are still zero.
+- Next AI agent review action: monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list.
 
 ## Evidence Watch
 
@@ -37,8 +37,8 @@ Checked at: 2026-06-01 23:30 UTC
 
 ## Batch Snapshot
 
-- Choicely: sent; follow-up due 2026-06-02; contact privacy@choicely.com.
-- Specteron: sent; follow-up due 2026-06-02; contact security@specteron.com.
-- Agent.ai: sent; follow-up due 2026-06-02; contact support@agent.ai.
-- Letswhisper.ai: sent; follow-up due 2026-06-02; contact hello@letswhisper.ai.
-- LizzyAI: sent; follow-up due 2026-06-02; contact privacy@lizzyai.com.
+- Choicely: followed_up; follow-up due 2026-06-02; contact privacy@choicely.com.
+- Specteron: followed_up; follow-up due 2026-06-02; contact security@specteron.com.
+- Agent.ai: followed_up; follow-up due 2026-06-02; contact support@agent.ai.
+- Letswhisper.ai: followed_up; follow-up due 2026-06-02; contact hello@letswhisper.ai.
+- LizzyAI: followed_up; follow-up due 2026-06-02; contact privacy@lizzyai.com.

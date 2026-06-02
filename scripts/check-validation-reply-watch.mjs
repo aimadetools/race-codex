@@ -165,6 +165,8 @@ function buildActionQueue({
   advisorPendingFollowUps,
   benchmarkPendingFollowUps,
   agentReviewPendingFollowUps,
+  benchmarkFollowedUp,
+  agentReviewFollowedUp,
   contingencyReady,
   contingencyTwoReady,
   signals
@@ -226,6 +228,9 @@ function buildActionQueue({
 
   if (actions.length === 0) {
     actions.push("Keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for replies from the active outreach batches.");
+    if (benchmarkPendingFollowUps === 0 && agentReviewPendingFollowUps === 0 && (benchmarkFollowedUp > 0 || agentReviewFollowedUp > 0)) {
+      actions.push("Check `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, and the Blob inbox for the first reply or teardown after the June 2 AI follow-up send.");
+    }
   }
 
   return actions;
@@ -383,6 +388,8 @@ async function main() {
     advisorPendingFollowUps,
     benchmarkPendingFollowUps,
     agentReviewPendingFollowUps,
+    benchmarkFollowedUp,
+    agentReviewFollowedUp,
     contingencyReady,
     contingencyTwoReady,
     signals

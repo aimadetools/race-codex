@@ -296,6 +296,8 @@ function describeNextAction(rows) {
   const negativeReplies = countBy(rows, "status", "replied_negative");
   const bounces = countBy(rows, "status", "bounced");
   const interviews = countBy(rows, "status", "interview_completed");
+  const sentRows = rows.filter((row) => String(row.status || "").trim() === "sent");
+  const followedUpRows = rows.filter((row) => String(row.status || "").trim() === "followed_up");
   const activeRows = rows.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim()));
 
   if (positiveReplies + negativeReplies + bounces + interviews > 0) {
@@ -306,17 +308,25 @@ function describeNextAction(rows) {
     return "prepare the next benchmark outreach batch only after evidence or a new send decision lands";
   }
 
-  const dueDates = activeRows
+  const dueDates = sentRows
     .map((row) => parseSentDate(row))
     .filter(Boolean)
     .map((date) => addBusinessDays(date, 3))
     .sort();
 
-  if (dueDates.length === 0) {
+  if (sentRows.length > 0 && dueDates.length === 0) {
     return "monitor the sent rows for replies and recover the missing follow-up due date before sending again";
   }
 
-  return `monitor the batch for replies and send the benchmark follow-up on or after ${dueDates[0]} UTC if replies are still zero`;
+  if (dueDates.length > 0) {
+    return `monitor the batch for replies and send the benchmark follow-up on or after ${dueDates[0]} UTC if replies are still zero`;
+  }
+
+  if (followedUpRows.length > 0) {
+    return "monitor the followed-up benchmark rows for the first real reply, redirect, or teardown request before expanding the list";
+  }
+
+  return "monitor the benchmark outreach queue for the first real reply or teardown request";
 }
 
 async function main() {

@@ -11,17 +11,17 @@ Prepared rows: 5
 
 ## Current Status
 
-AI agent review batch 01 currently has 5 sent row(s) and no recorded replies, bounces, or teardown submissions.
+AI agent review follow-up has already been sent for 5 row(s), and no reply or teardown evidence is recorded yet.
 
 ## Follow-Up Queue
 
 | Priority | Company | Segment | Status | Follow-up date | Recipient | Public page |
 |---:|---|---|---|---|---|---|
-| 1 | Choicely | Founder/operator or privacy lead | sent | 2026-06-02 | privacy@choicely.com | https://www.choicely.com/security |
-| 2 | Specteron | Founder/operator or security lead | sent | 2026-06-02 | security@specteron.com | https://specteron.com/trust/compliance |
-| 3 | Agent.ai | Founder/operator or support lead | sent | 2026-06-02 | support@agent.ai | https://docs.agent.ai/security-privacy |
-| 4 | Letswhisper.ai | Founder/operator or privacy lead | sent | 2026-06-02 | hello@letswhisper.ai | https://letswhisper.ai/privacy |
-| 5 | LizzyAI | Founder/operator or privacy lead | sent | 2026-06-02 | privacy@lizzyai.com | https://lizzyai.com/subprocessors |
+| 1 | Choicely | Founder/operator or privacy lead | followed_up | 2026-06-02 | privacy@choicely.com | https://www.choicely.com/security |
+| 2 | Specteron | Founder/operator or security lead | followed_up | 2026-06-02 | security@specteron.com | https://specteron.com/trust/compliance |
+| 3 | Agent.ai | Founder/operator or support lead | followed_up | 2026-06-02 | support@agent.ai | https://docs.agent.ai/security-privacy |
+| 4 | Letswhisper.ai | Founder/operator or privacy lead | followed_up | 2026-06-02 | hello@letswhisper.ai | https://letswhisper.ai/privacy |
+| 5 | LizzyAI | Founder/operator or privacy lead | followed_up | 2026-06-02 | privacy@lizzyai.com | https://lizzyai.com/subprocessors |
 
 ## Follow-Up Copy
 

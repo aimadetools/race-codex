@@ -304,11 +304,21 @@ async function main() {
     .sort((left, right) => left - right)[0];
   const earliestFollowUpDue = rows
     .map((row) => {
+      if (String(row.status || "").trim() !== "sent") {
+        return "";
+      }
       const sentDate = parseSentDate(row);
       return sentDate ? addBusinessDays(sentDate, 2) : "";
     })
     .filter(Boolean)
     .sort()[0];
+  const nextAction = positiveReplies + negativeReplies + bounces + interviewsCompleted > 0
+    ? "review the recorded outcome and convert any real conversation into a qualification decision."
+    : sentWaiting > 0 && earliestFollowUpDue
+      ? `monitor the batch for replies and send the AI agent review follow-up on or after ${earliestFollowUpDue} UTC if replies are still zero.`
+      : followedUpWaiting > 0
+        ? "monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list."
+        : "monitor the batch for the first real reply or teardown request.";
 
   const output = [
     "# AI Agent Review Outreach Status",
@@ -328,7 +338,7 @@ async function main() {
     `- Agent-review-tagged teardown requests: ${teardownRequests}`,
     `- Agent-review mentions logged in COMMUNITY-FEEDBACK.md: ${feedbackMentions.length}`,
     `- First AI agent review outreach send: ${firstSendAt ? formatUtcTimestamp(firstSendAt) : "unknown"}`,
-    `- Next AI agent review action: ${positiveReplies + negativeReplies + bounces + interviewsCompleted > 0 ? "review the recorded outcome and convert any real conversation into a qualification decision." : earliestFollowUpDue ? `monitor the batch for replies and send the AI agent review follow-up on or after ${earliestFollowUpDue} UTC if replies are still zero.` : "monitor the batch for the first real reply or teardown request."}`,
+    `- Next AI agent review action: ${nextAction}`,
     "",
     "## Evidence Watch",
     "",

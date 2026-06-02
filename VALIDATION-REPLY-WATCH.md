@@ -17,15 +17,10 @@
 - Self-audit channels logged: 0 (0 in-page-form, 0 mailto)
 - Founder follow-up pass: completed; due was 2026-04-27 UTC
 - Advisor follow-up pass: completed; due was 2026-04-27 UTC
-- Benchmark outreach follow-up pass: due 2026-06-02 UTC; 5 row(s) still pending follow-up
-- AI agent review follow-up pass: due 2026-06-02 UTC; 5 row(s) still pending follow-up
+- Benchmark outreach follow-up pass: completed; due was 2026-06-02 UTC
+- AI agent review follow-up pass: completed; due was 2026-06-02 UTC
 
 ## Next Action
 
 - Keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for replies from the active outreach batches.
-
-## Upcoming Queue
-
-- Before the next due follow-up window, keep `SELF-AUDIT-FOLLOW-UP-QA.md` current with `npm run check:self-audit-follow-up`.
-- On 2026-06-02 UTC, dry-run the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --transport resend`.
-- On 2026-06-02 UTC, send the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --send --transport resend` if replies are still zero.
+- Check `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, and the Blob inbox for the first reply or teardown after the June 2 AI follow-up send.

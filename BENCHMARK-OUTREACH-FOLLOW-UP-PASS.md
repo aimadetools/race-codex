@@ -11,17 +11,17 @@ Prepared rows: 5
 
 ## Current Status
 
-Benchmark batch 01 currently has 5 sent row(s) and no recorded replies, bounces, or teardown submissions.
+Benchmark follow-up has already been sent for 5 row(s), and no benchmark reply or teardown evidence is recorded yet.
 
 ## Follow-Up Queue
 
 | Priority | Company | Segment | Status | Follow-up date | Recipient | Public page |
 |---:|---|---|---|---|---|---|
-| 1 | Inkeep | Founder/operator or privacy lead | sent | 2026-06-02 | privacy@inkeep.com | https://inkeep.com/policies/privacy |
-| 2 | WipRadar | Founder/operator or privacy lead | sent | 2026-06-02 | legal@wipradar.com | https://wipradar.com/privacy |
-| 3 | Cotool | Founder/operator or security lead | sent | 2026-06-02 | info@cotool.ai | https://www.cotool.ai/subprocessors |
-| 4 | AgentLattice | Founder/operator or security lead | sent | 2026-06-02 | security@agentlattice.com | https://www.agentlattice.io/docs/subprocessors |
-| 5 | Superhuman | Founder/operator or privacy lead | sent | 2026-06-02 | privacy@superhuman.com | https://superhuman.com/legal/subprocessors |
+| 1 | Inkeep | Founder/operator or privacy lead | followed_up | 2026-06-02 | privacy@inkeep.com | https://inkeep.com/policies/privacy |
+| 2 | WipRadar | Founder/operator or privacy lead | followed_up | 2026-06-02 | legal@wipradar.com | https://wipradar.com/privacy |
+| 3 | Cotool | Founder/operator or security lead | followed_up | 2026-06-02 | info@cotool.ai | https://www.cotool.ai/subprocessors |
+| 4 | AgentLattice | Founder/operator or security lead | followed_up | 2026-06-02 | security@agentlattice.com | https://www.agentlattice.io/docs/subprocessors |
+| 5 | Superhuman | Founder/operator or privacy lead | followed_up | 2026-06-02 | privacy@superhuman.com | https://superhuman.com/legal/subprocessors |
 
 ## Follow-Up Copy
 

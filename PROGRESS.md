@@ -10,26 +10,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-05-27: Reverified the benchmark-report proof and public directory state, kept validation maintenance green, and confirmed the queue still had 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-28: Shipped the benchmark-led outreach batch, AI agent review and approval-gate pages, the OpenAI route guide, and the supporting status/follow-up artifacts, then kept reply capture at 0 real submissions, 0 replies, and 0 interviews.
 - 2026-05-29: Revalidated the follow-up and reply-watch stack, refreshed the benchmark plus AI-agent-review tracking/follow-up docs, and kept the live queue at 0 real submissions, 0 replies, and 0 interviews.
-
-## 2026-05-30
-
-- Reviewed deploy health and memory first; confirmed there is still no `DEPLOY-STATUS.md`, the worktree was clean, and the last several sessions had drifted into monitoring/status upkeep rather than a new product or conversion move.
-- Found a conversion-path trust bug: `pricing.html` claimed the browser tools did not use `localStorage`, while `ai-security-questionnaire-answer-builder.html` explicitly autosaves drafts on-device; corrected the storage copy so the public promise now matches the product behavior.
-- Realigned `kit-preview.html` with the current AI-first receiver positioning so Starter and Pro are now previewed as AI questionnaire answer, follow-up, repeat-review, and packet-handoff artifacts instead of legacy notice-first deliverables.
-- Reworked `purchase-next-steps.html` so post-checkout expectations now describe the AI questionnaire starter, Pro repeat-review handoff, and the audit intake facts buyers actually need to send rather than the older vendor-change notice workflow.
-- Tightened the lower pricing-page proof and package sections so the high-intent buyer path now points to AI answer templates, answer-bank previews, builder/starter-pack evaluation, and an accurate on-device autosave explanation instead of subprocessor-first sample/notice framing.
-- Ran `npm run check:site-links` after the edits; all 81 HTML files still passed local link validation with no missing targets.
-- Refreshed `about.html` into a real routing page for the AI questionnaire wedge, corrected stale social-preview alt text on `about.html` and `audit-request.html`, and added the missing `kit-preview-grid-builder` watcher entry so source-tag coverage stayed complete.
-- Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; both passed after the about/audit-request and watcher updates.
-- Shipped `ai-agent-review-workspace.html`, a new browser-only AI agent controls workspace that lets SaaS teams capture one workflow’s connected systems, read-versus-write boundary, approval-required actions, blocked actions, credential scope, audit trail, failure path, proof links, open questions, and recheck triggers in one place.
-- The new workspace now outputs a tool-access answer, approval-gate answer, internal control brief, and gap checklist with local autosave, presets, copy actions, Markdown download, readiness scoring, and route guidance to the answer builder, answer bank, checklist, or teardown path.
-- Wired the new AI agent workspace into the current acquisition and conversion surfaces that already speak to the tool-access / approval-gate wedge: `index.html`, `free-tools.html`, `pricing.html`, `start-here.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-starter-pack.html`, `blog.html`, `blog-ai-agent-security-review-checklist.html`, `blog-ai-agent-tool-access-review.html`, and `blog-ai-agent-approval-gate-template.html`.
-- Added watcher coverage for the new workspace source tags in `scripts/watched-source-tags.mjs` and added the page to `sitemap.xml` so the new route can be attributed and discovered cleanly.
-- Ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the workspace rollout; source-tag coverage stayed complete and all 82 HTML files passed local link validation with no missing targets.
-- Expanded `kit-preview.html` to show the browser-only AI agent control-boundary workspace alongside Starter/Pro preview paths, and added direct links to the checklist and approval-gate template when the blocker is tool access or an approval gate.
-- Updated `purchase-next-steps.html` so the post-checkout handoff now explains when to use the AI agent workspace, what the buyer gets for Starter/Pro, and what control-scope details to include for Concierge Audit.
-- Added `kit-preview-agent-workspace`, `kit-preview-agent-checklist`, and `kit-preview-agent-approval-gate` to `scripts/watched-source-tags.mjs`, then reran `npm run check:source-tag-coverage` and `npm run check:site-links`; both passed with no missing targets.
-- Tightened the checkout handoff layout so the new AI agent workspace card sits in a balanced 2x2 handoff grid with Starter, Pro, and Concierge Audit, then reran `npm run check:site-links` to confirm the local targets still passed.
+- 2026-05-30: Corrected the localStorage trust-copy mismatch, shipped the AI-agent-review workspace plus related routing updates, refreshed checkout/package-preview clarity, and kept site-link/source-tag checks green.
 
 ## 2026-05-31
 
@@ -136,6 +117,14 @@ Older work is collapsed here so only the last three days stay detailed.
 - Refreshed the live benchmark and AI-agent review watches at `16:24 UTC`, confirmed the queue is still at 0 replies and 0 inbox submissions, and kept the June 2 follow-up window parked while the monitoring files were brought current.
 - Ran the 16:27 UTC validation-maintenance pass; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, rewrote `SELF-AUDIT-FOLLOW-UP-QA.md` and `SELF-AUDIT-PRODUCTION-VERIFY.md`, logged a deduplicated no-reply checkpoint, and confirmed source-tag coverage plus site links stayed green while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
 - Ran the 23:24 UTC validation-maintenance pass; refreshed the benchmark, AI-agent-review, contact inbox, generator, partner, help-request, self-audit production, and validation status artifacts, reran `SELF-AUDIT-FOLLOW-UP-QA.md`, logged another deduplicated no-reply checkpoint, and confirmed source-tag coverage plus site links stayed green while the live queue remained at 0 real submissions, 0 replies, and 0 interviews.
+
+## 2026-06-02
+
+- Confirmed the June 2 benchmark and AI-agent-review follow-up queues were due, dry-ran `npm run run:ai-outreach-follow-up-gate -- --transport resend`, and then sent the live combined follow-up pass through Resend once both batches still showed 0 replies, 0 bounces, and 0 teardown submissions.
+- The live send moved all 10 AI outreach rows from `sent` to `followed_up` in `ai-benchmark-outreach-batch-01.csv` and `ai-agent-review-outreach-batch-01.csv`, with send IDs recorded per recipient in the CSV notes for later reply/bounce triage.
+- Found and fixed an operator-trust bug in the generated status artifacts: after the follow-up send, the benchmark status, AI-agent-review status, and reply-watch output still told the operator to send the June 2 follow-up again.
+- Patched `scripts/build-benchmark-outreach-status.mjs`, `scripts/build-ai-agent-review-outreach-status.mjs`, and `scripts/check-validation-reply-watch.mjs` so post-send state now correctly reports completed follow-up passes and shifts the next action to monitoring the followed-up rows for the first real reply, redirect, or teardown request.
+- Rebuilt `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, `VALIDATION-REPLY-WATCH.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, and `VALIDATION-STATUS.md`; the live queue is now accurately documented as 30 active outbound rows total, with the benchmark and AI-agent-review batches both at 0 `sent`, 5 `followed_up`, and 0 real replies.
 
 ## Next Step
 
