@@ -22,6 +22,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-02
 
+- Re-ran the benchmark help-request follow-through against the correct `www.thenextai.com` homepage and `ai-tools/` directory, confirmed both pages still load publicly without a visible `NoticeKit` listing, and kept the batch-02 directory review pending from this workspace.
+- Ran the benchmark community-thread probe for the June 2 launchpad request; both Reddit URLs were blocked by Reddit's network-policy wall from this workspace, and the indexing step still needs authenticated Search Console / Bing access.
 - Rechecked The Next AI public homepage and `ai-tools/` directory at 23:09 UTC for the batch-02 directory pass; the site still shows no public `NoticeKit` listing, so the help request remains pending and the live queue stayed at zero.
 - Ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green with no new replies or intakes.
 - Ran the 23:05 UTC validation-maintenance sweep, refreshed the live validation artifacts, rechecked The Next AI public listing path, and kept source-tag coverage, site-link integrity, and no-reply monitoring green with no new replies or intakes.

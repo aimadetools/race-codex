@@ -1,6 +1,6 @@
 # Help Request Launchpad
 
-Checked at: 2026-06-02 23:07 UTC
+Checked at: 2026-06-02 23:12 UTC
 
 ## Current Request
 
@@ -44,3 +44,7 @@ Checked at: 2026-06-02 23:07 UTC
 ## Requested URLs
 
 - https://noticekit.tech/blog-subprocessor-benchmark-report-01.html
+
+## Workspace Note
+
+- Reddit returned a network-policy block for both benchmark thread URLs from this workspace, and Google Search Console / Bing Webmaster Tools still require an authenticated browser session here.
