@@ -19,6 +19,7 @@ const ADVISOR_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no advisor replies ha
 const BENCHMARK_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no benchmark outreach replies, redirects, or teardown requests have been recorded yet(?:[^\n.]*)\.[^\n]*/i;
 const AGENT_REVIEW_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no ai agent review replies, redirects, or teardown requests have been recorded yet(?:[^\n.]*)\.[^\n]*/i;
 const RECHECK_TIMESTAMP_PATTERN = /^Rechecked on (.+? UTC):/i;
+const TERMINAL_STATUSES = new Set(["replied_positive", "replied_negative", "bounced", "interview_completed"]);
 
 function parseArgs(argv) {
   const args = new Map();
@@ -108,7 +109,7 @@ function parseCsv(text) {
 }
 
 function countReplyRows(rows) {
-  return rows.filter((row) => ["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim())).length;
+  return rows.filter((row) => TERMINAL_STATUSES.has(String(row.status || "").trim())).length;
 }
 
 function countInterviewRows(rows) {
@@ -192,17 +193,77 @@ function findLatestSectionCheckpoint(lines) {
   return latestText;
 }
 
-function buildNote(timestamp, segment) {
+function parseSentDate(row) {
+  const match = String(row.notes || "").match(/Sent (\d{4}-\d{2}-\d{2})(?:T|\s|$)/);
+  return match ? match[1] : "";
+}
+
+function addBusinessDays(isoDate, businessDays) {
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  let added = 0;
+
+  while (added < businessDays) {
+    date.setUTCDate(date.getUTCDate() + 1);
+    const day = date.getUTCDay();
+    if (day !== 0 && day !== 6) {
+      added += 1;
+    }
+  }
+
+  return date.toISOString().slice(0, 10);
+}
+
+function describeBenchmarkNoReplyAction(rows) {
+  const sentRows = rows.filter((row) => String(row.status || "").trim() === "sent");
+  const followedUpRows = rows.filter((row) => String(row.status || "").trim() === "followed_up");
+  const dueDates = sentRows
+    .map((row) => parseSentDate(row))
+    .filter(Boolean)
+    .map((date) => addBusinessDays(date, 3))
+    .sort();
+
+  if (dueDates.length > 0) {
+    return `monitor the batch for replies and send the benchmark follow-up on or after ${dueDates[0]} UTC if replies are still zero`;
+  }
+
+  if (followedUpRows.length > 0) {
+    return "monitor the followed-up benchmark rows for the first real reply, redirect, or teardown request before expanding the list";
+  }
+
+  return "monitor the benchmark outreach queue for the first real reply or teardown request";
+}
+
+function describeAgentReviewNoReplyAction(rows) {
+  const sentRows = rows.filter((row) => String(row.status || "").trim() === "sent");
+  const followedUpRows = rows.filter((row) => String(row.status || "").trim() === "followed_up");
+  const dueDates = sentRows
+    .map((row) => parseSentDate(row))
+    .filter(Boolean)
+    .map((date) => addBusinessDays(date, 2))
+    .sort();
+
+  if (dueDates.length > 0) {
+    return `monitor the batch for replies and send the AI agent review follow-up on or after ${dueDates[0]} UTC if replies are still zero`;
+  }
+
+  if (followedUpRows.length > 0) {
+    return "monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list";
+  }
+
+  return "monitor the AI agent review queue for the first real reply or teardown request";
+}
+
+function buildNote(timestamp, segment, context = {}) {
   if (segment === "founder") {
     return `Rechecked on ${timestamp}: no founder/operator replies have been posted here yet across the active outreach batches. Keep \`buyer-validation-outreach-batch-01.csv\`, \`buyer-validation-outreach-batch-03.csv\`, and \`buyer-validation-outreach-batch-04.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
   }
 
   if (segment === "benchmark") {
-    return `Rechecked on ${timestamp}: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep \`ai-benchmark-outreach-batch-01.csv\` unchanged and leave the June 2 benchmark follow-up as the next action unless a specific reply or inbox match appears first.`;
+    return `Rechecked on ${timestamp}: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep \`ai-benchmark-outreach-batch-01.csv\` unchanged and ${describeBenchmarkNoReplyAction(context.benchmarkRows || [])}.`;
   }
 
   if (segment === "agent-review") {
-    return `Rechecked on ${timestamp}: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep \`ai-agent-review-outreach-batch-01.csv\` unchanged and leave the June 2 AI agent review follow-up as the next action unless a specific reply or inbox match appears first.`;
+    return `Rechecked on ${timestamp}: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep \`ai-agent-review-outreach-batch-01.csv\` unchanged and ${describeAgentReviewNoReplyAction(context.agentReviewRows || [])}.`;
   }
 
   return `Rechecked on ${timestamp}: no advisor replies have been posted here yet. Keep \`buyer-validation-outreach-batch-02.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
@@ -275,6 +336,8 @@ async function main() {
 
   const parsedBatchRows = batchTexts.map((text) => parseCsv(text));
   const [founderRows, advisorRows] = parsedBatchRows;
+  const benchmarkRows = parsedBatchRows[4] || [];
+  const agentReviewRows = parsedBatchRows[5] || [];
   const founderReplies = countReplyRows(founderRows);
   const advisorReplies = countReplyRows(advisorRows);
   const totalReplyRows = parsedBatchRows.reduce((total, rows) => total + countReplyRows(rows), 0);
@@ -326,9 +389,9 @@ async function main() {
     "",
     buildNote(timestamp, "advisor"),
     "",
-    buildNote(timestamp, "benchmark"),
+    buildNote(timestamp, "benchmark", { benchmarkRows }),
     "",
-    buildNote(timestamp, "agent-review"),
+    buildNote(timestamp, "agent-review", { agentReviewRows }),
     "",
     ...preservedSectionLines
   ];
