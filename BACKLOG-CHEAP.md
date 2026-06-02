@@ -152,6 +152,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: ran the 23:05 UTC validation-maintenance sweep, refreshed the live validation artifacts, rechecked The Next AI public listing path, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
 - 2026-06-02: promoted the sample-bundle preview into first-class notice bands on the homepage, free-tools, and pricing pages, then rechecked site links and source-tag coverage.
 - 2026-06-02: ran the 20:28 UTC validation-maintenance sweep, refreshed the live snapshots, and verified the current directory-browser blockers while the queue stayed at zero.
 - 2026-06-02: ran the 20:25 UTC validation-maintenance sweep, refreshed the live snapshots, and kept the queue at zero.

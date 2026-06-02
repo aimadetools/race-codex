@@ -53,6 +53,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-02: ran the 23:05 UTC validation-maintenance sweep, refreshed the live validation artifacts, rechecked The Next AI public listing path, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
 - 2026-06-02: ran the 20:28 UTC validation-maintenance sweep, refreshed the live snapshots, and verified the current directory-browser blockers while the queue stayed at zero.
 - 2026-06-02: ran the 20:25 UTC validation-maintenance sweep, refreshed the live snapshots, and kept the queue at zero.
 - 2026-06-02: ran the 20:03-20:25 UTC validation refreshes, fixed the help-status source-of-truth bug, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints at zero.
