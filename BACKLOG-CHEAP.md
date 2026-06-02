@@ -152,6 +152,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: tightened the free-teardown intake prompts and clarified the pricing / kit-preview artifact manifests so buyers see the exact review facts and deliverables before they submit or buy.
 - 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:28/16:29 UTC checkpoint, regenerated the live operator artifacts, verified source-tag coverage and site-link integrity, and kept the queue at zero while the no-reply checkpoint stayed current.
 - 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:26 UTC checkpoint, regenerated the live operator artifacts, and kept the queue at zero while the no-reply checkpoint stayed current.
 - 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:23 UTC checkpoint, updated the live status artifacts, and kept the queue at zero while the no-reply checkpoint stayed current.
