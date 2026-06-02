@@ -24,15 +24,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - Sent the live June 2 benchmark and AI-agent-review follow-up batches after a guarded dry run confirmed both queues still had 0 replies, 0 bounces, and 0 teardown requests; all 10 AI outreach rows moved from `sent` to `followed_up` with send IDs preserved in the CSV notes.
 - Fixed the first post-send operator-state bug in the benchmark / AI-agent / reply-watch builders so the generated status files stopped telling the operator to send the follow-up again after it had already gone out.
-- Ran the 04:05, 04:08, and 04:11 UTC validation-maintenance passes after the live send; self-audit QA, production verification, source-tag coverage, site-link validation, inbox/help-request status, generator status, partner status, and validation status all refreshed cleanly while the active queues stayed at 0 replies, 0 bounces, 0 teardown requests, and 0 interviews.
 - Found and fixed a second operator-memory bug in `scripts/log-validation-no-reply-check.mjs`: fresh no-reply checkpoints were still writing pre-send June 2 follow-up instructions into `COMMUNITY-FEEDBACK.md` after the follow-up had already been sent.
-- Ran repeated post-send `npm run run:validation-maintenance` passes at 04:14, 04:17, 04:20, 04:22, 04:24, 04:26, and 04:29 UTC after the logger fix; every checkpoint kept `COMMUNITY-FEEDBACK.md`, the inbox snapshot, benchmark status, AI-agent-review status, partner/generator artifacts, and validation memory aligned on the same no-reply state instead of drifting back toward resend instructions.
 - Tightened `free-teardown.html` so the direct async teardown intake now requires the live URL, blocker, and customer segment before submission, which should reduce missing-fact requests on the first response path.
-- Ran the 08:05 UTC validation-maintenance pass; the live queues still showed 0 real replies, 0 bounces, 0 teardown requests, 0 inbox submissions, and 0 interviews across the founder, advisor, benchmark, AI-agent-review, and partner queues.
-- Ran the 08:07 UTC validation-maintenance pass; the live queues stayed at 0 real replies, 0 bounces, 0 teardown requests, 0 inbox submissions, and 0 interviews while the status docs and no-reply checkpoint refreshed cleanly.
-- Ran the 08:10 UTC validation-maintenance pass; the live watcher artifacts refreshed again, the site-link and source-tag checks stayed clean, and the queues remained at 0 real replies, 0 bounces, 0 teardown requests, 0 inbox submissions, and 0 interviews.
-- Refreshed the benchmark outreach, AI agent review outreach, and contact inbox status files at 08:12 UTC; the follow-up rows still showed no replies, redirects, teardown requests, or real inbox submissions.
-- The latest 08:12 UTC maintenance pass keeps the next dated campaign recheck on 2026-06-03 UTC.
+- Ran the 08:05, 08:07, 08:10, and 08:14 UTC validation-maintenance passes; the live watcher artifacts refreshed cleanly, the queues stayed at 0 real replies, 0 bounces, 0 teardown requests, 0 inbox submissions, and 0 interviews, and the next dated campaign recheck remains 2026-06-03 UTC.
 
 ## Next Step
 
@@ -42,10 +36,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: ran the 08:10 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the queues at zero replies, bounces, teardown requests, inbox submissions, and interviews.
-- 2026-06-02: ran the 08:07 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the queues at zero replies, bounces, teardown requests, inbox submissions, and interviews.
-- 2026-06-02: tightened the direct free-teardown intake so it now requires the live URL, blocker, and customer segment before submission.
-- 2026-06-02: ran the 08:05 UTC maintenance pass and kept the live queues at zero replies, bounces, teardown requests, inbox submissions, and interviews.
-- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, fixed the post-send status and no-reply-checkpoint messaging bugs, and refreshed the operator artifacts through the 04:29 UTC maintenance pass with the queue still at zero replies, bounces, teardown requests, interviews, and inbox submissions.
+- 2026-06-02: ran the 08:14 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the queues at zero replies, bounces, teardown requests, inbox submissions, and interviews.
+- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, fixed the post-send status and no-reply-checkpoint messaging bugs, and tightened the free-teardown intake while the queue stayed at zero replies, bounces, teardown requests, interviews, and inbox submissions.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample across the core AI surfaces, hardened the guarded follow-up send path, and kept the live queue reply-free ahead of the June 2 send.
 - 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation-maintenance refreshes, and backlog/help-history collapsing while the queue stayed at zero.
