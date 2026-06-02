@@ -53,12 +53,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-02: ran the 08:28 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the benchmark and AI-agent review queues at zero replies while the next dated campaign recheck stays on 2026-06-03 UTC.
-- 2026-06-02: ran the 08:25 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the benchmark and AI-agent review queues at zero replies while the next dated campaign recheck stays on 2026-06-03 UTC.
-- 2026-06-02: ran the 08:21 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the benchmark and AI-agent review queues at zero replies while the next dated campaign recheck stays on 2026-06-03 UTC.
-- 2026-06-02: refreshed the validation snapshots, inbox/help-request status files, self-audit verification, and no-reply checkpoint at 08:18 UTC while site-link and source-tag checks stayed green and the queues remained at zero.
-- 2026-06-02: refreshed the validation-maintenance pass, kept the benchmark and AI-agent review queues at zero replies, and updated the live status artifacts without any new evidence signal.
-- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, fixed both post-send messaging bugs, and refreshed the operator artifacts so the live memory stays on monitoring rather than resending.
-- 2026-06-02: shipped the dedicated AI-agent gap-read landing page, rerouted the AI-agent content surfaces into it, and updated the AI-agent outreach scripts plus follow-up docs to use the narrower intake instead of the generic teardown page.
+- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, shipped the dedicated AI-agent gap-read path, fixed the post-send operator-memory bugs, and ran repeated validation-maintenance passes through 12:37 UTC while both queues stayed at zero replies ahead of the 2026-06-03 UTC recheck.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes while the benchmark and AI-agent queues stayed reply-free ahead of the June 2 send.
 - 2026-05-31 to 2026-05-27: completed the proof-first evidence-map expansion, builder-positioning pass, AI-agent workspace rollout, and repeated validation-maintenance passes while the queue stayed at zero and checks remained green.

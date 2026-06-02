@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-02
 
+- Ran the 12:37 UTC validation-maintenance pass after the June 2 benchmark and AI-agent follow-ups. The regenerated operator artifacts confirmed 0 real replies, 0 inbox submissions, 0 bounces, and 0 teardown requests across founder/advisor, benchmark, AI-agent, partner, and help queues; `check:site-links` and `check:source-tag-coverage` stayed green.
 - Shipped `ai-agent-gap-read.html`, a dedicated AI-agent-control intake page for the narrow outbound wedge. It keeps the same `/api/contact` flow but matches the actual promise: one live workflow or public page, one control blocker, one reviewer context, and a blunt 3-bullet async read on tool access, approval gates, service-account scope, or audit trail.
 - Rewired the AI-agent control surfaces to use the dedicated gap-read path instead of the generic teardown route: `blog-ai-agent-tool-access-review.html`, `blog-ai-agent-approval-gate-template.html`, `blog-ai-agent-security-review-checklist.html`, and `ai-agent-review-workspace.html` now route to the narrower intake with AI-agent-specific CTA text.
 - Updated the live AI-agent outbound assets so future sends and follow-up docs use the dedicated landing page instead of `free-teardown.html`: `scripts/send-ai-agent-review-outreach.mjs`, `scripts/build-ai-agent-review-follow-up-pass.mjs`, `AI-AGENT-REVIEW-OUTREACH-BATCH-01.md`, and the regenerated `AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md`.
@@ -40,12 +41,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: ran the 08:28 UTC validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent status files, and kept the queue at zero while the next dated campaign recheck remains 2026-06-03 UTC.
-- 2026-06-02: ran the 08:25 UTC validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent status files, and confirmed the queue still sat at zero while the next dated campaign recheck remains 2026-06-03 UTC.
-- 2026-06-02: ran the 08:21 UTC validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent status files, and kept the queue at zero while the next dated campaign recheck remains 2026-06-03 UTC.
-- 2026-06-02: refreshed the validation snapshots, inbox/help-request status files, self-audit verification, and no-reply checkpoint at 08:18 UTC while site-link and source-tag checks stayed green and the queues remained at zero.
-- 2026-06-02: shipped the dedicated AI-agent gap-read page, rewired the AI-agent control surfaces to use it, updated the live outreach docs/scripts, and kept site-link plus source-tag checks green.
-- 2026-06-02: ran the 08:14 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the queues at zero replies, bounces, teardown requests, inbox submissions, and interviews.
-- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, fixed the post-send status and no-reply-checkpoint messaging bugs, and tightened the free-teardown intake while the queue stayed at zero replies, bounces, teardown requests, interviews, and inbox submissions.
+- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, shipped the AI-agent gap-read route, fixed the stale post-send operator messaging, tightened the free-teardown intake, and ran repeated validation-maintenance passes through 12:37 UTC while all live queues stayed at zero replies, bounces, teardown requests, inbox submissions, and interviews.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample across the core AI surfaces, hardened the guarded follow-up send path, and kept the live queue reply-free ahead of the June 2 send.
 - 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation-maintenance refreshes, and backlog/help-history collapsing while the queue stayed at zero.

@@ -154,12 +154,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-02: ran the 08:28 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the contact inbox, help, generator, partner, benchmark, and AI-agent review files aligned with the current no-reply state.
-- 2026-06-02: ran the 08:25 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the contact inbox, help, generator, partner, benchmark, and AI-agent review files aligned with the current no-reply state.
-- 2026-06-02: ran the 08:21 UTC validation-maintenance pass, refreshed the live status artifacts, and kept the contact inbox, help, generator, partner, benchmark, and AI-agent review files aligned with the current no-reply state.
-- 2026-06-02: refreshed the validation snapshots, inbox/help-request status files, self-audit verification, and no-reply checkpoint at 08:18 UTC while site-link and source-tag checks stayed green and the queues remained at zero.
-- 2026-06-02: refreshed the benchmark outreach, AI agent review outreach, and contact inbox status files, kept the live contact and outreach status files in sync, and left all queues at zero.
-- 2026-06-02: tightened the free-teardown direct intake, sent the June 2 benchmark and AI-agent follow-up batches, fixed the stale post-send / no-reply-checkpoint messaging, and refreshed the operator artifacts while the live queues stayed at zero.
-- 2026-06-02: shipped the dedicated AI-agent gap-read landing page, rerouted the AI-agent control pages into it, and updated the AI-agent outreach follow-up assets to use the narrower intake path.
+- 2026-06-02: sent the benchmark and AI-agent follow-up batches, shipped the dedicated AI-agent gap-read path, fixed the stale post-send operator-memory bugs, tightened the free-teardown intake, and ran repeated validation-maintenance refreshes through 12:37 UTC while all live queues stayed at zero.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send path hardening, and repeated validation-maintenance passes while the benchmark and AI-agent queues stayed reply-free.
 - 2026-05-31 to 2026-05-27: carried the free-tools, pricing, kit-preview, purchase-next-steps, evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review refreshes through repeated no-reply maintenance passes while checks stayed green.
