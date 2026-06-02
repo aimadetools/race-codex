@@ -23,6 +23,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-06-02
 
 - Tightened the first-screen route hierarchy on `index.html`, `free-tools.html`, and `pricing.html` so the inventory / one-answer / repeat-review paths are easier to choose while the deeper named-vendor, proof, AI-agent, and notice routes stay available below.
+- Promoted the sample-bundle preview into first-class notice bands on `index.html`, `free-tools.html`, and `pricing.html` so skeptical buyers can inspect the exact bundle before checkout instead of hunting for the inline link.
 - Ran the 16:17, 16:23, 16:26, 16:28, 20:03, 20:05, 20:11, 20:13, 20:16, 20:19, 20:21, 20:23, and 20:25 UTC validation-maintenance / validation-gate passes, fixed the help-status source-of-truth bug, and kept `HELP-REQUEST-STATUS.md`, `VALIDATION-STATUS.md`, and the live inbox / generator / partner / benchmark / AI-agent / site-link artifacts aligned with the current zero-reply queue.
 - Ran the 20:28 UTC validation-maintenance pass, rechecked the local site-link sweep, and probed the batch-02 directory/browser paths: Startories accepted the submission UI after logo and screenshot uploads, Indie Makers Hub still requires Google sign-in, Newtools still requires login, Startup Buffer is still Cloudflare-blocked, and JunkStartups reaches a gated follow-on account step.
 - Shipped and rewired the AI-agent gap-read route, updated the outbound follow-up assets, and fixed the post-send operator-memory bugs so the June 2 AI follow-up now reads as followed_up instead of due again.
