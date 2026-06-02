@@ -152,6 +152,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: ran the 20:23 UTC validation-maintenance sweep, refreshed the live snapshots, and kept the queue at zero.
 - 2026-06-02: ran the 20:03-20:21 UTC validation refreshes, fixed the help-status source-of-truth bug, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints at zero.
 - 2026-06-02: tightened the free-teardown intake prompts and clarified the pricing / kit-preview artifact manifests.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes.
