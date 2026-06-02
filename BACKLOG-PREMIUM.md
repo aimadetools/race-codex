@@ -53,6 +53,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:28/16:29 UTC checkpoint, regenerated the live operator artifacts, verified source-tag coverage and site-link integrity, and kept the queue at zero while the no-reply checkpoint stayed current.
 - 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:26 UTC checkpoint, regenerated the live operator artifacts, and kept the queue at zero while the no-reply checkpoint stayed current.
 - 2026-06-02: reran validation-maintenance and validation-gate refreshes through the 16:23 UTC checkpoint, updated the live operator artifacts, and kept the reply, inbox, and submission queues at zero while the watch, source-tag, and site-link guards stayed green.
 - 2026-06-02: ran validation-maintenance and validation-gate refreshes through the 16:17 UTC checkpoint, regenerated the live operator artifacts, and kept the reply, inbox, and submission queues at zero while the watch, source-tag, and site-link guards stayed green.
