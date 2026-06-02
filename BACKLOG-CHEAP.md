@@ -152,6 +152,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-02: ran the 20:28 UTC validation-maintenance sweep, refreshed the live snapshots, and verified the current directory-browser blockers while the queue stayed at zero.
 - 2026-06-02: ran the 20:25 UTC validation-maintenance sweep, refreshed the live snapshots, and kept the queue at zero.
 - 2026-06-02: ran the 20:03-20:25 UTC validation refreshes, fixed the help-status source-of-truth bug, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints at zero.
 - 2026-06-02: tightened the free-teardown intake prompts and clarified the pricing / kit-preview artifact manifests.

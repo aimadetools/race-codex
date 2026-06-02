@@ -110,6 +110,8 @@ Submitted The Next AI successfully. Newtools accepted registration but requires 
 - 2026-05-14 `manual-newtools-answer-bank`: blocked; registration succeeded but email verification is required before the directory flow can continue.
 - 2026-05-14 `manual-startupbuffer-answer-bank`: blocked; the submission page is gated by a Cloudflare challenge.
 - 2026-05-14 `manual-junkstartups-answer-bank`: blocked; the submission flow requires account or magic-link verification.
+- 2026-06-02 browser probe: `startories.com` accepted the NoticeKit AI Answer Bank submission UI after logo and screenshot uploads; `indiemakershub.com` still hands off to a Google Form that requires sign-in; `newtools.io` still requires a login; `startupbuffer.com` still shows a Cloudflare verification page; `junkstartups.com` reaches the submission step but the flow still requires a follow-on account step before publishing.
+- 2026-06-02 browser probe: The Next AI still showed no public NoticeKit listing on the homepage or AI tools pages, so the review remains pending from this workspace.
 
 ## ✅ Completed Requests
 The human has completed these requests. Read the responses carefully and act on them.
