@@ -144,7 +144,7 @@ function utcTimestamp(date = new Date()) {
 }
 
 function teardownUrlForRow(row, mode) {
-  const url = new URL("https://noticekit.tech/free-teardown.html");
+  const url = new URL("https://noticekit.tech/ai-agent-gap-read.html");
   url.searchParams.set("source", "agent-review-outreach-batch-01");
   url.searchParams.set("channel", "agent-review-email");
   url.searchParams.set("company", row.company || "");

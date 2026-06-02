@@ -7,7 +7,7 @@ const ROOT = process.cwd();
 const BATCH_CSV = join(ROOT, "ai-agent-review-outreach-batch-01.csv");
 const OUTPUT = join(ROOT, "AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md");
 const CHECKLIST_URL = "https://noticekit.tech/blog-ai-agent-security-review-checklist.html?source=agent-review-outreach-checklist";
-const TEARDOWN_BASE_URL = "https://noticekit.tech/free-teardown.html";
+const TEARDOWN_BASE_URL = "https://noticekit.tech/ai-agent-gap-read.html";
 
 function parseCsv(text) {
   const rows = [];

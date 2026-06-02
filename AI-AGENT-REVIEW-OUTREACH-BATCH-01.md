@@ -48,7 +48,7 @@ I put together a short checklist for that exact review path:
 `https://noticekit.tech/blog-ai-agent-security-review-checklist.html?source=agent-review-outreach-checklist`
 
 If useful, I can also send a blunt async 3-bullet gap read on the current public agent-review path here:
-`https://noticekit.tech/free-teardown.html?source=agent-review-outreach-batch-01&channel=agent-review-email`
+`https://noticekit.tech/ai-agent-gap-read.html?source=agent-review-outreach-batch-01&channel=agent-review-email`
 
 If this belongs with someone else on the security, privacy, trust, or AI governance workflow, I would appreciate the redirect.
 
@@ -66,7 +66,7 @@ Quick follow-up.
 I reached out because your public materials already cover part of the trust story, and the next buyer objection often narrows to one of three things: tool access, approval gates, or audit trail.
 
 If a short async gap read is useful, here is the teardown path again:
-`https://noticekit.tech/free-teardown.html?source=agent-review-outreach-batch-01&channel=agent-review-email`
+`https://noticekit.tech/ai-agent-gap-read.html?source=agent-review-outreach-batch-01&channel=agent-review-email`
 
 If not, even a one-line reply would help: is the real friction usually the tool list, the approval path, or neither?
 
