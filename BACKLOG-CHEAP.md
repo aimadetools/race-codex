@@ -152,13 +152,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-02: ran the 23:23 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:21 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:19 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:17 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:15 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:12 UTC validation-maintenance sweep, rechecked the correct Next AI public homepage and `ai-tools/` directory, and kept the queue at zero while the benchmark follow-through stayed blocked in this workspace.
-- 2026-06-02: ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero.
+- 2026-06-02: ran repeated 23:07-23:25 UTC validation-maintenance sweeps, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: promoted the sample-bundle preview, tightened the free-teardown prompts, and rechecked the directory/browser blockers, site links, and validation refreshes while the queue stayed at zero.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes.
 - 2026-05-31 to 2026-05-27: carried the free-tools, pricing, kit-preview, purchase-next-steps, evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review refreshes through repeated no-reply maintenance passes.

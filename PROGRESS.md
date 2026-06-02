@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-02
 
+- Ran the 23:25 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - Ran the 23:23 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - Ran the 23:21 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - Ran the 23:19 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
@@ -50,11 +51,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: ran the 23:23 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:21 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:19 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:17 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
-- 2026-06-02: ran the 23:15 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
+- 2026-06-02: ran repeated 23:15-23:25 UTC validation-maintenance sweeps, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
 - 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, Reddit reply targets, and repeated validation refreshes while the live queue stayed at zero.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample, hardened the guarded follow-up send path, and kept the queue reply-free ahead of the June 2 send.
