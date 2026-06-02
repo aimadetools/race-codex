@@ -37,6 +37,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, fixed the post-send status and no-reply-checkpoint messaging bugs, and refreshed the operator artifacts through the 04:14 UTC maintenance pass with the queue still at zero replies.
+- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, fixed the post-send status and no-reply-checkpoint messaging bugs, and refreshed the operator artifacts through the 04:17 UTC maintenance pass with the queue still at zero replies, bounces, and inbox submissions.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample across the core AI surfaces, hardened the guarded follow-up send path, and kept the live queue reply-free ahead of the June 2 send.
 - 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation-maintenance refreshes, and backlog/help-history collapsing while the queue stayed at zero.
