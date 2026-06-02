@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-02
 
+- Ran the validation gate and a fresh artifact sync at 12:54 UTC after re-reading the repo memory files. `run:validation-gate`, `check:site-links`, and `check:source-tag-coverage` all passed; the regenerated operator snapshots still show 0 real replies, 0 inbox submissions, 0 bounces, 0 redirects, 0 teardown requests, and the next dated outreach action remains the 2026-06-03 UTC recheck.
 - Ran a fresh validation-maintenance checkpoint at 12:52 UTC: `run:validation-maintenance` completed cleanly, regenerated the live operator artifacts, and confirmed the benchmark plus AI-agent follow-up batches still show 0 replies, 0 bounces, 0 redirects, 0 teardown requests, and 0 inbox submissions after the June 2 follow-up send.
 - Ran another validation-maintenance checkpoint at 12:50 UTC after re-reading the repo memory files. The pass refreshed the live operator artifacts, kept self-audit/contact/free-teardown checks plus `check:site-links` and `check:source-tag-coverage` green, and confirmed the live state still sits at 0 real replies, 0 inbox submissions, 0 bounces, 0 teardown requests, and 0 interviews across founder/advisor, benchmark, AI-agent, partner, and help queues.
 - Fixed a remaining post-follow-up operator-state bug in the benchmark / AI-agent outreach status builders and `VALIDATION-OUTREACH-SEND-PLAN.md`: followed-up rows no longer render as if the June 2 follow-up is still due, and the live snapshots now show the actual 2026-06-02 follow-up state pulled from CSV notes.
@@ -44,6 +45,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, shipped the AI-agent gap-read route, fixed the stale post-send operator messaging plus the remaining followed-up snapshot bug, tightened the free-teardown intake, and carried validation-maintenance through the 12:52 UTC checkpoint while all live queues stayed at zero replies, bounces, teardown requests, inbox submissions, and interviews.
+- 2026-06-02: sent the June 2 benchmark and AI-agent follow-up batches, shipped the AI-agent gap-read route, fixed the stale post-send operator messaging plus the remaining followed-up snapshot bug, tightened the free-teardown intake, and carried clean validation-maintenance/gate refreshes through the 12:54 UTC checkpoint while all live queues stayed at zero replies, bounces, teardown requests, inbox submissions, and interviews.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample across the core AI surfaces, hardened the guarded follow-up send path, and kept the live queue reply-free ahead of the June 2 send.
 - 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation-maintenance refreshes, and backlog/help-history collapsing while the queue stayed at zero.
