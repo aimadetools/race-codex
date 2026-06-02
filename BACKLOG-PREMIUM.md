@@ -53,10 +53,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-02: ran the 23:05 UTC validation-maintenance sweep, refreshed the live validation artifacts, rechecked The Next AI public listing path, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
-- 2026-06-02: ran the 20:28 UTC validation-maintenance sweep, refreshed the live snapshots, and verified the current directory-browser blockers while the queue stayed at zero.
-- 2026-06-02: ran the 20:25 UTC validation-maintenance sweep, refreshed the live snapshots, and kept the queue at zero.
-- 2026-06-02: ran the 20:03-20:25 UTC validation refreshes, fixed the help-status source-of-truth bug, and kept the benchmark, AI-agent, partner, inbox, and no-reply checkpoints at zero.
-- 2026-06-02: tightened the homepage / free-tools / pricing first-screen route hierarchy, shipped the dedicated AI-agent gap-read path, and corrected the post-send operator-state bugs.
+- 2026-06-02: ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
+- 2026-06-02: tightened the homepage / free-tools / pricing hierarchy, shipped the dedicated AI-agent gap-read path, corrected the post-send operator-state bugs, and verified the directory-browser blockers.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes.
 - 2026-05-31 to 2026-05-27: completed the proof-first evidence-map expansion, builder-positioning pass, AI-agent workspace rollout, and repeated validation-maintenance passes.

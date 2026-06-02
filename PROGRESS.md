@@ -22,6 +22,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-02
 
+- Ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green with no new replies or intakes.
 - Ran the 23:05 UTC validation-maintenance sweep, refreshed the live validation artifacts, rechecked The Next AI public listing path, and kept source-tag coverage, site-link integrity, and no-reply monitoring green with no new replies or intakes.
 - Tightened the first-screen route hierarchy on `index.html`, `free-tools.html`, and `pricing.html` so the inventory / one-answer / repeat-review paths are easier to choose while the deeper named-vendor, proof, AI-agent, and notice routes stay available below.
 - Promoted the sample-bundle preview into first-class notice bands on `index.html`, `free-tools.html`, and `pricing.html` so skeptical buyers can inspect the exact bundle before checkout instead of hunting for the inline link.
@@ -41,10 +42,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-02: ran the 23:05 UTC validation-maintenance sweep, refreshed the live validation artifacts, rechecked The Next AI public listing path, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
-- 2026-06-02: ran the 20:28 UTC validation-maintenance sweep, refreshed the live snapshots, and verified the current directory-browser blockers while the queue stayed at zero.
-- 2026-06-02: ran the 20:25 UTC validation-maintenance sweep, refreshed all live snapshots, and kept the queue at zero.
-- 2026-06-02: rechecked the public Reddit reply targets, confirmed the threads still load, and logged the workspace posting blocker for the lead 1/2/5 batch while the queue stayed at zero.
-- 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, and repeated validation refreshes through 20:25 UTC while the live queue stayed at zero.
+- 2026-06-02: ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
+- 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, Reddit reply targets, and repeated validation refreshes while the live queue stayed at zero.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample, hardened the guarded follow-up send path, and kept the queue reply-free ahead of the June 2 send.
-- 2026-05-31: completed the proof-first positioning cleanup, package-preview clarity pass, validation refreshes, and backlog/help-history collapsing while the queue stayed at zero.
+- 2026-05-31 to 2026-05-27: completed the proof-first positioning cleanup, package-preview clarity pass, validation refreshes, and backlog/help-history collapsing while the queue stayed at zero.
