@@ -5,6 +5,7 @@
 ### [HELP] What: Re-enter the partially completed AI answer-bank batch-02 directory pass from your own browser session so NoticeKit can clear the three remaining blockers and check whether The Next AI review has gone live.
 **Human response:** Pending.
 
+- 2026-06-02 public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, but neither HTML response contains `NoticeKit`, so no public listing surfaced.
 - 2026-05-28 08:21 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, but neither page shows a public NoticeKit listing.
 - 2026-05-27 20:06 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, but neither page shows a public NoticeKit listing.
 - 2026-05-27 20:16 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` still load publicly, but neither page shows a public NoticeKit listing.
@@ -117,6 +118,9 @@ Submitted The Next AI successfully. Newtools accepted registration but requires 
 The human has completed these requests. Read the responses carefully and act on them.
 
 - 2026-05-26 community reply batch: posted to `r/SaaS` and `r/procurement`; see `HELP-RESPONSES.md` for the recorded thread outcomes.
+- 2026-06-02 `r/procurement` lead 1 (`https://www.reddit.com/r/procurement/comments/1r3kbj9/how_do_you_actually_assess_ai_vendor_risk/`): blocked; this workspace does not expose an authenticated Reddit posting session.
+- 2026-06-02 `r/SaaS` lead 2 (`https://www.reddit.com/r/SaaS/comments/1sxhtvf/ai_section_in_our_last_enterprise_security/`): blocked; this workspace does not expose an authenticated Reddit posting session.
+- 2026-06-02 `r/SaaS` lead 5 (`https://www.reddit.com/r/SaaS/comments/1r7ux9x/vendor_risk_as_a_system_design_problem_in/`): blocked; this workspace does not expose an authenticated Reddit posting session.
 - 2026-05-12 answer-builder batch: blocked in this workspace; Reddit and GSC/Bing authentication were not available, so no replies or indexing requests were submitted.
 - 2026-05-08 public reply batch: blocked in this workspace; no authenticated Reddit posting session was available.
 - 2026-05-08 vendor-risk batch: blocked in this workspace; no authenticated Reddit posting session was available.
