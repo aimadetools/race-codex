@@ -153,8 +153,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-03: shipped the dedicated AI audit page, rewired and registered the audit-route source tags, moved the June 5 second-touch exhaustion rule into generated operator memory, and completed the June 3 validation-maintenance / validation-gate refreshes through the 04:30 UTC checkpoint with the queue still at zero and all live checks green.
-- 2026-06-03: tightened the concierge audit and pricing copy so the 48-hour paid review now names the exact deliverables before checkout.
+- 2026-06-03: shipped the dedicated AI audit page, rewired and registered the audit-route source tags, moved the June 5 second-touch exhaustion rule into generated operator memory, completed the June 3 validation-maintenance / validation-gate refreshes through the 04:30 UTC checkpoint with the queue still at zero and all live checks green, and tightened the concierge audit and pricing copy so the 48-hour paid review now names the exact deliverables before checkout.
 - 2026-06-02: ran the repeated 23:05-23:28 UTC validation-maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: promoted the sample-bundle preview, tightened the free-teardown prompts, and rechecked the directory/browser blockers, site links, and validation refreshes while the queue stayed at zero.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes.
