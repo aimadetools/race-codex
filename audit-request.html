@@ -220,12 +220,12 @@
       const requestTypeMeta = {
         free_async_teardown: {
           title: "Request a free async teardown",
-          copy: "Best for founders, operators, consultants, or attorneys who want a specific async reply in about three bullets without booking a call. Include the live subprocessor page URL and the affected customer segment so the answer can stay concrete.",
+          copy: "Best for founders, operators, consultants, or attorneys who want a specific async reply in about three bullets without booking a call. Include the live URL, blocker, affected customer segment, and deadline so the answer can stay concrete.",
           button: "Request free teardown"
         },
         concierge_audit: {
           title: "Send Concierge Audit intake",
-          copy: "Best for an urgent change, customer review, or paid operational cleanup pass. You get one live path, three bullets, and a prioritized fix plan within 48 hours during early access.",
+          copy: "Best for an urgent change, customer review, or paid operational cleanup pass. You get one live path, three bullets, and a prioritized fix plan within 48 hours during early access. Include the live URL, blocker, affected customer segment, and review window so the audit can stay specific.",
           button: "Send audit intake"
         },
         starter_access: {
@@ -376,12 +376,28 @@
       }
 
       const submitButton = document.querySelector("#audit-submit");
+      const subprocessorUrlField = document.querySelector("#subprocessor-url");
+      const vendorChangeField = document.querySelector("#vendor-change");
+      const deadlineField = document.querySelector("#deadline");
 
       function syncRequestTypeUi() {
         const meta = requestTypeMeta[requestType.value] || requestTypeMeta.general_waitlist;
+        const needsLiveTeardownDetails = requestType.value === "free_async_teardown" || requestType.value === "concierge_audit";
         panelTitle.textContent = meta.title;
         panelCopy.textContent = meta.copy;
         submitButton.textContent = meta.button;
+        subprocessorUrlField.required = needsLiveTeardownDetails;
+        vendorChangeField.required = needsLiveTeardownDetails;
+        deadlineField.required = needsLiveTeardownDetails;
+        subprocessorUrlField.placeholder = needsLiveTeardownDetails
+          ? "https://example.com/live-page-or-thread"
+          : "https://example.com/security-questionnaire or https://example.com/privacy/subprocessors";
+        vendorChangeField.placeholder = needsLiveTeardownDetails
+          ? "Example: Buyer wants proof assets and named owner behind the current answer."
+          : "Example: Buyer wants proof assets and named owner behind our OpenAI retention answer for the support copilot workflow.";
+        deadlineField.placeholder = needsLiveTeardownDetails
+          ? "Example: EU customers on a signed DPA. 30-day notice window. Reply due June 4."
+          : "Example: Enterprise prospect, security review due June 4, legal follow-up expected if the proof trail is still thin.";
         partnerFields.hidden = requestType.value !== "partner_request";
       }
 

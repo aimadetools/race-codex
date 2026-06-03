@@ -36,6 +36,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Clarified the Concierge Audit funnel by tightening the 48-hour deliverable language across `ai-security-questionnaire-audit.html`, `audit-request.html`, and `pricing.html`, then re-ran the static site-link sweep and source-tag coverage check so the paid path stayed measurable.
 - Rewired the remaining core AI / OpenAI nav audit CTAs plus the article-layer audit-nav set into `ai-security-questionnaire-audit.html`, surfaced the new audit route in `CONTACT-INBOX-STATUS.md` and `VALIDATION-STATUS.md`, and cleared the last writable article blocker with the `blog-ai-vendor-disclosure-packet.html` handoff.
 - Shipped the dedicated `ai-audit-outreach-batch-01`, sent the first five audit emails at `2026-06-03 12:34 UTC`, fixed the audit-page handoff so intake links carry context into `audit-request.html`, and promoted the new lane into `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, and `AI-AUDIT-OUTREACH-STATUS.md`.
+- Tightened `audit-request.html` so free teardown and Concierge Audit requests now visibly require the live URL, blocker, affected customer segment, and deadline, reducing vague submissions before they reach the inbox.
 
 ## Next Step
 
