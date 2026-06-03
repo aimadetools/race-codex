@@ -156,6 +156,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-03: refreshed the validation snapshots, reran the zero-reply maintenance sweep, and kept the reply-watch queue parked pending the first real intake.
 - 2026-06-03: refreshed validation snapshots, reran the site-link and source-tag checks, and kept the inbox watch aligned with the live zero-reply state.
 - 2026-06-03: ran the validation-maintenance sweeps, refreshed the inbox and validation artifacts, tightened the audit funnel copy, and kept the June 5 follow-up queued with zero replies.
 - 2026-06-02: promoted the sample-bundle preview, tightened free-teardown prompts, and rechecked the directory/browser blockers plus validation refreshes.
