@@ -196,6 +196,21 @@
     <script>
       const query = new URLSearchParams(window.location.search);
       const source = query.get("source") || "ai-audit-page";
+      const passthroughKeys = [
+        "type",
+        "channel",
+        "company",
+        "email",
+        "ownership_signal",
+        "subprocessor_url",
+        "vendor_change",
+        "deadline",
+        "review_need",
+        "partner_role",
+        "client_profile",
+        "partner_goal",
+        "partner_volume"
+      ];
       const intakeLinks = [
         document.querySelector("#audit-intake-link"),
         document.querySelector("#audit-intake-link-secondary"),
@@ -210,6 +225,12 @@
         const url = new URL(link.getAttribute("href"), window.location.href);
         url.searchParams.set("type", "concierge_audit");
         url.searchParams.set("source", source);
+        passthroughKeys.forEach((key) => {
+          const value = query.get(key);
+          if (value) {
+            url.searchParams.set(key, value);
+          }
+        });
         link.setAttribute("href", `${url.pathname}${url.search}`);
       });
     </script>

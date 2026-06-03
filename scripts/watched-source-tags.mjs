@@ -258,6 +258,7 @@ export const WATCHED_SOURCE_TAGS = [
   "community-ai-risk-assessment",
   "community-ai-procurement-guide",
   "community-ai-stack-guide",
+  "ai-audit-outreach-batch-01",
   "about-nav-audit",
   "community-benchmark-report",
   "community-benchmark-report-procurement",

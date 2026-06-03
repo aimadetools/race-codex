@@ -31,6 +31,10 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
+- Shipped a dedicated AI audit outreach lane instead of another maintenance-only pass: added `ai-audit-outreach-batch-01.csv`, `scripts/send-ai-audit-outreach.mjs`, `scripts/build-ai-audit-outreach-status.mjs`, and `AI-AUDIT-OUTREACH-STATUS.md` so the new $249 48-hour audit offer has its own operator path instead of piggybacking on the older benchmark or AI-agent queues.
+- Sent the first five dedicated audit emails at `2026-06-03 12:34 UTC` to Kindly, Hazel, Siesta AI, Rakenne, and Snoooz using the live Resend setup; all five rows are now `sent` with follow-up due on `2026-06-05 UTC`.
+- Fixed the audit-page handoff bug in `ai-security-questionnaire-audit.html` so outbound links can carry `company`, `subprocessor_url`, `vendor_change`, `review_need`, `deadline`, `channel`, and other intake context through to `audit-request.html` instead of dropping personalization on the second click.
+- Wired the new `ai-audit-outreach-batch-01` source tag into watcher coverage and rebuilt the operator artifacts so `CONTACT-INBOX-STATUS.md` now surfaces the new outreach tag instead of treating the first audit-outreach intake as uncategorized.
 - Ran the 08:30 UTC validation-maintenance and validation-gate refreshes, synced the live operator artifacts, and kept the queue at 0 real replies, 0 real submissions, and 0 interviews.
 - Ran the 08:07-08:25 UTC validation-maintenance and validation-gate refreshes, deduplicated the no-reply checkpoint, and kept the live inbox, generator, partner, benchmark, AI-agent, self-audit, source-tag, and site-link checks green while the queue stayed at 0 real replies, 0 real submissions, and 0 interviews.
 - Ran the 2026-06-03 04:10-04:30 UTC validation-maintenance and validation-gate sweeps after the new audit-route rollout and June 2 benchmark / AI-agent follow-up sends, refreshed the generated operator/status artifacts, and reconfirmed that the queue still shows 0 real replies, 0 real submissions, and 0 interviews while self-audit production, free-teardown handoff, contact webhook shape, source-tag coverage, and local site-link checks remained green; the contact inbox snapshot still showed no real submissions.
@@ -45,7 +49,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Next Step
 
-- Keep the trigger-based P0 backlog parked until a real audit, teardown, benchmark, AI-agent, founder, or advisor signal arrives; use the refreshed 2026-06-03 08:30 UTC operator snapshots and the 2026-06-03 08:30 UTC contact inbox snapshot as the source of truth instead of making speculative funnel changes.
+- Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for the first real `ai-audit-outreach-batch-01` reply, redirect, or intake; if the batch is still at 0 by `2026-06-05 UTC`, send the second touch instead of expanding the list.
+- Keep the older benchmark and AI-agent-review batches parked behind the new audit lane unless a real reply arrives there first; the newest active experiment is now the five-company dedicated audit batch sent on `2026-06-03 12:34 UTC`.
 - Watch for the first real intake, reply, redirect, or purchase-adjacent question from the new audit path (`homepage-nav-audit`, `pricing-nav-audit`, `pricing-concierge-card`, `start-here-nav-audit`, `free-tools-nav-audit`, `ai-procurement-hub-nav-audit`, `kit-preview-nav-audit`, `purchase-next-steps-audit`, `audit-request-hero-audit`, or `audit-request-side-panel`) and log whether the blocker was proof, named vendor, AI agent controls, deadline pressure, or pricing clarity.
 - If the benchmark and AI-agent-review follow-up batches are still at 0 replies on `2026-06-05 UTC`, follow the now-generated status/follow-up docs: record that the second-touch angle exhausted without a reply and leave both batches parked until a new offer or segment decision exists.
 - Keep `VALIDATION-REPLY-WATCH.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` as the live operator view for the first audit, teardown, benchmark, AI-agent, or founder/advisor signal.
@@ -53,6 +58,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-03: launched a dedicated AI audit outreach lane, sent five live first-touch audit emails at 12:34 UTC, fixed personalized audit-to-intake handoff, and wired the new outreach tag into the watched operator summaries.
 - 2026-06-03: ran the 08:30 UTC validation-maintenance and validation-gate refreshes, kept the live operator snapshots aligned with the zero-reply queue, and preserved the dedicated AI audit wedge, audit-route monitoring, and June 5 second-touch rule in the generated operator docs.
 - 2026-06-02: ran the repeated 23:05-23:28 UTC validation-maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, Reddit reply targets, and repeated validation refreshes while the live queue stayed at zero.
