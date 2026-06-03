@@ -31,10 +31,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
-- Ran a 23:06 UTC validation-maintenance sweep, refreshed the contact inbox, audit, generator, partner, benchmark, AI-agent, help-request, and self-audit status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
-- Ran a 23:04 UTC validation-maintenance sweep, refreshed the contact inbox, audit, generator, partner, benchmark, and AI-agent status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
+- Ran repeated 23:02-23:08 UTC validation-maintenance sweeps, refreshed the contact inbox, audit, generator, partner, benchmark, AI-agent, help-request, and self-audit status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
 - Tightened the free async teardown and audit request intake copy so the live URL, affected segment, and deadline are harder to miss, then rechecked `check:site-links` and `check:free-teardown-handoff` with both passing.
-- Ran a 23:02 UTC validation-maintenance sweep, refreshed the contact inbox, audit, generator, partner, benchmark, and AI-agent status artifacts, and confirmed `check:site-links` still passed with no broken local HTML targets while the queue stayed at zero.
 - Ran the 20:29-20:30 UTC validation-maintenance pass, refreshed the live watch and status artifacts, and kept the queue at 0 real replies, 0 real submissions, and 0 interviews while the June 5 audit follow-up remained queued.
 - Ran the 20:22 UTC validation-maintenance sweep, refreshed the inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, help-request, and source-tag artifacts from source, and kept the queue at 0 real replies, 0 real submissions, and 0 interviews.
 - Ran the 20:25 UTC validation-maintenance sweep, refreshed the live watch artifacts, and confirmed the queue still sits at 0 real replies, 0 real submissions, and 0 interviews while the next AI audit follow-up remains queued for 2026-06-05 UTC.
@@ -58,8 +56,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-03: ran the 23:06 UTC validation-maintenance sweep, refreshed the live watch artifacts, and kept the queue at zero while the June 5 follow-up remained queued.
-- 2026-06-03: ran the 23:04 UTC validation-maintenance sweep, refreshed the live status artifacts, and kept the queue at zero while the June 5 follow-up remained queued.
-- 2026-06-03: ran the 20:18-20:27 UTC validation-maintenance sweeps, refreshed the live watch artifacts, launched the dedicated audit outreach lane, and kept the queue at zero while the June 5 follow-up stayed queued.
+- 2026-06-03: ran the 20:18-23:08 UTC validation-maintenance sweeps, refreshed the live watch artifacts, launched the dedicated audit outreach lane, and kept the queue at zero while the June 5 follow-up stayed queued.
 - 2026-06-02: completed the route-hierarchy, AI-agent gap-read, free-teardown, and validation maintenance passes while the queue stayed at zero.
 - 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, sample-bundle, proof-first, package-preview, generator, partner, benchmark, and AI-agent-review maintenance passes while the queue stayed at zero.
