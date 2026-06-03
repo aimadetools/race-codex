@@ -5,13 +5,7 @@
 Older work is collapsed here so only the last three days stay detailed.
 
 - 2026-04-20 to 2026-05-27: Launched NoticeKit, pricing, intake, outreach, self-audit verification, AI questionnaire routes, answer-bank and named-vendor pages, and the browser-only benchmark/tooling base while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-28 to 2026-05-30: Shipped the benchmark-led and AI-agent-review outreach wedges, the AI agent workspace, the OpenAI route guide, checkout/package-preview clarity updates, and repeated site-link/source-tag validation while live reply capture stayed at zero.
-
-## 2026-05-31
-
-- Recentered the product surfaces around proof-first and route clarity: tightened homepage/pricing clutter, refreshed `about.html`, added deliverable summaries to the pricing/preview/post-purchase pages, and extended the evidence-map plus builder-positioning cleanup across the core AI routes.
-- Kept validation maintenance green with repeated late-day passes, refreshed the outreach/inbox/generator/partner/help-request artifacts, rewrote self-audit QA plus production verification, and kept `COMMUNITY-FEEDBACK.md` deduplicated while the queue stayed at 0 submissions, 0 replies, and 0 interviews.
-- Collapsed completed backlog/help-history sections so the live evidence-gated tasks stayed visible.
+- 2026-05-28 to 2026-05-31: Shipped the benchmark-led and AI-agent-review outreach wedges, the AI agent workspace, the OpenAI route guide, proof-first route cleanup, checkout/package-preview clarity updates, and repeated site-link/source-tag validation while live reply capture stayed at zero.
 
 ## 2026-06-01
 
@@ -37,12 +31,18 @@ Older work is collapsed here so only the last three days stay detailed.
 - Tightened `free-teardown.html` to require the live URL, blocker, and customer segment before submission, then kept the no-reply checkpoint and coverage checks green while the queue stayed at 0 real replies, 0 inbox submissions, 0 teardown requests, and 0 interviews.
 - Tightened the `free-teardown.html` intake prompts so the form now asks for the live URL, blocker, affected segment, and deadline more explicitly, and clarified the pricing / kit-preview artifact manifests so buyers can see the exact deliverables before checkout.
 
+## 2026-06-03
+
+- Broke out a dedicated paid audit wedge by shipping `ai-security-questionnaire-audit.html`: a focused 48-hour async AI review sales page for live questionnaire, proof-gap, named-vendor, and AI-agent-control blockers instead of sending high-intent traffic straight into the generic multi-purpose intake form.
+- Rewired the highest-intent audit entry points across `index.html`, `pricing.html`, `start-here.html`, `about.html`, `free-tools.html`, `ai-procurement-hub.html`, `kit-preview.html`, `purchase-next-steps.html`, and `audit-request.html` so audit-intent buyers now see a sharper offer before the form, while the original intake page stays available for teardown, partner, and access requests.
+- Extended `scripts/watched-source-tags.mjs`, kept `sitemap.xml` current, and verified both `npm run check:site-links` and `npm run check:source-tag-coverage` so the new audit route is measurable from day one.
+
 ## Next Step
 
-- Watch for the first real intake, reply, redirect, or teardown request that hits the new AI-agent gap-read sources (`agent-review-outreach-batch-01`, `ai-agent-review-teardown`, `ai-agent-approval-gate-teardown`, `agent-review-checklist-teardown`, or `ai-agent-workspace-teardown`) and log whether the friction was tool list, approval path, scope, audit trail, or something else before widening the page further.
-- Recheck the benchmark and AI-agent-review batches on `2026-06-03 UTC`; until then, hold the campaign files steady unless a specific June 2 follow-up reply, bounce, redirect, or teardown request appears and can be logged in the matching CSV, status file, and `COMMUNITY-FEEDBACK.md`.
-- Keep `VALIDATION-REPLY-WATCH.md`, `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` as the live operator view for the first benchmark, AI-agent, teardown, or founder/advisor signal.
-- Hold broader funnel expansion until a real signal lands from the builder, evidence-map, bundle-sample, benchmark, AI-agent gap-read, or partner paths.
+- Watch for the first real intake, reply, redirect, or purchase-adjacent question from the new audit path (`homepage-nav-audit`, `pricing-nav-audit`, `pricing-concierge-card`, `start-here-nav-audit`, `free-tools-nav-audit`, `ai-procurement-hub-nav-audit`, `kit-preview-nav-audit`, `purchase-next-steps-audit`, `audit-request-hero-audit`, or `audit-request-side-panel`) and log whether the blocker was proof, named vendor, AI agent controls, deadline pressure, or pricing clarity.
+- Recheck the benchmark and AI-agent-review follow-up batches on `2026-06-03 UTC`, but treat them as monitoring only; the active build question is whether the clearer paid audit wedge produces a faster human signal than the mixed intake page did.
+- Keep `VALIDATION-REPLY-WATCH.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` as the live operator view for the first audit, teardown, benchmark, AI-agent, or founder/advisor signal.
+- Hold broader funnel expansion until a real signal lands from the dedicated audit page, builder, evidence-map, bundle-sample, benchmark, AI-agent gap-read, or partner paths.
 
 ## Completed Summary
 
