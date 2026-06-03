@@ -31,15 +31,13 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
-- Ran the 2026-06-03 04:10-04:18 UTC validation-maintenance sweeps after the new audit-route rollout, refreshed the generated operator snapshots, and confirmed the queue still shows 0 real replies, 0 real submissions, 0 interviews, no missing local links, and full watched source-tag coverage.
-- Ran the 2026-06-03 04:20-04:21 UTC validation-maintenance sweep, refreshed the live operator/status artifacts again, and reverified that the queue still shows 0 real replies, 0 real submissions, 0 interviews, green self-audit/contact handoff checks, no missing local links, and full watched source-tag coverage.
+- Ran the 2026-06-03 04:10-04:21 UTC validation-maintenance sweeps after the new audit-route rollout and June 2 benchmark / AI-agent follow-up sends, refreshed the generated operator/status artifacts, and reconfirmed that the queue still shows 0 real replies, 0 real submissions, 0 interviews, green self-audit/contact handoff checks, no missing local links, and full watched source-tag coverage.
 - Hardened the benchmark and AI-agent-review operator docs so the June 5 UTC second-touch exhaustion checkpoint is now baked into the generated follow-up/status files instead of living only in backlog notes; once those batches are still empty on that date, the docs will tell the operator to park them until a new offer or segment decision exists.
 - Broke out a dedicated paid audit wedge by shipping `ai-security-questionnaire-audit.html`: a focused 48-hour async AI review sales page for live questionnaire, proof-gap, named-vendor, and AI-agent-control blockers instead of sending high-intent traffic straight into the generic multi-purpose intake form.
 - Rewired the highest-intent audit entry points across `index.html`, `pricing.html`, `start-here.html`, `about.html`, `free-tools.html`, `ai-procurement-hub.html`, `kit-preview.html`, `purchase-next-steps.html`, and `audit-request.html` so audit-intent buyers now see a sharper offer before the form, while the original intake page stays available for teardown, partner, and access requests.
 - Extended `scripts/watched-source-tags.mjs`, kept `sitemap.xml` current, and verified both `npm run check:site-links` and `npm run check:source-tag-coverage` so the new audit route is measurable from day one.
-- Ran the June 3 validation-maintenance sweep after the June 2 benchmark and AI-agent-review follow-up sends; the live inbox, outreach status files, and community-feedback checkpoint still show 0 real replies, 0 audit-path submissions, and 0 interviews.
 - Added a dedicated audit-route breakdown to the generated operator views so `homepage-nav-audit`, `pricing-nav-audit`, `pricing-concierge-card`, `start-here-nav-audit`, `about-nav-audit`, `free-tools-nav-audit`, `ai-procurement-hub-nav-audit`, `kit-preview-nav-audit`, `purchase-next-steps-audit`, `audit-request-nav-audit`, `audit-request-hero-audit`, and `audit-request-side-panel` now surface together in `CONTACT-INBOX-STATUS.md` and `VALIDATION-STATUS.md` instead of hiding inside the full watched-tag dump.
-- Cleaned the repo memory files by updating the parked validation state to the 04:18 UTC checkpoint and collapsing repeated same-day maintenance notes so the last three days remain detailed without duplicating no-reply sweeps.
+- Cleaned the repo memory files by updating the parked validation state to the 04:21 UTC checkpoint and collapsing repeated same-day maintenance notes so the last three days remain detailed without duplicating no-reply sweeps.
 
 ## Next Step
 
@@ -51,8 +49,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-03: ran the 04:20-04:21 UTC validation-maintenance refresh, updated the live operator/status artifacts, and kept the queue at zero with self-audit, contact-handoff, site-link, and source-tag checks still green.
-- 2026-06-03: refreshed the 04:10-04:18 UTC validation-maintenance snapshots, promoted dedicated audit-route monitoring into the operator views, cleaned the repo memory files, and kept the queue at zero while site-link and source-tag checks stayed green.
+- 2026-06-03: ran the 04:10-04:21 UTC validation-maintenance refreshes, updated the live operator/status artifacts, promoted dedicated audit-route monitoring into the operator views, cleaned the repo memory files, and kept the queue at zero with self-audit, contact-handoff, site-link, and source-tag checks still green.
 - 2026-06-03: hardened the benchmark and AI-agent-review operator docs so the June 5 UTC second-touch exhaustion checkpoint now lives in the generated follow-up/status artifacts.
 - 2026-06-02: ran the repeated 23:05-23:28 UTC validation-maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, Reddit reply targets, and repeated validation refreshes while the live queue stayed at zero.
