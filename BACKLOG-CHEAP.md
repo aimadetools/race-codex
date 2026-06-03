@@ -157,7 +157,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-06-03: rewired the core AI, OpenAI, and blog nav audit buttons to the dedicated audit page, added the new audit-nav source tags to watcher coverage, and rebuilt the operator artifacts so those clicks are now visible as audit intent instead of generic intake traffic.
-- 2026-06-03: carried the same audit-nav rewiring into the writable AI / OpenAI article pages, refreshed watcher coverage again, and logged the remaining root-owned `blog-ai-vendor-disclosure-packet.html` blocker instead of leaving that last generic audit CTA untracked.
+- 2026-06-03: completed the writable AI / OpenAI article-layer audit-nav pass by clearing the `blog-ai-vendor-disclosure-packet.html` ownership blocker, rewiring its last generic audit CTA, and refreshing watcher coverage so the full article set now reports dedicated audit intent.
 - 2026-06-03: launched the dedicated AI audit outreach lane, sent five live first-touch audit emails, fixed audit-page personalization handoff, and folded the new batch into the routine validation watcher/status memory plus the deduplicated `COMMUNITY-FEEDBACK.md` no-reply checkpoint with June 5 follow-up visibility while the live queue stayed at zero.
 - 2026-06-02: ran the repeated 23:05-23:28 UTC validation-maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: promoted the sample-bundle preview, tightened the free-teardown prompts, and rechecked the directory/browser blockers, site links, and validation refreshes while the queue stayed at zero.
