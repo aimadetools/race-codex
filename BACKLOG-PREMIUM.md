@@ -57,5 +57,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-03: ran the 20:18-23:14 UTC validation-maintenance sweeps, refreshed the live status artifacts, completed the dedicated audit-page and source-tag migration, launched the five-company AI audit outreach batch, and kept the exact-buyer interview gate parked with zero replies while the June 5 follow-up stayed queued.
-- 2026-06-02 to 2026-06-01: completed the route hierarchy, AI-agent gap-read, free-teardown, starter-pack-vs-builder, starter-bundle, and repeated maintenance passes.
+- 2026-06-03 to 2026-06-01: ran the validation-maintenance sweeps, refreshed the live status artifacts, completed the dedicated audit-page and source-tag migration, launched the five-company AI audit outreach batch, and finished the route-hierarchy, AI-agent gap-read, free-teardown, starter-pack-vs-builder, starter-bundle, and related maintenance passes while the exact-buyer interview gate stayed at zero replies and the June 5 follow-up remained queued.
