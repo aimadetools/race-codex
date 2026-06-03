@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-02 23:28 UTC
+Checked at: 2026-06-03 04:07 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -74,6 +74,21 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-agent-approval-gate-teardown: 0
 - agent-review-checklist-teardown: 0
 - ai-agent-workspace-teardown: 0
+
+### Audit Route Source Tags
+
+- homepage-nav-audit: 0
+- pricing-nav-audit: 0
+- pricing-concierge-card: 0
+- start-here-nav-audit: 0
+- about-nav-audit: 0
+- free-tools-nav-audit: 0
+- ai-procurement-hub-nav-audit: 0
+- kit-preview-nav-audit: 0
+- purchase-next-steps-audit: 0
+- audit-request-nav-audit: 0
+- audit-request-hero-audit: 0
+- audit-request-side-panel: 0
 
 ### Watched Source Tags
 
@@ -283,6 +298,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - audit-request-ai-stack: 0
 - audit-request-ai-deal-blocker: 0
 - audit-request-ai-evidence-map: 0
+- audit-request-nav-audit: 0
+- audit-request-hero-audit: 0
+- audit-request-side-panel: 0
 - pricing-ai-disclosure-packet: 0
 - pricing-ai-deal-blocker: 0
 - pricing-ai-procurement: 0
@@ -312,6 +330,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-questionnaire-example: 0
 - pricing-ai-packet-sample: 0
 - pricing-ai-stack-guide: 0
+- pricing-nav-audit: 0
+- pricing-concierge-card: 0
+- pricing-bottom-audit: 0
 - pricing-review-brief-builder: 0
 - pricing-ai-route-one-answer: 0
 - pricing-ai-route-repeat-review: 0
@@ -330,6 +351,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - community-ai-risk-assessment: 0
 - community-ai-procurement-guide: 0
 - community-ai-stack-guide: 0
+- about-nav-audit: 0
 - community-benchmark-report: 0
 - community-benchmark-report-procurement: 0
 - benchmark-outreach-batch-01: 0
@@ -630,6 +652,17 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-pro-kit-comparison: 0
 - ai-security-questionnaire-pro-kit-evidence-map: 0
 - ai-security-questionnaire-pro-kit-audit: 0
+- ai-audit-page: 0
+- ai-audit-page-builder: 0
+- ai-audit-page-evidence-map: 0
+- ai-audit-page-agent-workspace: 0
+- ai-audit-page-free-teardown: 0
+- ai-procurement-hub-nav-audit: 0
+- free-tools-nav-audit: 0
+- homepage-nav-audit: 0
+- kit-preview-nav-audit: 0
+- purchase-next-steps-audit: 0
+- start-here-nav-audit: 0
 - purchase-next-steps-evidence-map: 0
 - free-teardown-ai-answer-bank: 0
 - free-teardown-ai-deal-blocker: 0

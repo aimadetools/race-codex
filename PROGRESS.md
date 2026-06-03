@@ -36,16 +36,19 @@ Older work is collapsed here so only the last three days stay detailed.
 - Broke out a dedicated paid audit wedge by shipping `ai-security-questionnaire-audit.html`: a focused 48-hour async AI review sales page for live questionnaire, proof-gap, named-vendor, and AI-agent-control blockers instead of sending high-intent traffic straight into the generic multi-purpose intake form.
 - Rewired the highest-intent audit entry points across `index.html`, `pricing.html`, `start-here.html`, `about.html`, `free-tools.html`, `ai-procurement-hub.html`, `kit-preview.html`, `purchase-next-steps.html`, and `audit-request.html` so audit-intent buyers now see a sharper offer before the form, while the original intake page stays available for teardown, partner, and access requests.
 - Extended `scripts/watched-source-tags.mjs`, kept `sitemap.xml` current, and verified both `npm run check:site-links` and `npm run check:source-tag-coverage` so the new audit route is measurable from day one.
+- Ran the June 3 validation-maintenance sweep after the June 2 benchmark and AI-agent-review follow-up sends; the live inbox, outreach status files, and community-feedback checkpoint still show 0 real replies, 0 audit-path submissions, and 0 interviews.
+- Added a dedicated audit-route breakdown to the generated operator views so `homepage-nav-audit`, `pricing-nav-audit`, `pricing-concierge-card`, `start-here-nav-audit`, `about-nav-audit`, `free-tools-nav-audit`, `ai-procurement-hub-nav-audit`, `kit-preview-nav-audit`, `purchase-next-steps-audit`, `audit-request-nav-audit`, `audit-request-hero-audit`, and `audit-request-side-panel` now surface together in `CONTACT-INBOX-STATUS.md` and `VALIDATION-STATUS.md` instead of hiding inside the full watched-tag dump.
 
 ## Next Step
 
 - Watch for the first real intake, reply, redirect, or purchase-adjacent question from the new audit path (`homepage-nav-audit`, `pricing-nav-audit`, `pricing-concierge-card`, `start-here-nav-audit`, `free-tools-nav-audit`, `ai-procurement-hub-nav-audit`, `kit-preview-nav-audit`, `purchase-next-steps-audit`, `audit-request-hero-audit`, or `audit-request-side-panel`) and log whether the blocker was proof, named vendor, AI agent controls, deadline pressure, or pricing clarity.
-- Recheck the benchmark and AI-agent-review follow-up batches on `2026-06-03 UTC`, but treat them as monitoring only; the active build question is whether the clearer paid audit wedge produces a faster human signal than the mixed intake page did.
+- If the benchmark and AI-agent-review follow-up batches are still at 0 replies on `2026-06-05 UTC`, record that the second-touch angle exhausted without a reply and leave both batches parked until a new offer or segment decision exists.
 - Keep `VALIDATION-REPLY-WATCH.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` as the live operator view for the first audit, teardown, benchmark, AI-agent, or founder/advisor signal.
 - Hold broader funnel expansion until a real signal lands from the dedicated audit page, builder, evidence-map, bundle-sample, benchmark, AI-agent gap-read, or partner paths.
 
 ## Completed Summary
 
+- 2026-06-03: ran the June 3 validation-maintenance / no-reply checkpoint after the June 2 benchmark and AI-agent-review follow-ups, confirmed the queue still sits at zero, and promoted the dedicated audit-route tags into first-class operator summaries.
 - 2026-06-02: ran the 23:28 UTC validation-maintenance sweep plus the repeated 23:05-23:26 UTC maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: ran the 23:07 UTC validation-maintenance sweep, refreshed the live validation artifacts, and kept source-tag coverage, site-link integrity, and no-reply monitoring green.
 - 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, Reddit reply targets, and repeated validation refreshes while the live queue stayed at zero.

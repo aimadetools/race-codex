@@ -302,7 +302,7 @@ function extractInboxLatestSourceTag(text) {
 function extractInboxBreakdownMetric(text, heading, label) {
   const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const sectionPattern = new RegExp(`### ${escapedHeading}\\n\\n([\\s\\S]*?)(?:\\n## |$)`, "i");
+  const sectionPattern = new RegExp(`### ${escapedHeading}\\n\\n([\\s\\S]*?)(?:\\n### |\\n## |$)`, "i");
   const sectionMatch = text.match(sectionPattern);
   if (!sectionMatch) {
     return null;
@@ -755,6 +755,20 @@ const aiAgentGapReadWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "agent-review-checklist-teardown", label: "checklist gap-read" },
   { tag: "ai-agent-workspace-teardown", label: "workspace gap-read" }
 ]);
+const auditRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "homepage-nav-audit", label: "homepage nav" },
+  { tag: "pricing-nav-audit", label: "pricing nav" },
+  { tag: "pricing-concierge-card", label: "pricing concierge card" },
+  { tag: "start-here-nav-audit", label: "start-here nav" },
+  { tag: "about-nav-audit", label: "about nav" },
+  { tag: "free-tools-nav-audit", label: "free-tools nav" },
+  { tag: "ai-procurement-hub-nav-audit", label: "procurement hub nav" },
+  { tag: "kit-preview-nav-audit", label: "kit-preview nav" },
+  { tag: "purchase-next-steps-audit", label: "purchase next steps" },
+  { tag: "audit-request-nav-audit", label: "audit-request nav" },
+  { tag: "audit-request-hero-audit", label: "audit-request hero" },
+  { tag: "audit-request-side-panel", label: "audit-request side panel" }
+]);
 const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-openai-answer-template", label: "blog template" },
   { tag: "blog-index-openai-answer-example", label: "blog example" },
@@ -840,6 +854,7 @@ const output = [
   "## Priority Route Watch",
   "",
   renderWatchedSourceGroup("AI-first entry-point inbox submissions", aiFirstEntryWatch),
+  renderWatchedSourceGroup("Dedicated audit-route inbox submissions", auditRouteWatch),
   renderWatchedSourceGroup("AI-agent-control inbox submissions", aiAgentWatch),
   renderWatchedSourceGroup("AI-agent gap-read inbox submissions", aiAgentGapReadWatch),
   renderWatchedSourceGroup("OpenAI route inbox submissions", openAiWatch),

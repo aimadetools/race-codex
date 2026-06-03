@@ -4,10 +4,8 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P0
 
-- Recheck the new AI audit wedge on `2026-06-03 UTC` and after the next inbox poll; if any intake, reply, or audit-adjacent question lands with source tag `homepage-nav-audit`, `pricing-nav-audit`, `pricing-concierge-card`, `start-here-nav-audit`, `about-nav-audit`, `free-tools-nav-audit`, `ai-procurement-hub-nav-audit`, `kit-preview-nav-audit`, `purchase-next-steps-audit`, `audit-request-nav-audit`, `audit-request-hero-audit`, or `audit-request-side-panel`, record the exact source tag and blocker before changing the audit page copy.
 - If the first dedicated audit-path intake mentions proof assets, named owner, stale review date, agent controls, or named-vendor wording, paste the exact wording into `COMMUNITY-FEEDBACK.md` before touching `ai-security-questionnaire-audit.html`, `pricing.html`, or `audit-request.html` again.
 - If the first audit-intent reply asks what is included in the 48-hour audit, tighten `ai-security-questionnaire-audit.html` with the exact deliverable or turnaround objection before changing lower-intent pages.
-- Recheck the benchmark and AI-agent-review batches on `2026-06-03 UTC` after the June 2 follow-up send; if any row now has a reply, bounce, redirect, or teardown request, update the matching CSV, status file, and `COMMUNITY-FEEDBACK.md` before touching copy or target lists.
 - If any June 2 benchmark or AI-agent-review follow-up email bounces, preserve the exact company, recipient, and timestamp in the outreach CSV notes before changing status or swapping the contact route.
 - If the benchmark and AI-agent-review batches are still at 0 replies by `2026-06-05 UTC` after the June 2 follow-up send, record that the current angle exhausted its second touch and leave the batch parked until a new outreach offer or segment decision is made.
 - If the first real intake lands from `kit-preview-hero`, `kit-preview-grid-builder`, `kit-preview-evidence-map`, `kit-preview-route-evidence-map`, `kit-preview-grid-evidence-map`, `kit-preview-bottom`, or the refreshed lower pricing-page proof blocks, record the exact source tag and whether the buyer wanted Starter scope, Pro repeat-review help, proof-first help, audit judgment, or only preview clarity before changing those pages again.
@@ -155,7 +153,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-03: shipped the dedicated AI audit page, rewired the highest-intent audit CTAs, and registered the new audit source tags for inbox/status coverage.
+- 2026-06-03: shipped the dedicated AI audit page, rewired the highest-intent audit CTAs, registered the new audit source tags, and completed the June 3 audit plus outreach monitoring sweep with dedicated audit-route visibility in the operator views.
 - 2026-06-02: ran the 23:28 UTC validation-maintenance sweep plus the repeated 23:05-23:26 UTC checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: promoted the sample-bundle preview, tightened the free-teardown prompts, and rechecked the directory/browser blockers, site links, and validation refreshes while the queue stayed at zero.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes.

@@ -49,6 +49,20 @@ const AI_AGENT_GAP_READ_SOURCE_TAGS = [
   "agent-review-checklist-teardown",
   "ai-agent-workspace-teardown"
 ];
+const AUDIT_ROUTE_SOURCE_TAGS = [
+  "homepage-nav-audit",
+  "pricing-nav-audit",
+  "pricing-concierge-card",
+  "start-here-nav-audit",
+  "about-nav-audit",
+  "free-tools-nav-audit",
+  "ai-procurement-hub-nav-audit",
+  "kit-preview-nav-audit",
+  "purchase-next-steps-audit",
+  "audit-request-nav-audit",
+  "audit-request-hero-audit",
+  "audit-request-side-panel"
+];
 
 function formatUtcTimestamp(date) {
   const year = date.getUTCFullYear();
@@ -373,6 +387,10 @@ async function main() {
     sourceTag,
     realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
   ]);
+  const auditRouteCounts = AUDIT_ROUTE_SOURCE_TAGS.map((sourceTag) => [
+    sourceTag,
+    realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
+  ]);
   const watchedSourceCounts = WATCHED_SOURCE_TAGS.map((sourceTag) => [
     sourceTag,
     realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
@@ -427,6 +445,10 @@ async function main() {
     "### AI Agent Gap-Read Source Tags",
     "",
     ...aiAgentGapReadCounts.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`),
+    "",
+    "### Audit Route Source Tags",
+    "",
+    ...auditRouteCounts.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`),
     "",
     "### Watched Source Tags",
     "",
