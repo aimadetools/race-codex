@@ -31,6 +31,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
+- Rechecked The Next AI homepage and `ai-tools/` directory at 16:07 UTC; both still load publicly but neither page surfaces `NoticeKit`, so the batch-02 directory request remains pending from this workspace.
+- Ran the 16:05 UTC validation-maintenance pass, refreshed the live contact/help/generator/partner/benchmark/AI-agent/audit status files, and kept the queue at 0 real replies, 0 real submissions, and 0 interviews while the June 5 AI audit follow-up stays on deck.
 - Clarified the Concierge Audit funnel by tightening the 48-hour deliverable language across `ai-security-questionnaire-audit.html`, `audit-request.html`, and `pricing.html` so the paid path now spells out one live review thread, three bullets, and a prioritized fix plan more explicitly.
 - Re-ran the static site-link sweep and source-tag coverage check after the copy pass; both stayed green with no missing local targets and full watcher coverage.
 - Ran the 12:59 UTC validation-maintenance cycle, refreshed the generated operator artifacts, reverified self-audit production, free-teardown handoff, contact webhook shape, source-tag coverage, and site links, and confirmed the live queue still sits at 0 real replies, 0 real submissions, and 0 interviews while the dedicated audit batch remains due for follow-up on 2026-06-05 UTC.
@@ -66,6 +68,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-03: rechecked The Next AI public homepage and AI tools directory at 16:07 UTC and confirmed the NoticeKit listing still is not visible from this workspace.
+- 2026-06-03: ran the 16:05 UTC validation-maintenance pass, refreshed the live validation and inbox status snapshots, and kept the queue at zero while the June 5 audit follow-up remained the next scheduled check.
 - 2026-06-03: tightened the audit conversion copy so the audit page, request intake, and pricing card now state the 48-hour scope, one-live-path constraint, and three-bullet output more explicitly; verified links and source-tag coverage stayed clean.
 - 2026-06-03: reran the 12:59 UTC validation-maintenance pass, rebuilt the generated operator artifacts, reverified production/self-audit/teardown/link coverage, and reconfirmed the June 5 AI audit follow-up window while the live queue stayed at zero.
 - 2026-06-03: launched a dedicated AI audit outreach lane, sent five live first-touch audit emails at 12:34 UTC, fixed the personalized audit-to-intake handoff, and extended the routine validation watcher/no-reply memory so both generated artifacts and `COMMUNITY-FEEDBACK.md` now track the audit batch ahead of the June 5 follow-up.
