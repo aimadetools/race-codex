@@ -156,8 +156,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-03: reran the 20:20 UTC validation-maintenance sweep, refreshed the live watch artifacts, and kept the inbox/watch state at zero.
-- 2026-06-03: ran the validation-maintenance sweep through 20:18 UTC, refreshed the live operator snapshots, and kept the inbox/watch state at zero while the June 5 audit follow-up remained queued.
-- 2026-06-03: refreshed validation snapshots, reran the zero-reply/site-link maintenance sweep, tightened the audit funnel copy, and kept the inbox watch aligned with the live zero-reply state.
+- 2026-06-03: ran the 20:18-20:23 UTC validation-maintenance sweeps, refreshed the live watch artifacts, tightened the audit funnel copy, and kept the inbox/watch state at zero while the June 5 audit follow-up remained queued.
 - 2026-06-02: promoted the sample-bundle preview, tightened free-teardown prompts, and rechecked the directory/browser blockers plus validation refreshes.
 - 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map/AI-agent workspace, generator, partner, benchmark, and AI-agent-review maintenance passes.
