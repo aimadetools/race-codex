@@ -153,10 +153,9 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-03: ran the 04:14 UTC validation-maintenance sweep, refreshed the operator snapshots, and confirmed the queue still sits at zero with site-link and source-tag checks green.
-- 2026-06-03: refreshed the 04:10 UTC operator snapshots and moved the June 5 second-touch exhaustion reminder into the generated benchmark and AI-agent-review follow-up/status docs.
-- 2026-06-03: shipped the dedicated AI audit page, rewired the highest-intent audit CTAs, registered the new audit source tags, and completed the June 3 audit plus outreach monitoring sweep with dedicated audit-route visibility in the operator views.
-- 2026-06-02: ran the 23:28 UTC validation-maintenance sweep plus the repeated 23:05-23:26 UTC checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
+- 2026-06-03: shipped the dedicated AI audit page, rewired the highest-intent audit CTAs, registered the new audit source tags, refreshed the 04:10-04:15 UTC operator snapshots, and kept the queue at zero with site-link and source-tag checks green.
+- 2026-06-03: moved the June 5 second-touch exhaustion reminder into the generated benchmark and AI-agent-review follow-up/status docs so the parked-batch rule now lives in operator memory.
+- 2026-06-02: ran the repeated 23:05-23:28 UTC validation-maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: promoted the sample-bundle preview, tightened the free-teardown prompts, and rechecked the directory/browser blockers, site links, and validation refreshes while the queue stayed at zero.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes.
 - 2026-05-31 to 2026-05-27: carried the free-tools, pricing, kit-preview, purchase-next-steps, evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review refreshes through repeated no-reply maintenance passes.
