@@ -774,7 +774,16 @@ const auditRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "purchase-next-steps-audit", label: "purchase next steps" },
   { tag: "audit-request-nav-audit", label: "audit-request nav" },
   { tag: "audit-request-hero-audit", label: "audit-request hero" },
-  { tag: "audit-request-side-panel", label: "audit-request side panel" }
+  { tag: "audit-request-side-panel", label: "audit-request side panel" },
+  { tag: "blog-nav-audit", label: "blog nav" },
+  { tag: "ai-answer-builder-nav-audit", label: "builder nav" },
+  { tag: "ai-evidence-map-nav-audit", label: "evidence-map nav" },
+  { tag: "ai-agent-workspace-nav-audit", label: "agent-workspace nav" },
+  { tag: "ai-answer-bank-nav-audit", label: "answer-bank nav" },
+  { tag: "ai-pro-kit-nav-audit", label: "pro-kit nav" },
+  { tag: "ai-starter-pack-nav-audit", label: "starter-pack nav" },
+  { tag: "openai-answer-template-nav-audit", label: "OpenAI template nav" },
+  { tag: "openai-answer-bank-nav-audit", label: "OpenAI answer-bank nav" }
 ]);
 const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-openai-answer-template", label: "blog template" },

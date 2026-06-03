@@ -61,7 +61,16 @@ const AUDIT_ROUTE_SOURCE_TAGS = [
   "purchase-next-steps-audit",
   "audit-request-nav-audit",
   "audit-request-hero-audit",
-  "audit-request-side-panel"
+  "audit-request-side-panel",
+  "blog-nav-audit",
+  "ai-answer-builder-nav-audit",
+  "ai-evidence-map-nav-audit",
+  "ai-agent-workspace-nav-audit",
+  "ai-answer-bank-nav-audit",
+  "ai-pro-kit-nav-audit",
+  "ai-starter-pack-nav-audit",
+  "openai-answer-template-nav-audit",
+  "openai-answer-bank-nav-audit"
 ];
 
 function formatUtcTimestamp(date) {

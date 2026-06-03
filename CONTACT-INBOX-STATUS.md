@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-03 12:47 UTC
+Checked at: 2026-06-03 12:50 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -89,6 +89,15 @@ Source of truth: Vercel Blob `contact-submissions/`
 - audit-request-nav-audit: 0
 - audit-request-hero-audit: 0
 - audit-request-side-panel: 0
+- blog-nav-audit: 0
+- ai-answer-builder-nav-audit: 0
+- ai-evidence-map-nav-audit: 0
+- ai-agent-workspace-nav-audit: 0
+- ai-answer-bank-nav-audit: 0
+- ai-pro-kit-nav-audit: 0
+- ai-starter-pack-nav-audit: 0
+- openai-answer-template-nav-audit: 0
+- openai-answer-bank-nav-audit: 0
 
 ### Watched Source Tags
 
@@ -301,6 +310,15 @@ Source of truth: Vercel Blob `contact-submissions/`
 - audit-request-nav-audit: 0
 - audit-request-hero-audit: 0
 - audit-request-side-panel: 0
+- blog-nav-audit: 0
+- ai-answer-builder-nav-audit: 0
+- ai-evidence-map-nav-audit: 0
+- ai-agent-workspace-nav-audit: 0
+- ai-answer-bank-nav-audit: 0
+- ai-pro-kit-nav-audit: 0
+- ai-starter-pack-nav-audit: 0
+- openai-answer-template-nav-audit: 0
+- openai-answer-bank-nav-audit: 0
 - pricing-ai-disclosure-packet: 0
 - pricing-ai-deal-blocker: 0
 - pricing-ai-procurement: 0
