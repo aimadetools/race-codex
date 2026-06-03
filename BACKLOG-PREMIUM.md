@@ -55,6 +55,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-03: refreshed the live validation snapshots at 04:14 UTC and confirmed the zero-reply queue still holds after the June 2 AI follow-up sends.
 - 2026-06-03: refreshed the live validation snapshots and hardened the benchmark plus AI-agent-review operator docs so the June 5 second-touch exhaustion checkpoint is explicit in generated status memory.
 - 2026-06-03: shipped the dedicated AI questionnaire audit sales page, rewired the highest-intent audit CTAs away from the generic intake page, and finished the June 3 evidence recheck with dedicated audit-route monitoring in the live operator summaries.
 - 2026-06-02: ran the 23:28 UTC validation-maintenance sweep plus the repeated 23:05-23:26 UTC checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
