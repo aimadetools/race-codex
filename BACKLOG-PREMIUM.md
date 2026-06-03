@@ -57,8 +57,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-03: refreshed validation artifacts, kept audit follow-up and no-reply bookkeeping aligned, and confirmed the queue stayed at zero while the June 5 decision gate remained the next live check.
-- 2026-06-03: ran the 16:08 UTC validation-maintenance refresh, rebuilt the operator snapshots, and kept the queue at zero while the June 5 audit follow-up remained the next scheduled check.
-- 2026-06-03: finished the dedicated audit-page and source-tag migration across the core AI/OpenAI/blog surfaces, then rebuilt the operator summaries so the new audit wedge is fully visible.
-- 2026-06-03: launched the five-company AI audit outreach batch, fixed the audit-intake handoff, and folded the new lane into watcher and feedback memory with June 5 follow-up visibility.
+- 2026-06-03: refreshed validation artifacts, completed the dedicated audit-page and source-tag migration, launched the five-company AI audit outreach batch, and kept the June 5 decision gate live.
 - 2026-06-02 to 2026-06-01: completed the route hierarchy, AI-agent gap-read, free-teardown, starter-pack-vs-builder, starter-bundle, and repeated maintenance passes.
