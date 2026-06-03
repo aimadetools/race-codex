@@ -31,7 +31,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
-- Ran repeated 23:02-23:08 UTC validation-maintenance sweeps, refreshed the contact inbox, audit, generator, partner, benchmark, AI-agent, help-request, and self-audit status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
+- Ran the 23:10 UTC validation-maintenance refresh via `npm run sync:validation-artifacts`, regenerated the contact inbox, audit, generator, partner, benchmark, AI-agent, and help-request status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
 - Tightened the free async teardown and audit request intake copy so the live URL, affected segment, and deadline are harder to miss, then rechecked `check:site-links` and `check:free-teardown-handoff` with both passing.
 - Ran the 20:29-20:30 UTC validation-maintenance pass, refreshed the live watch and status artifacts, and kept the queue at 0 real replies, 0 real submissions, and 0 interviews while the June 5 audit follow-up remained queued.
 - Ran the 20:22 UTC validation-maintenance sweep, refreshed the inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, help-request, and source-tag artifacts from source, and kept the queue at 0 real replies, 0 real submissions, and 0 interviews.
