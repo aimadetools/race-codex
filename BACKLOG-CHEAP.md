@@ -156,6 +156,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-03: reran the 20:20 UTC validation-maintenance sweep, refreshed the live watch artifacts, and kept the inbox/watch state at zero.
 - 2026-06-03: ran the validation-maintenance sweep through 20:18 UTC, refreshed the live operator snapshots, and kept the inbox/watch state at zero while the June 5 audit follow-up remained queued.
 - 2026-06-03: refreshed validation snapshots, reran the zero-reply/site-link maintenance sweep, tightened the audit funnel copy, and kept the inbox watch aligned with the live zero-reply state.
 - 2026-06-02: promoted the sample-bundle preview, tightened free-teardown prompts, and rechecked the directory/browser blockers plus validation refreshes.
