@@ -157,5 +157,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-06-03: tightened the audit funnel copy, refreshed validation artifacts, rewired audit CTAs, and launched the dedicated AI audit outreach lane with June 5 follow-up visibility.
+- 2026-06-03: ran the 16:08 UTC validation-maintenance refresh, rebuilt the operator snapshots, and kept the queue at zero while the June 5 audit follow-up remained the next scheduled check.
 - 2026-06-02: promoted the sample-bundle preview, tightened free-teardown prompts, and rechecked the directory/browser blockers plus validation refreshes.
 - 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map/AI-agent workspace, generator, partner, benchmark, and AI-agent-review maintenance passes.
