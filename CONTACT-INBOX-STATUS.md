@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-03 12:50 UTC
+Checked at: 2026-06-03 12:54 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -98,6 +98,26 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-starter-pack-nav-audit: 0
 - openai-answer-template-nav-audit: 0
 - openai-answer-bank-nav-audit: 0
+- blog-ai-agent-approval-gate-nav-audit: 0
+- blog-ai-agent-checklist-nav-audit: 0
+- blog-ai-agent-tool-access-nav-audit: 0
+- blog-ai-answer-bank-vs-builder-nav-audit: 0
+- blog-ai-answer-bank-vs-pro-kit-nav-audit: 0
+- blog-ai-answer-example-nav-audit: 0
+- blog-ai-answer-template-nav-audit: 0
+- blog-ai-follow-up-questions-nav-audit: 0
+- blog-ai-path-guide-nav-audit: 0
+- blog-ai-saas-list-template-nav-audit: 0
+- blog-ai-saas-notice-template-nav-audit: 0
+- blog-ai-starter-pack-vs-builder-nav-audit: 0
+- blog-ai-questionnaire-nav-audit: 0
+- blog-ai-training-stance-nav-audit: 0
+- blog-ai-inventory-nav-audit: 0
+- blog-ai-risk-assessment-nav-audit: 0
+- blog-openai-bank-vs-builder-nav-audit: 0
+- blog-openai-answer-example-nav-audit: 0
+- blog-openai-answer-template-nav-audit: 0
+- blog-openai-path-guide-nav-audit: 0
 
 ### Watched Source Tags
 
@@ -319,6 +339,26 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-starter-pack-nav-audit: 0
 - openai-answer-template-nav-audit: 0
 - openai-answer-bank-nav-audit: 0
+- blog-ai-agent-approval-gate-nav-audit: 0
+- blog-ai-agent-checklist-nav-audit: 0
+- blog-ai-agent-tool-access-nav-audit: 0
+- blog-ai-answer-bank-vs-builder-nav-audit: 0
+- blog-ai-answer-bank-vs-pro-kit-nav-audit: 0
+- blog-ai-answer-example-nav-audit: 0
+- blog-ai-answer-template-nav-audit: 0
+- blog-ai-follow-up-questions-nav-audit: 0
+- blog-ai-path-guide-nav-audit: 0
+- blog-ai-saas-list-template-nav-audit: 0
+- blog-ai-saas-notice-template-nav-audit: 0
+- blog-ai-starter-pack-vs-builder-nav-audit: 0
+- blog-ai-questionnaire-nav-audit: 0
+- blog-ai-training-stance-nav-audit: 0
+- blog-ai-inventory-nav-audit: 0
+- blog-ai-risk-assessment-nav-audit: 0
+- blog-openai-bank-vs-builder-nav-audit: 0
+- blog-openai-answer-example-nav-audit: 0
+- blog-openai-answer-template-nav-audit: 0
+- blog-openai-path-guide-nav-audit: 0
 - pricing-ai-disclosure-packet: 0
 - pricing-ai-deal-blocker: 0
 - pricing-ai-procurement: 0

@@ -70,7 +70,27 @@ const AUDIT_ROUTE_SOURCE_TAGS = [
   "ai-pro-kit-nav-audit",
   "ai-starter-pack-nav-audit",
   "openai-answer-template-nav-audit",
-  "openai-answer-bank-nav-audit"
+  "openai-answer-bank-nav-audit",
+  "blog-ai-agent-approval-gate-nav-audit",
+  "blog-ai-agent-checklist-nav-audit",
+  "blog-ai-agent-tool-access-nav-audit",
+  "blog-ai-answer-bank-vs-builder-nav-audit",
+  "blog-ai-answer-bank-vs-pro-kit-nav-audit",
+  "blog-ai-answer-example-nav-audit",
+  "blog-ai-answer-template-nav-audit",
+  "blog-ai-follow-up-questions-nav-audit",
+  "blog-ai-path-guide-nav-audit",
+  "blog-ai-saas-list-template-nav-audit",
+  "blog-ai-saas-notice-template-nav-audit",
+  "blog-ai-starter-pack-vs-builder-nav-audit",
+  "blog-ai-questionnaire-nav-audit",
+  "blog-ai-training-stance-nav-audit",
+  "blog-ai-inventory-nav-audit",
+  "blog-ai-risk-assessment-nav-audit",
+  "blog-openai-bank-vs-builder-nav-audit",
+  "blog-openai-answer-example-nav-audit",
+  "blog-openai-answer-template-nav-audit",
+  "blog-openai-path-guide-nav-audit"
 ];
 
 function formatUtcTimestamp(date) {

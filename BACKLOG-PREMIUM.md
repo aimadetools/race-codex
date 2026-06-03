@@ -58,6 +58,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-06-03: rewired the core AI, OpenAI, and blog nav audit CTAs into `ai-security-questionnaire-audit.html`, added route-specific audit source tags, and rebuilt the operator summary groups so the dedicated audit wedge now covers the remaining highest-intent receiver-side nav surfaces.
+- 2026-06-03: extended the dedicated audit wedge through the writable AI / OpenAI article layer and left one explicit blocker behind: `blog-ai-vendor-disclosure-packet.html` still needs an ownership fix before its nav CTA can join the same audit-route instrumentation.
 - 2026-06-03: launched the five-company dedicated AI audit outreach batch, shipped the personalized audit-intake handoff fix, added watched-source-tag coverage, and promoted the audit lane into both the generated validation watcher/status memory and the human-facing no-reply log with June 5 follow-up visibility while the queue stayed at zero.
 - 2026-06-02: ran the repeated 23:05-23:28 UTC validation-maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: tightened the homepage / free-tools / pricing hierarchy, shipped the dedicated AI-agent gap-read path, corrected the post-send operator-state bugs, and verified the directory-browser blockers.

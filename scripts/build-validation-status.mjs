@@ -783,7 +783,27 @@ const auditRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "ai-pro-kit-nav-audit", label: "pro-kit nav" },
   { tag: "ai-starter-pack-nav-audit", label: "starter-pack nav" },
   { tag: "openai-answer-template-nav-audit", label: "OpenAI template nav" },
-  { tag: "openai-answer-bank-nav-audit", label: "OpenAI answer-bank nav" }
+  { tag: "openai-answer-bank-nav-audit", label: "OpenAI answer-bank nav" },
+  { tag: "blog-ai-agent-approval-gate-nav-audit", label: "AI blog approval-gate nav" },
+  { tag: "blog-ai-agent-checklist-nav-audit", label: "AI blog checklist nav" },
+  { tag: "blog-ai-agent-tool-access-nav-audit", label: "AI blog tool-access nav" },
+  { tag: "blog-ai-answer-bank-vs-builder-nav-audit", label: "AI blog bank-vs-builder nav" },
+  { tag: "blog-ai-answer-bank-vs-pro-kit-nav-audit", label: "AI blog bank-vs-pro-kit nav" },
+  { tag: "blog-ai-answer-example-nav-audit", label: "AI blog answer-example nav" },
+  { tag: "blog-ai-answer-template-nav-audit", label: "AI blog answer-template nav" },
+  { tag: "blog-ai-follow-up-questions-nav-audit", label: "AI blog follow-up nav" },
+  { tag: "blog-ai-path-guide-nav-audit", label: "AI blog path-guide nav" },
+  { tag: "blog-ai-saas-list-template-nav-audit", label: "AI SaaS list-template nav" },
+  { tag: "blog-ai-saas-notice-template-nav-audit", label: "AI SaaS notice-template nav" },
+  { tag: "blog-ai-starter-pack-vs-builder-nav-audit", label: "AI blog starter-pack-vs-builder nav" },
+  { tag: "blog-ai-questionnaire-nav-audit", label: "AI blog questionnaire nav" },
+  { tag: "blog-ai-training-stance-nav-audit", label: "AI blog training-stance nav" },
+  { tag: "blog-ai-inventory-nav-audit", label: "AI blog inventory nav" },
+  { tag: "blog-ai-risk-assessment-nav-audit", label: "AI blog risk-assessment nav" },
+  { tag: "blog-openai-bank-vs-builder-nav-audit", label: "OpenAI blog bank-vs-builder nav" },
+  { tag: "blog-openai-answer-example-nav-audit", label: "OpenAI blog answer-example nav" },
+  { tag: "blog-openai-answer-template-nav-audit", label: "OpenAI blog answer-template nav" },
+  { tag: "blog-openai-path-guide-nav-audit", label: "OpenAI blog path-guide nav" }
 ]);
 const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-openai-answer-template", label: "blog template" },
