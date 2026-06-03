@@ -31,18 +31,11 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
-- Ran the 23:21 UTC validation-maintenance refresh via `npm run run:validation-maintenance`, regenerated the contact inbox, audit, generator, partner, benchmark, AI-agent, help-request, and self-audit status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
-- Ran the 23:19 UTC validation-maintenance refresh via `npm run run:validation-maintenance`, regenerated the contact inbox, audit, generator, partner, benchmark, AI-agent, help-request, and self-audit status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
-- Confirmed there is no `DEPLOY-STATUS.md` file to triage, rechecked the live inbox/help snapshots, and kept the highest-priority validation task parked on reply capture because no real signal has landed yet.
-- Ran the 23:10-23:19 UTC validation-maintenance sweeps via `npm run run:validation-maintenance` and `npm run sync:validation-artifacts`, regenerated the contact inbox, audit, generator, partner, benchmark, AI-agent, help-request, and self-audit status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
-- Tightened the free async teardown and audit request intake copy so the live URL, affected segment, and deadline are harder to miss, then rechecked `check:site-links` and `check:free-teardown-handoff` with both passing.
-- Ran the 20:22-20:30 UTC validation-maintenance sweeps, refreshed the live watch artifacts, and kept the queue at 0 real replies, 0 real submissions, and 0 interviews while the next AI audit follow-up remained queued for 2026-06-05 UTC.
-- Rechecked `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, and `check:site-links`; all passed, the site-link sweep still found no broken local HTML targets, and the current live watch stayed parked on the first real reply.
-- Rechecked The Next AI homepage and `ai-tools/` directory; both still load publicly but neither page surfaces `NoticeKit`, so the batch-02 directory request remains pending from this workspace.
-- Clarified the Concierge Audit funnel by tightening the 48-hour deliverable language across `ai-security-questionnaire-audit.html`, `audit-request.html`, and `pricing.html`, then re-ran the static site-link sweep and source-tag coverage check so the paid path stayed measurable.
-- Rewired the remaining core AI / OpenAI nav audit CTAs plus the article-layer audit-nav set into `ai-security-questionnaire-audit.html`, surfaced the new audit route in `CONTACT-INBOX-STATUS.md` and `VALIDATION-STATUS.md`, and cleared the last writable article blocker with the `blog-ai-vendor-disclosure-packet.html` handoff.
-- Shipped the dedicated `ai-audit-outreach-batch-01`, sent the first five audit emails at `2026-06-03 12:34 UTC`, fixed the audit-page handoff so intake links carry context into `audit-request.html`, and promoted the new lane into `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, and `AI-AUDIT-OUTREACH-STATUS.md`.
-- Tightened `audit-request.html` so free teardown and Concierge Audit requests now visibly require the live URL, blocker, affected customer segment, and deadline, reducing vague submissions before they reach the inbox.
+- Ran the 23:23 UTC validation-maintenance refresh via `npm run run:validation-maintenance`, regenerated the contact inbox, audit, generator, partner, benchmark, AI-agent, help-request, and self-audit status artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
+- Re-ran the site-link and reply-watch checks after the refresh; all passed, and there is still no real reply, intake, or interview signal to promote out of the watch queue.
+- Confirmed there was still no `DEPLOY-STATUS.md` file to triage, so the highest-priority live validation task remains reply capture rather than deployment repair.
+- Shipped the dedicated `ai-audit-outreach-batch-01`, sent the first five audit emails on `2026-06-03 12:34 UTC`, and kept the batch parked at 5 sent, 0 followed_up, 0 terminal rows while the June 5 follow-up stays queued.
+- Tightened `audit-request.html` and the free teardown path earlier in the day so the live URL, blocker, affected customer segment, and deadline are harder to miss, and promoted the audit lane into `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, and `AI-AUDIT-OUTREACH-STATUS.md`.
 
 ## Next Step
 
@@ -56,6 +49,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-03: ran the 20:18-23:21 UTC validation-maintenance sweeps, refreshed the live watch artifacts, launched the dedicated audit outreach lane, and kept the queue at zero while the June 5 follow-up stayed queued.
+- 2026-06-03: ran the 20:18-23:23 UTC validation-maintenance sweeps, refreshed the live watch artifacts, launched the dedicated audit outreach lane, and kept the queue at zero while the June 5 follow-up stayed queued.
 - 2026-06-02: completed the route-hierarchy, AI-agent gap-read, free-teardown, and validation maintenance passes while the queue stayed at zero.
 - 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, sample-bundle, proof-first, package-preview, generator, partner, benchmark, and AI-agent-review maintenance passes while the queue stayed at zero.
