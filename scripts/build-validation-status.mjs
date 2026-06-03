@@ -791,6 +791,7 @@ const auditRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-ai-answer-bank-vs-pro-kit-nav-audit", label: "AI blog bank-vs-pro-kit nav" },
   { tag: "blog-ai-answer-example-nav-audit", label: "AI blog answer-example nav" },
   { tag: "blog-ai-answer-template-nav-audit", label: "AI blog answer-template nav" },
+  { tag: "blog-ai-disclosure-packet-nav-audit", label: "AI blog disclosure-packet nav" },
   { tag: "blog-ai-follow-up-questions-nav-audit", label: "AI blog follow-up nav" },
   { tag: "blog-ai-path-guide-nav-audit", label: "AI blog path-guide nav" },
   { tag: "blog-ai-saas-list-template-nav-audit", label: "AI SaaS list-template nav" },

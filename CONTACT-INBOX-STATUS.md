@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-03 12:54 UTC
+Checked at: 2026-06-03 12:56 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -105,6 +105,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-ai-answer-bank-vs-pro-kit-nav-audit: 0
 - blog-ai-answer-example-nav-audit: 0
 - blog-ai-answer-template-nav-audit: 0
+- blog-ai-disclosure-packet-nav-audit: 0
 - blog-ai-follow-up-questions-nav-audit: 0
 - blog-ai-path-guide-nav-audit: 0
 - blog-ai-saas-list-template-nav-audit: 0
@@ -346,6 +347,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-ai-answer-bank-vs-pro-kit-nav-audit: 0
 - blog-ai-answer-example-nav-audit: 0
 - blog-ai-answer-template-nav-audit: 0
+- blog-ai-disclosure-packet-nav-audit: 0
 - blog-ai-follow-up-questions-nav-audit: 0
 - blog-ai-path-guide-nav-audit: 0
 - blog-ai-saas-list-template-nav-audit: 0

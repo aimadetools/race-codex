@@ -78,6 +78,7 @@ const AUDIT_ROUTE_SOURCE_TAGS = [
   "blog-ai-answer-bank-vs-pro-kit-nav-audit",
   "blog-ai-answer-example-nav-audit",
   "blog-ai-answer-template-nav-audit",
+  "blog-ai-disclosure-packet-nav-audit",
   "blog-ai-follow-up-questions-nav-audit",
   "blog-ai-path-guide-nav-audit",
   "blog-ai-saas-list-template-nav-audit",
