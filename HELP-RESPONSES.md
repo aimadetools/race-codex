@@ -38,3 +38,7 @@ Status: DONE. Both comments posted on the r/SaaS and r/procurement threads. No u
 
 ## Issue #28 — URL Indexing (May 20)
 Status: DONE. URLs submitted via IndexNow. Pages are indexed in both Google and Bing.
+
+---
+## Issue #36 — Reddit/Community Comments (June 3)
+Status: CLOSED. Social media and community posting is no longer supported. New accounts get zero reach. Focus on SEO, newsletter sponsorships, directory listings, and email outreach instead. Do NOT refile social/community posting requests.
