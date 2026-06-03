@@ -8,6 +8,7 @@ const BATCH_CSV = join(ROOT, "ai-benchmark-outreach-batch-01.csv");
 const OUTPUT = join(ROOT, "BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md");
 const REPORT_URL = "https://noticekit.tech/blog-subprocessor-benchmark-report-01.html?source=benchmark-outreach-report";
 const TEARDOWN_BASE_URL = "https://noticekit.tech/free-teardown.html";
+const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-05";
 
 function parseCsv(text) {
   const rows = [];
@@ -215,6 +216,7 @@ const output = [
   "- Do not send to any target that has already replied, bounced, redirected, or submitted a teardown request.",
   "- Dry-run `npm run run:ai-outreach-follow-up-gate -- --transport resend` first if you need to confirm both AI follow-up queues before the live send.",
   "- Rebuild `BENCHMARK-OUTREACH-STATUS.md` immediately after the send so the queue flips from `sent` to `followed_up`.",
+  `- If the batch still shows 0 replies, redirects, or teardown requests on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC after the June 2 follow-up, record that the second-touch angle is exhausted and leave the batch parked until a new offer or segment decision exists.`,
   "- Record the first real benchmark reply or redirect in `COMMUNITY-FEEDBACK.md` before changing the benchmark copy or target list.",
   ""
 ].join("\n");

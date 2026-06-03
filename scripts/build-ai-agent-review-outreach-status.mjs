@@ -12,6 +12,7 @@ const DEFAULT_ENV_FILE = join(ROOT, ".env.production.local");
 const FALLBACK_ENV_FILE = join(ROOT, ".env.local");
 const BLOB_PREFIX = "contact-submissions/";
 const MAX_SUBMISSIONS = 200;
+const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-05";
 const AGENT_REVIEW_SOURCE_TAGS = new Set([
   "agent-review-outreach-batch-01",
   "agent-review-outreach-checklist",
@@ -303,6 +304,7 @@ function extractFeedbackMatches(text) {
 }
 
 async function main() {
+  const todayKey = new Date().toISOString().slice(0, 10);
   const [batchText, feedbackText, inbox] = await Promise.all([
     readFile(BATCH_FILE, "utf8"),
     readFile(FEEDBACK_FILE, "utf8").catch(() => ""),
@@ -321,6 +323,8 @@ async function main() {
   const teardownRequests = inbox.records.filter((record) => String(record.type || "").trim() === "free_async_teardown").length;
   const feedbackMentions = extractFeedbackMatches(feedbackText);
   const latestInboxRecord = inbox.records[0] || null;
+  const hasExternalEvidence = inboxSubmissions > 0 || feedbackMentions.length > 0;
+  const secondTouchExhausted = followedUpWaiting > 0 && terminalRows === 0 && !hasExternalEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE;
   const gapReadSourceBreakdown = AI_AGENT_GAP_READ_SOURCE_TAGS.map((sourceTag) => ({
     sourceTag,
     count: countBySourceTag(inbox.records, sourceTag)
@@ -343,6 +347,8 @@ async function main() {
     ? "review the recorded outcome and convert any real conversation into a qualification decision."
     : sentWaiting > 0 && earliestFollowUpDue
       ? `monitor the batch for replies and send the AI agent review follow-up on or after ${earliestFollowUpDue} UTC if replies are still zero.`
+      : secondTouchExhausted
+        ? `record that the AI agent review angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists.`
       : followedUpWaiting > 0
         ? "monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list."
         : "monitor the batch for the first real reply or teardown request.";
@@ -365,6 +371,7 @@ async function main() {
     `- Agent-review-tagged teardown requests: ${teardownRequests}`,
     `- Agent-review mentions logged in COMMUNITY-FEEDBACK.md: ${feedbackMentions.length}`,
     `- First AI agent review outreach send: ${firstSendAt ? formatUtcTimestamp(firstSendAt) : "unknown"}`,
+    `- Second-touch exhaustion checkpoint: ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`,
     `- Next AI agent review action: ${nextAction}`,
     "",
     "## Evidence Watch",
@@ -385,6 +392,9 @@ async function main() {
       : terminalRows === 0 && inboxSubmissions === 0
         ? null
         : "- COMMUNITY-FEEDBACK.md does not contain an agent-review-specific reply or outcome yet.",
+    secondTouchExhausted
+      ? "- The June 2 follow-up has now aged past the June 5 UTC checkpoint with zero AI-agent-review evidence, so this batch should stay parked until a new offer or segment decision exists."
+      : null,
     "",
     "## Inbox Matches",
     ""

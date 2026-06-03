@@ -62,4 +62,5 @@ Use the row-specific teardown URL listed below so the source tag and public page
 - Do not send to any target that has already replied, bounced, redirected, or submitted a teardown request.
 - Dry-run `npm run run:ai-outreach-follow-up-gate -- --transport resend` first if you need to confirm both AI follow-up queues before the live send.
 - Rebuild `AI-AGENT-REVIEW-OUTREACH-STATUS.md` immediately after the send so the queue flips from `sent` to `followed_up`.
+- If the batch still shows 0 replies, redirects, or teardown requests on 2026-06-05 UTC after the June 2 follow-up, record that the second-touch angle is exhausted and leave the batch parked until a new offer or segment decision exists.
 - Record the first real AI agent review reply or redirect in `COMMUNITY-FEEDBACK.md` before changing the AI-agent-review copy or target list.

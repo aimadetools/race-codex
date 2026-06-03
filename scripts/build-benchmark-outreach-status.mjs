@@ -12,6 +12,7 @@ const DEFAULT_ENV_FILE = join(ROOT, ".env.production.local");
 const FALLBACK_ENV_FILE = join(ROOT, ".env.local");
 const BLOB_PREFIX = "contact-submissions/";
 const MAX_SUBMISSIONS = 200;
+const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-05";
 const BENCHMARK_SOURCE_TAGS = new Set([
   "benchmark-outreach-batch-01",
   "benchmark-outreach-report"
@@ -296,7 +297,11 @@ function extractFeedbackMentions(text, companies) {
   return matches;
 }
 
-function describeNextAction(rows) {
+function describeNextAction(rows, options = {}) {
+  const {
+    todayKey = "",
+    hasExternalEvidence = false
+  } = options;
   const positiveReplies = countBy(rows, "status", "replied_positive");
   const negativeReplies = countBy(rows, "status", "replied_negative");
   const bounces = countBy(rows, "status", "bounced");
@@ -328,6 +333,9 @@ function describeNextAction(rows) {
   }
 
   if (followedUpRows.length > 0) {
+    if (!hasExternalEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE) {
+      return `record that the benchmark outreach angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
+    }
     return "monitor the followed-up benchmark rows for the first real reply, redirect, or teardown request before expanding the list";
   }
 
@@ -336,6 +344,7 @@ function describeNextAction(rows) {
 
 async function main() {
   const now = formatUtcTimestamp(new Date());
+  const todayKey = new Date().toISOString().slice(0, 10);
   const rows = parseCsv(await readFile(BATCH_FILE, "utf8"));
   const feedbackText = await readFile(FEEDBACK_FILE, "utf8").catch(() => "");
   const inbox = await loadBenchmarkInboxRecords();
@@ -354,6 +363,8 @@ async function main() {
   const feedbackMentions = extractFeedbackMentions(feedbackText, companyNames);
   const inboxTeardowns = inbox.records.filter((record) => String(record.type || "").trim() === "free_async_teardown");
   const latestInboxRecord = inbox.records[0] || null;
+  const hasExternalEvidence = inbox.records.length > 0 || feedbackMentions.length > 0;
+  const secondTouchExhausted = followedUp > 0 && terminal === 0 && !hasExternalEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE;
 
   const output = [
     "# Benchmark Outreach Status",
@@ -373,7 +384,8 @@ async function main() {
     `- Benchmark-tagged teardown requests: ${inboxTeardowns.length}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
     `- Benchmark mentions logged in COMMUNITY-FEEDBACK.md: ${feedbackMentions.length}`,
     `- First benchmark outreach send: ${firstSent ? formatUtcTimestamp(firstSent) : "unknown"}`,
-    `- Next benchmark action: ${describeNextAction(rows)}.`,
+    `- Second-touch exhaustion checkpoint: ${SECOND_TOUCH_EXHAUSTION_DATE} UTC.`,
+    `- Next benchmark action: ${describeNextAction(rows, { todayKey, hasExternalEvidence })}.`,
     ""
   ];
 
@@ -399,6 +411,10 @@ async function main() {
     } else {
       output.push("- COMMUNITY-FEEDBACK.md does not contain a benchmark-specific reply or outcome yet.");
     }
+  }
+
+  if (secondTouchExhausted) {
+    output.push("- The June 2 follow-up has now aged past the June 5 UTC checkpoint with zero benchmark evidence, so this batch should stay parked until a new offer or segment decision exists.");
   }
 
   output.push("", "## Inbox Matches", "");
