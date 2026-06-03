@@ -12,14 +12,17 @@ const BATCH_FILES = [
   join(ROOT, "buyer-validation-outreach-batch-03.csv"),
   join(ROOT, "buyer-validation-outreach-batch-04.csv"),
   join(ROOT, "ai-benchmark-outreach-batch-01.csv"),
-  join(ROOT, "ai-agent-review-outreach-batch-01.csv")
+  join(ROOT, "ai-agent-review-outreach-batch-01.csv"),
+  join(ROOT, "ai-audit-outreach-batch-01.csv")
 ];
 const FOUNDER_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no founder\/operator replies have been posted here yet(?:[^\n.]*)\.[^\n]*/i;
 const ADVISOR_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no advisor replies have been posted here yet(?:[^\n.]*)\.[^\n]*/i;
 const BENCHMARK_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no benchmark outreach replies, redirects, or teardown requests have been recorded yet(?:[^\n.]*)\.[^\n]*/i;
 const AGENT_REVIEW_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no ai agent review replies, redirects, or teardown requests have been recorded yet(?:[^\n.]*)\.[^\n]*/i;
+const AUDIT_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no ai audit outreach replies, redirects, or intakes have been recorded yet(?:[^\n.]*)\.[^\n]*/i;
 const RECHECK_TIMESTAMP_PATTERN = /^Rechecked on (.+? UTC):/i;
 const TERMINAL_STATUSES = new Set(["replied_positive", "replied_negative", "bounced", "interview_completed"]);
+const AUDIT_SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
 
 function parseArgs(argv) {
   const args = new Map();
@@ -173,7 +176,8 @@ function findLatestSectionCheckpoint(lines) {
       !FOUNDER_NOTE_PATTERN.test(line) &&
       !ADVISOR_NOTE_PATTERN.test(line) &&
       !BENCHMARK_NOTE_PATTERN.test(line) &&
-      !AGENT_REVIEW_NOTE_PATTERN.test(line)
+      !AGENT_REVIEW_NOTE_PATTERN.test(line) &&
+      !AUDIT_NOTE_PATTERN.test(line)
     ) {
       continue;
     }
@@ -253,6 +257,34 @@ function describeAgentReviewNoReplyAction(rows) {
   return "monitor the AI agent review queue for the first real reply or teardown request";
 }
 
+function describeAuditNoReplyAction(rows) {
+  const sentRows = rows.filter((row) => String(row.status || "").trim() === "sent");
+  const followedUpRows = rows.filter((row) => String(row.status || "").trim() === "followed_up");
+  const dueDates = sentRows
+    .map((row) => String(row.notes || "").match(/Follow-up due\s+(\d{4}-\d{2}-\d{2})/)?.[1] || "")
+    .filter(Boolean)
+    .sort();
+
+  if (dueDates.length > 0) {
+    return `monitor the batch and send the audit follow-up on or after ${dueDates[0]} UTC if replies are still zero`;
+  }
+
+  if (followedUpRows.length > 0) {
+    const exhausted = followedUpRows.some((row) => {
+      const match = String(row.notes || "").match(/Followed up\s+(\d{4}-\d{2}-\d{2})/);
+      return Boolean(match && match[1] >= AUDIT_SECOND_TOUCH_EXHAUSTION_DATE);
+    });
+
+    if (exhausted) {
+      return `record that the audit outreach angle exhausted its second touch on ${AUDIT_SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
+    }
+
+    return "monitor the followed-up audit rows for the first real reply, redirect, or intake before expanding the list";
+  }
+
+  return "monitor the AI audit outreach queue for the first real reply, redirect, or intake";
+}
+
 function buildNote(timestamp, segment, context = {}) {
   if (segment === "founder") {
     return `Rechecked on ${timestamp}: no founder/operator replies have been posted here yet across the active outreach batches. Keep \`buyer-validation-outreach-batch-01.csv\`, \`buyer-validation-outreach-batch-03.csv\`, and \`buyer-validation-outreach-batch-04.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
@@ -264,6 +296,10 @@ function buildNote(timestamp, segment, context = {}) {
 
   if (segment === "agent-review") {
     return `Rechecked on ${timestamp}: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep \`ai-agent-review-outreach-batch-01.csv\` unchanged and ${describeAgentReviewNoReplyAction(context.agentReviewRows || [])}.`;
+  }
+
+  if (segment === "audit") {
+    return `Rechecked on ${timestamp}: no AI audit outreach replies, redirects, or intakes have been recorded yet. Keep \`ai-audit-outreach-batch-01.csv\` unchanged and ${describeAuditNoReplyAction(context.auditRows || [])}.`;
   }
 
   return `Rechecked on ${timestamp}: no advisor replies have been posted here yet. Keep \`buyer-validation-outreach-batch-02.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
@@ -307,7 +343,8 @@ function cleanSectionLines(lines) {
       FOUNDER_NOTE_PATTERN.test(line) ||
       ADVISOR_NOTE_PATTERN.test(line) ||
       BENCHMARK_NOTE_PATTERN.test(line) ||
-      AGENT_REVIEW_NOTE_PATTERN.test(line)
+      AGENT_REVIEW_NOTE_PATTERN.test(line) ||
+      AUDIT_NOTE_PATTERN.test(line)
     ) {
       return false;
     }
@@ -338,8 +375,7 @@ async function main() {
   const [founderRows, advisorRows] = parsedBatchRows;
   const benchmarkRows = parsedBatchRows[4] || [];
   const agentReviewRows = parsedBatchRows[5] || [];
-  const founderReplies = countReplyRows(founderRows);
-  const advisorReplies = countReplyRows(advisorRows);
+  const auditRows = parsedBatchRows[6] || [];
   const totalReplyRows = parsedBatchRows.reduce((total, rows) => total + countReplyRows(rows), 0);
   const interviewRows = countInterviewRows(parseCsv(interviewText));
 
@@ -392,6 +428,8 @@ async function main() {
     buildNote(timestamp, "benchmark", { benchmarkRows }),
     "",
     buildNote(timestamp, "agent-review", { agentReviewRows }),
+    "",
+    buildNote(timestamp, "audit", { auditRows }),
     "",
     ...preservedSectionLines
   ];
