@@ -39,6 +39,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Rewired the highest-intent audit entry points across `index.html`, `pricing.html`, `start-here.html`, `about.html`, `free-tools.html`, `ai-procurement-hub.html`, `kit-preview.html`, `purchase-next-steps.html`, and `audit-request.html` so audit-intent buyers now see a sharper offer before the form, while the original intake page stays available for teardown, partner, and access requests.
 - Extended `scripts/watched-source-tags.mjs`, kept `sitemap.xml` current, and verified both `npm run check:site-links` and `npm run check:source-tag-coverage` so the new audit route is measurable from day one.
 - Added a dedicated audit-route breakdown to the generated operator views so `homepage-nav-audit`, `pricing-nav-audit`, `pricing-concierge-card`, `start-here-nav-audit`, `about-nav-audit`, `free-tools-nav-audit`, `ai-procurement-hub-nav-audit`, `kit-preview-nav-audit`, `purchase-next-steps-audit`, `audit-request-nav-audit`, `audit-request-hero-audit`, and `audit-request-side-panel` now surface together in `CONTACT-INBOX-STATUS.md` and `VALIDATION-STATUS.md` instead of hiding inside the full watched-tag dump.
+- Tightened the concierge audit and pricing copy so the 48-hour paid review now spells out the concrete deliverables up front: top gap, best fix path, and reply-ready guidance for one live thread.
 - Cleaned the repo memory files by updating the parked validation state to the 04:25 UTC checkpoint and collapsing repeated same-day maintenance notes so the last three days remain detailed without duplicating no-reply sweeps.
 - Refreshed the repo memory files again against the 04:27-04:28 UTC checkpoint so the human/backlog state matches the newest generated operator artifacts instead of the earlier 04:25 UTC snapshot.
 
@@ -53,6 +54,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Completed Summary
 
 - 2026-06-03: shipped the dedicated AI audit wedge, promoted audit-route monitoring into the operator views, hardened the June 5 second-touch rule into generated outreach docs, and completed three validation-maintenance refreshes through the 04:30 UTC checkpoint with the queue still at zero and all live checks green.
+- 2026-06-03: tightened the concierge audit and pricing copy so the 48-hour paid review now names the exact deliverables before checkout.
 - 2026-06-02: ran the repeated 23:05-23:28 UTC validation-maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: consolidated the route hierarchy, AI-agent follow-up state, free-teardown intake, Reddit reply targets, and repeated validation refreshes while the live queue stayed at zero.
 - 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample, hardened the guarded follow-up send path, and kept the queue reply-free ahead of the June 2 send.
