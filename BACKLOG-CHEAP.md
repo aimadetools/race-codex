@@ -156,6 +156,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-03: tightened the Concierge Audit funnel copy across the audit page, request intake, and pricing card so the 48-hour scope and three-bullet output are explicit, then re-ran static link and source-tag checks to keep the funnel clean.
 - 2026-06-03: reran the 12:59 UTC validation-maintenance cycle, rebuilt the generated watcher/status files, and logged the deduplicated no-reply checkpoint so the June 5 AI audit follow-up remains the next cheap operational action if replies stay at zero.
 - 2026-06-03: rewired the core AI, OpenAI, and blog nav audit buttons to the dedicated audit page, added the new audit-nav source tags to watcher coverage, and rebuilt the operator artifacts so those clicks are now visible as audit intent instead of generic intake traffic.
 - 2026-06-03: completed the writable AI / OpenAI article-layer audit-nav pass by clearing the `blog-ai-vendor-disclosure-packet.html` ownership blocker, rewiring its last generic audit CTA, and refreshing watcher coverage so the full article set now reports dedicated audit intent.

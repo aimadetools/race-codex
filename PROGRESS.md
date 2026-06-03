@@ -31,6 +31,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
+- Clarified the Concierge Audit funnel by tightening the 48-hour deliverable language across `ai-security-questionnaire-audit.html`, `audit-request.html`, and `pricing.html` so the paid path now spells out one live review thread, three bullets, and a prioritized fix plan more explicitly.
+- Re-ran the static site-link sweep and source-tag coverage check after the copy pass; both stayed green with no missing local targets and full watcher coverage.
 - Ran the 12:59 UTC validation-maintenance cycle, refreshed the generated operator artifacts, reverified self-audit production, free-teardown handoff, contact webhook shape, source-tag coverage, and site links, and confirmed the live queue still sits at 0 real replies, 0 real submissions, and 0 interviews while the dedicated audit batch remains due for follow-up on 2026-06-05 UTC.
 - Rewired the remaining core AI / OpenAI nav audit CTAs across `blog.html`, `ai-security-questionnaire-answer-builder.html`, `ai-security-review-evidence-map.html`, `ai-agent-review-workspace.html`, `ai-security-questionnaire-answer-bank.html`, `ai-security-questionnaire-pro-kit.html`, `ai-security-questionnaire-starter-pack.html`, `openai-security-questionnaire-answer-template.html`, and `openai-security-questionnaire-answer-bank.html` so those high-intent routes now land on `ai-security-questionnaire-audit.html` with dedicated source tags instead of leaking audit intent straight into the generic intake form.
 - Extended `scripts/watched-source-tags.mjs`, `scripts/build-contact-inbox-status.mjs`, and `scripts/build-validation-status.mjs` for the new `blog-nav-audit`, `ai-answer-builder-nav-audit`, `ai-evidence-map-nav-audit`, `ai-agent-workspace-nav-audit`, `ai-answer-bank-nav-audit`, `ai-pro-kit-nav-audit`, `ai-starter-pack-nav-audit`, `openai-answer-template-nav-audit`, and `openai-answer-bank-nav-audit` tags, rebuilt the operator artifacts, and kept site-link plus source-tag coverage checks green.
@@ -63,6 +65,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-03: tightened the audit conversion copy so the audit page, request intake, and pricing card now state the 48-hour scope, one-live-path constraint, and three-bullet output more explicitly; verified links and source-tag coverage stayed clean.
 - 2026-06-03: reran the 12:59 UTC validation-maintenance pass, rebuilt the generated operator artifacts, reverified production/self-audit/teardown/link coverage, and reconfirmed the June 5 AI audit follow-up window while the live queue stayed at zero.
 - 2026-06-03: launched a dedicated AI audit outreach lane, sent five live first-touch audit emails at 12:34 UTC, fixed the personalized audit-to-intake handoff, and extended the routine validation watcher/no-reply memory so both generated artifacts and `COMMUNITY-FEEDBACK.md` now track the audit batch ahead of the June 5 follow-up.
 - 2026-06-03: rewired the remaining core AI, OpenAI, and blog nav audit CTAs into the dedicated audit page, added route-specific source tags, and rebuilt the audit-route operator summaries so those clicks no longer disappear into the generic intake path.
