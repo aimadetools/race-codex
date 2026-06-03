@@ -156,5 +156,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- ✅ Intake copy: tightened the free async teardown and audit request prompts so the live URL, affected segment, and deadline are harder to miss.
 - 2026-06-03: ran the 20:18-20:27 UTC validation-maintenance sweeps, refreshed the live watch artifacts, tightened the audit funnel and no-reply checkpoints, and kept the inbox/watch state at zero while the June 5 audit follow-up remained queued.
 - 2026-06-02 to 2026-05-27: completed the sample-bundle, free-teardown, starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map/AI-agent workspace, generator, partner, benchmark, and AI-agent-review maintenance passes.
