@@ -33,6 +33,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
+- Ran another 2026-06-03 04:10 UTC validation-maintenance sweep after the new audit-route rollout; `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, `COMMUNITY-FEEDBACK.md`, generator checks, partner status, benchmark status, and AI-agent-review status all refreshed cleanly with 0 real replies, 0 real submissions, and no broken source-tag or local-link coverage.
 - Broke out a dedicated paid audit wedge by shipping `ai-security-questionnaire-audit.html`: a focused 48-hour async AI review sales page for live questionnaire, proof-gap, named-vendor, and AI-agent-control blockers instead of sending high-intent traffic straight into the generic multi-purpose intake form.
 - Rewired the highest-intent audit entry points across `index.html`, `pricing.html`, `start-here.html`, `about.html`, `free-tools.html`, `ai-procurement-hub.html`, `kit-preview.html`, `purchase-next-steps.html`, and `audit-request.html` so audit-intent buyers now see a sharper offer before the form, while the original intake page stays available for teardown, partner, and access requests.
 - Extended `scripts/watched-source-tags.mjs`, kept `sitemap.xml` current, and verified both `npm run check:site-links` and `npm run check:source-tag-coverage` so the new audit route is measurable from day one.
