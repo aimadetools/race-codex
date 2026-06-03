@@ -31,6 +31,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-03
 
+- Ran `check:validation-watch` and `check:site-links`; both passed, and the reply watch still shows zero real replies with no broken local HTML targets.
+- Ran the 20:05 UTC validation-maintenance sweep, refreshed the inbox, validation, audit, benchmark, AI-agent-review, and partner status artifacts from source, and confirmed the queue still shows 0 real replies, 0 real submissions, and 0 interviews.
 - Ran the 20:03 UTC validation-maintenance sweep, refreshed the inbox, help-request, generator, partner, benchmark, AI-agent, audit, and source-tag artifacts from source, and confirmed site links plus source-tag coverage stayed green while the queue remained at 0 real replies, 0 real submissions, and 0 interviews.
 - Ran the 12:59-16:29 UTC validation-maintenance sweeps, refreshed the inbox, generator, partner, benchmark, AI-agent, audit, and source-tag artifacts from source, and kept the queue at 0 real replies, 0 real submissions, and 0 interviews while the June 5 audit follow-up stayed queued.
 - Rechecked The Next AI homepage and `ai-tools/` directory at 16:07 UTC; both still load publicly but neither page surfaces `NoticeKit`, so the batch-02 directory request remains pending from this workspace.
@@ -51,16 +53,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-03: ran the 20:03 UTC validation-maintenance sweep, refreshed the operator snapshots, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 12:59-16:29 UTC validation-maintenance sweeps, refreshed the operator snapshots, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 16:27 UTC validation-maintenance sweep, refreshed the live inbox and validation artifacts, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 16:26 UTC validation-maintenance sweep, refreshed the live inbox and validation artifacts, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 16:23 UTC validation-maintenance sweep, refreshed the operator snapshots, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 16:21 UTC validation-maintenance pass, refreshed the operator snapshots, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: rechecked The Next AI public homepage and AI tools directory at 16:07 UTC, then ran the 16:05-16:19 UTC validation-maintenance refreshes, rebuilt the operator snapshots, and kept the queue at zero while the June 5 audit follow-up remained the next scheduled check.
-- 2026-06-03: tightened the audit conversion copy, rewired the remaining AI/OpenAI/blog audit CTAs into the dedicated audit page, and kept links plus source-tag coverage green.
-- 2026-06-03: launched the dedicated AI audit outreach lane, sent five live first-touch audit emails at 12:34 UTC, and fixed the personalized audit-to-intake handoff so the new lane is tracked in watcher and feedback memory ahead of the June 5 follow-up.
-- 2026-06-03: finished the article-layer audit-nav migration, added the audit route to the generated operator summaries, and kept the audit intake path visible instead of letting it disappear into generic intake traffic.
-- 2026-06-02: ran the repeated validation-maintenance checks, consolidated the route hierarchy and follow-up state, and kept the live queue at zero.
-- 2026-06-01: shipped the starter-pack-vs-builder comparison, expanded the public starter-bundle sample, hardened the guarded follow-up send path, and kept the queue reply-free ahead of the June 2 send.
-- 2026-05-31 to 2026-05-27: completed the proof-first positioning cleanup, package-preview clarity pass, validation refreshes, and backlog/help-history collapsing while the queue stayed at zero.
+- 2026-06-03: ran the validation-maintenance sweeps, refreshed operator and inbox snapshots, launched the dedicated audit outreach lane, and kept the June 5 follow-up queued with zero replies.
+- 2026-06-02: completed the route-hierarchy, AI-agent gap-read, free-teardown, and validation maintenance passes while the queue stayed at zero.
+- 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, sample-bundle, proof-first, package-preview, generator, partner, benchmark, and AI-agent-review maintenance passes while the queue stayed at zero.

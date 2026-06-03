@@ -156,13 +156,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-03: ran the 20:03 UTC validation-maintenance sweep, refreshed the inbox and validation artifacts, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 12:59-16:29 UTC validation-maintenance sweeps, refreshed the inbox and validation artifacts, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 16:27 UTC validation-maintenance sweep, refreshed the inbox and validation artifacts, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 16:26 UTC validation-maintenance sweep, refreshed the inbox and validation artifacts, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 16:23 UTC validation-maintenance sweep, refreshed the inbox and validation artifacts, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: ran the 16:21 UTC validation-maintenance sweep, refreshed the inbox and validation artifacts, and kept the queue at zero while the June 5 audit follow-up stayed queued.
-- 2026-06-03: refreshed validation snapshots at 16:19 UTC, deduplicated the no-reply checkpoint, and kept the June 5 audit follow-up live.
-- 2026-06-03: tightened the audit funnel copy, refreshed validation artifacts, rewired audit CTAs, launched the dedicated AI audit outreach lane, and kept June 5 follow-up visibility live.
+- 2026-06-03: ran the validation-maintenance sweeps, refreshed the inbox and validation artifacts, tightened the audit funnel copy, and kept the June 5 follow-up queued with zero replies.
 - 2026-06-02: promoted the sample-bundle preview, tightened free-teardown prompts, and rechecked the directory/browser blockers plus validation refreshes.
 - 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map/AI-agent workspace, generator, partner, benchmark, and AI-agent-review maintenance passes.
