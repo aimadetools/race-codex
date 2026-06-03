@@ -18,10 +18,12 @@ const BATCH_FILES = [
   { label: "Contingency batch 03", path: join(ROOT, "buyer-validation-outreach-batch-03.csv"), type: "contingency-03" },
   { label: "Contingency batch 04", path: join(ROOT, "buyer-validation-outreach-batch-04.csv"), type: "contingency-04" },
   { label: "Benchmark outreach batch 01", path: join(ROOT, "ai-benchmark-outreach-batch-01.csv"), type: "benchmark" },
-  { label: "AI agent review batch 01", path: join(ROOT, "ai-agent-review-outreach-batch-01.csv"), type: "agent-review" }
+  { label: "AI agent review batch 01", path: join(ROOT, "ai-agent-review-outreach-batch-01.csv"), type: "agent-review" },
+  { label: "AI audit outreach batch 01", path: join(ROOT, "ai-audit-outreach-batch-01.csv"), type: "audit" }
 ];
 const INTERVIEW_LOG = join(ROOT, "buyer-validation-interview-log.csv");
 const GATE_DATE = "2026-04-27";
+const AUDIT_SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
 
 function parseCsv(text) {
   const rows = [];
@@ -124,6 +126,31 @@ function describeFollowUpStatus(label, due, pending, followedUp) {
   return `- ${label}: ${due === "unknown" ? "status unknown" : `due ${due}; no active follow-up rows remain`}`;
 }
 
+function extractAuditFollowUpDate(rows) {
+  const dueDates = rows
+    .filter((row) => String(row.status || "").trim() === "sent")
+    .map((row) => parseDate(String(row.notes || "").match(/Follow-up due\s+([^\n.]+)/i)?.[1] || ""))
+    .filter(Boolean)
+    .sort();
+
+  return dueDates[0] || "unknown";
+}
+
+function describeAuditFollowUpStatus(due, pending, followedUp, today) {
+  if (followedUp > 0 && pending === 0) {
+    if (today >= AUDIT_SECOND_TOUCH_EXHAUSTION_DATE) {
+      return `- AI audit follow-up readiness: second touch already sent; if replies are still zero on ${AUDIT_SECOND_TOUCH_EXHAUSTION_DATE} UTC, park the batch until a new offer or segment decision exists.`;
+    }
+    return "- AI audit follow-up readiness: second touch already sent; monitor the followed-up audit rows for the first real reply, redirect, or intake.";
+  }
+
+  if (pending > 0) {
+    return `- AI audit follow-up readiness: due ${due}; ${pending} row(s) still pending follow-up.`;
+  }
+
+  return `- AI audit follow-up readiness: ${due === "unknown" ? "status unknown" : `due ${due}; no active follow-up rows remain.`}`;
+}
+
 function hasFollowUpType(followUps, type) {
   return followUps.some((item) => item.type === type);
 }
@@ -165,8 +192,11 @@ function buildActionQueue({
   advisorPendingFollowUps,
   benchmarkPendingFollowUps,
   agentReviewPendingFollowUps,
+  auditPendingFollowUps,
   benchmarkFollowedUp,
   agentReviewFollowedUp,
+  auditFollowedUp,
+  auditFollowUpDate,
   contingencyReady,
   contingencyTwoReady,
   signals
@@ -214,6 +244,11 @@ function buildActionQueue({
     }
   }
 
+  if (auditPendingFollowUps > 0 && auditFollowUpDate !== "unknown" && today >= auditFollowUpDate) {
+    actions.push("Dry-run the AI audit follow-up queue with `node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --transport resend`.");
+    actions.push("Send the AI audit follow-up queue with `node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --send --transport resend`.");
+  }
+
   if (today >= GATE_DATE && founderReplies === 0 && contingencyReady > 0) {
     actions.push(`Founder batch 03 is unlocked; ${contingencyReady} contingency targets are ready after the no-reply check.`);
     actions.push("Dry-run founder batch 03 with `node scripts/send-validation-batch.mjs --batch 03 --limit 5 --transport resend`.");
@@ -228,8 +263,15 @@ function buildActionQueue({
 
   if (actions.length === 0) {
     actions.push("Keep monitoring `COMMUNITY-FEEDBACK.md` and the contact inbox for replies from the active outreach batches.");
-    if (benchmarkPendingFollowUps === 0 && agentReviewPendingFollowUps === 0 && (benchmarkFollowedUp > 0 || agentReviewFollowedUp > 0)) {
-      actions.push("Check `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, and the Blob inbox for the first reply or teardown after the June 2 AI follow-up send.");
+    if (
+      benchmarkPendingFollowUps === 0 &&
+      agentReviewPendingFollowUps === 0 &&
+      auditPendingFollowUps === 0 &&
+      (benchmarkFollowedUp > 0 || agentReviewFollowedUp > 0 || auditFollowedUp > 0)
+    ) {
+      actions.push("Check `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, `AI-AUDIT-OUTREACH-STATUS.md`, and the Blob inbox for the first reply, redirect, teardown, or intake from the followed-up lanes.");
+    } else if (auditPendingFollowUps > 0) {
+      actions.push("Check `AI-AUDIT-OUTREACH-STATUS.md` and the Blob inbox for the first reply, redirect, or intake from the June 3 audit send before the June 5 follow-up date.");
     }
   }
 
@@ -248,6 +290,8 @@ function buildUpcomingQueue({
   advisorPendingFollowUps,
   benchmarkPendingFollowUps,
   agentReviewPendingFollowUps,
+  auditPendingFollowUps,
+  auditFollowUpDate,
   contingencyReady,
   contingencyTwoReady,
   signals
@@ -293,6 +337,11 @@ function buildUpcomingQueue({
       upcoming.push(`On ${dueDate}, dry-run AI agent review follow-ups with \`node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --transport resend\`.`);
       upcoming.push(`On ${dueDate}, send AI agent review follow-ups with \`node scripts/send-ai-agent-review-outreach.mjs --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
     }
+  }
+
+  if (auditPendingFollowUps > 0 && auditFollowUpDate !== "unknown" && today < auditFollowUpDate) {
+    upcoming.push(`On ${auditFollowUpDate}, dry-run AI audit follow-ups with \`node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --transport resend\`.`);
+    upcoming.push(`On ${auditFollowUpDate}, send AI audit follow-ups with \`node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
   }
 
   if (today < GATE_DATE && founderReplies === 0 && contingencyReady > 0) {
@@ -355,10 +404,13 @@ async function main() {
   const advisorPendingFollowUps = countPendingFollowUps(parsedBatches[1].rows);
   const benchmarkPendingFollowUps = countPendingFollowUps(parsedBatches[4].rows);
   const agentReviewPendingFollowUps = countPendingFollowUps(parsedBatches[5].rows);
+  const auditPendingFollowUps = countPendingFollowUps(parsedBatches[6].rows);
   const founderFollowedUp = countByStatus(parsedBatches[0].rows, ["followed_up"]);
   const advisorFollowedUp = countByStatus(parsedBatches[1].rows, ["followed_up"]);
   const benchmarkFollowedUp = countByStatus(parsedBatches[4].rows, ["followed_up"]);
   const agentReviewFollowedUp = countByStatus(parsedBatches[5].rows, ["followed_up"]);
+  const auditFollowedUp = countByStatus(parsedBatches[6].rows, ["followed_up"]);
+  const auditFollowUpDate = extractAuditFollowUpDate(parsedBatches[6].rows);
 
   const lines = [
     "# Validation Reply Watch",
@@ -372,6 +424,7 @@ async function main() {
     describeFollowUpStatus(followUps[1].label, followUps[1].due, advisorPendingFollowUps, advisorFollowedUp),
     describeFollowUpStatus(followUps[2].label, followUps[2].due, benchmarkPendingFollowUps, benchmarkFollowedUp),
     describeFollowUpStatus(followUps[3].label, followUps[3].due, agentReviewPendingFollowUps, agentReviewFollowedUp),
+    describeAuditFollowUpStatus(auditFollowUpDate, auditPendingFollowUps, auditFollowedUp, today),
     "",
     "## Next Action",
     ""
@@ -388,8 +441,11 @@ async function main() {
     advisorPendingFollowUps,
     benchmarkPendingFollowUps,
     agentReviewPendingFollowUps,
+    auditPendingFollowUps,
     benchmarkFollowedUp,
     agentReviewFollowedUp,
+    auditFollowedUp,
+    auditFollowUpDate,
     contingencyReady,
     contingencyTwoReady,
     signals
@@ -409,6 +465,8 @@ async function main() {
     advisorPendingFollowUps,
     benchmarkPendingFollowUps,
     agentReviewPendingFollowUps,
+    auditPendingFollowUps,
+    auditFollowUpDate,
     contingencyReady,
     contingencyTwoReady,
     signals

@@ -8,6 +8,15 @@ const BATCH_FILE = join(ROOT, "ai-audit-outreach-batch-01.csv");
 const OUTPUT = join(ROOT, "AI-AUDIT-OUTREACH-STATUS.md");
 const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
 
+function formatUtcTimestamp(date) {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  const hour = String(date.getUTCHours()).padStart(2, "0");
+  const minute = String(date.getUTCMinutes()).padStart(2, "0");
+  return `${year}-${month}-${day} ${hour}:${minute} UTC`;
+}
+
 function parseCsv(text) {
   const rows = [];
   let current = "";
@@ -111,7 +120,8 @@ function describeNextAction(rows, today) {
 }
 
 async function main() {
-  const today = new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
   const rows = parseCsv(await readFile(BATCH_FILE, "utf8"));
   const sent = countBy(rows, "sent");
   const followedUp = countBy(rows, "followed_up");
@@ -128,7 +138,7 @@ async function main() {
   const lines = [
     "# AI Audit Outreach Status",
     "",
-    `- Checked at: ${today} UTC`,
+    `- Checked at: ${formatUtcTimestamp(now)}`,
     `- First audit outreach send: ${firstSent || "not sent yet"}`,
     `- Ready for first send: ${ready}`,
     `- Sent and waiting on reply: ${sent}`,

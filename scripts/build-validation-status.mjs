@@ -19,6 +19,7 @@ const GENERATOR_HANDOFF_STATUS_FILE = join(ROOT, "GENERATOR-HANDOFF-STATUS.md");
 const PARTNER_OUTREACH_STATUS_FILE = join(ROOT, "PARTNER-OUTREACH-STATUS.md");
 const BENCHMARK_OUTREACH_STATUS_FILE = join(ROOT, "BENCHMARK-OUTREACH-STATUS.md");
 const AI_AGENT_REVIEW_OUTREACH_STATUS_FILE = join(ROOT, "AI-AGENT-REVIEW-OUTREACH-STATUS.md");
+const AI_AUDIT_OUTREACH_STATUS_FILE = join(ROOT, "AI-AUDIT-OUTREACH-STATUS.md");
 const HOMEPAGE_QUEUE_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
 const DECISION_BRIEF_FILE = join(ROOT, "VALIDATION-DECISION-BRIEF.md");
 const POSITIONING_BRIEF_FILE = join(ROOT, "VALIDATION-POSITIONING-BRIEF.md");
@@ -526,6 +527,7 @@ const generatorHandoffStatusText = await readFile(GENERATOR_HANDOFF_STATUS_FILE,
 const partnerOutreachStatusText = await readFile(PARTNER_OUTREACH_STATUS_FILE, "utf8").catch(() => "");
 const benchmarkOutreachStatusText = await readFile(BENCHMARK_OUTREACH_STATUS_FILE, "utf8").catch(() => "");
 const agentReviewOutreachStatusText = await readFile(AI_AGENT_REVIEW_OUTREACH_STATUS_FILE, "utf8").catch(() => "");
+const auditOutreachStatusText = await readFile(AI_AUDIT_OUTREACH_STATUS_FILE, "utf8").catch(() => "");
 const homepageQueueText = await readFile(HOMEPAGE_QUEUE_FILE, "utf8").catch(() => "");
 const decisionBriefText = await readFile(DECISION_BRIEF_FILE, "utf8").catch(() => "");
 const positioningBriefText = await readFile(POSITIONING_BRIEF_FILE, "utf8").catch(() => "");
@@ -713,6 +715,11 @@ const agentReviewSentWaiting = extractBenchmarkMetric(agentReviewOutreachStatusT
 const agentReviewFollowedUpWaiting = extractBenchmarkMetric(agentReviewOutreachStatusText, "Followed up and waiting on reply");
 const agentReviewInboxSubmissions = extractBenchmarkMetric(agentReviewOutreachStatusText, "Agent-review-tagged inbox submissions");
 const agentReviewNextAction = extractOutreachAction(agentReviewOutreachStatusText, "Next AI agent review action");
+const auditOutreachCheckedAt = extractBenchmarkCheckedAt(auditOutreachStatusText);
+const auditSentWaiting = extractBenchmarkMetric(auditOutreachStatusText, "Sent and waiting on reply");
+const auditFollowedUpWaiting = extractBenchmarkMetric(auditOutreachStatusText, "Followed up and waiting on reply");
+const auditTerminalRows = extractBenchmarkMetric(auditOutreachStatusText, "Terminal rows (reply/bounce/interview)");
+const auditNextAction = extractOutreachAction(auditOutreachStatusText, "Next audit action");
 const aiFirstEntryWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "start-here-card", label: "start-here teardown" },
   { tag: "about-page", label: "about teardown" },
@@ -826,6 +833,7 @@ const output = [
   `- Generator handoff state: ${generatorHandoffCheckedAt === "unknown" ? "missing; run \`npm run build:generator-handoff-status\`." : generatorHandoffStatus === "ok" ? `checked ${generatorHandoffCheckedAt}; live generator-to-teardown handoff passed.` : `checked ${generatorHandoffCheckedAt}; status ${generatorHandoffStatus}.`}`,
   `- Benchmark outreach state: ${benchmarkOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:benchmark-outreach-status\`." : `last checked ${benchmarkOutreachCheckedAt}; ${formatMetric(benchmarkSentWaiting)} sent/waiting, ${formatMetric(benchmarkFollowedUpWaiting)} followed_up/waiting, ${formatMetric(benchmarkInboxSubmissions)} inbox submission(s), next action ${benchmarkNextAction.replace(/\.$/, "")}.`}`,
   `- AI agent review outreach state: ${agentReviewOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:ai-agent-review-outreach-status\`." : `last checked ${agentReviewOutreachCheckedAt}; ${formatMetric(agentReviewSentWaiting)} sent/waiting, ${formatMetric(agentReviewFollowedUpWaiting)} followed_up/waiting, ${formatMetric(agentReviewInboxSubmissions)} inbox submission(s), next action ${agentReviewNextAction.replace(/\.$/, "")}.`}`,
+  `- AI audit outreach state: ${auditOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:ai-audit-outreach-status\`." : `last checked ${auditOutreachCheckedAt}; ${formatMetric(auditSentWaiting)} sent/waiting, ${formatMetric(auditFollowedUpWaiting)} followed_up/waiting, ${formatMetric(auditTerminalRows)} terminal row(s), next action ${auditNextAction.replace(/\.$/, "")}.`}`,
   `- Partner outreach state: ${partnerOutreachCheckedAt === "unknown" ? "missing; run \`npm run build:partner-outreach-status\`." : `last checked ${partnerOutreachCheckedAt}; ${partnerReadyToSend == null ? "unknown" : partnerReadyToSend} ready, ${partnerSentWaiting == null ? "unknown" : partnerSentWaiting} sent/waiting, ${partnerReplied == null ? "unknown" : partnerReplied} replied.`}`,
   `- Partner follow-up readiness: ${partnerFollowUpReadiness === "unknown" ? "missing from the current partner status snapshot." : partnerFollowUpReadiness}`,
   describeFollowUpState("Founder follow-up pass", followUpDate, founderBatchRows),
@@ -842,6 +850,7 @@ const output = [
   `- Generator handoff snapshot: ${describeFreshness(generatorHandoffCheckedAt, currentDate)}`,
   `- Benchmark-outreach snapshot: ${describeFreshness(benchmarkOutreachCheckedAt, currentDate)}`,
   `- AI-agent-review snapshot: ${describeFreshness(agentReviewOutreachCheckedAt, currentDate)}`,
+  `- AI-audit snapshot: ${describeFreshness(auditOutreachCheckedAt, currentDate)}`,
   `- Partner-outreach snapshot: ${describeFreshness(partnerOutreachCheckedAt, currentDate)}`,
   "",
   "## Batch Snapshot",

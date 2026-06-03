@@ -156,8 +156,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-03: launched the dedicated AI audit outreach lane, sent five live first-touch audit emails, fixed audit-page personalization handoff, and added watcher coverage for the new outreach source tag.
-- 2026-06-03: ran the 08:30 UTC validation-maintenance and validation-gate refreshes, kept the live operator snapshots current, and preserved the dedicated AI audit page, audit-route monitoring, and June 5 second-touch rule in generated operator memory.
+- 2026-06-03: launched the dedicated AI audit outreach lane, sent five live first-touch audit emails, fixed audit-page personalization handoff, and folded the new batch into the routine validation watcher/status memory with June 5 follow-up visibility while the live queue stayed at zero.
 - 2026-06-02: ran the repeated 23:05-23:28 UTC validation-maintenance checks, refreshed the live validation artifacts, and kept the queue at zero while the benchmark and AI-agent-review rows stayed parked with no replies.
 - 2026-06-02: promoted the sample-bundle preview, tightened the free-teardown prompts, and rechecked the directory/browser blockers, site links, and validation refreshes while the queue stayed at zero.
 - 2026-06-01: completed the starter-pack-vs-builder comparison, starter-bundle proof rollout, guarded AI follow-up send hardening, and repeated validation-maintenance passes.
