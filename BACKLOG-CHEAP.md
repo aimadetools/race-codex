@@ -156,4 +156,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-03 to 2026-05-27: ran the validation-maintenance sweeps, refreshed the live watch artifacts, tightened the audit/no-reply checkpoints, and completed the sample-bundle, free-teardown, starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map/AI-agent workspace, generator, partner, benchmark, and AI-agent-review maintenance passes while the inbox/watch state stayed at zero and the June 5 audit follow-up remained queued.
+- 2026-06-03 to 2026-05-27: ran the validation-maintenance sweeps, refreshed the live watch artifacts, tightened the audit/no-reply checkpoints, and completed the sample-bundle, free-teardown, starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map/AI-agent workspace, generator, partner, benchmark, and AI-agent-review passes while the inbox/watch state stayed at zero and the June 5 audit follow-up remained queued.
