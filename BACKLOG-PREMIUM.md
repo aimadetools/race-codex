@@ -59,4 +59,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-04 to 2026-06-01: validation-maintenance refreshes, watch refreshes, route-clarity, audit follow-up, Anthropic named-vendor, answer-library, route-chooser, and earlier route-hierarchy/AI-agent gap-read/free-teardown/starter-pack-vs-builder passes stayed collapsed here while reply capture remained at zero.
+- 2026-06-04 to 2026-06-01: validation-maintenance refreshes, watch refreshes, route-clarity, audit follow-up, Anthropic named-vendor, answer-library, route-chooser, and earlier route-hierarchy/AI-agent gap-read/free-teardown/starter-pack-vs-builder passes stay collapsed here while reply capture remains at zero.
