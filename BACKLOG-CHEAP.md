@@ -162,4 +162,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-04 to 2026-05-27: validation-maintenance, route-clarity, answer-library, audit, route-chooser, named-vendor, and operator-watch passes stay collapsed here; reply capture remains empty.
+- 2026-06-04 to 2026-05-27: validation-maintenance, route-clarity, answer-library, audit, route-chooser, named-vendor, and operator-watch passes stay collapsed here; reply capture remains empty and the live P0 items continue to wait on real evidence.
