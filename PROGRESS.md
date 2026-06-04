@@ -40,6 +40,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Fixed the Anthropic named-vendor watcher regression by expanding `WATCHED_SOURCE_TAGS`, removing stale OpenAI-only watcher entries, and extending `scripts/build-validation-status.mjs` with a dedicated Anthropic route watch so the new named-vendor traffic family shows up in the operator summary instead of breaking validation maintenance.
 - Hardened `scripts/build-ai-audit-outreach-status.mjs` to reconcile the active audit lane against Blob inbox records plus `COMMUNITY-FEEDBACK.md`, expose the June 8 second-touch exhaustion checkpoint, and keep `AI-AUDIT-OUTREACH-STATUS.md` at the same evidence-watch depth as the benchmark and AI-agent-review lanes before the `2026-06-05 UTC` audit follow-up window.
 - Fixed the route-chooser source-tag watcher coverage gap in `scripts/watched-source-tags.mjs`, then verified throughout the day that `check:source-tag-coverage` and `check:site-links` stayed green as the validation artifacts were rebuilt around the new audit and named-vendor route families.
+- Hardened the benchmark, AI-agent-review, and audit outreach status builders plus all three follow-up-pass builders so they now emit an explicit second-touch exhaustion state once the checkpoint date is reached with zero terminal rows or inbox evidence; added a `NOTICEKIT_TODAY` override to verify the June 5 and June 8 branches before the live window.
+- Fixed the operator-doc drift in `scripts/check-validation-reply-watch.mjs` and `BACKLOG-CHEAP.md` so the June 5 audit second touch now consistently points to the combined `npm run run:ai-outreach-follow-up-gate` dry-run/send path instead of the older single-lane audit script, then regenerated the validation watch and artifact set.
 ## Next Step
 
 - Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and the now-audit-aware `COMMUNITY-FEEDBACK.md` for the first real `ai-audit-outreach-batch-01` reply, redirect, or intake; if the batch is still at 0 by `2026-06-05 UTC`, send the second touch instead of expanding the list.
@@ -56,6 +58,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Completed Summary
 
 - 2026-06-04: completed the answer-library, Anthropic named-vendor, route-chooser, audit-follow-up automation, watcher-coverage, and repeated validation refresh/dry-run passes while the queue stayed at zero and the June 5 audit follow-up remained queued.
+- 2026-06-04: also completed the second-touch exhaustion-state automation for the outreach status/follow-up docs and rewired the validation reply watch plus backlog memory to use the combined AI follow-up gate as the June 5 audit source of truth.
 - 2026-06-03: launched the dedicated audit outreach lane, tightened the audit/free-teardown intake paths, and refreshed the live watch artifacts with the queue still at zero.
 - 2026-06-02: completed the route-hierarchy, sample-bundle promotion, AI-agent gap-read, free-teardown, and validation-maintenance passes while the queue stayed at zero.
 - 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, sample-bundle, proof-first, package-preview, generator, partner, benchmark, and AI-agent-review maintenance passes while the queue stayed at zero.

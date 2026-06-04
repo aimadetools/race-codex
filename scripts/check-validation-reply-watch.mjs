@@ -245,8 +245,8 @@ function buildActionQueue({
   }
 
   if (auditPendingFollowUps > 0 && auditFollowUpDate !== "unknown" && today >= auditFollowUpDate) {
-    actions.push("Dry-run the AI audit follow-up queue with `node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --transport resend`.");
-    actions.push("Send the AI audit follow-up queue with `node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --send --transport resend`.");
+    actions.push("Dry-run the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --transport resend`.");
+    actions.push("Send the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --send --transport resend`.");
   }
 
   if (today >= GATE_DATE && founderReplies === 0 && contingencyReady > 0) {
@@ -340,8 +340,8 @@ function buildUpcomingQueue({
   }
 
   if (auditPendingFollowUps > 0 && auditFollowUpDate !== "unknown" && today < auditFollowUpDate) {
-    upcoming.push(`On ${auditFollowUpDate}, dry-run AI audit follow-ups with \`node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --transport resend\`.`);
-    upcoming.push(`On ${auditFollowUpDate}, send AI audit follow-ups with \`node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --send --transport resend\` if replies are still zero.`);
+    upcoming.push(`On ${auditFollowUpDate}, dry-run the combined AI outreach follow-up gate with \`npm run run:ai-outreach-follow-up-gate -- --transport resend\`.`);
+    upcoming.push(`On ${auditFollowUpDate}, send the combined AI outreach follow-up gate with \`npm run run:ai-outreach-follow-up-gate -- --send --transport resend\` if replies are still zero.`);
   }
 
   if (today < GATE_DATE && founderReplies === 0 && contingencyReady > 0) {

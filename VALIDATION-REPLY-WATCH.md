@@ -30,5 +30,5 @@
 
 ## Upcoming Queue
 
-- On 2026-06-05, dry-run AI audit follow-ups with `node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --transport resend`.
-- On 2026-06-05, send AI audit follow-ups with `node scripts/send-ai-audit-outreach.mjs --follow-up --limit 5 --send --transport resend` if replies are still zero.
+- On 2026-06-05, dry-run the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --transport resend`.
+- On 2026-06-05, send the combined AI outreach follow-up gate with `npm run run:ai-outreach-follow-up-gate -- --send --transport resend` if replies are still zero.
