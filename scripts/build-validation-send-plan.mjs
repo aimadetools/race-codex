@@ -6,7 +6,9 @@ const OUTPUT = join(ROOT, "VALIDATION-OUTREACH-SEND-PLAN.md");
 const TODAY = new Date().toISOString().slice(0, 10);
 const BENCHMARK_FOLLOW_UP_PASS = "BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md";
 const AGENT_REVIEW_FOLLOW_UP_PASS = "AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md";
+const AUDIT_FOLLOW_UP_PASS = "AI-AUDIT-OUTREACH-FOLLOW-UP-PASS.md";
 const AGENT_REVIEW_STATUS = "AI-AGENT-REVIEW-OUTREACH-STATUS.md";
+const AUDIT_STATUS = "AI-AUDIT-OUTREACH-STATUS.md";
 
 function parseCsv(text) {
   const rows = [];
@@ -209,6 +211,7 @@ const batch01 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-ba
 const batch02 = parseCsv(await readFile(join(ROOT, "buyer-validation-outreach-batch-02.csv"), "utf8"));
 const benchmarkBatch = parseCsv(await readFile(join(ROOT, "ai-benchmark-outreach-batch-01.csv"), "utf8"));
 const agentReviewBatch = parseCsv(await readFile(join(ROOT, "ai-agent-review-outreach-batch-01.csv"), "utf8"));
+const auditBatch = parseCsv(await readFile(join(ROOT, "ai-audit-outreach-batch-01.csv"), "utf8"));
 let batch03 = [];
 let batch04 = [];
 
@@ -288,22 +291,41 @@ const normalizedAgentReview = agentReviewBatch.map((row) => ({
       : "n/a"
 }));
 
-const directEmailCount = [...normalized01, ...normalized02, ...normalized03, ...normalized04, ...normalizedBenchmark, ...normalizedAgentReview].filter(
+const normalizedAudit = auditBatch.map((row) => ({
+  priority: row.priority,
+  target: row.company,
+  segment: row.segment,
+  route: row.public_contact_route,
+  sendMethod: classifyRoute(row.public_contact_route),
+  status: row.status,
+  nextStep: String(row.status || "").trim() === "sent" && extractSentDate(row.notes)
+    ? `due ${addBusinessDays(extractSentDate(row.notes), 2)}`
+    : String(row.status || "").trim() === "followed_up" && extractFollowedUpDate(row.notes)
+      ? `sent ${extractFollowedUpDate(row.notes)}`
+      : "n/a"
+}));
+
+const directEmailCount = [...normalized01, ...normalized02, ...normalized03, ...normalized04, ...normalizedBenchmark, ...normalizedAgentReview, ...normalizedAudit].filter(
   (row) => row.sendMethod === "direct-email"
 ).length;
 
-const allRows = [batch01, batch02, batch03, batch04, benchmarkBatch, agentReviewBatch].flat();
+const allRows = [batch01, batch02, batch03, batch04, benchmarkBatch, agentReviewBatch, auditBatch].flat();
 const totalWaitingForReplies = allRows.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 const totalReplyRows = allRows.reduce((total, row) => {
   return total + (["replied_positive", "replied_negative", "bounced", "interview_completed"].includes(String(row.status || "").trim()) ? 1 : 0);
 }, 0);
 const benchmarkWaiting = benchmarkBatch.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 const agentReviewWaiting = agentReviewBatch.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
+const auditWaiting = auditBatch.filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim())).length;
 const benchmarkFollowUpDate = normalizedBenchmark
   .filter((row) => row.status === "sent" && row.nextStep.startsWith("due "))
   .map((row) => row.nextStep.replace(/^due /, ""))
   .sort()[0] || "";
 const agentReviewFollowUpDate = normalizedAgentReview
+  .filter((row) => row.status === "sent" && row.nextStep.startsWith("due "))
+  .map((row) => row.nextStep.replace(/^due /, ""))
+  .sort()[0] || "";
+const auditFollowUpDate = normalizedAudit
   .filter((row) => row.status === "sent" && row.nextStep.startsWith("due "))
   .map((row) => row.nextStep.replace(/^due /, ""))
   .sort()[0] || "";
@@ -320,6 +342,9 @@ if (benchmarkWaiting > 0 && benchmarkFollowUpDate) {
 }
 if (agentReviewWaiting > 0 && agentReviewFollowUpDate) {
   currentPriority += ` AI agent review batch 01 follow-up is due on ${agentReviewFollowUpDate} UTC if replies stay at zero.`;
+}
+if (auditWaiting > 0 && auditFollowUpDate) {
+  currentPriority += ` AI audit batch 01 follow-up is due on ${auditFollowUpDate} UTC if replies stay at zero.`;
 }
 
 const batch03Section = normalized03.length
@@ -374,6 +399,22 @@ const agentReviewSection = normalizedAgentReview.length
     ].join("\n")
   : "";
 
+const auditSection = normalizedAudit.length
+  ? [
+      "## AI audit batch 01",
+      "",
+      describeBatchStatus(auditBatch),
+      "",
+      "| Priority | Target | Segment | Route | Send method | Status | Follow-up state |",
+      "|---:|---|---|---|---|---|---|",
+      ...normalizedAudit.map(
+        (row) =>
+          `| ${row.priority} | ${row.target} | ${row.segment} | ${row.route} | ${row.sendMethod} | ${row.status} | ${row.nextStep} |`
+      ),
+      ""
+    ].join("\n")
+  : "";
+
 const output = [
   "# NoticeKit Validation Outreach Send Plan",
   "",
@@ -404,15 +445,18 @@ const output = [
   batch04Section,
   benchmarkSection,
   agentReviewSection,
+  auditSection,
   "## Notes",
   "",
   "- `direct-email` means the public route is a real email address or `mailto:` link.",
   "- `manual-form` means the public route is a contact page, support widget, or contact-sales flow that needs human submission.",
   "- `manual` means the route needs a different delivery path before it can be sent.",
-  `- Total reply, bounce, or interview rows already recorded across all batches: ${countReplyRows(batch01) + countReplyRows(batch02) + countReplyRows(batch03) + countReplyRows(batch04) + countReplyRows(benchmarkBatch) + countReplyRows(agentReviewBatch)}.`,
+  `- Total reply, bounce, or interview rows already recorded across all batches: ${countReplyRows(batch01) + countReplyRows(batch02) + countReplyRows(batch03) + countReplyRows(batch04) + countReplyRows(benchmarkBatch) + countReplyRows(agentReviewBatch) + countReplyRows(auditBatch)}.`,
   `- Use \`${BENCHMARK_FOLLOW_UP_PASS}\` for the June 2 benchmark follow-up send guardrails and row-specific teardown links.`,
   `- Use \`${AGENT_REVIEW_FOLLOW_UP_PASS}\` for the June 2 AI-agent-review follow-up send guardrails and row-specific teardown links.`,
+  `- Use \`${AUDIT_FOLLOW_UP_PASS}\` for the June 5 AI audit follow-up send guardrails and row-specific audit links.`,
   `- Use \`${AGENT_REVIEW_STATUS}\` as the live AI-agent-review outreach monitor between maintenance passes and until the first real reply or intake lands.`,
+  `- Use \`${AUDIT_STATUS}\` as the live AI-audit outreach monitor between maintenance passes and until the first real reply, redirect, or intake lands.`,
   "- Convert any real reply into repo evidence before changing positioning or expanding the list again.",
   ""
 ].join("\n");

@@ -141,6 +141,14 @@ function extractFollowUpDate(text) {
   return extractDate(match ? match[1] : "");
 }
 
+function getTodayIsoDate() {
+  const override = String(process.env.NOTICEKIT_TODAY || "").trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(override)) {
+    return override;
+  }
+  return new Date().toISOString().slice(0, 10);
+}
+
 function summarize(rows, today, dueDate) {
   const pending = rows.filter((row) => String(row.status || "").trim() === "sent").length;
   const followedUp = rows.filter((row) => String(row.status || "").trim() === "followed_up").length;
@@ -180,7 +188,7 @@ async function loadState() {
     readFile(FOLLOW_UP_FILES.audit, "utf8")
   ]);
 
-  const today = new Date().toISOString().slice(0, 10);
+  const today = getTodayIsoDate();
   const benchmarkRows = parseCsv(benchmarkBatchText);
   const agentReviewRows = parseCsv(agentReviewBatchText);
   const auditRows = parseCsv(auditBatchText);

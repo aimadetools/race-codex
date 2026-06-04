@@ -5,11 +5,11 @@ Date: 2026-06-04
 This plan translates the current outreach CSV state into the active send and reply-handling queue.
 Use it to see which batches are live, which are still queued, and what should happen next when evidence arrives.
 
-Direct-email targets identified across all prepared batches: 28
+Direct-email targets identified across all prepared batches: 33
 
 ## Current Priority
 
-Monitor replies across the 30 active outbound row(s); no additional expansion is unlocked until evidence lands.
+Monitor replies across the 35 active outbound row(s); no additional expansion is unlocked until evidence lands. AI audit batch 01 follow-up is due on 2026-06-05 UTC if replies stay at zero.
 
 ## Batch 01
 
@@ -83,6 +83,18 @@ Status: active outbound on 2026-05-29; 0 sent, 5 followed_up, 0 terminal row(s).
 | 4 | Letswhisper.ai | Founder/operator or privacy lead | hello@letswhisper.ai | direct-email | followed_up | sent 2026-06-02 |
 | 5 | LizzyAI | Founder/operator or privacy lead | privacy@lizzyai.com | direct-email | followed_up | sent 2026-06-02 |
 
+## AI audit batch 01
+
+Status: active outbound on 2026-06-03; 5 sent, 0 followed_up, 0 terminal row(s).
+
+| Priority | Target | Segment | Route | Send method | Status | Follow-up state |
+|---:|---|---|---|---|---|---|
+| 1 | Kindly | Security or privacy lead | security@kindly.ai | direct-email | sent | due 2026-06-05 |
+| 2 | Hazel | Support or security lead | support@hazel.ai | direct-email | sent | due 2026-06-05 |
+| 3 | Siesta AI | Security lead | security@siesta.ai | direct-email | sent | due 2026-06-05 |
+| 4 | Rakenne | Privacy or founder lead | privacy@rakenne.app | direct-email | sent | due 2026-06-05 |
+| 5 | Snoooz | Security lead | security@snoooz.ai | direct-email | sent | due 2026-06-05 |
+
 ## Notes
 
 - `direct-email` means the public route is a real email address or `mailto:` link.
@@ -91,5 +103,7 @@ Status: active outbound on 2026-05-29; 0 sent, 5 followed_up, 0 terminal row(s).
 - Total reply, bounce, or interview rows already recorded across all batches: 0.
 - Use `BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md` for the June 2 benchmark follow-up send guardrails and row-specific teardown links.
 - Use `AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md` for the June 2 AI-agent-review follow-up send guardrails and row-specific teardown links.
+- Use `AI-AUDIT-OUTREACH-FOLLOW-UP-PASS.md` for the June 5 AI audit follow-up send guardrails and row-specific audit links.
 - Use `AI-AGENT-REVIEW-OUTREACH-STATUS.md` as the live AI-agent-review outreach monitor between maintenance passes and until the first real reply or intake lands.
+- Use `AI-AUDIT-OUTREACH-STATUS.md` as the live AI-audit outreach monitor between maintenance passes and until the first real reply, redirect, or intake lands.
 - Convert any real reply into repo evidence before changing positioning or expanding the list again.

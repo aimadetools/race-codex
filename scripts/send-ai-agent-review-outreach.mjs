@@ -139,6 +139,14 @@ function addBusinessDays(isoDate, businessDays) {
   return date.toISOString().slice(0, 10);
 }
 
+function getTodayIsoDate() {
+  const override = String(process.env.NOTICEKIT_TODAY || "").trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(override)) {
+    return override;
+  }
+  return new Date().toISOString().slice(0, 10);
+}
+
 function utcTimestamp(date = new Date()) {
   return date.toISOString().replace(/\.\d{3}Z$/, "Z");
 }
@@ -289,7 +297,7 @@ async function main() {
   const limit = Number.parseInt(String(args.get("limit") || "5"), 10);
   const transport = String(args.get("transport") || "resend").trim().toLowerCase();
   const dryRun = !send;
-  const today = new Date().toISOString().slice(0, 10);
+  const today = getTodayIsoDate();
 
   const parsed = parseCsv(await readFile(BATCH_FILE, "utf8"));
   if (!parsed.header.length) {
