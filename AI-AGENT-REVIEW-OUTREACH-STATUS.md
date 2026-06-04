@@ -1,5 +1,5 @@
 # AI Agent Review Outreach Status
-Checked at: 2026-06-04 16:18 UTC
+Checked at: 2026-06-04 16:20 UTC
 ## Current State
 - Sent and waiting on reply: 0
 - Followed up and waiting on reply: 5
@@ -13,12 +13,10 @@ Checked at: 2026-06-04 16:18 UTC
 - Agent-review mentions logged in COMMUNITY-FEEDBACK.md: 9
 - First AI agent review outreach send: 2026-05-29 12:36 UTC
 - Second-touch exhaustion checkpoint: 2026-06-05 UTC
-- Second-touch state: exhausted on 2026-06-05 UTC with 0 recorded replies, bounces, interviews, or teardown submissions.
-- Next AI agent review action: record that the AI agent review angle exhausted its second touch on 2026-06-05 UTC and leave the batch parked until a new offer or segment decision exists.
+- Next AI agent review action: monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list.
 ## Evidence Watch
 - Blob inbox check found no agent-review-tagged submissions yet.
 - COMMUNITY-FEEDBACK.md contains 9 agent-review-related line(s); review the excerpts below before changing outreach copy.
-- The June 2 follow-up has now aged past the June 5 UTC checkpoint with zero AI-agent-review evidence, so this batch should stay parked until a new offer or segment decision exists.
 ## Inbox Matches
 - No real agent-review-tagged submissions are stored in the inbox yet.
 
@@ -36,7 +34,7 @@ Checked at: 2026-06-04 16:18 UTC
 - Rechecked on 2026-06-01 23:26 UTC: no founder/operator, advisor, benchmark, or AI agent review replies have been posted here yet across the active outreach batches. Keep the corresponding CSVs unchanged until a specific reply, bounce, referral, or interview is available.
 - Rechecked on 2026-06-02 23:28 UTC: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep `ai-agent-review-outreach-batch-01.csv` unchanged and monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list.
 - Rechecked on 2026-06-03 23:28 UTC: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep `ai-agent-review-outreach-batch-01.csv` unchanged and monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list.
-- Rechecked on 2026-06-04 16:16 UTC: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep `ai-agent-review-outreach-batch-01.csv` unchanged and monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list.
+- Rechecked on 2026-06-04 16:19 UTC: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep `ai-agent-review-outreach-batch-01.csv` unchanged and monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list.
 
 ## Batch Snapshot
 
