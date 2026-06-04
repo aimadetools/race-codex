@@ -13,6 +13,7 @@ const FALLBACK_ENV_FILE = join(ROOT, ".env.local");
 const BLOB_PREFIX = "contact-submissions/";
 const MAX_SUBMISSIONS = 200;
 const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
+const TODAY_OVERRIDE = String(process.env.NOTICEKIT_TODAY || "").trim();
 const AUDIT_SOURCE_TAGS = new Set(["ai-audit-outreach-batch-01"]);
 
 function formatUtcTimestamp(date) {
@@ -22,6 +23,13 @@ function formatUtcTimestamp(date) {
   const hour = String(date.getUTCHours()).padStart(2, "0");
   const minute = String(date.getUTCMinutes()).padStart(2, "0");
   return `${year}-${month}-${day} ${hour}:${minute} UTC`;
+}
+
+function todayKeyFromNow(now) {
+  if (/^\d{4}-\d{2}-\d{2}$/.test(TODAY_OVERRIDE)) {
+    return TODAY_OVERRIDE;
+  }
+  return now.toISOString().slice(0, 10);
 }
 
 function parseCsv(text) {
@@ -302,7 +310,7 @@ function describeNextAction(rows, today, hasExternalEvidence = false) {
 
 async function main() {
   const now = new Date();
-  const today = now.toISOString().slice(0, 10);
+  const today = todayKeyFromNow(now);
   const [rows, feedbackText, inbox] = await Promise.all([
     readFile(BATCH_FILE, "utf8").then(parseCsv),
     readFile(FEEDBACK_FILE, "utf8").catch(() => ""),
@@ -325,8 +333,8 @@ async function main() {
   const inboxSubmissions = inbox.records.length;
   const auditIntakes = inbox.records.filter((record) => String(record.type || "").trim() === "concierge_audit").length;
   const latestInboxRecord = inbox.records[0] || null;
-  const hasExternalEvidence = inboxSubmissions > 0 || feedbackMentions.length > 0;
-  const secondTouchExhausted = followedUp > 0 && terminal === 0 && !hasExternalEvidence && today >= SECOND_TOUCH_EXHAUSTION_DATE;
+  const hasInboxEvidence = inboxSubmissions > 0;
+  const secondTouchExhausted = followedUp > 0 && terminal === 0 && !hasInboxEvidence && today >= SECOND_TOUCH_EXHAUSTION_DATE;
 
   const lines = [
     "# AI Audit Outreach Status",
@@ -348,7 +356,10 @@ async function main() {
     `- Audit mentions logged in COMMUNITY-FEEDBACK.md: ${feedbackMentions.length}`,
     `- First audit outreach send: ${firstSent ? formatUtcTimestamp(firstSent) : "unknown"}`,
     `- Second-touch exhaustion checkpoint: ${SECOND_TOUCH_EXHAUSTION_DATE} UTC.`,
-    `- Next audit action: ${describeNextAction(rows, today, hasExternalEvidence)}.`,
+    ...(secondTouchExhausted
+      ? [`- Second-touch state: exhausted on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC with 0 recorded replies, bounces, interviews, redirects, or audit intakes.`]
+      : []),
+    `- Next audit action: ${describeNextAction(rows, today, hasInboxEvidence)}.`,
     "",
     "## Evidence Watch",
     "",

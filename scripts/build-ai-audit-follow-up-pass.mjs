@@ -8,6 +8,7 @@ const BATCH_CSV = join(ROOT, "ai-audit-outreach-batch-01.csv");
 const OUTPUT = join(ROOT, "AI-AUDIT-OUTREACH-FOLLOW-UP-PASS.md");
 const AUDIT_URL = "https://noticekit.tech/ai-security-questionnaire-audit.html";
 const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
+const TERMINAL_STATUSES = new Set(["replied_positive", "replied_negative", "bounced", "interview_completed"]);
 
 function parseCsv(text) {
   const rows = [];
@@ -107,6 +108,14 @@ function countByStatus(rows, status) {
   return rows.filter((row) => String(row.status || "").trim() === status).length;
 }
 
+function getTodayIsoDate() {
+  const override = String(process.env.NOTICEKIT_TODAY || "").trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(override)) {
+    return override;
+  }
+  return new Date().toISOString().slice(0, 10);
+}
+
 function auditUrlForRow(row) {
   const url = new URL(AUDIT_URL);
   url.searchParams.set("source", "ai-audit-outreach-batch-01");
@@ -127,6 +136,7 @@ function auditUrlForRow(row) {
 }
 
 const rows = parseCsv(await readFile(BATCH_CSV, "utf8"));
+const today = getTodayIsoDate();
 const activeRows = rows
   .filter((row) => ["sent", "followed_up"].includes(String(row.status || "").trim()))
   .sort((a, b) => Number(a.priority || 0) - Number(b.priority || 0))
@@ -147,11 +157,15 @@ const activeRows = rows
 
 const sentRows = countByStatus(rows, "sent");
 const followedUpRows = countByStatus(rows, "followed_up");
+const terminalRows = rows.filter((row) => TERMINAL_STATUSES.has(String(row.status || "").trim())).length;
 const batchDate = rows
   .map((row) => extractSentDate(row))
   .filter(Boolean)
   .sort()[0] || "unknown";
-const currentStatusLine = followedUpRows > 0 && sentRows === 0
+const exhausted = today >= SECOND_TOUCH_EXHAUSTION_DATE && followedUpRows > 0 && sentRows === 0 && terminalRows === 0;
+const currentStatusLine = exhausted
+  ? `AI audit follow-up is exhausted as of ${SECOND_TOUCH_EXHAUSTION_DATE} UTC: all ${followedUpRows} row(s) were followed up, and the outreach CSV still shows 0 replies, bounces, or interviews. Keep the batch parked until a new offer or segment decision exists.`
+  : followedUpRows > 0 && sentRows === 0
   ? `AI audit follow-up has already been sent for ${followedUpRows} row(s), and no reply, redirect, or intake evidence is recorded yet.`
   : followedUpRows > 0
     ? `AI audit batch 01 currently has ${sentRows} sent row(s) still pending follow-up and ${followedUpRows} followed-up row(s).`
@@ -176,6 +190,7 @@ const output = [
   "## Current Status",
   "",
   currentStatusLine,
+  ...(exhausted ? ["", `Exhaustion checkpoint: ${SECOND_TOUCH_EXHAUSTION_DATE} UTC.`] : []),
   "",
   "## Follow-Up Queue",
   "",

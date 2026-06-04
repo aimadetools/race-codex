@@ -13,6 +13,7 @@ const FALLBACK_ENV_FILE = join(ROOT, ".env.local");
 const BLOB_PREFIX = "contact-submissions/";
 const MAX_SUBMISSIONS = 200;
 const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-05";
+const TODAY_OVERRIDE = String(process.env.NOTICEKIT_TODAY || "").trim();
 const AGENT_REVIEW_SOURCE_TAGS = new Set([
   "agent-review-outreach-batch-01",
   "agent-review-outreach-checklist",
@@ -168,6 +169,13 @@ function formatUtcTimestamp(date) {
   return `${year}-${month}-${day} ${hour}:${minute} UTC`;
 }
 
+function todayKeyFromNow(now) {
+  if (/^\d{4}-\d{2}-\d{2}$/.test(TODAY_OVERRIDE)) {
+    return TODAY_OVERRIDE;
+  }
+  return now.toISOString().slice(0, 10);
+}
+
 function parseSentTimestamp(row) {
   const match = String(row.notes || "").match(/Sent (\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):\d{2}Z/);
   if (!match) {
@@ -304,7 +312,8 @@ function extractFeedbackMatches(text) {
 }
 
 async function main() {
-  const todayKey = new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const todayKey = todayKeyFromNow(now);
   const [batchText, feedbackText, inbox] = await Promise.all([
     readFile(BATCH_FILE, "utf8"),
     readFile(FEEDBACK_FILE, "utf8").catch(() => ""),
@@ -323,8 +332,8 @@ async function main() {
   const teardownRequests = inbox.records.filter((record) => String(record.type || "").trim() === "free_async_teardown").length;
   const feedbackMentions = extractFeedbackMatches(feedbackText);
   const latestInboxRecord = inbox.records[0] || null;
-  const hasExternalEvidence = inboxSubmissions > 0 || feedbackMentions.length > 0;
-  const secondTouchExhausted = followedUpWaiting > 0 && terminalRows === 0 && !hasExternalEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE;
+  const hasInboxEvidence = inboxSubmissions > 0;
+  const secondTouchExhausted = followedUpWaiting > 0 && terminalRows === 0 && !hasInboxEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE;
   const gapReadSourceBreakdown = AI_AGENT_GAP_READ_SOURCE_TAGS.map((sourceTag) => ({
     sourceTag,
     count: countBySourceTag(inbox.records, sourceTag)
@@ -356,7 +365,7 @@ async function main() {
   const output = [
     "# AI Agent Review Outreach Status",
     "",
-    `Checked at: ${formatUtcTimestamp(new Date())}`,
+    `Checked at: ${formatUtcTimestamp(now)}`,
     "",
     "## Current State",
     "",
@@ -372,6 +381,9 @@ async function main() {
     `- Agent-review mentions logged in COMMUNITY-FEEDBACK.md: ${feedbackMentions.length}`,
     `- First AI agent review outreach send: ${firstSendAt ? formatUtcTimestamp(firstSendAt) : "unknown"}`,
     `- Second-touch exhaustion checkpoint: ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`,
+    ...(secondTouchExhausted
+      ? [`- Second-touch state: exhausted on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC with 0 recorded replies, bounces, interviews, or teardown submissions.`]
+      : []),
     `- Next AI agent review action: ${nextAction}`,
     "",
     "## Evidence Watch",
