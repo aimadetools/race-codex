@@ -159,6 +159,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-04: reran validation-maintenance at `2026-06-04 08:12 UTC`, refreshed the live watch artifacts, and kept the queue at zero while the June 5 audit follow-up remained queued.
 - 2026-06-04: fixed the route-chooser source-tag watcher coverage gap, reran validation-maintenance at `2026-06-04 08:10 UTC`, and kept the queue at zero while source-tag coverage, site links, and the audit follow-up watch all stayed green.
 - 2026-06-04: shipped the dedicated route chooser and wired it into the homepage, pricing page, and AI procurement hub, then verified the site-link sweep still passed across 93 HTML files.
 - 2026-06-04 to 2026-05-27: ran the validation-maintenance sweeps through 2026-06-04 04:28 UTC, refreshed the live watch artifacts, shipped the Anthropic/Claude named-vendor wedge, hardened the combined June 5 AI follow-up gate plus full post-send artifact refresh, upgraded the audit outreach status to reconcile Blob inbox plus community-feedback evidence, verified the combined gate dry-run for the June 5 audit follow-up, fixed the watcher coverage gap for the new Anthropic source tags, and completed the sample-bundle, free-teardown, starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review passes while the inbox/watch state stayed at zero and the June 5 audit follow-up remained queued.
