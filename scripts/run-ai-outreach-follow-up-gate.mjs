@@ -7,11 +7,13 @@ import { join } from "node:path";
 const ROOT = process.cwd();
 const BATCH_FILES = {
   benchmark: join(ROOT, "ai-benchmark-outreach-batch-01.csv"),
-  agentReview: join(ROOT, "ai-agent-review-outreach-batch-01.csv")
+  agentReview: join(ROOT, "ai-agent-review-outreach-batch-01.csv"),
+  audit: join(ROOT, "ai-audit-outreach-batch-01.csv")
 };
 const FOLLOW_UP_FILES = {
   benchmark: join(ROOT, "BENCHMARK-OUTREACH-FOLLOW-UP-PASS.md"),
-  agentReview: join(ROOT, "AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md")
+  agentReview: join(ROOT, "AI-AGENT-REVIEW-OUTREACH-FOLLOW-UP-PASS.md"),
+  audit: join(ROOT, "AI-AUDIT-OUTREACH-FOLLOW-UP-PASS.md")
 };
 const TERMINAL_STATUSES = new Set(["replied_positive", "replied_negative", "bounced", "interview_completed"]);
 
@@ -151,25 +153,32 @@ async function loadState() {
   const [
     benchmarkBatchText,
     agentReviewBatchText,
+    auditBatchText,
     benchmarkFollowUpText,
-    agentReviewFollowUpText
+    agentReviewFollowUpText,
+    auditFollowUpText
   ] = await Promise.all([
     readFile(BATCH_FILES.benchmark, "utf8"),
     readFile(BATCH_FILES.agentReview, "utf8"),
+    readFile(BATCH_FILES.audit, "utf8"),
     readFile(FOLLOW_UP_FILES.benchmark, "utf8"),
-    readFile(FOLLOW_UP_FILES.agentReview, "utf8")
+    readFile(FOLLOW_UP_FILES.agentReview, "utf8"),
+    readFile(FOLLOW_UP_FILES.audit, "utf8")
   ]);
 
   const today = new Date().toISOString().slice(0, 10);
   const benchmarkRows = parseCsv(benchmarkBatchText);
   const agentReviewRows = parseCsv(agentReviewBatchText);
+  const auditRows = parseCsv(auditBatchText);
 
   return {
     today,
     benchmark: summarize(benchmarkRows, today, extractFollowUpDate(benchmarkFollowUpText)),
     agentReview: summarize(agentReviewRows, today, extractFollowUpDate(agentReviewFollowUpText)),
+    audit: summarize(auditRows, today, extractFollowUpDate(auditFollowUpText)),
     benchmarkReplies: countByStatuses(benchmarkRows, TERMINAL_STATUSES),
-    agentReviewReplies: countByStatuses(agentReviewRows, TERMINAL_STATUSES)
+    agentReviewReplies: countByStatuses(agentReviewRows, TERMINAL_STATUSES),
+    auditReplies: countByStatuses(auditRows, TERMINAL_STATUSES)
   };
 }
 
@@ -193,6 +202,10 @@ async function main() {
   console.log(`- AI agent review sent rows still pending follow-up: ${state.agentReview.pending}`);
   console.log(`- AI agent review follow-ups already sent: ${state.agentReview.followedUp}`);
   console.log(`- AI agent review follow-up date: ${state.agentReview.dueDate || "missing"}`);
+  console.log(`- AI audit replies/bounces/interviews: ${state.auditReplies}`);
+  console.log(`- AI audit sent rows still pending follow-up: ${state.audit.pending}`);
+  console.log(`- AI audit follow-ups already sent: ${state.audit.followedUp}`);
+  console.log(`- AI audit follow-up date: ${state.audit.dueDate || "missing"}`);
   console.log("");
 
   if (state.benchmark.dueNow) {
@@ -231,6 +244,25 @@ async function main() {
     }
   } else {
     console.log(`- AI agent review follow-up queue is not due or has no pending sent rows (due ${state.agentReview.dueDate || "unknown"} UTC).`);
+  }
+
+  if (state.audit.dueNow) {
+    runCommand("AI audit outreach follow-up", [
+      "node",
+      join(ROOT, "scripts", "send-ai-audit-outreach.mjs"),
+      "--follow-up",
+      "--limit",
+      limit,
+      ...(send ? ["--send"] : []),
+      "--transport",
+      transport
+    ]);
+    if (send) {
+      runCommand("AI audit outreach status rebuild", ["npm", "run", "build:ai-audit-outreach-status"]);
+      runCommand("AI audit follow-up pass rebuild", ["npm", "run", "build:ai-audit-follow-up-pass"]);
+    }
+  } else {
+    console.log(`- AI audit follow-up queue is not due or has no pending sent rows (due ${state.audit.dueDate || "unknown"} UTC).`);
   }
 }
 

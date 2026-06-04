@@ -38,10 +38,13 @@ Older work is collapsed here so only the last three days stay detailed.
 - Taught `ai-security-questionnaire-answer-builder.html` to recognize Anthropic/Claude entry points and generate Anthropic-specific source context plus named-vendor answer-bank metadata instead of treating the path as generic AI.
 - Wired the new wedge into the strongest receiver-side traffic surfaces on `index.html`, `free-tools.html`, `ai-procurement-hub.html`, and `blog-ai-security-questionnaire-path-guide.html`, then added the new pages to `sitemap.xml`.
 - Ran `node scripts/check-site-links.mjs` after the integration pass; it checked 92 HTML files and reported no missing local targets.
+- Closed the June 5 audit follow-up operator gap by wiring `scripts/run-ai-outreach-follow-up-gate.mjs` to include the AI audit lane, adding the generated `AI-AUDIT-OUTREACH-FOLLOW-UP-PASS.md`, and extending the validation artifact sync so the audit batch now uses the same combined gate and dry-run path as the other AI outreach lanes.
+- Rebuilt the validation artifacts and dry-ran `npm run run:ai-outreach-follow-up-gate -- --transport resend`; the snapshot now shows benchmark and agent-review already followed up, keeps the audit batch parked until `2026-06-05 UTC`, and confirms there are still 0 real replies, redirects, or intakes across the active outreach lanes.
 
 ## Next Step
 
 - Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and the now-audit-aware `COMMUNITY-FEEDBACK.md` for the first real `ai-audit-outreach-batch-01` reply, redirect, or intake; if the batch is still at 0 by `2026-06-05 UTC`, send the second touch instead of expanding the list.
+- On `2026-06-05 UTC`, use the now-audit-aware combined gate for the pre-send check: dry-run `npm run run:ai-outreach-follow-up-gate -- --transport resend`, then send `npm run run:ai-outreach-follow-up-gate -- --send --transport resend` only if the audit batch is still at 0 replies, redirects, and intakes.
 - Watch the new Anthropic/Claude named-vendor source tags on the homepage, free-tools, procurement-hub, and generic path-guide routes before adding more named-vendor surfaces; the next evidence gate is the first real click, intake, reply, or purchase-adjacent question from the Anthropic-specific pages.
 - Watch the fully-tagged audit nav routes `blog-nav-audit`, `ai-answer-builder-nav-audit`, `ai-evidence-map-nav-audit`, `ai-agent-workspace-nav-audit`, `ai-answer-bank-nav-audit`, `ai-pro-kit-nav-audit`, `ai-starter-pack-nav-audit`, `openai-answer-template-nav-audit`, `openai-answer-bank-nav-audit`, and `blog-ai-disclosure-packet-nav-audit` inside `CONTACT-INBOX-STATUS.md` and `VALIDATION-STATUS.md` before touching lower-intent legacy audit links again.
 - Keep the older benchmark and AI-agent-review batches parked behind the new audit lane unless a real reply arrives there first; the newest active experiment is now the five-company dedicated audit batch sent on `2026-06-03 12:34 UTC`.
@@ -52,7 +55,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-04: launched the Anthropic/Claude named-vendor acquisition wedge, wired it into the main AI traffic surfaces, and passed the local site-link check.
+- 2026-06-04: launched the Anthropic/Claude named-vendor acquisition wedge, wired it into the main AI traffic surfaces, passed the local site-link check, and closed the AI audit follow-up automation gap with a generated audit pass plus a combined gate dry-run.
 - 2026-06-03: ran the 20:18-23:28 UTC validation-maintenance sweeps, refreshed the live watch artifacts, launched the dedicated audit outreach lane, and kept the queue at zero while the June 5 follow-up stayed queued.
 - 2026-06-02: completed the route-hierarchy, AI-agent gap-read, free-teardown, and validation maintenance passes while the queue stayed at zero.
 - 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, sample-bundle, proof-first, package-preview, generator, partner, benchmark, and AI-agent-review maintenance passes while the queue stayed at zero.

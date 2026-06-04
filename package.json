@@ -12,6 +12,7 @@
     "build:ai-audit-outreach-status": "node scripts/build-ai-audit-outreach-status.mjs",
     "build:benchmark-follow-up-pass": "node scripts/build-benchmark-follow-up-pass.mjs",
     "build:ai-agent-review-follow-up-pass": "node scripts/build-ai-agent-review-follow-up-pass.mjs",
+    "build:ai-audit-follow-up-pass": "node scripts/build-ai-audit-follow-up-pass.mjs",
     "build:validation-decision-brief": "node scripts/build-validation-decision-brief.mjs",
     "build:validation-positioning-brief": "node scripts/build-validation-positioning-brief.mjs",
     "build:paid-kits": "node scripts/build-paid-kit-fulfillment.mjs",
