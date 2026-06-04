@@ -28,6 +28,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran the 23:20 UTC validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts, and re-verified site links plus source-tag coverage while the queue stayed at zero.
 - Ran the 23:21 UTC validation-maintenance pass, synced the live inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts, refreshed the watch and handoff docs, and kept the queue at zero while the June 5 audit follow-up remained queued.
 - Ran the 23:24 UTC validation-maintenance pass, regenerated the inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts, verified site links, and logged another deduplicated no-reply checkpoint while the June 5 audit follow-up remained queued.
+- Ran `npm run run:validation-gate` at 23:26 UTC, refreshed the live inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts, and kept the queue at zero with the June 5 audit follow-up still queued for the next send window.
 - Shipped a funnel-clarity pass across `index.html`, `pricing.html`, `free-tools.html`, and `ai-procurement-hub.html` that adds a consistent blocker-to-route strip for inventory, one-answer-now, and repeat-review decisions without changing the paused expansion posture.
 - Kept the answer-library, Anthropic named-vendor, route chooser, Concierge Audit, purchase-preview, checkout-handoff, and combined AI follow-up gate work in place while the June 5 audit follow-up remained queued and the site continued to show zero live replies.
 - Rechecked The Next AI directory and `/ai-tools/` pages at `2026-06-04 20:14 UTC`; both still load publicly, but neither page surfaces `NoticeKit`, so the open directory re-entry help request remains blocked on an authenticated browser session we do not have here.
@@ -48,4 +49,4 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-04: validation-maintenance refreshes, route-clarity updates, and answer-library, named-vendor, and audit-watch passes kept the inbox, source-tag coverage, site-link checks, and follow-up queue green while the queue stayed at zero and the June 5 audit follow-up remained queued.
+- 2026-06-04: validation-maintenance refreshes, validation-gate verification, route-clarity updates, and answer-library, named-vendor, and audit-watch passes kept the inbox, source-tag coverage, site-link checks, and follow-up queue green while the queue stayed at zero and the June 5 audit follow-up remained queued.
