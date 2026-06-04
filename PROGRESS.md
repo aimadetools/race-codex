@@ -34,6 +34,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-04
 
+- Ran `npm run run:validation-maintenance` at `2026-06-04 12:37 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent/audit operator artifacts, confirmed `check:source-tag-coverage` still covers 713 emitted tags and `check:site-links` still passes across 94 HTML files, and kept the queue at 0 real replies, redirects, intakes, and interviews.
+- Dry-ran `npm run run:ai-outreach-follow-up-gate -- --transport resend` after the refresh; the benchmark and AI-agent-review batches remain parked as already followed up, and the dedicated audit batch still correctly waits for its `2026-06-05 UTC` follow-up window with 5 sent rows and 0 recorded replies.
 - Shipped `ai-security-questionnaire-answer-library.html`, a new search-ready receiver-side hub that routes high-intent buyer questions to the shortest answer path for OpenAI, Anthropic/Claude, training stance, AI agent controls, proof gaps, one-answer-now, repeat review, or audit escalation instead of dropping visitors into generic AI copy.
 - Wired the answer-library wedge into `index.html`, `ai-procurement-hub.html`, `free-tools.html`, `start-here.html`, `pricing.html`, and `blog.html`, and expanded the blog/free-tools structured `ItemList` metadata plus `sitemap.xml` so crawlers can discover the named-vendor and objection-specific routes more cleanly.
 - Extended `scripts/watched-source-tags.mjs` for the new answer-library source tags, then re-ran `node scripts/check-source-tag-coverage.mjs` and `node scripts/check-site-links.mjs`; watcher coverage stayed complete and the local link sweep passed across 94 HTML files.
