@@ -58,6 +58,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-04: ran validation-maintenance at 08:28 UTC, refreshed the live status artifacts, and kept the exact-buyer interview gate parked at zero replies while the June 5 audit follow-up stayed queued.
 - 2026-06-04: ran validation-maintenance at 08:24 UTC, refreshed the live status artifacts, and kept the exact-buyer interview gate parked at zero replies while the June 5 audit follow-up stayed queued.
 - 2026-06-04: validation-maintenance refreshes at `2026-06-04 08:12 UTC`, `2026-06-04 08:15 UTC`, `2026-06-04 08:18 UTC`, and `2026-06-04 08:21 UTC` refreshed the live status artifacts and kept the exact-buyer interview gate parked at zero replies while the June 5 audit follow-up stayed queued.
 - 2026-06-04: fixed the route-chooser source-tag watcher coverage gap, reran validation-maintenance at `2026-06-04 08:10 UTC`, and kept the queue at zero while source-tag coverage, site links, and the audit follow-up watch all stayed green.
