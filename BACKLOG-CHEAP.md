@@ -162,5 +162,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-04: kept the validation-maintenance, route-clarity, and answer-library workstreams current while the inbox stayed at zero and the live AI outreach batches remained in watch mode.
-- 2026-06-04 to 2026-05-27: shipped the top-of-funnel routing pass, answer-library comparison, audit and route-chooser updates, named-vendor wedge, and the earlier validation/operator-watch maintenance passes while reply capture stayed empty.
+- 2026-06-04 to 2026-05-27: validation-maintenance, route-clarity, answer-library, audit, route-chooser, named-vendor, and earlier validation/operator-watch maintenance passes stayed collapsed here while reply capture remained empty.
