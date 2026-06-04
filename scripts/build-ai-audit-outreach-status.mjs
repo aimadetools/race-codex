@@ -2,11 +2,18 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { get, list } from "@vercel/blob";
 
 const ROOT = process.cwd();
 const BATCH_FILE = join(ROOT, "ai-audit-outreach-batch-01.csv");
 const OUTPUT = join(ROOT, "AI-AUDIT-OUTREACH-STATUS.md");
+const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
+const DEFAULT_ENV_FILE = join(ROOT, ".env.production.local");
+const FALLBACK_ENV_FILE = join(ROOT, ".env.local");
+const BLOB_PREFIX = "contact-submissions/";
+const MAX_SUBMISSIONS = 200;
 const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
+const AUDIT_SOURCE_TAGS = new Set(["ai-audit-outreach-batch-01"]);
 
 function formatUtcTimestamp(date) {
   const year = date.getUTCFullYear();
@@ -86,14 +93,188 @@ function countBy(rows, status) {
   return rows.filter((row) => String(row.status || "").trim() === status).length;
 }
 
+async function loadEnvFile(envPath) {
+  try {
+    const content = await readFile(envPath, "utf8");
+    const entries = {};
+
+    for (const line of content.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) {
+        continue;
+      }
+
+      const separatorIndex = trimmed.indexOf("=");
+      if (separatorIndex === -1) {
+        continue;
+      }
+
+      const key = trimmed.slice(0, separatorIndex).trim();
+      let value = trimmed.slice(separatorIndex + 1).trim();
+      if (
+        (value.startsWith("\"") && value.endsWith("\"")) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
+        value = value.slice(1, -1);
+      }
+      entries[key] = value;
+    }
+
+    return entries;
+  } catch {
+    return {};
+  }
+}
+
+function pickEnvValue(key, ...sources) {
+  for (const source of sources) {
+    const value = String(source?.[key] || "").trim();
+    if (value) {
+      return value;
+    }
+  }
+
+  return "";
+}
+
+async function readStream(stream) {
+  const chunks = [];
+  for await (const chunk of stream) {
+    chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+  }
+  return Buffer.concat(chunks).toString("utf8");
+}
+
 function firstDateMatch(notes, label) {
   const match = String(notes || "").match(new RegExp(`${label}\\s+(\\d{4}-\\d{2}-\\d{2})`));
   return match ? match[1] : "";
 }
 
-function describeNextAction(rows, today) {
+function parseSentTimestamp(row) {
+  const match = String(row.notes || "").match(/Sent (\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):\d{2}Z/);
+  if (!match) {
+    return null;
+  }
+
+  const [, year, month, day, hour, minute] = match;
+  return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), Number(hour), Number(minute)));
+}
+
+function isLikelyTestSubmission(record) {
+  const company = String(record.company || "").trim().toLowerCase();
+  const email = String(record.email || "").trim().toLowerCase();
+  const sourceTag = String(record.sourceTag || "").trim().toLowerCase();
+  const summary = String(record.summary || "").trim().toLowerCase();
+  const reviewNeed = String(record.reviewNeed || "").trim().toLowerCase();
+  const vendorChange = String(record.vendorChange || "").trim().toLowerCase();
+
+  const text = [company, sourceTag, summary, reviewNeed, vendorChange].join(" ");
+  const emailDomain = email.includes("@") ? email.split("@").pop() : "";
+  const placeholderDomain = emailDomain === "example.com" ||
+    emailDomain === "example.org" ||
+    emailDomain === "example.net" ||
+    emailDomain.endsWith(".test") ||
+    emailDomain.includes(".example");
+
+  if (placeholderDomain) {
+    return true;
+  }
+
+  if (/(^|\b)(testco|acme saas|beta labs|codex validation test)(\b|$)/.test(company)) {
+    return true;
+  }
+
+  if (text.includes("noticekit") && /(test|check|verification|post-deploy|restore)/.test(text)) {
+    return true;
+  }
+
+  return false;
+}
+
+function isAuditRecord(record) {
+  const sourceTag = String(record.sourceTag || "").trim().toLowerCase();
+  return AUDIT_SOURCE_TAGS.has(sourceTag);
+}
+
+function safeValue(value, fallback = "unknown") {
+  const text = String(value || "").trim();
+  return text || fallback;
+}
+
+async function loadAuditInboxRecords() {
+  const env = await loadEnvFile(DEFAULT_ENV_FILE);
+  const fallbackEnv = await loadEnvFile(FALLBACK_ENV_FILE);
+  const token = pickEnvValue("BLOB_READ_WRITE_TOKEN", process.env, env, fallbackEnv);
+
+  if (!token) {
+    return { available: false, records: [] };
+  }
+
+  const lookup = await list({
+    prefix: BLOB_PREFIX,
+    limit: MAX_SUBMISSIONS,
+    token
+  });
+
+  const blobs = [...lookup.blobs].sort((left, right) =>
+    String(right.uploadedAt || "").localeCompare(String(left.uploadedAt || ""))
+  );
+  const records = [];
+
+  for (const blob of blobs) {
+    const result = await get(blob.pathname, {
+      access: "private",
+      token
+    });
+
+    if (!result || result.statusCode !== 200 || !result.stream) {
+      continue;
+    }
+
+    try {
+      const record = JSON.parse(await readStream(result.stream));
+      if (isLikelyTestSubmission(record) || !isAuditRecord(record)) {
+        continue;
+      }
+
+      records.push({
+        ...record,
+        uploadedAt: blob.uploadedAt,
+        pathname: blob.pathname
+      });
+    } catch {
+      continue;
+    }
+  }
+
+  return { available: true, records };
+}
+
+function extractFeedbackMentions(text, companyNames) {
+  const lowerCompanyNames = companyNames.map((name) => name.toLowerCase());
+  return text
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => {
+      const lower = line.toLowerCase();
+      return lower.includes("ai-audit-outreach-batch-01") ||
+        lower.includes("audit outreach") ||
+        lower.includes("audit-intent") ||
+        lower.includes("48-hour audit") ||
+        lowerCompanyNames.some((name) => name && lower.includes(name));
+    });
+}
+
+function describeNextAction(rows, today, hasExternalEvidence = false) {
   const sentWaiting = rows.filter((row) => String(row.status || "").trim() === "sent").length;
   const followedUpWaiting = rows.filter((row) => String(row.status || "").trim() === "followed_up").length;
+  const terminalRows = ["replied_positive", "replied_negative", "bounced", "interview_completed"]
+    .map((status) => countBy(rows, status))
+    .reduce((sum, value) => sum + value, 0);
+
+  if (terminalRows > 0) {
+    return "triage the live audit outreach response and classify whether the blocker was proof assets, owner metadata, named-vendor wording, control boundary, or deadline pressure";
+  }
 
   if (sentWaiting > 0) {
     const dueDates = rows
@@ -105,7 +286,7 @@ function describeNextAction(rows, today) {
   }
 
   if (followedUpWaiting > 0) {
-    if (today >= SECOND_TOUCH_EXHAUSTION_DATE) {
+    if (!hasExternalEvidence && today >= SECOND_TOUCH_EXHAUSTION_DATE) {
       return `record that the audit outreach angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
     }
     return "monitor the followed-up audit rows for the first real reply, redirect, or intake before expanding the list";
@@ -122,36 +303,107 @@ function describeNextAction(rows, today) {
 async function main() {
   const now = new Date();
   const today = now.toISOString().slice(0, 10);
-  const rows = parseCsv(await readFile(BATCH_FILE, "utf8"));
+  const [rows, feedbackText, inbox] = await Promise.all([
+    readFile(BATCH_FILE, "utf8").then(parseCsv),
+    readFile(FEEDBACK_FILE, "utf8").catch(() => ""),
+    loadAuditInboxRecords()
+  ]);
   const sent = countBy(rows, "sent");
   const followedUp = countBy(rows, "followed_up");
   const ready = countBy(rows, "ready_for_send");
-  const terminal = ["replied_positive", "replied_negative", "bounced", "interview_completed"]
-    .map((status) => countBy(rows, status))
-    .reduce((sum, value) => sum + value, 0);
-
+  const positiveReplies = countBy(rows, "replied_positive");
+  const negativeReplies = countBy(rows, "replied_negative");
+  const bounces = countBy(rows, "bounced");
+  const interviews = countBy(rows, "interview_completed");
+  const terminal = positiveReplies + negativeReplies + bounces + interviews;
   const firstSent = rows
-    .map((row) => firstDateMatch(row.notes, "Sent"))
-    .filter(Boolean)
-    .sort()[0];
+    .map((row) => parseSentTimestamp(row))
+    .filter((value) => value instanceof Date && !Number.isNaN(value.getTime()))
+    .sort((left, right) => left.getTime() - right.getTime())[0];
+  const companyNames = rows.map((row) => String(row.company || "").trim()).filter(Boolean);
+  const feedbackMentions = extractFeedbackMentions(feedbackText, companyNames);
+  const inboxSubmissions = inbox.records.length;
+  const auditIntakes = inbox.records.filter((record) => String(record.type || "").trim() === "concierge_audit").length;
+  const latestInboxRecord = inbox.records[0] || null;
+  const hasExternalEvidence = inboxSubmissions > 0 || feedbackMentions.length > 0;
+  const secondTouchExhausted = followedUp > 0 && terminal === 0 && !hasExternalEvidence && today >= SECOND_TOUCH_EXHAUSTION_DATE;
 
   const lines = [
     "# AI Audit Outreach Status",
     "",
-    `- Checked at: ${formatUtcTimestamp(now)}`,
-    `- First audit outreach send: ${firstSent || "not sent yet"}`,
+    `Checked at: ${formatUtcTimestamp(now)}`,
+    "",
+    "## Current State",
+    "",
     `- Ready for first send: ${ready}`,
     `- Sent and waiting on reply: ${sent}`,
     `- Followed up and waiting on reply: ${followedUp}`,
+    `- Positive replies in outreach CSV: ${positiveReplies}`,
+    `- Negative replies in outreach CSV: ${negativeReplies}`,
+    `- Bounces in outreach CSV: ${bounces}`,
+    `- Interviews completed: ${interviews}`,
     `- Terminal rows (reply/bounce/interview): ${terminal}`,
-    `- Next audit action: ${describeNextAction(rows, today)}.`,
+    `- Audit-tagged inbox submissions: ${inboxSubmissions}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
+    `- Audit-tagged concierge intakes: ${auditIntakes}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
+    `- Audit mentions logged in COMMUNITY-FEEDBACK.md: ${feedbackMentions.length}`,
+    `- First audit outreach send: ${firstSent ? formatUtcTimestamp(firstSent) : "unknown"}`,
+    `- Second-touch exhaustion checkpoint: ${SECOND_TOUCH_EXHAUSTION_DATE} UTC.`,
+    `- Next audit action: ${describeNextAction(rows, today, hasExternalEvidence)}.`,
+    "",
+    "## Evidence Watch",
+    "",
+    terminal === 0 && inboxSubmissions === 0 && feedbackMentions.length === 0
+      ? "- No AI audit reply, redirect, or intake evidence is recorded yet across the outreach CSV, Blob inbox, or COMMUNITY-FEEDBACK.md."
+      : null,
+    terminal > 0
+      ? `- Outreach CSV evidence exists: ${positiveReplies} positive reply row(s), ${negativeReplies} negative reply row(s), ${bounces} bounce row(s), and ${interviews} interview row(s).`
+      : null,
+    latestInboxRecord
+      ? `- Latest audit-tagged inbox submission: ${safeValue(latestInboxRecord.submittedAt || latestInboxRecord.uploadedAt)} | ${safeValue(latestInboxRecord.type)} | ${safeValue(latestInboxRecord.sourceTag)} | ${safeValue(latestInboxRecord.company)}.`
+      : inbox.available
+        ? "- Blob inbox check found no audit-tagged submissions yet."
+        : "- Blob inbox check is unavailable because no Blob token is configured in the current environment.",
+    feedbackMentions.length > 0
+      ? `- COMMUNITY-FEEDBACK.md contains ${feedbackMentions.length} audit-related line(s); review the excerpts below before changing outreach copy.`
+      : terminal === 0 && inboxSubmissions === 0
+        ? null
+        : "- COMMUNITY-FEEDBACK.md does not contain an audit-specific reply or outcome yet.",
+    secondTouchExhausted
+      ? `- The June 5 follow-up has now aged past the ${SECOND_TOUCH_EXHAUSTION_DATE} UTC checkpoint with zero audit evidence, so this batch should stay parked until a new offer or segment decision exists.`
+      : null,
+    "",
+    "## Inbox Matches",
+    ""
+  ].filter(Boolean);
+
+  if (!inbox.available) {
+    lines.push("- Blob inbox unavailable in the current environment; audit intake cross-check could not be completed here.");
+  } else if (inbox.records.length === 0) {
+    lines.push("- No real audit-tagged submissions are stored in the inbox yet.");
+  } else {
+    for (const record of inbox.records.slice(0, 5)) {
+      lines.push(`- ${safeValue(record.submittedAt || record.uploadedAt)} | ${safeValue(record.type)} | ${safeValue(record.sourceTag)} | ${safeValue(record.company)} | role ${safeValue(record.ownershipSignal, "unknown")}`);
+    }
+  }
+
+  lines.push("", "## Community Feedback Matches", "");
+
+  if (feedbackMentions.length === 0) {
+    lines.push("- No audit-specific feedback lines are logged yet.");
+  } else {
+    for (const line of feedbackMentions.slice(-5)) {
+      lines.push(`- ${line}`);
+    }
+  }
+
+  lines.push(
     "",
     "## Batch Snapshot",
     "",
     "| Priority | Company | Segment | Status | Route |",
     "|---:|---|---|---|---|",
     ...rows.map((row) => `| ${row.priority} | ${row.company} | ${row.segment} | ${row.status} | ${row.public_contact_route} |`)
-  ];
+  );
 
   await writeFile(OUTPUT, `${lines.join("\n")}\n`, "utf8");
 }
