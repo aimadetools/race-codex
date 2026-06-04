@@ -162,4 +162,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-04: validation-maintenance refresh rebuilt the reply-watch, inbox/status, and self-audit artifacts, kept the queue at zero, and left no new replies, redirects, or intakes to collapse into the live P0-P1 items.
 - 2026-06-04 to 2026-05-27: refreshed validation and operator-watch artifacts, tightened the Concierge Audit and audit-request pages plus the purchase-preview/checkout-handoff surfaces, added the combined AI follow-up gate and `NOTICEKIT_TODAY` simulation support, and shipped the route chooser, Anthropic named-vendor wedge, answer-library hub, audit evidence reconciliation, and the earlier sample-bundle/free-teardown/starter-pack-vs-builder/free-tools-pricing/kit-preview/purchase-next-steps/evidence-map/AI-agent workspace/generator/partner/benchmark/AI-agent-review passes.
