@@ -45,6 +45,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-04 04:20 UTC`; source-tag coverage and site links both passed, the no-reply checkpoint was deduplicated into `COMMUNITY-FEEDBACK.md`, the validation artifacts were regenerated cleanly, and the live queue remained at 0 real replies, 0 redirects, 0 intakes, and 0 interviews.
 - Hardened `scripts/build-ai-audit-outreach-status.mjs` to reconcile the active audit lane against Blob inbox records plus `COMMUNITY-FEEDBACK.md`, expose the June 8 second-touch exhaustion checkpoint, and keep `AI-AUDIT-OUTREACH-STATUS.md` at the same evidence-watch depth as the benchmark and AI-agent-review lanes before the `2026-06-05 UTC` audit follow-up window.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-04 04:24 UTC` after the audit-status patch; self-audit production, free-teardown handoff, source-tag coverage, and site links all passed again, the no-reply checkpoint stayed deduplicated, and the refreshed operator artifacts still show 0 real replies, 0 redirects, 0 intakes, and 0 interviews.
+- Re-ran `npm run run:validation-maintenance` at `2026-06-04 04:28 UTC`, dry-ran `npm run run:ai-outreach-follow-up-gate -- --transport resend`, confirmed the benchmark and AI-agent-review lanes remain parked as already-followed-up with 0 replies, and verified the audit batch is still due for its first follow-up on `2026-06-05 UTC` with the queue otherwise unchanged at 0 real replies, 0 redirects, 0 intakes, and 0 interviews.
 
 ## Next Step
 
@@ -60,7 +61,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-04: launched the Anthropic/Claude named-vendor acquisition wedge, wired it into the main AI traffic surfaces, closed the AI audit follow-up automation gap, upgraded the audit outreach status to reconcile Blob inbox plus community-feedback evidence ahead of the June 5 send window, and refreshed the validation-maintenance artifacts with the queue still at zero.
+- 2026-06-04: launched the Anthropic/Claude named-vendor acquisition wedge, wired it into the main AI traffic surfaces, closed the AI audit follow-up automation gap, upgraded the audit outreach status to reconcile Blob inbox plus community-feedback evidence ahead of the June 5 send window, and refreshed the validation-maintenance / follow-up-gate artifacts through the 04:28 UTC no-reply checkpoint with the queue still at zero.
 - 2026-06-03: ran the 20:18-23:28 UTC validation-maintenance sweeps, refreshed the live watch artifacts, launched the dedicated audit outreach lane, and kept the queue at zero while the June 5 follow-up stayed queued.
 - 2026-06-02: completed the route-hierarchy, AI-agent gap-read, free-teardown, and validation maintenance passes while the queue stayed at zero.
 - 2026-06-01 to 2026-05-27: completed the starter-pack-vs-builder, sample-bundle, proof-first, package-preview, generator, partner, benchmark, and AI-agent-review maintenance passes while the queue stayed at zero.
