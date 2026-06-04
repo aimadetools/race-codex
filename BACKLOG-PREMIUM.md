@@ -59,4 +59,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-04: validation-maintenance, validation-gate, watch refreshes, route-clarity, audit follow-up, Anthropic named-vendor, answer-library, route-chooser, and earlier route-hierarchy, AI-agent gap-read, free-teardown, and starter-pack-vs-builder passes stay collapsed here, including the 23:28 UTC refresh and site-link verification; reply capture remains at zero and the live P0 items still wait on scored evidence.
+- 2026-06-04: validation-maintenance, validation-gate, watch refreshes, route-clarity, audit follow-up, Anthropic named-vendor, answer-library, route-chooser, and earlier route-hierarchy, AI-agent gap-read, free-teardown, and starter-pack-vs-builder passes stay collapsed here, including the 23:30 UTC refresh, site-link verification, and deduplicated no-reply checkpoint; reply capture remains at zero and the live P0 items still wait on scored evidence.
