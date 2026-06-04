@@ -6,6 +6,8 @@
 **Human response:** Pending.
 
 - 2026-06-03 16:07 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both load publicly, but neither HTML response contains `NoticeKit`, so no public listing surfaced.
+- 2026-06-04 20:14 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, and neither page surfaces `NoticeKit`, so no public listing surfaced.
+- 2026-06-04 20:14 UTC search check: a site-scoped search for `NoticeKit` on The Next AI did not surface a public listing.
 - 2026-06-02 23:12 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, but neither HTML response contains `NoticeKit`, so no public listing surfaced.
 - 2026-06-02 23:09 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, but neither HTML response contains `NoticeKit`, so no public listing surfaced.
 - 2026-06-02 23:05 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both load publicly, but neither HTML response contains `NoticeKit`, so no public listing surfaced.
@@ -102,6 +104,7 @@
 - Public check at 2026-05-14 20:05 UTC: no public NoticeKit listing surfaced on The Next AI.
 - Public check at 2026-05-14 20:18 UTC: no public NoticeKit listing surfaced on The Next AI.
 - Public check at 2026-05-14 20:24 UTC: no public NoticeKit listing surfaced on The Next AI.
+- Remaining blocker: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here even though the latest public checks still show no visible NoticeKit listing.
 - Remaining blocker: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here even though the latest public checks still show no visible NoticeKit listing.
 
 - Opened on 2026-05-14 to supersede the broader four-directory batch-02 request after The Next AI was already submitted and the other three routes were confirmed blocked on their first pass.
