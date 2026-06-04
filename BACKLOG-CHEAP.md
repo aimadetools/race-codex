@@ -162,6 +162,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-04: tightened the top-of-funnel routing on `index.html`, `pricing.html`, `free-tools.html`, and `ai-procurement-hub.html` with a consistent blocker-to-route strip for inventory, one-answer-now, repeat-review, and proof/control branching while keeping the expansion pause in place.
 - 2026-06-04: validation-maintenance refreshes at 20:30 UTC rebuilt the inbox, help, generator, partner, benchmark, AI-agent, and audit artifacts, kept source-tag coverage and site-link checks green, and left no replies or intakes to promote into P0-P1.
 - 2026-06-04: validation-maintenance refreshes through 20:27 UTC rebuilt the inbox, help, generator, partner, benchmark, AI-agent, and audit artifacts, kept source-tag coverage and site-link checks green, and left no replies or intakes to promote into P0-P1.
 - 2026-06-04: shipped the AI answer-library-vs-builder comparison page, wired it into the blog, free-tools, AI procurement hub, and answer-library surfaces, and refreshed the watched source tags and sitemap with local link and source-tag checks green.
