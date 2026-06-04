@@ -666,27 +666,39 @@
           checklist
         ].join("\n");
 
-        const vendorChain = primaryVendor.toLowerCase().includes("openai")
+        const vendorSlug = primaryVendor.toLowerCase();
+        const isOpenAI = vendorSlug.includes("openai");
+        const isAnthropic = vendorSlug.includes("anthropic") || vendorSlug.includes("claude");
+        const namedVendorLabel = isOpenAI ? "OpenAI" : isAnthropic ? "Anthropic / Claude" : primaryVendor;
+        const vendorChain = isOpenAI
           ? `OpenAI plus ${supportingVendors}`
-          : `${primaryVendor} plus ${supportingVendors}`;
-        const bankTitle = primaryVendor.toLowerCase().includes("openai")
+          : isAnthropic
+            ? `Anthropic / Claude plus ${supportingVendors}`
+            : `${primaryVendor} plus ${supportingVendors}`;
+        const bankTitle = isOpenAI
           ? "OpenAI Security Questionnaire Answer Bank"
-          : "AI Security Questionnaire Answer Bank";
-        const workflowLabel = primaryVendor.toLowerCase().includes("openai")
+          : isAnthropic
+            ? "Anthropic Security Questionnaire Answer Bank"
+            : "AI Security Questionnaire Answer Bank";
+        const workflowLabel = isOpenAI
           ? "OpenAI-backed workflow covered"
-          : "Workflow covered";
-        const vendorLabel = primaryVendor.toLowerCase().includes("openai")
+          : isAnthropic
+            ? "Anthropic-backed workflow covered"
+            : "Workflow covered";
+        const vendorLabel = isOpenAI || isAnthropic
           ? "Supporting vendor chain"
           : "Named vendors";
-        const companySnapshotVendorLine = primaryVendor.toLowerCase().includes("openai")
+        const companySnapshotVendorLine = isOpenAI || isAnthropic
           ? `- Source of truth for retention or training stance: ${retentionStance}`
           : `- Primary AI/model vendors: ${primaryVendor}`;
-        const snapshotWorkflowLabel = primaryVendor.toLowerCase().includes("openai")
+        const snapshotWorkflowLabel = isOpenAI
           ? "- OpenAI-backed workflows in scope"
-          : "- Primary AI workflows in scope";
+          : isAnthropic
+            ? "- Anthropic-backed workflows in scope"
+            : "- Primary AI workflows in scope";
         const snapshotSupportingVendorLine = `- Supporting vendors in scope: ${supportingVendors}`;
-        const snapshotVendorDetailLine = primaryVendor.toLowerCase().includes("openai")
-          ? "- Primary named vendor in scope: OpenAI"
+        const snapshotVendorDetailLine = isOpenAI || isAnthropic
+          ? `- Primary named vendor in scope: ${namedVendorLabel}`
           : companySnapshotVendorLine;
 
         const bankRows = [
@@ -997,6 +1009,21 @@
           exampleHref: "blog-openai-security-questionnaire-answer-example.html?source=openai-security-questionnaire-template-example",
           exampleLabel: "See OpenAI example"
         },
+        "anthropic-security-questionnaire-template-builder": {
+          heroTitle: "Turn the Anthropic-specific template into a filled named-vendor answer and handoff.",
+          heroCopy: "You already know the buyer named Anthropic or Claude directly. Use the builder to package the reviewed workflow, supporting vendors, data scope, retention stance, proof links, and handoff note in one browser-only draft.",
+          title: "The Anthropic template gave you the structure; this builder turns it into the actual answer.",
+          copy: "Keep the draft pinned to one Anthropic-backed workflow and one affected customer segment so the reviewer sees a concrete named-vendor answer instead of another broad AI policy summary.",
+          points: [
+            "Preserve the named Anthropic or Claude workflow instead of broadening the answer into a product-level AI story.",
+            "Keep the customer scope, proof links, and open notice questions attached to the same draft.",
+            "Switch to the answer bank only if repeated Anthropic review prompts keep coming back across deals."
+          ],
+          templateHref: "anthropic-security-questionnaire-answer-template.html?source=anthropic-security-questionnaire-template-builder",
+          templateLabel: "Open Anthropic template",
+          exampleHref: "blog-anthropic-security-questionnaire-answer-example.html?source=anthropic-security-questionnaire-template-example",
+          exampleLabel: "See Anthropic example"
+        },
         "free-tools-ai-answer-builder": {
           title: "Use the builder when the fastest next step is a written answer.",
           copy: "This route is for buyers who do not need the full packet or teardown yet.",
@@ -1300,6 +1327,21 @@
           exampleHref: "blog-openai-security-questionnaire-answer-example.html?source=openai-path-guide-example",
           exampleLabel: "See OpenAI example"
         },
+        "anthropic-path-guide-builder": {
+          heroTitle: "Turn the Anthropic path choice into the live answer before the buyer thread widens.",
+          heroCopy: "You already know the reviewer named Anthropic or Claude directly and the next step is the answer. Use the builder to package the Anthropic-backed workflow, supporting vendors, scope, stance, proof, and handoff in one browser-only draft.",
+          title: "The Anthropic route guide narrowed the path; now create the answer that reflects that named-vendor review.",
+          copy: "Keep the draft tied to one Anthropic-backed workflow and one reviewer ask so the final response stays sharper than the broader generic AI route.",
+          points: [
+            "Preserve the named Anthropic or Claude workflow and supporting vendor chain in the answer.",
+            "Keep proof links, owner notes, and unresolved notice questions attached in the same draft.",
+            "Switch to the Anthropic answer bank only if the same prompts keep coming back across deals."
+          ],
+          templateHref: "blog-anthropic-security-questionnaire-path-guide.html?source=anthropic-path-guide-builder",
+          templateLabel: "Back to Anthropic path guide",
+          exampleHref: "blog-anthropic-security-questionnaire-answer-example.html?source=anthropic-path-guide-example",
+          exampleLabel: "See Anthropic example"
+        },
         "openai-security-questionnaire-example-builder": {
           heroTitle: "Turn the OpenAI example into your own named-vendor answer before the deal stalls.",
           heroCopy: "You already saw the level of specificity the buyer expects. Use the builder to replace the sample workflow, scope, stance, proof links, and owner notes with your own facts without losing the named-vendor framing.",
@@ -1314,6 +1356,21 @@
           templateLabel: "Open OpenAI template",
           exampleHref: "blog-openai-security-questionnaire-answer-example.html?source=openai-security-questionnaire-example-builder",
           exampleLabel: "Back to OpenAI example"
+        },
+        "anthropic-security-questionnaire-example-builder": {
+          heroTitle: "Turn the Anthropic example into your own named-vendor answer before the deal stalls.",
+          heroCopy: "You already saw the level of specificity the buyer expects. Use the builder to replace the sample workflow, scope, stance, proof links, and owner notes with your own facts without losing the named-vendor framing.",
+          title: "The example made the answer shape click; now generate the real draft from your own facts.",
+          copy: "Keep the answer tied to one Anthropic-backed workflow, one customer segment, and one live reviewer ask so the final draft stays sharper than the generic AI route.",
+          points: [
+            "Replace every example fact with your own workflow, customer scope, and proof trail before you send the answer.",
+            "Keep the supporting vendor chain visible so the reviewer can see the real operating path around Anthropic or Claude.",
+            "Escalate into teardown or the packet path only if the blocker expands beyond the questionnaire wording."
+          ],
+          templateHref: "anthropic-security-questionnaire-answer-template.html?source=anthropic-security-questionnaire-example-template",
+          templateLabel: "Open Anthropic template",
+          exampleHref: "blog-anthropic-security-questionnaire-answer-example.html?source=anthropic-security-questionnaire-example-builder",
+          exampleLabel: "Back to Anthropic example"
         },
         "openai-answer-bank-builder": {
           heroTitle: "Turn the OpenAI answer bank into the live answer without losing the named-vendor proof trail.",
@@ -1330,6 +1387,21 @@
           exampleHref: "blog-openai-security-questionnaire-answer-example.html?source=openai-answer-bank-example",
           exampleLabel: "See OpenAI example"
         },
+        "anthropic-answer-bank-builder": {
+          heroTitle: "Turn the Anthropic answer bank into the live answer without losing the named-vendor proof trail.",
+          heroCopy: "You already know repeated Anthropic or Claude review prompts are the problem. Use the builder to generate the current answer block and handoff from the same named-vendor workflow, customer scope, and proof path you want to keep reusable.",
+          title: "The Anthropic answer bank is the long-term source; this builder is the live-answer shortcut.",
+          copy: "Keep the draft tied to one Anthropic-backed workflow and one active reviewer ask so the current answer stays sharper than the broader reusable bank.",
+          points: [
+            "Pull the current wording from the reusable Anthropic answer bank instead of improvising a new draft.",
+            "Keep the proof links and unresolved notice questions attached to the same answer.",
+            "Switch back to the answer bank after the live thread closes so the approved wording stays current."
+          ],
+          templateHref: "anthropic-security-questionnaire-answer-bank.html?source=anthropic-answer-bank-builder",
+          templateLabel: "Open Anthropic answer bank",
+          exampleHref: "blog-anthropic-security-questionnaire-answer-example.html?source=anthropic-answer-bank-example",
+          exampleLabel: "See Anthropic example"
+        },
         "openai-answer-bank-vs-builder-builder": {
           heroTitle: "Turn the OpenAI route choice into the live answer before the thread widens.",
           heroCopy: "You already know the buyer named OpenAI directly and the builder is the shortest next step. Use this path to package the workflow, scope, stance, proof, and handoff without dropping back to the broader generic AI route.",
@@ -1344,6 +1416,21 @@
           templateLabel: "Back to OpenAI comparison",
           exampleHref: "blog-openai-security-questionnaire-answer-example.html?source=openai-answer-bank-vs-builder-example",
           exampleLabel: "See OpenAI example"
+        },
+        "anthropic-answer-bank-vs-builder-builder": {
+          heroTitle: "Turn the Anthropic route choice into the live answer before the thread widens.",
+          heroCopy: "You already know the buyer named Anthropic or Claude directly and the builder is the shortest next step. Use this path to package the workflow, scope, stance, proof, and handoff without dropping back to the broader generic AI route.",
+          title: "The Anthropic comparison narrowed the choice; now generate the answer that moves the deal.",
+          copy: "Keep the draft tied to one Anthropic-backed workflow, one customer segment, and one proof trail so the final response stays sharper than a generic AI policy answer.",
+          points: [
+            "Use the builder when the Anthropic comparison shows the blocker is one live answer, not the reusable source file.",
+            "Keep the named-vendor wording, supporting vendors, and proof links attached in the same draft.",
+            "Move the approved wording into the Anthropic answer bank only if the same questions keep returning across deals."
+          ],
+          templateHref: "blog-anthropic-security-questionnaire-answer-bank-vs-builder.html?source=anthropic-answer-bank-vs-builder-builder",
+          templateLabel: "Back to Anthropic comparison",
+          exampleHref: "blog-anthropic-security-questionnaire-answer-example.html?source=anthropic-answer-bank-vs-builder-example",
+          exampleLabel: "See Anthropic example"
         }
       };
 
