@@ -162,5 +162,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-04: regenerated the operator watch artifacts through the 12:37 UTC checkpoint, kept source-tag coverage and site links green, and left the June 5 audit follow-up queued with the inbox/watch state still at zero.
+- 2026-06-04: regenerated the operator watch artifacts through the 12:41 UTC checkpoint, kept source-tag coverage and site links green, rechecked the combined AI follow-up gate, and left the June 5 audit follow-up queued with the inbox/watch state still at zero.
 - 2026-06-04 to 2026-05-27: shipped the route chooser, Anthropic/Claude named-vendor wedge, answer-library hub, combined June 5 AI follow-up gate hardening, audit-outreach evidence reconciliation, and the earlier sample-bundle, free-teardown, starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review passes while the inbox/watch state stayed at zero.
