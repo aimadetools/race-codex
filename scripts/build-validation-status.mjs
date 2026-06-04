@@ -814,7 +814,6 @@ const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "free-tools-openai-answer-template", label: "free-tools template" },
   { tag: "free-tools-openai-answer-example", label: "free-tools example" },
   { tag: "free-tools-openai-answer-bank", label: "free-tools answer-bank" },
-  { tag: "free-tools-openai-path-guide", label: "free-tools path-guide" },
   { tag: "ai-procurement-hub-openai-answer-template", label: "hub template" },
   { tag: "ai-procurement-hub-openai-answer-example", label: "hub example" },
   { tag: "ai-procurement-hub-openai-answer-bank", label: "hub answer-bank" },
@@ -830,6 +829,22 @@ const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "ai-security-questionnaire-starter-pack-openai-answer-example", label: "starter-pack example" },
   { tag: "ai-security-questionnaire-starter-pack-openai-answer-bank", label: "starter-pack answer-bank" },
   { tag: "ai-security-questionnaire-starter-pack-openai-path-guide", label: "starter-pack path-guide" }
+]);
+const anthropicWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "free-tools-anthropic-answer-template", label: "free-tools template" },
+  { tag: "free-tools-anthropic-answer-example", label: "free-tools example" },
+  { tag: "free-tools-anthropic-answer-bank", label: "free-tools answer-bank" },
+  { tag: "ai-procurement-hub-anthropic-answer-template", label: "hub template" },
+  { tag: "ai-procurement-hub-anthropic-answer-example", label: "hub example" },
+  { tag: "ai-procurement-hub-anthropic-answer-bank", label: "hub answer-bank" },
+  { tag: "ai-procurement-hub-anthropic-path-guide", label: "hub path-guide" },
+  { tag: "homepage-ai-route-anthropic-template", label: "homepage template" },
+  { tag: "homepage-ai-route-anthropic-example", label: "homepage example" },
+  { tag: "homepage-ai-route-anthropic-answer-bank", label: "homepage answer-bank" },
+  { tag: "homepage-ai-route-anthropic-path-guide", label: "homepage path-guide" },
+  { tag: "ai-path-guide-anthropic-template", label: "generic path-guide template" },
+  { tag: "ai-path-guide-anthropic-example", label: "generic path-guide example" },
+  { tag: "ai-path-guide-anthropic-route-guide", label: "generic path-guide route guide" }
 ]);
 const benchmarkRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "benchmark-outreach-batch-01", label: "outreach batch" },
@@ -897,6 +912,7 @@ const output = [
   renderWatchedSourceGroup("AI-agent-control inbox submissions", aiAgentWatch),
   renderWatchedSourceGroup("AI-agent gap-read inbox submissions", aiAgentGapReadWatch),
   renderWatchedSourceGroup("OpenAI route inbox submissions", openAiWatch),
+  renderWatchedSourceGroup("Anthropic route inbox submissions", anthropicWatch),
   renderWatchedSourceGroup("Benchmark-led route inbox submissions", benchmarkRouteWatch),
   "",
   "## Reply Watch",

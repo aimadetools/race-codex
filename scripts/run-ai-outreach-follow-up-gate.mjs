@@ -16,6 +16,11 @@ const FOLLOW_UP_FILES = {
   audit: join(ROOT, "AI-AUDIT-OUTREACH-FOLLOW-UP-PASS.md")
 };
 const TERMINAL_STATUSES = new Set(["replied_positive", "replied_negative", "bounced", "interview_completed"]);
+const SECOND_TOUCH_EXHAUSTION_DATES = {
+  benchmark: "2026-06-05",
+  agentReview: "2026-06-05",
+  audit: "2026-06-08"
+};
 
 function parseArgs(argv) {
   const args = new Map();
@@ -149,6 +154,15 @@ function summarize(rows, today, dueDate) {
   };
 }
 
+function secondTouchExhausted(today, laneKey, laneState) {
+  const checkpoint = SECOND_TOUCH_EXHAUSTION_DATES[laneKey] || "";
+  return Boolean(checkpoint) &&
+    today >= checkpoint &&
+    laneState.pending === 0 &&
+    laneState.followedUp > 0 &&
+    laneState.terminal === 0;
+}
+
 async function loadState() {
   const [
     benchmarkBatchText,
@@ -187,6 +201,7 @@ async function main() {
   const send = args.has("send");
   const transport = String(args.get("transport") || "resend").toLowerCase();
   const limit = String(args.get("limit") || "5");
+  let sentAnyFollowUps = false;
 
   runCommand("Validation artifact sync", ["npm", "run", "sync:validation-artifacts"]);
 
@@ -198,14 +213,23 @@ async function main() {
   console.log(`- Benchmark sent rows still pending follow-up: ${state.benchmark.pending}`);
   console.log(`- Benchmark follow-ups already sent: ${state.benchmark.followedUp}`);
   console.log(`- Benchmark follow-up date: ${state.benchmark.dueDate || "missing"}`);
+  if (secondTouchExhausted(state.today, "benchmark", state.benchmark)) {
+    console.log(`- Benchmark second-touch exhaustion checkpoint has been reached (${SECOND_TOUCH_EXHAUSTION_DATES.benchmark} UTC) with zero recorded replies, bounces, or interviews.`);
+  }
   console.log(`- AI agent review replies/bounces/interviews: ${state.agentReviewReplies}`);
   console.log(`- AI agent review sent rows still pending follow-up: ${state.agentReview.pending}`);
   console.log(`- AI agent review follow-ups already sent: ${state.agentReview.followedUp}`);
   console.log(`- AI agent review follow-up date: ${state.agentReview.dueDate || "missing"}`);
+  if (secondTouchExhausted(state.today, "agentReview", state.agentReview)) {
+    console.log(`- AI agent review second-touch exhaustion checkpoint has been reached (${SECOND_TOUCH_EXHAUSTION_DATES.agentReview} UTC) with zero recorded replies, bounces, or interviews.`);
+  }
   console.log(`- AI audit replies/bounces/interviews: ${state.auditReplies}`);
   console.log(`- AI audit sent rows still pending follow-up: ${state.audit.pending}`);
   console.log(`- AI audit follow-ups already sent: ${state.audit.followedUp}`);
   console.log(`- AI audit follow-up date: ${state.audit.dueDate || "missing"}`);
+  if (secondTouchExhausted(state.today, "audit", state.audit)) {
+    console.log(`- AI audit second-touch exhaustion checkpoint has been reached (${SECOND_TOUCH_EXHAUSTION_DATES.audit} UTC) with zero recorded replies, bounces, or interviews.`);
+  }
   console.log("");
 
   if (state.benchmark.dueNow) {
@@ -220,8 +244,7 @@ async function main() {
       transport
     ]);
     if (send) {
-      runCommand("Benchmark outreach status rebuild", ["npm", "run", "build:benchmark-outreach-status"]);
-      runCommand("Benchmark follow-up pass rebuild", ["npm", "run", "build:benchmark-follow-up-pass"]);
+      sentAnyFollowUps = true;
     }
   } else {
     console.log(`- Benchmark outreach follow-up queue is not due or has no pending sent rows (due ${state.benchmark.dueDate || "unknown"} UTC).`);
@@ -239,8 +262,7 @@ async function main() {
       transport
     ]);
     if (send) {
-      runCommand("AI agent review status rebuild", ["npm", "run", "build:ai-agent-review-outreach-status"]);
-      runCommand("AI agent review follow-up pass rebuild", ["npm", "run", "build:ai-agent-review-follow-up-pass"]);
+      sentAnyFollowUps = true;
     }
   } else {
     console.log(`- AI agent review follow-up queue is not due or has no pending sent rows (due ${state.agentReview.dueDate || "unknown"} UTC).`);
@@ -258,11 +280,16 @@ async function main() {
       transport
     ]);
     if (send) {
-      runCommand("AI audit outreach status rebuild", ["npm", "run", "build:ai-audit-outreach-status"]);
-      runCommand("AI audit follow-up pass rebuild", ["npm", "run", "build:ai-audit-follow-up-pass"]);
+      sentAnyFollowUps = true;
     }
   } else {
     console.log(`- AI audit follow-up queue is not due or has no pending sent rows (due ${state.audit.dueDate || "unknown"} UTC).`);
+  }
+
+  if (send && sentAnyFollowUps) {
+    console.log("");
+    console.log("- Live follow-up send completed. Refreshing the full validation artifact set so status, send-plan, and follow-up docs stay aligned.");
+    runCommand("Validation artifact sync", ["npm", "run", "sync:validation-artifacts"]);
   }
 }
 

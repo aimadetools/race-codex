@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-04 04:14 UTC
+Checked at: 2026-06-04 04:20 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -222,7 +222,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-openai-answer-example: 0
 - free-tools-openai-answer-bank: 0
 - free-tools-openai-answer-comparison: 0
-- free-tools-openai-path-guide: 0
+- free-tools-anthropic-answer-template: 0
+- free-tools-anthropic-answer-example: 0
+- free-tools-anthropic-answer-bank: 0
+- free-tools-named-vendor-path-guide: 0
 - free-tools-ai-questionnaire-template: 0
 - free-tools-ai-questionnaire-example: 0
 - free-tools-ai-questionnaire: 0
@@ -320,7 +323,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-openai-example: 0
 - homepage-ai-route-openai-answer-bank: 0
 - homepage-ai-route-openai-path-guide: 0
-- homepage-ai-route-openai-comparison: 0
+- homepage-ai-route-anthropic-template: 0
+- homepage-ai-route-anthropic-example: 0
+- homepage-ai-route-anthropic-answer-bank: 0
+- homepage-ai-route-anthropic-path-guide: 0
 - homepage-ai-starter-pack-comparison: 0
 - homepage-ai-route-broader-handoff: 0
 - homepage-ai-bundle-sample: 0
@@ -340,6 +346,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-starter-pack-nav-audit: 0
 - openai-answer-template-nav-audit: 0
 - openai-answer-bank-nav-audit: 0
+- anthropic-answer-template-nav-audit: 0
+- anthropic-answer-bank-nav-audit: 0
 - blog-ai-agent-approval-gate-nav-audit: 0
 - blog-ai-agent-checklist-nav-audit: 0
 - blog-ai-agent-tool-access-nav-audit: 0
@@ -361,6 +369,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-openai-answer-example-nav-audit: 0
 - blog-openai-answer-template-nav-audit: 0
 - blog-openai-path-guide-nav-audit: 0
+- blog-anthropic-bank-vs-builder-nav-audit: 0
+- blog-anthropic-answer-example-nav-audit: 0
+- blog-anthropic-path-guide-nav-audit: 0
 - pricing-ai-disclosure-packet: 0
 - pricing-ai-deal-blocker: 0
 - pricing-ai-procurement: 0
@@ -386,6 +397,11 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-openai-answer-template: 0
 - pricing-openai-answer-bank: 0
 - pricing-openai-path-guide: 0
+- anthropic-security-questionnaire-template-pricing: 0
+- anthropic-security-questionnaire-example-pricing: 0
+- anthropic-answer-bank-pricing: 0
+- anthropic-answer-bank-vs-builder-pricing: 0
+- anthropic-path-guide-pricing: 0
 - pricing-ai-questionnaire: 0
 - pricing-ai-questionnaire-example: 0
 - pricing-ai-packet-sample: 0
@@ -508,6 +524,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-path-guide-openai-template: 0
 - ai-path-guide-openai-example: 0
 - ai-path-guide-openai-route-guide: 0
+- ai-path-guide-anthropic-template: 0
+- ai-path-guide-anthropic-example: 0
+- ai-path-guide-anthropic-route-guide: 0
 - ai-path-guide-packet: 0
 - ai-path-guide-review-pack: 0
 - ai-path-guide-pro-kit: 0
@@ -515,6 +534,12 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-path-guide-builder: 0
 - ai-path-guide-evidence-map: 0
 - ai-path-guide-answer-bank: 0
+- anthropic-path-guide-builder: 0
+- anthropic-path-guide-evidence-map: 0
+- anthropic-path-guide-answer-bank: 0
+- anthropic-path-guide-answer-comparison: 0
+- anthropic-path-guide-generic: 0
+- anthropic-path-guide-hub: 0
 - ai-agent-review-builder: 0
 - ai-agent-review-approval-gate: 0
 - ai-agent-review-follow-up-pack: 0
@@ -589,6 +614,21 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-security-questionnaire-example-packet: 0
 - openai-security-questionnaire-example-teardown: 0
 - openai-security-questionnaire-example-pricing: 0
+- anthropic-security-questionnaire-template-builder: 0
+- anthropic-security-questionnaire-template-evidence-map: 0
+- anthropic-security-questionnaire-template-example: 0
+- anthropic-security-questionnaire-template-answer-bank: 0
+- anthropic-security-questionnaire-template-comparison: 0
+- anthropic-security-questionnaire-template-starter-pack: 0
+- anthropic-security-questionnaire-template-teardown: 0
+- anthropic-security-questionnaire-example-builder: 0
+- anthropic-security-questionnaire-example-template: 0
+- anthropic-security-questionnaire-example-answer-bank: 0
+- anthropic-security-questionnaire-example-comparison: 0
+- anthropic-security-questionnaire-example-packet: 0
+- anthropic-security-questionnaire-example-starter-pack: 0
+- anthropic-security-questionnaire-example-teardown: 0
+- blog-anthropic-example-evidence-map: 0
 - ai-security-questionnaire-sample: 0
 - ai-security-questionnaire-stack: 0
 - ai-security-questionnaire-teardown: 0
@@ -609,6 +649,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-openai-answer-template: 0
 - ai-procurement-hub-openai-answer-example: 0
 - ai-procurement-hub-openai-answer-bank: 0
+- ai-procurement-hub-anthropic-answer-template: 0
+- ai-procurement-hub-anthropic-answer-example: 0
+- ai-procurement-hub-anthropic-answer-bank: 0
+- ai-procurement-hub-anthropic-path-guide: 0
 - ai-starter-pack-vs-builder: 0
 - ai-procurement-hub-answer-example: 0
 - ai-procurement-hub-answer-builder: 0
@@ -686,6 +730,27 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-answer-bank-vs-builder-pricing: 0
 - openai-answer-bank-vs-builder-evidence-map: 0
 - openai-answer-bank-vs-builder-bundle-sample: 0
+- anthropic-answer-bank-builder: 0
+- anthropic-answer-bank-template: 0
+- anthropic-answer-bank-example: 0
+- anthropic-answer-bank-starter-pack: 0
+- anthropic-answer-bank-vs-builder: 0
+- anthropic-answer-bank-vs-pro-kit: 0
+- anthropic-answer-bank-pricing: 0
+- anthropic-answer-bank-packet: 0
+- anthropic-answer-bank-pro-kit: 0
+- anthropic-answer-bank-risk-worksheet: 0
+- anthropic-answer-bank-teardown: 0
+- anthropic-answer-bank-evidence-map: 0
+- anthropic-answer-bank-vs-builder-bank: 0
+- anthropic-answer-bank-vs-builder-builder: 0
+- anthropic-answer-bank-vs-builder-template: 0
+- anthropic-answer-bank-vs-builder-example: 0
+- anthropic-answer-bank-vs-builder-starter-pack: 0
+- anthropic-answer-bank-vs-builder-teardown: 0
+- anthropic-answer-bank-vs-builder-pricing: 0
+- anthropic-answer-bank-vs-builder-evidence-map: 0
+- anthropic-answer-bank-vs-builder-bundle-sample: 0
 - openai-path-guide-template: 0
 - openai-path-guide-example: 0
 - openai-path-guide-answer-bank: 0
@@ -695,6 +760,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-path-guide-pricing: 0
 - openai-path-guide-hub: 0
 - ai-procurement-hub-openai-path-guide: 0
+- anthropic-path-guide-template: 0
+- anthropic-path-guide-example: 0
 - openai-security-questionnaire-template-comparison: 0
 - openai-security-questionnaire-example-comparison: 0
 - ai-answer-bank-vs-builder-answer-bank: 0

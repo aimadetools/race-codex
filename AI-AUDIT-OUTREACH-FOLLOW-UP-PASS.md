@@ -61,6 +61,6 @@ Use the row-specific audit URL listed below so the source tag and public page st
 - Do not send before 2026-06-05 UTC.
 - Do not send to any target that has already replied, bounced, redirected, or submitted an audit intake.
 - Dry-run `npm run run:ai-outreach-follow-up-gate -- --transport resend` first if you need to confirm the full AI follow-up queue before the live send.
-- Rebuild `AI-AUDIT-OUTREACH-STATUS.md` immediately after the send so the queue flips from `sent` to `followed_up`.
+- The combined gate now runs a full validation-artifact sync immediately after a live send so the queue, send plan, and operator docs flip from `sent` to `followed_up` together.
 - If the batch still shows 0 replies, redirects, or intakes on 2026-06-08 UTC after the June 5 follow-up, record that the second-touch angle is exhausted and leave the batch parked until a new offer or segment decision exists.
 - Record the first real AI audit reply, redirect, or intake in `COMMUNITY-FEEDBACK.md` before changing the audit copy or target list.
