@@ -162,7 +162,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-04: refreshed the validation-gate artifacts at 16:06 UTC, re-synced the inbox/help/generator/partner/benchmark/AI-agent/audit snapshots, and kept the watcher checks green while the queue stayed at zero.
-- 2026-06-04: tightened the purchase-preview and checkout-handoff surfaces with the new kit preview manifest plus visible purchase-next-steps links on the homepage and pricing surfaces.
-- 2026-06-04: refreshed the validation-maintenance artifacts at 16:03 UTC, kept source-tag coverage and site-link checks green, and left the queue at zero while the June 5 audit follow-up stayed queued.
+- 2026-06-04: refreshed the validation-gate and validation-maintenance artifacts at 16:03-16:08 UTC, kept the watcher checks green and the queue at zero, and tightened the purchase-preview/checkout-handoff surfaces with the new kit preview manifest plus visible purchase-next-steps links on the homepage and pricing surfaces.
 - 2026-06-04 to 2026-05-27: refreshed the operator watch artifacts through the 12:59 UTC checkpoint, kept the queue at zero, added second-touch exhaustion handling plus the combined AI follow-up gate path, repaired the main send-plan visibility for the active audit lane, added `NOTICEKIT_TODAY` simulation support so the June 5 AI follow-up branch can be dry-run before the live window, and shipped the route chooser, Anthropic/Claude named-vendor wedge, answer-library hub, audit evidence reconciliation, and the earlier sample-bundle, free-teardown, starter-pack-vs-builder, free-tools/pricing/kit-preview/purchase-next-steps/evidence-map, AI-agent workspace, generator, partner, benchmark, and AI-agent-review passes.
