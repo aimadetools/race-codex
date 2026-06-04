@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-04 04:28 UTC
+Checked at: 2026-06-04 08:06 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -250,6 +250,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-route-one-answer: 0
 - free-tools-route-repeat-review: 0
 - free-tools-route-broader-handoff: 0
+- route-chooser-answer-bank: 0
+- route-chooser-audit: 0
+- route-chooser-builder: 0
+- route-chooser-free-tools: 0
+- route-chooser-inventory: 0
+- route-chooser-nav-audit: 0
+- route-chooser-pricing: 0
+- route-chooser-starter-pack: 0
 - free-tools-vendor-register: 0
 - free-tools-vendor-register-legacy: 0
 - review-brief-builder-teardown: 0
@@ -302,6 +310,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - partner-client-handoff-cta: 0
 - homepage-shortcut: 0
 - homepage-hero: 0
+- homepage-route-chooser: 0
 - homepage-ai-route-inventory: 0
 - homepage-pricing: 0
 - homepage-free-tools: 0
@@ -389,6 +398,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-evidence-map: 0
 - ai-procurement-hub-bundle-sample: 0
 - ai-procurement-hub-starter-pack-comparison: 0
+- ai-procurement-hub-route-chooser: 0
 - pricing-ai-agent-review: 0
 - pricing-ai-agent-checklist: 0
 - pricing-ai-agent-approval-gate: 0
@@ -407,6 +417,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-packet-sample: 0
 - pricing-ai-stack-guide: 0
 - pricing-nav-audit: 0
+- pricing-route-chooser: 0
 - pricing-concierge-card: 0
 - pricing-bottom-audit: 0
 - pricing-review-brief-builder: 0
