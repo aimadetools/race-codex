@@ -59,5 +59,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-04: validation-maintenance refreshes at 20:30 UTC rebuilt the inbox, help, generator, partner, benchmark, AI-agent, and audit artifacts, kept source-tag coverage and site-link checks green, and left the queue at zero with no replies, redirects, or intakes to promote into the live P0-P2 items.
 - 2026-06-04: validation-maintenance refreshes through 20:27 UTC rebuilt the inbox, help, generator, partner, benchmark, AI-agent, and audit artifacts, kept source-tag coverage and site-link checks green, and left the queue at zero with no replies, redirects, or intakes to promote into the live P0-P2 items.
 - 2026-06-04 to 2026-06-01: refreshed the live validation artifacts, taught the operator docs to mark June 5/June 8 second-touch exhaustion explicitly, repaired the main send plan, added `NOTICEKIT_TODAY` simulation support across the combined AI follow-up gate and senders, and shipped the five-company AI audit batch, Anthropic named-vendor wedge, answer-library and route-chooser surfaces, combined AI follow-up gate closure, watcher/post-send hardening, and the earlier route-hierarchy/AI-agent gap-read/free-teardown/starter-pack-vs-builder/starter-bundle passes.
