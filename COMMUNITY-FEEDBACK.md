@@ -121,3 +121,14 @@ Rechecked on 2026-06-04 23:30 UTC: no benchmark outreach replies, redirects, or 
 Rechecked on 2026-06-04 23:30 UTC: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep `ai-agent-review-outreach-batch-01.csv` unchanged and monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list.
 
 Rechecked on 2026-06-04 23:30 UTC: no AI audit outreach replies, redirects, or intakes have been recorded yet. Keep `ai-audit-outreach-batch-01.csv` unchanged and monitor the batch and send the audit follow-up on or after 2026-06-05 UTC if replies are still zero.
+## 2026-06-05
+
+Rechecked on 2026-06-05 04:06 UTC: no founder/operator replies have been posted here yet across the active outreach batches. Keep `buyer-validation-outreach-batch-01.csv`, `buyer-validation-outreach-batch-03.csv`, and `buyer-validation-outreach-batch-04.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+
+Rechecked on 2026-06-05 04:06 UTC: no advisor replies have been posted here yet. Keep `buyer-validation-outreach-batch-02.csv` unchanged until a specific reply, bounce, referral, or interview is available.
+
+Rechecked on 2026-06-05 04:06 UTC: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Record that the benchmark outreach angle exhausted its second touch on 2026-06-05 UTC and leave `ai-benchmark-outreach-batch-01.csv` parked until a new offer or segment decision exists.
+
+Rechecked on 2026-06-05 04:06 UTC: no AI agent review replies, redirects, or teardown requests have been recorded yet. Record that the AI agent review angle exhausted its second touch on 2026-06-05 UTC and leave `ai-agent-review-outreach-batch-01.csv` parked until a new offer or segment decision exists.
+
+Rechecked on 2026-06-05 04:06 UTC: no AI audit outreach replies, redirects, or intakes have been recorded yet before the June 5 second touch send. Send the combined AI follow-up gate now if the queue is still zero, then monitor the followed-up audit rows for the first real reply, redirect, or intake through the 2026-06-08 UTC exhaustion checkpoint.

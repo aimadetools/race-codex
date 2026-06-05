@@ -334,6 +334,7 @@ async function main() {
   const latestInboxRecord = inbox.records[0] || null;
   const hasInboxEvidence = inboxSubmissions > 0;
   const secondTouchExhausted = followedUpWaiting > 0 && terminalRows === 0 && !hasInboxEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE;
+  const hasExhaustionLogged = feedbackText.includes(`AI agent review angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
   const gapReadSourceBreakdown = AI_AGENT_GAP_READ_SOURCE_TAGS.map((sourceTag) => ({
     sourceTag,
     count: countBySourceTag(inbox.records, sourceTag)
@@ -357,10 +358,12 @@ async function main() {
     : sentWaiting > 0 && earliestFollowUpDue
       ? `monitor the batch for replies and send the AI agent review follow-up on or after ${earliestFollowUpDue} UTC if replies are still zero.`
       : secondTouchExhausted
-        ? `record that the AI agent review angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists.`
-      : followedUpWaiting > 0
-        ? "monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list."
-        : "monitor the batch for the first real reply or teardown request.";
+        ? hasExhaustionLogged
+          ? "keep the AI agent review batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending."
+          : `record that the AI agent review angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists.`
+        : followedUpWaiting > 0
+          ? "monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list."
+          : "monitor the batch for the first real reply or teardown request.";
 
   const output = [
     "# AI Agent Review Outreach Status",

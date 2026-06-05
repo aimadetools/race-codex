@@ -308,7 +308,8 @@ function extractFeedbackMentions(text, companies) {
 function describeNextAction(rows, options = {}) {
   const {
     todayKey = "",
-    hasInboxEvidence = false
+    hasInboxEvidence = false,
+    hasExhaustionLogged = false
   } = options;
   const positiveReplies = countBy(rows, "status", "replied_positive");
   const negativeReplies = countBy(rows, "status", "replied_negative");
@@ -342,6 +343,9 @@ function describeNextAction(rows, options = {}) {
 
   if (followedUpRows.length > 0) {
     if (!hasInboxEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE) {
+      if (hasExhaustionLogged) {
+        return "keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+      }
       return `record that the benchmark outreach angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
     }
     return "monitor the followed-up benchmark rows for the first real reply, redirect, or teardown request before expanding the list";
@@ -374,6 +378,7 @@ async function main() {
   const latestInboxRecord = inbox.records[0] || null;
   const hasInboxEvidence = inbox.records.length > 0;
   const secondTouchExhausted = followedUp > 0 && terminal === 0 && !hasInboxEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE;
+  const hasExhaustionLogged = feedbackText.includes(`benchmark outreach angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
 
   const output = [
     "# Benchmark Outreach Status",
@@ -397,7 +402,7 @@ async function main() {
     ...(secondTouchExhausted
       ? [`- Second-touch state: exhausted on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC with 0 recorded replies, bounces, interviews, or teardown submissions.`]
       : []),
-    `- Next benchmark action: ${describeNextAction(rows, { todayKey, hasInboxEvidence })}.`,
+    `- Next benchmark action: ${describeNextAction(rows, { todayKey, hasInboxEvidence, hasExhaustionLogged })}.`,
     ""
   ];
 

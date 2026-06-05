@@ -60,4 +60,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05: shipped the audit deliverable sample, wired it into the audit page and audit outreach copy, passed site-link/source-tag checks, and sent the five-row June 5 audit follow-up through the combined gate; older validation-maintenance, route-clarity, answer-library, named-vendor, route-chooser, AI-agent gap-read, free-teardown, and starter-pack-vs-builder work remains collapsed here while reply capture stays at zero.
+- 2026-06-05: shipped the audit deliverable sample, wired it into the audit page and audit outreach copy, passed site-link/source-tag checks, sent the five-row June 5 audit follow-up through the combined gate, and formally parked the zero-signal benchmark plus AI-agent-review lanes at their 2026-06-05 second-touch checkpoint; older validation-maintenance, route-clarity, answer-library, named-vendor, route-chooser, AI-agent gap-read, free-teardown, and starter-pack-vs-builder work remains collapsed here while reply capture stays at zero.

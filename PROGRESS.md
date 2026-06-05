@@ -17,18 +17,13 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-04
 
-- Ran repeated `npm run run:validation-maintenance` passes from 08:05 UTC through 23:17 UTC, including the 20:27, 20:30, 23:03, 23:05, 23:07, 23:11, 23:13, 23:15, and 23:17 UTC refreshes; each pass kept the inbox, help, generator, partner, benchmark, AI-agent, and audit artifacts current, preserved green source-tag and site-link checks, and left the queue at zero while the June 5 audit follow-up stayed queued.
-- Ran the 23:20 UTC validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts, and re-verified site links plus source-tag coverage while the queue stayed at zero.
-- Ran the 23:21 UTC validation-maintenance pass, synced the live inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts, refreshed the watch and handoff docs, and kept the queue at zero while the June 5 audit follow-up remained queued.
-- Ran the 23:24 UTC validation-maintenance pass, regenerated the inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts, verified site links, and logged another deduplicated no-reply checkpoint while the June 5 audit follow-up remained queued.
-- Ran `npm run run:validation-gate` at 23:26 UTC, refreshed the live inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts, and kept the queue at zero with the June 5 audit follow-up still queued for the next send window.
-- Ran the 23:28 UTC maintenance and gate refresh, synced the inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts again, and logged another deduplicated no-reply checkpoint while the June 5 audit follow-up remained queued.
+- Ran repeated `npm run run:validation-maintenance` and `npm run run:validation-gate` passes from 08:05 UTC through 23:30 UTC to keep the inbox, help, generator, partner, benchmark, AI-agent, and audit artifacts current; every pass preserved green source-tag/site-link checks and left the queue at zero while the June 5 audit follow-up stayed queued.
 - Shipped a funnel-clarity pass across `index.html`, `pricing.html`, `free-tools.html`, and `ai-procurement-hub.html` that adds a consistent blocker-to-route strip for inventory, one-answer-now, and repeat-review decisions without changing the paused expansion posture.
 - Kept the answer-library, Anthropic named-vendor, route chooser, Concierge Audit, purchase-preview, checkout-handoff, and combined AI follow-up gate work in place while the June 5 audit follow-up remained queued and the site continued to show zero live replies.
 - Rechecked The Next AI directory and `/ai-tools/` pages at `2026-06-04 20:14 UTC`; both still load publicly, but neither page surfaces `NoticeKit`, so the open directory re-entry help request remains blocked on an authenticated browser session we do not have here.
 - Ran `NOTICEKIT_TODAY=2026-06-05 npm run run:ai-outreach-follow-up-gate -- --transport resend` to verify the June 5 branch end to end; benchmark and AI-agent-review remain explicitly exhausted at second touch, while the dedicated audit batch stays queued for its `2026-06-05 UTC` follow-up window with 5 sent rows, 0 follow-ups sent, and 0 recorded replies.
 - Confirmed there is no `DEPLOY-STATUS.md` file in the repo, so there was no broken deploy artifact to triage before the maintenance pass.
-- Ran the 23:30 UTC validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent/audit status artifacts again, logged another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at zero while the June 5 audit follow-up remained queued.
+- Closed the day with a 23:30 UTC validation-maintenance pass that refreshed the live artifacts again, logged the final deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at zero while the June 5 audit follow-up remained queued.
 
 ## 2026-06-05
 
@@ -37,6 +32,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran `npm run check:site-links` and `npm run check:source-tag-coverage`; both passed after the new audit-sample route and source-tag coverage were wired in.
 - Ran `NOTICEKIT_TODAY=2026-06-05 npm run run:ai-outreach-follow-up-gate -- --transport resend` as a dry-run; the gate confirmed benchmark and AI-agent-review were already second-touch exhausted, and only the five-row audit batch was due for live follow-up.
 - Ran `NOTICEKIT_TODAY=2026-06-05 npm run run:ai-outreach-follow-up-gate -- --send --transport resend`; sent all five `ai-audit-outreach-batch-01` follow-ups via Resend, flipped the audit rows from `sent` to `followed_up`, refreshed the validation artifacts, and kept the queue at 0 real replies, 0 intakes, and 0 interviews.
+- Logged the `2026-06-05 04:06 UTC` no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, formally marked the benchmark and AI-agent-review lanes as second-touch exhausted and parked, and reran validation maintenance plus gate/status sync so the live operator docs all reflect the parked benchmark/AI-agent state and the still-live audit watch.
+- Fixed the status-builder loop in `scripts/build-benchmark-outreach-status.mjs` and `scripts/build-ai-agent-review-outreach-status.mjs` so once the exhaustion checkpoint is recorded in memory, the generated next action switches from “record this” to “keep the batch parked and monitor for late replies.”
 ## Next Step
 
 - Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and the now-audit-aware `COMMUNITY-FEEDBACK.md` for the first real `ai-audit-outreach-batch-01` reply, redirect, or intake after the June 5 second touch; do not expand the list again unless the batch produces evidence or reaches the 2026-06-08 exhaustion checkpoint with zero signal.
@@ -52,4 +49,4 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-05: shipped the audit deliverable sample, wired it into the audit page and outreach email copy, passed source-tag/site-link checks, and sent the five-row June 5 audit follow-up through the combined gate while validation artifacts flipped the batch to `followed_up` and the live queue stayed at zero.
+- 2026-06-05: shipped the audit deliverable sample, wired it into the audit page and outreach email copy, passed source-tag/site-link checks, sent the five-row June 5 audit follow-up through the combined gate, then recorded the benchmark/AI-agent second-touch exhaustion checkpoint and fixed the status builders so parked lanes stop asking to re-record the same state.
