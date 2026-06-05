@@ -55,8 +55,5 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-05: kept the validation stack green through the `12:54 UTC` checkpoint, refreshed the inbox/help/generator/partner/outreach artifacts, reverified self-audit and free-teardown/contact checks, and kept every active lane parked at zero real replies or intakes.
-- 2026-06-05: shipped the AI due-diligence acquisition page plus the audit sample/routing hardening, then cleaned the memory files so the live watch, progress log, and backlog summaries stay concise.
-- 2026-06-05: advanced the live no-reply watch to the `12:59 UTC` checkpoint with another clean maintenance/gate pass; benchmark and AI-agent lanes stayed parked, and the audit lane remained in followed-up monitoring mode with zero evidence.
-- 2026-06-05: the `16:02-16:03 UTC` maintenance/gate refresh regenerated the self-audit and validation status artifacts, synced the live watch files, and left every active outreach lane at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `16:05 UTC` maintenance/gate refresh repeated the same green checks, refreshed the synced validation artifacts, and kept every active outreach lane parked at zero real replies, redirects, intakes, and interviews.
+- 2026-06-05: the validation stack stayed green through the `16:07 UTC` checkpoint, with repeated maintenance/gate refreshes, refreshed inbox/help/generator/partner/outreach artifacts, and zero real replies, redirects, intakes, or interviews across every active lane.
+- 2026-06-05: the AI due-diligence acquisition page, audit sample/routing hardening, and memory-file cleanup all shipped, so the live watch now stays concise while the evidence gate remains paused.
