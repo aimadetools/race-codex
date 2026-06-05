@@ -61,8 +61,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05: the `20:22 UTC` validation maintenance/gate refresh stayed green, resynced the live watch files and production verify snapshot, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `20:19 UTC` validation maintenance/gate refresh stayed green, resynced the live watch files and production verify snapshot, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `20:04 UTC` through `20:17 UTC` validation maintenance/gate refreshes stayed green, resynced the live watch files and production verify snapshot, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
+- 2026-06-05: the `20:04 UTC` through `20:24 UTC` validation maintenance/gate refreshes stayed green, resynced the live watch files and status snapshots, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
 - 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory/status refreshes stayed green, kept the inbox/help/generator/partner/outreach artifacts aligned, and left the live evidence queue parked at zero real replies, redirects, and interviews.
 - 2026-06-05: due-diligence, audit sample/routing, homepage purchase CTA, and watched source-tag cleanup shipped, so premium work remains gated on real audit, named-vendor, due-diligence, or advisor evidence rather than more copy-only expansion.
