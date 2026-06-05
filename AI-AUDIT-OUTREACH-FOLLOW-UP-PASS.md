@@ -11,17 +11,17 @@ Prepared rows: 5
 
 ## Current Status
 
-AI audit batch 01 currently has 5 sent row(s) and no recorded replies, bounces, redirects, or audit intakes.
+AI audit follow-up has already been sent for 5 row(s), and no reply, redirect, or intake evidence is recorded yet.
 
 ## Follow-Up Queue
 
 | Priority | Company | Segment | Status | Follow-up date | Recipient | Public page |
 |---:|---|---|---|---|---|---|
-| 1 | Kindly | Security or privacy lead | sent | 2026-06-05 | security@kindly.ai | https://trust.kindly.ai/ |
-| 2 | Hazel | Support or security lead | sent | 2026-06-05 | support@hazel.ai | https://trust.hazel.ai/ |
-| 3 | Siesta AI | Security lead | sent | 2026-06-05 | security@siesta.ai | https://siesta.ai/trust |
-| 4 | Rakenne | Privacy or founder lead | sent | 2026-06-05 | privacy@rakenne.app | https://rakenne.app/trust/ |
-| 5 | Snoooz | Security lead | sent | 2026-06-05 | security@snoooz.ai | https://snoooz.ai/security |
+| 1 | Kindly | Security or privacy lead | followed_up | 2026-06-05 | security@kindly.ai | https://trust.kindly.ai/ |
+| 2 | Hazel | Support or security lead | followed_up | 2026-06-05 | support@hazel.ai | https://trust.hazel.ai/ |
+| 3 | Siesta AI | Security lead | followed_up | 2026-06-05 | security@siesta.ai | https://siesta.ai/trust |
+| 4 | Rakenne | Privacy or founder lead | followed_up | 2026-06-05 | privacy@rakenne.app | https://rakenne.app/trust/ |
+| 5 | Snoooz | Security lead | followed_up | 2026-06-05 | security@snoooz.ai | https://snoooz.ai/security |
 
 ## Follow-Up Copy
 

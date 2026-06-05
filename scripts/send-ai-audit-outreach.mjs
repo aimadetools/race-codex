@@ -205,6 +205,12 @@ function auditUrlForRow(row, mode) {
   return url.toString();
 }
 
+function auditSampleUrl(source) {
+  const url = new URL("https://noticekit.tech/ai-security-questionnaire-audit-sample.html");
+  url.searchParams.set("source", source);
+  return url.toString();
+}
+
 function firstTouchContent(row) {
   return {
     subject: "48-hour audit for your live AI review path?",
@@ -218,6 +224,7 @@ function firstTouchContent(row) {
       "",
       `I built a narrow 48-hour async audit for exactly that situation: ${auditUrlForRow(row, "first-touch")}`,
       "If the thread is active, the intake can stay scoped to one buyer question, one proof gap, or one agent-control blocker. The output is just three things: top gap, best fix path, and reply-ready guidance.",
+      `Redacted sample deliverable: ${auditSampleUrl("ai-audit-email-sample")}`,
       "",
       "If this belongs with someone else on security, privacy, procurement, or trust, I would appreciate the redirect.",
       "",
@@ -238,6 +245,7 @@ function followUpContent(row) {
       "I reached out because your team already has a public trust path, which usually means the hard part is no longer publishing something, but tightening the exact proof, control boundary, or reviewer handoff that a live buyer thread pushes on next.",
       "",
       `If useful, here is the scoped audit path again: ${auditUrlForRow(row, "follow-up")}`,
+      `And here is a redacted sample of the actual deliverable: ${auditSampleUrl("ai-audit-email-sample")}`,
       "If not, even a one-line reply would help: is the real friction usually proof assets, named-vendor wording, or the control boundary itself?",
       "",
       "Best,",

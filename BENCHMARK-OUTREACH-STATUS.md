@@ -1,6 +1,6 @@
 # Benchmark Outreach Status
 
-Checked at: 2026-06-04 23:30 UTC
+Checked at: 2026-06-05 04:03 UTC
 
 ## Current State
 
@@ -16,12 +16,14 @@ Checked at: 2026-06-04 23:30 UTC
 - Benchmark mentions logged in COMMUNITY-FEEDBACK.md: 10
 - First benchmark outreach send: 2026-05-28 12:37 UTC
 - Second-touch exhaustion checkpoint: 2026-06-05 UTC.
-- Next benchmark action: monitor the followed-up benchmark rows for the first real reply, redirect, or teardown request before expanding the list.
+- Second-touch state: exhausted on 2026-06-05 UTC with 0 recorded replies, bounces, interviews, or teardown submissions.
+- Next benchmark action: record that the benchmark outreach angle exhausted its second touch on 2026-06-05 UTC and leave the batch parked until a new offer or segment decision exists.
 
 ## Evidence Watch
 
 - Blob inbox check found no benchmark-tagged submissions yet.
 - COMMUNITY-FEEDBACK.md contains 10 benchmark-related line(s); review the excerpts below before changing outreach copy.
+- The June 2 follow-up has now aged past the June 5 UTC checkpoint with zero benchmark evidence, so this batch should stay parked until a new offer or segment decision exists.
 
 ## Inbox Matches
 

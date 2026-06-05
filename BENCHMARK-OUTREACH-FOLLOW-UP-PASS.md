@@ -11,7 +11,9 @@ Prepared rows: 5
 
 ## Current Status
 
-Benchmark follow-up has already been sent for 5 row(s), and no benchmark reply or teardown evidence is recorded yet.
+Benchmark follow-up is exhausted as of 2026-06-05 UTC: all 5 row(s) were followed up, and the outreach CSV still shows 0 replies, bounces, or interviews. Keep the batch parked until a new offer or segment decision exists.
+
+Exhaustion checkpoint: 2026-06-05 UTC.
 
 ## Follow-Up Queue
 

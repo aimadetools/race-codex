@@ -1,6 +1,6 @@
 # NoticeKit Validation Outreach Send Plan
 
-Date: 2026-06-04
+Date: 2026-06-05
 
 This plan translates the current outreach CSV state into the active send and reply-handling queue.
 Use it to see which batches are live, which are still queued, and what should happen next when evidence arrives.
@@ -9,7 +9,7 @@ Direct-email targets identified across all prepared batches: 33
 
 ## Current Priority
 
-Monitor replies across the 35 active outbound row(s); no additional expansion is unlocked until evidence lands. AI audit batch 01 follow-up is due on 2026-06-05 UTC if replies stay at zero.
+Monitor replies across the 35 active outbound row(s); no additional expansion is unlocked until evidence lands.
 
 ## Batch 01
 
@@ -85,15 +85,15 @@ Status: active outbound on 2026-05-29; 0 sent, 5 followed_up, 0 terminal row(s).
 
 ## AI audit batch 01
 
-Status: active outbound on 2026-06-03; 5 sent, 0 followed_up, 0 terminal row(s).
+Status: active outbound on 2026-06-03; 0 sent, 5 followed_up, 0 terminal row(s).
 
 | Priority | Target | Segment | Route | Send method | Status | Follow-up state |
 |---:|---|---|---|---|---|---|
-| 1 | Kindly | Security or privacy lead | security@kindly.ai | direct-email | sent | due 2026-06-05 |
-| 2 | Hazel | Support or security lead | support@hazel.ai | direct-email | sent | due 2026-06-05 |
-| 3 | Siesta AI | Security lead | security@siesta.ai | direct-email | sent | due 2026-06-05 |
-| 4 | Rakenne | Privacy or founder lead | privacy@rakenne.app | direct-email | sent | due 2026-06-05 |
-| 5 | Snoooz | Security lead | security@snoooz.ai | direct-email | sent | due 2026-06-05 |
+| 1 | Kindly | Security or privacy lead | security@kindly.ai | direct-email | followed_up | sent 2026-06-05 |
+| 2 | Hazel | Support or security lead | support@hazel.ai | direct-email | followed_up | sent 2026-06-05 |
+| 3 | Siesta AI | Security lead | security@siesta.ai | direct-email | followed_up | sent 2026-06-05 |
+| 4 | Rakenne | Privacy or founder lead | privacy@rakenne.app | direct-email | followed_up | sent 2026-06-05 |
+| 5 | Snoooz | Security lead | security@snoooz.ai | direct-email | followed_up | sent 2026-06-05 |
 
 ## Notes
 

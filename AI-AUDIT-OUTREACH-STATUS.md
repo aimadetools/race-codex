@@ -1,9 +1,9 @@
 # AI Audit Outreach Status
-Checked at: 2026-06-04 23:30 UTC
+Checked at: 2026-06-05 04:03 UTC
 ## Current State
 - Ready for first send: 0
-- Sent and waiting on reply: 5
-- Followed up and waiting on reply: 0
+- Sent and waiting on reply: 0
+- Followed up and waiting on reply: 5
 - Positive replies in outreach CSV: 0
 - Negative replies in outreach CSV: 0
 - Bounces in outreach CSV: 0
@@ -14,7 +14,7 @@ Checked at: 2026-06-04 23:30 UTC
 - Audit mentions logged in COMMUNITY-FEEDBACK.md: 2
 - First audit outreach send: 2026-06-03 12:34 UTC
 - Second-touch exhaustion checkpoint: 2026-06-08 UTC.
-- Next audit action: monitor the batch and send the audit follow-up on or after 2026-06-05 UTC if replies are still zero.
+- Next audit action: monitor the followed-up audit rows for the first real reply, redirect, or intake before expanding the list.
 ## Evidence Watch
 - Blob inbox check found no audit-tagged submissions yet.
 - COMMUNITY-FEEDBACK.md contains 2 audit-related line(s); review the excerpts below before changing outreach copy.
@@ -30,8 +30,8 @@ Checked at: 2026-06-04 23:30 UTC
 
 | Priority | Company | Segment | Status | Route |
 |---:|---|---|---|---|
-| 1 | Kindly | Security or privacy lead | sent | security@kindly.ai |
-| 2 | Hazel | Support or security lead | sent | support@hazel.ai |
-| 3 | Siesta AI | Security lead | sent | security@siesta.ai |
-| 4 | Rakenne | Privacy or founder lead | sent | privacy@rakenne.app |
-| 5 | Snoooz | Security lead | sent | security@snoooz.ai |
+| 1 | Kindly | Security or privacy lead | followed_up | security@kindly.ai |
+| 2 | Hazel | Support or security lead | followed_up | support@hazel.ai |
+| 3 | Siesta AI | Security lead | followed_up | security@siesta.ai |
+| 4 | Rakenne | Privacy or founder lead | followed_up | privacy@rakenne.app |
+| 5 | Snoooz | Security lead | followed_up | security@snoooz.ai |
