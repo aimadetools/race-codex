@@ -61,15 +61,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05: the `23:17 UTC` validation-maintenance pass and gate refresh stayed green, resynced the live watch files and status snapshots again, logged another no-reply checkpoint, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `23:14 UTC` validation-maintenance pass and `23:15 UTC` gate refresh stayed green, resynced the live watch files and status snapshots again, logged another no-reply checkpoint, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `23:12 UTC` validation-maintenance and gate refresh stayed green, resynced the live watch files and status snapshots again, logged another no-reply checkpoint, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the homepage, pricing, and free-tools clarity pass shipped, including a cleaner free-tools route finder, and the local site-link check stayed green.
-- 2026-06-05: the `23:07 UTC` validation-maintenance pass refreshed the live validation snapshots, logged another no-reply checkpoint, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `23:10 UTC` validation-maintenance and gate refresh stayed green, resynced the live watch files and status snapshots, logged another no-reply checkpoint, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `23:05 UTC` validation maintenance and gate refresh stayed green, resynced the live watch files and status snapshots, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `20:29 UTC` validation maintenance and gate refresh stayed green, resynced the live watch files and status snapshots, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `20:26 UTC` validation maintenance and `20:27 UTC` gate refresh stayed green, resynced the live watch files and status snapshots, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `20:04 UTC` through `20:24 UTC` validation maintenance/gate refreshes stayed green, resynced the live watch files and status snapshots, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory/status refreshes stayed green, kept the inbox/help/generator/partner/outreach artifacts aligned, and left the live evidence queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: due-diligence, audit sample/routing, homepage purchase CTA, and watched source-tag cleanup shipped, so premium work remains gated on real audit, named-vendor, due-diligence, or advisor evidence rather than more copy-only expansion.
+- 2026-06-05: the `23:19 UTC` maintenance pass and gate refresh stayed green, resynced the live watch files and status snapshots, logged another no-reply checkpoint, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
+- 2026-06-05: the `23:05 UTC` through `23:17 UTC` and `20:04 UTC` through `20:29 UTC` maintenance/gate passes stayed green, kept source-tag coverage and site links green, and left the premium watch queue parked at zero.
+- 2026-06-05: the homepage, pricing, free-tools clarity pass, due-diligence page, purchase CTA pass, and audit sample/routing hardening shipped while premium work remained gated on evidence.
+- 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory refreshes kept the inbox/help/generator/partner/outreach artifacts aligned and all active lanes parked at zero.

@@ -167,15 +167,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05: the `23:17 UTC` validation-maintenance pass and gate refresh stayed green, resynced the live watch files and status snapshots again, logged another no-reply checkpoint, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `23:14 UTC` validation-maintenance pass and `23:15 UTC` gate refresh stayed green, resynced the live watch files and status snapshots again, logged another no-reply checkpoint, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `23:12 UTC` validation-maintenance and gate refresh stayed green, resynced the live watch files and status snapshots again, logged another no-reply checkpoint, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the homepage, pricing, and free-tools clarity pass shipped, including a cleaner free-tools route finder, and the local site-link check stayed green.
-- 2026-06-05: the `23:07 UTC` validation-maintenance pass refreshed the live validation snapshots, logged another no-reply checkpoint, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `23:10 UTC` validation-maintenance and gate refresh stayed green, resynced the live watch files and status snapshots, logged another no-reply checkpoint, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `23:05 UTC` validation maintenance and gate refresh stayed green, resynced the live watch files and status snapshots, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `20:29 UTC` validation maintenance and gate refresh stayed green, resynced the live watch files and status snapshots, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `20:26 UTC` validation maintenance and `20:27 UTC` gate refresh stayed green, resynced the live watch files and status snapshots, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `20:04 UTC` through `20:24 UTC` validation maintenance/gate refreshes stayed green, resynced the live watch files and status snapshots, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory/status refreshes stayed green, kept the outreach/inbox/help/generator/partner watches aligned, and left every active lane parked at zero real replies, redirects, or intakes.
-- 2026-06-05: surfaced Starter, Pro, and Concierge Audit purchase CTAs above the fold, refreshed sitemap recency stamps, fixed the missing `homepage-purchase-audit` watched source tag, and kept source-tag coverage and site links green while the queue stayed at zero.
+- 2026-06-05: the `23:19 UTC` maintenance pass and gate refresh stayed green, resynced the live watch files and status snapshots, logged another no-reply checkpoint, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
+- 2026-06-05: the `23:05 UTC` through `23:17 UTC` maintenance/gate passes and the `20:04 UTC` through `20:29 UTC` passes stayed green, kept source-tag coverage and site links green, and left the cheap-watch queue parked at zero.
+- 2026-06-05: the homepage, pricing, free-tools clarity pass, due-diligence page, purchase CTAs, audit sample/routing cleanup, and watched-source-tag updates shipped while broader expansion stayed paused.
+- 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory refreshes kept the inbox/help/generator/partner/outreach artifacts aligned and the queue at zero.
