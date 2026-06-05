@@ -199,6 +199,7 @@ export const WATCHED_SOURCE_TAGS = [
   "homepage-ai-route-inventory",
   "homepage-pricing",
   "homepage-free-tools",
+  "homepage-purchase-audit",
   "homepage-benchmark-appendix",
   "homepage-benchmark-report",
   "homepage-subprocessor-teardown",
