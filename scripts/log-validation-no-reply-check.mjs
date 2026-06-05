@@ -26,6 +26,9 @@ const TERMINAL_STATUSES = new Set(["replied_positive", "replied_negative", "boun
 const BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-05";
 const AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-05";
 const AUDIT_SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
+const BENCHMARK_PARKED_NOTE = "keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+const AGENT_REVIEW_PARKED_NOTE = "keep the AI agent review batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+const AUDIT_PARKED_NOTE = "keep the audit batch parked and monitor the followed-up rows for any late reply, redirect, or intake while a new offer or segment decision is pending";
 
 function parseArgs(argv) {
   const args = new Map();
@@ -163,6 +166,21 @@ function parseUtcTimestamp(value) {
   return null;
 }
 
+function hasLoggedBenchmarkExhaustion(feedbackText) {
+  const explicitNote = `benchmark outreach angle exhausted its second touch on ${BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE} UTC`;
+  return feedbackText.includes(explicitNote) || feedbackText.includes(BENCHMARK_PARKED_NOTE);
+}
+
+function hasLoggedAgentReviewExhaustion(feedbackText) {
+  const explicitNote = `AI agent review angle exhausted its second touch on ${AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE} UTC`;
+  return feedbackText.includes(explicitNote) || feedbackText.includes(AGENT_REVIEW_PARKED_NOTE);
+}
+
+function hasLoggedAuditExhaustion(feedbackText) {
+  const explicitNote = `audit outreach angle exhausted its second touch on ${AUDIT_SECOND_TOUCH_EXHAUSTION_DATE} UTC`;
+  return feedbackText.includes(explicitNote) || feedbackText.includes(AUDIT_PARKED_NOTE);
+}
+
 function extractRecheckTimestamp(line) {
   const match = String(line || "").match(RECHECK_TIMESTAMP_PATTERN);
   if (!match) {
@@ -241,7 +259,7 @@ function describeBenchmarkNoReplyAction(rows, options = {}) {
   if (followedUpRows.length > 0) {
     if (todayKey >= BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE) {
       if (hasExhaustionLogged) {
-        return "keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+        return BENCHMARK_PARKED_NOTE;
       }
       return `record that the benchmark outreach angle exhausted its second touch on ${BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
     }
@@ -271,7 +289,7 @@ function describeAgentReviewNoReplyAction(rows, options = {}) {
   if (followedUpRows.length > 0) {
     if (todayKey >= AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE) {
       if (hasExhaustionLogged) {
-        return "keep the AI agent review batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+        return AGENT_REVIEW_PARKED_NOTE;
       }
       return `record that the AI agent review angle exhausted its second touch on ${AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
     }
@@ -300,7 +318,7 @@ function describeAuditNoReplyAction(rows, options = {}) {
   if (followedUpRows.length > 0) {
     if (todayKey >= AUDIT_SECOND_TOUCH_EXHAUSTION_DATE) {
       if (hasExhaustionLogged) {
-        return "keep the audit batch parked and monitor the followed-up rows for any late reply, redirect, or intake while a new offer or segment decision is pending";
+        return AUDIT_PARKED_NOTE;
       }
       return `record that the audit outreach angle exhausted its second touch on ${AUDIT_SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
     }
@@ -403,9 +421,9 @@ async function main() {
   const benchmarkRows = parsedBatchRows[4] || [];
   const agentReviewRows = parsedBatchRows[5] || [];
   const auditRows = parsedBatchRows[6] || [];
-  const hasBenchmarkExhaustionLogged = feedbackText.includes(`benchmark outreach angle exhausted its second touch on ${BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
-  const hasAgentReviewExhaustionLogged = feedbackText.includes(`AI agent review angle exhausted its second touch on ${AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
-  const hasAuditExhaustionLogged = feedbackText.includes(`audit outreach angle exhausted its second touch on ${AUDIT_SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
+  const hasBenchmarkExhaustionLogged = hasLoggedBenchmarkExhaustion(feedbackText);
+  const hasAgentReviewExhaustionLogged = hasLoggedAgentReviewExhaustion(feedbackText);
+  const hasAuditExhaustionLogged = hasLoggedAuditExhaustion(feedbackText);
   const totalReplyRows = parsedBatchRows.reduce((total, rows) => total + countReplyRows(rows), 0);
   const interviewRows = countInterviewRows(parseCsv(interviewText));
 

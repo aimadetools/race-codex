@@ -215,6 +215,12 @@ function safeValue(value, fallback = "unknown") {
   return text || fallback;
 }
 
+function hasLoggedBenchmarkExhaustion(feedbackText) {
+  const explicitNote = `benchmark outreach angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`;
+  const parkedNote = "keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+  return feedbackText.includes(explicitNote) || feedbackText.includes(parkedNote);
+}
+
 async function loadBenchmarkInboxRecords() {
   const env = await loadEnvFile(DEFAULT_ENV_FILE);
   const fallbackEnv = await loadEnvFile(FALLBACK_ENV_FILE);
@@ -363,7 +369,7 @@ async function main() {
   const latestInboxRecord = inbox.records[0] || null;
   const hasInboxEvidence = inbox.records.length > 0;
   const secondTouchExhausted = followedUp > 0 && terminal === 0 && !hasInboxEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE;
-  const hasExhaustionLogged = feedbackText.includes(`benchmark outreach angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
+  const hasExhaustionLogged = hasLoggedBenchmarkExhaustion(feedbackText);
 
   const output = [
     "# Benchmark Outreach Status",

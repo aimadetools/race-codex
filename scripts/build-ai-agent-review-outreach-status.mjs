@@ -237,6 +237,12 @@ function safeValue(value, fallback = "unknown") {
   return text || fallback;
 }
 
+function hasLoggedAgentReviewExhaustion(feedbackText) {
+  const explicitNote = `AI agent review angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`;
+  const parkedNote = "keep the AI agent review batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+  return feedbackText.includes(explicitNote) || feedbackText.includes(parkedNote);
+}
+
 async function loadAgentReviewInboxRecords() {
   const env = await loadEnvFile(DEFAULT_ENV_FILE);
   const fallbackEnv = await loadEnvFile(FALLBACK_ENV_FILE);
@@ -319,7 +325,7 @@ async function main() {
   const latestInboxRecord = inbox.records[0] || null;
   const hasInboxEvidence = inboxSubmissions > 0;
   const secondTouchExhausted = followedUpWaiting > 0 && terminalRows === 0 && !hasInboxEvidence && todayKey >= SECOND_TOUCH_EXHAUSTION_DATE;
-  const hasExhaustionLogged = feedbackText.includes(`AI agent review angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
+  const hasExhaustionLogged = hasLoggedAgentReviewExhaustion(feedbackText);
   const gapReadSourceBreakdown = AI_AGENT_GAP_READ_SOURCE_TAGS.map((sourceTag) => ({
     sourceTag,
     count: countBySourceTag(inbox.records, sourceTag)
