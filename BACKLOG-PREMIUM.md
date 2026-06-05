@@ -60,5 +60,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05: validation-maintenance and validation-gate refreshes kept the founder/operator, advisor, benchmark, AI-agent-review, and AI-audit lanes at zero replies while the batches stayed parked.
+- 2026-06-05: repeated validation-maintenance and validation-gate refreshes through 08:25 UTC kept the founder/operator, advisor, benchmark, AI-agent-review, and AI-audit lanes at zero replies while the batches stayed parked.
 - 2026-06-05: shipped the audit sample, wired it into the audit page and audit outreach copy, fixed the parked-lane and audit sample-proof coverage gaps, and routed the remaining direct audit CTA paths through the dedicated audit page.

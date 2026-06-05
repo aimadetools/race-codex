@@ -164,5 +164,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05: validation-maintenance and validation-gate refreshes kept the active outreach lanes parked at zero replies.
+- 2026-06-05: repeated validation-maintenance and validation-gate refreshes through 08:25 UTC kept the active outreach lanes parked at zero replies.
 - 2026-06-05: shipped the audit sample, wired it into the audit page and outreach, fixed the parked/no-reply automation and audit sample-proof coverage, routed the remaining direct audit CTAs through the dedicated audit page, and kept the sample visible across the core pages.
