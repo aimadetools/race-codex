@@ -61,7 +61,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05: the validation maintenance and gate refreshes stayed green through the `16:12 UTC` checkpoint, and the live founder, advisor, benchmark, AI-agent-review, partner, and AI-audit lanes remained parked at zero real replies or intakes.
-- 2026-06-05: the validation maintenance and gate refreshes stayed green through the `16:09 UTC` checkpoint, and the live founder, advisor, benchmark, AI-agent-review, partner, and AI-audit lanes remained parked at zero real replies or intakes.
-- 2026-06-05: repeated validation-maintenance and validation-gate refreshes through the `16:07 UTC` checkpoint kept every live founder, advisor, benchmark, AI-agent-review, partner, and AI-audit lane monitored and parked at zero real replies or intakes while the evidence gate remained paused.
+- 2026-06-05: the validation maintenance and gate refreshes stayed green across the `16:07 UTC` to `16:15 UTC` checkpoints, and the live founder, advisor, benchmark, AI-agent-review, partner, and AI-audit lanes remained parked at zero real replies or intakes.
 - 2026-06-05: due-diligence plus audit sample/routing hardening is shipped, so premium work is now blocked on real audit, named-vendor, due-diligence, or advisor evidence rather than more copy-only expansion.
