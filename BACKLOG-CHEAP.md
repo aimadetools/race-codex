@@ -171,3 +171,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 - 2026-06-05: a fresh `16:24 UTC` maintenance/gate sync kept the live watches green, refreshed the status snapshots, and left the outreach queue parked at zero real replies, redirects, or intakes.
 - 2026-06-05: a fresh `16:26 UTC` maintenance/gate sync kept the live watches green again, refreshed the production, self-audit, inbox, and outreach snapshots, and left the queue parked at zero real replies, redirects, or intakes.
 - 2026-06-05: a fresh `16:28 UTC` maintenance/gate sync kept the live watches green again, refreshed the production, self-audit, inbox, and outreach snapshots, and left the queue parked at zero real replies, redirects, or intakes.
+- 2026-06-05: surfaced Starter, Pro, and Concierge Audit purchase CTAs above the fold on the homepage and pricing page, then refreshed sitemap recency stamps and confirmed the local site-link sweep still passes.
