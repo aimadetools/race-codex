@@ -2,6 +2,7 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { formatUtcTimestamp, getEffectiveNow, getTodayKey } from "./lib/effective-now.mjs";
 
 const ROOT = process.cwd();
 const FEEDBACK_FILE = join(ROOT, "COMMUNITY-FEEDBACK.md");
@@ -22,6 +23,8 @@ const AGENT_REVIEW_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no ai agent revi
 const AUDIT_NOTE_PATTERN = /(?:Rechecked on [^:\n]+:\s*)?no ai audit outreach replies, redirects, or intakes have been recorded yet(?:[^\n.]*)\.[^\n]*/i;
 const RECHECK_TIMESTAMP_PATTERN = /^Rechecked on (.+? UTC):/i;
 const TERMINAL_STATUSES = new Set(["replied_positive", "replied_negative", "bounced", "interview_completed"]);
+const BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-05";
+const AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-05";
 const AUDIT_SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
 
 function parseArgs(argv) {
@@ -122,7 +125,8 @@ function countInterviewRows(rows) {
 function normalizeTimestamp(value) {
   const text = String(value || "").trim();
   if (!text) {
-    return new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
+    const override = String(process.env.NOTICEKIT_TODAY || "").trim();
+    return formatUtcTimestamp(getEffectiveNow(override));
   }
   return text;
 }
@@ -217,7 +221,11 @@ function addBusinessDays(isoDate, businessDays) {
   return date.toISOString().slice(0, 10);
 }
 
-function describeBenchmarkNoReplyAction(rows) {
+function describeBenchmarkNoReplyAction(rows, options = {}) {
+  const {
+    todayKey = "",
+    hasExhaustionLogged = false
+  } = options;
   const sentRows = rows.filter((row) => String(row.status || "").trim() === "sent");
   const followedUpRows = rows.filter((row) => String(row.status || "").trim() === "followed_up");
   const dueDates = sentRows
@@ -231,13 +239,23 @@ function describeBenchmarkNoReplyAction(rows) {
   }
 
   if (followedUpRows.length > 0) {
+    if (todayKey >= BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE) {
+      if (hasExhaustionLogged) {
+        return "keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+      }
+      return `record that the benchmark outreach angle exhausted its second touch on ${BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
+    }
     return "monitor the followed-up benchmark rows for the first real reply, redirect, or teardown request before expanding the list";
   }
 
   return "monitor the benchmark outreach queue for the first real reply or teardown request";
 }
 
-function describeAgentReviewNoReplyAction(rows) {
+function describeAgentReviewNoReplyAction(rows, options = {}) {
+  const {
+    todayKey = "",
+    hasExhaustionLogged = false
+  } = options;
   const sentRows = rows.filter((row) => String(row.status || "").trim() === "sent");
   const followedUpRows = rows.filter((row) => String(row.status || "").trim() === "followed_up");
   const dueDates = sentRows
@@ -251,13 +269,23 @@ function describeAgentReviewNoReplyAction(rows) {
   }
 
   if (followedUpRows.length > 0) {
+    if (todayKey >= AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE) {
+      if (hasExhaustionLogged) {
+        return "keep the AI agent review batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending";
+      }
+      return `record that the AI agent review angle exhausted its second touch on ${AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
+    }
     return "monitor the followed-up AI agent review rows for the first real reply, redirect, or teardown request before expanding the list";
   }
 
   return "monitor the AI agent review queue for the first real reply or teardown request";
 }
 
-function describeAuditNoReplyAction(rows) {
+function describeAuditNoReplyAction(rows, options = {}) {
+  const {
+    todayKey = "",
+    hasExhaustionLogged = false
+  } = options;
   const sentRows = rows.filter((row) => String(row.status || "").trim() === "sent");
   const followedUpRows = rows.filter((row) => String(row.status || "").trim() === "followed_up");
   const dueDates = sentRows
@@ -270,12 +298,10 @@ function describeAuditNoReplyAction(rows) {
   }
 
   if (followedUpRows.length > 0) {
-    const exhausted = followedUpRows.some((row) => {
-      const match = String(row.notes || "").match(/Followed up\s+(\d{4}-\d{2}-\d{2})/);
-      return Boolean(match && match[1] >= AUDIT_SECOND_TOUCH_EXHAUSTION_DATE);
-    });
-
-    if (exhausted) {
+    if (todayKey >= AUDIT_SECOND_TOUCH_EXHAUSTION_DATE) {
+      if (hasExhaustionLogged) {
+        return "keep the audit batch parked and monitor the followed-up rows for any late reply, redirect, or intake while a new offer or segment decision is pending";
+      }
       return `record that the audit outreach angle exhausted its second touch on ${AUDIT_SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
     }
 
@@ -291,15 +317,15 @@ function buildNote(timestamp, segment, context = {}) {
   }
 
   if (segment === "benchmark") {
-    return `Rechecked on ${timestamp}: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep \`ai-benchmark-outreach-batch-01.csv\` unchanged and ${describeBenchmarkNoReplyAction(context.benchmarkRows || [])}.`;
+    return `Rechecked on ${timestamp}: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep \`ai-benchmark-outreach-batch-01.csv\` unchanged and ${describeBenchmarkNoReplyAction(context.benchmarkRows || [], context)}.`;
   }
 
   if (segment === "agent-review") {
-    return `Rechecked on ${timestamp}: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep \`ai-agent-review-outreach-batch-01.csv\` unchanged and ${describeAgentReviewNoReplyAction(context.agentReviewRows || [])}.`;
+    return `Rechecked on ${timestamp}: no AI agent review replies, redirects, or teardown requests have been recorded yet. Keep \`ai-agent-review-outreach-batch-01.csv\` unchanged and ${describeAgentReviewNoReplyAction(context.agentReviewRows || [], context)}.`;
   }
 
   if (segment === "audit") {
-    return `Rechecked on ${timestamp}: no AI audit outreach replies, redirects, or intakes have been recorded yet. Keep \`ai-audit-outreach-batch-01.csv\` unchanged and ${describeAuditNoReplyAction(context.auditRows || [])}.`;
+    return `Rechecked on ${timestamp}: no AI audit outreach replies, redirects, or intakes have been recorded yet. Keep \`ai-audit-outreach-batch-01.csv\` unchanged and ${describeAuditNoReplyAction(context.auditRows || [], context)}.`;
   }
 
   return `Rechecked on ${timestamp}: no advisor replies have been posted here yet. Keep \`buyer-validation-outreach-batch-02.csv\` unchanged until a specific reply, bounce, referral, or interview is available.`;
@@ -364,6 +390,7 @@ async function main() {
   const feedbackPath = args.get("feedback") || FEEDBACK_FILE;
   const timestamp = normalizeTimestamp(args.get("timestamp"));
   const sectionDate = extractDateFromTimestamp(timestamp);
+  const todayKey = getTodayKey(parseUtcTimestamp(timestamp) || getEffectiveNow(), sectionDate);
 
   const [feedbackText, interviewText, ...batchTexts] = await Promise.all([
     readFile(feedbackPath, "utf8"),
@@ -376,6 +403,9 @@ async function main() {
   const benchmarkRows = parsedBatchRows[4] || [];
   const agentReviewRows = parsedBatchRows[5] || [];
   const auditRows = parsedBatchRows[6] || [];
+  const hasBenchmarkExhaustionLogged = feedbackText.includes(`benchmark outreach angle exhausted its second touch on ${BENCHMARK_SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
+  const hasAgentReviewExhaustionLogged = feedbackText.includes(`AI agent review angle exhausted its second touch on ${AGENT_REVIEW_SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
+  const hasAuditExhaustionLogged = feedbackText.includes(`audit outreach angle exhausted its second touch on ${AUDIT_SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
   const totalReplyRows = parsedBatchRows.reduce((total, rows) => total + countReplyRows(rows), 0);
   const interviewRows = countInterviewRows(parseCsv(interviewText));
 
@@ -425,11 +455,11 @@ async function main() {
     "",
     buildNote(timestamp, "advisor"),
     "",
-    buildNote(timestamp, "benchmark", { benchmarkRows }),
+    buildNote(timestamp, "benchmark", { benchmarkRows, todayKey, hasExhaustionLogged: hasBenchmarkExhaustionLogged }),
     "",
-    buildNote(timestamp, "agent-review", { agentReviewRows }),
+    buildNote(timestamp, "agent-review", { agentReviewRows, todayKey, hasExhaustionLogged: hasAgentReviewExhaustionLogged }),
     "",
-    buildNote(timestamp, "audit", { auditRows }),
+    buildNote(timestamp, "audit", { auditRows, todayKey, hasExhaustionLogged: hasAuditExhaustionLogged }),
     "",
     ...preservedSectionLines
   ];

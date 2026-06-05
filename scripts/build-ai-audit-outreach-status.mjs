@@ -3,6 +3,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { get, list } from "@vercel/blob";
+import { formatUtcTimestamp, getEffectiveNow, getTodayKey } from "./lib/effective-now.mjs";
 
 const ROOT = process.cwd();
 const BATCH_FILE = join(ROOT, "ai-audit-outreach-batch-01.csv");
@@ -15,22 +16,6 @@ const MAX_SUBMISSIONS = 200;
 const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
 const TODAY_OVERRIDE = String(process.env.NOTICEKIT_TODAY || "").trim();
 const AUDIT_SOURCE_TAGS = new Set(["ai-audit-outreach-batch-01"]);
-
-function formatUtcTimestamp(date) {
-  const year = date.getUTCFullYear();
-  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
-  const day = String(date.getUTCDate()).padStart(2, "0");
-  const hour = String(date.getUTCHours()).padStart(2, "0");
-  const minute = String(date.getUTCMinutes()).padStart(2, "0");
-  return `${year}-${month}-${day} ${hour}:${minute} UTC`;
-}
-
-function todayKeyFromNow(now) {
-  if (/^\d{4}-\d{2}-\d{2}$/.test(TODAY_OVERRIDE)) {
-    return TODAY_OVERRIDE;
-  }
-  return now.toISOString().slice(0, 10);
-}
 
 function parseCsv(text) {
   const rows = [];
@@ -273,7 +258,12 @@ function extractFeedbackMentions(text, companyNames) {
     });
 }
 
-function describeNextAction(rows, today, hasExternalEvidence = false) {
+function describeNextAction(rows, options = {}) {
+  const {
+    today = "",
+    hasExternalEvidence = false,
+    hasExhaustionLogged = false
+  } = options;
   const sentWaiting = rows.filter((row) => String(row.status || "").trim() === "sent").length;
   const followedUpWaiting = rows.filter((row) => String(row.status || "").trim() === "followed_up").length;
   const terminalRows = ["replied_positive", "replied_negative", "bounced", "interview_completed"]
@@ -295,6 +285,9 @@ function describeNextAction(rows, today, hasExternalEvidence = false) {
 
   if (followedUpWaiting > 0) {
     if (!hasExternalEvidence && today >= SECOND_TOUCH_EXHAUSTION_DATE) {
+      if (hasExhaustionLogged) {
+        return "keep the audit batch parked and monitor the followed-up rows for any late reply, redirect, or intake while a new offer or segment decision is pending";
+      }
       return `record that the audit outreach angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC and leave the batch parked until a new offer or segment decision exists`;
     }
     return "monitor the followed-up audit rows for the first real reply, redirect, or intake before expanding the list";
@@ -309,8 +302,8 @@ function describeNextAction(rows, today, hasExternalEvidence = false) {
 }
 
 async function main() {
-  const now = new Date();
-  const today = todayKeyFromNow(now);
+  const now = getEffectiveNow(TODAY_OVERRIDE);
+  const today = getTodayKey(now, TODAY_OVERRIDE);
   const [rows, feedbackText, inbox] = await Promise.all([
     readFile(BATCH_FILE, "utf8").then(parseCsv),
     readFile(FEEDBACK_FILE, "utf8").catch(() => ""),
@@ -335,6 +328,7 @@ async function main() {
   const latestInboxRecord = inbox.records[0] || null;
   const hasInboxEvidence = inboxSubmissions > 0;
   const secondTouchExhausted = followedUp > 0 && terminal === 0 && !hasInboxEvidence && today >= SECOND_TOUCH_EXHAUSTION_DATE;
+  const hasExhaustionLogged = feedbackText.includes(`audit outreach angle exhausted its second touch on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC`);
 
   const lines = [
     "# AI Audit Outreach Status",
@@ -359,7 +353,7 @@ async function main() {
     ...(secondTouchExhausted
       ? [`- Second-touch state: exhausted on ${SECOND_TOUCH_EXHAUSTION_DATE} UTC with 0 recorded replies, bounces, interviews, redirects, or audit intakes.`]
       : []),
-    `- Next audit action: ${describeNextAction(rows, today, hasInboxEvidence)}.`,
+    `- Next audit action: ${describeNextAction(rows, { today, hasExternalEvidence: hasInboxEvidence, hasExhaustionLogged })}.`,
     "",
     "## Evidence Watch",
     "",

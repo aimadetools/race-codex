@@ -3,6 +3,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { get, list } from "@vercel/blob";
+import { formatUtcTimestamp, getEffectiveNow, getTodayKey } from "./lib/effective-now.mjs";
 
 const ROOT = process.cwd();
 const BATCH_FILE = join(ROOT, "ai-benchmark-outreach-batch-01.csv");
@@ -136,22 +137,6 @@ async function readStream(stream) {
     chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
   }
   return Buffer.concat(chunks).toString("utf8");
-}
-
-function formatUtcTimestamp(date) {
-  const year = date.getUTCFullYear();
-  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
-  const day = String(date.getUTCDate()).padStart(2, "0");
-  const hour = String(date.getUTCHours()).padStart(2, "0");
-  const minute = String(date.getUTCMinutes()).padStart(2, "0");
-  return `${year}-${month}-${day} ${hour}:${minute} UTC`;
-}
-
-function todayKeyFromNow(now) {
-  if (/^\d{4}-\d{2}-\d{2}$/.test(TODAY_OVERRIDE)) {
-    return TODAY_OVERRIDE;
-  }
-  return now.toISOString().slice(0, 10);
 }
 
 function parseSentTimestamp(row) {
@@ -355,9 +340,9 @@ function describeNextAction(rows, options = {}) {
 }
 
 async function main() {
-  const nowDate = new Date();
+  const nowDate = getEffectiveNow(TODAY_OVERRIDE);
   const now = formatUtcTimestamp(nowDate);
-  const todayKey = todayKeyFromNow(nowDate);
+  const todayKey = getTodayKey(nowDate, TODAY_OVERRIDE);
   const rows = parseCsv(await readFile(BATCH_FILE, "utf8"));
   const feedbackText = await readFile(FEEDBACK_FILE, "utf8").catch(() => "");
   const inbox = await loadBenchmarkInboxRecords();

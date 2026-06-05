@@ -3,6 +3,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { get, list } from "@vercel/blob";
+import { formatUtcTimestamp, getEffectiveNow, getTodayKey } from "./lib/effective-now.mjs";
 
 const ROOT = process.cwd();
 const BATCH_FILE = join(ROOT, "ai-agent-review-outreach-batch-01.csv");
@@ -160,22 +161,6 @@ async function readStream(stream) {
   return Buffer.concat(chunks).toString("utf8");
 }
 
-function formatUtcTimestamp(date) {
-  const year = date.getUTCFullYear();
-  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
-  const day = String(date.getUTCDate()).padStart(2, "0");
-  const hour = String(date.getUTCHours()).padStart(2, "0");
-  const minute = String(date.getUTCMinutes()).padStart(2, "0");
-  return `${year}-${month}-${day} ${hour}:${minute} UTC`;
-}
-
-function todayKeyFromNow(now) {
-  if (/^\d{4}-\d{2}-\d{2}$/.test(TODAY_OVERRIDE)) {
-    return TODAY_OVERRIDE;
-  }
-  return now.toISOString().slice(0, 10);
-}
-
 function parseSentTimestamp(row) {
   const match = String(row.notes || "").match(/Sent (\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):\d{2}Z/);
   if (!match) {
@@ -312,8 +297,8 @@ function extractFeedbackMatches(text) {
 }
 
 async function main() {
-  const now = new Date();
-  const todayKey = todayKeyFromNow(now);
+  const now = getEffectiveNow(TODAY_OVERRIDE);
+  const todayKey = getTodayKey(now, TODAY_OVERRIDE);
   const [batchText, feedbackText, inbox] = await Promise.all([
     readFile(BATCH_FILE, "utf8"),
     readFile(FEEDBACK_FILE, "utf8").catch(() => ""),
