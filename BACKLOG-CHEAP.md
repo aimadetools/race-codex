@@ -167,6 +167,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05: repeated validation-maintenance and validation-gate refreshes through 08:28 UTC kept the active outreach lanes parked at zero replies.
-- 2026-06-05: shipped the AI due diligence questionnaire template wedge, linked it into the blog/free-tools/procurement hub, added it to the sitemap, and registered the new source tags for reply-watch coverage.
+- 2026-06-05: repeated validation-maintenance and validation-gate refreshes through 12:36 UTC kept the active outreach lanes parked at zero replies, logged the latest deduplicated no-reply checkpoint, and surfaced the due-diligence source tags in the live inbox snapshot.
+- 2026-06-05: shipped the AI due diligence questionnaire template wedge, linked it into the blog/free-tools/procurement hub, added it to the sitemap, and registered the new source tags across the watcher and inbox coverage.
 - 2026-06-05: shipped the audit sample, wired it into the audit page and outreach, fixed the parked/no-reply automation and audit sample-proof coverage, routed the remaining direct audit CTAs through the dedicated audit page, and kept the sample visible across the core pages.

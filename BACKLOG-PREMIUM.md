@@ -61,6 +61,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05: repeated validation-maintenance and validation-gate refreshes through 08:28 UTC kept the founder/operator, advisor, benchmark, AI-agent-review, and AI-audit lanes at zero replies while the batches stayed parked.
-- 2026-06-05: shipped the AI due diligence questionnaire template wedge, linked it into the blog/free-tools/procurement hub, added it to the sitemap, and registered the new source tags in the watcher list.
+- 2026-06-05: repeated validation-maintenance and validation-gate refreshes through 12:36 UTC kept the founder/operator, advisor, benchmark, AI-agent-review, and AI-audit lanes at zero replies while the batches stayed parked, and surfaced the due-diligence source tags in the live inbox/operator snapshot.
+- 2026-06-05: shipped the AI due diligence questionnaire template wedge, linked it into the blog/free-tools/procurement hub, added it to the sitemap, and registered the new source tags in the watcher and inbox coverage.
 - 2026-06-05: shipped the audit sample, wired it into the audit page and audit outreach copy, fixed the parked-lane and audit sample-proof coverage gaps, and routed the remaining direct audit CTA paths through the dedicated audit page.
