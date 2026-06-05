@@ -93,6 +93,11 @@ const AUDIT_ROUTE_SOURCE_TAGS = [
   "blog-openai-answer-template-nav-audit",
   "blog-openai-path-guide-nav-audit"
 ];
+const AUDIT_SAMPLE_SOURCE_TAGS = [
+  "ai-audit-email-sample",
+  "ai-audit-page-sample",
+  "ai-audit-sample-page"
+];
 
 function formatUtcTimestamp(date) {
   const year = date.getUTCFullYear();
@@ -421,6 +426,10 @@ async function main() {
     sourceTag,
     realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
   ]);
+  const auditSampleCounts = AUDIT_SAMPLE_SOURCE_TAGS.map((sourceTag) => [
+    sourceTag,
+    realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
+  ]);
   const watchedSourceCounts = WATCHED_SOURCE_TAGS.map((sourceTag) => [
     sourceTag,
     realRecords.filter((record) => describeSourceTag(record.sourceTag) === sourceTag).length
@@ -479,6 +488,10 @@ async function main() {
     "### Audit Route Source Tags",
     "",
     ...auditRouteCounts.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`),
+    "",
+    "### Audit Sample Proof Source Tags",
+    "",
+    ...auditSampleCounts.map(([sourceTag, count]) => `- ${sourceTag}: ${count}`),
     "",
     "### Watched Source Tags",
     "",

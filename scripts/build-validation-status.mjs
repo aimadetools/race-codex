@@ -806,6 +806,23 @@ const auditRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-openai-answer-template-nav-audit", label: "OpenAI blog answer-template nav" },
   { tag: "blog-openai-path-guide-nav-audit", label: "OpenAI blog path-guide nav" }
 ]);
+const auditSampleProofWatch = {
+  items: [
+    {
+      label: "audit email sample",
+      count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "ai-audit-email-sample")
+    },
+    {
+      label: "audit page sample",
+      count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "ai-audit-page-sample")
+    },
+    {
+      label: "audit sample page",
+      count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "ai-audit-sample-page")
+    }
+  ]
+};
+auditSampleProofWatch.total = sumMetrics(auditSampleProofWatch.items.map((entry) => entry.count));
 const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-openai-answer-template", label: "blog template" },
   { tag: "blog-index-openai-answer-example", label: "blog example" },
@@ -909,6 +926,7 @@ const output = [
   "",
   renderWatchedSourceGroup("AI-first entry-point inbox submissions", aiFirstEntryWatch),
   renderWatchedSourceGroup("Dedicated audit-route inbox submissions", auditRouteWatch),
+  renderWatchedSourceGroup("Audit sample-proof inbox submissions", auditSampleProofWatch),
   renderWatchedSourceGroup("AI-agent-control inbox submissions", aiAgentWatch),
   renderWatchedSourceGroup("AI-agent gap-read inbox submissions", aiAgentGapReadWatch),
   renderWatchedSourceGroup("OpenAI route inbox submissions", openAiWatch),

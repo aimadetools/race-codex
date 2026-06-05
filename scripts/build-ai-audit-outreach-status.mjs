@@ -15,7 +15,56 @@ const BLOB_PREFIX = "contact-submissions/";
 const MAX_SUBMISSIONS = 200;
 const SECOND_TOUCH_EXHAUSTION_DATE = "2026-06-08";
 const TODAY_OVERRIDE = String(process.env.NOTICEKIT_TODAY || "").trim();
-const AUDIT_SOURCE_TAGS = new Set(["ai-audit-outreach-batch-01"]);
+const AUDIT_OUTREACH_SOURCE_TAGS = new Set(["ai-audit-outreach-batch-01"]);
+const AUDIT_SAMPLE_SOURCE_TAGS = new Set([
+  "ai-audit-email-sample",
+  "ai-audit-page-sample",
+  "ai-audit-sample-page"
+]);
+const AUDIT_ROUTE_SOURCE_TAGS = new Set([
+  "homepage-nav-audit",
+  "pricing-nav-audit",
+  "pricing-concierge-card",
+  "start-here-nav-audit",
+  "about-nav-audit",
+  "free-tools-nav-audit",
+  "ai-procurement-hub-nav-audit",
+  "kit-preview-nav-audit",
+  "purchase-next-steps-audit",
+  "audit-request-nav-audit",
+  "audit-request-hero-audit",
+  "audit-request-side-panel",
+  "blog-nav-audit",
+  "ai-answer-builder-nav-audit",
+  "ai-evidence-map-nav-audit",
+  "ai-agent-workspace-nav-audit",
+  "ai-answer-bank-nav-audit",
+  "ai-pro-kit-nav-audit",
+  "ai-starter-pack-nav-audit",
+  "openai-answer-template-nav-audit",
+  "openai-answer-bank-nav-audit",
+  "blog-ai-agent-approval-gate-nav-audit",
+  "blog-ai-agent-checklist-nav-audit",
+  "blog-ai-agent-tool-access-nav-audit",
+  "blog-ai-answer-bank-vs-builder-nav-audit",
+  "blog-ai-answer-bank-vs-pro-kit-nav-audit",
+  "blog-ai-answer-example-nav-audit",
+  "blog-ai-answer-template-nav-audit",
+  "blog-ai-disclosure-packet-nav-audit",
+  "blog-ai-follow-up-questions-nav-audit",
+  "blog-ai-path-guide-nav-audit",
+  "blog-ai-saas-list-template-nav-audit",
+  "blog-ai-saas-notice-template-nav-audit",
+  "blog-ai-starter-pack-vs-builder-nav-audit",
+  "blog-ai-questionnaire-nav-audit",
+  "blog-ai-training-stance-nav-audit",
+  "blog-ai-inventory-nav-audit",
+  "blog-ai-risk-assessment-nav-audit",
+  "blog-openai-bank-vs-builder-nav-audit",
+  "blog-openai-answer-example-nav-audit",
+  "blog-openai-answer-template-nav-audit",
+  "blog-openai-path-guide-nav-audit"
+]);
 
 function parseCsv(text) {
   const rows = [];
@@ -186,7 +235,9 @@ function isLikelyTestSubmission(record) {
 
 function isAuditRecord(record) {
   const sourceTag = String(record.sourceTag || "").trim().toLowerCase();
-  return AUDIT_SOURCE_TAGS.has(sourceTag);
+  return AUDIT_OUTREACH_SOURCE_TAGS.has(sourceTag) ||
+    AUDIT_SAMPLE_SOURCE_TAGS.has(sourceTag) ||
+    AUDIT_ROUTE_SOURCE_TAGS.has(sourceTag);
 }
 
 function safeValue(value, fallback = "unknown") {
@@ -330,6 +381,15 @@ async function main() {
   const companyNames = rows.map((row) => String(row.company || "").trim()).filter(Boolean);
   const feedbackMentions = extractFeedbackMentions(feedbackText, companyNames);
   const inboxSubmissions = inbox.records.length;
+  const outreachTaggedInboxSubmissions = inbox.records.filter((record) =>
+    AUDIT_OUTREACH_SOURCE_TAGS.has(String(record.sourceTag || "").trim().toLowerCase())
+  ).length;
+  const sampleProofInboxSubmissions = inbox.records.filter((record) =>
+    AUDIT_SAMPLE_SOURCE_TAGS.has(String(record.sourceTag || "").trim().toLowerCase())
+  ).length;
+  const auditRouteInboxSubmissions = inbox.records.filter((record) =>
+    AUDIT_ROUTE_SOURCE_TAGS.has(String(record.sourceTag || "").trim().toLowerCase())
+  ).length;
   const auditIntakes = inbox.records.filter((record) => String(record.type || "").trim() === "concierge_audit").length;
   const latestInboxRecord = inbox.records[0] || null;
   const hasInboxEvidence = inboxSubmissions > 0;
@@ -351,7 +411,10 @@ async function main() {
     `- Bounces in outreach CSV: ${bounces}`,
     `- Interviews completed: ${interviews}`,
     `- Terminal rows (reply/bounce/interview): ${terminal}`,
-    `- Audit-tagged inbox submissions: ${inboxSubmissions}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
+    `- Audit-path inbox submissions: ${inboxSubmissions}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
+    `- Audit outreach-tagged inbox submissions: ${outreachTaggedInboxSubmissions}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
+    `- Audit sample-proof inbox submissions: ${sampleProofInboxSubmissions}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
+    `- Audit route inbox submissions: ${auditRouteInboxSubmissions}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
     `- Audit-tagged concierge intakes: ${auditIntakes}${inbox.available ? "" : " (Blob inbox unavailable in current environment)"}`,
     `- Audit mentions logged in COMMUNITY-FEEDBACK.md: ${feedbackMentions.length}`,
     `- First audit outreach send: ${firstSent ? formatUtcTimestamp(firstSent) : "unknown"}`,
@@ -370,9 +433,9 @@ async function main() {
       ? `- Outreach CSV evidence exists: ${positiveReplies} positive reply row(s), ${negativeReplies} negative reply row(s), ${bounces} bounce row(s), and ${interviews} interview row(s).`
       : null,
     latestInboxRecord
-      ? `- Latest audit-tagged inbox submission: ${safeValue(latestInboxRecord.submittedAt || latestInboxRecord.uploadedAt)} | ${safeValue(latestInboxRecord.type)} | ${safeValue(latestInboxRecord.sourceTag)} | ${safeValue(latestInboxRecord.company)}.`
+      ? `- Latest audit-path inbox submission: ${safeValue(latestInboxRecord.submittedAt || latestInboxRecord.uploadedAt)} | ${safeValue(latestInboxRecord.type)} | ${safeValue(latestInboxRecord.sourceTag)} | ${safeValue(latestInboxRecord.company)}.`
       : inbox.available
-        ? "- Blob inbox check found no audit-tagged submissions yet."
+        ? "- Blob inbox check found no audit-path submissions yet."
         : "- Blob inbox check is unavailable because no Blob token is configured in the current environment.",
     feedbackMentions.length > 0
       ? `- COMMUNITY-FEEDBACK.md contains ${feedbackMentions.length} audit-related line(s); review the excerpts below before changing outreach copy.`
