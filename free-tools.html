@@ -160,7 +160,7 @@
         <section class="page-hero">
           <span class="eyebrow">Free toolkit for questionnaire receivers</span>
           <h1>Start free if your SaaS team is the one answering the AI questionnaire.</h1>
-          <p>This hub groups the strongest no-call NoticeKit assets by blocker: inventory first, one answer now, repeat review, or proof and control. The free builder already produces one answer block, 20 reusable follow-up answers, a reviewer workspace export, an answer-bank draft, and one downloadable bundle before you touch the paid path. Use the older notice tools only after the AI thread is clear.</p>
+          <p>This hub groups the strongest no-call NoticeKit assets by blocker: inventory first, one answer now, repeat review, or proof and control. The free builder gives you one answer block, 20 reusable follow-up answers, a reviewer workspace export, an answer-bank draft, and one downloadable bundle before you touch the paid path. Use the older notice tools only after the AI thread is clear.</p>
           <div class="hero-actions">
             <a class="button" href="blog-ai-vendor-inventory-template.html?source=free-tools-route-inventory">Open inventory workspace</a>
             <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=free-tools-ai-deal-blocker">Open AI starter pack</a>
@@ -390,7 +390,7 @@
 
         <section class="section">
           <div class="notice-band">
-            <strong>Choose one route only.</strong>
+            <strong>Choose one route, then stop.</strong>
             <p>1. Inventory first: collect vendors, regions, owners, proof links, and review notes before you write from memory.</p>
             <p>2. One answer now: starter pack, builder, example, and follow-up pack for one live buyer thread.</p>
             <p>3. Repeat review: answer bank first, then Pro kit if the reusable file needs matrix and packet support.</p>
@@ -836,116 +836,162 @@
           secondaryLabel: "Build answer + bundle",
         };
 
-          if (need === "benchmark") {
-            recommendation = {
-              title: "Read the benchmark report first.",
-              summary: "You want a calibration read before rewriting a public subprocessor page, so the pilot report shows what is usually visible and what still goes missing.",
+        const usePartnerPath = () => ({
+          title: "Open the partner path first.",
+          summary: "You are selling or delivering this for clients, so the partner preview is the fastest way to check referral, delivery, or white-label fit.",
+          bullets: [
+            "Shows referral, delivery, and white-label boundaries",
+            "Best for consultants, fractional DPOs, and attorneys",
+            "Keeps client work separate from founder pricing"
+          ],
+          primaryHref: "partner-preview.html",
+          primaryLabel: "Open partner preview",
+          secondaryHref: "audit-request.html?type=partner_request&source=free-tools-route-finder",
+          secondaryLabel: "Request partner access",
+        });
+
+        const useBenchmarkRoute = () => ({
+          title: "Read the benchmark report first.",
+          summary: "You want a calibration read before rewriting a public subprocessor page, so the pilot report shows what is usually visible and what still goes missing.",
+          bullets: [
+            "Best when you need a reality check before a rewrite",
+            "Pairs the report with the tracker for your own sample",
+            "Use the page checker next if you want to score one page"
+          ],
+          primaryHref: "blog-subprocessor-benchmark-report-01.html?source=free-tools-route-finder",
+          primaryLabel: "Read benchmark report",
+          secondaryHref: "blog-subprocessor-benchmark-worksheet.html?source=free-tools-route-finder",
+          secondaryLabel: "Open tracker",
+        });
+
+        const usePublicPageRoute = (isRepeat) => isRepeat
+          ? {
+              title: "Book the concierge audit.",
+              summary: "When the public page or workflow keeps needing cleanup, a 48-hour review will give you a fix list.",
               bullets: [
-              "Best when you need a reality check before a rewrite",
-              "Pairs the report with the tracker for your own sample",
-              "Use the page checker next if you want to score one page"
-            ],
-              primaryHref: "blog-subprocessor-benchmark-report-01.html?source=free-tools-route-finder",
-              primaryLabel: "Read benchmark report",
-              secondaryHref: "blog-subprocessor-benchmark-worksheet.html?source=free-tools-route-finder",
-              secondaryLabel: "Open tracker",
-            };
-          } else if (need === "proof-pack") {
-            recommendation = topic === "ai-procurement"
-              ? {
-                  title: "Open the evidence map first.",
-                  summary: frequency === "repeat"
-                    ? "The blocker is proof, owner, review-date, or approval metadata, so package one claim with its evidence before you widen into a reusable answer-bank workflow."
-                    : "The blocker is proof, owner, review-date, or approval metadata, so package one claim with its evidence before you keep polishing the paragraph.",
-                  bullets: frequency === "repeat"
-                    ? [
-                        "Best when reviewers keep asking for proof and accountability details",
-                        "Keeps the reusable answer bank one click away after the evidence is clean",
-                        "Prevents another repeat-review thread from drifting into vague trust language"
-                      ]
-                    : [
-                        "Best when the buyer wants proof assets, owner, review date, or approval path",
-                        "Packages one claim, its evidence, and the next recheck trigger together",
-                        "Keeps the answer builder one click away after the evidence is coherent"
-                      ],
-                  primaryHref: "ai-security-review-evidence-map.html?source=free-tools-route-finder-evidence-map",
-                  primaryLabel: "Open evidence map",
-                  secondaryHref: frequency === "repeat"
-                    ? "ai-security-questionnaire-answer-bank.html?source=free-tools-route-finder"
-                    : "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
-                  secondaryLabel: frequency === "repeat" ? "Open answer bank" : "Build answer + bundle",
-                }
-              : {
-                  title: "Open the proof-packet checklist first.",
-                  summary: "The blocker is proof collection and review metadata rather than the draft itself, so start with the checklist and evidence log before you rewrite the notice copy.",
-                  bullets: [
-                    "Best when customer notice or counsel review needs a coherent proof trail",
-                    "Keeps the evidence log one click away for dates, owners, and artifact links",
-                    "Prevents the notice workflow from relying on scattered screenshots and notes"
-                  ],
-                  primaryHref: "blog-subprocessor-proof-packet-checklist.html?source=free-tools-route-finder",
-                  primaryLabel: "Open proof-packet checklist",
-                  secondaryHref: "blog-subprocessor-evidence-log-template.html?source=free-tools-route-finder",
-                  secondaryLabel: "Open evidence log",
-                };
-          } else if (need === "named-vendor") {
-            recommendation = frequency === "repeat"
-              ? {
-                  title: "Open the named-vendor answer bank path.",
-                  summary: "The reviewer named a model vendor directly, and the repeat-review path keeps reusable wording, proof links, and owner notes in one source file.",
-                  bullets: [
-                    "Best when the same named-vendor question keeps returning",
-                    "Use OpenAI or Anthropic pages after the route guide narrows the vendor",
-                    "Avoids rewriting generic AI copy from scratch"
-                  ],
-                  primaryHref: "blog-ai-security-questionnaire-path-guide.html?source=free-tools-route-finder",
-                  primaryLabel: "Open named-vendor route guide",
-                  secondaryHref: "anthropic-security-questionnaire-answer-bank.html?source=free-tools-route-finder",
-                  secondaryLabel: "Open Anthropic answer bank",
-                }
-              : {
-                  title: "Open the named-vendor route guide.",
-                  summary: "You need one named-vendor answer now, but the route should stay vendor-specific instead of assuming OpenAI when the buyer may have named Anthropic or Claude.",
-                  bullets: [
-                    "Best when a model vendor is explicitly named in the questionnaire",
-                    "Keeps the OpenAI and Anthropic paths one click away",
-                    "Works well before the thread widens into repeat review"
-                  ],
-                  primaryHref: "blog-ai-security-questionnaire-path-guide.html?source=free-tools-route-finder",
-                  primaryLabel: "Open named-vendor route guide",
-                  secondaryHref: "anthropic-security-questionnaire-answer-template.html?source=free-tools-route-finder",
-                  secondaryLabel: "Open Anthropic template",
-                };
-          } else if (need === "agent-controls") {
-            recommendation = {
-              title: "Open the AI agent tool-access review.",
-              summary: "You need the control-boundary path, not the generic questionnaire path, so the review and approval-gate pages stay together.",
-              bullets: [
-                "Best when the buyer asks about tools, approval gates, or audit trail",
-                "Keeps mutating actions and service-account scope in view",
-                "Pairs with the approval gate template if the thread needs stricter controls"
+                "Best when the page keeps getting revised",
+                "Useful if you need a concrete fix list",
+                "Good fit when handoff is the bottleneck"
               ],
-              primaryHref: "blog-ai-agent-tool-access-review.html?source=free-tools-route-finder",
-              primaryLabel: "Open AI agent review",
-              secondaryHref: "blog-ai-agent-approval-gate-template.html?source=free-tools-route-finder",
-              secondaryLabel: "Open approval gate template",
-            };
-          } else if (role === "consultant") {
-            recommendation = {
-              title: "Open the partner path first.",
-              summary: "You are selling or delivering this for clients, so the partner preview is the fastest way to check referral, delivery, or white-label fit.",
+              primaryHref: "https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07",
+              primaryLabel: "Buy audit",
+              secondaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
+              secondaryLabel: "Open page checker",
+            }
+          : {
+              title: "Open the page checker.",
+              summary: "If you just want to score the public page once, the checker is the fastest self-serve read.",
               bullets: [
-              "Shows referral, delivery, and white-label boundaries",
-              "Best for consultants, fractional DPOs, and attorneys",
-              "Keeps client work separate from founder pricing"
+                "Best for a one-off public-page score",
+                "Highlights missing fields and proof cues",
+                "Pairs well with a teardown after the check"
+              ],
+              primaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
+              primaryLabel: "Open page checker",
+              secondaryHref: "free-teardown.html?source=free-tools-route-finder",
+              secondaryLabel: "Request free teardown",
+            };
+
+        if (need === "benchmark") {
+          recommendation = useBenchmarkRoute();
+        } else if (need === "proof-pack") {
+          recommendation = topic === "ai-procurement"
+            ? {
+                title: "Open the evidence map first.",
+                summary: frequency === "repeat"
+                  ? "The blocker is proof, owner, review-date, or approval metadata, so package one claim with its evidence before you widen into a reusable answer-bank workflow."
+                  : "The blocker is proof, owner, review-date, or approval metadata, so package one claim with its evidence before you keep polishing the paragraph.",
+                bullets: frequency === "repeat"
+                  ? [
+                      "Best when reviewers keep asking for proof and accountability details",
+                      "Keeps the reusable answer bank one click away after the evidence is clean",
+                      "Prevents another repeat-review thread from drifting into vague trust language"
+                    ]
+                  : [
+                      "Best when the buyer wants proof assets, owner, review date, or approval path",
+                      "Packages one claim, its evidence, and the next recheck trigger together",
+                      "Keeps the answer builder one click away after the evidence is coherent"
+                    ],
+                primaryHref: "ai-security-review-evidence-map.html?source=free-tools-route-finder-evidence-map",
+                primaryLabel: "Open evidence map",
+                secondaryHref: frequency === "repeat"
+                  ? "ai-security-questionnaire-answer-bank.html?source=free-tools-route-finder"
+                  : "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
+                secondaryLabel: frequency === "repeat" ? "Open answer bank" : "Build answer + bundle",
+              }
+            : {
+                title: "Open the proof-packet checklist first.",
+                summary: "The blocker is proof collection and review metadata rather than the draft itself, so start with the checklist and evidence log before you rewrite the notice copy.",
+                bullets: [
+                  "Best when customer notice or counsel review needs a coherent proof trail",
+                  "Keeps the evidence log one click away for dates, owners, and artifact links",
+                  "Prevents the notice workflow from relying on scattered screenshots and notes"
+                ],
+                primaryHref: "blog-subprocessor-proof-packet-checklist.html?source=free-tools-route-finder",
+                primaryLabel: "Open proof-packet checklist",
+                secondaryHref: "blog-subprocessor-evidence-log-template.html?source=free-tools-route-finder",
+                secondaryLabel: "Open evidence log",
+              };
+        } else if (need === "named-vendor") {
+          recommendation = frequency === "repeat"
+            ? {
+                title: "Open the named-vendor answer bank path.",
+                summary: "The reviewer named a model vendor directly, and the repeat-review path keeps reusable wording, proof links, and owner notes in one source file.",
+                bullets: [
+                  "Best when the same named-vendor question keeps returning",
+                  "Use OpenAI or Anthropic pages after the route guide narrows the vendor",
+                  "Avoids rewriting generic AI copy from scratch"
+                ],
+                primaryHref: "blog-ai-security-questionnaire-path-guide.html?source=free-tools-route-finder",
+                primaryLabel: "Open named-vendor route guide",
+                secondaryHref: "anthropic-security-questionnaire-answer-bank.html?source=free-tools-route-finder",
+                secondaryLabel: "Open Anthropic answer bank",
+              }
+            : {
+                title: "Open the named-vendor route guide.",
+                summary: "You need one named-vendor answer now, but the route should stay vendor-specific instead of assuming OpenAI when the buyer may have named Anthropic or Claude.",
+                bullets: [
+                  "Best when a model vendor is explicitly named in the questionnaire",
+                  "Keeps the OpenAI and Anthropic paths one click away",
+                  "Works well before the thread widens into repeat review"
+                ],
+                primaryHref: "blog-ai-security-questionnaire-path-guide.html?source=free-tools-route-finder",
+                primaryLabel: "Open named-vendor route guide",
+                secondaryHref: "anthropic-security-questionnaire-answer-template.html?source=free-tools-route-finder",
+                secondaryLabel: "Open Anthropic template",
+              };
+        } else if (need === "agent-controls") {
+          recommendation = {
+            title: "Open the AI agent tool-access review.",
+            summary: "You need the control-boundary path, not the generic questionnaire path, so the review and approval-gate pages stay together.",
+            bullets: [
+              "Best when the buyer asks about tools, approval gates, or audit trail",
+              "Keeps mutating actions and service-account scope in view",
+              "Pairs with the approval gate template if the thread needs stricter controls"
             ],
-            primaryHref: "partner-preview.html",
-            primaryLabel: "Open partner preview",
-            secondaryHref: "audit-request.html?type=partner_request&source=free-tools-route-finder",
-            secondaryLabel: "Request partner access",
+            primaryHref: "blog-ai-agent-tool-access-review.html?source=free-tools-route-finder",
+            primaryLabel: "Open AI agent review",
+            secondaryHref: "blog-ai-agent-approval-gate-template.html?source=free-tools-route-finder",
+            secondaryLabel: "Open approval gate template",
+          };
+        } else if (need === "package-preview") {
+          recommendation = {
+            title: "Open the kit preview.",
+            summary: "You want to see the exact Starter and Pro artifact list before you check out.",
+            bullets: [
+              "Shows the real deliverables before checkout",
+              "Helps when the missing detail is inside the packet",
+              "Works well for founders and advisors"
+            ],
+            primaryHref: "kit-preview.html",
+            primaryLabel: "Open kit preview",
+            secondaryHref: "pricing.html",
+            secondaryLabel: "Compare pricing",
           };
         } else if (topic === "ai-procurement") {
-          if (need === "public-page") {
+          if (role === "consultant") {
+            recommendation = usePartnerPath();
+          } else if (need === "public-page") {
             recommendation = {
               title: "Open the AI procurement hub.",
               summary: "You are dealing with procurement, security, or counsel pressure on the public workflow, so the hub is the shortest path to the right AI review asset.",
@@ -958,20 +1004,6 @@
               primaryLabel: "Open AI procurement hub",
               secondaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
               secondaryLabel: "Open page checker",
-            };
-          } else if (need === "package-preview") {
-            recommendation = {
-              title: "Start with the AI questionnaire starter pack.",
-              summary: "You want a concrete AI review path before you choose the artifact, so the starter pack keeps the answer builder, example, packet, and teardown together.",
-              bullets: [
-                "Best when the AI blocker is already visible but not yet specific",
-                "Shows the answer builder, example, packet, and teardown in one place",
-                "Helps founders and advisors choose the smallest next artifact"
-              ],
-              primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
-              primaryLabel: "Open starter pack",
-              secondaryHref: "blog-ai-security-questionnaire-answer-example.html?source=free-tools-route-finder",
-              secondaryLabel: "See filled example",
             };
           } else if (need === "written-answer") {
             recommendation = frequency === "repeat"
@@ -1029,141 +1061,83 @@
                   secondaryHref: "blog-ai-vendor-risk-assessment.html?source=free-tools-route-finder",
                   secondaryLabel: "Open risk checklist",
                 };
+          } else if (role === "consultant") {
+            recommendation = usePartnerPath();
           } else {
             recommendation = {
-              title: "Start with the AI questionnaire starter pack.",
-              summary: "You are dealing with questionnaire, disclosure packet, or counsel pressure, and the starter pack is the shortest path to the right AI review asset.",
+              title: "Open the AI procurement hub.",
+              summary: "You are dealing with questionnaire, disclosure packet, or counsel pressure, and the hub is the shortest path to the right AI review asset.",
               bullets: [
                 "Routes to the questionnaire, packet, sample, stack guide, or teardown",
                 "Best when procurement or security review is the blocker",
                 "Keeps the AI path separate from the general notice workflow"
               ],
-              primaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
-              primaryLabel: "Open starter pack",
-              secondaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
-              secondaryLabel: "Open AI procurement hub",
+              primaryHref: "ai-procurement-hub.html?source=free-tools-route-finder",
+              primaryLabel: "Open AI procurement hub",
+              secondaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+              secondaryLabel: "Open starter pack",
             };
           }
         } else if (need === "files-now") {
-          recommendation = topic === "ai-procurement"
-            ? frequency === "repeat"
-              ? {
-                  title: "Open the AI Pro kit.",
-                  summary: "You need reusable AI review files, and the paid Pro path is the shortest route when the repeat-review problem now needs matrix, packet, intake, and calendar files around the answer bank.",
-                  bullets: [
-                    "Best for repeated procurement, security, or counsel review",
-                    "Adds repeat-review operating files around the reusable answer bank",
-                    "Keeps the builder and disclosure packet path one click away"
-                  ],
-                  primaryHref: "ai-security-questionnaire-pro-kit.html?source=free-tools-route-finder",
-                  primaryLabel: "Open AI Pro kit",
-                  secondaryHref: "blog-ai-vendor-disclosure-packet.html?source=free-tools-route-finder",
-                  secondaryLabel: "Open packet guide",
-                }
-              : {
-                  title: "Start with the AI vendor inventory workspace.",
-                  summary: "You need the raw working facts first, so the inventory workspace is the shortest route to providers, regions, owners, proof links, and review notes before you draft the answer.",
-                  bullets: [
-                    "Best when the vendor story is still scattered",
-                    "Creates one local source of truth before writing",
-                    "Keeps the risk checklist and worksheet one click away"
-                  ],
-                  primaryHref: "blog-ai-vendor-inventory-template.html?source=free-tools-route-finder",
-                  primaryLabel: "Open inventory workspace",
-                  secondaryHref: "blog-ai-vendor-risk-assessment.html?source=free-tools-route-finder",
-                  secondaryLabel: "Open risk checklist",
-                }
-            : frequency === "repeat"
-              ? {
-                  title: "Run the self-audit first.",
-                  summary: "Repeated notice work should get a readiness score before you pick the paid kit or ask for a teardown.",
-                  bullets: [
-                    "Best when the workflow still has gaps",
-                    "Shows whether the packet is ready for send",
-                    "Keeps the generator and teardown one click away"
-                  ],
-                  primaryHref: "self-audit.html?source=free-tools-route-finder",
-                  primaryLabel: "Run self-audit",
-                  secondaryHref: "generator.html?source=free-tools-route-finder",
-                  secondaryLabel: "Open generator",
-                }
-              : {
-                  title: "Open the local generator.",
-                  summary: "You need the notice draft, objection deadline, and evidence checklist now, so the generator is the shortest path.",
-                  bullets: [
-                    "Best when you need the notice copy now",
-                    "Drafts the objection deadline and proof checklist locally",
-                    "Keeps teardown one click away if the workflow still looks brittle"
-                  ],
-                  primaryHref: "generator.html?source=free-tools-route-finder",
-                  primaryLabel: "Open local generator",
-                  secondaryHref: "self-audit.html?source=free-tools-route-finder",
-                  secondaryLabel: "Run self-audit",
-                };
-        } else if (need === "public-page") {
           recommendation = frequency === "repeat"
             ? {
-                title: "Book the concierge audit.",
-                summary: "When the public page or workflow keeps needing cleanup, a 48-hour review will give you a fix list.",
+                title: "Run the self-audit first.",
+                summary: "Repeated notice work should get a readiness score before you pick the paid kit or ask for a teardown.",
                 bullets: [
-                  "Best when the page keeps getting revised",
-                  "Useful if you need a concrete fix list",
-                  "Good fit when handoff is the bottleneck"
+                  "Best when the workflow still has gaps",
+                  "Shows whether the packet is ready for send",
+                  "Keeps the generator and teardown one click away"
                 ],
-                primaryHref: "https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07",
-                primaryLabel: "Buy audit",
-                secondaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
-                secondaryLabel: "Open page checker",
+                primaryHref: "self-audit.html?source=free-tools-route-finder",
+                primaryLabel: "Run self-audit",
+                secondaryHref: "generator.html?source=free-tools-route-finder",
+                secondaryLabel: "Open generator",
               }
             : {
-                title: "Open the page checker.",
-                summary: "If you just want to score the public page once, the checker is the fastest self-serve read.",
+                title: "Open the local generator.",
+                summary: "You need the notice draft, objection deadline, and evidence checklist now, so the generator is the shortest path.",
                 bullets: [
-                  "Best for a one-off public-page score",
-                  "Highlights missing fields and proof cues",
-                  "Pairs well with a teardown after the check"
+                  "Best when you need the notice copy now",
+                  "Drafts the objection deadline and proof checklist locally",
+                  "Keeps teardown one click away if the workflow still looks brittle"
                 ],
-                primaryHref: "blog-subprocessor-page-checker.html?source=free-tools-route-finder",
-                primaryLabel: "Open page checker",
-                secondaryHref: "free-teardown.html?source=free-tools-route-finder",
-                secondaryLabel: "Request free teardown",
+                primaryHref: "generator.html?source=free-tools-route-finder",
+                primaryLabel: "Open local generator",
+                secondaryHref: "self-audit.html?source=free-tools-route-finder",
+                secondaryLabel: "Run self-audit",
               };
-        } else if (need === "package-preview") {
-          recommendation = {
-            title: "Open the kit preview.",
-            summary: "You want to see the exact Starter and Pro artifact list before you check out.",
-            bullets: [
-              "Shows the real deliverables before checkout",
-              "Helps when the missing detail is inside the packet",
-              "Works well for founders and advisors"
-            ],
-            primaryHref: "kit-preview.html",
-            primaryLabel: "Open kit preview",
-            secondaryHref: "pricing.html",
-            secondaryLabel: "Compare pricing",
-          };
+        } else if (need === "public-page") {
+          recommendation = usePublicPageRoute(frequency === "repeat");
+        } else if (role === "consultant") {
+          recommendation = usePartnerPath();
         } else if (frequency === "repeat") {
-          recommendation = {
-            title: role === "other" ? "Compare pricing." : "Run the self-audit first.",
-            summary: role === "other"
-              ? "If you are just comparing options, the pricing page gives the fastest overview."
-              : "Repeated work usually benefits from a quick readiness score before you buy or ask for teardown help.",
-            bullets: role === "other"
-              ? [
+          recommendation = role === "other"
+            ? {
+                title: "Compare pricing.",
+                summary: "If you are just comparing options, the pricing page gives the fastest overview.",
+                bullets: [
                   "Good when you are still comparing options",
                   "Shows the paid paths in one place",
                   "Fastest route to Starter, Pro, or audit"
-                ]
-              : [
+                ],
+                primaryHref: "pricing.html",
+                primaryLabel: "Compare pricing",
+                secondaryHref: "kit-preview.html",
+                secondaryLabel: "See exact preview",
+              }
+            : {
+                title: "Run the self-audit first.",
+                summary: "Repeated work usually benefits from a quick readiness score before you buy or ask for teardown help.",
+                bullets: [
                   "Best when the answer is still fuzzy",
                   "Turns repeated work into a clearer next step",
                   "Keeps you on the no-call path"
                 ],
-            primaryHref: role === "other" ? "pricing.html" : "self-audit.html?source=free-tools-route-finder",
-            primaryLabel: role === "other" ? "Compare pricing" : "Run self-audit",
-            secondaryHref: role === "other" ? "kit-preview.html" : "free-teardown.html?source=free-tools-route-finder",
-            secondaryLabel: role === "other" ? "See exact preview" : "Request free teardown",
-          };
+                primaryHref: "self-audit.html?source=free-tools-route-finder",
+                primaryLabel: "Run self-audit",
+                secondaryHref: "free-teardown.html?source=free-tools-route-finder",
+                secondaryLabel: "Request free teardown",
+              };
         }
 
         routeOutput.replaceChildren();
