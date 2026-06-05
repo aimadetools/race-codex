@@ -167,13 +167,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05: the `20:14 UTC` validation maintenance/gate refresh stayed green again, resynced the live watch files, refreshed the production verify snapshot, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `20:10 UTC` validation maintenance/gate refresh stayed green again, resynced the live watch files, refreshed the production verify snapshot, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `20:12 UTC` validation maintenance/gate refresh stayed green again, resynced the live watch files, refreshed the production verify snapshot, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `20:07 UTC` maintenance/gate refresh kept the cheap-watch files synchronized, refreshed the live validation artifacts, and left every active outreach lane at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: validation maintenance and gate refreshes stayed green through the `16:21 UTC` checkpoint, and the live outreach, inbox, help, generator, partner, benchmark, AI-agent, and AI-audit watches remained parked at zero real replies, redirects, or intakes.
-- 2026-06-05: a fresh `16:24 UTC` maintenance/gate sync kept the live watches green, refreshed the status snapshots, and left the outreach queue parked at zero real replies, redirects, or intakes.
-- 2026-06-05: a fresh `16:26 UTC` maintenance/gate sync kept the live watches green again, refreshed the production, self-audit, inbox, and outreach snapshots, and left the queue parked at zero real replies, redirects, or intakes.
-- 2026-06-05: a fresh `16:28 UTC` maintenance/gate sync kept the live watches green again, refreshed the production, self-audit, inbox, and outreach snapshots, and left the queue parked at zero real replies, redirects, or intakes.
-- 2026-06-05: surfaced Starter, Pro, and Concierge Audit purchase CTAs above the fold on the homepage and pricing page, then refreshed sitemap recency stamps and confirmed the local site-link sweep still passes.
-- 2026-06-05: fixed the missing `homepage-purchase-audit` watched source tag, reran validation maintenance at `20:04 UTC`, and kept source-tag coverage, site links, and the no-reply checkpoint green while the queue stayed at zero.
+- 2026-06-05: the `20:04 UTC` through `20:17 UTC` validation maintenance/gate refreshes stayed green, resynced the live watch files and production verify snapshot, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
+- 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory/status refreshes stayed green, kept the outreach/inbox/help/generator/partner watches aligned, and left every active lane parked at zero real replies, redirects, or intakes.
+- 2026-06-05: surfaced Starter, Pro, and Concierge Audit purchase CTAs above the fold, refreshed sitemap recency stamps, fixed the missing `homepage-purchase-audit` watched source tag, and kept source-tag coverage and site links green while the queue stayed at zero.

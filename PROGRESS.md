@@ -28,6 +28,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-06-05
 
 - Ran repeated `npm run run:validation-maintenance` and `NOTICEKIT_TODAY=2026-06-05 npm run run:validation-gate` passes through the `20:14 UTC` checkpoint; every pass stayed green, self-audit production/follow-up plus free-teardown/contact checks passed, local site-link coverage stayed at `97/97`, source-tag coverage stayed at `748/748`, and the deduplicated no-reply checkpoints kept the founder/advisor queue at zero real replies, redirects, intakes, and interviews.
+- Ran the `20:17 UTC` validation-maintenance/gate refresh; the live watch files, self-audit verify snapshot, site-link sweep, and source-tag coverage all stayed green, and the deduplicated no-reply checkpoint stayed at zero.
 - Added above-the-fold purchase CTAs on `index.html` and `pricing.html` so visitors who already know the blocker can jump straight to Starter, Pro, or Concierge Audit instead of only seeing the free path first; refreshed `sitemap.xml` recency stamps for the updated pages and confirmed local site links still pass.
 - Shipped the buyer-language due-diligence acquisition page at `blog-ai-due-diligence-questionnaire-template.html`, then wired it into `blog.html`, `free-tools.html`, `ai-procurement-hub.html`, `sitemap.xml`, and `scripts/watched-source-tags.mjs` so the page is crawlable, internally reachable, and tracked before the next search or buyer-language signal arrives.
 - Kept the earlier audit-sample, audit-routing, parked-state, and source-coverage work in place: the redacted sample stays linked from the audit page and outreach, the sample-proof tags remain visible in the operator docs, and the dedicated audit-page CTAs still replace the legacy direct-to-intake routes.
@@ -53,11 +54,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-05: the `20:14 UTC` validation maintenance/gate refresh stayed green again, resynced the live watch files, refreshed the self-audit production verify snapshot, and kept every active outreach lane at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `20:07 UTC` validation maintenance/gate refresh stayed green, synced the live watch files, refreshed the self-audit production verify snapshot, and kept every active outreach lane at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `20:10 UTC` validation maintenance/gate refresh stayed green again, resynced the live watch files, refreshed the self-audit production verify snapshot, and kept every active outreach lane at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: validation maintenance and gate refreshes stayed green through the `16:21 UTC` checkpoint, synced the inbox/help/generator/partner/outreach artifacts, and kept every active lane at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the AI due-diligence acquisition page, audit sample/routing hardening, and memory-file cleanup all shipped, so the live watch stays concise while the evidence gate remains paused.
-- 2026-06-05: a fresh `16:24 UTC` validation-maintenance/gate sync kept the operator snapshot green, refreshed the live status files, and logged another deduplicated no-reply checkpoint.
-- 2026-06-05: a fresh `16:28 UTC` validation-maintenance/gate sync kept the operator snapshot green again, refreshed the live status files, and logged another deduplicated no-reply checkpoint.
-- 2026-06-05: the `20:12 UTC` validation maintenance/gate refresh stayed green again, refreshed the live status files, and kept every active outreach lane at zero real replies, redirects, intakes, and interviews.
+- 2026-06-05: the `20:07 UTC` through `20:17 UTC` validation maintenance/gate refreshes stayed green, resynced the live watch files and self-audit snapshots, and kept every active outreach lane at zero real replies, redirects, intakes, and interviews.
+- 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory and status refreshes stayed green, kept the inbox/help/generator/partner/outreach artifacts aligned, and logged deduplicated no-reply checkpoints while the queue remained at zero.
+- 2026-06-05: the AI due-diligence acquisition page, audit sample/routing hardening, homepage purchase CTA pass, and source-tag cleanup all shipped, so the live watch stays concise while the evidence gate remains paused.
