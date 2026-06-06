@@ -175,3 +175,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 - 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, due-diligence acquisition surface, and related routing/source-tag cleanup while expansion stayed evidence-gated.
 - 2026-06-06: expanded the due-diligence route into chooser/library/core conversion surfaces, lifted watcher coverage to `779/779`, and kept the audit-lane wording aligned with the June 8 checkpoint.
 - 2026-06-06: closed the audit-sample, purchase-clarity, and about-page attribution gaps and regenerated the inbox/validation artifacts so proof and handoff traffic stay attributable by surface.
+- 2026-06-06: ran the 08:19 UTC validation refresh, kept the cheap queue parked at zero replies, and left the live monitoring state unchanged.
