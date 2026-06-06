@@ -860,6 +860,18 @@ const auditSampleProofWatch = {
     {
       label: "audit sample page",
       count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "ai-audit-sample-page")
+    },
+    {
+      label: "homepage audit sample",
+      count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "homepage-audit-sample")
+    },
+    {
+      label: "free-tools audit sample",
+      count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "free-tools-audit-sample")
+    },
+    {
+      label: "pricing audit sample",
+      count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "pricing-audit-sample")
     }
   ]
 };

@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-06 04:20 UTC
+Checked at: 2026-06-06 04:24 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -143,6 +143,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-audit-email-sample: 0
 - ai-audit-page-sample: 0
 - ai-audit-sample-page: 0
+- homepage-audit-sample: 0
+- free-tools-audit-sample: 0
+- pricing-audit-sample: 0
 
 ### Watched Source Tags
 
@@ -878,6 +881,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-audit-page: 0
 - ai-audit-page-sample: 0
 - ai-audit-sample-page: 0
+- homepage-audit-sample: 0
+- free-tools-audit-sample: 0
+- pricing-audit-sample: 0
 - ai-audit-page-builder: 0
 - ai-audit-page-evidence-map: 0
 - ai-audit-page-agent-workspace: 0

@@ -19,7 +19,10 @@ const AUDIT_OUTREACH_SOURCE_TAGS = new Set(["ai-audit-outreach-batch-01"]);
 const AUDIT_SAMPLE_SOURCE_TAGS = new Set([
   "ai-audit-email-sample",
   "ai-audit-page-sample",
-  "ai-audit-sample-page"
+  "ai-audit-sample-page",
+  "homepage-audit-sample",
+  "free-tools-audit-sample",
+  "pricing-audit-sample"
 ]);
 const AUDIT_ROUTE_SOURCE_TAGS = new Set([
   "homepage-nav-audit",
