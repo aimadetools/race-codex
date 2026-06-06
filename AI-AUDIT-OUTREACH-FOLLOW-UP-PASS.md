@@ -11,7 +11,7 @@ Prepared rows: 5
 
 ## Current Status
 
-AI audit follow-up has already been sent for 5 row(s), and no reply, redirect, or intake evidence is recorded yet.
+AI audit follow-up has already been sent for 5 row(s), and the outreach CSV still shows 0 terminal response rows.
 
 ## Follow-Up Queue
 

@@ -200,7 +200,7 @@ async function loadState() {
     audit: summarize(auditRows, today, extractFollowUpDate(auditFollowUpText)),
     benchmarkReplies: countByStatuses(benchmarkRows, TERMINAL_STATUSES),
     agentReviewReplies: countByStatuses(agentReviewRows, TERMINAL_STATUSES),
-    auditReplies: countByStatuses(auditRows, TERMINAL_STATUSES)
+    auditTerminalRows: countByStatuses(auditRows, TERMINAL_STATUSES)
   };
 }
 
@@ -231,12 +231,12 @@ async function main() {
   if (secondTouchExhausted(state.today, "agentReview", state.agentReview)) {
     console.log(`- AI agent review second-touch exhaustion checkpoint has been reached (${SECOND_TOUCH_EXHAUSTION_DATES.agentReview} UTC) with zero recorded replies, bounces, or interviews.`);
   }
-  console.log(`- AI audit replies/bounces/interviews: ${state.auditReplies}`);
+  console.log(`- AI audit terminal outreach rows: ${state.auditTerminalRows}`);
   console.log(`- AI audit sent rows still pending follow-up: ${state.audit.pending}`);
   console.log(`- AI audit follow-ups already sent: ${state.audit.followedUp}`);
   console.log(`- AI audit follow-up date: ${state.audit.dueDate || "missing"}`);
   if (secondTouchExhausted(state.today, "audit", state.audit)) {
-    console.log(`- AI audit second-touch exhaustion checkpoint has been reached (${SECOND_TOUCH_EXHAUSTION_DATES.audit} UTC) with zero recorded replies, bounces, or interviews.`);
+    console.log(`- AI audit second-touch exhaustion checkpoint has been reached (${SECOND_TOUCH_EXHAUSTION_DATES.audit} UTC) with zero recorded terminal outreach rows in the CSV.`);
   }
   console.log("");
 

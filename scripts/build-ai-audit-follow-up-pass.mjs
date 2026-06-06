@@ -164,12 +164,12 @@ const batchDate = rows
   .sort()[0] || "unknown";
 const exhausted = today >= SECOND_TOUCH_EXHAUSTION_DATE && followedUpRows > 0 && sentRows === 0 && terminalRows === 0;
 const currentStatusLine = exhausted
-  ? `AI audit follow-up is exhausted as of ${SECOND_TOUCH_EXHAUSTION_DATE} UTC: all ${followedUpRows} row(s) were followed up, and the outreach CSV still shows 0 replies, bounces, or interviews. Keep the batch parked until a new offer or segment decision exists.`
+  ? `AI audit follow-up is exhausted as of ${SECOND_TOUCH_EXHAUSTION_DATE} UTC: all ${followedUpRows} row(s) were followed up, and the outreach CSV still shows 0 terminal response rows. Keep the batch parked until a new offer or segment decision exists.`
   : followedUpRows > 0 && sentRows === 0
-  ? `AI audit follow-up has already been sent for ${followedUpRows} row(s), and no reply, redirect, or intake evidence is recorded yet.`
+  ? `AI audit follow-up has already been sent for ${followedUpRows} row(s), and the outreach CSV still shows 0 terminal response rows.`
   : followedUpRows > 0
     ? `AI audit batch 01 currently has ${sentRows} sent row(s) still pending follow-up and ${followedUpRows} followed-up row(s).`
-    : `AI audit batch 01 currently has ${activeRows.length} sent row(s) and no recorded replies, bounces, redirects, or audit intakes.`;
+    : `AI audit batch 01 currently has ${activeRows.length} sent row(s) and no terminal response rows recorded in the outreach CSV.`;
 const earliestFollowUpDate = activeRows
   .map((row) => row.followUpDate)
   .filter((value) => value && value !== "unknown")
