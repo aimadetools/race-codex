@@ -862,6 +862,10 @@ const auditSampleProofWatch = {
       count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "ai-audit-sample-page")
     },
     {
+      label: "about audit sample",
+      count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "about-page-audit-sample")
+    },
+    {
       label: "homepage audit sample",
       count: extractInboxBreakdownMetric(contactInboxStatusText, "Audit Sample Proof Source Tags", "homepage-audit-sample")
     },
@@ -876,6 +880,24 @@ const auditSampleProofWatch = {
   ]
 };
 auditSampleProofWatch.total = sumMetrics(auditSampleProofWatch.items.map((entry) => entry.count));
+const purchaseClarityWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "homepage-kit-preview", label: "homepage kit preview" },
+  { tag: "homepage-purchase-next-steps", label: "homepage purchase next steps" },
+  { tag: "pricing-kit-preview", label: "pricing kit preview" },
+  { tag: "pricing-purchase-next-steps", label: "pricing purchase next steps" },
+  { tag: "free-tools-kit-preview", label: "free-tools kit preview" },
+  { tag: "start-here-kit-preview", label: "start-here kit preview" },
+  { tag: "blog-index-kit-preview", label: "blog kit preview" },
+  { tag: "about-page-kit-preview", label: "about kit preview" },
+  { tag: "about-page-purchase-next-steps", label: "about purchase next steps" },
+  { tag: "route-chooser-purchase-next-steps", label: "route-chooser purchase next steps" },
+  { tag: "ai-audit-page-purchase-next-steps", label: "audit page purchase next steps" },
+  { tag: "ai-pro-kit-purchase-next-steps", label: "pro-kit purchase next steps" },
+  { tag: "partner-handoff-kit-preview", label: "partner handoff kit preview" },
+  { tag: "purchase-next-steps-kit-preview", label: "purchase next steps kit preview" },
+  { tag: "kit-preview-purchase-next-steps", label: "kit preview purchase next steps" },
+  { tag: "purchase-next-steps-evidence-map", label: "purchase next steps evidence map" }
+]);
 const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-openai-answer-template", label: "blog template" },
   { tag: "blog-index-openai-answer-example", label: "blog example" },
@@ -980,6 +1002,7 @@ const output = [
   renderWatchedSourceGroup("AI-first entry-point inbox submissions", aiFirstEntryWatch),
   renderWatchedSourceGroup("Dedicated audit-route inbox submissions", auditRouteWatch),
   renderWatchedSourceGroup("Audit sample-proof inbox submissions", auditSampleProofWatch),
+  renderWatchedSourceGroup("Purchase-clarity inbox submissions", purchaseClarityWatch),
   renderWatchedSourceGroup("Due-diligence route inbox submissions", dueDiligenceWatch),
   renderWatchedSourceGroup("AI-agent-control inbox submissions", aiAgentWatch),
   renderWatchedSourceGroup("AI-agent gap-read inbox submissions", aiAgentGapReadWatch),

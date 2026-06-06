@@ -115,6 +115,7 @@ const AUDIT_SAMPLE_SOURCE_TAGS = [
   "ai-audit-email-sample",
   "ai-audit-page-sample",
   "ai-audit-sample-page",
+  "about-page-audit-sample",
   "homepage-audit-sample",
   "free-tools-audit-sample",
   "pricing-audit-sample"
