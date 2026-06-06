@@ -61,11 +61,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-06: the `04:07 UTC` validation-maintenance and gate pass stayed green, refreshed the live watch/status artifacts, extended the inbox snapshot with the new due-diligence audit source tags, and kept every active premium lane parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `23:29 UTC` validation-maintenance and gate refreshes stayed green, resynced the live watch files and status snapshots, and kept every active outreach lane parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-06: shipped `ai-due-diligence-scorecard.html`, rewired the due-diligence template/blog/free-tools/procurement-hub path into the new scorecard route, added the new watched due-diligence source hooks, and kept targeted checks green at `750/750` source tags and `98/98` local links.
-- 2026-06-05: the `23:27 UTC` validation-maintenance pass stayed green, resynced the live watch files and status snapshots, logged the no-reply checkpoint, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `23:25 UTC`, `23:22 UTC`, and `23:19 UTC` maintenance/gate passes stayed green, resynced the live watch files and status snapshots, logged no-reply checkpoints, and kept the premium watch queue parked at zero real replies, redirects, and interviews.
-- 2026-06-05: the `23:05 UTC` through `23:17 UTC` and `20:04 UTC` through `20:29 UTC` maintenance/gate passes stayed green, kept source-tag coverage and site links green, and left the premium watch queue parked at zero.
-- 2026-06-05: the homepage, pricing, free-tools clarity pass, due-diligence page, purchase CTA pass, and audit sample/routing hardening shipped while premium work remained gated on evidence.
-- 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory refreshes kept the inbox/help/generator/partner/outreach artifacts aligned and all active lanes parked at zero.
+- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the premium watch artifacts, and kept every active lane parked at zero real replies, redirects, intakes, submissions, and interviews.
+- 2026-06-06: shipped the dedicated due-diligence scorecard route, rewired the monitored due-diligence acquisition path into it, and clarified the audit-lane exhaustion wording so the June 8 checkpoint reports audit-specific terminal outreach state.
+- 2026-06-05: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, and audit sample/routing hardening while premium expansion remained evidence-gated.

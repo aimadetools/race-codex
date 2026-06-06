@@ -170,11 +170,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-06: the `04:07 UTC` validation-maintenance and gate pass stayed green, refreshed the live watch/status artifacts, added the new due-diligence audit source tags to the inbox snapshot, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `23:29 UTC` validation-maintenance and gate refreshes stayed green, resynced the live watch files and status snapshots, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-06: shipped `ai-due-diligence-scorecard.html`, rewired the due-diligence template/blog/free-tools/procurement-hub path into it, added watched source hooks for the new route, and kept targeted checks green at `750/750` source tags and `98/98` local links.
-- 2026-06-05: the `23:27 UTC` validation-maintenance pass stayed green, resynced the live watch files and status snapshots, logged the no-reply checkpoint, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `23:25 UTC`, `23:22 UTC`, and `23:19 UTC` maintenance/gate passes stayed green, resynced the live watch files and status snapshots, logged no-reply checkpoints, and kept the cheap-watch queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-05: the `23:05 UTC` through `23:17 UTC` and `20:04 UTC` through `20:29 UTC` maintenance/gate passes stayed green, kept source-tag coverage and site links green, and left the cheap-watch queue parked at zero.
-- 2026-06-05: the homepage, pricing, free-tools clarity pass, due-diligence page, purchase CTAs, audit sample/routing cleanup, and watched-source-tag updates shipped while broader expansion stayed paused.
-- 2026-06-05: the `16:20 UTC` through `16:28 UTC` memory refreshes kept the inbox/help/generator/partner/outreach artifacts aligned and the queue at zero.
+- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the cheap-watch artifacts, and kept the live queue parked at zero real replies, redirects, intakes, and interviews.
+- 2026-06-06: shipped `ai-due-diligence-scorecard.html`, rewired the monitored due-diligence route into blog/free-tools/procurement surfaces, and clarified the audit-lane checkpoint wording so the operator view now tracks `terminal outreach rows` instead of stale interview language.
+- 2026-06-05: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, and audit sample/routing/source-tag cleanup while expansion stayed evidence-gated.
