@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Due Diligence Scorecard for SaaS Teams | NoticeKit</title>
+    <meta name="description" content="Run a browser-only AI due diligence scorecard for your SaaS team. Capture vendor chain, workflow scope, customer impact, approval owner, proof links, and framework notes before procurement, security, privacy, or counsel review stalls the deal.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:url" content="https://noticekit.tech/ai-due-diligence-scorecard.html">
+    <meta property="og:title" content="AI Due Diligence Scorecard for SaaS Teams">
+    <meta property="og:description" content="A browser-only AI due diligence scorecard for SaaS teams answering buyer review threads.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit AI due diligence scorecard">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Due Diligence Scorecard for SaaS Teams">
+    <meta name="twitter:description" content="Package vendor chain, workflow scope, proof, owner path, and framework notes in one local AI due diligence scorecard.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://noticekit.tech/ai-due-diligence-scorecard.html">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "NoticeKit AI Due Diligence Scorecard",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://noticekit.tech/ai-due-diligence-scorecard.html",
+            "description": "Browser-only AI due diligence scorecard for SaaS teams packaging vendor chain, workflow scope, customer impact, approval owner, proof links, and framework notes before buyer review."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use an AI due diligence scorecard?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use it when the buyer, procurement team, security reviewer, privacy reviewer, or counsel wants the named vendor chain, workflow scope, customer impact, ownership, proof, and framework notes before approving the AI workflow."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does the score mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The score shows whether the current draft captures the vendor chain, scope, governance stance, owner path, proof, and open issues cleanly enough for a due diligence packet or buyer review thread."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this send my inputs to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The scorecard runs locally in the browser and keeps your draft on the current device only."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="free-tools.html">Free tools</a>
+          <a class="button secondary" href="ai-security-questionnaire-audit.html?source=ai-due-diligence-scorecard-nav-audit">Request audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <span class="eyebrow">Browser-only AI due diligence scorecard</span>
+          <h1>Score the AI due diligence packet before the buyer does.</h1>
+          <p>Use this scorecard when your SaaS team is answering a buyer AI due diligence request and the blocker is still the operating facts. Capture the vendor chain, workflow scope, customer impact, training stance, approval owner, proof links, and framework notes once, then get a readiness score, gap list, and the shortest next NoticeKit route without sending your inputs to a server.</p>
+          <div class="hero-actions">
+            <a class="button" href="#worksheet">Open scorecard</a>
+            <a class="button secondary" href="blog-ai-due-diligence-questionnaire-template.html?source=ai-due-diligence-scorecard-template">Open due diligence template</a>
+            <a class="button secondary" href="ai-security-review-evidence-map.html?source=ai-due-diligence-evidence-map">Open evidence map</a>
+            <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-due-diligence-starter-pack">Open starter pack</a>
+            <a class="button secondary" href="free-teardown.html?source=ai-due-diligence-teardown">Request free teardown</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice-band">
+            <strong>For the company answering the due diligence request.</strong>
+            <p>This scorecard is for the SaaS team receiving buyer procurement, security, privacy, or counsel review pressure, not the buyer sending the questionnaire. It is operational packaging, not legal advice.</p>
+          </div>
+        </section>
+
+        <section class="section audit-layout" id="worksheet">
+          <form class="audit-card" id="risk-worksheet-form">
+            <div class="section-head compact-head">
+              <h2>Scorecard inputs</h2>
+              <p>Keep this focused on one workflow. The goal is to make the due diligence packet review-ready, not to write a broad policy document.</p>
+              <div class="route-presets" aria-label="Quick presets">
+                <button class="button secondary" type="button" data-preset="customer-facing">Customer-facing AI feature</button>
+                <button class="button secondary" type="button" data-preset="support-copilot">Support copilot</button>
+                <button class="button secondary" type="button" data-preset="internal-assistant">Internal assistant</button>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label>Company
+                <input id="company" value="Example SaaS">
+              </label>
+              <label>Named AI vendor
+                <input id="named-vendor" value="OpenAI">
+              </label>
+              <label>Workflow reviewed
+                <input id="workflow" value="Support drafting assistant for customer-facing ticket replies">
+              </label>
+              <label>Workflow status
+                <select id="workflow-status">
+                  <option value="planned">Planned rollout under review</option>
+                  <option value="active">Active workflow in production</option>
+                  <option value="replacement">Replacing an older workflow</option>
+                </select>
+              </label>
+              <label>Downstream providers
+                <textarea id="downstream">Vercel, Supabase, Zendesk, PostHog</textarea>
+              </label>
+              <label>Data categories touched
+                <textarea id="data-categories">Support ticket text, account identifiers, internal agent prompts, and response drafts.</textarea>
+              </label>
+              <label>Customer scope
+                <textarea id="customer-scope">Enterprise and EU customers using the support workflow, with extra review for signed DPA accounts.</textarea>
+              </label>
+              <label>Training or retention stance
+                <textarea id="training-stance">Current operating position: no training on our customer content in this workflow, with vendor terms and internal review notes kept as proof.</textarea>
+              </label>
+              <label>Framework, contract, or notice impact
+                <textarea id="notice-impact">The team is checking whether this workflow changes the public subprocessor page, triggers customer notice, maps cleanly to the buyer's framework, or needs contract-specific reviewer approval before launch.</textarea>
+              </label>
+              <label>Approval owner
+                <input id="approval-owner" value="Privacy ops lead with counsel review">
+              </label>
+              <label>Proof links or evidence
+                <textarea id="proof-links">Public subprocessor page URL, vendor terms link, internal review brief, workflow screenshot, and approval tracker row.</textarea>
+              </label>
+              <label>Open questions
+                <textarea id="open-questions">Confirm whether attachments are in scope for the first release and whether any customer-specific agreement adds notice requirements before activation.</textarea>
+              </label>
+            </div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Readiness result</span>
+            <div class="score-row generator-summary">
+              <strong id="readiness-score">9/10</strong>
+              <span id="readiness-state">Review-ready</span>
+            </div>
+            <div class="score-meter" aria-hidden="true">
+              <span id="readiness-meter"></span>
+            </div>
+            <p id="readiness-summary">The draft names the vendor chain, workflow scope, customer impact, owner, proof, and unresolved issues well enough to support a due diligence packet.</p>
+            <div class="tier-guidance">
+              <strong id="next-step-title">Best next step</strong>
+              <p id="next-step-copy">Use the starter pack if the live blocker is still one buyer answer, or move into the builder now if the current facts are clean enough for a copy-ready response.</p>
+            </div>
+            <div class="result-list">
+              <div>
+                <strong>What is still thin</strong>
+                <ul id="gap-list"></ul>
+              </div>
+              <div>
+                <strong>What already holds up</strong>
+                <ul id="strength-list"></ul>
+              </div>
+            </div>
+            <div class="generator-actions">
+              <button class="button" id="copy-brief" type="button">Copy review brief</button>
+              <button class="button secondary" id="copy-gaps" type="button">Copy gap list</button>
+              <button class="button secondary" id="download-brief" type="button">Download brief</button>
+              <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
+            </div>
+            <p class="fine-print" id="worksheet-status">This scorecard runs in your browser. Inputs stay local and autosave on this device only.</p>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article>
+              <div class="section-head">
+                <h2>Review brief</h2>
+                <p>Use this to hand the current state to procurement, privacy, security, or counsel without rewriting the same facts again.</p>
+              </div>
+              <div class="template-box" id="brief-output" aria-live="polite"></div>
+            </article>
+            <article>
+              <div class="section-head">
+                <h2>Gap checklist</h2>
+                <p>Use this to tighten the scorecard before you jump into a final answer or paid packet route.</p>
+              </div>
+              <div class="template-box" id="gaps-output" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>How to route the score</h2>
+            <p>Do not build the wrong artifact too early. Use the score to decide whether the packet still needs fact cleanup, proof packaging, one answer block, or a broader repeat-review file.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card">
+              <span class="tag">0-5</span>
+              <h3>Still messy</h3>
+              <p>The vendor chain, scope, framework notes, proof, or owner path is still too fuzzy. Keep working in the scorecard, use the template, or request a teardown before drafting the answer.</p>
+            </article>
+            <article class="card">
+              <span class="tag">6-8</span>
+              <h3>Answer path is close</h3>
+              <p>The facts are mostly there, but one or two weak spots can still create buyer follow-up loops. Use the starter pack or evidence map once the missing items are patched.</p>
+            </article>
+            <article class="card">
+              <span class="tag">9-10</span>
+              <h3>Ready to package</h3>
+              <p>The facts are tight enough for the answer builder, repeat-review answer bank, or a broader packet path if procurement already wants more than one response block.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <h2>Need the next artifact now?</h2>
+              <p>Use the evidence map when the remaining blocker is proof quality, named owner, review date, or framework-reference detail behind one claim. Use the starter pack when the live blocker is still one AI questionnaire thread. Use the answer builder when the facts above are strong enough for a copy-ready response. Use teardown if one page, one vendor, or one customer segment still needs an outside read.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="button" id="route-primary" href="ai-security-questionnaire-starter-pack.html?source=ai-due-diligence-starter-pack">Open starter pack</a>
+              <a class="button secondary" id="route-secondary" href="ai-security-questionnaire-answer-builder.html?source=ai-due-diligence-builder">Open answer builder</a>
+              <a class="button secondary" href="ai-security-review-evidence-map.html?source=ai-due-diligence-evidence-map">Open evidence map</a>
+              <a class="button secondary" href="blog-ai-due-diligence-questionnaire-template.html?source=ai-due-diligence-risk-checklist">Open due diligence template</a>
+              <a class="button secondary" href="free-teardown.html?source=ai-due-diligence-teardown">Request free teardown</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="free-tools.html">Free tools</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const STORAGE_KEY = "noticekit-ai-due-diligence-scorecard-v1";
+      const fieldIds = [
+        "company",
+        "named-vendor",
+        "workflow",
+        "workflow-status",
+        "downstream",
+        "data-categories",
+        "customer-scope",
+        "training-stance",
+        "notice-impact",
+        "approval-owner",
+        "proof-links",
+        "open-questions"
+      ];
+      const weightedChecks = [
+        {
+          id: "named-vendor",
+          label: "Name the exact AI vendor instead of using generic AI wording.",
+          strength: "Named vendor is explicit."
+        },
+        {
+          id: "workflow",
+          label: "Define the exact workflow under review.",
+          strength: "Workflow boundary is explicit."
+        },
+        {
+          id: "downstream",
+          label: "List the downstream providers in the chain.",
+          strength: "Downstream provider chain is captured."
+        },
+        {
+          id: "data-categories",
+          label: "Describe the data categories touched.",
+          strength: "Data categories are concrete."
+        },
+        {
+          id: "customer-scope",
+          label: "State which customer segment or agreements are affected.",
+          strength: "Customer scope is isolated."
+        },
+        {
+          id: "training-stance",
+          label: "Capture the current training or retention stance.",
+          strength: "Training or retention stance is documented."
+        },
+        {
+          id: "notice-impact",
+          label: "Clarify framework mapping, contract review, notice impact, or escalation path.",
+          strength: "Framework and escalation path is stated."
+        },
+        {
+          id: "approval-owner",
+          label: "Name the accountable owner or approver.",
+          strength: "Approval ownership is explicit."
+        },
+        {
+          id: "proof-links",
+          label: "Attach proof links, pages, or internal evidence.",
+          strength: "Proof trail is attached."
+        },
+        {
+          id: "open-questions",
+          label: "Write the unresolved questions instead of hiding them.",
+          strength: "Open questions are documented."
+        }
+      ];
+      const presetValues = {
+        "customer-facing": {
+          "named-vendor": "OpenAI",
+          "workflow": "Customer-facing drafting assistant inside the support console",
+          "workflow-status": "planned",
+          "downstream": "Vercel, Supabase, Zendesk, PostHog",
+          "data-categories": "Support ticket text, account identifiers, and response drafts",
+          "customer-scope": "Enterprise and EU support workflows, with extra review for signed DPA accounts",
+          "training-stance": "Current operating position: no training on our customer content in this workflow, with vendor terms and internal notes kept as proof.",
+          "notice-impact": "Need to confirm whether this workflow changes the public subprocessor page, maps cleanly to buyer diligence questions, or triggers contract-specific approval before launch.",
+          "approval-owner": "Privacy ops lead with product and counsel review",
+          "proof-links": "Public subprocessor page, vendor terms, internal review brief, and workflow screenshots",
+          "open-questions": "Confirm whether attachments are in scope for launch and whether any enterprise contract adds framework or notice requirements."
+        },
+        "support-copilot": {
+          "named-vendor": "OpenAI",
+          "workflow": "Internal support copilot that drafts reply suggestions for agents",
+          "workflow-status": "active",
+          "downstream": "Zendesk, Vercel, Supabase, PostHog",
+          "data-categories": "Support ticket text, customer identifiers, and agent edits",
+          "customer-scope": "Support conversations across all paid plans, with enterprise contract review for EU accounts",
+          "training-stance": "Current operating position: customer content is processed under the business offering and is not used for training, subject to current vendor terms and internal approval notes.",
+          "notice-impact": "Need to confirm whether activation changed the public vendor list, whether any diligence framework calls for extra proof, and whether any contract-specific disclosure follow-up is still required.",
+          "approval-owner": "Support operations lead with privacy review",
+          "proof-links": "Vendor terms, support workflow screenshot, internal rollout note, and subprocessor page URL",
+          "open-questions": "Need a final call on transcript retention and whether attachments are excluded from the current workflow."
+        },
+        "internal-assistant": {
+          "named-vendor": "Anthropic",
+          "workflow": "Internal product and operations assistant used for drafting and research",
+          "workflow-status": "replacement",
+          "downstream": "Vercel, Linear, Notion",
+          "data-categories": "Internal product notes, support summaries, and planning documents",
+          "customer-scope": "No direct customer-facing workflow, but customer-derived internal notes may appear in prompts",
+          "training-stance": "Current operating position: use the vendor business offering with internal guidance to avoid pasting unnecessary customer content.",
+          "notice-impact": "Need to check whether internal-only use still changes vendor disclosures, enterprise questionnaire wording, or buyer diligence framework notes.",
+          "approval-owner": "Operations lead with privacy and counsel review",
+          "proof-links": "Internal use policy, vendor terms, and the current AI stack inventory",
+          "open-questions": "Need a final answer on whether internal notes that summarize customer issues count as in-scope customer content."
+        }
+      };
+
+      const form = document.querySelector("#risk-worksheet-form");
+      const scoreNode = document.querySelector("#readiness-score");
+      const stateNode = document.querySelector("#readiness-state");
+      const meterNode = document.querySelector("#readiness-meter");
+      const summaryNode = document.querySelector("#readiness-summary");
+      const nextStepTitleNode = document.querySelector("#next-step-title");
+      const nextStepCopyNode = document.querySelector("#next-step-copy");
+      const gapListNode = document.querySelector("#gap-list");
+      const strengthListNode = document.querySelector("#strength-list");
+      const briefOutputNode = document.querySelector("#brief-output");
+      const gapsOutputNode = document.querySelector("#gaps-output");
+      const statusNode = document.querySelector("#worksheet-status");
+      const routePrimary = document.querySelector("#route-primary");
+      const routeSecondary = document.querySelector("#route-secondary");
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
+      function textToHtml(value) {
+        return escapeHtml(value).replace(/\n/g, "<br>");
+      }
+
+      function readDraft() {
+        const draft = {};
+        fieldIds.forEach((id) => {
+          const field = document.getElementById(id);
+          draft[id] = field ? field.value.trim() : "";
+        });
+        return draft;
+      }
+
+      function writeDraft(draft) {
+        fieldIds.forEach((id) => {
+          const field = document.getElementById(id);
+          if (field && Object.prototype.hasOwnProperty.call(draft, id)) {
+            field.value = draft[id];
+          }
+        });
+      }
+
+      function saveDraft() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(readDraft()));
+      }
+
+      function loadDraft() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          return;
+        }
+
+        try {
+          writeDraft(JSON.parse(raw));
+          statusNode.textContent = "Saved draft restored from this device. Inputs still stay local.";
+        } catch {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+      }
+
+      function buildPayload() {
+        const draft = readDraft();
+        const strengths = [];
+        const gaps = [];
+
+        weightedChecks.forEach((check) => {
+          if (draft[check.id]) {
+            strengths.push(check.strength);
+          } else {
+            gaps.push(check.label);
+          }
+        });
+
+        const score = strengths.length;
+        let scoreState = "Still messy";
+        let summary = "The current draft still has enough missing context that a due diligence packet will probably turn into more clarification loops.";
+        let nextStepTitle = "Best next step";
+        let nextStepCopy = "Stay in the scorecard, patch the missing facts, and use the due diligence template or teardown before drafting the final answer.";
+        let primaryRoute = {
+          href: "blog-ai-due-diligence-questionnaire-template.html?source=ai-due-diligence-risk-checklist",
+          label: "Open due diligence template"
+        };
+        let secondaryRoute = {
+          href: "free-teardown.html?source=ai-due-diligence-teardown",
+          label: "Request free teardown"
+        };
+
+        if (score >= 6) {
+          scoreState = "Close to answer-ready";
+          summary = "The draft has the main diligence facts, but a couple of weak spots can still create follow-up loops or internal confusion.";
+          nextStepCopy = "Patch the remaining gaps, then use the starter pack for the live answer path or the evidence map if the weak spot is still proof, ownership, or framework metadata.";
+          primaryRoute = {
+            href: "ai-security-questionnaire-starter-pack.html?source=ai-due-diligence-starter-pack",
+            label: "Open starter pack"
+          };
+          secondaryRoute = {
+            href: "ai-security-review-evidence-map.html?source=ai-due-diligence-evidence-map",
+            label: "Open evidence map"
+          };
+        }
+
+        if (score >= 9) {
+          scoreState = "Review-ready";
+          summary = "The draft names the vendor chain, workflow scope, customer impact, owner, proof, and unresolved issues well enough to support a due diligence packet.";
+          nextStepCopy = "Use the answer builder now if the job is one live buyer response. Use the answer bank only if the same review keeps repeating across deals.";
+          primaryRoute = {
+            href: "ai-security-questionnaire-answer-builder.html?source=ai-due-diligence-builder",
+            label: "Open answer builder"
+          };
+          secondaryRoute = {
+            href: "ai-security-questionnaire-answer-bank.html?source=ai-due-diligence-answer-bank",
+            label: "Open answer bank"
+          };
+        }
+
+        const reviewBrief = [
+          `# ${draft.company || "Company"} AI due diligence brief`,
+          "",
+          `Readiness score: ${score}/10 (${scoreState})`,
+          "",
+          "## Workflow",
+          `- Named vendor: ${draft["named-vendor"] || "[missing]"}`,
+          `- Workflow reviewed: ${draft.workflow || "[missing]"}`,
+          `- Workflow status: ${draft["workflow-status"] || "[missing]"}`,
+          "",
+          "## Chain and scope",
+          `- Downstream providers: ${draft.downstream || "[missing]"}`,
+          `- Data categories: ${draft["data-categories"] || "[missing]"}`,
+          `- Customer scope: ${draft["customer-scope"] || "[missing]"}`,
+          "",
+          "## Governance stance",
+          `- Training or retention stance: ${draft["training-stance"] || "[missing]"}`,
+          `- Framework, contract, or notice impact: ${draft["notice-impact"] || "[missing]"}`,
+          `- Approval owner: ${draft["approval-owner"] || "[missing]"}`,
+          "",
+          "## Proof and open questions",
+          `- Proof links: ${draft["proof-links"] || "[missing]"}`,
+          `- Open questions: ${draft["open-questions"] || "[missing]"}`,
+          "",
+          "## Gaps to close",
+          ...(gaps.length ? gaps.map((gap) => `- ${gap}`) : ["- No major field gaps in the current scorecard draft."])
+        ].join("\n");
+
+        const gapChecklist = gaps.length
+          ? gaps.map((gap) => `- ${gap}`).join("\n")
+          : "- No major field gaps. Route into the builder, starter pack, or answer bank based on whether the job is one answer or repeat review.";
+
+        return {
+          draft,
+          score,
+          scoreState,
+          summary,
+          nextStepTitle,
+          nextStepCopy,
+          strengths,
+          gaps,
+          reviewBrief,
+          gapChecklist,
+          primaryRoute,
+          secondaryRoute
+        };
+      }
+
+      function renderList(node, items, fallback) {
+        node.innerHTML = "";
+        const values = items.length ? items : [fallback];
+        values.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          node.appendChild(li);
+        });
+      }
+
+      function renderPayload() {
+        const payload = buildPayload();
+        scoreNode.textContent = `${payload.score}/10`;
+        stateNode.textContent = payload.scoreState;
+        meterNode.style.width = `${payload.score * 10}%`;
+        summaryNode.textContent = payload.summary;
+        nextStepTitleNode.textContent = payload.nextStepTitle;
+        nextStepCopyNode.textContent = payload.nextStepCopy;
+        renderList(gapListNode, payload.gaps, "No major field gaps in the current scorecard draft.");
+        renderList(strengthListNode, payload.strengths, "Add a few facts to turn this into a cleaner buyer-review brief.");
+        briefOutputNode.innerHTML = `<p>${textToHtml(payload.reviewBrief)}</p>`;
+        gapsOutputNode.innerHTML = `<p>${textToHtml(payload.gapChecklist)}</p>`;
+        routePrimary.href = payload.primaryRoute.href;
+        routePrimary.textContent = payload.primaryRoute.label;
+        routeSecondary.href = payload.secondaryRoute.href;
+        routeSecondary.textContent = payload.secondaryRoute.label;
+      }
+
+      function copyText(text, message) {
+        navigator.clipboard.writeText(text).then(() => {
+          statusNode.textContent = message;
+        }).catch(() => {
+          statusNode.textContent = "Clipboard copy failed on this browser. Use the text below instead.";
+        });
+      }
+
+      function downloadText(filename, text) {
+        const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        link.click();
+        URL.revokeObjectURL(url);
+        statusNode.textContent = `${filename} downloaded.`;
+      }
+
+      document.querySelectorAll("[data-preset]").forEach((button) => {
+        button.addEventListener("click", () => {
+          writeDraft(presetValues[button.dataset.preset] || {});
+          saveDraft();
+          renderPayload();
+          statusNode.textContent = "Preset applied. Adjust the fields to match the real buyer thread.";
+        });
+      });
+
+      form.addEventListener("input", () => {
+        saveDraft();
+        renderPayload();
+      });
+
+      document.querySelector("#copy-brief").addEventListener("click", () => {
+        copyText(buildPayload().reviewBrief, "Review brief copied.");
+      });
+
+      document.querySelector("#copy-gaps").addEventListener("click", () => {
+        copyText(buildPayload().gapChecklist, "Gap checklist copied.");
+      });
+
+      document.querySelector("#download-brief").addEventListener("click", () => {
+        const companySlug = (document.querySelector("#company").value || "noticekit")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+        downloadText(`${companySlug || "noticekit"}-ai-due-diligence-brief.md`, buildPayload().reviewBrief);
+      });
+
+      document.querySelector("#clear-draft").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        form.reset();
+        writeDraft(presetValues["customer-facing"]);
+        renderPayload();
+        statusNode.textContent = "Local draft cleared. Default example restored.";
+      });
+
+      writeDraft(presetValues["customer-facing"]);
+      loadDraft();
+      renderPayload();
+    </script>
+  </body>
+</html>

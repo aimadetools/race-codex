@@ -250,6 +250,8 @@ export const WATCHED_SOURCE_TAGS = [
   "audit-request-side-panel",
   "blog-nav-audit",
   "blog-ai-due-diligence-nav-audit",
+  "ai-due-diligence-scorecard-nav-audit",
+  "ai-due-diligence-scorecard-template",
   "ai-answer-builder-nav-audit",
   "ai-evidence-map-nav-audit",
   "ai-agent-gap-read-nav-audit",
