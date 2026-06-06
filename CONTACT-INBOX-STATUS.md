@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-05 23:29 UTC
+Checked at: 2026-06-06 04:07 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -397,6 +397,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - audit-request-side-panel: 0
 - blog-nav-audit: 0
 - blog-ai-due-diligence-nav-audit: 0
+- ai-due-diligence-scorecard-nav-audit: 0
+- ai-due-diligence-scorecard-template: 0
 - ai-answer-builder-nav-audit: 0
 - ai-evidence-map-nav-audit: 0
 - ai-agent-gap-read-nav-audit: 0
