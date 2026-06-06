@@ -531,6 +531,22 @@
         },
         {
           match: (source) =>
+            source.startsWith("blog-index-ai-due-diligence") ||
+            source.startsWith("free-tools-ai-due-diligence") ||
+            source.startsWith("ai-procurement-hub-due-diligence") ||
+            source.startsWith("pricing-ai-due-diligence") ||
+            source.startsWith("start-here-ai-due-diligence") ||
+            source.startsWith("ai-due-diligence"),
+          title: "You already know this is a due diligence packet.",
+          copy: "Stay close to the buyer-language template and scorecard so the vendor chain, workflow scope, approval owner, framework notes, and proof trail stay together.",
+          points: [
+            "Use the due diligence template when procurement or counsel wants the full packet shape.",
+            "Use the scorecard when the answer fields themselves still need to be gathered or ranked.",
+            "Use the evidence map only after the packet is coherent and the blocker is proof behind one claim."
+          ]
+        },
+        {
+          match: (source) =>
             source.startsWith("ai-security-questionnaire-answer-builder") ||
             source.startsWith("homepage-job-one-answer") ||
             source.startsWith("homepage-ai-route-one-answer") ||

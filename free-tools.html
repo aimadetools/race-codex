@@ -302,6 +302,7 @@
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">AI inventory first</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="once">AI answer now</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="proof-pack" data-route-frequency="once">AI proof first</button>
+                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="due-diligence" data-route-frequency="once">AI due diligence</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="repeat">AI repeated review</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="named-vendor" data-route-frequency="once">OpenAI template</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="named-vendor" data-route-frequency="repeat">OpenAI answer bank</button>
@@ -330,6 +331,7 @@
                     <option value="written-answer">A written answer before I buy</option>
                     <option value="files-now">The files to use right away</option>
                     <option value="proof-pack">Proof, owner, or review metadata</option>
+                    <option value="due-diligence">A due diligence questionnaire</option>
                     <option value="named-vendor">A named-vendor answer</option>
                     <option value="agent-controls">An AI agent control review</option>
                     <option value="public-page">A review of the public page or workflow</option>
@@ -938,6 +940,20 @@
                 secondaryHref: "blog-subprocessor-evidence-log-template.html?source=free-tools-route-finder",
                 secondaryLabel: "Open evidence log",
               };
+        } else if (need === "due-diligence") {
+          recommendation = {
+            title: "Open the AI due diligence template.",
+            summary: "The reviewer already called it due diligence, so keep the vendor chain, workflow scope, approval owner, framework notes, and proof trail in one packet before you fall back to the older risk checklist.",
+            bullets: [
+              "Best when procurement, security, or counsel wants operating detail instead of a short answer block",
+              "Keeps the scorecard one click away if the review fields themselves are still the blocker",
+              "Avoids rewriting generic AI copy when the buyer already named the review style"
+            ],
+            primaryHref: "blog-ai-due-diligence-questionnaire-template.html?source=free-tools-route-finder",
+            primaryLabel: "Open due diligence template",
+            secondaryHref: "ai-due-diligence-scorecard.html?source=free-tools-route-finder",
+            secondaryLabel: "Open due diligence scorecard",
+          };
         } else if (need === "named-vendor") {
           recommendation = frequency === "repeat"
             ? {
