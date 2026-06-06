@@ -170,12 +170,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the cheap-watch artifacts, and kept the live queue parked at zero real replies, redirects, intakes, and interviews.
-- 2026-06-06: shipped `ai-due-diligence-scorecard.html`, rewired the monitored due-diligence route into blog/free-tools/procurement plus pricing/start-here/about surfaces, and clarified the audit-lane checkpoint wording so the operator view now tracks `terminal outreach rows` instead of stale interview language.
-- 2026-06-05: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, and audit sample/routing/source-tag cleanup while expansion stayed evidence-gated.
-- 2026-06-06: refreshed the live maintenance/gate artifacts again, expanded watcher coverage to `760/760`, and wired due-diligence template/scorecard routing plus source tags into `choose-path.html` and `ai-security-questionnaire-answer-library.html`.
-- 2026-06-06: closed the homepage/pricing/free-tools audit-sample attribution gap, added the new sample tags to the watched-source and audit-status scripts, regenerated the inbox/validation artifacts, and kept the queue parked at zero while the audit proof asset became attributable by conversion surface.
-- 2026-06-06: tagged the main `kit-preview` and `purchase-next-steps` handoff links across the core conversion pages, refreshed `CONTACT-INBOX-STATUS.md`, and made purchase-clarity traffic attributable by entry surface while the queue stayed parked at zero.
-- 2026-06-06: added tracked audit-sample, kit-preview, and purchase-next-steps handoffs to `about.html`, refreshed the inbox/audit/validation artifacts, and made about-page proof and fulfillment traffic attributable by exact handoff surface instead of the generic about tag.
-- 2026-06-06: added an explicit due-diligence branch to the free-tools route finder and taught the AI procurement hub to recognize due-diligence arrivals so buyer-language traffic now lands on the template and scorecard path instead of the generic AI answer routes.
-- 2026-06-06: ran the 08:04 UTC maintenance/gate refresh and the 08:07 UTC validation refresh, rolled the inbox/help/generator/partner/benchmark/AI-agent/audit artifacts forward, and kept the queue at zero while watched-source coverage stayed at `779/779` and local site links stayed at `98/98`.
+- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the cheap-watch artifacts, and kept the live queue parked at zero.
+- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, due-diligence acquisition surface, and related routing/source-tag cleanup while expansion stayed evidence-gated.
+- 2026-06-06: expanded the due-diligence route into chooser/library/core conversion surfaces, lifted watcher coverage to `779/779`, and kept the audit-lane wording aligned with the June 8 checkpoint.
+- 2026-06-06: closed the audit-sample, purchase-clarity, and about-page attribution gaps and regenerated the inbox/validation artifacts so proof and handoff traffic stay attributable by surface.

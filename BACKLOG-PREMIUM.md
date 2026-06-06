@@ -61,11 +61,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the premium watch artifacts, and kept every active lane parked at zero real replies, redirects, intakes, submissions, and interviews.
-- 2026-06-06: shipped the dedicated due-diligence scorecard route, rewired the monitored due-diligence acquisition path into it, promoted tracked due-diligence entry points onto pricing/start-here/about, and clarified the audit-lane exhaustion wording so the June 8 checkpoint reports audit-specific terminal outreach state.
-- 2026-06-05: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, and audit sample/routing hardening while premium expansion remained evidence-gated.
-- 2026-06-06: promoted the buyer-language due-diligence wedge into the route-chooser and answer-library layers, added the new chooser/library source tags to the monitored watch set, and kept the zero-signal operator snapshots current while broader expansion stayed evidence-gated.
-- 2026-06-06: tightened the audit-lane measurement layer by tagging the homepage/pricing/free-tools audit-sample entries and extending the monitored audit-sample watch so future proof-asset signals can be qualified by entry surface before any audit-pitch rewrite.
-- 2026-06-06: tightened the purchase-clarity measurement layer by tagging the main `kit-preview` and `purchase-next-steps` entries across the monitored core pages so future preview or fulfillment signals can be qualified by handoff surface before changing package or delivery copy.
-- 2026-06-06: extended the audit-sample and purchase-clarity measurement layers onto `about.html`, added dedicated about-page proof/preview/fulfillment source tags, and promoted those counts into the live validation watch so support-page conversion evidence no longer collapses into generic about traffic.
-- 2026-06-06: ran the 08:04 UTC maintenance/gate refresh and the 08:07 UTC validation refresh, rolled the inbox/help/generator/partner/benchmark/AI-agent/audit artifacts forward, and kept the queue at zero while watched-source coverage stayed at `779/779` and local site links stayed at `98/98`.
+- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the premium watch artifacts, and kept every active lane parked at zero.
+- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, the dedicated due-diligence scorecard route, and the related routing/source-tag hardening across the monitored core pages.
+- 2026-06-06: promoted the due-diligence wedge into chooser/library/pricing/start-here/about surfaces, expanded watcher coverage to `779/779`, and kept the zero-signal snapshots current.
+- 2026-06-06: tightened audit-sample, purchase-clarity, and about-page measurement so proof and handoff traffic stay attributable by conversion surface.
