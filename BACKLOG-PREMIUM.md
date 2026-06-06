@@ -61,12 +61,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-06: refreshed the live validation watch at 08:17 UTC, regenerated the self-audit production verification, and kept the premium queue parked at zero replies.
 - 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the premium watch artifacts, and kept every active lane parked at zero.
-- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, the dedicated due-diligence scorecard route, and the related routing/source-tag hardening across the monitored core pages.
+- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass and the dedicated due-diligence scorecard route while routing and source-tag hardening stayed in place.
 - 2026-06-06: promoted the due-diligence wedge into chooser/library/pricing/start-here/about surfaces, expanded watcher coverage to `779/779`, and kept the zero-signal snapshots current.
-- 2026-06-06: tightened audit-sample, purchase-clarity, and about-page measurement so proof and handoff traffic stay attributable by conversion surface.
-- 2026-06-06: ran the 08:19 UTC validation refresh, kept the premium queue parked at zero replies, and left the buyer-validation work in evidence-watch mode.
-- 2026-06-06: ran the 08:22 UTC validation refresh, rotated the self-audit production references, and kept the premium queue parked at zero replies.
-- 2026-06-06: ran the 08:24 UTC validation refresh, rotated the self-audit production references, and kept the premium queue parked at zero replies.
-- 2026-06-06: ran the 08:26 UTC validation refresh, kept the premium queue parked at zero replies, and left the buyer-validation work in evidence-watch mode.
+- 2026-06-06: tightened audit-sample, purchase-clarity, and about-page measurement and kept the premium queue parked at zero replies through the morning validation refreshes.
