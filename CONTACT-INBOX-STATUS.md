@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-06 04:11 UTC
+Checked at: 2026-06-06 04:17 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -155,6 +155,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-partner-cta: 0
 - about-page: 0
 - about-page-bundle-sample: 0
+- about-page-due-diligence: 0
+- about-page-due-diligence-scorecard: 0
 - about-page-evidence-map: 0
 - about-page-starter-pack-comparison: 0
 - generator-page: 0
@@ -318,6 +320,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - kit-preview-starter-pack-comparison: 0
 - start-here-card: 0
 - start-here-ai-risk-assessment: 0
+- start-here-ai-due-diligence: 0
+- start-here-ai-due-diligence-scorecard: 0
 - start-here-ai-deal-blocker: 0
 - start-here-ai-answer-bank: 0
 - start-here-ai-answer-library: 0
@@ -374,6 +378,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-broader-handoff: 0
 - homepage-ai-bundle-sample: 0
 - pricing-ai-answer-library: 0
+- pricing-ai-due-diligence: 0
+- pricing-ai-due-diligence-scorecard: 0
 - ai-procurement-hub-answer-library: 0
 - ai-procurement-hub-answer-library-comparison: 0
 - ai-procurement-hub-due-diligence: 0

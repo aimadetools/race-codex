@@ -62,5 +62,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the premium watch artifacts, and kept every active lane parked at zero real replies, redirects, intakes, submissions, and interviews.
-- 2026-06-06: shipped the dedicated due-diligence scorecard route, rewired the monitored due-diligence acquisition path into it, and clarified the audit-lane exhaustion wording so the June 8 checkpoint reports audit-specific terminal outreach state.
+- 2026-06-06: shipped the dedicated due-diligence scorecard route, rewired the monitored due-diligence acquisition path into it, promoted tracked due-diligence entry points onto pricing/start-here/about, and clarified the audit-lane exhaustion wording so the June 8 checkpoint reports audit-specific terminal outreach state.
 - 2026-06-05: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, and audit sample/routing hardening while premium expansion remained evidence-gated.
