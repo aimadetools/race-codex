@@ -737,6 +737,29 @@ const aiFirstEntryWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "pricing-ai-route-repeat-review", label: "pricing route repeat-review" },
   { tag: "pricing-ai-route-broader-handoff", label: "pricing broader-handoff" }
 ]);
+const dueDiligenceWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "blog-index-ai-due-diligence", label: "blog template" },
+  { tag: "blog-index-ai-due-diligence-scorecard", label: "blog scorecard" },
+  { tag: "free-tools-ai-due-diligence", label: "free-tools template" },
+  { tag: "ai-procurement-hub-due-diligence", label: "hub template" },
+  { tag: "ai-procurement-hub-due-diligence-scorecard", label: "hub scorecard" },
+  { tag: "pricing-ai-due-diligence", label: "pricing template" },
+  { tag: "pricing-ai-due-diligence-scorecard", label: "pricing scorecard" },
+  { tag: "start-here-ai-due-diligence", label: "start-here template" },
+  { tag: "start-here-ai-due-diligence-scorecard", label: "start-here scorecard" },
+  { tag: "about-page-due-diligence", label: "about template" },
+  { tag: "about-page-due-diligence-scorecard", label: "about scorecard" },
+  { tag: "ai-due-diligence-scorecard", label: "scorecard page" },
+  { tag: "ai-due-diligence-scorecard-template", label: "scorecard template" },
+  { tag: "ai-due-diligence-evidence-map", label: "due-diligence evidence-map" },
+  { tag: "ai-due-diligence-risk-checklist", label: "due-diligence risk-checklist" },
+  { tag: "ai-due-diligence-starter-pack", label: "due-diligence starter-pack" },
+  { tag: "ai-due-diligence-builder", label: "due-diligence builder" },
+  { tag: "ai-due-diligence-answer-bank", label: "due-diligence answer-bank" },
+  { tag: "ai-due-diligence-teardown", label: "due-diligence teardown" },
+  { tag: "ai-due-diligence-audit", label: "due-diligence audit" },
+  { tag: "ai-due-diligence-audit-sample", label: "due-diligence audit sample" }
+]);
 const aiAgentWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-ai-agent-review", label: "blog review" },
   { tag: "blog-index-ai-agent-approval-gate", label: "blog approval-gate" },
@@ -945,6 +968,7 @@ const output = [
   renderWatchedSourceGroup("AI-first entry-point inbox submissions", aiFirstEntryWatch),
   renderWatchedSourceGroup("Dedicated audit-route inbox submissions", auditRouteWatch),
   renderWatchedSourceGroup("Audit sample-proof inbox submissions", auditSampleProofWatch),
+  renderWatchedSourceGroup("Due-diligence route inbox submissions", dueDiligenceWatch),
   renderWatchedSourceGroup("AI-agent-control inbox submissions", aiAgentWatch),
   renderWatchedSourceGroup("AI-agent gap-read inbox submissions", aiAgentGapReadWatch),
   renderWatchedSourceGroup("OpenAI route inbox submissions", openAiWatch),
