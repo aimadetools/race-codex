@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-07 08:29 UTC
+Checked at: 2026-06-07 12:40 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -197,6 +197,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-due-diligence: 0
 - blog-index-ai-due-diligence-scorecard: 0
 - blog-index-ai-due-diligence-comparison: 0
+- blog-index-ai-due-diligence-packet-builder: 0
 - blog-index-ai-framework-map: 0
 - blog-index-ai-agent-review: 0
 - blog-index-ai-agent-checklist: 0
@@ -254,6 +255,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-due-diligence: 0
 - free-tools-ai-due-diligence-scorecard: 0
 - free-tools-ai-due-diligence-comparison: 0
+- free-tools-ai-due-diligence-packet-builder: 0
 - free-tools-ai-framework-map: 0
 - free-tools-ai-starter-pack-comparison: 0
 - free-tools-ai-follow-up-pack: 0
@@ -341,6 +343,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-ai-due-diligence: 0
 - start-here-ai-due-diligence-scorecard: 0
 - start-here-ai-due-diligence-comparison: 0
+- start-here-ai-due-diligence-packet-builder: 0
 - start-here-ai-framework-map: 0
 - start-here-ai-deal-blocker: 0
 - start-here-ai-answer-bank: 0
@@ -395,6 +398,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-anthropic-path-guide: 0
 - homepage-ai-answer-library: 0
 - homepage-ai-due-diligence-comparison: 0
+- homepage-ai-due-diligence-packet-builder: 0
 - homepage-ai-framework-map: 0
 - homepage-ai-starter-pack-comparison: 0
 - homepage-ai-route-broader-handoff: 0
@@ -403,13 +407,26 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-due-diligence: 0
 - pricing-ai-due-diligence-scorecard: 0
 - pricing-ai-due-diligence-comparison: 0
+- pricing-ai-due-diligence-packet-builder: 0
 - pricing-ai-framework-map: 0
 - ai-procurement-hub-answer-library: 0
 - ai-procurement-hub-answer-library-comparison: 0
 - ai-procurement-hub-due-diligence: 0
 - ai-procurement-hub-due-diligence-scorecard: 0
 - ai-procurement-hub-due-diligence-comparison: 0
+- ai-procurement-hub-due-diligence-packet-builder: 0
 - ai-procurement-hub-framework-map: 0
+- ai-due-diligence-template-packet-builder: 0
+- ai-due-diligence-scorecard-packet-builder: 0
+- ai-due-diligence-comparison-packet-builder: 0
+- ai-framework-map-packet-builder: 0
+- ai-due-diligence-packet-builder-template: 0
+- ai-due-diligence-packet-builder-scorecard: 0
+- ai-due-diligence-packet-builder-framework-map: 0
+- ai-due-diligence-packet-builder-comparison: 0
+- ai-due-diligence-packet-builder-evidence-map: 0
+- ai-due-diligence-packet-builder-teardown: 0
+- ai-due-diligence-packet-builder-audit: 0
 - ai-due-diligence-template-framework-map: 0
 - ai-due-diligence-scorecard-framework-map: 0
 - ai-due-diligence-template-comparison: 0
