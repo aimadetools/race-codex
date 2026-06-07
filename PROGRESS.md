@@ -35,6 +35,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran the next maintenance checkpoint at `2026-06-07 04:27 UTC`; refreshed the inbox/help/generator/partner/benchmark/AI-agent/audit watch files again, logged the next deduplicated no-reply checkpoint, and kept source-tag coverage at `815/815`, local links at `100/100`, and the live queue at `0` real replies, `0` real submissions, and `0` interviews.
 - Ran another validation upkeep pass at `2026-06-07 04:30 UTC`; `npm run run:validation-maintenance` and `npm run run:validation-gate` refreshed the watch artifacts again, confirmed source-tag coverage stayed at `815/815`, local links stayed at `100/100`, generator and teardown checks still passed, and the live queue remained at `0` real replies, `0` real submissions, and `0` interviews.
 - Deliberately changed approach after several validation-heavy sessions by shipping a new bottom-funnel acquisition/product asset instead of another maintenance-only pass; live reply, intake, and interview counts still remain at zero.
+- Tightened the buyer-decision path on `pricing.html` and `free-tools.html` by adding an explicit due-diligence FAQ / routing callout that points straight to the template, scorecard, framework map, and comparison page when procurement uses buyer-language first; also updated `.gitignore` to keep generated build artifacts out of the repo and restored watched-tag coverage after adding the new free-tools scorecard tag.
 
 ## Next Step
 
@@ -62,3 +63,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-05 to 2026-06-06: repeated maintenance/gate refreshes stayed green, kept the live queue parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
 - 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, stronger purchase CTAs, the due-diligence template and scorecard wedge, and the supporting chooser/about/preview attribution updates.
 - 2026-06-07: shipped the framework-map and due-diligence route-comparison wedges, advanced watcher coverage to `815/815` tags with `100/100` local links passing, and refreshed the live validation artifacts through the `04:30 UTC` checkpoint.
+- 2026-06-07: tightened the pricing FAQ and free-tools route guidance around the due-diligence wording, then updated `.gitignore` so build artifacts and local output stay out of version control.

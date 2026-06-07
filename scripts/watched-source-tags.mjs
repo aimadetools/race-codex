@@ -101,6 +101,7 @@ export const WATCHED_SOURCE_TAGS = [
   "free-tools-ai-answer-library-comparison",
   "free-tools-ai-answer-builder",
   "free-tools-ai-due-diligence",
+  "free-tools-ai-due-diligence-scorecard",
   "free-tools-ai-due-diligence-comparison",
   "free-tools-ai-framework-map",
   "free-tools-ai-starter-pack-comparison",

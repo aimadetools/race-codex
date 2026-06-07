@@ -20,6 +20,9 @@ venv/
 .env*.local
 .cache/
 .turbo/
+out/
+.vercel/output/
+*.tsbuildinfo
 .DS_Store
 *.log
 *.tmp
