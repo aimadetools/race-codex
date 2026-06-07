@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-07 04:30 UTC
+Checked at: 2026-06-07 08:04 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -252,6 +252,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-answer-library-comparison: 0
 - free-tools-ai-answer-builder: 0
 - free-tools-ai-due-diligence: 0
+- free-tools-ai-due-diligence-scorecard: 0
 - free-tools-ai-due-diligence-comparison: 0
 - free-tools-ai-framework-map: 0
 - free-tools-ai-starter-pack-comparison: 0
