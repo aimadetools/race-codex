@@ -176,14 +176,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, kept the live queue parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
-- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, the due-diligence template/scorecard surfaces, and the supporting audit-sample / purchase-clarity / about-page attribution cleanup.
-- 2026-06-07: shipped the framework-map plus due-diligence route-comparison wedges, advanced cheap-watch coverage to `816/816` with local links at `100/100`, and refreshed the inbox/generator/partner/benchmark/AI-agent/audit watch artifacts through the `08:03 UTC` no-reply checkpoint while the queue remained parked.
-- 2026-06-07: shipped the browser-only due-diligence packet builder, wired it into the buyer-language route cluster, and advanced cheap-watch coverage to `833/833` with local links at `101/101`.
-- 2026-06-07: refreshed the cheap-watch artifacts again at the `12:52 UTC` checkpoint, kept every active lane parked at zero, and confirmed the audit lane still sat fully `followed_up` before the next due-diligence route shipped.
-- 2026-06-07: shipped the browser-only due-diligence evidence map, rewired the buyer-language cluster so proof-trail buyers stay inside the due-diligence route family, and advanced cheap-watch coverage to `851/851` with local links at `102/102`.
-- 2026-06-07: tightened the pricing FAQ and free-tools routing guidance around the buyer-language due-diligence path, and kept repo hygiene current with updated ignore rules for generated output.
-- 2026-06-07: exposed the due-diligence packet builder from the route chooser and answer-library surfaces, added tracked packet-builder tags for both pages, and advanced cheap-watch coverage to `853/853` with local links still passing.
-- 2026-06-07: consolidated the repeated `08:08 UTC` through `08:29 UTC` maintenance/gate refreshes into one cheap-summary line; those passes kept the cheap-watch artifacts green while the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews.
-- 2026-06-07: consolidated the repeated `12:39 UTC` through `12:48 UTC` validation-maintenance / gate refreshes into one cheap-summary line; those passes resynced the cheap-watch plus generator/self-audit artifacts, logged the next deduplicated no-reply checkpoints, and confirmed the queue still held at `0` real replies, `0` real submissions, and `0` interviews with watcher integrity at `833/833` tags and `101/101` local links.
-- 2026-06-07: refreshed the cheap validation artifacts at the `16:04 UTC` checkpoint, logged another deduplicated no-reply note, and kept the live queue parked at zero while generator, handoff, and site-link checks stayed green.
+- 2026-06-05 to 2026-06-06: validation and gate refreshes stayed green, kept the queue parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
+- 2026-06-05 to 2026-06-06: shipped the homepage, pricing, free-tools, and due-diligence clarity passes plus the supporting audit-sample and purchase-clarity attribution cleanup.
+- 2026-06-07: shipped the framework-map, comparison, packet-builder, and evidence-map wedges, rewired the buyer-language cluster around them, and advanced cheap-watch coverage to `853/853` with local links at `102/102`.
+- 2026-06-07: consolidated the repeated morning and midday maintenance/gate refreshes into one summary line, kept the inbox/generator/partner/benchmark/AI-agent/audit artifacts green, and left the queue parked at zero.
+- 2026-06-07: refreshed the cheap validation artifacts at the `16:10 UTC` checkpoint, logged another deduplicated no-reply note, and kept generator, handoff, and site-link checks green.

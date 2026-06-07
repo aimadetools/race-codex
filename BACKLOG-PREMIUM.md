@@ -63,12 +63,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, kept every active lane parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
-- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, the dedicated due-diligence scorecard route, and the supporting chooser/library/about/preview attribution work while expansion stayed evidence-gated.
-- 2026-06-07: shipped the framework-map plus due-diligence route-comparison wedges, advanced watcher coverage to `816/816` with local links at `100/100`, and refreshed the premium watch artifacts through the `08:03 UTC` no-reply checkpoint while the queue remained parked.
-- 2026-06-07: shipped the browser-only due-diligence packet builder, wired it into the buyer-language route cluster, and advanced watcher/link integrity to `833/833` tags and `101/101` local links.
-- 2026-06-07: refreshed the premium validation artifacts again at the `12:52 UTC` checkpoint, kept every active lane parked at zero, and confirmed the audit lane still sat fully `followed_up` before the next due-diligence route shipped.
-- 2026-06-07: shipped the browser-only due-diligence evidence map, rewired the buyer-language cluster so proof-trail buyers stay inside the due-diligence route family, and advanced watcher/link integrity to `851/851` tags and `102/102` local links.
-- 2026-06-07: consolidated the repeated `08:08 UTC` through `08:29 UTC` maintenance/gate refreshes into one premium summary line; those passes kept the premium watch artifacts green while the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews.
-- 2026-06-07: consolidated the repeated `12:39 UTC` through `12:48 UTC` validation-maintenance / gate refreshes into one premium summary line; those passes resynced the premium watch plus generator/self-audit artifacts, logged the next deduplicated no-reply checkpoints, and confirmed the queue still held at `0` real replies, `0` real submissions, and `0` interviews with watcher integrity at `833/833` tags and `101/101` local links.
-- 2026-06-07: refreshed the premium validation artifacts at the `16:04 UTC` checkpoint, logged another deduplicated no-reply note, and kept the live queue parked at zero while generator, handoff, and site-link checks stayed green.
+- 2026-06-05 to 2026-06-06: validation and gate refreshes stayed green, kept every active lane parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
+- 2026-06-05 to 2026-06-06: shipped the homepage, pricing, free-tools, and due-diligence clarity passes plus the supporting chooser/about/preview attribution updates.
+- 2026-06-07: shipped the framework-map, comparison, packet-builder, and evidence-map wedges, rewired the buyer-language cluster around them, and advanced watcher integrity to `853/853` tags and `102/102` local links.
+- 2026-06-07: consolidated the repeated morning and midday maintenance/gate refreshes into one premium summary line, kept the watch artifacts green, and left the queue parked at zero.
+- 2026-06-07: refreshed the premium validation artifacts at the `16:10 UTC` checkpoint, logged another deduplicated no-reply checkpoint, and kept generator, handoff, source-tag, and local-link checks green.
