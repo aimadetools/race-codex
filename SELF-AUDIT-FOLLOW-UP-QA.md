@@ -1,6 +1,6 @@
 # Self-Audit Follow-Up QA
 
-Date: 2026-06-06 UTC
+Date: 2026-06-07 UTC
 
 This check validates the tagged self-audit follow-up entry points before the next non-responder send window.
 
