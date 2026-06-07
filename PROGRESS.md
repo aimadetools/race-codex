@@ -54,6 +54,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran the `2026-06-07 20:21 UTC` validation-gate refresh after the latest sync pass; the live watch files stayed green, the queue still sat at zero, and the June 8 audit exhaustion checkpoint remains the next watch point if no reply or intake lands first.
 - Ran the `2026-06-07 20:24 UTC` validation-maintenance and gate refresh; the watch artifacts resynced cleanly, `COMMUNITY-FEEDBACK.md` logged the deduplicated no-reply checkpoint, source-tag coverage held at `855/855`, local links held at `102/102`, and the audit lane stayed parked at zero.
 - Ran the `2026-06-07 20:27 UTC` validation-maintenance and gate refresh; the watch artifacts resynced cleanly again, `COMMUNITY-FEEDBACK.md` logged the next deduplicated no-reply checkpoint, source-tag coverage stayed at `855/855`, local links stayed at `102/102`, and the audit lane remained parked at zero.
+- Added compact route-chooser shortcut strips above the fold on `index.html`, `pricing.html`, and `free-tools.html` so the first screen collapses into the three core receiver-side jobs: inventory first, one answer now, and repeat review.
 
 ## Next Step
 
