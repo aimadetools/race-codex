@@ -181,3 +181,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 - 2026-06-07: shipped the framework-map, comparison, packet-builder, and evidence-map wedges, rewired the buyer-language cluster around them, and advanced cheap-watch coverage to `853/853` with local links at `102/102`.
 - 2026-06-07: consolidated the repeated morning and midday maintenance/gate refreshes into one summary line, kept the inbox/generator/partner/benchmark/AI-agent/audit artifacts green, and left the queue parked at zero.
 - 2026-06-07: refreshed the cheap validation artifacts across the `16:10 UTC` through `16:29 UTC` checkpoints, logged deduplicated no-reply notes, and kept generator, handoff, and site-link checks green.
+- 2026-06-07: surfaced the buyer-language due-diligence route on the kit preview and purchase-next-steps pages, added tracked source tags for both routes, and advanced watcher coverage to `855/855` tags with local links at `102/102`.
