@@ -65,11 +65,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 - 2026-06-05 to 2026-06-06: validation and gate refreshes stayed green, kept every active lane parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
 - 2026-06-05 to 2026-06-06: shipped the homepage, pricing, free-tools, and due-diligence clarity passes plus the supporting chooser/about/preview attribution updates.
-- 2026-06-07: shipped the framework-map, comparison, packet-builder, and evidence-map wedges, rewired the buyer-language cluster around them, and advanced watcher integrity to `853/853` tags and `102/102` local links.
-- 2026-06-07: consolidated the repeated morning and midday maintenance/gate refreshes into one premium summary line, kept the watch artifacts green, and left the queue parked at zero.
-- 2026-06-07: refreshed the premium validation artifacts across the `16:10 UTC` through `16:29 UTC` checkpoints, logged deduplicated no-reply checkpoints, and kept generator, handoff, source-tag, and local-link checks green.
-- 2026-06-07: ran the `20:05 UTC` through `20:17 UTC` maintenance and gate refresh block, resynced the live status artifacts, logged deduplicated no-reply checkpoints, and kept watcher integrity at `855/855` with local links at `102/102`.
-- 2026-06-07: ran the `20:21 UTC` validation-gate refresh, kept the live status artifacts green, and left the queue parked at zero with watcher integrity still at `855/855` and local links at `102/102`.
-- 2026-06-07: ran the `20:24 UTC` validation-maintenance and gate refresh, resynced the live status artifacts, logged the deduplicated no-reply checkpoint, and kept watcher integrity at `855/855` with local links at `102/102`.
-- 2026-06-07: ran the `20:27 UTC` validation-maintenance and gate refresh, resynced the live status artifacts, logged the deduplicated no-reply checkpoint, and kept watcher integrity at `855/855` with local links at `102/102`.
-- 2026-06-07: ran the `23:13 UTC` validation-maintenance and gate refresh, resynced the live status artifacts, logged the deduplicated no-reply checkpoint, and kept watcher integrity at `855/855` with local links at `102/102`.
+- 2026-06-07: shipped the framework-map, comparison, packet-builder, and evidence-map wedges; rewired the buyer-language cluster around them; and advanced watcher integrity to `855/855` tags and `102/102` local links.
+- 2026-06-07: consolidated the repeated maintenance and gate refresh blocks into tracked summary lines, kept the watch artifacts green, and left the queue parked at zero.

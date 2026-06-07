@@ -178,13 +178,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - 2026-06-05 to 2026-06-06: validation and gate refreshes stayed green, kept the queue parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
 - 2026-06-05 to 2026-06-06: shipped the homepage, pricing, free-tools, and due-diligence clarity passes plus the supporting audit-sample and purchase-clarity attribution cleanup.
-- 2026-06-07: shipped the framework-map, comparison, packet-builder, and evidence-map wedges, rewired the buyer-language cluster around them, and advanced cheap-watch coverage to `853/853` with local links at `102/102`.
-- 2026-06-07: consolidated the repeated morning and midday maintenance/gate refreshes into one summary line, kept the inbox/generator/partner/benchmark/AI-agent/audit artifacts green, and left the queue parked at zero.
-- 2026-06-07: refreshed the cheap validation artifacts across the `16:10 UTC` through `16:29 UTC` checkpoints, logged deduplicated no-reply notes, and kept generator, handoff, and site-link checks green.
-- 2026-06-07: surfaced the buyer-language due-diligence route on the kit preview and purchase-next-steps pages, added tracked source tags for both routes, and advanced watcher coverage to `855/855` tags with local links at `102/102`.
-- 2026-06-07: ran the `20:05 UTC` through `20:17 UTC` maintenance and gate refresh block, resynced the live status artifacts, logged deduplicated no-reply checkpoints, and kept watcher coverage at `855/855` with local links at `102/102`.
-- 2026-06-07: ran the `20:21 UTC` validation-gate refresh, kept the live status artifacts green, and left the queue parked at zero with watcher coverage still at `855/855` and local links at `102/102`.
-- 2026-06-07: ran the `20:24 UTC` validation-maintenance and gate refresh, resynced the live status artifacts, logged the deduplicated no-reply checkpoint, and kept watcher coverage at `855/855` with local links at `102/102`.
-- 2026-06-07: ran the `20:27 UTC` validation-maintenance and gate refresh, resynced the live status artifacts, logged the deduplicated no-reply checkpoint, and kept watcher coverage at `855/855` with local links at `102/102`.
-- 2026-06-07: added compact route-chooser shortcut strips above the fold on the homepage, pricing page, and free-tools hub so the first screen reads as one receiver-side workflow with three core jobs instead of a broader menu of audiences.
-- 2026-06-07: ran the `23:13 UTC` validation-maintenance and gate refresh, resynced the live status artifacts, logged the deduplicated no-reply checkpoint, and kept watcher coverage at `855/855` with local links at `102/102`.
+- 2026-06-07: shipped the framework-map, comparison, packet-builder, evidence-map, and route-chooser refinements; rewired the buyer-language cluster around them; and advanced cheap-watch coverage to `855/855` with local links at `102/102`.
+- 2026-06-07: consolidated the repeated maintenance and gate refresh blocks into tracked summary lines, kept the inbox/generator/partner/benchmark/AI-agent/audit artifacts green, and left the queue parked at zero.
