@@ -4,12 +4,9 @@
 
 Older work is collapsed here so only the last three days stay detailed.
 
-- 2026-04-20 to 2026-05-27: Launched NoticeKit, pricing, intake, outreach, self-audit verification, AI questionnaire routes, answer-bank and named-vendor pages, and the browser-only benchmark/tooling base while the live queue stayed at 0 real submissions, 0 replies, and 0 interviews.
-- 2026-05-28 to 2026-05-31: Shipped the benchmark-led and AI-agent-review outreach wedges, the AI agent workspace, the OpenAI route guide, proof-first route cleanup, checkout/package-preview clarity updates, and repeated site-link/source-tag validation while live reply capture stayed at zero.
-- 2026-06-01: Shipped the starter-pack-vs-builder page plus the sample-bundle promotion pass across homepage, pricing, free-tools, starter-pack, builder, example, kit-preview, blog, comparison, and procurement-hub surfaces.
-- 2026-06-02: Fixed the AI follow-up operator-memory bug, shipped the AI-agent gap-read route and first-screen route hierarchy cleanup, tightened the free-teardown/pricing proof copy, and kept the queue at 0 real replies, submissions, teardowns, and interviews while directory/community paths still produced no new signal.
-- 2026-06-03: Sent the five-company dedicated audit batch, tightened the audit intake path around live blocker/deadline details, and promoted the audit lane into the main operator watch while reply count stayed at zero.
-- 2026-06-04: Shipped a blocker-to-route clarity pass across homepage/pricing/free-tools/procurement-hub, verified the June 5 audit follow-up branch end to end, and kept the live queue parked at zero while source-tag and local-link checks stayed green.
+- 2026-04-20 to 2026-05-31: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, and the benchmark plus AI-agent-control tooling base while the live queue stayed at 0 real submissions, replies, and interviews.
+- 2026-06-01 to 2026-06-02: Shipped the starter-pack-vs-builder and AI-agent gap-read routes, tightened homepage/pricing/free-teardown proof and route copy, and fixed the AI follow-up operator-memory bug while directory and community paths still produced no new signal.
+- 2026-06-03 to 2026-06-04: Sent the five-company dedicated audit batch, tightened the audit intake path, shipped the blocker-to-route clarity pass across core acquisition pages, and verified the June 5 audit follow-up path while the queue stayed parked at zero.
 
 ## 2026-06-05
 
@@ -35,7 +32,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - Wired the new due-diligence comparison page into `index.html`, `pricing.html`, `free-tools.html`, `blog.html`, `ai-procurement-hub.html`, `start-here.html`, `about.html`, `choose-path.html`, `ai-security-questionnaire-answer-library.html`, the three due-diligence routes, `sitemap.xml`, and `scripts/watched-source-tags.mjs` so the new comparison asset is crawlable, internally reachable, and measurable from the core AI acquisition surfaces.
 - Ran `npm run check:source-tag-coverage` and `npm run check:site-links` again after the comparison route shipped; watcher coverage advanced to `815/815` tags and local links stayed green at `100/100`.
 - Ran `npm run run:validation-maintenance` and `npm run run:validation-gate` at the `2026-06-07 04:24 UTC` checkpoint; refreshed the live status/watch artifacts, logged the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and confirmed the generator smoke, teardown handoff, watched-tag coverage, and local site links all stayed green while the queue remained at `0` real replies, `0` real submissions, and `0` interviews.
+- Ran the next maintenance checkpoint at `2026-06-07 04:27 UTC`; refreshed the inbox/help/generator/partner/benchmark/AI-agent/audit watch files again, logged the next deduplicated no-reply checkpoint, and kept source-tag coverage at `815/815`, local links at `100/100`, and the live queue at `0` real replies, `0` real submissions, and `0` interviews.
 - Deliberately changed approach after several validation-heavy sessions by shipping a new bottom-funnel acquisition/product asset instead of another maintenance-only pass; live reply, intake, and interview counts still remain at zero.
+
 ## Next Step
 
 - Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and the now-audit-aware `COMMUNITY-FEEDBACK.md` for the first real `ai-audit-outreach-batch-01` reply, redirect, or intake after the June 5 second touch; do not expand the list again unless the batch produces evidence or reaches the 2026-06-08 exhaustion checkpoint with zero signal.
@@ -59,10 +58,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-06: repeated late-night maintenance and gate refreshes stayed green, kept source-tag and local-link checks passing, and preserved the all-zero live queue.
-- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, stronger purchase CTAs, and the due-diligence acquisition pages while broader funnel expansion stayed evidence-gated.
-- 2026-06-06: expanded watcher coverage to `779/779`, promoted due-diligence and handoff attribution into chooser/about/preview surfaces, and kept buyer signals attributable by surface.
-- 2026-06-06: ran the morning validation refreshes through `08:29 UTC`, aligned the audit-lane wording with the June 8 checkpoint, and kept the reply-capture lanes parked at zero.
-- 2026-06-07: shipped the AI due-diligence framework-map wedge, wired it into the main AI acquisition surfaces, and advanced validation coverage to `796/796` watched tags with `99/99` local links passing.
-- 2026-06-07: shipped the AI due-diligence route-comparison page, wired it into the core AI acquisition and due-diligence surfaces, and advanced validation coverage to `815/815` watched tags with `100/100` local links passing.
-- 2026-06-07: refreshed the live validation artifacts at `04:24 UTC`, logged the latest deduplicated no-reply checkpoint, and kept generator smoke, teardown handoff, watched-tag coverage, and local-link checks green while the queue stayed at zero.
+- 2026-06-05 to 2026-06-06: repeated maintenance/gate refreshes stayed green, kept the live queue parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
+- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, stronger purchase CTAs, the due-diligence template and scorecard wedge, and the supporting chooser/about/preview attribution updates.
+- 2026-06-07: shipped the framework-map and due-diligence route-comparison wedges, advanced watcher coverage to `815/815` tags with `100/100` local links passing, and refreshed the live validation artifacts through the `04:27 UTC` checkpoint.

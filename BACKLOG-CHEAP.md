@@ -173,9 +173,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, refreshed the cheap-watch artifacts, and kept the live queue parked at zero.
-- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, and due-diligence acquisition surface while expansion stayed evidence-gated.
-- 2026-06-06: expanded the due-diligence route into chooser/library/core conversion surfaces, lifted watcher coverage to `779/779`, and kept the audit-lane wording aligned with the June 8 checkpoint.
-- 2026-06-06: closed the audit-sample, purchase-clarity, and about-page attribution gaps and kept the cheap queue parked at zero replies through the morning validation refreshes.
-- 2026-06-07: shipped the AI due-diligence framework-map wedge plus the due-diligence route-comparison page, wired them into the tracked AI acquisition surfaces, and advanced cheap-watch coverage to `815/815` while the queue stayed at zero.
-- 2026-06-07: refreshed the cheap-watch artifacts at `04:24 UTC`, logged the latest deduplicated no-reply checkpoint, and kept contact-inbox, generator, partner, benchmark, AI-agent, and audit maintenance checks green with no real submissions yet.
+- 2026-06-05 to 2026-06-06: repeated validation-maintenance and gate passes stayed green, kept the live queue parked at zero, and advanced watcher integrity from `748/748` tags and `97/97` local links to `779/779` and `98/98`.
+- 2026-06-05 to 2026-06-06: shipped the homepage/pricing/free-tools clarity pass, purchase CTA lift, the due-diligence template/scorecard surfaces, and the supporting audit-sample / purchase-clarity / about-page attribution cleanup.
+- 2026-06-07: shipped the framework-map plus due-diligence route-comparison wedges, advanced cheap-watch coverage to `815/815` with local links at `100/100`, and refreshed the inbox/generator/partner/benchmark/AI-agent/audit watch artifacts through the `04:27 UTC` no-reply checkpoint.
