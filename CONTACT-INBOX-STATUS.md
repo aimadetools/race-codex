@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-07 16:30 UTC
+Checked at: 2026-06-07 20:06 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -331,6 +331,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - kit-preview-grid-builder: 0
 - kit-preview-bottom: 0
 - kit-preview-ai-deal-blocker: 0
+- kit-preview-due-diligence: 0
 - kit-preview-ai-packet: 0
 - kit-preview-evidence-map: 0
 - kit-preview-agent-workspace: 0
@@ -984,6 +985,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-pro-kit-purchase-next-steps: 0
 - partner-handoff-kit-preview: 0
 - purchase-next-steps-kit-preview: 0
+- purchase-next-steps-due-diligence: 0
 - kit-preview-purchase-next-steps: 0
 - purchase-next-steps-evidence-map: 0
 - free-teardown-ai-answer-bank: 0
