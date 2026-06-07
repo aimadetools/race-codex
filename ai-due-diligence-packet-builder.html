@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Due Diligence Packet Builder for SaaS Teams | NoticeKit</title>
+    <meta name="description" content="Build a browser-only AI due diligence packet for buyer procurement, security, privacy, or counsel review. Package the vendor chain, workflow scope, approval owner, proof links, framework notes, and open questions into a copy-ready packet without sending inputs to a server.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:url" content="https://noticekit.tech/ai-due-diligence-packet-builder.html">
+    <meta property="og:title" content="AI Due Diligence Packet Builder for SaaS Teams">
+    <meta property="og:description" content="Generate a copy-ready AI due diligence packet, reviewer checklist, and internal handoff brief locally in your browser.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit AI due diligence packet builder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Due Diligence Packet Builder for SaaS Teams">
+    <meta name="twitter:description" content="Turn one workflow's facts into a buyer-ready AI due diligence packet, reviewer checklist, and internal handoff brief without sending inputs to a server.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://noticekit.tech/ai-due-diligence-packet-builder.html">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "NoticeKit AI Due Diligence Packet Builder",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://noticekit.tech/ai-due-diligence-packet-builder.html",
+            "description": "Browser-only builder for AI due diligence packets, reviewer checklists, and internal handoff briefs with named vendors, workflow scope, owner path, proof links, and framework notes."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use the AI due diligence packet builder?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use it when the buyer wants one practical AI due diligence packet with the named vendor chain, workflow scope, approval owner, proof links, framework notes, and open questions in one place."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is the packet builder different from the due diligence template or scorecard?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The template shows the packet shape, the scorecard shows whether the facts are ready, and the packet builder generates a filled packet, reviewer checklist, and internal handoff brief from one browser-only drafting pass."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the packet builder send my inputs to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The packet builder runs in the browser, autosaves locally on the current device, and does not send your inputs to a server."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="free-tools.html">Free tools</a>
+          <a class="button secondary" href="ai-security-questionnaire-audit.html?source=ai-due-diligence-packet-builder-audit">AI audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <span class="eyebrow">Browser-only AI due diligence packet builder</span>
+          <h1>Build the buyer packet before the due diligence thread sprawls.</h1>
+          <p>Use this local builder when procurement, security, privacy, or counsel wants one practical AI due diligence packet instead of another scattered answer thread. Fill the named vendor chain, workflow scope, customer impact, approval owner, proof links, framework notes, and open questions once, then copy a packet summary, reviewer checklist, and internal handoff brief without sending your inputs to a server.</p>
+          <div class="hero-actions">
+            <a class="button" href="#packet-builder">Open packet builder</a>
+            <a class="button secondary" href="blog-ai-due-diligence-questionnaire-template.html?source=ai-due-diligence-packet-builder-template">Open due diligence template</a>
+            <a class="button secondary" href="ai-due-diligence-scorecard.html?source=ai-due-diligence-packet-builder-scorecard">Open due diligence scorecard</a>
+            <a class="button secondary" href="ai-due-diligence-framework-map.html?source=ai-due-diligence-packet-builder-framework-map">Open framework map</a>
+            <a class="button secondary" href="blog-ai-due-diligence-route-comparison.html?source=ai-due-diligence-packet-builder-comparison">Compare due diligence routes</a>
+            <a class="button secondary" href="ai-security-review-evidence-map.html?source=ai-due-diligence-packet-builder-evidence-map">Open evidence map</a>
+            <a class="button secondary" href="free-teardown.html?source=ai-due-diligence-packet-builder-teardown">Request free teardown</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice-band">
+            <strong>For the company answering the due diligence request.</strong>
+            <p>This builder is for the SaaS team receiving buyer review pressure, not the buyer sending the questionnaire. It helps package one workflow into a review-ready packet and does not replace legal advice, certification work, or contract review.</p>
+          </div>
+        </section>
+
+        <section class="section audit-layout" id="packet-builder">
+          <form class="audit-card" id="packet-form">
+            <div class="section-head compact-head">
+              <h2>Packet inputs</h2>
+              <p>Keep this scoped to one workflow. The goal is to ship one credible buyer packet, not to write your whole trust center in one sitting.</p>
+              <div class="route-presets" aria-label="Quick presets">
+                <button class="button secondary" type="button" data-preset="enterprise-pilot">Enterprise pilot</button>
+                <button class="button secondary" type="button" data-preset="security-review">Security review</button>
+                <button class="button secondary" type="button" data-preset="vendor-change">Vendor change</button>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label>Company
+                <input id="company" value="Example SaaS">
+              </label>
+              <label>Packet owner
+                <input id="reply-owner" value="Privacy ops lead with counsel review">
+              </label>
+              <label>Named AI vendor
+                <input id="named-vendor" value="OpenAI">
+              </label>
+              <label>Workflow reviewed
+                <input id="workflow" value="Support drafting assistant for customer-facing ticket replies">
+              </label>
+              <label>Workflow status
+                <select id="workflow-status">
+                  <option value="planned">Planned rollout under review</option>
+                  <option value="active">Active workflow in production</option>
+                  <option value="replacement">Replacing an older workflow</option>
+                </select>
+              </label>
+              <label>Review deadline
+                <input id="deadline" value="Enterprise security review due this week before procurement sign-off.">
+              </label>
+              <label>Downstream provider chain
+                <textarea id="downstream">Vercel, Supabase, Zendesk, and PostHog support the workflow around the primary model provider.</textarea>
+              </label>
+              <label>Data categories touched
+                <textarea id="data-categories">Support ticket text, account identifiers, internal prompts, and response drafts.</textarea>
+              </label>
+              <label>Customer scope
+                <textarea id="customer-scope">Enterprise and EU customers using the support workflow, with extra review for signed DPA accounts.</textarea>
+              </label>
+              <label>Training or retention stance
+                <textarea id="training-stance">Current operating position: no training on our customer content in this workflow, with vendor terms and internal review notes kept as supporting proof.</textarea>
+              </label>
+              <label>Approval owner and gate
+                <textarea id="approval-owner">Privacy ops drafts the packet, the product owner confirms workflow boundaries, and counsel reviews any contract or notice implications before broad reuse.</textarea>
+              </label>
+              <label>Proof links and artifacts
+                <textarea id="proof-links">Vendor terms link, public subprocessor page, workflow screenshot, internal rollout brief, review tracker row, and approval notes.</textarea>
+              </label>
+              <label>Framework or buyer-language notes
+                <textarea id="framework-notes">Buyer wants named ownership, workflow scope, proof trail, and optional NIST AI RMF or ISO 42001-style governance notes if the packet escalates.</textarea>
+              </label>
+              <label>Customer-facing or reviewer-facing summary
+                <textarea id="review-summary">The buyer wants one packet that explains the vendor chain, customer scope, current operating stance, approval owner, proof trail, and open issues behind the workflow.</textarea>
+              </label>
+              <label>Open questions and unresolved issues
+                <textarea id="open-questions">Confirm whether attachments are in scope for the first release, whether any customer-specific agreement adds notice obligations, and whether the public proof needs a fresher review date.</textarea>
+              </label>
+            </div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Packet result</span>
+            <div class="score-row generator-summary">
+              <strong id="packet-score">9/10</strong>
+              <span id="packet-state">Packet-ready</span>
+            </div>
+            <div class="score-meter" aria-hidden="true">
+              <span id="packet-meter"></span>
+            </div>
+            <p id="packet-summary">The current draft already packages the vendor chain, scope, owner, proof, and open issues well enough to support a buyer-facing due diligence packet.</p>
+            <div class="tier-guidance">
+              <strong id="next-step-title">Best next step</strong>
+              <p id="next-step-copy">Copy the packet now, then branch into the evidence map only if the buyer pushes back on proof quality behind one claim.</p>
+            </div>
+            <div class="result-list">
+              <div>
+                <strong>What is still thin</strong>
+                <ul id="gap-list"></ul>
+              </div>
+              <div>
+                <strong>What already holds up</strong>
+                <ul id="strength-list"></ul>
+              </div>
+            </div>
+            <div class="generator-actions">
+              <button class="button" id="copy-packet" type="button">Copy packet</button>
+              <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
+              <button class="button secondary" id="copy-handoff" type="button">Copy handoff</button>
+              <button class="button secondary" id="download-packet" type="button">Download packet</button>
+              <button class="button secondary" id="download-bundle" type="button">Download bundle</button>
+              <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
+            </div>
+            <p class="fine-print" id="packet-status">This builder runs in your browser. Inputs stay local and autosave on this device only.</p>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Copy-ready packet</h2>
+            <p>Use this block when the buyer wants one practical diligence packet instead of another back-and-forth answer thread.</p>
+          </div>
+          <div class="template-box" id="packet-output" aria-live="polite"></div>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article>
+              <div class="section-head">
+                <h2>Reviewer checklist</h2>
+                <p>Use this to close the missing owner, scope, proof, or framework note before the packet goes out.</p>
+              </div>
+              <div class="template-box" id="checklist-output" aria-live="polite"></div>
+            </article>
+            <article>
+              <div class="section-head">
+                <h2>Internal handoff brief</h2>
+                <p>Use this when the packet needs counsel, privacy, security, or product sign-off before it is reused broadly.</p>
+              </div>
+              <div class="template-box" id="handoff-output" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta-band">
+            <div>
+              <h2>Need the next artifact now?</h2>
+              <p>Use the scorecard if the facts are still uneven, the framework map if the buyer wants governance coverage shaped around formal frameworks, the evidence map if one proof claim is weak, and the audit if the missing piece is judgment about what to fix first.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="button" id="route-primary" href="ai-due-diligence-scorecard.html?source=ai-due-diligence-packet-builder-scorecard">Open due diligence scorecard</a>
+              <a class="button secondary" id="route-secondary" href="ai-security-review-evidence-map.html?source=ai-due-diligence-packet-builder-evidence-map">Open evidence map</a>
+              <a class="button secondary" href="ai-due-diligence-framework-map.html?source=ai-due-diligence-packet-builder-framework-map">Open framework map</a>
+              <a class="button secondary" href="blog-ai-due-diligence-route-comparison.html?source=ai-due-diligence-packet-builder-comparison">Compare due diligence routes</a>
+              <a class="button secondary" href="ai-security-questionnaire-audit.html?source=ai-due-diligence-packet-builder-audit">Request AI audit</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="mailto:hello@noticekit.tech">Contact</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const STORAGE_KEY = "noticekit-ai-due-diligence-packet-builder-v1";
+      const form = document.querySelector("#packet-form");
+      const statusNode = document.querySelector("#packet-status");
+      const scoreNode = document.querySelector("#packet-score");
+      const stateNode = document.querySelector("#packet-state");
+      const meterNode = document.querySelector("#packet-meter");
+      const summaryNode = document.querySelector("#packet-summary");
+      const nextStepNode = document.querySelector("#next-step-copy");
+      const strengthsNode = document.querySelector("#strength-list");
+      const gapsNode = document.querySelector("#gap-list");
+      const packetOutput = document.querySelector("#packet-output");
+      const checklistOutput = document.querySelector("#checklist-output");
+      const handoffOutput = document.querySelector("#handoff-output");
+      const routePrimary = document.querySelector("#route-primary");
+      const routeSecondary = document.querySelector("#route-secondary");
+      const presetButtons = Array.from(document.querySelectorAll("[data-preset]"));
+
+      const fields = [
+        "company",
+        "reply-owner",
+        "named-vendor",
+        "workflow",
+        "workflow-status",
+        "deadline",
+        "downstream",
+        "data-categories",
+        "customer-scope",
+        "training-stance",
+        "approval-owner",
+        "proof-links",
+        "framework-notes",
+        "review-summary",
+        "open-questions"
+      ];
+
+      const presets = {
+        "enterprise-pilot": {
+          company: "Example SaaS",
+          "reply-owner": "Privacy ops lead with counsel review",
+          "named-vendor": "OpenAI",
+          workflow: "Customer-facing AI drafting assistant for support replies",
+          "workflow-status": "planned",
+          deadline: "Enterprise pilot review due before procurement approval this week.",
+          downstream: "Vercel, Supabase, Zendesk, and PostHog support the workflow around the primary model provider.",
+          "data-categories": "Support ticket text, account identifiers, internal prompts, and response drafts.",
+          "customer-scope": "Enterprise and EU customers in the support workflow, with extra review for signed DPA accounts.",
+          "training-stance": "Current operating position: no training on our customer content in this workflow, with vendor terms and internal review notes kept as supporting proof.",
+          "approval-owner": "Privacy ops drafts the packet, the product owner confirms workflow boundaries, and counsel reviews contract or notice implications before launch.",
+          "proof-links": "Vendor terms link, public subprocessor page, workflow screenshot, internal rollout brief, and approval tracker row.",
+          "framework-notes": "Buyer wants named owner, workflow scope, proof trail, and optional governance notes if the review expands.",
+          "review-summary": "Buyer asked for one practical AI due diligence packet covering the vendor chain, customer scope, current stance, approval owner, and proof trail.",
+          "open-questions": "Confirm attachment handling and whether the public proof needs a fresher review date before launch."
+        },
+        "security-review": {
+          company: "Example SaaS",
+          "reply-owner": "Security lead with privacy review",
+          "named-vendor": "Anthropic",
+          workflow: "Internal support copilot that drafts responses for human review",
+          "workflow-status": "active",
+          deadline: "Security review response due Friday before legal follow-up.",
+          downstream: "AWS, Zendesk, Segment, and S3 support the workflow around the primary model provider.",
+          "data-categories": "Support conversation text, account metadata, incident context, and response drafts.",
+          "customer-scope": "Support team workflows that can include enterprise customer context, with manual approval before external send.",
+          "training-stance": "Current operating position: no training on our customer content for this workflow, with vendor terms and internal usage notes kept as proof.",
+          "approval-owner": "Security lead owns the control boundary, privacy reviews data handling, and counsel reviews customer-commitment language before wider reuse.",
+          "proof-links": "Vendor terms link, workflow screenshot, approval-gate notes, internal control brief, and trust-page references.",
+          "framework-notes": "Reviewer asked for control boundary, approval owner, and governance notes that map to the current review packet.",
+          "review-summary": "Security reviewer wants one packet that ties the AI workflow facts to the control boundary, customer scope, and supporting proof.",
+          "open-questions": "Confirm whether attachments or escalations widen the scope and whether the public trust page needs a control-boundary note."
+        },
+        "vendor-change": {
+          company: "Example SaaS",
+          "reply-owner": "Operations lead with counsel review",
+          "named-vendor": "OpenAI",
+          workflow: "Replacing the prior drafting vendor in the support workflow",
+          "workflow-status": "replacement",
+          deadline: "Customer and procurement review needs an updated packet before the vendor switch goes live next week.",
+          downstream: "Vercel, Supabase, and Zendesk stay in place while the primary model provider changes.",
+          "data-categories": "Support ticket text, account identifiers, response drafts, and workflow metadata.",
+          "customer-scope": "Enterprise and DPA-governed support workflows affected by the named vendor change.",
+          "training-stance": "Current operating position: no training on customer content, but the team still needs to refresh the proof set and public references after the vendor swap.",
+          "approval-owner": "Operations lead owns the rollout, privacy reviews notice implications, and counsel signs off on customer-facing language if needed.",
+          "proof-links": "Current subprocessor page, old and new vendor terms links, draft change brief, internal approval tracker, and workflow screenshots.",
+          "framework-notes": "Packet needs the delta, the affected customer scope, and the owner path behind the vendor replacement.",
+          "review-summary": "Reviewer wants one packet that explains what changed, who is affected, what proof exists, and what still needs approval before activation.",
+          "open-questions": "Confirm whether the vendor change triggers customer notice for any signed contracts and whether the public vendor page needs an updated review date."
+        }
+      };
+
+      function fieldValue(id) {
+        return document.querySelector(`#${id}`).value.trim();
+      }
+
+      function readDraft() {
+        return fields.reduce((accumulator, id) => {
+          accumulator[id] = fieldValue(id);
+          return accumulator;
+        }, {});
+      }
+
+      function saveDraft() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(readDraft()));
+      }
+
+      function loadDraft() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          return;
+        }
+
+        try {
+          const parsed = JSON.parse(raw);
+          fields.forEach((id) => {
+            if (typeof parsed[id] === "string") {
+              document.querySelector(`#${id}`).value = parsed[id];
+            }
+          });
+        } catch (error) {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+      }
+
+      function companySlug(value) {
+        return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      }
+
+      function statusLabel(value) {
+        if (value === "active") {
+          return "Active workflow in production";
+        }
+        if (value === "replacement") {
+          return "Replacing an older workflow";
+        }
+        return "Planned rollout under review";
+      }
+
+      function bulletize(items) {
+        return items.map((item) => `- ${item}`).join("\n");
+      }
+
+      function buildPayload() {
+        const draft = readDraft();
+        const strengths = [];
+        const gaps = [];
+        let score = 0;
+
+        function scoreField(value, strengthText, gapText, minimumLength = 18) {
+          if (value.length >= minimumLength) {
+            score += 1;
+            strengths.push(strengthText);
+          } else {
+            gaps.push(gapText);
+          }
+        }
+
+        scoreField(draft["named-vendor"], "Named AI vendor is explicit.", "Name the primary AI vendor directly.");
+        scoreField(draft.workflow, "Workflow boundary is specific.", "Describe one exact workflow under review.");
+        scoreField(draft.downstream, "Downstream provider chain is visible.", "List the downstream providers behind the workflow.");
+        scoreField(draft["data-categories"], "Data categories are clear.", "State the categories of data touched by the workflow.");
+        scoreField(draft["customer-scope"], "Customer scope is defined.", "State which customers, agreements, or regions are affected.");
+        scoreField(draft["training-stance"], "Operating stance is documented.", "State the current training or retention stance.");
+        scoreField(draft["approval-owner"], "Approval path is documented.", "Name the approval owner and gate.");
+        scoreField(draft["proof-links"], "Proof trail is named.", "List the proof links or artifacts the reviewer can inspect.");
+        scoreField(draft["framework-notes"], "Framework or buyer-language notes are captured.", "Add the framework-shaped or buyer-language notes the reviewer expects.");
+        scoreField(draft["open-questions"], "Open issues are explicit.", "List the unresolved issues so the packet does not pretend everything is closed.");
+
+        let scoreState = "Still thin";
+        let summary = "The current draft still leaves enough missing context that the buyer packet will likely trigger more follow-up loops.";
+        let nextStepCopy = "Keep tightening the facts with the scorecard or template before you send a packet.";
+        let primaryRoute = {
+          href: "ai-due-diligence-scorecard.html?source=ai-due-diligence-packet-builder-scorecard",
+          label: "Open due diligence scorecard"
+        };
+        let secondaryRoute = {
+          href: "blog-ai-due-diligence-questionnaire-template.html?source=ai-due-diligence-packet-builder-template",
+          label: "Open due diligence template"
+        };
+
+        if (score >= 7) {
+          scoreState = "Almost packet-ready";
+          summary = "The draft has the main packet ingredients, but one or two weak spots can still create procurement, security, or counsel follow-up loops.";
+          nextStepCopy = "Patch the thin fields, then use the evidence map if the buyer challenge shrinks to proof behind one claim.";
+          primaryRoute = {
+            href: "ai-security-review-evidence-map.html?source=ai-due-diligence-packet-builder-evidence-map",
+            label: "Open evidence map"
+          };
+          secondaryRoute = {
+            href: "ai-due-diligence-framework-map.html?source=ai-due-diligence-packet-builder-framework-map",
+            label: "Open framework map"
+          };
+        }
+
+        if (score >= 9) {
+          scoreState = "Packet-ready";
+          summary = "The current draft already packages the vendor chain, scope, owner, proof, and open issues well enough to support a buyer-facing due diligence packet.";
+          nextStepCopy = "Copy the packet now, then branch into the framework map only if the buyer asks for more formal governance coverage.";
+          primaryRoute = {
+            href: "ai-due-diligence-framework-map.html?source=ai-due-diligence-packet-builder-framework-map",
+            label: "Open framework map"
+          };
+          secondaryRoute = {
+            href: "ai-security-questionnaire-audit.html?source=ai-due-diligence-packet-builder-audit",
+            label: "Request AI audit"
+          };
+        }
+
+        const packet = [
+          `# ${draft.company || "NoticeKit"} AI Due Diligence Packet`,
+          "",
+          `## 1. Review summary`,
+          `${draft["review-summary"] || "Not provided."}`,
+          "",
+          `## 2. Workflow reviewed`,
+          `- Workflow: ${draft.workflow || "Not provided"}`,
+          `- Status: ${statusLabel(draft["workflow-status"])}`,
+          `- Named AI vendor: ${draft["named-vendor"] || "Not provided"}`,
+          `- Downstream providers: ${draft.downstream || "Not provided"}`,
+          "",
+          `## 3. Data and customer scope`,
+          `- Data categories: ${draft["data-categories"] || "Not provided"}`,
+          `- Customer scope: ${draft["customer-scope"] || "Not provided"}`,
+          "",
+          `## 4. Current operating stance`,
+          `${draft["training-stance"] || "Not provided."}`,
+          "",
+          `## 5. Approval owner and deadline`,
+          `- Owner path: ${draft["approval-owner"] || "Not provided"}`,
+          `- Review deadline: ${draft.deadline || "Not provided"}`,
+          `- Packet owner: ${draft["reply-owner"] || "Not provided"}`,
+          "",
+          `## 6. Proof and framework notes`,
+          `- Proof links: ${draft["proof-links"] || "Not provided"}`,
+          `- Framework or buyer-language notes: ${draft["framework-notes"] || "Not provided"}`,
+          "",
+          `## 7. Open questions`,
+          `${draft["open-questions"] || "Not provided."}`
+        ].join("\n");
+
+        const checklist = [
+          `# AI Due Diligence Reviewer Checklist`,
+          "",
+          `## Ready now`,
+          bulletize(strengths.length ? strengths : ["No strong fields yet."]),
+          "",
+          `## Still thin`,
+          bulletize(gaps.length ? gaps : ["No major gaps detected."]),
+          "",
+          `## Final send check`,
+          "- Confirm the named vendor and downstream chain match the latest live workflow.",
+          "- Confirm the customer scope matches the actual contracts, regions, and launch status.",
+          "- Confirm the proof links are current and accessible to the reviewer.",
+          "- Confirm the owner path and deadline still reflect the current review thread."
+        ].join("\n");
+
+        const handoff = [
+          `# Internal Handoff Brief`,
+          "",
+          `- Company: ${draft.company || "Not provided"}`,
+          `- Packet owner: ${draft["reply-owner"] || "Not provided"}`,
+          `- Workflow: ${draft.workflow || "Not provided"}`,
+          `- Named vendor: ${draft["named-vendor"] || "Not provided"}`,
+          `- Current state: ${scoreState}`,
+          `- Deadline: ${draft.deadline || "Not provided"}`,
+          "",
+          `## Next move`,
+          `${nextStepCopy}`,
+          "",
+          `## Open issues to resolve`,
+          bulletize(gaps.length ? gaps : ["No major gaps detected."]),
+          "",
+          `## Reviewer context`,
+          `${draft["review-summary"] || "Not provided."}`
+        ].join("\n");
+
+        return {
+          score,
+          scoreState,
+          summary,
+          nextStepCopy,
+          strengths,
+          gaps,
+          packet,
+          checklist,
+          handoff,
+          primaryRoute,
+          secondaryRoute,
+          slug: companySlug(draft.company || "noticekit")
+        };
+      }
+
+      function render() {
+        const payload = buildPayload();
+        scoreNode.textContent = `${payload.score}/10`;
+        stateNode.textContent = payload.scoreState;
+        meterNode.style.width = `${payload.score * 10}%`;
+        summaryNode.textContent = payload.summary;
+        nextStepNode.textContent = payload.nextStepCopy;
+        strengthsNode.innerHTML = payload.strengths.map((item) => `<li>${item}</li>`).join("");
+        gapsNode.innerHTML = payload.gaps.map((item) => `<li>${item}</li>`).join("");
+        packetOutput.textContent = payload.packet;
+        checklistOutput.textContent = payload.checklist;
+        handoffOutput.textContent = payload.handoff;
+        routePrimary.href = payload.primaryRoute.href;
+        routePrimary.textContent = payload.primaryRoute.label;
+        routeSecondary.href = payload.secondaryRoute.href;
+        routeSecondary.textContent = payload.secondaryRoute.label;
+      }
+
+      function copyText(text, message) {
+        navigator.clipboard.writeText(text).then(() => {
+          statusNode.textContent = message;
+        }).catch(() => {
+          statusNode.textContent = "Copy failed. Select the text manually.";
+        });
+      }
+
+      function downloadText(filename, text) {
+        const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+        statusNode.textContent = `${filename} downloaded.`;
+      }
+
+      function bundleText(payload) {
+        return [payload.packet, "", payload.checklist, "", payload.handoff].join("\n");
+      }
+
+      presetButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const preset = presets[button.dataset.preset];
+          if (!preset) {
+            return;
+          }
+
+          fields.forEach((id) => {
+            if (typeof preset[id] === "string") {
+              document.querySelector(`#${id}`).value = preset[id];
+            }
+          });
+
+          saveDraft();
+          render();
+          statusNode.textContent = "Preset loaded. Review the packet and tailor the facts before sharing.";
+        });
+      });
+
+      form.addEventListener("input", () => {
+        saveDraft();
+        render();
+      });
+
+      document.querySelector("#copy-packet").addEventListener("click", () => {
+        copyText(buildPayload().packet, "Packet copied to clipboard.");
+      });
+
+      document.querySelector("#copy-checklist").addEventListener("click", () => {
+        copyText(buildPayload().checklist, "Reviewer checklist copied to clipboard.");
+      });
+
+      document.querySelector("#copy-handoff").addEventListener("click", () => {
+        copyText(buildPayload().handoff, "Internal handoff brief copied to clipboard.");
+      });
+
+      document.querySelector("#download-packet").addEventListener("click", () => {
+        const payload = buildPayload();
+        downloadText(`${payload.slug || "noticekit"}-ai-due-diligence-packet.md`, payload.packet);
+      });
+
+      document.querySelector("#download-bundle").addEventListener("click", () => {
+        const payload = buildPayload();
+        downloadText(`${payload.slug || "noticekit"}-ai-due-diligence-packet-bundle.md`, bundleText(payload));
+      });
+
+      document.querySelector("#clear-draft").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        form.reset();
+        presets["enterprise-pilot"] && fields.forEach((id) => {
+          if (typeof presets["enterprise-pilot"][id] === "string") {
+            document.querySelector(`#${id}`).value = presets["enterprise-pilot"][id];
+          }
+        });
+        render();
+        statusNode.textContent = "Saved draft cleared.";
+      });
+
+      loadDraft();
+      render();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>
