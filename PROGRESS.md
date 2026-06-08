@@ -49,6 +49,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - Shipped `ai-due-diligence-risk-checklist.html`, a dedicated buyer-language fact-cleanup page for teams that already have a due-diligence request but still need to stabilize the vendor chain, workflow scope, proof links, approval owner, and open risks before they choose the template, scorecard, framework map, or audit route.
 - Rewired the due-diligence cluster so the template, scorecard, comparison page, packet builder, framework map, evidence map, pricing, free-tools, procurement hub, route chooser, answer library, start-here, and blog now expose the new checklist instead of relying on the older generic AI risk-assessment wording alone; added the route to `sitemap.xml` so the page is crawlable immediately.
 - Ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the new checklist route shipped; watcher coverage stayed complete at `855/855` and local links stayed green at `103/103`.
+- Shipped `ai-due-diligence-starter-pack.html`, a dedicated buyer-language bridge for teams whose broader due-diligence thread has collapsed back down to one live answer, one proof-backed response, or one repeat-review source file and should not be kicked straight into the generic questionnaire starter-pack flow.
+- Rewired the buyer-language due-diligence cluster plus the highest-intent commercial surfaces so the template, scorecard, framework map, evidence map, packet builder, comparison page, homepage, pricing, free-tools, procurement hub, route chooser, start-here, blog, about, kit preview, and purchase-next-steps pages can route into the new due-diligence starter-pack branch without dropping the packet, owner, or proof context.
+- Ran `npm run check:source-tag-coverage` and `npm run check:site-links` again after the starter-pack bridge shipped; watcher coverage stayed complete at `855/855` and local links advanced to `104/104`.
 
 ## Next Step
 
