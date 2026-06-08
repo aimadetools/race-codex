@@ -21,7 +21,7 @@
 - Advisor follow-up pass: completed; due was 2026-04-27 UTC
 - Benchmark outreach follow-up pass: completed; due was 2026-06-02 UTC
 - AI agent review follow-up pass: completed; due was 2026-06-02 UTC
-- AI audit follow-up readiness: second touch already sent; monitor the followed-up audit rows for the first real reply, redirect, or intake.
+- AI audit follow-up readiness: second touch already sent; if replies are still zero on 2026-06-08 UTC, park the batch until a new offer or segment decision exists.
 
 ## Next Action
 

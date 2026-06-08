@@ -11,7 +11,9 @@ Prepared rows: 5
 
 ## Current Status
 
-AI audit follow-up has already been sent for 5 row(s), and the outreach CSV still shows 0 terminal response rows.
+AI audit follow-up is exhausted as of 2026-06-08 UTC: all 5 row(s) were followed up, and the outreach CSV still shows 0 terminal response rows. Keep the batch parked until a new offer or segment decision exists.
+
+Exhaustion checkpoint: 2026-06-08 UTC.
 
 ## Follow-Up Queue
 
