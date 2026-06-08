@@ -485,14 +485,14 @@
         if (score >= 9) {
           scoreState = "Review-ready";
           summary = "The draft names the vendor chain, workflow scope, customer impact, owner, proof, and unresolved issues well enough to support a due diligence packet.";
-          nextStepCopy = "Use the answer builder now if the job is one live buyer response. Use the answer bank only if the same review keeps repeating across deals.";
+          nextStepCopy = "Use the answer builder now if the job is one live buyer response. Use the due diligence answer bank if the same review keeps repeating across deals.";
           primaryRoute = {
             href: "ai-security-questionnaire-answer-builder.html?source=ai-due-diligence-scorecard-builder",
             label: "Open answer builder"
           };
           secondaryRoute = {
-            href: "ai-security-questionnaire-answer-bank.html?source=ai-due-diligence-answer-bank",
-            label: "Open answer bank"
+            href: "ai-due-diligence-answer-bank.html?source=ai-due-diligence-scorecard-answer-bank",
+            label: "Open due diligence answer bank"
           };
         }
 
@@ -526,7 +526,7 @@
 
         const gapChecklist = gaps.length
           ? gaps.map((gap) => `- ${gap}`).join("\n")
-          : "- No major field gaps. Route into the builder, due diligence starter pack, or answer bank based on whether the job is one answer or repeat review.";
+          : "- No major field gaps. Route into the builder, due diligence starter pack, or due diligence answer bank based on whether the job is one answer or repeat review.";
 
         return {
           draft,

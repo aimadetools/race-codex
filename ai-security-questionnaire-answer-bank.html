@@ -332,6 +332,17 @@
     },
     {
       match: (source) =>
+        source.startsWith("ai-due-diligence-answer-bank-template"),
+      title: "You came from the buyer-language due-diligence repeat-review branch.",
+      copy: "Keep the reusable answer-bank file here, but preserve the due-diligence facts that made the thread credible: vendor chain, workflow scope, approval owner, proof path, and framework notes.",
+      points: [
+        "Carry the buyer-language due-diligence framing into each reusable answer row.",
+        "Use the evidence map if one repeated claim still lacks proof, owner, or review metadata.",
+        "Move to the Pro kit only when repeat review now needs matrix, packet, intake, or schedule files too."
+      ]
+    },
+    {
+      match: (source) =>
         source.startsWith("homepage-job-repeat-review") ||
         source.startsWith("homepage-ai-route-repeat-review") ||
         source.startsWith("homepage-shortcut") ||
