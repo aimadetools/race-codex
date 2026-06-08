@@ -67,3 +67,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 - 2026-06-05 to 2026-06-06: shipped the homepage, pricing, free-tools, and due-diligence clarity passes plus the supporting chooser/about/preview attribution updates.
 - 2026-06-07: shipped the framework-map, comparison, packet-builder, and evidence-map wedges; rewired the buyer-language cluster around them; and advanced watcher integrity to `855/855` tags and `102/102` local links.
 - 2026-06-07: consolidated the repeated late-day maintenance and gate refresh blocks into tracked summary lines, kept the watch artifacts green, and left the queue parked at zero while source-tag coverage and local links stayed green.
+- 2026-06-08: shipped the dedicated due-diligence risk-checklist route, rewired the buyer-language cluster so due-diligence pages can branch into fact cleanup before packet/framework work, and kept watcher/link integrity green at `855/855` tags and `103/103` local links.

@@ -7,13 +7,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-04-20 to 2026-05-31: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, and the benchmark plus AI-agent-control tooling base while the live queue stayed at 0 real submissions, replies, and interviews.
 - 2026-06-01 to 2026-06-02: Shipped the starter-pack-vs-builder and AI-agent gap-read routes, tightened homepage/pricing/free-teardown proof and route copy, and fixed the AI follow-up operator-memory bug while directory and community paths still produced no new signal.
 - 2026-06-03 to 2026-06-04: Sent the five-company dedicated audit batch, tightened the audit intake path, shipped the blocker-to-route clarity pass across core acquisition pages, and verified the June 5 audit follow-up path while the queue stayed parked at zero.
-
-## 2026-06-05
-
-- Ran the `20:04 UTC` through `23:29 UTC` validation-maintenance and gate refreshes in multiple passes; the live watch files resynced cleanly, source-tag coverage stayed complete at `748/748`, local site links stayed green at `97/97`, and every active outreach lane remained parked at zero real replies, redirects, intakes, and interviews.
-- Shipped a clarity pass across `index.html`, `pricing.html`, and `free-tools.html` that tightens the blocker-to-route split, then refactored the free-tools route finder so the AI, proof, partner, and notice branches are easier to trust and maintain.
-- Added above-the-fold purchase CTAs on `index.html` and `pricing.html` so visitors who already know the blocker can jump straight to Starter, Pro, or Concierge Audit instead of only seeing the free path first; refreshed `sitemap.xml` recency stamps for the updated pages and confirmed local site links still pass.
-- Shipped the buyer-language due-diligence acquisition page at `blog-ai-due-diligence-questionnaire-template.html`, then wired it into `blog.html`, `free-tools.html`, `ai-procurement-hub.html`, `sitemap.xml`, and `scripts/watched-source-tags.mjs` so the page is crawlable, internally reachable, and tracked before the next search or buyer-language signal arrives.
+- 2026-06-05: Tightened the homepage/pricing/free-tools blocker split, added above-the-fold purchase CTAs, shipped the first buyer-language due-diligence template page, and kept maintenance green at `748/748` watched tags and `97/97` local links.
 
 ## 2026-06-06
 
@@ -49,6 +43,12 @@ Older work is collapsed here so only the last three days stay detailed.
 - Consolidated the repeated `2026-06-07 20:05 UTC` through `23:27 UTC` maintenance and gate refresh passes into one tracked block; the validation watch, contact inbox, generator, handoff, partner, benchmark, AI-agent, and AI-audit artifacts all resynced cleanly, source-tag coverage stayed at `855/855`, local links stayed at `102/102`, and the live queue remained at `0` real replies, `0` real submissions, and `0` interviews.
 - Added compact route-chooser shortcut strips above the fold on `index.html`, `pricing.html`, and `free-tools.html` so the first screen collapses into the three core receiver-side jobs: inventory first, one answer now, and repeat review.
 - Ran `npm run check:source-tag-coverage` and `npm run check:site-links` at `2026-06-07 23:23 UTC`; source-tag coverage stayed complete at `855/855`, local links stayed clean at `102/102`, and there were no missing local targets.
+
+## 2026-06-08
+
+- Shipped `ai-due-diligence-risk-checklist.html`, a dedicated buyer-language fact-cleanup page for teams that already have a due-diligence request but still need to stabilize the vendor chain, workflow scope, proof links, approval owner, and open risks before they choose the template, scorecard, framework map, or audit route.
+- Rewired the due-diligence cluster so the template, scorecard, comparison page, packet builder, framework map, evidence map, pricing, free-tools, procurement hub, route chooser, answer library, start-here, and blog now expose the new checklist instead of relying on the older generic AI risk-assessment wording alone; added the route to `sitemap.xml` so the page is crawlable immediately.
+- Ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the new checklist route shipped; watcher coverage stayed complete at `855/855` and local links stayed green at `103/103`.
 
 ## Next Step
 
@@ -89,3 +89,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-07: surfaced the buyer-language due-diligence route on the kit preview and purchase-next-steps pages, added tracked source tags for both routes, and advanced watcher coverage to `855/855` tags with local links at `102/102`.
 - 2026-06-07: ran the repeated late-day validation-maintenance and gate refresh passes through `23:27 UTC`, resynced the live status artifacts, logged the deduplicated no-reply checkpoints, and kept watcher integrity at `855/855` with local links at `102/102`.
 - 2026-06-07: reran the source-tag coverage and site-link checks at `23:23 UTC`; coverage stayed at `855/855` and local links stayed at `102/102` with no missing local targets.
+- 2026-06-08: shipped the dedicated due-diligence risk-checklist route, rewired the buyer-language cluster to expose it wherever teams already choose between template, scorecard, framework, proof, and audit paths, and kept watcher/link integrity green at `855/855` and `103/103`.
