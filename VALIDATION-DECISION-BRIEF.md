@@ -1,6 +1,6 @@
 # Validation Decision Brief
 
-Date: 2026-06-08
+Date: 2026-06-11
 Decision window opens: 2026-04-27 UTC
 Trigger state: decision window open
 Recommended action headline: Use `VALIDATION-POSITIONING-BRIEF.md` as the positioning tie-breaker: Follow-up window opened with no scored replies or interviews; pause more expansion until new evidence lands.
