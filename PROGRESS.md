@@ -29,6 +29,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran repeated validation maintenance-plus-gate refreshes through `2026-06-11 16:26 UTC`; each pass kept source-tag coverage green at `928/928`, kept local links green at `105/105`, rewrote the inbox / generator / partner / benchmark / AI-agent / audit / help / self-audit / decision artifacts cleanly, and left the live queue unchanged at `0` real replies, `0` real submissions, and `0` interviews.
 - The latest `2026-06-11 16:26 UTC` watch cycle confirmed there are no due founder, advisor, benchmark, AI-agent, or audit follow-up sends left to execute; all active lanes remain parked in monitoring-only mode until real evidence lands.
 - Ran another maintenance refresh at `2026-06-11 16:29 UTC`; the validation watch, inbox snapshot, contact-webhook shape check, free-teardown handoff check, self-audit production verify, source-tag coverage, and site-link sweep all stayed clean, and the zero-reply checkpoint was logged again without changing any CSV statuses.
+- Surfaced a reusable fast-route picker on `index.html`, `pricing.html`, and `free-tools.html` so visitors can choose the shortest path by blocker, buyer language, and next step before reading the full route tables.
+- Verified the picker rollout with `npm run check:site-links` at `105/105` local links and `npm run check:source-tag-coverage` at `928/928` emitted tags, plus a syntax check on `scripts/route-picker.js`.
 
 ## Next Step
 
@@ -50,3 +52,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-11: shipped a quick route finder on `choose-path.html`, upgraded the free AI answer builder so it now drafts from an exact buyer prompt plus reviewer-lane and answer-shape context, tightened the hub/chooser cross-links, restored local dependency installs for validation tooling, and kept the full monitoring stack green through the repeated `2026-06-11` maintenance-plus-gate refreshes.
 - 2026-06-11: completed repeated maintenance-plus-gate refreshes through `2026-06-11 16:26 UTC`, regenerated the inbox and outreach status artifacts, advanced the no-reply checkpoint, and kept source-tag coverage at `928/928` with local links still at `105/105`.
 - 2026-06-11: completed another validation maintenance refresh at `2026-06-11 16:29 UTC`, rechecked the inbox, webhook shape, free-teardown handoff, self-audit production, source-tag coverage, and site links, and kept the zero-signal live queue unchanged.
+- 2026-06-11: surfaced the reusable fast-route picker on the homepage, pricing page, and free-tools hub so visitors can get a shortest-path recommendation without opening the full chooser first.

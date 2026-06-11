@@ -107,6 +107,54 @@
             <a class="button secondary" href="kit-preview.html?source=pricing-kit-preview">Review kit preview</a>
             <a class="button secondary" href="choose-path.html?source=pricing-route-chooser">Not sure? Choose path</a>
           </div>
+          <div class="notice-band" style="margin-top:18px;" data-route-picker="pricing">
+            <strong>Need the shortest route before checkout?</strong>
+            <p>Pick the blocker, buyer language, and next step below. The picker points to the fastest route plus one backup path so the buying decision stays tied to the live review problem.</p>
+            <div class="demo-panel" style="margin-top:12px;">
+              <div class="panel-header">
+                <strong>Fast route picker</strong>
+                <span class="status">Local only</span>
+              </div>
+              <div class="demo-body">
+                <div class="field-grid">
+                  <label>Primary blocker
+                    <select data-route-picker-blocker>
+                      <option value="one-answer">One live answer is blocking the deal</option>
+                      <option value="repeat-review">The same review keeps coming back</option>
+                      <option value="proof">The answer exists, but proof is missing</option>
+                      <option value="due-diligence">The buyer wants vendor chain or framework coverage</option>
+                      <option value="inventory">The stack facts are still messy</option>
+                      <option value="agent">The blocker is AI agent controls</option>
+                      <option value="judgment">I need a human read first</option>
+                    </select>
+                  </label>
+                  <label>Buyer language
+                    <select data-route-picker-language>
+                      <option value="questionnaire">Buyer calls it an AI questionnaire</option>
+                      <option value="due-diligence">Buyer calls it due diligence</option>
+                      <option value="agent">Buyer calls it AI agent review</option>
+                      <option value="notice">This is really a notice workflow</option>
+                      <option value="unsure">Not sure yet</option>
+                    </select>
+                  </label>
+                  <label>What you need next
+                    <select data-route-picker-need>
+                      <option value="send">A copy-ready answer</option>
+                      <option value="pack">A fuller packet or handoff</option>
+                      <option value="proof">Proof links and owner details</option>
+                      <option value="repeat">Reusable files for the next review</option>
+                      <option value="read">A blunt async read</option>
+                    </select>
+                  </label>
+                </div>
+                <div data-route-picker-output class="notice-output" aria-live="polite"></div>
+                <div class="hero-actions" style="margin-top:12px;">
+                  <a data-route-picker-primary class="button" href="#">Open route</a>
+                  <a data-route-picker-secondary class="button secondary" href="#">Open backup route</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="notice-band" style="margin-top:18px;">
             <strong>Pick the package by blocker.</strong>
             <div class="grid-3" style="margin-top:12px;">
@@ -720,6 +768,7 @@
         <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
       </footer>
     </div>
+    <script defer src="scripts/route-picker.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
