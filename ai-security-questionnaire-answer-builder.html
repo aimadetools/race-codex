@@ -130,6 +130,24 @@
               <label>Company
                 <input id="company" value="Example SaaS">
               </label>
+              <label>Exact buyer question or questionnaire prompt
+                <textarea id="buyer-question">Please describe your use of AI vendors in the support workflow, including the named providers, customer data in scope, model-training stance, and any approval or review process behind the answer.</textarea>
+              </label>
+              <label>Reviewer lane
+                <select id="reviewer-lane">
+                  <option value="procurement">Procurement / buyer review</option>
+                  <option value="security">Security review</option>
+                  <option value="privacy">Privacy / DPA review</option>
+                  <option value="counsel">Counsel / contract review</option>
+                </select>
+              </label>
+              <label>Answer shape
+                <select id="answer-shape">
+                  <option value="standard">Standard paragraph answer</option>
+                  <option value="concise">Concise answer first</option>
+                  <option value="proof-first">Proof-first answer</option>
+                </select>
+              </label>
               <label>Workflow reviewed
                 <input id="workflow" value="Customer support drafting assistant for support agents">
               </label>
@@ -188,10 +206,10 @@
           <aside class="result-panel" aria-live="polite">
             <span class="eyebrow">Local output</span>
             <div class="score-row generator-summary">
-              <strong id="coverage-score">9/9</strong>
+              <strong id="coverage-score">10/10</strong>
               <span id="coverage-state">Review-ready answer</span>
             </div>
-            <p id="coverage-summary">The current draft names the vendor chain, scope, stance, customer impact, and proof links.</p>
+            <p id="coverage-summary">The current draft names the buyer prompt, vendor chain, scope, stance, customer impact, and proof links.</p>
             <div class="tier-guidance">
               <strong id="answer-summary-title">Best use right now</strong>
               <p id="answer-summary-copy">Copy the answer block into the questionnaire, then send the same facts into the internal handoff, repeated-question pack, teardown, or packet path if the reviewer asks for more proof.</p>
@@ -212,14 +230,14 @@
               <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces a primary answer, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, and one downloadable bundle file.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, and one downloadable bundle file.</p>
           </aside>
         </section>
 
         <section class="section">
           <div class="section-head">
             <h2>Copy-ready answer block</h2>
-            <p>Use this when the buyer or reviewer needs one clean answer before the conversation branches into a broader packet.</p>
+            <p>Use this when the buyer or reviewer needs a direct response to the exact question before the conversation branches into a broader packet.</p>
           </div>
           <div id="answer-output" class="template-box" aria-live="polite"></div>
         </section>
@@ -288,7 +306,7 @@
             <article class="card">
               <span class="tag">Answer now</span>
               <h3>One copy-ready questionnaire answer</h3>
-              <p>Turn one workflow, one vendor chain, one scope statement, and one proof set into a buyer-facing answer block you can paste into the live review thread today.</p>
+              <p>Turn one workflow, one vendor chain, one scope statement, one buyer prompt, and one proof set into a buyer-facing answer block you can paste into the live review thread today.</p>
             </article>
             <article class="card">
               <span class="tag">Follow-up coverage</span>
@@ -547,6 +565,9 @@
 
       function buildAnswerPayload() {
         const company = sentence(value("company"), "This team");
+        const buyerQuestion = sentence(value("buyer-question"), "Please describe the reviewed AI workflow, the named vendors, the customer data in scope, the current retention or training stance, and the human review behind the answer.");
+        const reviewerLane = value("reviewer-lane");
+        const answerShape = value("answer-shape");
         const workflow = sentence(value("workflow"), "the reviewed AI workflow");
         const primaryVendor = sentence(value("primary-vendor"), "the named AI vendor");
         const supportingVendors = sentence(value("supporting-vendors"), "the supporting vendors in the workflow");
@@ -568,21 +589,60 @@
           active: "active in production",
           replacement: "replacing an existing vendor or workflow"
         }[changeStatus] || "under review";
+        const reviewerLaneLabel = {
+          procurement: "procurement review",
+          security: "security review",
+          privacy: "privacy review",
+          counsel: "counsel review"
+        }[reviewerLane] || "buyer review";
+        const answerShapeLabel = {
+          standard: "standard answer",
+          concise: "concise answer",
+          "proof-first": "proof-first answer"
+        }[answerShape] || "standard answer";
+        const answerLead = {
+          standard: `Recommended response for ${reviewerLaneLabel}:`,
+          concise: `Concise response for ${reviewerLaneLabel}:`,
+          "proof-first": `Proof-first response for ${reviewerLaneLabel}:`
+        }[answerShape] || "Recommended response:";
+
+        let answerBody = [
+          `${company} is reviewing ${workflow}, which is currently ${statusLabel}. ${primaryVendor} is the primary AI vendor for this workflow, with ${supportingVendors} supporting the implementation.`,
+          `Data in scope: ${dataCategories}. Customer scope: ${customerScope}.`,
+          `Retention and training stance: ${retentionStance}`,
+          `Human review and approval path: ${approvalPath}`,
+          `Proof behind this answer: ${proofLinks}`,
+          `Current notice or escalation impact: ${noticeImpact}`,
+          `Current decision needed next: ${decisionNeeded}`,
+          `Out-of-scope boundaries: ${scopeBoundaries}`,
+          `Reply owner and open questions: ${replyOwner}. Open questions: ${openQuestions}`
+        ];
+
+        if (answerShape === "concise") {
+          answerBody = [
+            `${company} uses ${primaryVendor} for ${workflow}, with ${supportingVendors} supporting the workflow.`,
+            `Data in scope: ${dataCategories}. Customer scope: ${customerScope}.`,
+            `Retention and training stance: ${retentionStance}`,
+            `Human review: ${approvalPath}`,
+            `Proof and next-step notes: ${proofLinks}. ${decisionNeeded}`
+          ];
+        } else if (answerShape === "proof-first") {
+          answerBody = [
+            `Proof links: ${proofLinks}`,
+            `Named workflow and vendor chain: ${workflow} uses ${primaryVendor} with ${supportingVendors}.`,
+            `Data in scope and customer coverage: ${dataCategories}. ${customerScope}`,
+            `Retention and training stance: ${retentionStance}`,
+            `Human review and approval path: ${approvalPath}`,
+            `Open review items: ${decisionNeeded}. ${openQuestions}`
+          ];
+        }
 
         const answer = [
-          `AI vendors used: ${primaryVendor} is the primary AI vendor for ${workflow}. Supporting vendors in this workflow include ${supportingVendors}.`,
-          `Workflow reviewed: ${company} is reviewing ${workflow}, which is currently ${statusLabel}.`,
-          `Data categories involved: ${dataCategories}.`,
-          `Reviewer ask: ${reviewerAsk}`,
-          `Retention and training stance: ${retentionStance}`,
-          `Customer scope: ${customerScope}`,
-          `Approval path: ${approvalPath}`,
-          `Out-of-scope boundaries: ${scopeBoundaries}`,
-          `Recheck cadence or trigger: ${reviewCadence}`,
-          `Notice or escalation impact: ${noticeImpact}`,
-          `Decision needed next: ${decisionNeeded}`,
-          `Proof links: ${proofLinks}`,
-          `Reply owner and open questions: ${replyOwner}. Open questions: ${openQuestions}`
+          `Buyer question: ${buyerQuestion}`,
+          answerLead,
+          answerBody.join("\n\n"),
+          `Reviewer ask behind the answer: ${reviewerAsk}`,
+          `Recheck cadence or trigger: ${reviewCadence}`
         ].join("\n\n");
 
         const checklist = [
@@ -595,6 +655,9 @@
         ].join("\n");
 
         const handoff = [
+          `Buyer question to answer: ${buyerQuestion}`,
+          `Reviewer lane: ${reviewerLaneLabel}`,
+          `Requested answer shape: ${answerShapeLabel}`,
           `Current blocker: ${workflow} needs a review-ready answer tied to ${primaryVendor}.`,
           `Reviewer ask: ${reviewerAsk}`,
           `Decision needed next: ${decisionNeeded}`,
@@ -610,6 +673,7 @@
         const shortAnswer = `For ${workflow}, ${company} currently lists ${primaryVendor} as the primary AI vendor with ${supportingVendors} supporting the workflow. Data in scope: ${dataCategories}. Customer scope: ${customerScope}. Retention/training stance: ${retentionStance}`;
 
         const qaPack = [
+          `0. What exact buyer question are we answering?\n${buyerQuestion}\nRecommended lane: ${reviewerLaneLabel}. Preferred shape: ${answerShapeLabel}.`,
           `1. Which AI vendors are in scope?\n${primaryVendor} is the primary AI vendor for ${workflow}. Supporting vendors in this workflow include ${supportingVendors}.`,
           `2. What workflow is under review?\n${company} is reviewing ${workflow}, which is currently ${statusLabel}.`,
           `3. What data categories are involved?\n${dataCategories}.`,
@@ -703,6 +767,12 @@
 
         const bankRows = [
           {
+            label: "Exact live buyer question",
+            buyerWording: buyerQuestion,
+            short: `${answerLead} ${shortAnswer}`,
+            long: answer
+          },
+          {
             label: "Named vendors and workflow scope",
             buyerWording: "Which AI vendors are in scope for this workflow and what exactly is under review?",
             short: shortAnswer,
@@ -744,6 +814,9 @@
           "",
           `- Company: ${company}`,
           "- Product: [Add product or feature name]",
+          `- Exact buyer question this file was seeded from: ${buyerQuestion}`,
+          `- Default reviewer lane: ${reviewerLaneLabel}`,
+          `- Preferred answer shape: ${answerShapeLabel}`,
           `${snapshotWorkflowLabel}: ${workflow}`,
           snapshotVendorDetailLine,
           snapshotSupportingVendorLine,
@@ -811,6 +884,7 @@
         ].join("\n");
 
         const completenessChecks = [
+          value("buyer-question"),
           value("primary-vendor"),
           value("supporting-vendors"),
           value("data-categories"),
@@ -832,6 +906,7 @@
           completedCount: completenessChecks.filter(Boolean).length,
           completenessTarget: completenessChecks.length,
           company,
+          buyerQuestion,
           workflow,
           primaryVendor,
           customerScope,
@@ -895,25 +970,28 @@
 
         if (payload.completedCount === payload.completenessTarget) {
           coverageState.textContent = "Review-ready answer";
-          coverageSummary.textContent = "The current draft names the vendor chain, scope, stance, approval path, review trigger, customer impact, and proof links.";
+          coverageSummary.textContent = "The current draft names the buyer prompt, vendor chain, scope, stance, approval path, review trigger, customer impact, and proof links.";
           answerSummaryCopy.textContent = `Copy the answer into the questionnaire now, then reuse the ${payload.reusableQuestionCount}-question pack, workspace export, and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.`;
           return;
         }
 
         if (payload.completedCount >= 5) {
           coverageState.textContent = "Needs a tighter proof pass";
-          coverageSummary.textContent = "The answer is usable, but at least one of the proof, approval, or scope-boundary facts is still too vague.";
-          answerSummaryCopy.textContent = "Tighten the missing proof, approval, or boundary fields before sending this into procurement. The wording is close, but the reviewer workspace and repeated-question pack are still thin.";
+          coverageSummary.textContent = "The answer is usable, but the buyer prompt or one of the proof, approval, or scope-boundary facts is still too vague.";
+          answerSummaryCopy.textContent = "Tighten the missing buyer-question, proof, approval, or boundary fields before sending this into procurement. The wording is close, but the reviewer workspace and repeated-question pack are still thin.";
           return;
         }
 
         coverageState.textContent = "Too thin for buyer review";
-        coverageSummary.textContent = "The answer still needs core facts before it is safe to send into a live questionnaire thread.";
-        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the vendor chain, scope, stance, approval path, and proof cleanly enough for the answer, repeated-question pack, workspace, and handoff to hold up.";
+        coverageSummary.textContent = "The answer still needs the exact buyer prompt and core facts before it is safe to send into a live questionnaire thread.";
+        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the buyer question, vendor chain, scope, stance, approval path, and proof cleanly enough for the answer, repeated-question pack, workspace, and handoff to hold up.";
       }
 
       const presets = {
         "new-model": {
+          "buyer-question": "Please explain the new AI model provider in the customer-facing support summarization workflow, the named vendors involved, what customer data is processed, and what approvals are required before launch.",
+          "reviewer-lane": "security",
+          "answer-shape": "proof-first",
           workflow: "Customer-facing summarization feature for support tickets",
           primaryVendor: "Anthropic",
           supportingVendors: "AWS, Vercel, PostHog, HubSpot",
@@ -921,6 +999,9 @@
           customerScope: "Enterprise and EU customers using the support feature, pending DPA review"
         },
         "support-ai": {
+          "buyer-question": "Describe the support copilot workflow, the AI vendors and supporting systems involved, whether customer ticket content is used for training, and the review process behind the answer.",
+          "reviewer-lane": "procurement",
+          "answer-shape": "standard",
           workflow: "Internal support copilot for drafting responses",
           primaryVendor: "OpenAI",
           supportingVendors: "Zendesk, Vercel, Supabase",
@@ -928,6 +1009,9 @@
           customerScope: "Support team workflows with extra review for enterprise accounts"
         },
         "internal-ai": {
+          "buyer-question": "Please describe the internal AI workflow, the named vendor chain, whether customer data is excluded, and what human review sits behind that scope statement.",
+          "reviewer-lane": "privacy",
+          "answer-shape": "concise",
           workflow: "Internal engineering assistant for product and incident analysis",
           primaryVendor: "OpenAI",
           supportingVendors: "GitHub, Linear, Notion",
@@ -943,11 +1027,12 @@
             return;
           }
 
-          document.querySelector("#workflow").value = preset.workflow;
-          document.querySelector("#primary-vendor").value = preset.primaryVendor;
-          document.querySelector("#supporting-vendors").value = preset.supportingVendors;
-          document.querySelector("#data-categories").value = preset.dataCategories;
-          document.querySelector("#customer-scope").value = preset.customerScope;
+          Object.entries(preset).forEach(([id, fieldValue]) => {
+            const field = document.querySelector(`#${id}`);
+            if (field) {
+              field.value = fieldValue;
+            }
+          });
           render();
         });
       });
