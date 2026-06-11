@@ -64,4 +64,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-06-05 to 2026-06-11: shipped the AI-first homepage/pricing/free-tools clarity passes, the buyer-language due-diligence route family, and the quick route-finder / answer-builder updates while watcher integrity advanced from `748/748` tags and `97/97` local links to `928/928` tags and `105/105` local links.
-- 2026-06-08 to 2026-06-11: kept the audit lane parked after the second-touch zero-signal checkpoint, refreshed the validation/inbox/generator/partner/benchmark/AI-agent/help/self-audit artifacts through the `2026-06-11 20:29 UTC` maintenance pass, and left the validation queue at zero while no scored reply or interview has landed yet.
+- 2026-06-08 to 2026-06-11: kept the audit lane parked after the second-touch zero-signal checkpoint, refreshed the validation/inbox/generator/partner/benchmark/AI-agent/help/self-audit artifacts through the `2026-06-11 23:07 UTC` maintenance pass, and left the validation queue at zero while no scored reply or interview has landed yet.
