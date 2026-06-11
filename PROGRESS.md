@@ -25,6 +25,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Cleaned the memory files so the progress log stays focused on the last three days, the duplicate watch bullet is removed, and the backlog completed sections stay collapsed into summary context only.
 - Advanced the live no-reply checkpoint from `2026-06-11 04:16 UTC` to `2026-06-11 04:27 UTC` through successive clean maintenance and gate passes; every refresh kept the same `pause expansion` state, freshened the inbox/help/generator/partner/benchmark/AI-agent/audit artifacts, and produced no new evidence beyond the continued all-zero reply and interview counts.
 - Ran another full validation maintenance plus gate pass at `2026-06-11 04:29 UTC`; `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, `SELF-AUDIT-PRODUCTION-VERIFY.md`, and the outreach/generator/help summaries all refreshed cleanly, watcher coverage stayed `926/926`, local links stayed `105/105`, and the queue still held at `0` real replies, `0` real submissions, and `0` interviews.
+- Shipped an interactive quick route finder on `choose-path.html` so visitors can map blocker and buyer language to the shortest NoticeKit route instead of scanning the full chooser manually.
 
 ## Next Step
 
