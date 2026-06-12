@@ -113,7 +113,7 @@
       secondaryLabel: "Request free teardown",
     },
     pack: {
-      title: "Use the starter bundle or packet builder.",
+      title: "Use the fuller packet path.",
       summary:
         "You need a fuller handoff package, so show the exact bundle shape before you ask for checkout.",
       bullets: [
@@ -211,6 +211,10 @@
   };
 
   const pickRecommendation = (blockerValue, languageValue, needValue) => {
+    if (needValue === "pack" && (languageValue === "due-diligence" || blockerValue === "due-diligence")) {
+      return { key: "pack", reason: "fuller procurement packet" };
+    }
+
     if (languageValue === "due-diligence" || blockerValue === "due-diligence") {
       return { key: "dueDiligence", reason: "buyer-language due diligence" };
     }
