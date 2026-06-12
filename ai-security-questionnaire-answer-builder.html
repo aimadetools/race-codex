@@ -216,6 +216,7 @@
             </div>
             <div class="generator-actions">
               <button class="button" id="copy-answer" type="button">Copy answer</button>
+              <button class="button secondary" id="copy-review-note" type="button">Copy review note</button>
               <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
               <button class="button secondary" id="copy-handoff" type="button">Copy handoff</button>
               <button class="button secondary" id="copy-qa-pack" type="button">Copy Q&A pack</button>
@@ -223,14 +224,18 @@
               <button class="button secondary" id="copy-answer-bank" type="button">Copy answer bank</button>
               <button class="button secondary" id="copy-full-bundle" type="button">Copy starter bundle</button>
               <button class="button secondary" id="download-answer" type="button">Download answer</button>
+              <button class="button secondary" id="download-review-note" type="button">Download review note</button>
               <button class="button secondary" id="download-qa-pack" type="button">Download Q&A pack</button>
               <button class="button secondary" id="download-workspace" type="button">Download workspace</button>
               <button class="button secondary" id="download-answer-bank" type="button">Download answer bank</button>
               <button class="button secondary" id="download-full-bundle" type="button">Download starter bundle</button>
+              <button class="button secondary" id="export-draft" type="button">Export draft</button>
+              <button class="button secondary" id="import-draft" type="button">Import draft</button>
+              <input id="import-draft-file" type="file" accept="application/json,.json" hidden>
               <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, and one downloadable bundle file.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, one portable JSON draft export, and one downloadable bundle file.</p>
           </aside>
         </section>
 
@@ -240,6 +245,14 @@
             <p>Use this when the buyer or reviewer needs a direct response to the exact question before the conversation branches into a broader packet.</p>
           </div>
           <div id="answer-output" class="template-box" aria-live="polite"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Send-ready reviewer note</h2>
+            <p>Use this when you need to send the answer with enough context for procurement, security, privacy, or counsel without rewriting the cover note from scratch.</p>
+          </div>
+          <div id="review-note-output" class="template-box" aria-live="polite"></div>
         </section>
 
         <section class="section">
@@ -316,7 +329,7 @@
             <article class="card">
               <span class="tag">Internal handoff</span>
               <h3>Reviewer workspace plus checklist</h3>
-              <p>Keep the answer, proof links, owner, decision needed, open questions, and recheck trigger in one local export so the next reviewer does not restart the thread from scratch.</p>
+              <p>Keep the answer, review note, proof links, owner, decision needed, open questions, and recheck trigger in one local export so the next reviewer does not restart the thread from scratch.</p>
             </article>
             <article class="card">
               <span class="tag">Repeat review</span>
@@ -430,6 +443,7 @@
     <script>
       const builderForm = document.querySelector("#builder-form");
       const answerOutput = document.querySelector("#answer-output");
+      const reviewNoteOutput = document.querySelector("#review-note-output");
       const qaPackOutput = document.querySelector("#qa-pack-output");
       const workspaceOutput = document.querySelector("#workspace-output");
       const checklistOutput = document.querySelector("#checklist-output");
@@ -440,6 +454,7 @@
       const answerSummaryCopy = document.querySelector("#answer-summary-copy");
       const builderStatus = document.querySelector("#builder-status");
       const copyAnswerButton = document.querySelector("#copy-answer");
+      const copyReviewNoteButton = document.querySelector("#copy-review-note");
       const copyChecklistButton = document.querySelector("#copy-checklist");
       const copyHandoffButton = document.querySelector("#copy-handoff");
       const copyQaPackButton = document.querySelector("#copy-qa-pack");
@@ -447,10 +462,14 @@
       const copyAnswerBankButton = document.querySelector("#copy-answer-bank");
       const copyFullBundleButton = document.querySelector("#copy-full-bundle");
       const downloadAnswerButton = document.querySelector("#download-answer");
+      const downloadReviewNoteButton = document.querySelector("#download-review-note");
       const downloadQaPackButton = document.querySelector("#download-qa-pack");
       const downloadWorkspaceButton = document.querySelector("#download-workspace");
       const downloadAnswerBankButton = document.querySelector("#download-answer-bank");
       const downloadFullBundleButton = document.querySelector("#download-full-bundle");
+      const exportDraftButton = document.querySelector("#export-draft");
+      const importDraftButton = document.querySelector("#import-draft");
+      const importDraftFile = document.querySelector("#import-draft-file");
       const clearSavedDraftButton = document.querySelector("#clear-saved-draft");
       const sendToTeardown = document.querySelector("#send-to-teardown");
       const query = new URLSearchParams(window.location.search);
@@ -485,7 +504,8 @@
       }
 
       function downloadFile(name, content) {
-        const blob = new Blob([content], { type: "text/markdown;charset=utf-8" });
+        const isJson = String(name).toLowerCase().endsWith(".json");
+        const blob = new Blob([content], { type: isJson ? "application/json;charset=utf-8" : "text/markdown;charset=utf-8" });
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
         link.href = url;
@@ -520,6 +540,9 @@
       function collectFormState() {
         const fields = {};
         builderForm.querySelectorAll("input, textarea, select").forEach((field) => {
+          if (field.type === "file") {
+            return;
+          }
           fields[field.id] = field.value;
         });
         return fields;
@@ -560,6 +583,48 @@
           builderStatus.textContent = "Saved draft removed from this browser.";
         } catch (error) {
           builderStatus.textContent = "Saved draft could not be cleared.";
+        }
+      }
+
+      function applyFormState(fields) {
+        if (!fields || typeof fields !== "object") {
+          return false;
+        }
+        Object.entries(fields).forEach(([id, fieldValue]) => {
+          const field = document.querySelector(`#${id}`);
+          if (field && field.type !== "file") {
+            field.value = String(fieldValue);
+          }
+        });
+        saveDraft();
+        render();
+        return true;
+      }
+
+      function exportDraft() {
+        const payload = {
+          source: "noticekit-ai-questionnaire-answer-builder",
+          version: 1,
+          exportedAt: new Date().toISOString(),
+          fields: collectFormState()
+        };
+        downloadFile(
+          `${slugify(`${value("company") || "noticekit"}-${value("primary-vendor") || "ai"}-questionnaire-draft`, "noticekit-ai-questionnaire-draft")}.json`,
+          JSON.stringify(payload, null, 2)
+        );
+        builderStatus.textContent = "Draft exported as JSON for reuse on another device or handoff.";
+      }
+
+      function importDraft(rawText) {
+        try {
+          const parsed = JSON.parse(rawText);
+          const fields = parsed && typeof parsed === "object" && parsed.fields ? parsed.fields : parsed;
+          if (!applyFormState(fields)) {
+            throw new Error("invalid-draft");
+          }
+          builderStatus.textContent = "Draft imported. Local autosave was refreshed on this device.";
+        } catch (error) {
+          builderStatus.textContent = "Draft import failed. Use a NoticeKit builder JSON export.";
         }
       }
 
@@ -668,6 +733,36 @@
           "Escalate to teardown if one live page and one customer segment need a blunt gap read.",
           `Owner: ${replyOwner}.`,
           `Open questions: ${openQuestions}`
+        ].join("\n");
+
+        const reviewNote = [
+          `Subject: AI questionnaire response for ${company} - ${workflow}`,
+          "",
+          "Hi team,",
+          "",
+          `Below is our current response to the following question: ${buyerQuestion}`,
+          "",
+          `${company} is reviewing ${workflow}, currently ${statusLabel}. ${primaryVendor} is the primary AI vendor for this workflow, with ${supportingVendors} supporting the implementation.`,
+          "",
+          `Data in scope: ${dataCategories}`,
+          `Customer scope: ${customerScope}`,
+          `Retention and training stance: ${retentionStance}`,
+          `Human review and approval path: ${approvalPath}`,
+          `Proof links and supporting materials: ${proofLinks}`,
+          "",
+          "Current answer:",
+          answer,
+          "",
+          `Open review items or constraints: ${openQuestions}`,
+          `Current decision needed next: ${decisionNeeded}`,
+          `Recheck trigger: ${reviewCadence}`,
+          "",
+          `Reply owner: ${replyOwner}`,
+          "",
+          "If a fuller packet, framework map, or proof-specific artifact would help, we can route this answer into the next review layer without changing the source facts.",
+          "",
+          "Best,",
+          company
         ].join("\n");
 
         const shortAnswer = `For ${workflow}, ${company} currently lists ${primaryVendor} as the primary AI vendor with ${supportingVendors} supporting the workflow. Data in scope: ${dataCategories}. Customer scope: ${customerScope}. Retention/training stance: ${retentionStance}`;
@@ -898,6 +993,7 @@
 
         return {
           answer,
+          reviewNote,
           qaPack,
           workspace,
           checklist,
@@ -924,6 +1020,10 @@
           "## Copy-ready answer block",
           "",
           payload.answer,
+          "",
+          "## Send-ready reviewer note",
+          "",
+          payload.reviewNote,
           "",
           "## Common buyer-question pack",
           "",
@@ -961,6 +1061,7 @@
       function render() {
         const payload = buildAnswerPayload();
         answerOutput.innerHTML = markdownToHtml(payload.answer);
+        reviewNoteOutput.innerHTML = markdownToHtml(payload.reviewNote);
         qaPackOutput.innerHTML = markdownToHtml(payload.qaPack);
         workspaceOutput.innerHTML = markdownToHtml(payload.workspace);
         checklistOutput.innerHTML = markdownToHtml(payload.checklist);
@@ -971,7 +1072,7 @@
         if (payload.completedCount === payload.completenessTarget) {
           coverageState.textContent = "Review-ready answer";
           coverageSummary.textContent = "The current draft names the buyer prompt, vendor chain, scope, stance, approval path, review trigger, customer impact, and proof links.";
-          answerSummaryCopy.textContent = `Copy the answer into the questionnaire now, then reuse the ${payload.reusableQuestionCount}-question pack, workspace export, and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.`;
+          answerSummaryCopy.textContent = `Copy the answer into the questionnaire now, then reuse the review note, the ${payload.reusableQuestionCount}-question pack, workspace export, and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.`;
           return;
         }
 
@@ -1034,6 +1135,7 @@
             }
           });
           render();
+          saveDraft();
         });
       });
 
@@ -1559,6 +1661,9 @@
       copyAnswerButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().answer, "AI questionnaire answer copied.");
       });
+      copyReviewNoteButton.addEventListener("click", () => {
+        copyText(buildAnswerPayload().reviewNote, "Reviewer note copied.");
+      });
       copyChecklistButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().checklist, "Proof checklist copied.");
       });
@@ -1584,6 +1689,11 @@
         downloadFile("noticekit-ai-questionnaire-answer.md", content);
         builderStatus.textContent = "Answer and handoff downloaded as Markdown.";
       });
+      downloadReviewNoteButton.addEventListener("click", () => {
+        const payload = buildAnswerPayload();
+        downloadFile("noticekit-ai-questionnaire-review-note.md", payload.reviewNote);
+        builderStatus.textContent = "Reviewer note downloaded as Markdown.";
+      });
       downloadQaPackButton.addEventListener("click", () => {
         const payload = buildAnswerPayload();
         const content = `# ${payload.company} AI security questionnaire common buyer-question pack\n\n${payload.qaPack}\n`;
@@ -1604,6 +1714,21 @@
         const payload = buildAnswerPayload();
         downloadFile(`${payload.bankSlug}-starter-bundle.md`, buildFullBundle(payload));
         builderStatus.textContent = "Full starter bundle downloaded as Markdown.";
+      });
+      exportDraftButton.addEventListener("click", () => {
+        exportDraft();
+      });
+      importDraftButton.addEventListener("click", () => {
+        importDraftFile.click();
+      });
+      importDraftFile.addEventListener("change", async (event) => {
+        const [file] = event.target.files || [];
+        if (!file) {
+          return;
+        }
+        const text = await file.text();
+        importDraft(text);
+        importDraftFile.value = "";
       });
       clearSavedDraftButton.addEventListener("click", () => {
         clearSavedDraft();

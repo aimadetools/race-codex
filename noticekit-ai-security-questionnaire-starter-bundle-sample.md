@@ -18,6 +18,11 @@ This illustrative bundle shows the public shape of the NoticeKit AI answer workf
 
 **Proof links:** Public subprocessor page URL, draft internal review packet, vendor terms link, screenshot of the workflow, tracker row, reply owner notes, and the two open review questions on notice timing and attachment scope.
 
+## Send-ready reviewer note
+
+- Subject: AI questionnaire response for Example SaaS - Customer support drafting assistant for support agents
+- Use this note to send the answer with the exact buyer question, named vendor chain, scope, stance, proof links, open review items, recheck trigger, and reply owner without rewriting the cover message.
+
 ## Common buyer-question pack
 
 - Which vendors are in the workflow? Name the primary model provider and the supporting vendors tied to that exact workflow, not the whole product.
