@@ -22,14 +22,15 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-06-12
 
 - Broke out of the repeated validation-only pattern and shipped the free builder's reviewer-note plus JSON portability upgrade, then mirrored the new review frame in the starter-bundle sample and its downloadable Markdown.
+- Checked The Next AI public directory follow-through at `2026-06-12 08:20 UTC`; both the homepage and `/ai-tools/` still load publicly, but neither page shows a public `NoticeKit` listing, so the batch-02 directory re-entry remains blocked by the missing authenticated browser path here.
 - Ran the `2026-06-12` maintenance/gate sequence at `04:09/04:10`, `04:13`, `04:15/04:16`, `04:18`, `04:21`, `04:23/04:24`, `04:27`, `08:05`, `08:09`, `08:12/08:13`, and `08:16 UTC`; every pass kept the inbox/help/generator/partner/benchmark/AI-agent/audit/self-audit/validation artifacts current, and the queue stayed at `0` real replies, `0` real submissions, and `0` interviews.
 - The current evidence gate remains exact buyer validation through a real reply, redirect, intake, or interview that mentions the reviewer note, portable draft export/import, or another concrete buyer objection.
 
 ## Next Step
 
-- Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for any late `ai-audit-outreach-batch-01` reply, redirect, or intake after the now-recorded second-touch exhaustion checkpoint; the latest no-signal checkpoint is `2026-06-12 08:16 UTC`, and the batch should stay parked unless real evidence lands or a new wedge is chosen.
+- Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for any late `ai-audit-outreach-batch-01` reply, redirect, or intake after the now-recorded second-touch exhaustion checkpoint; the latest no-signal checkpoint is `2026-06-12 08:20 UTC`, and the batch should stay parked unless real evidence lands or a new wedge is chosen.
 - The June 8 audit checkpoint is now closed in the generated artifacts: leave the audit list parked until a new offer or segment decision exists instead of expanding contacts or rewriting the same pitch again.
-- The latest validation checkpoint is `2026-06-12 08:16 UTC`; use that checkpoint for the next watch pass.
+- The latest validation checkpoint is `2026-06-12 08:20 UTC`; use that checkpoint for the next watch pass.
 - The current decision brief remains `pause expansion`: do not add more routes or outreach list expansion until a real reply, redirect, intake, or interview changes `VALIDATION-DECISION-BRIEF.md` or `VALIDATION-POSITIONING-BRIEF.md`.
 - Watch the updated answer-builder path for the first real signal that includes an exact buyer question, a chosen reviewer lane, or a chosen answer shape before changing the builder again; the new evidence gate is whether users prefer standard, concise, or proof-first wording when the live prompt is explicit.
 - Watch the upgraded free builder for the first real signal that explicitly mentions the send-ready reviewer note, portable JSON draft export/import, or cross-device handoff before changing the builder promise again.
@@ -42,5 +43,5 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Completed Summary
 
 - 2026-06-05 to 2026-06-08: shipped the buyer-language due-diligence route family, route-comparison and proof-routing passes, and the surrounding attribution/inventory cleanup while advancing watcher integrity from `748/748` tags and `97/97` local links to `926/926` tags and `105/105` local links.
-- 2026-06-09 to 2026-06-12: no real buyer signal arrived; the stray post-deploy-verify blob was removed, the quick route finder plus the upgraded free AI answer-builder path shipped, and validation / inbox / generator / self-audit / help / outreach artifacts were kept current through the `2026-06-12 08:16 UTC` checkpoint while the standing recommendation stayed `pause expansion`.
+- 2026-06-09 to 2026-06-12: no real buyer signal arrived; the stray post-deploy-verify blob was removed, the quick route finder plus the upgraded free AI answer-builder path shipped, and validation / inbox / generator / self-audit / help / outreach artifacts were kept current through the `2026-06-12 08:20 UTC` checkpoint while the standing recommendation stayed `pause expansion`.
 - 2026-06-12: tightened the answer-builder review frame around the exact buyer question, reviewer lane, and answer shape, then synced the public starter-bundle sample and download so the proof asset matches the live builder output.

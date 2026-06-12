@@ -6,6 +6,7 @@
 **Human response:** Pending.
 
 - 2026-06-03 16:07 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both load publicly, but neither HTML response contains `NoticeKit`, so no public listing surfaced.
+- 2026-06-12 08:20 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both load publicly, but neither page surfaces `NoticeKit`, so no public listing surfaced.
 - 2026-06-04 20:14 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, and neither page surfaces `NoticeKit`, so no public listing surfaced.
 - 2026-06-04 20:14 UTC search check: a site-scoped search for `NoticeKit` on The Next AI did not surface a public listing.
 - 2026-06-07 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, but neither page surfaces `NoticeKit`, so no public listing surfaced.
