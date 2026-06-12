@@ -183,7 +183,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-11: shipped the homepage/pricing/free-tools clarity passes, the buyer-language due-diligence family, and the quick route-finder / answer-builder updates while watcher integrity advanced from `748/748` tags and `97/97` local links to `928/928` tags and `105/105` local links.
-- 2026-06-12: upgraded the free AI answer builder with a send-ready reviewer note plus portable JSON draft export/import, refreshed the public sample-bundle proof asset, and pushed the stronger free-builder promise onto the homepage, pricing, free-tools, starter-pack, and procurement-hub entry paths.
-- 2026-06-08 to 2026-06-11: kept the audit lane parked after the second-touch zero-signal checkpoint, refreshed validation/inbox/help/generator/partner/benchmark/AI-agent/self-audit artifacts through the `2026-06-11 23:28 UTC` maintenance pass, and kept all live reply-capture lanes at zero.
-- 2026-06-11: ran another validation maintenance pass, refreshed the reply watch, no-reply checkpoint, inbox snapshot, helper artifacts, and validation sync outputs, and confirmed the queue still sits at zero replies, zero submissions, and zero interviews.
+- 2026-06-05 to 2026-06-12: shipped the homepage/pricing/free-tools clarity passes, the buyer-language due-diligence family, the quick route finder, and the upgraded free AI answer-builder flow with reviewer-note plus JSON portability while watcher integrity advanced from `748/748` tags and `97/97` local links to `928/928` tags and `105/105` local links.
+- 2026-06-08 to 2026-06-12: kept the audit lane parked after the second-touch zero-signal checkpoint and refreshed validation/inbox/help/generator/partner/benchmark/AI-agent/self-audit artifacts through the `2026-06-12 04:10 UTC` maintenance pass while every live reply-capture lane stayed at zero.
