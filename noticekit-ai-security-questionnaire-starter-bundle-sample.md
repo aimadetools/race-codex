@@ -31,10 +31,27 @@ This illustrative bundle shows the public shape of the NoticeKit AI answer workf
 
 ## Common buyer-question pack
 
-- Which vendors are in the workflow? Name the primary model provider and the supporting vendors tied to that exact workflow, not the whole product.
-- Is customer data used for model training? State the current operating stance and point to the vendor terms plus internal proof notes behind it.
-- Which customers are in scope? Call out the release segment and any DPA or custom-contract review branch explicitly.
-- What is still unresolved? Show the live open questions, owner, and next decision instead of hiding the blocker in email.
+- 0. What exact buyer question are we answering? Restate the live buyer prompt, plus the reviewer lane and preferred answer shape.
+- 1. Which AI vendors are in scope? Name the primary model provider and the supporting vendors tied to that exact workflow, not the whole product.
+- 2. What workflow is under review? Name the exact support workflow and whether it is planned, active, or replacing an older flow.
+- 3. What data categories are involved? Call out the real ticket, identifier, prompt, or attachment scope instead of saying only "customer data."
+- 4. What is the current retention or training stance? State the current operating stance and point to the vendor terms plus internal proof notes behind it.
+- 5. Which customers or agreements are affected? Call out the release segment and any DPA or custom-contract review branch explicitly.
+- 6. Why is this answer being requested? Describe the reviewer ask behind the wording so the internal team keeps the same context.
+- 7. What human review or approval sits behind this answer? Name the owner chain so the answer does not read like unsupported marketing copy.
+- 8. What is explicitly out of scope for this answer? Define the workflow boundary so the buyer does not assume broader product coverage.
+- 9. When should this answer be rechecked or refreshed? Record the recheck trigger so the wording does not go stale after the next vendor or workflow change.
+- 10. Does this trigger notice, escalation, or counsel review? Expose the rollout or notice implication instead of hiding it in side channels.
+- 11. What decision still needs to be made before broader reuse? Name the open decision so the answer is reusable but not falsely final.
+- 12. What proof and owner notes sit behind the answer? Keep the proof links, owner, and open questions with the same answer bundle.
+- 13. Is this workflow planned, active, or replacing another vendor flow? Clarify lifecycle state so reviewers know whether this is live production scope or a pending change.
+- 14. Which supporting vendors touch the workflow around the primary AI vendor? List the surrounding host, database, support, or analytics tools that matter to the reviewed path.
+- 15. What exact workflow boundary should the reviewer assume? Restate the covered workflow and the excluded surfaces in one place.
+- 16. Which customer segment needs the closest contract or DPA check? Highlight the segment that needs the most careful contract review.
+- 17. What would force the answer to change before the next deal? Name the workflow, vendor, contract, or retention trigger that invalidates the current wording.
+- 18. What broader notice or rollout issue sits behind the answer? State the notice or escalation impact that procurement may need to know about.
+- 19. Who owns the response if the buyer asks for more proof tomorrow? Point to the reply owner plus the same approval path used for the first answer.
+- 20. What is the current safe-to-send position in one line? Summarize the current position in one sentence plus the remaining open decision.
 
 ## Proof checklist
 

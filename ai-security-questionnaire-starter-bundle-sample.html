@@ -45,6 +45,7 @@
             <p>This is the missing middle between a thin template and a paid kit. Use it when the phrase "starter bundle" sounds promising but you still want to see the exact artifact stack: the answer block, reviewer note, buyer follow-up pack, proof checklist, internal handoff, reviewer workspace, and reusable answer-bank draft that all come from one fact pass.</p>
             <div class="hero-actions">
               <a class="button" href="noticekit-ai-security-questionnaire-starter-bundle-sample.md" download>Download sample bundle</a>
+              <a class="button secondary" href="noticekit-ai-security-questionnaire-question-matrix-sample.csv" download>Download 20-question matrix CSV</a>
               <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=ai-bundle-sample-builder">Build your own bundle</a>
               <a class="button secondary" href="pricing.html?source=ai-bundle-sample-pricing">Open pricing</a>
               <a class="button secondary" href="kit-preview.html?source=ai-bundle-sample-kit-preview">Open kit preview</a>
@@ -127,35 +128,131 @@
 
           <section>
             <h2>3. Common buyer-question pack</h2>
+            <p>The sample below exposes the full 20-question matrix instead of only a teaser, because the whole point is to judge whether one fact pass produces something substantial enough to reuse.</p>
             <div class="table-wrap">
               <table>
                 <thead>
                   <tr>
+                    <th>#</th>
                     <th>Buyer question</th>
                     <th>Answer direction</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td>0</td>
+                    <td>What exact buyer question are we answering?</td>
+                    <td>Restate the live buyer prompt, plus the reviewer lane and preferred answer shape.</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
                     <td>Which vendors are in the workflow?</td>
                     <td>Name the primary model provider and the supporting vendors tied to that exact workflow, not the whole product.</td>
                   </tr>
                   <tr>
+                    <td>2</td>
+                    <td>What workflow is under review?</td>
+                    <td>Name the exact support workflow and whether it is planned, active, or replacing an older flow.</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>What data categories are involved?</td>
+                    <td>Call out the real ticket, identifier, prompt, or attachment scope instead of saying only "customer data."</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
                     <td>Is customer data used for model training?</td>
                     <td>State the current operating stance and point to the vendor terms plus internal proof notes behind it.</td>
                   </tr>
                   <tr>
+                    <td>5</td>
                     <td>Which customers are in scope?</td>
                     <td>Call out the release segment and any DPA or custom-contract review branch explicitly.</td>
                   </tr>
                   <tr>
-                    <td>What is still unresolved?</td>
-                    <td>Show the live open questions, owner, and next decision instead of hiding the blocker in email.</td>
+                    <td>6</td>
+                    <td>Why is this answer being requested?</td>
+                    <td>Describe the reviewer ask behind the wording so the internal team keeps the same context.</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>What human review or approval sits behind this answer?</td>
+                    <td>Name the owner chain so the answer does not read like unsupported marketing copy.</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>What is explicitly out of scope for this answer?</td>
+                    <td>Define the workflow boundary so the buyer does not assume broader product coverage.</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>When should this answer be rechecked or refreshed?</td>
+                    <td>Record the recheck trigger so the wording does not go stale after the next vendor or workflow change.</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Does this trigger notice, escalation, or counsel review?</td>
+                    <td>Expose the rollout or notice implication instead of hiding it in side channels.</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>What decision still needs to be made before broader reuse?</td>
+                    <td>Name the open decision so the answer is reusable but not falsely final.</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>What proof and owner notes sit behind the answer?</td>
+                    <td>Keep the proof links, owner, and open questions with the same answer bundle.</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>Is this workflow planned, active, or replacing another vendor flow?</td>
+                    <td>Clarify lifecycle state so reviewers know whether this is live production scope or a pending change.</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>Which supporting vendors touch the workflow around the primary AI vendor?</td>
+                    <td>List the surrounding host, database, support, or analytics tools that matter to the reviewed path.</td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>What exact workflow boundary should the reviewer assume?</td>
+                    <td>Restate the covered workflow and the excluded surfaces in one place.</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>Which customer segment needs the closest contract or DPA check?</td>
+                    <td>Highlight the segment that needs the most careful contract review.</td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>What would force the answer to change before the next deal?</td>
+                    <td>Name the workflow, vendor, contract, or retention trigger that invalidates the current wording.</td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>What broader notice or rollout issue sits behind the answer?</td>
+                    <td>State the notice or escalation impact that procurement may need to know about.</td>
+                  </tr>
+                  <tr>
+                    <td>19</td>
+                    <td>Who owns the response if the buyer asks for more proof tomorrow?</td>
+                    <td>Point to the reply owner plus the same approval path used for the first answer.</td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>What is the current safe-to-send position in one line?</td>
+                    <td>Summarize the current position in one sentence plus the remaining open decision.</td>
+                  </tr>
+                  <tr>
+                    <td>CSV</td>
+                    <td>Need this in a spreadsheet instead?</td>
+                    <td>Download the sample question-matrix CSV above or export your own from the builder.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p>The full sample download includes a longer repeatable pack so the next procurement reply does not start from zero.</p>
+            <p>The bundle download and CSV carry the same matrix so the next procurement reply does not start from zero.</p>
           </section>
 
           <section>

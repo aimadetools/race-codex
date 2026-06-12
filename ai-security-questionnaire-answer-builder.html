@@ -84,7 +84,7 @@
         <section class="page-hero">
           <span class="eyebrow">Local AI answer + handoff builder</span>
           <h1 id="hero-title">Build the AI answer and the internal handoff before procurement asks for the packet.</h1>
-          <p id="hero-copy">Use this browser-only builder when your SaaS team is answering a buyer or security reviewer and needs one concrete AI answer now plus a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links once, then copy the answer block, the handoff note, a reviewer workspace export, an answer-bank draft, and 20 reusable buyer-question responses without sending your inputs to a server.</p>
+          <p id="hero-copy">Use this browser-only builder when your SaaS team is answering a buyer or security reviewer and needs one concrete AI answer now plus a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links once, then copy the answer block, the handoff note, a reviewer workspace export, an answer-bank draft, a downloadable 20-question matrix CSV, and 20 reusable buyer-question responses without sending your inputs to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#builder">Build starter bundle</a>
             <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-questionnaire-builder-starter-pack">Open starter pack</a>
@@ -243,6 +243,7 @@
               <button class="button secondary" id="download-answer" type="button">Download answer</button>
               <button class="button secondary" id="download-review-note" type="button">Download review note</button>
               <button class="button secondary" id="download-qa-pack" type="button">Download Q&A pack</button>
+              <button class="button secondary" id="download-question-matrix" type="button">Download question matrix CSV</button>
               <button class="button secondary" id="download-workspace" type="button">Download workspace</button>
               <button class="button secondary" id="download-answer-bank" type="button">Download answer bank</button>
               <button class="button secondary" id="download-full-bundle" type="button">Download starter bundle</button>
@@ -252,7 +253,7 @@
               <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, one portable JSON draft export, and one downloadable bundle file.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, one downloadable question-matrix CSV, one portable JSON draft export, and one downloadable bundle file.</p>
           </aside>
         </section>
 
@@ -278,6 +279,25 @@
             <p>Use this when the buyer thread asks the same follow-up questions in slightly different wording. The pack turns one fact-gathering pass into 20 reusable response blocks you can paste into procurement, security, privacy, or counsel threads.</p>
           </div>
           <div id="qa-pack-output" class="template-box" aria-live="polite"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>20-question matrix preview</h2>
+            <p>Use this when you need a structured review artifact instead of a long Markdown block. The CSV download keeps the same 20 questions in a spreadsheet-friendly format for internal handoff, counsel review, or repeat-review cleanup.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Buyer question</th>
+                  <th>Answer direction</th>
+                </tr>
+              </thead>
+              <tbody id="question-matrix-output"></tbody>
+            </table>
+          </div>
         </section>
 
         <section class="section">
@@ -462,6 +482,7 @@
       const answerOutput = document.querySelector("#answer-output");
       const reviewNoteOutput = document.querySelector("#review-note-output");
       const qaPackOutput = document.querySelector("#qa-pack-output");
+      const questionMatrixOutput = document.querySelector("#question-matrix-output");
       const workspaceOutput = document.querySelector("#workspace-output");
       const checklistOutput = document.querySelector("#checklist-output");
       const handoffOutput = document.querySelector("#handoff-output");
@@ -484,6 +505,7 @@
       const downloadAnswerButton = document.querySelector("#download-answer");
       const downloadReviewNoteButton = document.querySelector("#download-review-note");
       const downloadQaPackButton = document.querySelector("#download-qa-pack");
+      const downloadQuestionMatrixButton = document.querySelector("#download-question-matrix");
       const downloadWorkspaceButton = document.querySelector("#download-workspace");
       const downloadAnswerBankButton = document.querySelector("#download-answer-bank");
       const downloadFullBundleButton = document.querySelector("#download-full-bundle");
@@ -555,6 +577,34 @@
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/^-+|-+$/g, "");
         return normalized || fallback;
+      }
+
+      function csvCell(value) {
+        return `"${String(value ?? "").replace(/"/g, '""')}"`;
+      }
+
+      function buildQuestionMatrixCsv(payload) {
+        const header = [
+          "question_number",
+          "buyer_question",
+          "answer_direction",
+          "company",
+          "workflow",
+          "primary_vendor",
+          "reviewer_lane",
+          "answer_shape"
+        ];
+        const rows = payload.questionMatrix.map((row) => [
+          row.number,
+          row.question,
+          row.answer,
+          payload.company,
+          payload.workflow,
+          payload.primaryVendor,
+          payload.reviewerLaneLabel,
+          payload.answerShapeLabel
+        ]);
+        return [header, ...rows].map((row) => row.map(csvCell).join(",")).join("\n");
       }
 
       function collectFormState() {
@@ -787,29 +837,117 @@
 
         const shortAnswer = `For ${workflow}, ${company} currently lists ${primaryVendor} as the primary AI vendor with ${supportingVendors} supporting the workflow. Data in scope: ${dataCategories}. Customer scope: ${customerScope}. Retention/training stance: ${retentionStance}`;
 
-        const qaPack = [
-          `0. What exact buyer question are we answering?\n${buyerQuestion}\nRecommended lane: ${reviewerLaneLabel}. Preferred shape: ${answerShapeLabel}.`,
-          `1. Which AI vendors are in scope?\n${primaryVendor} is the primary AI vendor for ${workflow}. Supporting vendors in this workflow include ${supportingVendors}.`,
-          `2. What workflow is under review?\n${company} is reviewing ${workflow}, which is currently ${statusLabel}.`,
-          `3. What data categories are involved?\n${dataCategories}.`,
-          `4. What is the current retention or training stance?\n${retentionStance}`,
-          `5. Which customers or agreements are affected?\n${customerScope}`,
-          `6. Why is this answer being requested?\n${reviewerAsk}`,
-          `7. What human review or approval sits behind this answer?\n${approvalPath}`,
-          `8. What is explicitly out of scope for this answer?\n${scopeBoundaries}`,
-          `9. When should this answer be rechecked or refreshed?\n${reviewCadence}`,
-          `10. Does this trigger notice, escalation, or counsel review?\n${noticeImpact}`,
-          `11. What decision still needs to be made before broader reuse?\n${decisionNeeded}`,
-          `12. What proof and owner notes sit behind the answer?\nProof: ${proofLinks}\nOwner and open questions: ${replyOwner}. ${openQuestions}`,
-          `13. Is this workflow planned, active, or replacing another vendor flow?\nThe workflow is currently ${statusLabel}.`,
-          `14. Which supporting vendors touch the workflow around ${primaryVendor}?\nSupporting systems in the reviewed path include ${supportingVendors}.`,
-          `15. What exact workflow boundary should the reviewer assume?\nThis answer covers ${workflow}. Anything outside that reviewed workflow stays out of scope: ${scopeBoundaries}`,
-          `16. Which customer segment needs the closest contract or DPA check?\nCustomer scope needing the closest review: ${customerScope}`,
-          `17. What would force the answer to change before the next deal?\nRefresh the answer when this trigger changes: ${reviewCadence}`,
-          `18. What broader notice or rollout issue sits behind the answer?\nNotice or escalation impact: ${noticeImpact}`,
-          `19. Who owns the response if the buyer asks for more proof tomorrow?\n${replyOwner} owns the next response, with this approval path behind the answer: ${approvalPath}`,
-          `20. What is the current safe-to-send position in one line?\n${shortAnswer}. Next decision still open: ${decisionNeeded}`
-        ].join("\n\n");
+        const questionMatrix = [
+          {
+            number: 0,
+            question: "What exact buyer question are we answering?",
+            answer: `${buyerQuestion} Recommended lane: ${reviewerLaneLabel}. Preferred shape: ${answerShapeLabel}.`
+          },
+          {
+            number: 1,
+            question: "Which AI vendors are in scope?",
+            answer: `${primaryVendor} is the primary AI vendor for ${workflow}. Supporting vendors in this workflow include ${supportingVendors}.`
+          },
+          {
+            number: 2,
+            question: "What workflow is under review?",
+            answer: `${company} is reviewing ${workflow}, which is currently ${statusLabel}.`
+          },
+          {
+            number: 3,
+            question: "What data categories are involved?",
+            answer: dataCategories
+          },
+          {
+            number: 4,
+            question: "What is the current retention or training stance?",
+            answer: retentionStance
+          },
+          {
+            number: 5,
+            question: "Which customers or agreements are affected?",
+            answer: customerScope
+          },
+          {
+            number: 6,
+            question: "Why is this answer being requested?",
+            answer: reviewerAsk
+          },
+          {
+            number: 7,
+            question: "What human review or approval sits behind this answer?",
+            answer: approvalPath
+          },
+          {
+            number: 8,
+            question: "What is explicitly out of scope for this answer?",
+            answer: scopeBoundaries
+          },
+          {
+            number: 9,
+            question: "When should this answer be rechecked or refreshed?",
+            answer: reviewCadence
+          },
+          {
+            number: 10,
+            question: "Does this trigger notice, escalation, or counsel review?",
+            answer: noticeImpact
+          },
+          {
+            number: 11,
+            question: "What decision still needs to be made before broader reuse?",
+            answer: decisionNeeded
+          },
+          {
+            number: 12,
+            question: "What proof and owner notes sit behind the answer?",
+            answer: `Proof: ${proofLinks} Owner and open questions: ${replyOwner}. ${openQuestions}`
+          },
+          {
+            number: 13,
+            question: "Is this workflow planned, active, or replacing another vendor flow?",
+            answer: `The workflow is currently ${statusLabel}.`
+          },
+          {
+            number: 14,
+            question: `Which supporting vendors touch the workflow around ${primaryVendor}?`,
+            answer: `Supporting systems in the reviewed path include ${supportingVendors}.`
+          },
+          {
+            number: 15,
+            question: "What exact workflow boundary should the reviewer assume?",
+            answer: `This answer covers ${workflow}. Anything outside that reviewed workflow stays out of scope: ${scopeBoundaries}`
+          },
+          {
+            number: 16,
+            question: "Which customer segment needs the closest contract or DPA check?",
+            answer: `Customer scope needing the closest review: ${customerScope}`
+          },
+          {
+            number: 17,
+            question: "What would force the answer to change before the next deal?",
+            answer: `Refresh the answer when this trigger changes: ${reviewCadence}`
+          },
+          {
+            number: 18,
+            question: "What broader notice or rollout issue sits behind the answer?",
+            answer: `Notice or escalation impact: ${noticeImpact}`
+          },
+          {
+            number: 19,
+            question: "Who owns the response if the buyer asks for more proof tomorrow?",
+            answer: `${replyOwner} owns the next response, with this approval path behind the answer: ${approvalPath}`
+          },
+          {
+            number: 20,
+            question: "What is the current safe-to-send position in one line?",
+            answer: `${shortAnswer}. Next decision still open: ${decisionNeeded}`
+          }
+        ];
+
+        const qaPack = questionMatrix
+          .map((row) => `${row.number}. ${row.question}\n${row.answer}`)
+          .join("\n\n");
 
         const workspace = [
           `# ${company} AI questionnaire reviewer workspace`,
@@ -1015,6 +1153,7 @@
           answer,
           reviewNote,
           qaPack,
+          questionMatrix,
           workspace,
           checklist,
           handoff,
@@ -1026,6 +1165,8 @@
           workflow,
           primaryVendor,
           customerScope,
+          reviewerLaneLabel,
+          answerShapeLabel,
           bankSlug: slugify(`${company}-${primaryVendor}-answer-bank`, "noticekit-ai-answer-bank"),
           reusableQuestionCount
         };
@@ -1091,6 +1232,9 @@
         answerOutput.innerHTML = markdownToHtml(payload.answer);
         reviewNoteOutput.innerHTML = markdownToHtml(payload.reviewNote);
         qaPackOutput.innerHTML = markdownToHtml(payload.qaPack);
+        questionMatrixOutput.innerHTML = payload.questionMatrix
+          .map((row) => `<tr><td>${row.number}</td><td>${escapeHtml(row.question)}</td><td>${escapeHtml(row.answer)}</td></tr>`)
+          .join("");
         workspaceOutput.innerHTML = markdownToHtml(payload.workspace);
         checklistOutput.innerHTML = markdownToHtml(payload.checklist);
         handoffOutput.innerHTML = markdownToHtml(payload.handoff);
@@ -1730,6 +1874,11 @@
         const content = `# ${payload.company} AI security questionnaire common buyer-question pack\n\n${payload.qaPack}\n`;
         downloadFile("noticekit-ai-questionnaire-qa-pack.md", content);
         builderStatus.textContent = "Q&A pack downloaded as Markdown.";
+      });
+      downloadQuestionMatrixButton.addEventListener("click", () => {
+        const payload = buildAnswerPayload();
+        downloadFile("noticekit-ai-questionnaire-question-matrix.csv", buildQuestionMatrixCsv(payload));
+        builderStatus.textContent = "20-question matrix downloaded as CSV.";
       });
       downloadWorkspaceButton.addEventListener("click", () => {
         const payload = buildAnswerPayload();
