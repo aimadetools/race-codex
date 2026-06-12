@@ -52,11 +52,15 @@ function extractFeedbackSignals(text) {
 
   const sourceTags = sourceTagMatches.map((match) => match[1].trim());
   const ownershipSignals = ownershipMatches.map((match) => match[1].trim().toLowerCase());
+  const founderFollowUpReplies = sourceTags.filter((value) => value === "founder-follow-up").length;
+  const advisorFollowUpReplies = sourceTags.filter((value) => value === "advisor-follow-up").length;
+  const taggedSelfAuditReplies = founderFollowUpReplies + advisorFollowUpReplies;
 
   return {
     sourceTags,
-    founderFollowUpReplies: sourceTags.filter((value) => value === "founder-follow-up").length,
-    advisorFollowUpReplies: sourceTags.filter((value) => value === "advisor-follow-up").length,
+    founderFollowUpReplies,
+    advisorFollowUpReplies,
+    taggedSelfAuditReplies,
     founderOwnership: ownershipSignals.filter((value) => ["founder", "operator", "ops"].includes(value)).length,
     advisorOwnership: ownershipSignals.filter((value) => ["privacy consultant", "consultant", "fractional dpo", "dpo", "attorney", "lawyer"].includes(value)).length
   };
@@ -91,7 +95,7 @@ async function main() {
     "## Status",
     "",
     `- Trigger state: ${queueTriggered ? "queued now" : "stand by"}`,
-    `- Tagged self-audit replies logged: ${signals.sourceTags.length} (${signals.founderFollowUpReplies} founder-follow-up, ${signals.advisorFollowUpReplies} advisor-follow-up)`,
+    `- Tagged self-audit replies logged: ${signals.taggedSelfAuditReplies} total (${signals.founderFollowUpReplies} founder-follow-up, ${signals.advisorFollowUpReplies} advisor-follow-up)`,
     `- Ownership signals: ${signals.founderOwnership} founder/operator, ${signals.advisorOwnership} consultant/attorney`,
     "- Decision rule: queue this refresh only when consultant/attorney ownership signals exceed founder/operator ownership signals.",
     "",

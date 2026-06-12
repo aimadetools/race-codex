@@ -5,7 +5,7 @@ Date: 2026-06-12
 ## Status
 
 - Trigger state: stand by
-- Tagged self-audit replies logged: 0 (0 founder-follow-up, 0 advisor-follow-up)
+- Tagged self-audit replies logged: 0 total (0 founder-follow-up, 0 advisor-follow-up)
 - Ownership signals: 0 founder/operator, 0 consultant/attorney
 - Decision rule: queue this refresh only when consultant/attorney ownership signals exceed founder/operator ownership signals.
 
