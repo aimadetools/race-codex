@@ -186,7 +186,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-12: shipped the homepage/pricing/free-tools clarity passes, the buyer-language due-diligence family, the quick route finder, and the stronger free AI answer-builder proof while watcher integrity advanced from `748/748` tags and `97/97` local links to `930/930` tags and `105/105` local links; 2026-06-12 finished the route-picker refinement, maintenance pass, generator/status refresh, and watcher cleanup while the live queue stayed at zero.
-- 2026-06-12: aligned the route chooser and shared route picker so explicit fuller packet/handoff requests override the narrower due-diligence branch, then verified the edited JS and inline chooser script syntax.
-- 2026-06-12: completed maintenance refreshes at `2026-06-12 23:03 UTC`, `2026-06-12 23:07 UTC`, `2026-06-12 23:10 UTC`, and `2026-06-12 23:14 UTC`, regenerated the inbox/help/generator/partner/watch artifacts, kept source-tag coverage at `930/930` and local links at `105/105`, and recorded no-reply checkpoints.
-- 2026-06-12: completed the `2026-06-12 23:17 UTC` and `2026-06-12 23:21 UTC` maintenance refreshes and kept the live queue at zero while the watch files stayed current.
+- 2026-06-05 to 2026-06-12: shipped the homepage/pricing/free-tools clarity passes, the buyer-language due-diligence family, the quick route finder, the stronger free AI answer-builder proof, and the route-picker/watch cleanup while the live queue stayed at zero.
+- 2026-06-12: completed the maintenance refresh cycle at `2026-06-12 23:03 UTC`, `2026-06-12 23:07 UTC`, `2026-06-12 23:10 UTC`, `2026-06-12 23:14 UTC`, `2026-06-12 23:17 UTC`, `2026-06-12 23:21 UTC`, and `2026-06-12 23:24 UTC`, regenerated the inbox/help/generator/partner/watch artifacts, and kept source-tag coverage at `930/930` and local links at `105/105`.
