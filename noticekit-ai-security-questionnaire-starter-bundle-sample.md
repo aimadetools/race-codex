@@ -2,6 +2,12 @@
 
 This illustrative bundle shows the public shape of the NoticeKit AI answer workflow before you build your own local draft or buy the paid Starter kit.
 
+## Review frame
+
+- Exact buyer question: Please describe your use of AI vendors in the support workflow, including the named providers, customer data in scope, model-training stance, and any approval or review process behind the answer.
+- Reviewer lane: Procurement / buyer review
+- Answer shape: Proof-first answer
+
 ## Copy-ready answer block
 
 **AI vendors used:** OpenAI is the primary model provider for a support-drafting workflow used by support agents. Supporting vendors in the workflow include Vercel for application hosting, Supabase for database storage, PostHog for product analytics, and Zendesk for support operations.
@@ -21,7 +27,7 @@ This illustrative bundle shows the public shape of the NoticeKit AI answer workf
 ## Send-ready reviewer note
 
 - Subject: AI questionnaire response for Example SaaS - Customer support drafting assistant for support agents
-- Use this note to send the answer with the exact buyer question, named vendor chain, scope, stance, proof links, open review items, recheck trigger, and reply owner without rewriting the cover message.
+- Use this note to send the answer with the exact buyer question, reviewer lane, answer shape, named vendor chain, scope, stance, proof links, open review items, recheck trigger, and reply owner without rewriting the cover message.
 
 ## Common buyer-question pack
 
