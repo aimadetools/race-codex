@@ -313,7 +313,21 @@
             secondaryLabel: "Build answer + bundle"
           };
 
-          if (languageValue === "due-diligence") {
+          if (needValue === "pack") {
+            recommendation = {
+              title: "Use the fuller packet path.",
+              summary: "You asked for a fuller handoff package, so show the exact bundle shape before you ask for checkout.",
+              bullets: [
+                "Best when the buyer wants more than one paragraph",
+                "Use the kit preview to inspect the artifact shape",
+                "Move into the packet builder if the thread is already procurement-sized"
+              ],
+              primaryHref: "kit-preview.html",
+              primaryLabel: "Open kit preview",
+              secondaryHref: "ai-due-diligence-packet-builder.html",
+              secondaryLabel: "Build due diligence packet"
+            };
+          } else if (languageValue === "due-diligence") {
             recommendation = {
               title: "Use the due diligence route.",
               summary: "The buyer is already speaking procurement language, so keep the thread in the due-diligence template, scorecard, or packet builder instead of forcing it back into a shorter answer path.",
@@ -410,20 +424,6 @@
               primaryLabel: "See audit details",
               secondaryHref: "free-teardown.html",
               secondaryLabel: "Request free teardown"
-            };
-          } else if (needValue === "pack") {
-            recommendation = {
-              title: "Use the starter bundle or packet builder.",
-              summary: "You need a fuller handoff package, so show the exact bundle shape before you ask for checkout.",
-              bullets: [
-                "Best when the buyer wants more than one paragraph",
-                "Use the kit preview to inspect the artifact shape",
-                "Move into the packet builder if the thread is already procurement-sized"
-              ],
-              primaryHref: "kit-preview.html",
-              primaryLabel: "Open kit preview",
-              secondaryHref: "ai-due-diligence-packet-builder.html",
-              secondaryLabel: "Build due diligence packet"
             };
           }
 

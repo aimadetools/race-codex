@@ -211,8 +211,8 @@
   };
 
   const pickRecommendation = (blockerValue, languageValue, needValue) => {
-    if (needValue === "pack" && (languageValue === "due-diligence" || blockerValue === "due-diligence")) {
-      return { key: "pack", reason: "fuller procurement packet" };
+    if (needValue === "pack") {
+      return { key: "pack", reason: "fuller handoff package" };
     }
 
     if (languageValue === "due-diligence" || blockerValue === "due-diligence") {
@@ -241,10 +241,6 @@
 
     if (blockerValue === "judgment" || needValue === "read") {
       return { key: "judgment", reason: "human judgment" };
-    }
-
-    if (needValue === "pack") {
-      return { key: "pack", reason: "fuller handoff package" };
     }
 
     return { key: "oneAnswer", reason: "one-answer-now cleanup" };

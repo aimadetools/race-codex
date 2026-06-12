@@ -27,6 +27,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Surfaced due-diligence CTAs at the top of the homepage and free-tools hub so procurement-language visitors do not have to hunt for the new route family, then expanded watcher coverage for the new `homepage-job-due-diligence` and `free-tools-route-due-diligence` source tags after the link and source-tag checks passed.
 - Checked The Next AI public directory follow-through at `2026-06-12 08:20 UTC`; both the homepage and `/ai-tools/` still load publicly, but neither page shows a public `NoticeKit` listing, so the batch-02 directory re-entry remains blocked by the missing authenticated browser path here.
 - Corrected the validation and homepage copy-refresh generators so the `Tagged self-audit replies` line now counts only founder/advisor follow-up replies instead of every source tag, then regenerated `VALIDATION-STATUS.md` and `HOMEPAGE-COPY-REFRESH-QUEUE.md` with the explicit `0 total` wording and re-ran the maintenance refresh at `2026-06-12 20:27 UTC`.
+- Aligned the shared route chooser and route-picker code so an explicit fuller packet/handoff request now overrides the narrower due-diligence branch, then ran syntax checks on the edited JS and inline chooser script.
 - The current evidence gate remains exact buyer validation through a real reply, redirect, intake, or interview that mentions the reviewer note, portable draft export/import, or another concrete buyer objection.
 
 ## Next Step

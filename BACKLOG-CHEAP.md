@@ -187,3 +187,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-06-05 to 2026-06-12: shipped the homepage/pricing/free-tools clarity passes, the buyer-language due-diligence family, the quick route finder, and the stronger free AI answer-builder proof while watcher integrity advanced from `748/748` tags and `97/97` local links to `930/930` tags and `105/105` local links; 2026-06-12 finished the route-picker refinement, maintenance pass, generator/status refresh, and watcher cleanup while the live queue stayed at zero.
+- 2026-06-12: aligned the route chooser and shared route picker so explicit fuller packet/handoff requests override the narrower due-diligence branch, then verified the edited JS and inline chooser script syntax.
