@@ -66,5 +66,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-13: ran the latest validation maintenance pass through `20:04 UTC`, kept the operator watch stack green at `981/981` source tags and `106/106` local links, and confirmed the queue still sits at `0` replies, `0` submissions, and `0` interviews.
 - 2026-06-05 to 2026-06-12: shipped the AI-first homepage/pricing/free-tools clarity passes, the buyer-language due-diligence route family, the quick route finder, the stronger free answer-builder proof, and the route-picker/watch cleanup while the validation / inbox / outreach stack stayed at zero through the `2026-06-12 23:28 UTC` checkpoint.
 - 2026-06-13: shipped the focused `ai-deal-blocker.html` landing page, rewired the main acquisition surfaces toward that narrower one-thread wedge, propagated branch-specific downstream attribution, added the explicit deal-blocker branch watch plus inline teardown-or-audit brief, closed the homepage/pricing one-answer attribution gap, expanded watcher coverage from `962/962` to `981/981`, and kept the operator stack current through the `2026-06-13 16:30 UTC` no-reply checkpoint with local links still green at `106/106`.
