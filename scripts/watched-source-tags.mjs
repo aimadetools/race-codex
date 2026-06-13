@@ -161,7 +161,7 @@ export const WATCHED_SOURCE_TAGS = [
   "free-tools-route-repeat-review",
   "free-tools-route-broader-handoff",
   "route-chooser-answer-bank",
-  "route-chooser-audit",
+  "route-chooser-deal-blocker",
   "route-chooser-ai-framework-map",
   "route-chooser-builder",
   "route-chooser-due-diligence",

@@ -99,18 +99,18 @@
       secondaryLabel: "Open Pro kit",
     },
     judgment: {
-      title: "Get the Concierge Audit first.",
+      title: "Open the deal blocker path first.",
       summary:
-        "You do not need another template yet; you need a blunt 48-hour read on what to fix first.",
+        "You do not need another template yet; you need the triage page that keeps free teardown and paid audit in one place.",
       bullets: [
         "Best when the thread needs judgment",
-        "Prioritizes the top gap and next move",
-        "Keeps a call out of the loop",
+        "Keeps the free teardown and paid audit together",
+        "Prevents another loop through a generic template",
       ],
-      primaryHref: "ai-security-questionnaire-audit.html",
-      primaryLabel: "See audit details",
-      secondaryHref: "free-teardown.html",
-      secondaryLabel: "Request free teardown",
+      primaryHref: "ai-deal-blocker.html",
+      primaryLabel: "Open deal blocker path",
+      secondaryHref: "ai-security-questionnaire-audit.html",
+      secondaryLabel: "See audit details",
     },
     pack: {
       title: "Use the fuller packet path.",
