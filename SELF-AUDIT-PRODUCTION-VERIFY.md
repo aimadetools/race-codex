@@ -18,18 +18,18 @@ This report records the live production verification of the tagged self-audit as
 
 ### Founder tagged production submit
 
-- Reference ID: NK-20260613T043035-DY7SXL
+- Reference ID: NK-20260613T080518-9KJT19
 - Source tag: founder-follow-up
 - Ownership signal: founder
 - Score: 4/10 (High-risk gap)
 - Score band: 0-4
-- Blob path: contact-submissions/2026-06-13/NK-20260613T043035-DY7SXL.json
+- Blob path: contact-submissions/2026-06-13/NK-20260613T080518-9KJT19.json
 
 ### Advisor tagged production submit
 
-- Reference ID: NK-20260613T043037-M87W2L
+- Reference ID: NK-20260613T080520-0DGGU7
 - Source tag: advisor-follow-up
 - Ownership signal: privacy consultant
 - Score: 8/10 (Review-ready)
 - Score band: 8-10
-- Blob path: contact-submissions/2026-06-13/NK-20260613T043037-M87W2L.json
+- Blob path: contact-submissions/2026-06-13/NK-20260613T080520-0DGGU7.json
