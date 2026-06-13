@@ -2,6 +2,7 @@
 
 import { readdir, readFile } from "node:fs/promises";
 import { join, relative } from "node:path";
+import { buildAiDealBlockerBranchSourceTags } from "./ai-deal-blocker-source-tags.mjs";
 import { WATCHED_SOURCE_TAGS } from "./watched-source-tags.mjs";
 
 const ROOT = process.cwd();
@@ -57,6 +58,12 @@ async function main() {
       locations.push(relative(ROOT, filePath));
       emittedTags.set(tag, locations);
     }
+  }
+
+  for (const { tag } of buildAiDealBlockerBranchSourceTags()) {
+    const locations = emittedTags.get(tag) || [];
+    locations.push("ai-deal-blocker.html (runtime branch propagation)");
+    emittedTags.set(tag, locations);
   }
 
   const emittedTagList = [...emittedTags.keys()].sort();

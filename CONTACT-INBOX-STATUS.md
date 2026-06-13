@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-13 04:09 UTC
+Checked at: 2026-06-13 04:16 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -408,6 +408,47 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-anthropic-example: 0
 - homepage-ai-route-anthropic-answer-bank: 0
 - homepage-ai-route-anthropic-path-guide: 0
+- ai-deal-blocker-builder: 0
+- ai-deal-blocker-answer-bank: 0
+- ai-deal-blocker-evidence-map: 0
+- ai-deal-blocker-agent-workspace: 0
+- ai-deal-blocker-teardown: 0
+- ai-deal-blocker-openai-answer-template: 0
+- ai-deal-blocker-anthropic-answer-template: 0
+- ai-deal-blocker-audit: 0
+- ai-deal-blocker-bundle-sample: 0
+- ai-deal-blocker-comparison: 0
+- ai-deal-blocker-pricing: 0
+- homepage-hero-builder: 0
+- homepage-hero-answer-bank: 0
+- homepage-hero-evidence-map: 0
+- homepage-hero-agent-workspace: 0
+- homepage-hero-teardown: 0
+- free-tools-ai-deal-blocker-builder: 0
+- free-tools-ai-deal-blocker-answer-bank: 0
+- free-tools-ai-deal-blocker-evidence-map: 0
+- free-tools-ai-deal-blocker-agent-workspace: 0
+- free-tools-ai-deal-blocker-teardown: 0
+- start-here-ai-deal-blocker-builder: 0
+- start-here-ai-deal-blocker-answer-bank: 0
+- start-here-ai-deal-blocker-evidence-map: 0
+- start-here-ai-deal-blocker-agent-workspace: 0
+- start-here-ai-deal-blocker-teardown: 0
+- pricing-ai-deal-blocker-builder: 0
+- pricing-ai-deal-blocker-answer-bank: 0
+- pricing-ai-deal-blocker-evidence-map: 0
+- pricing-ai-deal-blocker-agent-workspace: 0
+- pricing-ai-deal-blocker-teardown: 0
+- blog-index-ai-deal-blocker-builder: 0
+- blog-index-ai-deal-blocker-answer-bank: 0
+- blog-index-ai-deal-blocker-evidence-map: 0
+- blog-index-ai-deal-blocker-agent-workspace: 0
+- blog-index-ai-deal-blocker-teardown: 0
+- ai-procurement-hub-deal-blocker-builder: 0
+- ai-procurement-hub-deal-blocker-answer-bank: 0
+- ai-procurement-hub-deal-blocker-evidence-map: 0
+- ai-procurement-hub-deal-blocker-agent-workspace: 0
+- ai-procurement-hub-deal-blocker-teardown: 0
 - homepage-ai-answer-library: 0
 - homepage-ai-due-diligence-comparison: 0
 - homepage-ai-due-diligence-answer-bank: 0

@@ -2,6 +2,7 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { AI_DEAL_BLOCKER_BRANCHES, buildAiDealBlockerBranchSourceTags } from "./ai-deal-blocker-source-tags.mjs";
 
 const ROOT = process.cwd();
 const OUTPUT = join(ROOT, "VALIDATION-STATUS.md");
@@ -736,11 +737,23 @@ const aiFirstEntryWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "homepage-ai-route-one-answer", label: "homepage route one-answer" },
   { tag: "homepage-ai-route-repeat-review", label: "homepage route repeat-review" },
   { tag: "homepage-ai-route-broader-handoff", label: "homepage broader-handoff" },
-  { tag: "pricing-ai-deal-blocker", label: "pricing starter-pack" },
+  { tag: "pricing-ai-deal-blocker", label: "pricing deal-blocker" },
   { tag: "pricing-ai-route-one-answer", label: "pricing route one-answer" },
   { tag: "pricing-ai-route-repeat-review", label: "pricing route repeat-review" },
   { tag: "pricing-ai-route-broader-handoff", label: "pricing broader-handoff" }
 ]);
+const aiDealBlockerBranchTags = buildAiDealBlockerBranchSourceTags();
+const aiDealBlockerBranchWatch = {
+  items: AI_DEAL_BLOCKER_BRANCHES.map(({ suffix, label }) => ({
+    label,
+    count: sumMetrics(
+      aiDealBlockerBranchTags
+        .filter((entry) => entry.suffix === suffix)
+        .map((entry) => extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", entry.tag))
+    )
+  }))
+};
+aiDealBlockerBranchWatch.total = sumMetrics(aiDealBlockerBranchWatch.items.map((entry) => entry.count));
 const dueDiligenceWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-ai-due-diligence", label: "blog template" },
   { tag: "blog-index-ai-due-diligence-scorecard", label: "blog scorecard" },
@@ -1034,6 +1047,7 @@ const output = [
   "## Priority Route Watch",
   "",
   renderWatchedSourceGroup("AI-first entry-point inbox submissions", aiFirstEntryWatch),
+  renderWatchedSourceGroup("AI deal-blocker branch inbox submissions", aiDealBlockerBranchWatch),
   renderWatchedSourceGroup("Dedicated audit-route inbox submissions", auditRouteWatch),
   renderWatchedSourceGroup("Audit sample-proof inbox submissions", auditSampleProofWatch),
   renderWatchedSourceGroup("Purchase-clarity inbox submissions", purchaseClarityWatch),

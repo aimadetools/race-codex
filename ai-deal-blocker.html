@@ -96,11 +96,11 @@
           <h1>One enterprise deal is stuck on the AI questionnaire. Pick the shortest path.</h1>
           <p>This page is for the company answering the questionnaire. If the buyer is blocked on the AI section, do not make the team browse a dozen routes first. Start with the smallest artifact that can move the thread: one answer now, repeat-review cleanup, proof packaging, AI agent controls, or a blunt async read. The free builder already gives you one answer block, a send-ready reviewer note, a downloadable 20-question matrix CSV, a reviewer workspace export, an answer-bank draft, a portable JSON draft, and one downloadable starter bundle in the browser.</p>
           <div class="hero-actions">
-            <a class="button" href="ai-security-questionnaire-answer-builder.html?source=ai-security-questionnaire-starter-pack-builder">Build answer + bundle</a>
-            <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=ai-security-questionnaire-starter-pack-answer-bank">Open answer bank</a>
-            <a class="button secondary" href="ai-security-review-evidence-map.html?source=ai-security-questionnaire-starter-pack-evidence-map">Open evidence map</a>
-            <a class="button secondary" href="ai-agent-review-workspace.html?source=ai-security-questionnaire-starter-pack-agent-workspace">Open AI agent workspace</a>
-            <a class="button secondary" href="free-teardown.html?source=ai-security-questionnaire-starter-pack-teardown">Request free teardown</a>
+            <a class="button" data-deal-blocker-branch="builder" href="ai-security-questionnaire-answer-builder.html?source=ai-deal-blocker-builder">Build answer + bundle</a>
+            <a class="button secondary" data-deal-blocker-branch="answer-bank" href="ai-security-questionnaire-answer-bank.html?source=ai-deal-blocker-answer-bank">Open answer bank</a>
+            <a class="button secondary" data-deal-blocker-branch="evidence-map" href="ai-security-review-evidence-map.html?source=ai-deal-blocker-evidence-map">Open evidence map</a>
+            <a class="button secondary" data-deal-blocker-branch="agent-workspace" href="ai-agent-review-workspace.html?source=ai-deal-blocker-agent-workspace">Open AI agent workspace</a>
+            <a class="button secondary" data-deal-blocker-branch="teardown" href="free-teardown.html?source=ai-deal-blocker-teardown">Request free teardown</a>
           </div>
         </section>
 
@@ -117,33 +117,33 @@
               <span class="tag">One answer now</span>
               <h3>Answer builder</h3>
               <p>Use this when the buyer needs a copy-ready answer today and the team also needs the handoff note, follow-up pack, and matrix proof in the same pass.</p>
-              <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=ai-security-questionnaire-starter-pack-builder">Build answer + bundle</a>
+              <a class="button secondary" data-deal-blocker-branch="builder" href="ai-security-questionnaire-answer-builder.html?source=ai-deal-blocker-builder">Build answer + bundle</a>
             </article>
             <article class="card">
               <span class="tag">Repeat review</span>
               <h3>Answer bank</h3>
               <p>Use this when the same AI questions keep coming back and the problem is no longer one paragraph but reusable approved wording.</p>
-              <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=ai-security-questionnaire-starter-pack-answer-bank">Open answer bank</a>
+              <a class="button secondary" data-deal-blocker-branch="answer-bank" href="ai-security-questionnaire-answer-bank.html?source=ai-deal-blocker-answer-bank">Open answer bank</a>
             </article>
             <article class="card">
               <span class="tag">Proof gap</span>
               <h3>Evidence map</h3>
               <p>Use this when the wording is close but the buyer wants proof links, owner, review date, approval path, or recheck trigger behind the answer.</p>
-              <a class="button secondary" href="ai-security-review-evidence-map.html?source=ai-security-questionnaire-starter-pack-evidence-map">Open evidence map</a>
+              <a class="button secondary" data-deal-blocker-branch="evidence-map" href="ai-security-review-evidence-map.html?source=ai-deal-blocker-evidence-map">Open evidence map</a>
             </article>
             <article class="card">
               <span class="tag">Control boundary</span>
               <h3>AI agent workspace</h3>
               <p>Use this when the buyer is asking what the agent can access, what it can change, who approves it, and how the audit trail works.</p>
-              <a class="button secondary" href="ai-agent-review-workspace.html?source=ai-security-questionnaire-starter-pack-agent-workspace">Open AI agent workspace</a>
+              <a class="button secondary" data-deal-blocker-branch="agent-workspace" href="ai-agent-review-workspace.html?source=ai-deal-blocker-agent-workspace">Open AI agent workspace</a>
             </article>
             <article class="card">
               <span class="tag">Named vendor</span>
               <h3>OpenAI or Anthropic route</h3>
               <p>Use the named-vendor templates when the buyer has already said OpenAI, Anthropic, or Claude and generic wording is creating more loops.</p>
               <div class="hero-actions">
-                <a class="button secondary" href="openai-security-questionnaire-answer-template.html?source=ai-security-questionnaire-starter-pack-openai-answer-template">Open OpenAI template</a>
-                <a class="button secondary" href="anthropic-security-questionnaire-answer-template.html?source=homepage-ai-route-anthropic-template">Open Anthropic template</a>
+                <a class="button secondary" href="openai-security-questionnaire-answer-template.html?source=ai-deal-blocker-openai-answer-template">Open OpenAI template</a>
+                <a class="button secondary" href="anthropic-security-questionnaire-answer-template.html?source=ai-deal-blocker-anthropic-answer-template">Open Anthropic template</a>
               </div>
             </article>
             <article class="card">
@@ -151,8 +151,8 @@
               <h3>Async teardown or audit</h3>
               <p>Use this when the real blocker is deciding what to fix first, not drafting another paragraph. Get a blunt outside read before the thread widens.</p>
               <div class="hero-actions">
-                <a class="button secondary" href="free-teardown.html?source=ai-security-questionnaire-starter-pack-teardown">Request free teardown</a>
-                <a class="button secondary" href="ai-security-questionnaire-audit.html?source=ai-starter-pack-nav-audit">See audit details</a>
+                <a class="button secondary" data-deal-blocker-branch="teardown" href="free-teardown.html?source=ai-deal-blocker-teardown">Request free teardown</a>
+                <a class="button secondary" href="ai-security-questionnaire-audit.html?source=ai-deal-blocker-audit">See audit details</a>
               </div>
             </article>
           </div>
@@ -165,9 +165,9 @@
               <p>The sample bundle shows the answer block, reviewer note, matrix, proof checklist, internal handoff, workspace export, and answer-bank draft so the buyer path is concrete before checkout.</p>
             </div>
             <div class="hero-actions">
-              <a class="button" href="ai-security-questionnaire-starter-bundle-sample.html?source=ai-security-questionnaire-starter-pack-bundle-sample">Open sample bundle</a>
-              <a class="button secondary" href="blog-ai-security-questionnaire-starter-pack-vs-builder.html?source=ai-security-questionnaire-starter-pack-comparison">Compare starter pack vs builder</a>
-              <a class="button secondary" href="pricing.html?source=pricing-ai-deal-blocker">See pricing</a>
+              <a class="button" href="ai-security-questionnaire-starter-bundle-sample.html?source=ai-deal-blocker-bundle-sample">Open sample bundle</a>
+              <a class="button secondary" href="blog-ai-security-questionnaire-starter-pack-vs-builder.html?source=ai-deal-blocker-comparison">Compare starter pack vs builder</a>
+              <a class="button secondary" href="pricing.html?source=ai-deal-blocker-pricing">See pricing</a>
             </div>
           </div>
         </section>
@@ -180,5 +180,29 @@
         </section>
       </main>
     </div>
+    <script>
+      const dealBlockerEntrySources = new Set([
+        "homepage-hero",
+        "free-tools-ai-deal-blocker",
+        "start-here-ai-deal-blocker",
+        "pricing-ai-deal-blocker",
+        "blog-index-ai-deal-blocker",
+        "ai-procurement-hub-deal-blocker"
+      ]);
+      const dealBlockerSource = new URLSearchParams(window.location.search).get("source") || "";
+
+      if (dealBlockerEntrySources.has(dealBlockerSource)) {
+        for (const link of document.querySelectorAll("[data-deal-blocker-branch]")) {
+          const branch = link.getAttribute("data-deal-blocker-branch");
+          if (!branch) {
+            continue;
+          }
+
+          const url = new URL(link.getAttribute("href"), window.location.href);
+          url.searchParams.set("source", `${dealBlockerSource}-${branch}`);
+          link.setAttribute("href", `${url.pathname}${url.search}`);
+        }
+      }
+    </script>
   </body>
 </html>

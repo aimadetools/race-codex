@@ -1,3 +1,7 @@
+import { buildAiDealBlockerBranchSourceTags } from "./ai-deal-blocker-source-tags.mjs";
+
+const AI_DEAL_BLOCKER_BRANCH_SOURCE_TAGS = buildAiDealBlockerBranchSourceTags().map(({ tag }) => tag);
+
 export const WATCHED_SOURCE_TAGS = [
   "homepage-hero",
   "homepage-async-teardown",
@@ -257,6 +261,18 @@ export const WATCHED_SOURCE_TAGS = [
   "homepage-ai-route-anthropic-example",
   "homepage-ai-route-anthropic-answer-bank",
   "homepage-ai-route-anthropic-path-guide",
+  "ai-deal-blocker-builder",
+  "ai-deal-blocker-answer-bank",
+  "ai-deal-blocker-evidence-map",
+  "ai-deal-blocker-agent-workspace",
+  "ai-deal-blocker-teardown",
+  "ai-deal-blocker-openai-answer-template",
+  "ai-deal-blocker-anthropic-answer-template",
+  "ai-deal-blocker-audit",
+  "ai-deal-blocker-bundle-sample",
+  "ai-deal-blocker-comparison",
+  "ai-deal-blocker-pricing",
+  ...AI_DEAL_BLOCKER_BRANCH_SOURCE_TAGS,
   "homepage-ai-answer-library",
   "homepage-ai-due-diligence-comparison",
   "homepage-ai-due-diligence-answer-bank",
