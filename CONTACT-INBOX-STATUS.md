@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-12 23:28 UTC
+Checked at: 2026-06-13 04:09 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -201,7 +201,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-due-diligence-evidence-map: 0
 - blog-index-ai-due-diligence-scorecard: 0
 - blog-index-ai-due-diligence-comparison: 0
-- blog-index-ai-due-diligence-packet-builder: 0
 - blog-index-ai-framework-map: 0
 - blog-index-ai-agent-review: 0
 - blog-index-ai-agent-checklist: 0
@@ -253,8 +252,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-teardown-ai-procurement: 0
 - free-tools-ai-pro-kit: 0
 - free-tools-ai-answer-bank: 0
-- free-tools-ai-answer-library: 0
-- free-tools-ai-answer-library-comparison: 0
 - free-tools-ai-answer-builder: 0
 - free-tools-ai-due-diligence: 0
 - free-tools-ai-due-diligence-answer-bank: 0
@@ -357,7 +354,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-ai-due-diligence-answer-bank: 0
 - start-here-ai-due-diligence-evidence-map: 0
 - start-here-ai-due-diligence-scorecard: 0
-- start-here-ai-due-diligence-comparison: 0
 - start-here-ai-due-diligence-packet-builder: 0
 - start-here-ai-framework-map: 0
 - start-here-ai-deal-blocker: 0
@@ -421,12 +417,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-starter-pack-comparison: 0
 - homepage-ai-route-broader-handoff: 0
 - homepage-ai-bundle-sample: 0
-- pricing-ai-answer-library: 0
 - pricing-ai-due-diligence: 0
 - pricing-ai-due-diligence-answer-bank: 0
 - pricing-ai-due-diligence-evidence-map: 0
 - pricing-ai-due-diligence-scorecard: 0
-- pricing-ai-due-diligence-comparison: 0
 - pricing-ai-due-diligence-packet-builder: 0
 - pricing-ai-framework-map: 0
 - ai-procurement-hub-answer-library: 0
@@ -535,7 +529,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-due-diligence-risk-checklist: 0
 - ai-procurement-hub-due-diligence-risk-checklist: 0
 - start-here-ai-due-diligence-risk-checklist: 0
-- blog-index-ai-due-diligence-risk-checklist: 0
 - route-chooser-due-diligence-risk-checklist: 0
 - ai-due-diligence-evidence-map-risk-checklist: 0
 - ai-framework-map-risk-checklist: 0
@@ -550,7 +543,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-due-diligence-starter-pack: 0
 - start-here-ai-due-diligence-starter-pack: 0
 - about-page-due-diligence-starter-pack: 0
-- blog-index-ai-due-diligence-starter-pack: 0
 - ai-procurement-hub-due-diligence-starter-pack: 0
 - route-chooser-due-diligence-starter-pack: 0
 - ai-answer-library-due-diligence-starter-pack: 0
@@ -671,7 +663,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - dpa-clause-intake-worksheet-tracker: 0
 - dpa-clause-intake-worksheet-window: 0
 - start-here-ai-answer-builder: 0
-- start-here-ai-bundle-sample: 0
 - start-here-ai-pro-kit: 0
 - start-here-ai-questionnaire: 0
 - start-here-ai-questionnaire-example: 0
