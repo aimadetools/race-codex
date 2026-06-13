@@ -285,6 +285,23 @@
         }
 
         if (
+          normalized.includes("deal-blocker")
+        ) {
+          return {
+            heroTitle: "Get a blunt 3-bullet read on the AI questionnaire blocker.",
+            heroCopy: "Use this when one enterprise deal is stuck on the AI questionnaire and you need the shortest written next step. Paste the live URL, the blocker, the affected customer segment, and any active deadline so the reply can stay specific instead of generic.",
+            reviewNeed: "This came from the AI deal blocker path. Please give the 3-bullet async gap read for the current page, blocker, and customer segment, and point me to the fastest next step.",
+            title: "Use teardown when one live AI questionnaire blocker needs a specific next step.",
+            copy: "Keep the facts short so the response can stay focused on the buyer thread instead of expanding into a generic governance discussion.",
+            points: [
+              "Paste the exact live questionnaire, packet, or trust-page URL.",
+              "Name the blocker, vendor question, or proof gap in one sentence.",
+              "State which customers or agreement segment are affected and whether timing is already active."
+            ]
+          };
+        }
+
+        if (
           normalized.startsWith("ai-procurement-hub") ||
           normalized.startsWith("ai-security-questionnaire") ||
           normalized.startsWith("ai-disclosure-packet") ||

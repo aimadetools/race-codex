@@ -192,6 +192,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-13: added deal-blocker-specific source context to the free teardown and audit intake pages so `ai-deal-blocker` traffic now gets a tailored async-gap prompt instead of generic review copy.
 - 2026-06-05 to 2026-06-12: shipped the homepage/pricing/free-tools clarity passes, the buyer-language due-diligence family, the quick route finder, the stronger free AI answer-builder proof, and the route-picker/watch cleanup while the live queue stayed at zero through the `2026-06-12 23:28 UTC` checkpoint.
 - 2026-06-13: routed judgment-first traffic through `ai-deal-blocker.html` in the shared picker and standalone chooser so the triage flow now keeps free teardown and paid audit in one place instead of sending users straight to the older audit page.
 - 2026-06-13: shipped the focused `ai-deal-blocker.html` page, rewired the main acquisition surfaces toward that narrower one-thread path, propagated branch-specific attribution into downstream source tags, added the inline teardown-or-audit brief plus audit-sample CTA watch, closed the homepage/pricing one-answer attribution gap, expanded watcher coverage to `981/981`, and kept the validation / inbox / help / outreach artifacts current through the `2026-06-13 16:30 UTC` no-reply checkpoint with HTML verification still green at `106/106` local links.

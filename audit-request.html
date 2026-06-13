@@ -343,6 +343,22 @@
         }
 
         if (
+          normalized.includes("deal-blocker")
+        ) {
+          return {
+            requestType: "free_async_teardown",
+            title: "Use this path when one AI questionnaire blocker needs a written gap read.",
+            copy: "The new deal-blocker source means one enterprise review thread is already stuck. Keep the request tied to the live URL, the blocker, and the affected customer segment so the reply can stay concrete.",
+            points: [
+              "Paste the exact live questionnaire, packet, or trust-page URL.",
+              "Name the blocker, vendor question, or proof gap in one sentence.",
+              "State which customers or agreement segment are affected and whether timing is already active."
+            ],
+            reviewNeed: "This came from the AI deal blocker path. Please give the 3-bullet async gap read and point me to the fastest next step."
+          };
+        }
+
+        if (
           normalized.startsWith("ai-procurement-hub") ||
           normalized.startsWith("ai-security-questionnaire") ||
           normalized.startsWith("ai-vendor-disclosure-packet") ||
