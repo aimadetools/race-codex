@@ -1,6 +1,10 @@
-import { buildAiDealBlockerBranchSourceTags } from "./ai-deal-blocker-source-tags.mjs";
+import {
+  buildAiDealBlockerBranchSourceTags,
+  buildAiDealBlockerRequestSourceTags
+} from "./ai-deal-blocker-source-tags.mjs";
 
 const AI_DEAL_BLOCKER_BRANCH_SOURCE_TAGS = buildAiDealBlockerBranchSourceTags().map(({ tag }) => tag);
+const AI_DEAL_BLOCKER_REQUEST_SOURCE_TAGS = buildAiDealBlockerRequestSourceTags().map(({ tag }) => tag);
 
 export const WATCHED_SOURCE_TAGS = [
   "homepage-hero",
@@ -274,6 +278,7 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-deal-blocker-comparison",
   "ai-deal-blocker-pricing",
   ...AI_DEAL_BLOCKER_BRANCH_SOURCE_TAGS,
+  ...AI_DEAL_BLOCKER_REQUEST_SOURCE_TAGS,
   "homepage-ai-answer-library",
   "homepage-ai-due-diligence-comparison",
   "homepage-ai-due-diligence-answer-bank",

@@ -2,7 +2,12 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { AI_DEAL_BLOCKER_BRANCHES, buildAiDealBlockerBranchSourceTags } from "./ai-deal-blocker-source-tags.mjs";
+import {
+  AI_DEAL_BLOCKER_BRANCHES,
+  AI_DEAL_BLOCKER_REQUEST_TYPES,
+  buildAiDealBlockerBranchSourceTags,
+  buildAiDealBlockerRequestSourceTags
+} from "./ai-deal-blocker-source-tags.mjs";
 
 const ROOT = process.cwd();
 const OUTPUT = join(ROOT, "VALIDATION-STATUS.md");
@@ -754,6 +759,18 @@ const aiDealBlockerBranchWatch = {
   }))
 };
 aiDealBlockerBranchWatch.total = sumMetrics(aiDealBlockerBranchWatch.items.map((entry) => entry.count));
+const aiDealBlockerRequestTags = buildAiDealBlockerRequestSourceTags();
+const aiDealBlockerRequestWatch = {
+  items: AI_DEAL_BLOCKER_REQUEST_TYPES.map(({ suffix, label }) => ({
+    label,
+    count: sumMetrics(
+      aiDealBlockerRequestTags
+        .filter((entry) => entry.suffix === suffix)
+        .map((entry) => extractInboxBreakdownMetric(contactInboxStatusText, "Watched Source Tags", entry.tag))
+    )
+  }))
+};
+aiDealBlockerRequestWatch.total = sumMetrics(aiDealBlockerRequestWatch.items.map((entry) => entry.count));
 const dueDiligenceWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-ai-due-diligence", label: "blog template" },
   { tag: "blog-index-ai-due-diligence-scorecard", label: "blog scorecard" },
@@ -1048,6 +1065,7 @@ const output = [
   "",
   renderWatchedSourceGroup("AI-first entry-point inbox submissions", aiFirstEntryWatch),
   renderWatchedSourceGroup("AI deal-blocker branch inbox submissions", aiDealBlockerBranchWatch),
+  renderWatchedSourceGroup("AI deal-blocker inline request inbox submissions", aiDealBlockerRequestWatch),
   renderWatchedSourceGroup("Dedicated audit-route inbox submissions", auditRouteWatch),
   renderWatchedSourceGroup("Audit sample-proof inbox submissions", auditSampleProofWatch),
   renderWatchedSourceGroup("Purchase-clarity inbox submissions", purchaseClarityWatch),

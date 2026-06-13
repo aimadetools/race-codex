@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-13 12:54 UTC
+Checked at: 2026-06-13 12:58 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -425,6 +425,11 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-hero-evidence-map: 0
 - homepage-hero-agent-workspace: 0
 - homepage-hero-teardown: 0
+- homepage-job-one-answer-builder: 0
+- homepage-job-one-answer-answer-bank: 0
+- homepage-job-one-answer-evidence-map: 0
+- homepage-job-one-answer-agent-workspace: 0
+- homepage-job-one-answer-teardown: 0
 - free-tools-ai-deal-blocker-builder: 0
 - free-tools-ai-deal-blocker-answer-bank: 0
 - free-tools-ai-deal-blocker-evidence-map: 0
@@ -435,6 +440,11 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-ai-deal-blocker-evidence-map: 0
 - start-here-ai-deal-blocker-agent-workspace: 0
 - start-here-ai-deal-blocker-teardown: 0
+- pricing-ai-route-one-answer-builder: 0
+- pricing-ai-route-one-answer-answer-bank: 0
+- pricing-ai-route-one-answer-evidence-map: 0
+- pricing-ai-route-one-answer-agent-workspace: 0
+- pricing-ai-route-one-answer-teardown: 0
 - pricing-ai-deal-blocker-builder: 0
 - pricing-ai-deal-blocker-answer-bank: 0
 - pricing-ai-deal-blocker-evidence-map: 0
@@ -450,6 +460,22 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-deal-blocker-evidence-map: 0
 - ai-procurement-hub-deal-blocker-agent-workspace: 0
 - ai-procurement-hub-deal-blocker-teardown: 0
+- homepage-hero-teardown: 0
+- homepage-hero-audit: 0
+- homepage-job-one-answer-teardown: 0
+- homepage-job-one-answer-audit: 0
+- free-tools-ai-deal-blocker-teardown: 0
+- free-tools-ai-deal-blocker-audit: 0
+- start-here-ai-deal-blocker-teardown: 0
+- start-here-ai-deal-blocker-audit: 0
+- pricing-ai-route-one-answer-teardown: 0
+- pricing-ai-route-one-answer-audit: 0
+- pricing-ai-deal-blocker-teardown: 0
+- pricing-ai-deal-blocker-audit: 0
+- blog-index-ai-deal-blocker-teardown: 0
+- blog-index-ai-deal-blocker-audit: 0
+- ai-procurement-hub-deal-blocker-teardown: 0
+- ai-procurement-hub-deal-blocker-audit: 0
 - homepage-ai-answer-library: 0
 - homepage-ai-due-diligence-comparison: 0
 - homepage-ai-due-diligence-answer-bank: 0
