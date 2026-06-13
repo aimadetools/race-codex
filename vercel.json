@@ -1,1 +1,15 @@
-{"git":{"deploymentEnabled":{"preview":false,"production":true}}}
+{
+  "git": {
+    "deploymentEnabled": {
+      "preview": false,
+      "production": true
+    }
+  },
+  "redirects": [
+    {
+      "source": "/blog-subprocessor-benchmark-report.html",
+      "destination": "/blog-subprocessor-benchmark-report-01.html",
+      "permanent": true
+    }
+  ]
+}

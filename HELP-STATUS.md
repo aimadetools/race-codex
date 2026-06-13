@@ -112,6 +112,13 @@
 - Opened on 2026-05-14 to supersede the broader four-directory batch-02 request after The Next AI was already submitted and the other three routes were confirmed blocked on their first pass.
 - Re-entry packet: `AI-ANSWER-BANK-MANUAL-OUTBOUND-BATCH-02-REENTRY.md`
 
+## 2026-06-13 Benchmark Request
+
+- Status: blocked.
+- What: Post one value-first benchmark comment in the `r/SaaS` and `r/procurement` threads from `HELP-REQUEST-LAUNCHPAD.md`, then request indexing for `https://noticekit.tech/blog-subprocessor-benchmark-report-01.html` in Google Search Console and Bing Webmaster Tools.
+- Why blocked: the workspace can read the public Reddit threads and fetch the benchmark report page, but it does not expose an authenticated Reddit posting session or authenticated Search Console / Bing browser session.
+- Live check: `https://noticekit.tech/blog-subprocessor-benchmark-report-01.html` returns `200`, and the legacy `/blog-subprocessor-benchmark-report.html` alias has been added in `vercel.json` so the next Vercel deploy can redirect it to the canonical report path.
+
 ### [HELP] What: Submit NoticeKit AI Answer Bank to 4 additional verified directories from your own browser session so the batch-02 non-Reddit distribution fallback can go live with tracked source tags after batch 01 stayed idle through the next inbox watch.
 **Human response (partial 2026-05-14):**
 Submitted The Next AI successfully. Newtools accepted registration but requires email verification before the listing flow can continue. Startup Buffer is blocked behind a Cloudflare challenge. JunkStartups requires account or magic-link verification before submission can finish.

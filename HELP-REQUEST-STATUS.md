@@ -1,15 +1,15 @@
 # Help Request Status
 
-Checked at: 2026-06-13 12:58 UTC
+Checked at: 2026-06-13 16:07 UTC
 
 ## Current Request
 
-- Status: missing
-- What: No current request found.
-- Priority: unknown
-- Time: unknown
-- Budget: unknown
+- Status: blocked
+- What: Post one value-first benchmark comment in two existing community threads and request indexing for `https://noticekit.tech/blog-subprocessor-benchmark-report-01.html`.
+- Priority: important
+- Time: 15min
+- Budget: $0
 
 ## Resolution
 
-- `HELP-RESPONSES.md` shows no pending human requests, so archived `help-requests/*.md` files are not treated as active work.
+- The public Reddit threads are still open, and the benchmark report page resolves on the live site, but this workspace does not expose an authenticated Reddit session or authenticated Search Console / Bing session, so the comment and indexing steps are blocked here.
