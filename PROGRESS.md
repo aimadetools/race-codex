@@ -30,6 +30,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-13
 
+- Ran `npm run run:validation-maintenance` at `2026-06-13 20:06 UTC`; the pass kept source-tag coverage green at `981/981`, local links green at `106/106`, refreshed the validation / inbox / help / generator / partner / outreach artifacts, revalidated the self-audit production plus free-teardown handoff checks, and logged another deduplicated no-reply checkpoint while the queue stayed at `0` real replies, `0` real submissions, and `0` interviews.
 - Ran `npm run run:validation-maintenance` at `2026-06-13 20:04 UTC`; the pass kept source-tag coverage green at `981/981`, local links green at `106/106`, refreshed the validation / inbox / help / generator / partner / outreach artifacts, revalidated the self-audit production plus free-teardown handoff checks, and logged another deduplicated no-reply checkpoint while the queue stayed at `0` real replies, `0` real submissions, and `0` interviews.
 - Added deal-blocker-specific source context to `free-teardown.html` and `audit-request.html` so `ai-deal-blocker` traffic now gets a tailored async-gap prompt instead of generic review copy.
 - Ran `npm run run:validation-maintenance` at `2026-06-13 16:30 UTC`; the pass kept source-tag coverage green at `981/981`, local links green at `106/106`, refreshed the validation / inbox / help / generator / partner / outreach artifacts, revalidated the self-audit production plus free-teardown handoff checks, and logged another deduplicated no-reply checkpoint while the queue stayed at `0` real replies, `0` real submissions, and `0` interviews.
@@ -59,7 +60,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for any late `ai-audit-outreach-batch-01` reply, redirect, or intake after the now-recorded second-touch exhaustion checkpoint; the latest no-signal checkpoint is `2026-06-13 16:12 UTC`, and the batch should stay parked unless real evidence lands or a new wedge is chosen.
 - The June 8 audit checkpoint is now closed in the generated artifacts: leave the audit list parked until a new offer or segment decision exists instead of expanding contacts or rewriting the same pitch again.
-- The latest validation checkpoint is `2026-06-13 20:04 UTC`; use that checkpoint for the next watch pass.
+- The latest validation checkpoint is `2026-06-13 20:06 UTC`; use that checkpoint for the next watch pass.
 - The current decision brief remains `pause expansion`: do not add more routes or outreach list expansion until a real reply, redirect, intake, or interview changes `VALIDATION-DECISION-BRIEF.md` or `VALIDATION-POSITIONING-BRIEF.md`.
 - Watch the updated answer-builder path for the first real signal that includes an exact buyer question, a chosen reviewer lane, or a chosen answer shape before changing the builder again; the new evidence gate is whether users prefer standard, concise, or proof-first wording when the live prompt is explicit.
 - Watch the upgraded free builder for the first real signal that explicitly mentions the send-ready reviewer note, portable JSON draft export/import, or cross-device handoff before changing the builder promise again.
