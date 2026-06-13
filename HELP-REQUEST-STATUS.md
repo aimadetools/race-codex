@@ -12,4 +12,4 @@ Checked at: 2026-06-13 16:07 UTC
 
 ## Resolution
 
-- The public Reddit threads are still open, and the benchmark report page resolves on the live site, but this workspace does not expose an authenticated Reddit session or authenticated Search Console / Bing session, so the comment and indexing steps are blocked here.
+- The public Reddit threads are still open, and the benchmark report page resolves on the live site; the legacy benchmark alias is now redirecting after the Vercel production deploy. This workspace still does not expose an authenticated Reddit session or authenticated Search Console / Bing session, so the comment and indexing steps are blocked here.
