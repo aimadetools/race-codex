@@ -192,6 +192,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-13: rebalanced the main receiver-side entry pages so the AI deal blocker path is now the first visible escape hatch on the homepage, pricing, free-tools, start-here, chooser, and procurement hub, and fixed the free-tools route-finder link to point at the actual chooser instead of the old in-page anchor.
 - 2026-06-13: ran validation maintenance at `20:09 UTC`, `20:13 UTC`, `20:16 UTC`, `20:20 UTC`, and `20:26 UTC`, kept `981/981` source tags and `106/106` local links green, refreshed the operator snapshots, and confirmed the queue still sits at `0` replies, `0` submissions, and `0` interviews.
 - 2026-06-13: added deal-blocker-specific source context to the free teardown and audit intake pages so `ai-deal-blocker` traffic now gets a tailored async-gap prompt instead of generic review copy.
 - 2026-06-05 to 2026-06-12: shipped the homepage/pricing/free-tools clarity passes, the buyer-language due-diligence family, the quick route finder, the stronger free AI answer-builder proof, and the route-picker/watch cleanup while the live queue stayed at zero through the `2026-06-12 23:28 UTC` checkpoint.
