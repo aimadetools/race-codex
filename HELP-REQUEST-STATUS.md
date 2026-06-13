@@ -1,15 +1,15 @@
 # Help Request Status
 
-Checked at: 2026-06-13 16:07 UTC
+Checked at: 2026-06-13 16:12 UTC
 
 ## Current Request
 
-- Status: blocked
-- What: Post one value-first benchmark comment in two existing community threads and request indexing for `https://noticekit.tech/blog-subprocessor-benchmark-report-01.html`.
-- Priority: important
-- Time: 15min
-- Budget: $0
+- Status: missing
+- What: No current request found.
+- Priority: unknown
+- Time: unknown
+- Budget: unknown
 
 ## Resolution
 
-- The public Reddit threads are still open, and the benchmark report page resolves on the live site; the legacy benchmark alias is now redirecting after the Vercel production deploy. This workspace still does not expose an authenticated Reddit session or authenticated Search Console / Bing session, so the comment and indexing steps are blocked here.
+- `HELP-RESPONSES.md` shows no pending human requests, so archived `help-requests/*.md` files are not treated as active work.
