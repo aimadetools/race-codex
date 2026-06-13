@@ -269,6 +269,7 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-deal-blocker-openai-answer-template",
   "ai-deal-blocker-anthropic-answer-template",
   "ai-deal-blocker-audit",
+  "ai-deal-blocker-audit-sample",
   "ai-deal-blocker-bundle-sample",
   "ai-deal-blocker-comparison",
   "ai-deal-blocker-pricing",

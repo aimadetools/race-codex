@@ -100,6 +100,7 @@
             <a class="button secondary" data-deal-blocker-branch="answer-bank" href="ai-security-questionnaire-answer-bank.html?source=ai-deal-blocker-answer-bank">Open answer bank</a>
             <a class="button secondary" data-deal-blocker-branch="evidence-map" href="ai-security-review-evidence-map.html?source=ai-deal-blocker-evidence-map">Open evidence map</a>
             <a class="button secondary" data-deal-blocker-branch="agent-workspace" href="ai-agent-review-workspace.html?source=ai-deal-blocker-agent-workspace">Open AI agent workspace</a>
+            <a class="button secondary" href="#deal-blocker-brief">Send blocker for judgment</a>
             <a class="button secondary" data-deal-blocker-branch="teardown" href="free-teardown.html?source=ai-deal-blocker-teardown">Request free teardown</a>
           </div>
         </section>
@@ -151,11 +152,94 @@
               <h3>Async teardown or audit</h3>
               <p>Use this when the real blocker is deciding what to fix first, not drafting another paragraph. Get a blunt outside read before the thread widens.</p>
               <div class="hero-actions">
+                <a class="button secondary" href="#deal-blocker-brief">Send blocker for judgment</a>
                 <a class="button secondary" data-deal-blocker-branch="teardown" href="free-teardown.html?source=ai-deal-blocker-teardown">Request free teardown</a>
                 <a class="button secondary" href="ai-security-questionnaire-audit.html?source=ai-deal-blocker-audit">See audit details</a>
               </div>
             </article>
           </div>
+        </section>
+
+        <section class="section audit-layout" id="deal-blocker-brief">
+          <form class="audit-card intake-form" id="deal-blocker-form">
+            <div class="section-head compact-head">
+              <h2>Send the blocked thread now</h2>
+              <p>If the right next move is still unclear, send the live review path directly from this page. Use the free teardown for a blunt 3-bullet read or the paid audit intake for a 48-hour fix plan.</p>
+            </div>
+            <div class="field-grid">
+              <label>Request type
+                <select id="request-type" name="request-type">
+                  <option value="free_async_teardown">Free async teardown</option>
+                  <option value="concierge_audit">Concierge Audit intake</option>
+                </select>
+              </label>
+              <label>Company
+                <input id="company" name="company" autocomplete="organization" placeholder="Example SaaS" required>
+              </label>
+              <label>Your email
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
+              </label>
+              <label>Who are you?
+                <select id="ownership-signal" name="ownership_signal">
+                  <option value="">Select role</option>
+                  <option value="founder">Founder</option>
+                  <option value="operator">Operator or ops lead</option>
+                  <option value="privacy consultant">Privacy consultant</option>
+                  <option value="fractional dpo">Fractional DPO</option>
+                  <option value="attorney">Attorney</option>
+                  <option value="unknown">Other</option>
+                </select>
+              </label>
+              <label>Live page or question thread
+                <input id="subprocessor-url" name="subprocessor_url" type="url" placeholder="Paste the exact questionnaire, packet, or trust-page URL" required>
+              </label>
+              <label>What is blocking the deal?
+                <textarea id="vendor-change" name="vendor_change" placeholder="Example: Buyer wants named owner and proof links behind our OpenAI retention answer for the support copilot workflow." required></textarea>
+              </label>
+              <label>Customer segment and deadline
+                <textarea id="deadline" name="deadline" placeholder="Example: Enterprise prospect, procurement reply due Tuesday, legal follow-up expected if the proof trail stays thin. Put the affected segment first." required></textarea>
+              </label>
+              <label>Anything that cannot change?
+                <textarea id="review-need" name="review_need" placeholder="Example: We must preserve the public trust-page statement, the current owner name, and the customer-facing wording already under review."></textarea>
+              </label>
+            </div>
+            <input id="source-tag" name="source" type="hidden" value="ai-deal-blocker-teardown">
+            <input id="channel-tag" name="channel" type="hidden" value="ai-deal-blocker-inline-form">
+            <label class="hidden-field" aria-hidden="true">Website
+              <input id="website" name="website" tabindex="-1" autocomplete="off">
+            </label>
+            <div class="hero-actions">
+              <button id="deal-blocker-submit" class="button gold" type="submit">Send teardown request</button>
+              <a class="button secondary" id="deal-blocker-full-intake" href="audit-request.html?type=free_async_teardown&source=ai-deal-blocker-teardown&channel=ai-deal-blocker-inline-form">Open full intake instead</a>
+              <a class="button secondary" href="ai-security-questionnaire-audit-sample.html?source=ai-deal-blocker-audit-sample">Preview audit sample</a>
+            </div>
+            <p class="fine-print" id="deal-blocker-form-note">The free teardown is the lowest-friction path when you need a specific written next step before paying for the audit.</p>
+            <div id="deal-blocker-summary" class="notice-output generated-request" role="status" hidden></div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Choose the judgment path</span>
+            <div class="template-box">
+              <strong>Use the free teardown if</strong>
+              <ul class="article-list">
+                <li>You want a blunt read in about three bullets.</li>
+                <li>You are still deciding between builder, proof, packet, or audit.</li>
+                <li>You need the fastest written next step without buying first.</li>
+              </ul>
+            </div>
+            <div class="template-box">
+              <strong>Use the paid audit if</strong>
+              <ul class="article-list">
+                <li>The live thread already has a real deadline.</li>
+                <li>The blocker is prioritization, proof coverage, or control-boundary judgment.</li>
+                <li>You want the 48-hour scoped fix path, not just triage.</li>
+              </ul>
+            </div>
+            <div class="template-box">
+              <strong>What the reply uses first</strong>
+              <p>The live URL, the exact blocker, the affected segment, and the deadline. If those are clear, the next step can stay narrow instead of turning into another route maze.</p>
+            </div>
+          </aside>
         </section>
 
         <section class="section">
@@ -189,7 +273,8 @@
         "blog-index-ai-deal-blocker",
         "ai-procurement-hub-deal-blocker"
       ]);
-      const dealBlockerSource = new URLSearchParams(window.location.search).get("source") || "";
+      const query = new URLSearchParams(window.location.search);
+      const dealBlockerSource = query.get("source") || "";
 
       if (dealBlockerEntrySources.has(dealBlockerSource)) {
         for (const link of document.querySelectorAll("[data-deal-blocker-branch]")) {
@@ -203,6 +288,163 @@
           link.setAttribute("href", `${url.pathname}${url.search}`);
         }
       }
+
+      const form = document.querySelector("#deal-blocker-form");
+      const summary = document.querySelector("#deal-blocker-summary");
+      const submitButton = document.querySelector("#deal-blocker-submit");
+      const requestType = document.querySelector("#request-type");
+      const fullIntakeLink = document.querySelector("#deal-blocker-full-intake");
+      const formNote = document.querySelector("#deal-blocker-form-note");
+      const sourceTag = document.querySelector("#source-tag");
+      const channelTag = document.querySelector("#channel-tag");
+      const prefillFields = {
+        company: document.querySelector("#company"),
+        email: document.querySelector("#email"),
+        ownership_signal: document.querySelector("#ownership-signal"),
+        subprocessor_url: document.querySelector("#subprocessor-url"),
+        vendor_change: document.querySelector("#vendor-change"),
+        deadline: document.querySelector("#deadline"),
+        review_need: document.querySelector("#review-need")
+      };
+      const requestMeta = {
+        free_async_teardown: {
+          button: "Send teardown request",
+          note: "The free teardown is the lowest-friction path when you need a specific written next step before paying for the audit."
+        },
+        concierge_audit: {
+          button: "Send audit intake",
+          note: "Use the paid audit intake when the live thread already has a real deadline and you want the 48-hour fix path."
+        }
+      };
+
+      function formValue(id) {
+        return document.querySelector(`#${id}`).value.trim() || "Not provided";
+      }
+
+      function syncField(id, queryKey) {
+        const field = prefillFields[queryKey];
+        const value = query.get(queryKey);
+
+        if (!field || !value) {
+          return;
+        }
+
+        field.value = value;
+      }
+
+      function resolveDealBlockerBaseSource() {
+        return dealBlockerEntrySources.has(dealBlockerSource) ? dealBlockerSource : "ai-deal-blocker";
+      }
+
+      function resolveRequestSource(type) {
+        return `${resolveDealBlockerBaseSource()}-${type === "concierge_audit" ? "audit" : "teardown"}`;
+      }
+
+      function syncRequestUi() {
+        const meta = requestMeta[requestType.value] || requestMeta.free_async_teardown;
+        submitButton.textContent = meta.button;
+        formNote.textContent = meta.note;
+        sourceTag.value = resolveRequestSource(requestType.value);
+        const intakeUrl = new URL("audit-request.html", window.location.href);
+        intakeUrl.searchParams.set("type", requestType.value);
+        intakeUrl.searchParams.set("source", sourceTag.value);
+        intakeUrl.searchParams.set("channel", channelTag.value);
+        for (const [queryKey, field] of Object.entries(prefillFields)) {
+          if (field.value.trim()) {
+            intakeUrl.searchParams.set(queryKey, field.value.trim());
+          }
+        }
+        fullIntakeLink.setAttribute("href", `${intakeUrl.pathname}${intakeUrl.search}`);
+      }
+
+      for (const queryKey of Object.keys(prefillFields)) {
+        syncField(queryKey, queryKey);
+      }
+
+      const initialType = query.get("type");
+      if (initialType === "concierge_audit" || initialType === "free_async_teardown") {
+        requestType.value = initialType;
+      }
+
+      requestType.addEventListener("change", syncRequestUi);
+      for (const field of Object.values(prefillFields)) {
+        field.addEventListener("input", syncRequestUi);
+      }
+      syncRequestUi();
+
+      function setSummary(text, isError = false) {
+        summary.hidden = false;
+        summary.textContent = text;
+        summary.classList.toggle("form-error", isError);
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        const payload = {
+          type: requestType.value,
+          company: formValue("company"),
+          email: formValue("email"),
+          ownershipSignal: formValue("ownership-signal"),
+          subprocessorUrl: formValue("subprocessor-url"),
+          vendorChange: formValue("vendor-change"),
+          deadline: formValue("deadline"),
+          reviewNeed: formValue("review-need"),
+          partnerRole: "",
+          clientProfile: "",
+          partnerGoal: "",
+          partnerVolume: "",
+          sourceTag: sourceTag.value || resolveRequestSource(requestType.value),
+          submissionChannel: channelTag.value || "ai-deal-blocker-inline-form",
+          website: formValue("website") === "Not provided" ? "" : formValue("website")
+        };
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          const result = await response.json();
+
+          if (!response.ok || !result.ok) {
+            throw new Error(result.error || "The request could not be sent.");
+          }
+
+          const lines = [
+            result.message,
+            `Reference: ${result.referenceId}`,
+            "",
+            payload.type === "concierge_audit" ? "Audit intake sent" : "Teardown request sent",
+            "",
+            `Company: ${payload.company}`,
+            `Reply email: ${payload.email}`,
+            `Role: ${payload.ownershipSignal || "Not provided"}`,
+            `Live page or thread: ${payload.subprocessorUrl || "Not provided"}`,
+            `Source tag: ${payload.sourceTag}`,
+            "",
+            "Deal blocker:",
+            payload.vendorChange || "Not provided",
+            "",
+            "Customer segment and deadline:",
+            payload.deadline || "Not provided",
+            "",
+            "Constraints to preserve:",
+            payload.reviewNeed || "Not provided"
+          ];
+          setSummary(lines.join("\n"));
+          form.reset();
+          sourceTag.value = resolveRequestSource(requestType.value);
+          syncRequestUi();
+        } catch (error) {
+          setSummary(error.message || "The request could not be sent.", true);
+        } finally {
+          submitButton.disabled = false;
+          syncRequestUi();
+        }
+      });
     </script>
   </body>
 </html>
