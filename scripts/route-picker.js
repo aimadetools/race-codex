@@ -113,16 +113,16 @@
       secondaryLabel: "See audit details",
     },
     pack: {
-      title: "Use the fuller packet path.",
+      title: "Inspect the sample bundle first.",
       summary:
         "You need a fuller handoff package, so show the exact bundle shape before you ask for checkout.",
       bullets: [
         "Best when the buyer wants more than one paragraph",
-        "Use the kit preview to inspect the artifact shape",
+        "Use the sample bundle to inspect the artifact shape",
         "Move into the packet builder if the thread is already procurement-sized",
       ],
-      primaryHref: "kit-preview.html",
-      primaryLabel: "Open kit preview",
+      primaryHref: "ai-security-questionnaire-starter-bundle-sample.html",
+      primaryLabel: "Open sample bundle",
       secondaryHref: "ai-due-diligence-packet-builder.html",
       secondaryLabel: "Build due diligence packet",
     },
