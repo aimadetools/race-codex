@@ -193,6 +193,30 @@
     <priority>0.83</priority>
   </url>
   <url>
+    <loc>https://noticekit.tech/microsoft-copilot-security-questionnaire-answer-template.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/blog-microsoft-copilot-security-questionnaire-answer-example.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/microsoft-copilot-security-questionnaire-answer-bank.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/blog-microsoft-copilot-security-questionnaire-path-guide.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.83</priority>
+  </url>
+  <url>
     <loc>https://noticekit.tech/openai-security-questionnaire-answer-template.html</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
