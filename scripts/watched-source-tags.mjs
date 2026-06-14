@@ -918,6 +918,7 @@ export const WATCHED_SOURCE_TAGS = [
   "start-here-kit-preview",
   "blog-index-kit-preview",
   "route-chooser-purchase-next-steps",
+  "route-chooser-bundle-sample",
   "ai-audit-page-purchase-next-steps",
   "ai-pro-kit-purchase-next-steps",
   "partner-handoff-kit-preview",

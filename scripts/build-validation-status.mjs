@@ -960,7 +960,8 @@ const purchaseClarityWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "partner-handoff-kit-preview", label: "partner handoff kit preview" },
   { tag: "purchase-next-steps-kit-preview", label: "purchase next steps kit preview" },
   { tag: "kit-preview-purchase-next-steps", label: "kit preview purchase next steps" },
-  { tag: "purchase-next-steps-evidence-map", label: "purchase next steps evidence map" }
+  { tag: "purchase-next-steps-evidence-map", label: "purchase next steps evidence map" },
+  { tag: "route-chooser-bundle-sample", label: "route-chooser bundle sample" }
 ]);
 const openAiWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-index-openai-answer-template", label: "blog template" },
