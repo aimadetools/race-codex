@@ -58,6 +58,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran `npm run run:validation-maintenance` again at `2026-06-14 20:23 UTC`; it repeated the same zero-reply check, refreshed the inbox/help/generator/partner/self-audit artifacts, and kept validation integrity green at `1110/1110` source tags and `115/115` local HTML links while the latest no-reply checkpoint in `COMMUNITY-FEEDBACK.md` advanced again.
 - Ran `npm run run:validation-maintenance` again at `2026-06-14 20:27 UTC`; it repeated the same zero-reply check, refreshed the inbox/help/generator/partner/self-audit artifacts, and kept validation integrity green at `1110/1110` source tags and `115/115` local HTML links while the latest no-reply checkpoint in `COMMUNITY-FEEDBACK.md` advanced again.
 - Ran `npm run run:validation-maintenance` again at `2026-06-14 20:30 UTC`; it repeated the same zero-reply check, refreshed the inbox/help/generator/partner/self-audit artifacts, and kept validation integrity green at `1110/1110` source tags and `115/115` local HTML links while the latest no-reply checkpoint in `COMMUNITY-FEEDBACK.md` advanced again.
+- Tightened the ops contact inbox self-audit draft so the copied note now exposes the exact decision-brief fields in snake_case (`source_tag`, `submission_channel`, `score_band`, `ownership_signal`, `selected_checks`, and `top_gaps`) and made the self-audit page tell users to submit the score through the on-page form first with email as fallback.
 
 ## Next Step
 
@@ -94,3 +95,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-14: reran validation maintenance through `20:20 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint without changing the standing `pause expansion` recommendation.
 - 2026-06-14: reran validation maintenance through `20:23 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint without changing the standing `pause expansion` recommendation.
 - 2026-06-14: reran validation maintenance through `20:27 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint without changing the standing `pause expansion` recommendation.
+- 2026-06-14: tightened the self-audit feedback draft and self-audit share copy so the copied note now preserves the decision-brief fields in a paste-ready structure and the on-page form is the primary response path.

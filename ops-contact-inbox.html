@@ -271,19 +271,24 @@
           ? record.selectedChecks.join(", ")
           : "None";
         const submissionClass = record.isLikelyTestSubmission ? "likely test" : "likely real";
-        const optionalNote = record.reviewNeed ? ` | Details: ${record.reviewNeed}` : "";
         const summary = record.summary || `Self-audit feedback received from ${record.company}.`;
+        const details = record.reviewNeed || "Not provided";
+        const scoreBand = record.scoreBand || "Not provided";
+        const ownershipSignal = record.ownershipSignal || "unknown";
 
         return [
           `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | self-audit reply | ${record.company} | ${record.segmentGuess || "unknown"}`,
-          `  Summary: ${summary}${optionalNote}`,
-          `  Source tag: ${record.sourceTag || "site"}`,
-          `  Channel: ${record.submissionChannel || "unknown"}`,
-          `  Score band: ${record.scoreBand || "Not provided"}`,
-          `  Ownership: ${record.ownershipSignal || "unknown"}`,
-          `  Submission class: ${submissionClass}`,
-          `  Selected checks: ${selectedChecks}`,
-          `  Signal: score ${score}; top gaps ${topGaps}`
+          `  summary: ${summary}`,
+          `  details: ${details}`,
+          `  source_tag: ${record.sourceTag || "site"}`,
+          `  submission_channel: ${record.submissionChannel || "unknown"}`,
+          `  score: ${score}`,
+          `  score_band: ${scoreBand}`,
+          `  ownership_signal: ${ownershipSignal}`,
+          `  submission_class: ${submissionClass}`,
+          `  selected_checks: ${selectedChecks}`,
+          `  top_gaps: ${topGaps}`,
+          `  reply_expectation: async feedback is enough; email is fallback`
         ].join("\n");
       }
 
