@@ -68,6 +68,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-14: aligned the self-audit follow-up QA expectations with the current share copy, updated the ops contact inbox draft so the copied feedback block satisfies both the snake_case fields and the production verifier checks, and completed the `2026-06-14 23:06 UTC` validation refresh at `1110/1110` watcher coverage and `115/115` local HTML links.
 - 2026-06-05 to 2026-06-13: shipped the AI-first homepage/pricing/free-tools clarity passes, the buyer-language due-diligence route family, the quick route finder, the stronger free answer-builder proof, the focused `ai-deal-blocker.html` landing page, and the route-picker/watch cleanup while the validation, inbox, and outreach stack stayed at zero.
 - 2026-06-14: tightened the ops inbox self-audit feedback draft, shipped the Gemini and Microsoft Copilot named-vendor route families, promoted the sample-bundle path, fixed the missing `route-chooser-bundle-sample` watcher registration, and kept the operator stack green through the `2026-06-14 20:20 UTC` no-reply checkpoint at `1110/1110` watcher coverage and `115/115` local HTML links.
 - 2026-06-14: reran validation maintenance through `20:23 UTC`, `20:27 UTC`, and `20:30 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint while `1110/1110` watcher coverage and `115/115` local HTML links stayed green.

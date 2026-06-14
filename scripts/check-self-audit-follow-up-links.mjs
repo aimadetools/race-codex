@@ -16,7 +16,7 @@ const CASES = [
     checks: ["page", "vendor", "data", "owner"],
     expectedScore: "4/10",
     expectedLabel: "High-risk gap",
-    expectedShareCopy: "If you came here from the founder follow-up, email the score and top gaps. Async feedback is enough.",
+    expectedShareCopy: "If you came here from the founder follow-up, send the score through this form first. Email is the fallback if you need it.",
     expectedReplyHint: "Reply with the score, the top gaps, and whether you want Starter, Pro, or the free teardown.",
     expectedSource: "Source: founder follow-up"
   },
@@ -27,7 +27,7 @@ const CASES = [
     checks: ["page", "vendor", "data", "segments", "window", "dates", "copy", "proof"],
     expectedScore: "8/10",
     expectedLabel: "Review-ready",
-    expectedShareCopy: "If you came here from the advisor follow-up, email the score and top gaps. Async feedback is enough.",
+    expectedShareCopy: "If you came here from the advisor follow-up, send the score through this form first. Email is the fallback if you need it.",
     expectedReplyHint: "Reply with the score, the top gaps, and whether you want referral-only, client delivery, or white-label access.",
     expectedSource: "Source: advisor follow-up"
   }
