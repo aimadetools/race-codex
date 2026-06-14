@@ -198,5 +198,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-14: tightened the ops contact inbox self-audit feedback draft so the copied note now preserves the decision-brief fields in a structured, paste-ready block instead of flattening them into one line.
 - 2026-06-05 to 2026-06-13: shipped the homepage/pricing/free-tools clarity passes, the buyer-language due-diligence family, the quick route finder, the stronger free AI answer-builder proof, the focused `ai-deal-blocker.html` wedge, and the related route-picker/watch cleanup while the live queue stayed at zero.
 - 2026-06-14: shipped the Gemini and Microsoft Copilot named-vendor route families, promoted the sample-bundle path across the core AI surfaces, fixed the missing `route-chooser-bundle-sample` watcher registration, and kept the watch stack green through the `2026-06-14 16:31 UTC` maintenance checkpoint at `1110/1110` watcher coverage and `115/115` local HTML links.

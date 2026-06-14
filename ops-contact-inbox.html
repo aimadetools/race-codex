@@ -270,12 +270,21 @@
         const selectedChecks = Array.isArray(record.selectedChecks) && record.selectedChecks.length
           ? record.selectedChecks.join(", ")
           : "None";
+        const submissionClass = record.isLikelyTestSubmission ? "likely test" : "likely real";
         const optionalNote = record.reviewNeed ? ` | Details: ${record.reviewNeed}` : "";
         const summary = record.summary || `Self-audit feedback received from ${record.company}.`;
 
         return [
-          `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | self-audit reply | ${record.company} | ${record.segmentGuess || "unknown"} | Summary: ${summary}${optionalNote} | Source tag: ${record.sourceTag || "site"} | Channel: ${record.submissionChannel || "unknown"} | Score band: ${record.scoreBand || "Not provided"} | Ownership: ${record.ownershipSignal || "unknown"} | Selected checks: ${selectedChecks} | Signal: score ${score}; top gaps ${topGaps}`
-        ].join("");
+          `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | self-audit reply | ${record.company} | ${record.segmentGuess || "unknown"}`,
+          `  Summary: ${summary}${optionalNote}`,
+          `  Source tag: ${record.sourceTag || "site"}`,
+          `  Channel: ${record.submissionChannel || "unknown"}`,
+          `  Score band: ${record.scoreBand || "Not provided"}`,
+          `  Ownership: ${record.ownershipSignal || "unknown"}`,
+          `  Submission class: ${submissionClass}`,
+          `  Selected checks: ${selectedChecks}`,
+          `  Signal: score ${score}; top gaps ${topGaps}`
+        ].join("\n");
       }
 
       function teardownDraft(record) {
