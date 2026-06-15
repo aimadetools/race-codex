@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AI Security Questionnaire Answer + Handoff Builder | NoticeKit</title>
-    <meta name="description" content="Build a review-ready AI security questionnaire answer, proof checklist, and internal handoff brief in your browser with named vendors, scope, stance, and proof links.">
+    <meta name="description" content="Build a review-ready AI security questionnaire answer, pasted-question response pack, proof checklist, and internal handoff brief in your browser with named vendors, scope, stance, and proof links.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NoticeKit">
     <meta property="og:url" content="https://noticekit.tech/ai-security-questionnaire-answer-builder.html">
     <meta property="og:title" content="AI Security Questionnaire Answer + Handoff Builder | NoticeKit">
-    <meta property="og:description" content="Generate a copy-ready AI questionnaire answer, proof checklist, and internal handoff brief locally in your browser.">
+    <meta property="og:description" content="Generate a copy-ready AI questionnaire answer, pasted-question response pack, proof checklist, and internal handoff brief locally in your browser.">
     <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit AI security questionnaire answer builder">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Security Questionnaire Answer + Handoff Builder | NoticeKit">
-    <meta name="twitter:description" content="Turn AI vendor facts, scope, stance, and proof into a review-ready questionnaire answer and handoff brief without sending your inputs to a server.">
+    <meta name="twitter:description" content="Turn AI vendor facts, scope, stance, and proof into a review-ready questionnaire answer, pasted-question response pack, and handoff brief without sending your inputs to a server.">
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/ai-security-questionnaire-answer-builder.html">
@@ -31,7 +31,7 @@
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web browser",
             "url": "https://noticekit.tech/ai-security-questionnaire-answer-builder.html",
-            "description": "Browser-only builder for AI security questionnaire answers, proof checklists, and handoff briefs with named vendors, customer scope, retention stance, and proof links."
+            "description": "Browser-only builder for AI security questionnaire answers, pasted-question response packs, proof checklists, and handoff briefs with named vendors, customer scope, retention stance, and proof links."
           },
           {
             "@type": "FAQPage",
@@ -49,7 +49,7 @@
                 "name": "How is the builder different from the answer template or packet guide?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The builder creates a filled answer block, proof checklist, internal handoff brief, and 20 reusable buyer-question responses locally in the browser. The answer template is better when you want a blank copy-paste format. The packet guide is better when procurement, security, and counsel all need the same fuller review artifact."
+                  "text": "The builder creates a filled answer block, a pasted-question response pack for the buyer's real questionnaire rows, a proof checklist, an internal handoff brief, and 20 reusable buyer-question responses locally in the browser. The answer template is better when you want a blank copy-paste format. The packet guide is better when procurement, security, and counsel all need the same fuller review artifact."
                 }
               },
               {
@@ -84,7 +84,7 @@
         <section class="page-hero">
           <span class="eyebrow">Local AI answer + handoff builder</span>
           <h1 id="hero-title">Build the AI answer and the internal handoff before procurement asks for the packet.</h1>
-          <p id="hero-copy">Use this browser-only builder when your SaaS team is answering a buyer or security reviewer and needs one concrete AI answer now plus a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links once, then copy the answer block, the handoff note, a reviewer workspace export, an answer-bank draft, a downloadable 20-question matrix CSV, and 20 reusable buyer-question responses without sending your inputs to a server.</p>
+          <p id="hero-copy">Use this browser-only builder when your SaaS team is answering a buyer or security reviewer and needs one concrete AI answer now plus a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links once, then paste up to 25 real buyer questions to generate a local response pack alongside the answer block, handoff note, reviewer workspace export, answer-bank draft, downloadable 20-question matrix CSV, and 20 reusable buyer-question responses without sending your inputs to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#builder">Build starter bundle</a>
             <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-questionnaire-builder-starter-pack">Open starter pack</a>
@@ -200,6 +200,9 @@
               <label>Reply owner
                 <input id="reply-owner" value="Privacy ops lead with counsel review">
               </label>
+              <label>Paste buyer questions or questionnaire rows
+                <textarea id="question-list" rows="8" placeholder="Paste one buyer question per line. Example:&#10;Do you use OpenAI or another model provider in this workflow?&#10;What customer data is sent to the model?&#10;Who approves reuse of this answer?"></textarea>
+              </label>
             </div>
           </form>
 
@@ -237,12 +240,15 @@
               <button class="button secondary" id="copy-checklist" type="button">Copy checklist</button>
               <button class="button secondary" id="copy-handoff" type="button">Copy handoff</button>
               <button class="button secondary" id="copy-qa-pack" type="button">Copy Q&A pack</button>
+              <button class="button secondary" id="copy-custom-pack" type="button">Copy pasted-question pack</button>
               <button class="button secondary" id="copy-workspace" type="button">Copy workspace</button>
               <button class="button secondary" id="copy-answer-bank" type="button">Copy answer bank</button>
               <button class="button secondary" id="copy-full-bundle" type="button">Copy starter bundle</button>
               <button class="button secondary" id="download-answer" type="button">Download answer</button>
               <button class="button secondary" id="download-review-note" type="button">Download review note</button>
               <button class="button secondary" id="download-qa-pack" type="button">Download Q&A pack</button>
+              <button class="button secondary" id="download-custom-pack" type="button">Download pasted-question pack</button>
+              <button class="button secondary" id="download-custom-csv" type="button">Download pasted-question CSV</button>
               <button class="button secondary" id="download-question-matrix" type="button">Download question matrix CSV</button>
               <button class="button secondary" id="download-workspace" type="button">Download workspace</button>
               <button class="button secondary" id="download-answer-bank" type="button">Download answer bank</button>
@@ -253,7 +259,7 @@
               <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, one downloadable question-matrix CSV, one portable JSON draft export, and one downloadable bundle file.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, a pasted-question response pack for the buyer's real rows, a send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, one downloadable question-matrix CSV, one portable JSON draft export, and one downloadable bundle file.</p>
           </aside>
         </section>
 
@@ -279,6 +285,14 @@
             <p>Use this when the buyer thread asks the same follow-up questions in slightly different wording. The pack turns one fact-gathering pass into 20 reusable response blocks you can paste into procurement, security, privacy, or counsel threads.</p>
           </div>
           <div id="qa-pack-output" class="template-box" aria-live="polite"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Pasted buyer-question response pack</h2>
+            <p>Paste the buyer's real questionnaire rows into the form and this section maps each one to the strongest local answer direction from the same fact set. Use it when a live spreadsheet or portal is already open and the canned 20-question pack is not specific enough.</p>
+          </div>
+          <div id="custom-pack-output" class="template-box" aria-live="polite"></div>
         </section>
 
         <section class="section">
@@ -362,6 +376,11 @@
               <span class="tag">Follow-up coverage</span>
               <h3>20 reusable buyer-question responses</h3>
               <p>Reuse the same facts across procurement, security, privacy, and counsel follow-ups instead of rewriting the same answer in slightly different wording.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Live questionnaire</span>
+              <h3>Pasted-question response pack</h3>
+              <p>Paste the buyer's real spreadsheet or portal rows and get a deterministic first-pass response pack tied to the same facts, owners, proof links, and boundaries.</p>
             </article>
             <article class="card">
               <span class="tag">Internal handoff</span>
@@ -482,6 +501,7 @@
       const answerOutput = document.querySelector("#answer-output");
       const reviewNoteOutput = document.querySelector("#review-note-output");
       const qaPackOutput = document.querySelector("#qa-pack-output");
+      const customPackOutput = document.querySelector("#custom-pack-output");
       const questionMatrixOutput = document.querySelector("#question-matrix-output");
       const workspaceOutput = document.querySelector("#workspace-output");
       const checklistOutput = document.querySelector("#checklist-output");
@@ -499,12 +519,15 @@
       const copyChecklistButton = document.querySelector("#copy-checklist");
       const copyHandoffButton = document.querySelector("#copy-handoff");
       const copyQaPackButton = document.querySelector("#copy-qa-pack");
+      const copyCustomPackButton = document.querySelector("#copy-custom-pack");
       const copyWorkspaceButton = document.querySelector("#copy-workspace");
       const copyAnswerBankButton = document.querySelector("#copy-answer-bank");
       const copyFullBundleButton = document.querySelector("#copy-full-bundle");
       const downloadAnswerButton = document.querySelector("#download-answer");
       const downloadReviewNoteButton = document.querySelector("#download-review-note");
       const downloadQaPackButton = document.querySelector("#download-qa-pack");
+      const downloadCustomPackButton = document.querySelector("#download-custom-pack");
+      const downloadCustomCsvButton = document.querySelector("#download-custom-csv");
       const downloadQuestionMatrixButton = document.querySelector("#download-question-matrix");
       const downloadWorkspaceButton = document.querySelector("#download-workspace");
       const downloadAnswerBankButton = document.querySelector("#download-answer-bank");
@@ -605,6 +628,18 @@
           payload.answerShapeLabel
         ]);
         return [header, ...rows].map((row) => row.map(csvCell).join(",")).join("\n");
+      }
+
+      function parseQuestionList(rawText) {
+        return String(rawText || "")
+          .split(/\n+/)
+          .map((line) => line.trim().replace(/^[\-\d\.\)\s]+/, ""))
+          .filter(Boolean)
+          .slice(0, 25);
+      }
+
+      function keywordScore(question, keywords) {
+        return keywords.reduce((score, keyword) => score + (question.includes(keyword) ? 1 : 0), 0);
       }
 
       function collectFormState() {
@@ -949,6 +984,97 @@
           .map((row) => `${row.number}. ${row.question}\n${row.answer}`)
           .join("\n\n");
 
+        const payloadBase = {
+          company,
+          workflow,
+          primaryVendor,
+          supportingVendors,
+          dataCategories,
+          customerScope,
+          retentionStance,
+          approvalPath,
+          proofLinks,
+          noticeImpact,
+          decisionNeeded,
+          reviewCadence,
+          scopeBoundaries,
+          replyOwner,
+          shortAnswer
+        };
+
+        const customQuestionRows = parseQuestionList(value("question-list")).map((question, index) => {
+          const normalized = question.toLowerCase();
+          const candidates = [
+            {
+              label: "Named vendor chain",
+              keywords: ["vendor", "provider", "openai", "anthropic", "claude", "gemini", "copilot", "azure", "model", "llm"],
+              answer: `${payloadBase.primaryVendor} is the primary AI vendor for ${payloadBase.workflow}. Supporting vendors in the same workflow include ${payloadBase.supportingVendors}.`
+            },
+            {
+              label: "Data scope",
+              keywords: ["data", "pii", "personal", "prompt", "input", "output", "content", "ticket", "scope"],
+              answer: `Data in scope for ${payloadBase.workflow}: ${payloadBase.dataCategories}. Customer scope: ${payloadBase.customerScope}`
+            },
+            {
+              label: "Retention or training stance",
+              keywords: ["train", "training", "retain", "retention", "store", "storage", "model improvement"],
+              answer: payloadBase.retentionStance
+            },
+            {
+              label: "Human review and approval",
+              keywords: ["approve", "approval", "review", "human", "owner", "sign-off", "sign off", "governance"],
+              answer: `Approval path: ${payloadBase.approvalPath} Reply owner: ${payloadBase.replyOwner}.`
+            },
+            {
+              label: "Proof and evidence",
+              keywords: ["proof", "evidence", "link", "documentation", "artifact", "supporting", "document"],
+              answer: `Proof links and supporting materials: ${payloadBase.proofLinks}`
+            },
+            {
+              label: "Notice or escalation impact",
+              keywords: ["notice", "dpa", "contract", "counsel", "legal", "escalat", "notification"],
+              answer: payloadBase.noticeImpact
+            },
+            {
+              label: "Workflow boundary",
+              keywords: ["workflow", "boundary", "access", "use case", "feature", "in scope", "out of scope"],
+              answer: `Reviewed workflow: ${payloadBase.workflow}. Boundary: ${payloadBase.scopeBoundaries}`
+            },
+            {
+              label: "Decision and recheck",
+              keywords: ["decision", "next", "when", "refresh", "recheck", "change", "cadence"],
+              answer: `Decision needed next: ${payloadBase.decisionNeeded} Recheck trigger: ${payloadBase.reviewCadence}`
+            }
+          ];
+
+          let selected = {
+            label: "Safe summary",
+            answer: `${payloadBase.shortAnswer}. Proof and owner notes: ${payloadBase.proofLinks} ${payloadBase.replyOwner}.`
+          };
+          let bestScore = 0;
+
+          candidates.forEach((candidate) => {
+            const score = keywordScore(normalized, candidate.keywords);
+            if (score > bestScore) {
+              bestScore = score;
+              selected = candidate;
+            }
+          });
+
+          return {
+            number: index + 1,
+            question,
+            label: selected.label,
+            answer: selected.answer
+          };
+        });
+
+        const customQuestionPack = customQuestionRows.length
+          ? customQuestionRows
+              .map((row) => `${row.number}. ${row.question}\nMapped answer type: ${row.label}\n${row.answer}`)
+              .join("\n\n")
+          : "Paste the buyer's real questionnaire rows into the form to generate a local response pack for those exact questions.";
+
         const workspace = [
           `# ${company} AI questionnaire reviewer workspace`,
           "",
@@ -973,6 +1099,10 @@
           "## Common buyer-question pack",
           "",
           qaPack,
+          "",
+          "## Pasted buyer-question response pack",
+          "",
+          customQuestionPack,
           "",
           "## Internal handoff brief",
           "",
@@ -1183,6 +1313,8 @@
           answer,
           reviewNote,
           qaPack,
+          customQuestionPack,
+          customQuestionRows,
           questionMatrix,
           workspace,
           checklist,
@@ -1198,7 +1330,17 @@
           reviewerLaneLabel,
           answerShapeLabel,
           bankSlug: slugify(`${company}-${primaryVendor}-answer-bank`, "noticekit-ai-answer-bank"),
-          reusableQuestionCount
+          reusableQuestionCount,
+          supportingVendors,
+          dataCategories,
+          retentionStance,
+          approvalPath,
+          proofLinks,
+          decisionNeeded,
+          reviewCadence,
+          scopeBoundaries,
+          replyOwner,
+          shortAnswer
         };
       }
 
@@ -1225,6 +1367,10 @@
           "## Common buyer-question pack",
           "",
           payload.qaPack,
+          "",
+          "## Pasted buyer-question response pack",
+          "",
+          payload.customQuestionPack,
           "",
           "## Proof checklist",
           "",
@@ -1262,6 +1408,7 @@
         answerOutput.innerHTML = markdownToHtml(payload.answer);
         reviewNoteOutput.innerHTML = markdownToHtml(payload.reviewNote);
         qaPackOutput.innerHTML = markdownToHtml(payload.qaPack);
+        customPackOutput.innerHTML = markdownToHtml(payload.customQuestionPack);
         questionMatrixOutput.innerHTML = payload.questionMatrix
           .map((row) => `<tr><td>${row.number}</td><td>${escapeHtml(row.question)}</td><td>${escapeHtml(row.answer)}</td></tr>`)
           .join("");
@@ -1277,7 +1424,7 @@
         if (payload.completedCount === payload.completenessTarget) {
           coverageState.textContent = "Review-ready answer";
           coverageSummary.textContent = "The current draft names the buyer prompt, vendor chain, scope, stance, approval path, review trigger, customer impact, and proof links.";
-          answerSummaryCopy.textContent = `Copy the answer into the questionnaire now, then reuse the review note, the ${payload.reusableQuestionCount}-question pack, workspace export, and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.`;
+          answerSummaryCopy.textContent = `Copy the answer into the questionnaire now, then reuse the pasted-question pack, the ${payload.reusableQuestionCount}-question pack, workspace export, and handoff in Slack, email, or the internal review doc so the next reviewer gets the same facts without a rewrite.`;
           return;
         }
 
@@ -1290,7 +1437,7 @@
 
         coverageState.textContent = "Too thin for buyer review";
         coverageSummary.textContent = "The answer still needs the exact buyer prompt and core facts before it is safe to send into a live questionnaire thread.";
-        answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the buyer question, vendor chain, scope, stance, approval path, and proof cleanly enough for the answer, repeated-question pack, workspace, and handoff to hold up.";
+          answerSummaryCopy.textContent = "Use the risk checklist, stack guide, or teardown path first if the team cannot yet name the buyer question, vendor chain, scope, stance, approval path, and proof cleanly enough for the answer, pasted-question pack, repeated-question pack, workspace, and handoff to hold up.";
       }
 
       const presets = {
@@ -2013,6 +2160,9 @@
       copyQaPackButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().qaPack, "Q&A pack copied.");
       });
+      copyCustomPackButton.addEventListener("click", () => {
+        copyText(buildAnswerPayload().customQuestionPack, "Pasted-question response pack copied.");
+      });
       copyWorkspaceButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().workspace, "Reviewer workspace copied.");
       });
@@ -2039,6 +2189,38 @@
         const content = `# ${payload.company} AI security questionnaire common buyer-question pack\n\n${payload.qaPack}\n`;
         downloadFile("noticekit-ai-questionnaire-qa-pack.md", content);
         builderStatus.textContent = "Q&A pack downloaded as Markdown.";
+      });
+      downloadCustomPackButton.addEventListener("click", () => {
+        const payload = buildAnswerPayload();
+        const content = `# ${payload.company} AI security questionnaire pasted-question response pack\n\n${payload.customQuestionPack}\n`;
+        downloadFile("noticekit-ai-questionnaire-pasted-question-pack.md", content);
+        builderStatus.textContent = "Pasted-question response pack downloaded as Markdown.";
+      });
+      downloadCustomCsvButton.addEventListener("click", () => {
+        const payload = buildAnswerPayload();
+        const header = [
+          "row_number",
+          "buyer_question",
+          "mapped_answer_type",
+          "answer_direction",
+          "company",
+          "workflow",
+          "primary_vendor"
+        ];
+        const rows = payload.customQuestionRows.map((row) => [
+          row.number,
+          row.question,
+          row.label,
+          row.answer,
+          payload.company,
+          payload.workflow,
+          payload.primaryVendor
+        ]);
+        downloadFile(
+          "noticekit-ai-questionnaire-pasted-question-pack.csv",
+          [header, ...rows].map((row) => row.map(csvCell).join(",")).join("\n")
+        );
+        builderStatus.textContent = "Pasted-question response pack downloaded as CSV.";
       });
       downloadQuestionMatrixButton.addEventListener("click", () => {
         const payload = buildAnswerPayload();
