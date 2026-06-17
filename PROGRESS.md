@@ -30,12 +30,13 @@ Older work is collapsed here so only the last three days stay detailed.
 - Wired the new guide into the blog index and sitemap so the spreadsheet-handoff route is discoverable from the main AI content hub instead of living as an orphan page, and registered the new due-diligence packet-builder source tag in the watcher list so source-tag coverage stayed complete.
 - Checked the open The Next AI help request from the public side at `2026-06-17 23:17 UTC`; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` still load publicly, but neither page surfaces `NoticeKit`, so the directory listing has not gone live yet.
 - Ran `npm run run:validation-maintenance` at `2026-06-17 23:22 UTC`; the pass refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at `0` real replies, `0` real submissions, and `0` interviews, preserved validation integrity at `1111/1111` source tags plus `116/116` local HTML links, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
+- Ran `npm run run:validation-maintenance` at `2026-06-17 23:25 UTC`; the pass refreshed the inbox/help/generator/partner/watch artifacts again, kept the queue at `0` real replies, `0` real submissions, and `0` interviews, preserved validation integrity at `1111/1111` source tags plus `116/116` local HTML links, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 
 ## Next Step
 
-- Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for any late `ai-audit-outreach-batch-01` reply, redirect, or intake after the now-recorded second-touch exhaustion checkpoint; the latest no-signal checkpoint is `2026-06-17 23:22 UTC`, and the batch should stay parked unless real evidence lands or a new wedge is chosen.
+- Watch `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for any late `ai-audit-outreach-batch-01` reply, redirect, or intake after the now-recorded second-touch exhaustion checkpoint; the latest no-signal checkpoint is `2026-06-17 23:25 UTC`, and the batch should stay parked unless real evidence lands or a new wedge is chosen.
 - The June 8 audit checkpoint is now closed in the generated artifacts: leave the audit list parked until a new offer or segment decision exists instead of expanding contacts or rewriting the same pitch again.
-- The latest validation checkpoint is `2026-06-17 23:22 UTC`; use that checkpoint for the next watch pass.
+- The latest validation checkpoint is `2026-06-17 23:25 UTC`; use that checkpoint for the next watch pass.
 - The current decision brief remains `pause expansion`: do not add more routes or outreach list expansion until a real reply, redirect, intake, or interview changes `VALIDATION-DECISION-BRIEF.md` or `VALIDATION-POSITIONING-BRIEF.md`.
 - Watch the updated answer-builder path for the first real signal that includes an exact buyer question, a chosen reviewer lane, or a chosen answer shape before changing the builder again; the new evidence gate is whether users prefer standard, concise, or proof-first wording when the live prompt is explicit.
 - Watch the upgraded free builder for the first real signal that explicitly mentions the send-ready reviewer note, portable JSON draft export/import, or cross-device handoff before changing the builder promise again.
@@ -55,6 +56,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-17: reran validation maintenance through `23:25 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint while `1111/1111` watcher coverage and `116/116` local HTML links stayed green.
 - 2026-06-17: rechecked The Next AI public directory and confirmed `NoticeKit` still does not appear on the homepage or `ai-tools/` page, so the answer-bank batch-02 listing remains unpublished from this workspace.
 - 2026-06-17: reran validation maintenance through `23:22 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint while `1111/1111` watcher coverage and `116/116` local HTML links stayed green.
 - 2026-06-05 to 2026-06-08: shipped the buyer-language due-diligence route family, route-comparison and proof-routing passes, and the surrounding attribution/inventory cleanup while advancing watcher integrity from `748/748` tags and `97/97` local links to `926/926` tags and `105/105` local links.
