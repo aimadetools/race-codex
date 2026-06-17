@@ -58,6 +58,7 @@ export const WATCHED_SOURCE_TAGS = [
   "blog-index-ai-due-diligence-evidence-map",
   "blog-index-ai-due-diligence-scorecard",
   "blog-index-ai-due-diligence-comparison",
+  "blog-index-ai-due-diligence-packet-builder",
   "blog-index-ai-framework-map",
   "blog-index-ai-agent-review",
   "blog-index-ai-agent-checklist",
