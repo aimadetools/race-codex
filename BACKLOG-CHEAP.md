@@ -201,7 +201,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-17: reran validation maintenance through `23:10 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint while `1111/1111` watcher coverage and `116/116` local HTML links stayed green.
+- 2026-06-17: reran validation maintenance through `23:13 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint while `1111/1111` watcher coverage and `116/116` local HTML links stayed green.
 - 2026-06-17: shipped the spreadsheet/portal-row handoff guide, wired it into the blog index and sitemap, and kept link validation plus watcher coverage green after registering the new due-diligence packet-builder source tag.
 - 2026-06-14: reran validation maintenance through `23:29 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the no-reply checkpoint while `1110/1110` watcher coverage and `115/115` local HTML links stayed green.
 - 2026-06-14: aligned the self-audit follow-up QA, inbox draft, and share copy with the current field structure, shipped the Gemini and Microsoft Copilot named-vendor route families, promoted the sample-bundle path, and kept the watch stack green through the repeated maintenance passes after fixing the `route-chooser-bundle-sample` watcher registration.
