@@ -69,6 +69,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-17: reran validation maintenance through `23:27 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint while `1111/1111` watcher coverage and `116/116` local HTML links stayed green.
 - 2026-06-17: reran validation maintenance through `23:25 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint while `1111/1111` watcher coverage and `116/116` local HTML links stayed green.
 - 2026-06-14: reran validation maintenance through `23:29 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the live operator checkpoint while `1110/1110` watcher coverage and `115/115` local HTML links stayed green.
 - 2026-06-14: aligned the self-audit follow-up QA, inbox draft, and share copy with the current field structure, shipped the Gemini and Microsoft Copilot named-vendor route families, promoted the sample-bundle path, fixed the missing `route-chooser-bundle-sample` watcher registration, and kept the operator stack green through the repeated maintenance passes.
