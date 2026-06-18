@@ -204,6 +204,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-18: tightened the homepage, pricing, free-tools, route chooser, procurement hub, and starter-pack surfaces so the imported-row preview and preserved row-reference promise is now visible alongside the CSV/TSV upload flow, then re-ran the local site-link sweep with no missing targets.
 - 2026-06-18: reran validation maintenance through the `04:29 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts with the queue still at zero, rechecked The Next AI publicly with no visible NoticeKit listing, and tightened the generated help-request snapshot so the latest public-check evidence and open blocker stay visible without rereading the full help log.
 - 2026-06-17 to 2026-06-18: shipped the spreadsheet/portal-row handoff guide, kept the blog/sitemap/watch registration aligned, extended the stronger import and handoff promise across the supporting chooser, hub, library, and blog routes, reran validation maintenance through the `2026-06-18 04:25 UTC` checkpoint, rechecked The Next AI publicly with no visible NoticeKit listing, and held the operator stack at `1111/1111` watcher coverage, `116/116` local HTML links, and `0` real replies, submissions, and interviews.
 - 2026-06-14: reran validation maintenance through `23:29 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and advanced the no-reply checkpoint while `1110/1110` watcher coverage and `115/115` local HTML links stayed green.
