@@ -202,7 +202,7 @@
               </label>
               <label>Paste buyer questions or questionnaire rows
                 <textarea id="question-list" rows="8" placeholder="Paste one buyer question per line. Example:&#10;Do you use OpenAI or another model provider in this workflow?&#10;What customer data is sent to the model?&#10;Who approves reuse of this answer?"></textarea>
-                <span class="fine-print">You can also upload a CSV or TSV export from a spreadsheet or questionnaire tool. NoticeKit keeps the row reference and any section label it can detect.</span>
+                <span class="fine-print">You can paste rows directly from a spreadsheet or portal grid, or upload a CSV or TSV export. NoticeKit keeps the row reference and any section label it can detect.</span>
               </label>
             </div>
             <div class="hero-actions" style="margin-top:16px;">
@@ -265,7 +265,7 @@
               <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, a pasted-question response pack for the buyer's real rows or uploaded questionnaire file, a send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, one downloadable question-matrix CSV, one portable JSON draft export, and one downloadable bundle file.</p>
+            <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces an exact-question answer, a pasted-question response pack for the buyer's real rows, pasted spreadsheet grid, or uploaded questionnaire file, a send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, one downloadable question-matrix CSV, one portable JSON draft export, and one downloadable bundle file.</p>
           </aside>
         </section>
 
@@ -764,7 +764,113 @@
         return bestIndex;
       }
 
-      function importQuestionnaireRows(rawText) {
+      function hasQuestionHeader(cells) {
+        return cells.some((cell) => {
+          const normalized = normalizeHeader(cell);
+          return ["question", "prompt", "request", "requirement", "control", "description", "item"]
+            .some((keyword) => normalized.includes(keyword));
+        });
+      }
+
+      function inferQuestionColumn(bodyRows) {
+        let bestIndex = 0;
+        let bestScore = -1;
+        const columnCount = Math.max(...bodyRows.map((row) => row.length), 0);
+        for (let columnIndex = 0; columnIndex < columnCount; columnIndex += 1) {
+          let score = 0;
+          bodyRows.slice(0, 8).forEach((row) => {
+            const cell = String(row[columnIndex] || "").trim();
+            if (!cell) {
+              return;
+            }
+            if (cell.length >= 20) {
+              score += 2;
+            }
+            if (/[?]$/.test(cell)) {
+              score += 2;
+            }
+            if (/\s/.test(cell)) {
+              score += 1;
+            }
+            if (/(ai|vendor|data|customer|training|retention|question|scope|review|approval)/i.test(cell)) {
+              score += 2;
+            }
+          });
+          if (score > bestScore) {
+            bestScore = score;
+            bestIndex = columnIndex;
+          }
+        }
+        return bestIndex;
+      }
+
+      function inferRowColumn(bodyRows, questionIndex) {
+        let bestIndex = -1;
+        let bestScore = 0;
+        const columnCount = Math.max(...bodyRows.map((row) => row.length), 0);
+        for (let columnIndex = 0; columnIndex < columnCount; columnIndex += 1) {
+          if (columnIndex === questionIndex) {
+            continue;
+          }
+          let score = 0;
+          bodyRows.slice(0, 8).forEach((row) => {
+            const cell = String(row[columnIndex] || "").trim();
+            if (!cell) {
+              return;
+            }
+            if (/^[A-Za-z]{0,3}\d{1,4}$/.test(cell) || /^\d{1,4}$/.test(cell)) {
+              score += 3;
+            } else if (cell.length <= 8) {
+              score += 1;
+            }
+          });
+          if (score > bestScore) {
+            bestScore = score;
+            bestIndex = columnIndex;
+          }
+        }
+        return bestScore >= 3 ? bestIndex : -1;
+      }
+
+      function inferSectionColumn(bodyRows, questionIndex, rowIndex) {
+        let bestIndex = -1;
+        let bestScore = 0;
+        const columnCount = Math.max(...bodyRows.map((row) => row.length), 0);
+        for (let columnIndex = 0; columnIndex < columnCount; columnIndex += 1) {
+          if (columnIndex === questionIndex || columnIndex === rowIndex) {
+            continue;
+          }
+          let score = 0;
+          bodyRows.slice(0, 8).forEach((row) => {
+            const cell = String(row[columnIndex] || "").trim();
+            if (!cell) {
+              return;
+            }
+            if (cell.length >= 3 && cell.length <= 40) {
+              score += 2;
+            }
+            if (!/[?]$/.test(cell) && !/^\d{1,4}$/.test(cell)) {
+              score += 1;
+            }
+          });
+          if (score > bestScore) {
+            bestScore = score;
+            bestIndex = columnIndex;
+          }
+        }
+        return bestScore >= 3 ? bestIndex : -1;
+      }
+
+      function setImportedQuestionRows(importedRows) {
+        importedQuestionRows = importedRows;
+        syncingImportedQuestions = true;
+        questionListField.value = importedRows
+          .map((row) => (row.section ? `[${row.section}] ${row.question}` : row.question))
+          .join("\n");
+        syncingImportedQuestions = false;
+      }
+
+      function parseImportedQuestionRows(rawText) {
         const trimmed = String(rawText || "").trim();
         if (!trimmed) {
           throw new Error("empty-file");
@@ -776,28 +882,36 @@
           throw new Error("missing-rows");
         }
 
-        const headers = rows[0];
-        const bodyRows = rows.slice(1);
-        const questionIndex = pickColumnIndex(headers, 0, [
-          ["question", "prompt", "request", "requirement", "control", "description", "item"]
-        ]);
-        const rowIndex = pickColumnIndex(headers, -1, [
-          ["row", "line", "item", "number", "#", "id"]
-        ]);
-        const sectionIndex = pickColumnIndex(headers, -1, [
-          ["section", "domain", "category", "topic", "area", "group"]
-        ]);
+        const headerPresent = hasQuestionHeader(rows[0]);
+        const headers = headerPresent ? rows[0] : [];
+        const bodyRows = headerPresent ? rows.slice(1) : rows;
+        const questionIndex = headerPresent
+          ? pickColumnIndex(headers, 0, [
+              ["question", "prompt", "request", "requirement", "control", "description", "item"]
+            ])
+          : inferQuestionColumn(bodyRows);
+        const rowIndex = headerPresent
+          ? pickColumnIndex(headers, -1, [
+              ["row", "line", "item", "number", "#", "id"]
+            ])
+          : inferRowColumn(bodyRows, questionIndex);
+        const sectionIndex = headerPresent
+          ? pickColumnIndex(headers, -1, [
+              ["section", "domain", "category", "topic", "area", "group"]
+            ])
+          : inferSectionColumn(bodyRows, questionIndex, rowIndex);
 
         const importedRows = bodyRows
           .map((cells, index) => {
             const question = String(cells[questionIndex] || "").trim();
-            const sourceRow = rowIndex >= 0 ? String(cells[rowIndex] || "").trim() : String(index + 2);
+            const fallbackRow = headerPresent ? index + 2 : index + 1;
+            const sourceRow = rowIndex >= 0 ? String(cells[rowIndex] || "").trim() : String(fallbackRow);
             const section = sectionIndex >= 0 ? String(cells[sectionIndex] || "").trim() : "";
             return {
-              sourceRow: sourceRow || String(index + 2),
+              sourceRow: sourceRow || String(fallbackRow),
               section,
               question,
-              sourceReference: section ? `${sourceRow} - ${section}` : sourceRow || `Row ${index + 2}`
+              sourceReference: section ? `${sourceRow} - ${section}` : sourceRow || `Row ${fallbackRow}`
             };
           })
           .filter((row) => row.question)
@@ -807,15 +921,23 @@
           throw new Error("missing-question-column");
         }
 
-        importedQuestionRows = importedRows;
-        syncingImportedQuestions = true;
-        questionListField.value = importedRows
-          .map((row) => (row.section ? `[${row.section}] ${row.question}` : row.question))
-          .join("\n");
-        syncingImportedQuestions = false;
+        return importedRows;
+      }
+
+      function importQuestionnaireRows(rawText, originLabel = "file") {
+        const importedRows = parseImportedQuestionRows(rawText);
+        setImportedQuestionRows(importedRows);
         saveDraft();
         render();
-        builderStatus.textContent = `Imported ${importedRows.length} questionnaire rows from file. Source row and section labels are preserved in the response pack.`;
+        builderStatus.textContent = `Imported ${importedRows.length} questionnaire rows from ${originLabel}. Source row and section labels are preserved in the response pack and draft export.`;
+      }
+
+      function collectDraftState() {
+        return {
+          version: 2,
+          fields: collectFormState(),
+          importedQuestionRows
+        };
       }
 
       function clearImportedQuestions(message) {
@@ -843,7 +965,7 @@
 
       function saveDraft() {
         try {
-          window.localStorage.setItem(builderStorageKey, JSON.stringify(collectFormState()));
+          window.localStorage.setItem(builderStorageKey, JSON.stringify(collectDraftState()));
         } catch (error) {
           builderStatus.textContent = "Local save failed in this browser. Downloads still work.";
         }
@@ -855,13 +977,29 @@
           if (!raw) {
             return false;
           }
-          const fields = JSON.parse(raw);
-          Object.entries(fields).forEach(([id, fieldValue]) => {
+          const parsed = JSON.parse(raw);
+          const fields = parsed && typeof parsed === "object" && parsed.fields ? parsed.fields : parsed;
+          Object.entries(fields || {}).forEach(([id, fieldValue]) => {
             const field = document.querySelector(`#${id}`);
             if (field) {
               field.value = fieldValue;
             }
           });
+          const restoredRows = parsed && typeof parsed === "object" && Array.isArray(parsed.importedQuestionRows)
+            ? parsed.importedQuestionRows
+                .filter((row) => row && typeof row.question === "string")
+                .slice(0, 25)
+                .map((row, index) => ({
+                  sourceRow: String(row.sourceRow || index + 1),
+                  section: String(row.section || ""),
+                  question: String(row.question || "").trim(),
+                  sourceReference: String(row.sourceReference || (row.section ? `${row.sourceRow} - ${row.section}` : row.sourceRow || index + 1))
+                }))
+                .filter((row) => row.question)
+            : [];
+          if (restoredRows.length) {
+            setImportedQuestionRows(restoredRows);
+          }
           builderStatus.textContent = "Saved draft restored from this browser.";
           return true;
         } catch (error) {
@@ -879,7 +1017,8 @@
         }
       }
 
-      function applyFormState(fields) {
+      function applyDraftState(draft) {
+        const fields = draft && typeof draft === "object" && draft.fields ? draft.fields : draft;
         if (!fields || typeof fields !== "object") {
           return false;
         }
@@ -890,6 +1029,21 @@
             field.value = String(fieldValue);
           }
         });
+        const importedRows = draft && typeof draft === "object" && Array.isArray(draft.importedQuestionRows)
+          ? draft.importedQuestionRows
+              .filter((row) => row && typeof row.question === "string")
+              .slice(0, 25)
+              .map((row, index) => ({
+                sourceRow: String(row.sourceRow || index + 1),
+                section: String(row.section || ""),
+                question: String(row.question || "").trim(),
+                sourceReference: String(row.sourceReference || (row.section ? `${row.sourceRow} - ${row.section}` : row.sourceRow || index + 1))
+              }))
+              .filter((row) => row.question)
+          : [];
+        if (importedRows.length) {
+          setImportedQuestionRows(importedRows);
+        }
         saveDraft();
         render();
         return true;
@@ -900,7 +1054,7 @@
           source: "noticekit-ai-questionnaire-answer-builder",
           version: 1,
           exportedAt: new Date().toISOString(),
-          fields: collectFormState()
+          ...collectDraftState()
         };
         downloadFile(
           `${slugify(`${value("company") || "noticekit"}-${value("primary-vendor") || "ai"}-questionnaire-draft`, "noticekit-ai-questionnaire-draft")}.json`,
@@ -912,8 +1066,7 @@
       function importDraft(rawText) {
         try {
           const parsed = JSON.parse(rawText);
-          const fields = parsed && typeof parsed === "object" && parsed.fields ? parsed.fields : parsed;
-          if (!applyFormState(fields)) {
+          if (!applyDraftState(parsed)) {
             throw new Error("invalid-draft");
           }
           builderStatus.textContent = "Draft imported. Local autosave was refreshed on this device.";
@@ -2372,6 +2525,30 @@
         builderStatus.textContent = "Uploaded questionnaire metadata cleared because the pasted-question list was edited manually.";
         render();
       });
+      questionListField.addEventListener("paste", (event) => {
+        const pastedText = event.clipboardData ? event.clipboardData.getData("text/plain") : "";
+        const previewLines = pastedText.split(/\r?\n/).map((line) => line.trim()).filter(Boolean).slice(0, 3);
+        const looksTabSeparated = previewLines.length >= 2 && previewLines.every((line) => line.includes("\t"));
+        const looksCommaSeparated = previewLines.length >= 2 && previewLines.every((line) => line.split(",").length >= 2);
+        const looksSemicolonSeparated = previewLines.length >= 2 && previewLines.every((line) => line.split(";").length >= 2);
+        const looksTabular = looksTabSeparated || looksCommaSeparated || looksSemicolonSeparated;
+        if (!looksTabular) {
+          return;
+        }
+        try {
+          const importedRows = parseImportedQuestionRows(pastedText);
+          if (!importedRows.length) {
+            return;
+          }
+          event.preventDefault();
+          setImportedQuestionRows(importedRows);
+          saveDraft();
+          render();
+          builderStatus.textContent = `Imported ${importedRows.length} questionnaire rows from pasted spreadsheet data. Source row and section labels are preserved in the response pack and draft export.`;
+        } catch (error) {
+          // Fall back to normal paste if the grid does not parse cleanly.
+        }
+      });
       copyAnswerButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().answer, "AI questionnaire answer copied.");
       });
@@ -2499,7 +2676,7 @@
           return;
         }
         try {
-          importQuestionnaireRows(await file.text());
+          importQuestionnaireRows(await file.text(), "file");
         } catch (error) {
           builderStatus.textContent = "Questionnaire import failed. Use a CSV or TSV with a question or prompt column.";
         }
