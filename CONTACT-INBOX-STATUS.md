@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-18 16:31 UTC
+Checked at: 2026-06-18 20:06 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -187,6 +187,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-bundle-sample: 0
 - blog-index-ai-answer-library: 0
 - blog-index-ai-answer-library-comparison: 0
+- blog-index-ai-spreadsheet-handoff-comparison: 0
 - blog-index-ai-evidence-map: 0
 - blog-index-ai-follow-up-pack: 0
 - blog-index-ai-answer-bank: 0
@@ -285,6 +286,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-packet: 0
 - free-tools-ai-packet-sample: 0
 - free-tools-ai-comparison: 0
+- free-tools-ai-spreadsheet-comparison: 0
 - free-tools-ai-procurement-card: 0
 - free-tools-ai-inventory-template: 0
 - free-tools-generator-card: 0
@@ -1027,6 +1029,13 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-answer-bank-example: 0
 - openai-answer-bank-starter-pack: 0
 - openai-answer-bank-vs-pro-kit: 0
+- ai-spreadsheet-handoff-vs-builder-answer-bank: 0
+- ai-spreadsheet-handoff-vs-builder-builder: 0
+- ai-spreadsheet-handoff-vs-builder-bundle-sample: 0
+- ai-spreadsheet-handoff-vs-builder-evidence-map: 0
+- ai-spreadsheet-handoff-vs-builder-free-tools: 0
+- ai-spreadsheet-handoff-vs-builder-handoff-guide: 0
+- ai-spreadsheet-handoff-vs-builder-teardown: 0
 - openai-answer-bank-pricing: 0
 - openai-answer-bank-packet: 0
 - openai-answer-bank-pro-kit: 0
