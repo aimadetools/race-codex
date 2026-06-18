@@ -7,6 +7,7 @@ import { join } from "node:path";
 const ROOT = process.cwd();
 const HELP_REQUEST_FILE = join(ROOT, "HELP-REQUEST.md");
 const HELP_RESPONSES_FILE = join(ROOT, "HELP-RESPONSES.md");
+const HELP_STATUS_FILE = join(ROOT, "HELP-STATUS.md");
 const LEGACY_SCRIPT = join(ROOT, "scripts", "build-help-request-status.mjs");
 const OUTPUT = join(ROOT, "HELP-REQUEST-STATUS.md");
 
@@ -37,6 +38,39 @@ function pendingHelpResponsesState(text) {
   return pendingBullets.length > 0 ? "has-pending" : "unknown";
 }
 
+function extractOpenHelpStatusRequest(text) {
+  const openBlockMatch = String(text || "").match(/## 🔄 Open Requests[\s\S]*?(?=\n## |\n---|$)/i);
+  if (!openBlockMatch) {
+    return null;
+  }
+
+  const openBlock = openBlockMatch[0];
+
+  const sectionMatch = openBlock.match(/###\s+\[HELP\]\s+What:\s*(.+?)(?=\n\*\*Human response:|\n### |\n## |$)/i);
+  if (!sectionMatch) {
+    return null;
+  }
+
+  const what = sectionMatch[1].trim().replace(/\*\*$/, "").trim();
+  const responseMatch = openBlock.match(/\*\*Human response.*?:\*\*\s*([\s\S]*?)(?=\n-\s+\d{4}-\d{2}-\d{2}|\n### |\n## |$)/i);
+  const response = responseMatch ? responseMatch[1].trim() : "";
+  const status = /\bpending\b/i.test(response) ? "open" : /\bblocked\b/i.test(response) ? "blocked" : "open";
+  const blockers = [...new Set(
+    openBlock
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter((line) => /^-\s+Remaining blocker:/i.test(line))
+      .map((line) => line.replace(/^-\s+Remaining blocker:\s*/i, "").trim())
+  )];
+
+  return {
+    status,
+    what,
+    response,
+    blockers
+  };
+}
+
 async function writeNoActiveRequestSnapshot() {
   const checkedAt = formatUtcTimestamp(new Date());
   const output = [
@@ -62,6 +96,43 @@ async function writeNoActiveRequestSnapshot() {
   console.log(`Wrote ${OUTPUT}`);
 }
 
+async function writeOpenHelpStatusSnapshot(openRequest) {
+  const checkedAt = formatUtcTimestamp(new Date());
+  const output = [
+    "# Help Request Status",
+    "",
+    `Checked at: ${checkedAt}`,
+    "",
+    "## Current Request",
+    "",
+    `- Status: ${openRequest.status}`,
+    `- What: ${openRequest.what || "No current request found."}`,
+    "- Priority: unknown",
+    "- Time: unknown",
+    "- Budget: unknown",
+    "",
+    "- Active request source: HELP-STATUS.md",
+    "",
+    "## Resolution",
+    "",
+    openRequest.response
+      ? `- Open operator note from \`HELP-STATUS.md\`: ${openRequest.response}`
+      : "- `HELP-STATUS.md` still shows an open request, but no operator response note was extracted.",
+    ""
+  ];
+
+  if (openRequest.blockers?.length) {
+    output.push("## Open Blockers", "");
+    for (const blocker of openRequest.blockers) {
+      output.push(`- ${blocker}`);
+    }
+    output.push("");
+  }
+
+  await writeFile(OUTPUT, output.join("\n"));
+  console.log(`Wrote ${OUTPUT}`);
+}
+
 async function main() {
   const directRequestText = await readFile(HELP_REQUEST_FILE, "utf8").catch(() => "");
   if (directRequestText.trim()) {
@@ -76,6 +147,14 @@ async function main() {
   }
 
   const helpResponsesText = await readFile(HELP_RESPONSES_FILE, "utf8").catch(() => "");
+  const helpStatusText = await readFile(HELP_STATUS_FILE, "utf8").catch(() => "");
+  const openHelpStatusRequest = extractOpenHelpStatusRequest(helpStatusText);
+
+  if (openHelpStatusRequest) {
+    await writeOpenHelpStatusSnapshot(openHelpStatusRequest);
+    return;
+  }
+
   if (pendingHelpResponsesState(helpResponsesText) === "none") {
     await writeNoActiveRequestSnapshot();
     return;
