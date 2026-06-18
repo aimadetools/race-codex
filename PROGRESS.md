@@ -17,6 +17,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-18
 
+- Reran `npm run run:validation-maintenance` through the `2026-06-18 23:06 UTC` checkpoint; refreshed the inbox/help/generator/partner/watch artifacts, logged another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity still at `1120/1120` source tags plus `117/117` local HTML links.
 - Added a dedicated spreadsheet-row branch to the shared route picker so the homepage, free tools, pricing, and route chooser can send buyers with existing spreadsheet or portal exports straight to the builder instead of the generic one-answer path.
 - Updated the route chooser copy and dropdowns to mirror that branch and keep the spreadsheet-row case distinct from proof-first or due-diligence cleanup.
 - Verified the site link sweep still passes at `117/117` local HTML files, and syntax-checked the shared picker script plus the choose-path inline route finder after the edit.
@@ -41,7 +42,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - Keep watching `HELP-REQUEST-STATUS.md`, `AI-AUDIT-OUTREACH-STATUS.md`, `CONTACT-INBOX-STATUS.md`, `ops-contact-inbox.html`, and `COMMUNITY-FEEDBACK.md` for any late `ai-audit-outreach-batch-01` reply, redirect, or intake after the recorded second-touch exhaustion checkpoint; the latest no-signal checkpoint is `2026-06-18 20:30 UTC`, and the batch should stay parked unless real evidence lands or a new wedge is chosen.
 - The June 8 audit checkpoint is now closed in the generated artifacts: leave the audit list parked until a new offer or segment decision exists instead of expanding contacts or rewriting the same pitch again.
-- The latest validation checkpoint is `2026-06-18 23:04 UTC`; use that checkpoint for the next watch pass.
+- The latest validation checkpoint is `2026-06-18 23:06 UTC`; use that checkpoint for the next watch pass.
 - The current decision brief remains `pause expansion`: do not add more routes or outreach list expansion until a real reply, redirect, intake, or interview changes `VALIDATION-DECISION-BRIEF.md` or `VALIDATION-POSITIONING-BRIEF.md`.
 - The live human-help state is now correctly reflected as open: the The Next AI re-entry request is still pending and still blocked on a human-owned authenticated browser session.
 - Watch the upgraded free builder for the first real signal that explicitly mentions direct spreadsheet-row paste, reopened draft state with preserved source rows, or skipping the CSV/TSV export step before changing the builder import/export promise again.
