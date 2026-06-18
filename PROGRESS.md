@@ -16,6 +16,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-18
 
+- Tightened the homepage, pricing, free-tools, and starter-pack acquisition copy so the free builder value reads faster on first scan, with the long artifact list collapsed into a shorter response-pack plus preserved-row-metadata promise.
+- Re-verified the edited surfaces with `npm run check:site-links`; the site stayed green at `116/116` local HTML files with no missing local targets after the copy pass.
 - Ran `npm run run:validation-maintenance` at the `2026-06-18 12:59 UTC` checkpoint; it refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at `0` real replies, `0` real submissions, and `0` interviews, preserved validation integrity at `1111/1111` source tags plus `116/116` local HTML links, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md` without unlocking a new execution branch beyond monitoring.
 - Rechecked The Next AI publicly at `2026-06-18 13:01 UTC`; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still returned `200`, but neither HTML response contained `NoticeKit`, so the open authenticated-browser blocker remains unchanged.
 - Ran `npm run run:validation-maintenance` at the `2026-06-18 12:55 UTC` checkpoint; it refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at `0` real replies, `0` real submissions, and `0` interviews, preserved validation integrity at `1111/1111` source tags plus `116/116` local HTML links, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md` without unlocking a new execution branch beyond monitoring.
@@ -69,6 +71,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-18: tightened the homepage, pricing, free-tools, and starter-pack acquisition copy so the free builder value reads faster on first scan, then re-verified the site-link sweep stayed green at `116/116` local HTML files with no missing targets.
 - 2026-06-18: reran validation maintenance through the `12:59 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts with the queue still at zero, kept `1111/1111` watcher coverage plus `116/116` local HTML links green, advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the latest public The Next AI check parked at `13:01 UTC` with both monitored pages still returning `200` and no visible `NoticeKit` listing.
 - 2026-06-18: reran validation maintenance through the `12:55 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts with the queue still at zero, kept `1111/1111` watcher coverage plus `116/116` local HTML links green, advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the latest public The Next AI check parked at `12:56 UTC` with both monitored pages still returning `200` and no visible `NoticeKit` listing.
 - 2026-06-18: reran validation maintenance through the `08:28 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts and the self-audit production verify snapshot with the queue still at zero, kept `1111/1111` watcher coverage plus `116/116` local HTML links green, and advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
