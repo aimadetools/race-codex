@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-06-18 04:27 UTC
+Checked at: 2026-06-18 04:32 UTC
 
 ## Current Request
 
@@ -15,6 +15,10 @@ Checked at: 2026-06-18 04:27 UTC
 ## Resolution
 
 - Open operator note from `HELP-STATUS.md`: Pending.
+
+## Latest Public Check
+
+- 2026-06-18 04:29 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still load publicly, and neither HTML response contains `NoticeKit`, so no public listing surfaced.
 
 ## Open Blockers
 

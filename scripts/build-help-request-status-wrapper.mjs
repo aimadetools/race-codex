@@ -62,12 +62,20 @@ function extractOpenHelpStatusRequest(text) {
       .filter((line) => /^-\s+Remaining blocker:/i.test(line))
       .map((line) => line.replace(/^-\s+Remaining blocker:\s*/i, "").trim())
   )];
+  const latestPublicCheck = openBlock
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => /^-\s+\d{4}-\d{2}-\d{2}.*public web check:/i.test(line))
+    .at(0)
+    ?.replace(/^-\s+/, "")
+    .trim() || "";
 
   return {
     status,
     what,
     response,
-    blockers
+    blockers,
+    latestPublicCheck
   };
 }
 
@@ -120,6 +128,12 @@ async function writeOpenHelpStatusSnapshot(openRequest) {
       : "- `HELP-STATUS.md` still shows an open request, but no operator response note was extracted.",
     ""
   ];
+
+  if (openRequest.latestPublicCheck) {
+    output.push("## Latest Public Check", "");
+    output.push(`- ${openRequest.latestPublicCheck}`);
+    output.push("");
+  }
 
   if (openRequest.blockers?.length) {
     output.push("## Open Blockers", "");
