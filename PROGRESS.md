@@ -17,6 +17,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-18
 
+- Added a dedicated spreadsheet-row branch to the shared route picker so the homepage, free tools, pricing, and route chooser can send buyers with existing spreadsheet or portal exports straight to the builder instead of the generic one-answer path.
+- Updated the route chooser copy and dropdowns to mirror that branch and keep the spreadsheet-row case distinct from proof-first or due-diligence cleanup.
+- Verified the site link sweep still passes at `117/117` local HTML files, and syntax-checked the shared picker script plus the choose-path inline route finder after the edit.
 - Refreshed the public The Next AI checks at `2026-06-18 20:30 UTC`; `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both still returned `200` publicly, and neither page surfaced `NoticeKit`, so the batch-02 directory re-entry request remains blocked on a human-owned authenticated browser session.
 - Reran `npm run run:validation-maintenance` through the `2026-06-18 20:30 UTC` checkpoint; refreshed the inbox/help/generator/partner/watch artifacts, logged another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity still at `1120/1120` source tags plus `117/117` local HTML links.
 - Reran `npm run run:validation-maintenance` through the `2026-06-18 20:21 UTC` checkpoint; refreshed the inbox/help/generator/partner/watch artifacts, logged another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity still at `1120/1120` source tags plus `117/117` local HTML links.
@@ -61,6 +64,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-18: reran validation maintenance through the `16:14 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1111/1111` watcher coverage plus `116/116` local HTML links green with the queue still at zero.
 - 2026-06-18: tightened the homepage, pricing, free-tools, and starter-pack acquisition copy, reran validation maintenance through `16:14 UTC`, and kept `1111/1111` watcher coverage plus `116/116` local HTML links green with the queue still at zero.
 - 2026-06-18: upgraded the free AI answer builder with pasted-row, CSV/TSV, autosave, and JSON draft export/import support, and propagated the stronger spreadsheet-handling promise across the key AI entry pages.
+- 2026-06-18: added a dedicated spreadsheet-row branch to the shared route picker so buyers with a sheet or portal export can jump directly to the builder from the homepage, free tools, pricing, and route chooser, then re-verified local links and picker syntax.
 - 2026-06-17 to 2026-06-18: shipped the spreadsheet/portal-row handoff guide, wired it into the blog index and sitemap, and kept The Next AI public listing absent from the recorded checks.
 - 2026-06-14 to 2026-06-15: shipped the Gemini and Microsoft Copilot named-vendor route families, promoted the sample-bundle path, and upgraded the free answer-builder export stack.
 - 2026-06-05 to 2026-06-13: shipped the homepage/pricing/free-tools clarity passes, due-diligence route family, quick route finder, stronger free answer-builder proof, `ai-deal-blocker.html`, and route-picker/watch cleanup while the validation, inbox, and outreach stack stayed at zero.

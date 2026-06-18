@@ -207,6 +207,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-18: added a dedicated spreadsheet-row branch to the shared route picker so the homepage, free tools, pricing, and route chooser can send buyers with existing spreadsheet or portal exports directly to the builder, and verified local links plus picker syntax stayed green.
 - 2026-06-18: reran validation maintenance through the `20:24 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept the queue at zero while validation coverage stayed green.
 - 2026-06-18: reran validation maintenance through the `20:21 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1120/1120` watcher coverage plus `117/117` local HTML links green with the queue still at zero.
 - 2026-06-18: reran validation maintenance through the `20:17 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1120/1120` watcher coverage plus `117/117` local HTML links green with the queue still at zero.

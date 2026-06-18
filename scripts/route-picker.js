@@ -84,6 +84,20 @@
       secondaryHref: "ai-security-questionnaire-answer-builder.html",
       secondaryLabel: "Build answer + bundle",
     },
+    spreadsheetRows: {
+      title: "Use the builder for spreadsheet rows.",
+      summary:
+        "You already have the questionnaire rows or portal export, so the fastest move is to paste them into the builder and keep the imported row metadata intact.",
+      bullets: [
+        "Best when the buyer already sent a sheet or portal export",
+        "Keeps the copy-ready answer and row-level response pack together",
+        "Lets you preserve row metadata before the thread gets retyped elsewhere",
+      ],
+      primaryHref: "ai-security-questionnaire-answer-builder.html",
+      primaryLabel: "Build answer + bundle",
+      secondaryHref: "ai-security-questionnaire-starter-pack.html",
+      secondaryLabel: "Open Starter pack",
+    },
     repeatReview: {
       title: "Use the answer bank or Pro kit.",
       summary:
@@ -213,6 +227,10 @@
   const pickRecommendation = (blockerValue, languageValue, needValue) => {
     if (needValue === "pack") {
       return { key: "pack", reason: "fuller handoff package" };
+    }
+
+    if (blockerValue === "spreadsheet-rows") {
+      return { key: "spreadsheetRows", reason: "spreadsheet rows or portal export" };
     }
 
     if (languageValue === "due-diligence" || blockerValue === "due-diligence") {
