@@ -207,6 +207,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-18: added the spreadsheet-handoff-vs-builder comparison route, wired it into the blog index, free-tools hub, and spreadsheet handoff guide, and verified `117/117` local HTML links stayed green with no missing targets.
 - 2026-06-18: reran validation maintenance through the `16:26 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and preserved `1111/1111` watcher coverage plus `116/116` local HTML links while advancing the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - 2026-06-18: reran validation maintenance through the `16:14 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, kept the queue at zero, and preserved `1111/1111` watcher coverage plus `116/116` local HTML links while advancing the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - 2026-06-18: tightened the homepage, pricing, free-tools, and starter-pack acquisition copy so the free builder value reads faster on first scan, then re-verified the site-link sweep stayed green at `116/116` local HTML files with no missing targets.
