@@ -35,6 +35,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-19
 
+- Promoted the exact-match Claude route deeper into the receiver-side path surfaces by adding direct Claude template, example, answer bank, and route guide links to `start-here.html` and the AI answer library, and surfaced the Claude template earlier in the AI procurement hub.
+- Rechecked the site with `node scripts/check-site-links.mjs`; all `122/122` local HTML files still resolve cleanly after the copy and navigation update.
 - Reran `npm run run:validation-maintenance` at the `2026-06-19 16:30 UTC` checkpoint; refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity holding at `1198/1198` source tags plus `122/122` local HTML links.
 - Reran `npm run run:validation-maintenance` at the `2026-06-19 16:28 UTC` checkpoint; refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity holding at `1198/1198` source tags plus `122/122` local HTML links.
 - Reran `npm run run:validation-maintenance` at the `2026-06-19 16:22 UTC` checkpoint; refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity holding at `1198/1198` source tags plus `122/122` local HTML links.
@@ -70,6 +72,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-19: promoted exact-match Claude links deeper into `start-here.html`, the AI answer library, and the AI procurement hub, then rechecked local links at `122/122`.
 - 2026-06-19: reran validation maintenance at the `16:30 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log, and kept `1198/1198` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
 - 2026-06-19: reran validation maintenance at the `16:28 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log, and kept `1198/1198` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
 - 2026-06-19: reran validation maintenance at the `16:22 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log, and kept `1198/1198` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
