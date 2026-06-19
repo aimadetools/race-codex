@@ -213,6 +213,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-19: tightened the shared route-picker precedence so specific blockers outrank the generic sample-bundle fallback, aligned the free-tools structured data with the visible deal-blocker-first hierarchy, and rechecked local links at `122/122`.
 - 2026-06-19: reran validation maintenance at the `20:28 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, logged the deduplicated no-reply checkpoint, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
 - 2026-06-19: reran validation maintenance at the `20:20 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, logged the deduplicated no-reply checkpoint, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
 - 2026-06-19: earlier maintenance and route-copy passes across the `04:11 UTC` to `20:14 UTC` checkpoints kept the queue at zero, repaired Claude and spreadsheet-row watcher coverage, and tightened the receiver-side route surfaces.

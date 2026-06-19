@@ -315,21 +315,7 @@
             secondaryLabel: "Build answer + bundle"
           };
 
-          if (needValue === "pack") {
-            recommendation = {
-              title: "Inspect the sample bundle first.",
-              summary: "You asked for a fuller handoff package, so show the exact bundle shape before you ask for checkout.",
-              bullets: [
-                "Best when the buyer wants more than one paragraph",
-                "Use the sample bundle to inspect the artifact shape",
-                "Move into the packet builder if the thread is already procurement-sized"
-              ],
-              primaryHref: "ai-security-questionnaire-starter-bundle-sample.html",
-              primaryLabel: "Open sample bundle",
-              secondaryHref: "ai-due-diligence-packet-builder.html",
-              secondaryLabel: "Build due diligence packet"
-            };
-          } else if (languageValue === "due-diligence") {
+          if (languageValue === "due-diligence") {
             recommendation = {
               title: "Use the due diligence route.",
               summary: "The buyer is already speaking procurement language, so keep the thread in the due-diligence template, scorecard, or packet builder instead of forcing it back into a shorter answer path.",
@@ -440,6 +426,20 @@
               primaryLabel: "Open deal blocker path",
               secondaryHref: "ai-security-questionnaire-audit.html",
               secondaryLabel: "See audit details"
+            };
+          } else if (needValue === "pack") {
+            recommendation = {
+              title: "Inspect the sample bundle first.",
+              summary: "You asked for a fuller handoff package, so show the exact bundle shape before you ask for checkout.",
+              bullets: [
+                "Best when the buyer wants more than one paragraph",
+                "Use the sample bundle to inspect the artifact shape",
+                "Move into the packet builder if the thread is already procurement-sized"
+              ],
+              primaryHref: "ai-security-questionnaire-starter-bundle-sample.html",
+              primaryLabel: "Open sample bundle",
+              secondaryHref: "ai-due-diligence-packet-builder.html",
+              secondaryLabel: "Build due diligence packet"
             };
           }
 

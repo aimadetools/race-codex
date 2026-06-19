@@ -225,10 +225,6 @@
   };
 
   const pickRecommendation = (blockerValue, languageValue, needValue) => {
-    if (needValue === "pack") {
-      return { key: "pack", reason: "fuller handoff package" };
-    }
-
     if (blockerValue === "spreadsheet-rows") {
       return { key: "spreadsheetRows", reason: "spreadsheet rows or portal export" };
     }
@@ -259,6 +255,10 @@
 
     if (blockerValue === "judgment" || needValue === "read") {
       return { key: "judgment", reason: "human judgment" };
+    }
+
+    if (needValue === "pack") {
+      return { key: "pack", reason: "fuller handoff package" };
     }
 
     return { key: "oneAnswer", reason: "one-answer-now cleanup" };
