@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-19 04:28 UTC
+Checked at: 2026-06-19 08:06 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -284,6 +284,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-anthropic-answer-template: 0
 - free-tools-anthropic-answer-example: 0
 - free-tools-anthropic-answer-bank: 0
+- free-tools-claude-answer-template: 0
+- free-tools-claude-answer-example: 0
+- free-tools-claude-answer-bank: 0
 - ai-answer-library-claude-template: 0
 - ai-answer-library-claude-answer-bank: 0
 - free-tools-named-vendor-path-guide: 0
@@ -377,6 +380,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-ai-risk-worksheet: 0
 - start-here-ai-disclosure-packet: 0
 - start-here-ai-packet-sample: 0
+- start-here-ai-route-claude-template: 0
 - start-here-ai-stack-guide: 0
 - start-here-ai-starter-pack-comparison: 0
 - monitoring-comparison: 0
@@ -418,6 +422,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-route-anthropic-example: 0
 - homepage-ai-route-anthropic-answer-bank: 0
 - homepage-ai-route-anthropic-path-guide: 0
+- homepage-ai-route-claude-template: 0
+- homepage-ai-route-claude-example: 0
+- homepage-ai-route-claude-answer-bank: 0
+- homepage-ai-route-claude-path-guide: 0
 - ai-deal-blocker-builder: 0
 - ai-deal-blocker-answer-bank: 0
 - ai-deal-blocker-evidence-map: 0
@@ -728,6 +736,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - anthropic-answer-bank-pricing: 0
 - anthropic-answer-bank-vs-builder-pricing: 0
 - anthropic-path-guide-pricing: 0
+- pricing-claude-answer-template: 0
+- pricing-claude-answer-bank: 0
+- pricing-claude-path-guide: 0
 - pricing-ai-questionnaire: 0
 - pricing-ai-questionnaire-example: 0
 - pricing-ai-packet-sample: 0
@@ -1005,6 +1016,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-anthropic-answer-example: 0
 - ai-procurement-hub-anthropic-answer-bank: 0
 - ai-procurement-hub-anthropic-path-guide: 0
+- ai-procurement-hub-claude-answer-template: 0
+- ai-procurement-hub-claude-answer-example: 0
+- ai-procurement-hub-claude-answer-bank: 0
+- ai-procurement-hub-claude-path-guide: 0
 - ai-starter-pack-vs-builder: 0
 - ai-procurement-hub-answer-example: 0
 - ai-procurement-hub-answer-builder: 0

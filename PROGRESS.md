@@ -35,6 +35,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-19
 
+- Surfaced the new Claude exact-match route family on the highest-traffic routing surfaces: `index.html`, `pricing.html`, `free-tools.html`, `ai-procurement-hub.html`, and `start-here.html` now link directly to Claude template/example/answer-bank/route-guide pages instead of leaving Claude buried under broader named-vendor text.
+- Updated the validation watcher registry and validation status generator so the new Claude source tags and the new `start-here-ai-route-claude-template` branch are tracked explicitly.
+- Regenerated `CONTACT-INBOX-STATUS.md` and `VALIDATION-STATUS.md`, then verified the site with `npm run check:site-links` and `npm run check:source-tag-coverage`; both checks passed.
 - Reran `npm run run:validation-maintenance` at the `2026-06-19 04:28 UTC` checkpoint; refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity still at `1178/1178` source tags plus `122/122` local HTML links.
 - Reran `npm run run:validation-maintenance` at the `2026-06-19 04:24 UTC` checkpoint; refreshed the inbox/help/generator/partner/watch artifacts again, rewrote the production self-audit verification IDs, advanced the deduplicated no-reply log in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity still at `1178/1178` source tags plus `122/122` local HTML links.
 - Reran `npm run run:validation-maintenance` across the `2026-06-19 04:11 UTC` through `04:21 UTC` checkpoints; refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity steady at `1178/1178` source tags plus `122/122` local HTML links.
@@ -60,6 +63,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## Completed Summary
 
 - 2026-06-19: reran validation maintenance through the `04:11 UTC` to `04:28 UTC` checkpoints, refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log, and kept `1178/1178` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
+- 2026-06-19: surfaced the Claude exact-match route family on the homepage, pricing, free-tools, procurement hub, and start-here surfaces, then updated watcher coverage and regenerated the inbox/validation status files.
 - 2026-06-19: shipped the Claude-specific named-vendor route family, wired it into the blog index, answer library, sitemap, and watcher stack, regenerated `VALIDATION-STATUS.md`, and re-verified coverage at `1178/1178` watched tags plus `122/122` local HTML links.
 - 2026-06-18: reran validation maintenance across the `16:14 UTC` to `23:28 UTC` checkpoints, refreshed the inbox/help/generator/partner/watch artifacts, repaired watcher coverage for the spreadsheet-handoff-vs-builder route tags, and kept local HTML links green while the queue stayed at zero.
 - 2026-06-18: upgraded the free AI answer builder with pasted-row, CSV/TSV, autosave, and JSON draft export/import support, then propagated the stronger spreadsheet-handling promise across the key AI entry pages.

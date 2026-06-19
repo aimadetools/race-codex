@@ -210,6 +210,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-19: surfaced the Claude exact-match route family on the homepage, pricing, free-tools, procurement hub, and start-here pages, then updated the validation watcher registry and regenerated the inbox/validation status snapshots.
 - 2026-06-19: reran validation maintenance through the `04:11 UTC` to `04:28 UTC` checkpoints, refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log, and kept `1178/1178` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
 - 2026-06-19: shipped the Claude-specific named-vendor route family, wired it into the blog index, answer library, sitemap, and watcher stack, regenerated `VALIDATION-STATUS.md`, and verified `1178/1178` source-tag coverage plus `122/122` local HTML links.
 - 2026-06-18: ran the spreadsheet-row import and handoff push across the builder, route chooser, free-tools hub, procurement hub, blog, and validation stack while holding watcher coverage and local-link checks green.
