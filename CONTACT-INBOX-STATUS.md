@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-18 23:28 UTC
+Checked at: 2026-06-19 04:11 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -104,6 +104,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-answer-bank-nav-audit: 0
 - anthropic-answer-template-nav-audit: 0
 - anthropic-answer-bank-nav-audit: 0
+- claude-answer-template-nav-audit: 0
+- claude-answer-bank-nav-audit: 0
 - blog-ai-agent-approval-gate-nav-audit: 0
 - blog-ai-agent-checklist-nav-audit: 0
 - blog-ai-agent-tool-access-nav-audit: 0
@@ -129,6 +131,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-anthropic-bank-vs-builder-nav-audit: 0
 - blog-anthropic-answer-example-nav-audit: 0
 - blog-anthropic-path-guide-nav-audit: 0
+- blog-claude-bank-vs-builder-nav-audit: 0
+- blog-claude-answer-example-nav-audit: 0
+- blog-claude-path-guide-nav-audit: 0
 - free-teardown-nav-audit: 0
 - generator-nav-audit: 0
 - partner-client-handoff-nav-audit: 0
@@ -279,6 +284,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-anthropic-answer-template: 0
 - free-tools-anthropic-answer-example: 0
 - free-tools-anthropic-answer-bank: 0
+- ai-answer-library-claude-template: 0
+- ai-answer-library-claude-answer-bank: 0
 - free-tools-named-vendor-path-guide: 0
 - free-tools-ai-questionnaire-template: 0
 - free-tools-ai-questionnaire-example: 0
@@ -677,6 +684,11 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-anthropic-bank-vs-builder-nav-audit: 0
 - blog-anthropic-answer-example-nav-audit: 0
 - blog-anthropic-path-guide-nav-audit: 0
+- claude-answer-template-nav-audit: 0
+- claude-answer-bank-nav-audit: 0
+- blog-claude-bank-vs-builder-nav-audit: 0
+- blog-claude-answer-example-nav-audit: 0
+- blog-claude-path-guide-nav-audit: 0
 - free-teardown-nav-audit: 0
 - generator-nav-audit: 0
 - partner-client-handoff-nav-audit: 0
@@ -854,6 +866,15 @@ Source of truth: Vercel Blob `contact-submissions/`
 - anthropic-path-guide-answer-comparison: 0
 - anthropic-path-guide-generic: 0
 - anthropic-path-guide-hub: 0
+- claude-path-guide-template: 0
+- claude-path-guide-example: 0
+- claude-path-guide-answer-bank: 0
+- claude-path-guide-answer-comparison: 0
+- claude-path-guide-builder: 0
+- claude-path-guide-evidence-map: 0
+- claude-path-guide-generic: 0
+- claude-path-guide-hub: 0
+- claude-path-guide-pricing: 0
 - ai-agent-review-builder: 0
 - ai-agent-review-approval-gate: 0
 - ai-agent-review-follow-up-pack: 0
@@ -943,6 +964,23 @@ Source of truth: Vercel Blob `contact-submissions/`
 - anthropic-security-questionnaire-example-starter-pack: 0
 - anthropic-security-questionnaire-example-teardown: 0
 - blog-anthropic-example-evidence-map: 0
+- claude-security-questionnaire-template-builder: 0
+- claude-security-questionnaire-template-evidence-map: 0
+- claude-security-questionnaire-template-example: 0
+- claude-security-questionnaire-template-answer-bank: 0
+- claude-security-questionnaire-template-comparison: 0
+- claude-security-questionnaire-template-starter-pack: 0
+- claude-security-questionnaire-template-teardown: 0
+- claude-security-questionnaire-template-pricing: 0
+- claude-security-questionnaire-example-builder: 0
+- claude-security-questionnaire-example-template: 0
+- claude-security-questionnaire-example-answer-bank: 0
+- claude-security-questionnaire-example-comparison: 0
+- claude-security-questionnaire-example-packet: 0
+- claude-security-questionnaire-example-starter-pack: 0
+- claude-security-questionnaire-example-teardown: 0
+- claude-security-questionnaire-example-pricing: 0
+- blog-claude-example-evidence-map: 0
 - ai-security-questionnaire-sample: 0
 - ai-security-questionnaire-stack: 0
 - ai-security-questionnaire-teardown: 0
@@ -1072,6 +1110,27 @@ Source of truth: Vercel Blob `contact-submissions/`
 - anthropic-answer-bank-vs-builder-pricing: 0
 - anthropic-answer-bank-vs-builder-evidence-map: 0
 - anthropic-answer-bank-vs-builder-bundle-sample: 0
+- claude-answer-bank-builder: 0
+- claude-answer-bank-template: 0
+- claude-answer-bank-example: 0
+- claude-answer-bank-starter-pack: 0
+- claude-answer-bank-vs-builder: 0
+- claude-answer-bank-vs-pro-kit: 0
+- claude-answer-bank-pricing: 0
+- claude-answer-bank-packet: 0
+- claude-answer-bank-pro-kit: 0
+- claude-answer-bank-risk-worksheet: 0
+- claude-answer-bank-teardown: 0
+- claude-answer-bank-evidence-map: 0
+- claude-answer-bank-vs-builder-bank: 0
+- claude-answer-bank-vs-builder-builder: 0
+- claude-answer-bank-vs-builder-template: 0
+- claude-answer-bank-vs-builder-example: 0
+- claude-answer-bank-vs-builder-starter-pack: 0
+- claude-answer-bank-vs-builder-teardown: 0
+- claude-answer-bank-vs-builder-pricing: 0
+- claude-answer-bank-vs-builder-evidence-map: 0
+- claude-answer-bank-vs-builder-bundle-sample: 0
 - openai-path-guide-template: 0
 - openai-path-guide-example: 0
 - openai-path-guide-answer-bank: 0
@@ -1168,6 +1227,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-gemini-answer-example: 0
 - blog-index-gemini-answer-template: 0
 - blog-index-gemini-path-guide: 0
+- blog-index-claude-answer-template: 0
+- blog-index-claude-answer-example: 0
+- blog-index-claude-answer-bank: 0
+- blog-index-claude-path-guide: 0
 - free-tools-gemini-answer-bank: 0
 - free-tools-gemini-answer-example: 0
 - free-tools-gemini-answer-template: 0
