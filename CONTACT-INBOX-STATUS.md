@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-19 12:58 UTC
+Checked at: 2026-06-19 16:06 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -254,6 +254,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-hero-ai-procurement: 0
 - free-tools-ai-stack-guide: 0
 - free-tools-ai-deal-blocker: 0
+- free-tools-spreadsheet-rows: 0
 - free-tools-dpa-clause-intake: 0
 - free-tools-dpa-clause-intake-legacy: 0
 - free-teardown-ai-procurement: 0
@@ -370,6 +371,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-ai-due-diligence-packet-builder: 0
 - start-here-ai-framework-map: 0
 - start-here-ai-deal-blocker: 0
+- start-here-spreadsheet-rows: 0
 - start-here-ai-answer-bank: 0
 - start-here-ai-answer-library: 0
 - start-here-ai-evidence-map: 0
@@ -407,6 +409,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-job-repeat-review: 0
 - homepage-job-due-diligence: 0
 - homepage-job-subprocessor: 0
+- homepage-spreadsheet-rows: 0
 - homepage-ai-route-one-answer: 0
 - homepage-ai-route-repeat-review: 0
 - homepage-ai-evidence-map: 0
@@ -438,6 +441,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-deal-blocker-bundle-sample: 0
 - ai-deal-blocker-comparison: 0
 - ai-deal-blocker-pricing: 0
+- ai-deal-blocker-spreadsheet-rows: 0
 - homepage-hero-builder: 0
 - homepage-hero-answer-bank: 0
 - homepage-hero-evidence-map: 0
@@ -509,6 +513,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-due-diligence-scorecard: 0
 - pricing-ai-due-diligence-packet-builder: 0
 - pricing-ai-framework-map: 0
+- pricing-spreadsheet-rows: 0
 - ai-procurement-hub-answer-library: 0
 - ai-procurement-hub-answer-library-comparison: 0
 - ai-procurement-hub-due-diligence: 0
