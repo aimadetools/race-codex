@@ -877,6 +877,8 @@ const auditRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "openai-answer-bank-nav-audit", label: "OpenAI answer-bank nav" },
   { tag: "anthropic-answer-template-nav-audit", label: "Anthropic template nav" },
   { tag: "anthropic-answer-bank-nav-audit", label: "Anthropic answer-bank nav" },
+  { tag: "claude-answer-template-nav-audit", label: "Claude template nav" },
+  { tag: "claude-answer-bank-nav-audit", label: "Claude answer-bank nav" },
   { tag: "blog-ai-agent-approval-gate-nav-audit", label: "AI blog approval-gate nav" },
   { tag: "blog-ai-agent-checklist-nav-audit", label: "AI blog checklist nav" },
   { tag: "blog-ai-agent-tool-access-nav-audit", label: "AI blog tool-access nav" },
@@ -902,6 +904,9 @@ const auditRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "blog-anthropic-bank-vs-builder-nav-audit", label: "Anthropic blog bank-vs-builder nav" },
   { tag: "blog-anthropic-answer-example-nav-audit", label: "Anthropic blog answer-example nav" },
   { tag: "blog-anthropic-path-guide-nav-audit", label: "Anthropic blog path-guide nav" },
+  { tag: "blog-claude-bank-vs-builder-nav-audit", label: "Claude blog bank-vs-builder nav" },
+  { tag: "blog-claude-answer-example-nav-audit", label: "Claude blog answer-example nav" },
+  { tag: "blog-claude-path-guide-nav-audit", label: "Claude blog path-guide nav" },
   { tag: "free-teardown-nav-audit", label: "free teardown nav" },
   { tag: "generator-nav-audit", label: "generator nav" },
   { tag: "partner-client-handoff-nav-audit", label: "partner handoff nav" },
@@ -1003,6 +1008,24 @@ const anthropicWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "ai-path-guide-anthropic-example", label: "generic path-guide example" },
   { tag: "ai-path-guide-anthropic-route-guide", label: "generic path-guide route guide" }
 ]);
+const claudeWatch = buildWatchedSourceGroup(contactInboxStatusText, [
+  { tag: "blog-index-claude-answer-template", label: "blog template" },
+  { tag: "blog-index-claude-answer-example", label: "blog example" },
+  { tag: "blog-index-claude-answer-bank", label: "blog answer-bank" },
+  { tag: "blog-index-claude-path-guide", label: "blog path-guide" },
+  { tag: "ai-answer-library-claude-template", label: "library template" },
+  { tag: "ai-answer-library-claude-answer-bank", label: "library answer-bank" },
+  { tag: "claude-path-guide-template", label: "path-guide template" },
+  { tag: "claude-path-guide-example", label: "path-guide example" },
+  { tag: "claude-path-guide-answer-bank", label: "path-guide answer-bank" },
+  { tag: "claude-path-guide-answer-comparison", label: "path-guide comparison" },
+  { tag: "claude-security-questionnaire-template-builder", label: "template builder" },
+  { tag: "claude-security-questionnaire-template-example", label: "template example" },
+  { tag: "claude-security-questionnaire-template-answer-bank", label: "template answer-bank" },
+  { tag: "claude-security-questionnaire-example-builder", label: "example builder" },
+  { tag: "claude-security-questionnaire-example-answer-bank", label: "example answer-bank" },
+  { tag: "claude-answer-bank-builder", label: "answer-bank builder" }
+]);
 const benchmarkRouteWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "benchmark-outreach-batch-01", label: "outreach batch" },
   { tag: "benchmark-outreach-report", label: "outreach report" },
@@ -1075,6 +1098,7 @@ const output = [
   renderWatchedSourceGroup("AI-agent gap-read inbox submissions", aiAgentGapReadWatch),
   renderWatchedSourceGroup("OpenAI route inbox submissions", openAiWatch),
   renderWatchedSourceGroup("Anthropic route inbox submissions", anthropicWatch),
+  renderWatchedSourceGroup("Claude route inbox submissions", claudeWatch),
   renderWatchedSourceGroup("Benchmark-led route inbox submissions", benchmarkRouteWatch),
   "",
   "## Reply Watch",

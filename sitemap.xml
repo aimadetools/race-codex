@@ -163,6 +163,36 @@
     <priority>0.83</priority>
   </url>
   <url>
+    <loc>https://noticekit.tech/claude-security-questionnaire-answer-template.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/blog-claude-security-questionnaire-answer-example.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/claude-security-questionnaire-answer-bank.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/blog-claude-security-questionnaire-answer-bank-vs-builder.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.83</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/blog-claude-security-questionnaire-path-guide.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.83</priority>
+  </url>
+  <url>
     <loc>https://noticekit.tech/gemini-security-questionnaire-answer-template.html</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>weekly</changefreq>
