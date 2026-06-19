@@ -35,6 +35,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-19
 
+- Surfaced the spreadsheet-row paste route as a first-class button on the homepage, pricing, start-here, free-tools, and deal-blocker pages so the builder is easier to reach when the buyer already sent a sheet or portal export.
 - Reran `npm run run:validation-maintenance` at the `2026-06-19 12:58 UTC` checkpoint after the earlier `12:38 UTC` through `12:54 UTC` midday pass; refreshed the inbox/help/generator/partner/watch artifacts again, rewrote the production self-audit verification snapshot, appended the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews with validation integrity still at `1193/1193` source tags plus `122/122` local HTML links.
 - The public The Next AI blocker check still stands from `2026-06-19 12:43 UTC`: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly without surfacing `NoticeKit`, so the re-entry request remains blocked on a human-owned authenticated browser session.
 - Tightened the top-of-funnel positioning on `index.html`, `start-here.html`, and `pricing.html` around one audience and three jobs (`one answer now`, `inventory first`, `repeat review`), replaced the old homepage notice-preview widget with an AI questionnaire quickstart panel, and restored the required watcher links after coverage flagged the missing `homepage-job-due-diligence` and `pricing-route-chooser` tags.
@@ -60,6 +61,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-19: surfaced the spreadsheet-row paste route on the homepage, pricing, start-here, free-tools, and deal-blocker pages so buyers who already have sheet or portal exports can reach the builder faster.
 - 2026-06-19: reran validation maintenance at the `12:58 UTC` checkpoint, refreshed the generated inbox/help/generator/partner/watch artifacts plus the self-audit production verification snapshot, advanced the deduplicated no-reply log, and kept `1193/1193` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
 - 2026-06-19: reran validation maintenance across the `12:38 UTC` to `12:54 UTC` checkpoints, refreshed the inbox/help/generator/partner/watch artifacts, rewrote the production self-audit verification and status snapshots, refreshed the public The Next AI check at `12:43 UTC`, and kept `1193/1193` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
 - 2026-06-19: reran validation maintenance repeatedly across the `08:09 UTC` to `08:43 UTC` checkpoints, refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log, and kept `1193/1193` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
