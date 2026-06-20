@@ -169,6 +169,14 @@
       root: "[data-route-picker='pricing']",
       sourceTag: "pricing-route-picker",
     },
+    {
+      root: "[data-route-picker='start-here']",
+      sourceTag: "start-here-route-picker",
+    },
+    {
+      root: "[data-route-picker='ai-procurement-hub']",
+      sourceTag: "ai-procurement-hub-route-picker",
+    },
   ];
 
   const withSource = (href, sourceTag) => {

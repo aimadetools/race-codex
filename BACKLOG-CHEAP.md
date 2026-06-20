@@ -219,6 +219,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-20: expanded the shared route picker into `start-here.html` and `ai-procurement-hub.html`, wired the new pages into the common picker script, and rechecked site links plus source-tag coverage after the UX update.
 - 2026-06-20: promoted the spreadsheet-row builder route into the shared chooser and free-tools route finder so live sheet or portal-export users now have a dedicated first-class path instead of the generic one-answer lane.
 - 2026-06-20: shipped the security questionnaire automation guide and added tracked entry links from blog, homepage, free-tools, start-here, answer-library, and procurement-hub surfaces so commercial-search intent can be measured separately from the older route and comparison pages.
 - 2026-06-20: reran validation maintenance through the `13:00 UTC` generated checkpoints, refreshed the inbox/help/generator/partner/watch artifacts, reverified the live self-audit production path plus generator smoke/handoff checks, preserved the open The Next AI re-entry blocker, and kept the zero-signal state intact while validation moved from `1203/1203` watched tags and `122/122` local HTML links to `1217` emitted source tags and `123` checked HTML files.

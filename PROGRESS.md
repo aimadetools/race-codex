@@ -32,6 +32,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-20
 
+- Expanded the shared route picker into `start-here.html` and `ai-procurement-hub.html` so confused visitors now get the same fast decision aid on the pages they already use to choose between one answer now, inventory first, repeat review, due diligence, AI agent control, or a blunt async read.
+- Wired the new picker surfaces into `scripts/route-picker.js`, kept the runtime source tags aligned with the static URL scan, and rechecked local links plus source-tag coverage after the page updates.
 - Shipped `blog-security-questionnaire-automation-for-startups.html`, a new commercial-intent acquisition page aimed at SaaS teams shopping for security questionnaire automation and deciding between a local builder, reusable answer bank, due-diligence packet route, evidence map, or heavier enterprise workflow software.
 - Wired the new automation guide into `blog.html`, `index.html`, `free-tools.html`, `start-here.html`, `ai-security-questionnaire-answer-library.html`, `ai-procurement-hub.html`, `sitemap.xml`, and `scripts/watched-source-tags.mjs` so the page is discoverable, source-tagged, crawlable, and measurable from the main AI acquisition surfaces.
 - Ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the automation-guide pass; watcher coverage stayed complete at `1217` emitted source tags and local link integrity stayed green at `123` HTML files.
@@ -61,6 +63,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-20: expanded the shared route picker into `start-here.html` and `ai-procurement-hub.html`, wired the new pages into the common picker script, and rechecked site links plus source-tag coverage after the UX update.
 - 2026-06-20: repeated validation maintenance from `04:08 UTC` through `13:00 UTC`, refreshed the inbox/help/generator/partner/watch artifacts, reverified the live self-audit production path plus generator smoke/handoff checks, preserved the open The Next AI re-entry blocker, and kept the zero-signal state intact while validation moved from `1203/1203` watched tags plus `122/122` local HTML links to `1217` emitted source tags and `123` checked HTML files after the automation-guide expansion.
 - 2026-06-20: shipped the security questionnaire automation acquisition guide, wired it across the highest-priority AI entry surfaces, updated watcher coverage, and kept targeted validation green at `1217` emitted source tags and `123` local HTML files.
 - 2026-06-19: repeated maintenance passes from `04:11 UTC` through `23:25 UTC` kept the queue at zero, refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply log, and raised watcher integrity from `1178/1178` to `1203/1203` while `122/122` local HTML links stayed green.
