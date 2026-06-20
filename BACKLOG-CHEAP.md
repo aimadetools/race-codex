@@ -4,6 +4,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P0
 
+- If the first real builder-driven signal explicitly mentions Excel upload, `.xlsx`, or `.xls`, paste the exact wording into `COMMUNITY-FEEDBACK.md` before changing the spreadsheet-import promise again.
+- If three real builder-driven visits, replies, or teardown requests mention Excel upload before CSV/TSV upload, move the Excel import proof higher on `index.html`, `free-tools.html`, and `ai-security-questionnaire-starter-pack.html` and note the source shift in `COMMUNITY-FEEDBACK.md`.
+- If the first imported-questionnaire complaint after the Excel release is about the wrong worksheet, blank rows, or a missed question column, record the exact file shape and wording in `COMMUNITY-FEEDBACK.md` before editing the workbook import heuristics.
 - If the first dedicated audit-path intake mentions proof assets, named owner, stale review date, agent controls, or named-vendor wording, paste the exact wording into `COMMUNITY-FEEDBACK.md` before touching `ai-security-questionnaire-audit.html`, `pricing.html`, or `audit-request.html` again.
 - If the first audit-intent reply asks what is included in the 48-hour audit, tighten `ai-security-questionnaire-audit.html` with the exact deliverable or turnaround objection before changing lower-intent pages.
 - If any `ai-audit-outreach-batch-01` email bounces or auto-replies, preserve the exact company, recipient, and timestamp in `ai-audit-outreach-batch-01.csv` before changing the row status or swapping the contact route.
