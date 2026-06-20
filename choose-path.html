@@ -42,7 +42,7 @@
           <div>
             <span class="eyebrow">Route chooser</span>
             <h1>Pick the shortest path before the review widens.</h1>
-            <p class="hero-copy">NoticeKit works best when you match the artifact to the blocker. Use inventory when the facts are messy, due diligence when the buyer is already speaking procurement, Starter when one answer is blocking the deal, Pro when the same questions keep returning, and the AI deal blocker path when the thread needs judgment instead of another template. If one live spreadsheet or portal export is the blocker, the builder route now supports CSV, TSV, or Excel questionnaire upload, preserved row references, plus a pasted-question response pack and imported-row preview. If you want the fuller route map after that, jump into the AI procurement hub from the chooser.</p>
+            <p class="hero-copy">NoticeKit works best when you match the artifact to the blocker. Use inventory when the facts are messy, due diligence when the buyer is already speaking procurement, Starter when one answer is blocking the deal, Pro when the same questions keep returning, and the AI deal blocker path when the thread needs judgment instead of another template. If the buyer already sent spreadsheet rows or a portal export, the builder route keeps the row metadata intact while handling CSV, TSV, and Excel questionnaire upload. If you want the fuller route map after that, jump into the AI procurement hub from the chooser.</p>
             <div class="hero-actions">
               <a class="button" href="ai-deal-blocker.html?source=route-chooser-deal-blocker">Open deal blocker path</a>
               <a class="button" href="blog-ai-vendor-inventory-template.html?source=route-chooser-inventory">Open inventory workspace</a>
@@ -96,9 +96,9 @@
                 <label for="route-blocker">Primary blocker
                   <select id="route-blocker">
                     <option value="one-answer">One live answer is blocking the deal</option>
+                    <option value="spreadsheet-rows">The buyer already sent spreadsheet rows</option>
                     <option value="repeat-review">The same review keeps coming back</option>
                     <option value="proof">The answer exists, but proof is missing</option>
-                    <option value="spreadsheet-rows">The buyer already sent spreadsheet rows</option>
                     <option value="due-diligence">The buyer wants vendor chain or framework coverage</option>
                     <option value="inventory">The stack facts are still messy</option>
                     <option value="agent">The blocker is AI agent controls</option>
@@ -156,7 +156,12 @@
                 <tr>
                   <td>One live questionnaire answer is blocking the deal</td>
                   <td><a href="ai-security-questionnaire-starter-pack.html?source=route-chooser-starter-pack">Starter pack</a></td>
-                  <td>It gets you a copy-ready answer block plus a handoff bundle, pasted-question response pack, CSV, TSV, or Excel import path, and imported-row preview for the first buyer thread.</td>
+                  <td>It gets you a copy-ready answer block plus a handoff bundle for the first buyer thread.</td>
+                </tr>
+                <tr>
+                  <td>The buyer already sent spreadsheet rows or a portal export</td>
+                  <td><a href="ai-security-questionnaire-answer-builder.html?source=route-chooser-builder">Answer builder</a></td>
+                  <td>It keeps the imported row metadata intact while turning the live sheet or export into a copy-ready answer, response pack, and portable draft.</td>
                 </tr>
                 <tr>
                   <td>The buyer wants vendor chain, framework notes, approval owner, or escalation path</td>

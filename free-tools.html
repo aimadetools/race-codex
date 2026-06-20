@@ -414,6 +414,7 @@
               <div class="route-presets" aria-label="Quick route presets">
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="files-now" data-route-frequency="once">AI inventory first</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="once">AI answer now</button>
+                <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="spreadsheet-rows" data-route-frequency="once">Spreadsheet rows</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="proof-pack" data-route-frequency="once">AI proof first</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="due-diligence" data-route-frequency="once">AI due diligence</button>
                 <button class="button secondary" type="button" data-route-topic="ai-procurement" data-route-role="founder" data-route-need="written-answer" data-route-frequency="repeat">AI repeated review</button>
@@ -442,6 +443,7 @@
                 <label>What do you need now?
                   <select id="route-need">
                     <option value="written-answer">A written answer before I buy</option>
+                    <option value="spreadsheet-rows">The buyer already sent spreadsheet rows</option>
                     <option value="files-now">The files to use right away</option>
                     <option value="proof-pack">Proof, owner, or review metadata</option>
                     <option value="due-diligence">A due diligence questionnaire</option>
@@ -1065,6 +1067,20 @@
                 secondaryHref: "blog-subprocessor-evidence-log-template.html?source=free-tools-route-finder",
                 secondaryLabel: "Open evidence log",
               };
+        } else if (need === "spreadsheet-rows") {
+          recommendation = {
+            title: "Use the answer builder for spreadsheet rows.",
+            summary: "You already have the questionnaire rows or portal export, so the fastest move is to paste them into the builder and keep the imported row metadata intact.",
+            bullets: [
+              "Best when the buyer already sent a sheet or portal export",
+              "Keeps the copy-ready answer and response pack together",
+              "Lets you preserve row metadata before the thread gets retyped elsewhere"
+            ],
+            primaryHref: "ai-security-questionnaire-answer-builder.html?source=free-tools-route-finder",
+            primaryLabel: "Build answer + bundle",
+            secondaryHref: "ai-security-questionnaire-starter-pack.html?source=free-tools-route-finder",
+            secondaryLabel: "Open starter pack",
+          };
         } else if (need === "due-diligence") {
           recommendation = {
             title: "Open the AI due diligence template.",
