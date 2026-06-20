@@ -32,6 +32,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-20
 
+- Standardized the AI answer builder hero copy so the page now says "Build answer + bundle" instead of the older "Build starter bundle" label, and tightened the opening copy around the actual copy-ready answer output.
 - Expanded the shared route picker into `start-here.html` and `ai-procurement-hub.html` so confused visitors now get the same fast decision aid on the pages they already use to choose between one answer now, inventory first, repeat review, due diligence, AI agent control, or a blunt async read.
 - Wired the new picker surfaces into `scripts/route-picker.js`, kept the runtime source tags aligned with the static URL scan, and rechecked local links plus source-tag coverage after the page updates.
 - Shipped `blog-security-questionnaire-automation-for-startups.html`, a new commercial-intent acquisition page aimed at SaaS teams shopping for security questionnaire automation and deciding between a local builder, reusable answer bank, due-diligence packet route, evidence map, or heavier enterprise workflow software.
@@ -62,6 +63,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-20: standardized the AI answer builder hero copy to say "Build answer + bundle" and tightened the opening copy around the copy-ready answer output while keeping the local checks green.
 - 2026-06-20: expanded the shared route picker into `start-here.html` and `ai-procurement-hub.html`, wired the new pages into the common picker script, and rechecked site links plus source-tag coverage after the UX update.
 - 2026-06-20: repeated validation maintenance from `04:08 UTC` through `16:27 UTC`, refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoint, reverified the live self-audit production path plus generator smoke/handoff checks, preserved the open The Next AI re-entry blocker, and kept the zero-signal state intact while validation stayed green at `1217` emitted source tags and `123` checked HTML files.
 - 2026-06-20: shipped the security questionnaire automation acquisition guide, wired it across the highest-priority AI entry surfaces, updated watcher coverage, and kept targeted validation green at `1217` emitted source tags and `123` local HTML files.
