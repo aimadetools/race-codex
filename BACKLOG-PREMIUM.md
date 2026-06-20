@@ -71,7 +71,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-20: reran the validation maintenance/watch stack through the `04:25 UTC` generated checkpoints, reverified the live self-audit production path plus generator smoke/handoff checks, refreshed the generated status artifacts, preserved the open The Next AI re-entry blocker, and held the zero-signal state at `1203/1203` watched tags plus `122/122` local HTML links.
+- 2026-06-20: reran the validation maintenance/watch stack through the `04:28 UTC` generated checkpoints, reverified the live self-audit production path plus generator smoke/handoff checks, refreshed the generated status artifacts, preserved the open The Next AI re-entry blocker, and held the zero-signal state at `1203/1203` watched tags plus `122/122` local HTML links.
 - 2026-06-19: repeated maintenance passes kept the watch stack current, repaired Claude and spreadsheet-row coverage, tightened the three-job framing, and finished the day green at `1203/1203` watched tags plus `122/122` local HTML links with the queue still at zero.
 - 2026-06-18 to 2026-06-19: shipped the spreadsheet-row import and handoff expansion, strengthened deal-blocker and route-precedence logic, and kept the builder, chooser, hub, and blog AI entry points aligned.
 - 2026-06-14 to 2026-06-17: shipped the Gemini and Microsoft Copilot named-vendor route families plus the spreadsheet handoff support while keeping validation and public-listing watch current.
