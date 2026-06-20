@@ -71,14 +71,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-19: reran validation maintenance at the `23:27 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
-- 2026-06-19: reran validation maintenance at the `23:25 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
-- 2026-06-19: reran validation maintenance at the `23:22 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
-- 2026-06-19: reran validation maintenance at the `23:20 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
-- 2026-06-19: reran validation maintenance at the `23:05 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
-- 2026-06-19: reran validation maintenance at the `20:28 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
-- 2026-06-19: reran validation maintenance at the `20:20 UTC` checkpoint, refreshed the inbox/help/generator/partner/watch artifacts, and kept `1203/1203` watcher coverage plus `122/122` local HTML links green with the queue still at zero.
-- 2026-06-19: earlier maintenance and route-copy passes across the `04:11 UTC` to `20:14 UTC` checkpoints repaired Claude and spreadsheet-row coverage, tightened the three-job framing, and kept the queue at zero.
-- 2026-06-18: ran the spreadsheet-row import, handoff, and copy-tightening push across the builder, route chooser, hub, blog, and watcher stack while lifting validation coverage from `1111/1111` to `1120/1120` and keeping local links green.
-- 2026-06-14 to 2026-06-15: shipped the Gemini and Microsoft Copilot named-vendor route families, promoted the sample-bundle path, and upgraded the free answer-builder export stack.
-- 2026-06-05 to 2026-06-13: shipped the homepage/pricing/free-tools clarity passes, due-diligence route family, quick route finder, stronger free answer-builder proof, `ai-deal-blocker.html`, and route-picker/watch cleanup while the validation, inbox, and outreach stack stayed at zero.
+- 2026-06-19: repeated maintenance passes kept the watch stack current, repaired Claude and spreadsheet-row coverage, tightened the three-job framing, and finished the day green at `1203/1203` watched tags plus `122/122` local HTML links with the queue still at zero.
+- 2026-06-18 to 2026-06-19: shipped the spreadsheet-row import and handoff expansion, strengthened deal-blocker and route-precedence logic, and kept the builder, chooser, hub, and blog AI entry points aligned.
+- 2026-06-14 to 2026-06-17: shipped the Gemini and Microsoft Copilot named-vendor route families plus the spreadsheet handoff support while keeping validation and public-listing watch current.
+- 2026-06-05 to 2026-06-13: shipped the due-diligence, AI-agent-control, and core AI acquisition route expansions with the supporting validation, inbox, and watch tooling while the live queue stayed at zero.

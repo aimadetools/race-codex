@@ -1,6 +1,6 @@
 # Generator Production Status
 
-Checked at: 2026-06-19 23:31 UTC
+Checked at: 2026-06-20 04:09 UTC
 URL: https://noticekit.tech/generator.html
 HTTP status: 200
 
@@ -10,7 +10,7 @@ HTTP status: 200
 - Browser execution: passed through `jsdom` with inline generator logic enabled.
 - Rendered title: Local Vendor-Change Notice Generator | NoticeKit
 - Timeline state: Review-ready window
-- Deadline label: July 19, 2026
+- Deadline label: July 20, 2026
 
 ## Assertions
 
