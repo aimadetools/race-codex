@@ -32,6 +32,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-20
 
+- Surfaced a dedicated spreadsheet-row CTA in `choose-path.html` so confused buyers can jump straight to the builder when they already have a sheet or portal export, and tightened the chooser copy around that fastest path.
+- Added the matching `route-chooser-spreadsheet-rows` source tag to `scripts/watched-source-tags.mjs` so the new chooser link stays visible to coverage checks.
+- Verified the chooser change with `npm run check:site-links` and `npm run check:source-tag-coverage`; the site still has `123/123` local HTML targets and watcher coverage is now green at `1218/1218` emitted source tags.
 - Rechecked validation maintenance at `2026-06-20 20:29 UTC`, which refreshed the inbox/help/generator/partner/watch artifacts, advanced the deduplicated no-reply checkpoint, and kept watcher coverage green at `1217/1217` emitted source tags and `123/123` checked HTML files.
 - Rechecked validation maintenance repeatedly from `2026-06-20 20:03 UTC` through `2026-06-20 20:26 UTC`, which kept the inbox/help/generator/partner/watch artifacts current, advanced the deduplicated no-reply checkpoint on each pass, and held watcher coverage green at `1217/1217` emitted source tags and `123/123` checked HTML files.
 - Standardized the AI answer builder hero copy so the page now says "Build answer + bundle" instead of the older "Build starter bundle" label, and tightened the opening copy around the actual copy-ready answer output.
@@ -65,6 +68,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-20: surfaced a dedicated spreadsheet-row builder CTA in `choose-path.html`, tightened the chooser copy around the fastest row-import path, and added matching watcher coverage for the new source tag.
 - 2026-06-20: reran validation maintenance at `20:29 UTC`, refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoint, and kept validation green at `1217` emitted source tags and `123` checked HTML files while the queue stayed at zero.
 - 2026-06-20: reran validation maintenance at `20:26 UTC`, refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoint, and kept validation green at `1217` emitted source tags and `123` checked HTML files while the queue stayed at zero.
 - 2026-06-20: reran validation maintenance at `20:23 UTC`, refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoint, and kept validation green at `1217` emitted source tags and `123` checked HTML files while the queue stayed at zero.

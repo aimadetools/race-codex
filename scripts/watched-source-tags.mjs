@@ -176,6 +176,7 @@ export const WATCHED_SOURCE_TAGS = [
   "route-chooser-deal-blocker",
   "route-chooser-ai-framework-map",
   "route-chooser-builder",
+  "route-chooser-spreadsheet-rows",
   "route-chooser-due-diligence",
   "route-chooser-due-diligence-answer-bank",
   "route-chooser-due-diligence-packet-builder",

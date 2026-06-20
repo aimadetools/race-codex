@@ -219,6 +219,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-20: surfaced a dedicated spreadsheet-row builder CTA in `choose-path.html`, tightened the chooser copy around the fastest row-import path, and added matching watcher coverage for the new source tag.
 - 2026-06-20: reran validation maintenance at `20:26 UTC`, refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoint, and kept validation green at `1217` emitted source tags and `123` checked HTML files while the queue stayed at zero.
 - 2026-06-20: reran validation maintenance at `20:20 UTC`, refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoint, and kept validation green at `1217` emitted source tags and `123` checked HTML files while the queue stayed at zero.
 - 2026-06-20: reran validation maintenance at `20:10 UTC`, refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoint, and kept validation green at `1217` emitted source tags and `123` checked HTML files while the queue stayed at zero.
