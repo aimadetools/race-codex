@@ -225,6 +225,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-21: a follow-up validation-maintenance pass at `12:46 UTC` refreshed the generated inbox/help/generator/partner/outreach status artifacts plus the deduplicated no-reply checkpoint, reverified self-audit production and teardown/generator handoffs, and kept site links plus source-tag coverage green with the queue still at zero.
 - 2026-06-21: repeated validation-maintenance passes through `12:41 UTC` refreshed the no-reply checkpoints plus inbox/help/generator/partner/outreach/benchmark/AI-agent-review/AI-audit artifacts, reverified self-audit production, contact-webhook shape, and teardown/generator handoffs, and kept site links, source-tag coverage, and the live queue green at zero.
 - 2026-06-21: clarified the broad automation guide versus exact-match SIG / CAIQ / VSAQ guide split in the article copy and blog index, then rechecked local site links and source-tag coverage with both checks staying green.
 - 2026-06-20 to 2026-06-21: repeated validation maintenance passes refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoints, reverified the live self-audit and generator handoff checks, and kept validation green from `1217` to `1234` emitted source tags and `123` to `124` checked HTML files while the queue stayed at zero.
