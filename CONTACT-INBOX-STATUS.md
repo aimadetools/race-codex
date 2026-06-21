@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-21 16:28 UTC
+Checked at: 2026-06-21 20:09 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -337,6 +337,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - route-chooser-inventory: 0
 - route-chooser-broader-hub: 0
 - route-chooser-nav-audit: 0
+- route-chooser-named-vendor: 0
+- route-chooser-sig-guide: 0
 - route-chooser-pricing: 0
 - route-chooser-starter-pack: 0
 - free-tools-vendor-register: 0

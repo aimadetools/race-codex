@@ -189,6 +189,8 @@ export const WATCHED_SOURCE_TAGS = [
   "route-chooser-inventory",
   "route-chooser-broader-hub",
   "route-chooser-nav-audit",
+  "route-chooser-named-vendor",
+  "route-chooser-sig-guide",
   "route-chooser-pricing",
   "route-chooser-starter-pack",
   "free-tools-vendor-register",
