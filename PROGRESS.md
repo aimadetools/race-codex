@@ -30,6 +30,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran `npm run check:site-links` and `npm run check:source-tag-coverage`; local links stayed green at `124/124` checked HTML files and watcher coverage is complete at `1234/1234` emitted source tags.
 - Repeated validation maintenance across `04:08 UTC` through `04:21 UTC`, reverified the live self-audit production path plus free-teardown handoff, refreshed the inbox/help/generator/partner/watch artifacts, and confirmed the queue still sits at `0` real replies, `0` real submissions, and `0` real interviews with validation still green at `1234/1234` watched tags and `124/124` checked HTML files.
 - Repeated the monitoring pass at `04:24 UTC` through `04:25 UTC`; `npm run run:validation-maintenance` rewrote the validation artifacts, reverified the live self-audit production path plus free-teardown handoff, kept generator smoke and handoff checks green, and confirmed the queue still sits at `0` real replies, `0` real submissions, and `0` real interviews.
+- Repeated the monitoring pass at `04:27 UTC` through `04:28 UTC`; `npm run run:validation-maintenance` refreshed the no-reply checkpoint plus inbox/help/generator/partner/outreach artifacts, reverified the live self-audit production path and generator-to-teardown handoff, and kept validation green at `1234/1234` watched tags and `124/124` checked HTML files with the queue still at zero.
 - Confirmed the current positioning briefs still say to pause further expansion until evidence lands, so the next concrete job remains reply and intake capture instead of another route build.
 
 ## Next Step
@@ -40,6 +41,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-21: reran the full validation-maintenance workflow at `04:27 UTC` through `04:28 UTC`, refreshed the deduplicated no-reply checkpoint plus generated inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and generator-to-teardown handoff paths, and kept validation green with the queue still at zero.
 - 2026-06-21: reran the full validation-maintenance workflow at `04:24 UTC` through `04:25 UTC`, refreshed inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and teardown handoff paths, and confirmed the queue remained at zero with validation still green.
 - 2026-06-21: shipped the exact-match SIG / CAIQ / VSAQ acquisition page, routed it from the core AI entry surfaces, updated sitemap plus watched-source coverage, and kept local links and watcher coverage green.
 - 2026-06-21: repeated validation maintenance from `04:08 UTC` through `04:21 UTC`, reverified the live self-audit and teardown handoff paths, refreshed the generated inbox/help/generator/partner/watch artifacts, and confirmed the queue still sits at zero with validation green.
