@@ -25,6 +25,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-21
 
+- Ran a documentation cleanup pass, confirmed `DEPLOY-STATUS.md` is still absent, and compressed the historical status summaries without changing the live zero-reply state.
 - Ran a validation-maintenance pass through `20:16 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero with the no-reply checkpoint advanced to `2026-06-21 20:16 UTC`.
 - Ran a validation-maintenance pass through `20:13 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero with the no-reply checkpoint advanced to `2026-06-21 20:13 UTC`.
 - Ran a validation-maintenance pass through `20:09 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero with the no-reply checkpoint advanced to `2026-06-21 20:09 UTC`.
@@ -48,11 +49,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-21: ran a validation-maintenance pass through `20:16 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero.
-- 2026-06-21: ran a validation-maintenance pass through `20:13 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero.
-- 2026-06-21: ran a validation-maintenance pass through `20:09 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero.
-- 2026-06-21: ran a validation-maintenance pass through `16:28 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero.
-- 2026-06-21: ran validation-maintenance passes through `16:22 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, and kept local links plus watched source-tag coverage green with the queue still at zero.
+- 2026-06-21: ran multiple validation-maintenance passes through `20:16 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero.
 - 2026-06-21: tightened the free builder sample-row loaders, repaired the quick presets, and rechecked local links plus source-tag coverage.
 - 2026-06-21: shipped the exact-match SIG / CAIQ / VSAQ acquisition page, clarified it against the broader automation guide, and kept validation green.
 - 2026-06-20: shipped the route-picker, spreadsheet-row CTA, builder hero copy, and automation-guide updates while keeping validation green.
