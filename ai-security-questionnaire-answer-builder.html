@@ -211,6 +211,12 @@
               <button class="button secondary" id="clear-imported-questions" type="button">Clear imported rows</button>
               <input id="import-questionnaire-file" type="file" accept=".csv,.tsv,.txt,.xlsx,.xls,text/csv,text/tab-separated-values,text/plain,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
             </div>
+            <div class="hero-actions" style="margin-top:12px;">
+              <button class="button secondary" id="load-sample-startup" type="button">Load startup sample rows</button>
+              <button class="button secondary" id="load-sample-sig" type="button">Load SIG-style sample rows</button>
+              <button class="button secondary" id="load-sample-caiq" type="button">Load CAIQ-style sample rows</button>
+            </div>
+            <p class="fine-print" style="margin-top:12px;">No live file yet? Load a realistic questionnaire row set first and evaluate the full free output before you decide whether the builder, Starter, Pro, or audit path fits.</p>
           </form>
 
           <aside class="result-panel" aria-live="polite">
@@ -565,6 +571,9 @@
       const importDraftFile = document.querySelector("#import-draft-file");
       const importQuestionnaireButton = document.querySelector("#import-questionnaire");
       const importQuestionnaireFile = document.querySelector("#import-questionnaire-file");
+      const loadSampleStartupButton = document.querySelector("#load-sample-startup");
+      const loadSampleSigButton = document.querySelector("#load-sample-sig");
+      const loadSampleCaiqButton = document.querySelector("#load-sample-caiq");
       const clearImportedQuestionsButton = document.querySelector("#clear-imported-questions");
       const clearSavedDraftButton = document.querySelector("#clear-saved-draft");
       const sendToTeardown = document.querySelector("#send-to-teardown");
@@ -970,6 +979,13 @@
         saveDraft();
         render();
         builderStatus.textContent = `Imported ${importedRows.length} questionnaire rows from ${originLabel}. Source row and section labels are preserved in the response pack and draft export.`;
+      }
+
+      function loadSampleQuestionnaire(importedRows, message) {
+        setImportedQuestionRows(importedRows);
+        saveDraft();
+        render();
+        builderStatus.textContent = message;
       }
 
       function collectDraftState() {
@@ -1858,32 +1874,83 @@
           "reviewer-lane": "security",
           "answer-shape": "proof-first",
           workflow: "Customer-facing summarization feature for support tickets",
-          primaryVendor: "Anthropic",
-          supportingVendors: "AWS, Vercel, PostHog, HubSpot",
-          dataCategories: "Support ticket text, account identifiers, and generated summaries",
-          customerScope: "Enterprise and EU customers using the support feature, pending DPA review"
+          "primary-vendor": "Anthropic",
+          "supporting-vendors": "AWS, Vercel, PostHog, HubSpot",
+          "data-categories": "Support ticket text, account identifiers, and generated summaries",
+          "customer-scope": "Enterprise and EU customers using the support feature, pending DPA review"
         },
         "support-ai": {
           "buyer-question": "Describe the support copilot workflow, the AI vendors and supporting systems involved, whether customer ticket content is used for training, and the review process behind the answer.",
           "reviewer-lane": "procurement",
           "answer-shape": "standard",
           workflow: "Internal support copilot for drafting responses",
-          primaryVendor: "OpenAI",
-          supportingVendors: "Zendesk, Vercel, Supabase",
-          dataCategories: "Support ticket text, agent prompts, and limited account metadata",
-          customerScope: "Support team workflows with extra review for enterprise accounts"
+          "primary-vendor": "OpenAI",
+          "supporting-vendors": "Zendesk, Vercel, Supabase",
+          "data-categories": "Support ticket text, agent prompts, and limited account metadata",
+          "customer-scope": "Support team workflows with extra review for enterprise accounts"
         },
         "internal-ai": {
           "buyer-question": "Please describe the internal AI workflow, the named vendor chain, whether customer data is excluded, and what human review sits behind that scope statement.",
           "reviewer-lane": "privacy",
           "answer-shape": "concise",
           workflow: "Internal engineering assistant for product and incident analysis",
-          primaryVendor: "OpenAI",
-          supportingVendors: "GitHub, Linear, Notion",
-          dataCategories: "Internal product notes, issue text, and engineering prompts",
-          customerScope: "Internal-only workflow, with confirmation needed that no customer content is in scope"
+          "primary-vendor": "OpenAI",
+          "supporting-vendors": "GitHub, Linear, Notion",
+          "data-categories": "Internal product notes, issue text, and engineering prompts",
+          "customer-scope": "Internal-only workflow, with confirmation needed that no customer content is in scope"
         }
       };
+
+      const sampleQuestionnaires = {
+        startup: [
+          { sourceRow: "12", section: "AI Governance", question: "Describe the AI workflow under review and the named vendors used in production." },
+          { sourceRow: "13", section: "AI Governance", question: "What customer or prospect data is processed by the workflow?" },
+          { sourceRow: "14", section: "AI Governance", question: "Is customer content used to train foundation models or improve the vendor service?" },
+          { sourceRow: "15", section: "AI Governance", question: "Which customer segments or contractual commitments require extra review before rollout?" },
+          { sourceRow: "16", section: "AI Governance", question: "Who approves reuse of this answer in future buyer reviews?" },
+          { sourceRow: "17", section: "Security Review", question: "What proof links support the current training and retention stance?" },
+          { sourceRow: "18", section: "Security Review", question: "What supporting systems handle prompts, outputs, or logging around the AI vendor?" },
+          { sourceRow: "19", section: "Security Review", question: "What is out of scope for this answer or still pending confirmation?" },
+          { sourceRow: "20", section: "Privacy Review", question: "Does this workflow trigger DPA, notice, or counsel review for any enterprise or EU customers?" },
+          { sourceRow: "21", section: "Privacy Review", question: "What customer-facing or internal controls limit the workflow today?" },
+          { sourceRow: "22", section: "Operations", question: "What decision still needs to be made before broader rollout or answer-bank reuse?" },
+          { sourceRow: "23", section: "Operations", question: "When does this answer need to be rechecked after a vendor, model, or workflow change?" }
+        ],
+        sig: [
+          { sourceRow: "A-14", section: "AI / Third Parties", question: "Identify the AI or ML service providers used in the reviewed workflow and their role in processing customer data." },
+          { sourceRow: "A-15", section: "AI / Third Parties", question: "Describe the categories of data shared with the AI provider and whether production customer content is included." },
+          { sourceRow: "A-16", section: "AI / Third Parties", question: "State the organization's current position on vendor training, retention, and model-improvement use of submitted data." },
+          { sourceRow: "B-07", section: "Governance", question: "Which internal team reviews and approves the use of this AI workflow before customer deployment?" },
+          { sourceRow: "B-08", section: "Governance", question: "How is the approved answer kept current across future questionnaires or customer reviews?" },
+          { sourceRow: "C-11", section: "Security", question: "What public or internal proof artifacts support the statements made about the AI workflow?" },
+          { sourceRow: "C-12", section: "Security", question: "What surrounding systems store prompts, outputs, or operational logs related to the AI workflow?" },
+          { sourceRow: "C-13", section: "Security", question: "What known exclusions or workflow boundaries should reviewers understand?" },
+          { sourceRow: "D-04", section: "Privacy", question: "What customer populations, geographies, or contract classes require heightened review for this workflow?" },
+          { sourceRow: "D-05", section: "Privacy", question: "Does the workflow require notice, escalation, or counsel review before activation or broader reuse?" },
+          { sourceRow: "E-03", section: "Operations", question: "Who owns the buyer reply if the reviewer asks for more proof or changes after the initial response?" },
+          { sourceRow: "E-04", section: "Operations", question: "What next internal decision remains open before the answer is considered final?" }
+        ],
+        caiq: [
+          { sourceRow: "AIS-01", section: "Application and Interface Security", question: "Describe the AI-enabled workflow and the external AI services or model providers supporting it." },
+          { sourceRow: "AIS-02", section: "Application and Interface Security", question: "List the data elements submitted to the AI workflow and identify whether customer content is included." },
+          { sourceRow: "DSP-09", section: "Data Security and Privacy", question: "What controls or contractual terms support the current stance on training, retention, and vendor use of submitted content?" },
+          { sourceRow: "DSP-10", section: "Data Security and Privacy", question: "What customer segments or regulatory commitments require extra review for this workflow?" },
+          { sourceRow: "DSP-11", section: "Data Security and Privacy", question: "What customer notice, DPA, or legal review implications are being tracked for this workflow?" },
+          { sourceRow: "GRM-06", section: "Governance Risk and Compliance", question: "Which internal owner approves the workflow boundaries and answer wording before reuse?" },
+          { sourceRow: "GRM-07", section: "Governance Risk and Compliance", question: "What recheck trigger or review cadence refreshes this answer after vendor or feature changes?" },
+          { sourceRow: "IAM-05", section: "Identity and Access Management", question: "What supporting systems or access paths interact with the AI vendor in the reviewed workflow?" },
+          { sourceRow: "IPY-03", section: "Interoperability and Portability", question: "What proof artifacts demonstrate the current workflow design and surrounding controls?" },
+          { sourceRow: "LOG-04", section: "Logging and Monitoring", question: "What evidence exists for prompts, outputs, or operational logging tied to the AI workflow?" },
+          { sourceRow: "TVM-08", section: "Threat and Vulnerability Management", question: "What known exclusions, unreviewed paths, or open issues should the buyer understand?" },
+          { sourceRow: "TVM-09", section: "Threat and Vulnerability Management", question: "What next decision still blocks a broader or final answer?" }
+        ]
+      };
+
+      Object.values(sampleQuestionnaires).forEach((rows) => {
+        rows.forEach((row) => {
+          row.sourceReference = row.section ? `${row.sourceRow} - ${row.section}` : row.sourceRow;
+        });
+      });
 
       document.querySelectorAll("[data-preset]").forEach((button) => {
         button.addEventListener("click", () => {
@@ -1901,6 +1968,27 @@
           render();
           saveDraft();
         });
+      });
+
+      loadSampleStartupButton.addEventListener("click", () => {
+        loadSampleQuestionnaire(
+          sampleQuestionnaires.startup,
+          "Loaded 12 startup-style questionnaire rows so you can evaluate the full free response pack without bringing your own file."
+        );
+      });
+
+      loadSampleSigButton.addEventListener("click", () => {
+        loadSampleQuestionnaire(
+          sampleQuestionnaires.sig,
+          "Loaded 12 SIG-style questionnaire rows so you can judge the imported-row workflow before working from a live spreadsheet."
+        );
+      });
+
+      loadSampleCaiqButton.addEventListener("click", () => {
+        loadSampleQuestionnaire(
+          sampleQuestionnaires.caiq,
+          "Loaded 12 CAIQ-style questionnaire rows so you can evaluate the free builder against a heavier control questionnaire."
+        );
       });
 
       const sourceConfigs = {

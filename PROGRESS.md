@@ -25,6 +25,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-21
 
+- Upgraded `ai-security-questionnaire-answer-builder.html` so first-time visitors can load realistic startup, SIG-style, or CAIQ-style questionnaire rows without bringing their own file, making the free builder materially easier to evaluate before purchase.
+- Repaired the builder's existing quick-preset bug where several preset buttons were writing to the wrong field IDs, so vendor, supporting-system, data-scope, and customer-scope fields now populate correctly again.
+- Rechecked the updated builder locally with inline-script parsing plus `npm run check:site-links` and `npm run check:source-tag-coverage`; local links stayed green at `124/124` checked HTML files and watcher coverage remained complete at `1234/1234` emitted source tags.
 - Shipped `blog-sig-caiq-vsaq-questionnaire-automation.html`, a tighter commercial-intent page aimed at buyers and operators searching for exact questionnaire families instead of the broader “security questionnaire automation” phrase.
 - Clarified the split between the broader automation guide and the exact-match SIG / CAIQ / VSAQ guide across the automation articles and blog index so visitors land on the tighter route when they already named the form family.
 - Wired the new SIG / CAIQ / VSAQ guide into `blog.html`, `blog-security-questionnaire-automation-for-startups.html`, `free-tools.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-answer-library.html`, `start-here.html`, `index.html`, `pricing.html`, `sitemap.xml`, and `scripts/watched-source-tags.mjs` so the wedge is crawlable, measurable, and reachable from the strongest AI receiver-side entry points.
@@ -36,12 +39,15 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Next Step
 
+- Watch whether first real builder usage comes from the new sample-row loaders, especially the SIG-style and CAIQ-style paths, before adding another acquisition page or heavier builder export.
+- If sample-row evaluation attracts more real use than live-file import, promote that proof on homepage, pricing, and start-here instead of adding more near-duplicate comparison content.
 - Watch the new SIG / CAIQ / VSAQ source tags `blog-index-sig-guide`, `homepage-sig-guide`, `free-tools-sig-guide`, `start-here-sig-guide`, `pricing-sig-guide`, `ai-answer-library-sig-guide`, `ai-procurement-hub-sig-guide`, and `automation-guide-sig-guide` for the first real click, intake, reply, or purchase-adjacent question before adding another commercial-search comparison page.
 - Compare the first real exact-match questionnaire-family signal against the broader automation-guide signal before promoting either page into a stronger homepage, free-tools, or pricing slot.
 - Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-21 08:29 UTC`.
 
 ## Completed Summary
 
+- 2026-06-21: upgraded the free AI questionnaire builder with one-click startup, SIG-style, and CAIQ-style sample-row loads for faster evaluation, repaired broken quick presets, and rechecked inline script parsing plus local links/source-tag coverage.
 - 2026-06-21: reran the validation-maintenance workflow at `08:26 UTC`, refreshed the deduplicated no-reply checkpoint plus inbox/help/generator/partner/outreach and benchmark/AI-agent-review/AI-audit artifacts, and kept the queue at zero with validation still green.
 - 2026-06-21: reran the full validation-maintenance workflow at `04:27 UTC` through `04:28 UTC`, refreshed the deduplicated no-reply checkpoint plus generated inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and generator-to-teardown handoff paths, and kept validation green with the queue still at zero.
 - 2026-06-21: reran the full validation-maintenance workflow at `04:30 UTC`, refreshed the no-reply checkpoint plus generated inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and generator-to-teardown handoff paths, and kept validation green with the queue still at zero.
