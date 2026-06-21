@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-20 23:29 UTC
+Checked at: 2026-06-21 04:08 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -223,6 +223,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-questionnaire-example: 0
 - blog-index-ai-comparison: 0
 - blog-index-automation-guide: 0
+- blog-index-sig-guide: 0
 - blog-index-ai-answer-bank-vs-pro-kit: 0
 - blog-index-ai-stack: 0
 - blog-index-benchmark-appendix: 0
@@ -317,6 +318,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-route-inventory: 0
 - free-tools-route-one-answer: 0
 - free-tools-automation-guide: 0
+- free-tools-sig-guide: 0
 - free-tools-route-due-diligence: 0
 - free-tools-route-repeat-review: 0
 - free-tools-route-broader-handoff: 0
@@ -378,6 +380,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-spreadsheet-rows: 0
 - start-here-ai-answer-bank: 0
 - start-here-automation-guide: 0
+- start-here-sig-guide: 0
 - start-here-ai-answer-library: 0
 - start-here-ai-evidence-map: 0
 - start-here-ai-agent-workspace: 0
@@ -410,6 +413,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-free-tools: 0
 - homepage-purchase-audit: 0
 - homepage-automation-guide: 0
+- homepage-sig-guide: 0
 - homepage-benchmark-appendix: 0
 - homepage-benchmark-report: 0
 - homepage-subprocessor-teardown: 0
@@ -509,6 +513,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-deal-blocker-audit: 0
 - homepage-ai-answer-library: 0
 - ai-answer-library-automation-guide: 0
+- ai-answer-library-sig-guide: 0
 - homepage-ai-due-diligence-comparison: 0
 - homepage-ai-due-diligence-answer-bank: 0
 - homepage-ai-due-diligence-evidence-map: 0
@@ -524,6 +529,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-due-diligence-packet-builder: 0
 - pricing-ai-framework-map: 0
 - pricing-spreadsheet-rows: 0
+- pricing-sig-guide: 0
 - ai-procurement-hub-answer-library: 0
 - ai-procurement-hub-answer-library-comparison: 0
 - ai-procurement-hub-due-diligence: 0
@@ -1024,6 +1030,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-cta: 0
 - ai-procurement-hub-comparison: 0
 - ai-procurement-hub-automation-guide: 0
+- ai-procurement-hub-sig-guide: 0
 - ai-procurement-hub-answer-template: 0
 - ai-procurement-hub-openai-answer-template: 0
 - ai-procurement-hub-openai-answer-example: 0
@@ -1068,6 +1075,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-vendor-risk-assessment-answer-bank: 0
 - free-tools-ai-risk-assessment: 0
 - automation-guide-nav-audit: 0
+- automation-guide-sig-guide: 0
 - automation-guide-builder: 0
 - automation-guide-answer-bank: 0
 - automation-guide-due-diligence: 0
@@ -1075,6 +1083,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-guide-audit: 0
 - automation-guide-due-diligence-scorecard: 0
 - automation-guide-due-diligence-packet-builder: 0
+- sig-guide-nav-audit: 0
+- sig-guide-builder: 0
+- sig-guide-answer-bank: 0
+- sig-guide-due-diligence: 0
+- sig-guide-evidence-map: 0
+- sig-guide-audit: 0
+- sig-guide-due-diligence-scorecard: 0
+- sig-guide-due-diligence-packet-builder: 0
 - free-tools-ai-risk-worksheet: 0
 - sample-ai-packet-guide: 0
 - sample-ai-packet-starter-pack: 0
