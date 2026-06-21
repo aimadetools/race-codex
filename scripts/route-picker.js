@@ -28,6 +28,34 @@
       secondaryHref: "ai-due-diligence-packet-builder.html",
       secondaryLabel: "Build due diligence packet",
     },
+    namedVendor: {
+      title: "Use the named-vendor answer library.",
+      summary:
+        "The buyer already named a model family or vendor, so start with the answer library and matching vendor pages instead of a generic paragraph.",
+      bullets: [
+        "Best when the reviewer named OpenAI, Anthropic, Gemini, Claude, or Copilot",
+        "Keeps the vendor-specific template, example, and answer bank one click away",
+        "Use the SIG guide when the thread shifts into exact-match questionnaire wording",
+      ],
+      primaryHref: "ai-security-questionnaire-answer-library.html",
+      primaryLabel: "Open answer library",
+      secondaryHref: "blog-sig-caiq-vsaq-questionnaire-automation.html",
+      secondaryLabel: "Open SIG / CAIQ / VSAQ guide",
+    },
+    sigGuide: {
+      title: "Use the exact-match SIG guide.",
+      summary:
+        "The reviewer wants SIG, CAIQ, or VSAQ wording, so keep the thread on the commercial-search guide instead of a broader questionnaire path.",
+      bullets: [
+        "Best when the buyer uses exact questionnaire-family language",
+        "Keeps the SIG / CAIQ / VSAQ path separate from the generic automation guide",
+        "Use the due-diligence template if the thread also wants vendor chain or framework mapping",
+      ],
+      primaryHref: "blog-sig-caiq-vsaq-questionnaire-automation.html",
+      primaryLabel: "Open SIG / CAIQ / VSAQ guide",
+      secondaryHref: "ai-security-questionnaire-answer-library.html",
+      secondaryLabel: "Open answer library",
+    },
     agent: {
       title: "Use the AI agent control route.",
       summary:
@@ -235,6 +263,14 @@
   const pickRecommendation = (blockerValue, languageValue, needValue) => {
     if (blockerValue === "spreadsheet-rows") {
       return { key: "spreadsheetRows", reason: "spreadsheet rows or portal export" };
+    }
+
+    if (languageValue === "exact-match") {
+      return { key: "sigGuide", reason: "exact-match SIG / CAIQ / VSAQ wording" };
+    }
+
+    if (blockerValue === "named-vendor") {
+      return { key: "namedVendor", reason: "named vendor or model family" };
     }
 
     if (languageValue === "due-diligence" || blockerValue === "due-diligence") {

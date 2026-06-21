@@ -25,6 +25,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-21
 
+- Added named-vendor and exact-match SIG / CAIQ / VSAQ branches to the shared route picker and standalone chooser so the homepage, pricing, free-tools, start-here, AI procurement hub, and route chooser can steer buyers to the answer library or exact-match guide without a generic detour.
 - Ran a validation-maintenance pass through `16:28 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero with the no-reply checkpoint advanced to `2026-06-21 16:28 UTC`.
 - Ran validation-maintenance passes through `16:22 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, rechecked self-audit production plus generator and free-teardown handoffs, and kept local links plus watched source-tag coverage green with the queue still at zero while the deduplicated no-reply checkpoint stayed at `2026-06-21 16:16 UTC`.
 - Rechecked the open The Next AI help request at `16:11 UTC`; both public pages still returned `200` and still did not surface `NoticeKit`, so the directory re-entry request remains blocked on the missing authenticated browser session.
@@ -37,6 +38,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - Watch whether first real builder usage comes from the new sample-row loaders, especially the SIG-style and CAIQ-style paths, before adding another acquisition page or heavier builder export.
 - If sample-row evaluation attracts more real use than live-file import, promote that proof on homepage, pricing, and start-here instead of adding more near-duplicate comparison content.
+- Watch whether the new named-vendor and exact-match route-picker and route-chooser branches earn any real clicks before adding another route or comparison page.
 - Watch the new SIG / CAIQ / VSAQ source tags `blog-index-sig-guide`, `homepage-sig-guide`, `free-tools-sig-guide`, `start-here-sig-guide`, `pricing-sig-guide`, `ai-answer-library-sig-guide`, `ai-procurement-hub-sig-guide`, and `automation-guide-sig-guide` for the first real click, intake, reply, or purchase-adjacent question before adding another commercial-search comparison page.
 - Compare the first real exact-match questionnaire-family signal against the broader automation-guide signal before promoting either page into a stronger homepage, free-tools, or pricing slot.
 - Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-21 16:16 UTC`.
