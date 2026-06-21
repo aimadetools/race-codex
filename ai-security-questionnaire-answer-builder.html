@@ -981,7 +981,25 @@
         builderStatus.textContent = `Imported ${importedRows.length} questionnaire rows from ${originLabel}. Source row and section labels are preserved in the response pack and draft export.`;
       }
 
-      function loadSampleQuestionnaire(importedRows, message) {
+      function loadSampleQuestionnaire(importedRows, message, sampleContext = {}) {
+        if (sampleContext.buyerQuestion) {
+          const buyerQuestionField = document.querySelector("#buyer-question");
+          if (buyerQuestionField) {
+            buyerQuestionField.value = sampleContext.buyerQuestion;
+          }
+        }
+        if (sampleContext.reviewerLane) {
+          const reviewerLaneField = document.querySelector("#reviewer-lane");
+          if (reviewerLaneField) {
+            reviewerLaneField.value = sampleContext.reviewerLane;
+          }
+        }
+        if (sampleContext.answerShape) {
+          const answerShapeField = document.querySelector("#answer-shape");
+          if (answerShapeField) {
+            answerShapeField.value = sampleContext.answerShape;
+          }
+        }
         setImportedQuestionRows(importedRows);
         saveDraft();
         render();
@@ -1973,21 +1991,36 @@
       loadSampleStartupButton.addEventListener("click", () => {
         loadSampleQuestionnaire(
           sampleQuestionnaires.startup,
-          "Loaded 12 startup-style questionnaire rows so you can evaluate the full free response pack without bringing your own file."
+          "Loaded 12 startup-style questionnaire rows so you can evaluate the full free response pack without bringing your own file.",
+          {
+            buyerQuestion: "Please describe the AI workflow under review, the named vendors used in production, the customer data in scope, the training stance, and the human review behind the answer.",
+            reviewerLane: "procurement",
+            answerShape: "standard"
+          }
         );
       });
 
       loadSampleSigButton.addEventListener("click", () => {
         loadSampleQuestionnaire(
           sampleQuestionnaires.sig,
-          "Loaded 12 SIG-style questionnaire rows so you can judge the imported-row workflow before working from a live spreadsheet."
+          "Loaded 12 SIG-style questionnaire rows so you can judge the imported-row workflow before working from a live spreadsheet.",
+          {
+            buyerQuestion: "Identify the AI or ML service providers used in the reviewed workflow, the data shared with them, and the current position on training and retention.",
+            reviewerLane: "security",
+            answerShape: "proof-first"
+          }
         );
       });
 
       loadSampleCaiqButton.addEventListener("click", () => {
         loadSampleQuestionnaire(
           sampleQuestionnaires.caiq,
-          "Loaded 12 CAIQ-style questionnaire rows so you can evaluate the free builder against a heavier control questionnaire."
+          "Loaded 12 CAIQ-style questionnaire rows so you can evaluate the free builder against a heavier control questionnaire.",
+          {
+            buyerQuestion: "Describe the AI-enabled workflow, the external AI services supporting it, the data submitted to the workflow, and the control evidence behind the answer.",
+            reviewerLane: "security",
+            answerShape: "proof-first"
+          }
         );
       });
 
