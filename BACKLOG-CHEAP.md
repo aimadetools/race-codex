@@ -222,6 +222,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-21: clarified the broad automation guide versus exact-match SIG / CAIQ / VSAQ guide split in the article copy and blog index, then rechecked local site links and source-tag coverage with both checks staying green.
 - 2026-06-21: reran the full validation-maintenance workflow at `04:30 UTC`, refreshed the deduplicated no-reply checkpoint plus generated inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and teardown handoff paths, and kept validation green with the queue still at zero.
 - 2026-06-21: reran the full validation-maintenance workflow at `04:24 UTC` through `04:25 UTC`, refreshed the deduplicated no-reply checkpoint plus generated inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and teardown handoff paths, and kept validation green with the queue still at zero.
 - 2026-06-21: repeated validation maintenance from `04:08 UTC` through `04:21 UTC`, refreshed the deduplicated no-reply checkpoint plus generated inbox/help/generator/partner/watch artifacts, reverified the live self-audit production path plus teardown handoff, and kept validation green with the queue still at zero.
