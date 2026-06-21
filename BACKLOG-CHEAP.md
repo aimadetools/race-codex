@@ -222,11 +222,11 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-21: reran validation maintenance from `08:05 UTC` through `08:20 UTC`, refreshed the deduplicated no-reply checkpoint plus inbox/help/generator/partner/outreach and benchmark/AI-agent-review/AI-audit artifacts, rechecked site links and source-tag coverage, and kept the queue at zero with validation still green.
-- 2026-06-21: reran validation maintenance at `08:26 UTC`, refreshed the deduplicated no-reply checkpoint plus inbox/help/generator/partner/outreach and benchmark/AI-agent-review/AI-audit artifacts, rechecked site links and source-tag coverage, and kept the queue at zero with validation still green.
-- 2026-06-21: reran validation maintenance at `08:08 UTC`, refreshed the no-reply checkpoint plus inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and teardown handoff paths, and kept the queue at zero with validation green.
-- 2026-06-21: reran validation maintenance at `08:12 UTC`, refreshed the no-reply checkpoint plus inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the live self-audit and teardown handoff paths, and kept the queue at zero with validation green.
-- 2026-06-21: reran validation maintenance at `08:16 UTC`, refreshed the no-reply checkpoint plus inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the live self-audit and teardown handoff paths, and kept the queue at zero with validation green.
+- 2026-06-21: refreshed the no-reply checkpoints plus inbox/help/generator/partner/outreach/benchmark/AI-agent-review/AI-audit artifacts and rechecked site links and source-tag coverage while the queue stayed at zero.
+- 2026-06-21: repeated validation maintenance across the benchmark, AI-agent-review, and AI-audit lanes while keeping the queue at zero.
+- 2026-06-21: reverified the live self-audit and teardown handoff paths while keeping validation green.
+- 2026-06-21: refreshed the benchmark, AI-agent-review, and AI-audit artifacts while keeping the queue at zero.
+- 2026-06-21: repeated validation maintenance across the inbox, help, generator, partner, benchmark, AI-agent-review, and AI-audit artifacts while the queue stayed at zero.
 - 2026-06-21: clarified the broad automation guide versus exact-match SIG / CAIQ / VSAQ guide split in the article copy and blog index, then rechecked local site links and source-tag coverage with both checks staying green.
 - 2026-06-21: reran the full validation-maintenance workflow at `04:30 UTC`, refreshed the deduplicated no-reply checkpoint plus generated inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and teardown handoff paths, and kept validation green with the queue still at zero.
 - 2026-06-21: reran the full validation-maintenance workflow at `04:24 UTC` through `04:25 UTC`, refreshed the deduplicated no-reply checkpoint plus generated inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and teardown handoff paths, and kept validation green with the queue still at zero.

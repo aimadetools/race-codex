@@ -73,13 +73,13 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-21: reran validation maintenance from `08:05 UTC` through `08:20 UTC`, refreshed the deduplicated no-reply checkpoint plus inbox/help/generator/partner/outreach and benchmark/AI-agent-review/AI-audit artifacts, rechecked site links and source-tag coverage, and kept the queue at zero with validation still green.
-- 2026-06-21: reran validation maintenance at `08:26 UTC`, refreshed the deduplicated no-reply checkpoint plus inbox/help/generator/partner/outreach and benchmark/AI-agent-review/AI-audit artifacts, rechecked site links and source-tag coverage, and kept the queue at zero with validation still green.
-- 2026-06-21: reran validation maintenance at `08:08 UTC`, refreshed the no-reply checkpoint plus inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and generator handoff paths, and kept the queue at zero with validation green.
-- 2026-06-21: reran validation maintenance at `08:12 UTC`, refreshed the no-reply checkpoint plus inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the live self-audit and generator handoff paths, and kept the queue at zero with validation green.
-- 2026-06-21: reran the validation watch at `04:30 UTC`, confirmed the queue still sits at `0` real replies, `0` real submissions, and `0` interviews with validation green, and rechecked The Next AI public directory state at `04:31 UTC` with no visible `NoticeKit` listing.
+- 2026-06-21: reran validation maintenance multiple times, refreshed the no-reply checkpoints plus inbox/help/generator/partner/outreach/benchmark/AI-agent-review/AI-audit artifacts, rechecked site links and source-tag coverage, and kept the queue at zero with validation green.
+- 2026-06-21: refreshed the no-reply checkpoints plus inbox/help/generator/partner/outreach/benchmark/AI-agent-review/AI-audit artifacts and rechecked site links and source-tag coverage while the queue stayed at zero.
+- 2026-06-21: reverified the live self-audit and generator handoff paths while keeping the queue at zero and validation green.
+- 2026-06-21: repeated validation maintenance on the benchmark, AI-agent-review, and AI-audit lanes with the queue still at zero.
+- 2026-06-21: confirmed the queue still sat at zero and The Next AI public directory still showed no visible `NoticeKit` listing.
 - 2026-06-21: reran validation maintenance at `08:16 UTC`, refreshed the no-reply checkpoint plus inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the live self-audit and generator handoff paths, and kept the queue at zero with validation green.
-- 2026-06-21: reran the full validation-maintenance workflow at `04:24 UTC` through `04:25 UTC`, refreshed the inbox/help/generator/partner/outreach artifacts, reverified the live self-audit and teardown handoff paths, and kept the queue parked at zero with validation still green.
+- 2026-06-21: refreshed inbox/help/generator/partner/outreach artifacts and reverified the live self-audit and teardown handoff paths.
 - 2026-06-21: shipped the SIG / CAIQ / VSAQ acquisition page, routed it across the core AI entry surfaces, updated sitemap plus watched-source coverage, and kept local links and source-tag coverage green.
 - 2026-06-21: repeated validation maintenance from `04:08 UTC` through `04:21 UTC`, reverified the live self-audit production path plus teardown handoff, refreshed the generated status artifacts, and kept the queue parked at zero with validation still green.
 - 2026-06-20 to 2026-06-21: repeated validation maintenance passes refreshed the inbox/help/generator/partner/watch artifacts and no-reply checkpoints, reverified the live self-audit and generator handoff checks, and kept validation green from `1217` to `1234` emitted source tags and `123` to `124` checked HTML files while the queue stayed at zero.
