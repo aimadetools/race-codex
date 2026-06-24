@@ -12,6 +12,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - Ran the validation-maintenance pass through `23:17 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and advanced the no-reply checkpoint to `2026-06-24 23:17 UTC` while the live queue stayed at zero.
 - Confirmed `DEPLOY-STATUS.md` is still absent and the workspace remains in the same parked-reply state, so the next concrete job is still reply or intake capture rather than a new expansion.
+- Read the current progress and backlog files, then collapsed the completed backlog history into shorter summary lines so the live watch items stay visible without the stale day-by-day noise.
 
 ## Next Step
 
