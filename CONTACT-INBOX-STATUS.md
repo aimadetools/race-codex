@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-25 04:30 UTC
+Checked at: 2026-06-25 08:04 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -385,6 +385,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-ai-answer-bank: 0
 - start-here-automation-guide: 0
 - start-here-sig-guide: 0
+- start-here-questionnaire-software: 0
 - start-here-ai-answer-library: 0
 - start-here-ai-evidence-map: 0
 - start-here-ai-agent-workspace: 0

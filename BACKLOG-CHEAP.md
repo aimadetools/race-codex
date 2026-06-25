@@ -228,6 +228,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-25: promoted the `security questionnaire software` comparison wedge into the main funnel entry points and restored source-tag coverage for the new `start-here-questionnaire-software` route.
 - 2026-06-25: validation-maintenance through `04:30 UTC` rechecked the reply watch plus the self-audit, contact-webhook, free-teardown, source-tag, and site-link gates, regenerated the watched status artifacts, and still found zero inbox submissions and zero reply evidence; the latest public The Next AI check remained `200`/no listing at `04:21 UTC`.
 - 2026-06-24: validation-maintenance through `23:23 UTC` kept the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit watch set green and found no new reply evidence.
 - 2026-06-25: shipped the `questionnaire-software` watch additions and refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit watch set with no new reply evidence.

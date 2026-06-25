@@ -237,6 +237,7 @@ export const WATCHED_SOURCE_TAGS = [
   "start-here-ai-answer-bank",
   "start-here-automation-guide",
   "start-here-sig-guide",
+  "start-here-questionnaire-software",
   "start-here-ai-answer-library",
   "start-here-ai-evidence-map",
   "start-here-ai-agent-workspace",
