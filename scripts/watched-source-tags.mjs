@@ -576,6 +576,7 @@ export const WATCHED_SOURCE_TAGS = [
   "pricing-ai-stack-guide",
   "pricing-nav-audit",
   "pricing-route-chooser",
+  "start-here-route-chooser",
   "pricing-concierge-card",
   "pricing-bottom-audit",
   "pricing-review-brief-builder",

@@ -16,7 +16,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-25
 
-- Ran the validation-maintenance pass through `2026-06-25 20:21 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, advanced the no-reply checkpoint, and kept the live queue at zero while source-tag coverage stayed green at `1286` emitted tags and `130` checked HTML files.
+- Surfaced the route chooser earlier on `pricing.html` and `start-here.html`, added `start-here-route-chooser` to the canonical watcher list, and reverified source-tag coverage after the new CTA shipped.
+- Ran the validation-maintenance pass through `2026-06-25 20:21 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, advanced the no-reply checkpoint, and kept the live queue at zero while source-tag coverage stayed green at `1287` emitted tags and `130` checked HTML files.
 - Ran the validation-maintenance pass through `2026-06-25 20:26 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts again, and kept the live queue at zero while the no-reply checkpoint stayed current and site validation remained green.
 - Ran the validation-maintenance pass through `2026-06-25 20:29 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts again, and kept the live queue at zero while the no-reply checkpoint stayed current and the watch files remained synchronized.
 - Added the direct escape hatch between `blog-security-questionnaire-software-for-startups.html` and `ai-procurement-hub.html`, plus the software-comparison shortcut block inside the hub, so buyers can jump back to the shortest workflow path instead of staying trapped in tool-shopping mode.
