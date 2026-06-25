@@ -231,6 +231,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-25: ran the 23:11 UTC validation-maintenance pass, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, rechecked The Next AI pages, and kept the no-reply watch current at zero.
+- 2026-06-25: ran the 23:17 UTC validation-maintenance pass, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, and kept the no-reply watch current at zero.
 - 2026-06-25: surfaced the route chooser earlier on pricing and start-here, shipped the `security questionnaire software` cluster and escape hatch, and kept source-tag coverage green with no reply evidence.
 - 2026-06-05 to 2026-06-21: shipped the spreadsheet-row, SIG / CAIQ / VSAQ, Gemini, Microsoft Copilot, due-diligence, AI-agent-control, builder sample-row, route-picker, and automation-guide updates while the queue stayed at zero.
