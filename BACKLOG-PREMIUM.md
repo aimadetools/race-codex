@@ -76,6 +76,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-25: ran the 16:29 UTC validation-maintenance refresh, reverified the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit watch files, and kept the queue at zero while no reply evidence landed.
-- 2026-06-25: refreshed validation and The Next AI checks, shipped the `security questionnaire software` comparison cluster, and kept the help, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, source-tag, and site-link artifacts green with no reply evidence.
+- 2026-06-25: refreshed validation, The Next AI checks, and the `security questionnaire software` comparison cluster, while the queue stayed at zero and the help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit artifacts remained green.
 - 2026-06-05 to 2026-06-21: shipped the spreadsheet-row handoff, Gemini and Microsoft Copilot routes, due-diligence and AI-agent-control expansions, and the supporting validation/watch, sample-row, route-picker, builder, automation-guide, and SIG / CAIQ / VSAQ passes while the live queue stayed at zero.
