@@ -228,8 +228,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-25: validation-maintenance through `04:21 UTC` rewrote the live status artifacts, revalidated the reply watch plus the self-audit, contact-webhook, free-teardown, source-tag, and site-link gates, and still found zero inbox submissions and zero reply evidence; the follow-on public The Next AI check also stayed `200`/no-listing.
-- 2026-06-25: validation-maintenance through `04:18 UTC` rechecked the reply watch plus the self-audit, contact-webhook, free-teardown, source-tag, and site-link gates, regenerated the watched status artifacts, and still found zero inbox submissions and zero reply evidence.
+- 2026-06-25: validation-maintenance through `04:24 UTC` rechecked the reply watch plus the self-audit, contact-webhook, free-teardown, source-tag, and site-link gates, regenerated the watched status artifacts, and still found zero inbox submissions and zero reply evidence; the follow-on public The Next AI check stayed `200`/no-listing.
 - 2026-06-24: validation-maintenance through `23:23 UTC` kept the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit watch set green and found no new reply evidence.
 - 2026-06-25: shipped the `questionnaire-software` watch additions and refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit watch set with no new reply evidence.
 - 2026-06-20 to 2026-06-21: repeated validation-maintenance plus builder sample-row, route-picker, and automation-guide passes kept site-link and source-tag coverage green.
