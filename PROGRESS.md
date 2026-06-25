@@ -15,9 +15,16 @@ Older work is collapsed here so only the last three days stay detailed.
 - Read the current progress and backlog files, then collapsed the completed backlog history into shorter summary lines so the live watch items stay visible without the stale day-by-day noise.
 - Re-reviewed `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` after the status pass; the highest-priority incomplete work is still evidence-gated buyer validation, so there was no real intake to promote into the queue today.
 
+## 2026-06-25
+
+- Broke the passive watch loop by shipping a new commercial-intent comparison page at `blog-security-questionnaire-software-for-startups.html`, aimed at founders searching for security questionnaire software before they overbuy a broader enterprise workflow.
+- Framed the new page around workflow shape instead of vague feature claims: local first-pass answer path versus heavier questionnaire orchestration versus broader trust / TPRM programs, with NoticeKit positioned against HyperComply, Conveyor, Drata AI Questionnaire Assistance, and Whistic.
+- Added tracked internal links from the homepage, pricing, free-tools hub, procurement hub, blog index, automation guide, and SIG / CAIQ / VSAQ guide so the new wedge is not orphaned and can be compared directly against the existing automation-language pages.
+- Updated `sitemap.xml` and watcher coverage for the new route, then re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; both checks passed at `1250` watched tags and `125` checked HTML files.
+
 ## Next Step
 
-- Keep watching for the first real builder, automation-guide, SIG / CAIQ / VSAQ, and named-vendor signal before promoting any of the parked comparison or acquisition pages.
+- Watch for the first real `questionnaire-software`, automation-guide, or SIG / CAIQ / VSAQ signal before expanding the software-comparison wedge or moving it higher than the existing route pages.
 - Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-24 23:26 UTC`.
 
 ## Completed Summary
