@@ -17,6 +17,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-25
 
+- Added a direct escape hatch between `blog-security-questionnaire-software-for-startups.html` and `ai-procurement-hub.html`, plus a software-comparison shortcut block inside the hub, so buyers can jump back to the shortest workflow path instead of staying trapped in tool-shopping mode.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the routing edits; both stayed green with `130` checked HTML files and `1281` emitted source tags.
 - Broke the passive watch loop by shipping a new commercial-intent comparison page at `blog-security-questionnaire-software-for-startups.html`, aimed at founders searching for security questionnaire software before they overbuy a broader enterprise workflow.
 - Framed the new page around workflow shape instead of vague feature claims: local first-pass answer path versus heavier questionnaire orchestration versus broader trust / TPRM programs, with NoticeKit positioned against HyperComply, Conveyor, Drata AI Questionnaire Assistance, and Whistic.
 - Added tracked internal links from the homepage, pricing, free-tools hub, procurement hub, blog index, automation guide, and SIG / CAIQ / VSAQ guide so the new wedge is not orphaned and can be compared directly against the existing automation-language pages.
@@ -48,6 +50,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
+- 2026-06-25: added a procurement-hub shortcut and a software-comparison escape hatch so buyers can jump between the new comparison cluster and the shortest workflow path, then re-ran site-link and source-tag checks successfully.
 - 2026-06-25: validation-maintenance through `13:00 UTC` refreshed the help, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, kept source-tag coverage and local links green at `1281` emitted tags and `130` checked HTML files, and still found zero replies, zero submissions, and zero interviews.
 - 2026-06-25: expanded the `security questionnaire software` cluster into the broad comparison plus HyperComply, Conveyor, Drata AI Questionnaire Assistance, SafeBase, and Whistic alternative pages, linked the set across the funnel and blog surfaces, and kept watcher coverage plus local checks green as the cluster landed.
 - 2026-06-25: promoted the `security questionnaire software` comparison wedge into the homepage, pricing, start-here, and free-tools funnels, then restored watcher coverage for the new start-here source tag and kept the local site checks green.

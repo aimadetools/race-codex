@@ -231,6 +231,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-25: added a routing escape hatch between the software-comparison page and the AI procurement hub, and surfaced the comparison cluster directly inside the hub so buyers can step back to the shortest workflow path.
 - 2026-06-25: validation-maintenance through `13:00 UTC` refreshed the reply watch, self-audit, contact-webhook, free-teardown, source-tag, and site-link gates, regenerated the synced status artifacts, and still found zero inbox submissions and zero reply evidence.
 - 2026-06-25: shipped the `security questionnaire software` cluster across the broad comparison plus HyperComply, Conveyor, Drata AI Questionnaire Assistance, SafeBase, and Whistic alternative routes, linked the set into the funnel and blog surfaces, and kept watcher coverage complete.
 - 2026-06-25: promoted the `security questionnaire software` comparison wedge into the main funnel entry points and restored source-tag coverage for the new `start-here-questionnaire-software` route.
