@@ -23,6 +23,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - Updated `sitemap.xml` and watcher coverage for the new route, then re-ran `npm run check:source-tag-coverage` and `npm run check:site-links`; both checks passed at `1250` watched tags and `125` checked HTML files.
 - Promoted the same `security questionnaire software` wedge into the top navigation paths on `index.html`, `pricing.html`, `start-here.html`, and `free-tools.html`, then registered the new `start-here-questionnaire-software` source tag so the funnel link stays covered.
 - Rebuilt `CONTACT-INBOX-STATUS.md` after the source-tag update and re-ran the local site checks; both `npm run check:source-tag-coverage` and `npm run check:site-links` passed again after the registry change.
+- Expanded the commercial-search wedge into a competitor-intent cluster with `blog-hypercomply-alternative-for-startups.html`, `blog-conveyor-alternative-for-startups.html`, and `blog-drata-ai-questionnaire-assistance-alternative.html`, each framed around the earlier-vs-later workflow decision instead of unsupported feature or pricing claims.
+- Verified the competitor positioning against current official product pages on `2026-06-25`, then linked the new alternatives from both `blog-security-questionnaire-software-for-startups.html` and `blog.html` so the cluster can catch specific vendor-comparison intent instead of only broad `questionnaire software` searches.
+- Refreshed `sitemap.xml` and watcher coverage for the new alternative pages, then re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` at `2026-06-25 12:39 UTC`; both checks passed at `1269` emitted source tags and `128` checked HTML files.
 - Ran repeated validation-maintenance passes through `2026-06-25 08:14 UTC`, rechecking the reply watch, self-audit follow-up links, contact webhook record shape, free-teardown handoff, self-audit production, source-tag coverage, and local site links before regenerating the help / inbox / generator / partner / benchmark / AI-agent-review / AI-audit / validation status artifacts.
 - Confirmed every June 25 refresh stayed green: `npm run check:validation-watch` remained at `0` replies / `0` interviews across the active batches, `npm run check:source-tag-coverage` stayed complete at `1251` watched tags, and `npm run check:site-links` stayed green at `125` checked HTML files; the latest refresh also kept `CONTACT-INBOX-STATUS.md` at `0` real Blob submissions and `PARTNER-OUTREACH-STATUS.md` at `0` replies.
 - Advanced the no-reply checkpoint to `2026-06-25 08:14 UTC`; the repo still shows `0` real Blob inbox submissions, `0` outreach replies or bounces across the active batches, and `0` interviews, so the next real job remains reply capture rather than another positioning branch.
@@ -31,12 +34,13 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Next Step
 
-- Watch for the first real `questionnaire-software`, automation-guide, or SIG / CAIQ / VSAQ signal before expanding the software-comparison wedge or moving it higher than the existing route pages.
+- Watch for the first real `questionnaire-software`, `hypercomply-alternative`, `conveyor-alternative`, `drata-aiqa-alternative`, automation-guide, or SIG / CAIQ / VSAQ signal before expanding the software-comparison cluster or moving it higher than the existing route pages.
 - Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-25 08:14 UTC`.
 
 ## Completed Summary
 
 - 2026-06-25: validation-maintenance through `08:14 UTC` refreshed the help, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, kept the queue at zero, and advanced the no-reply checkpoint.
+- 2026-06-25: expanded the `security questionnaire software` wedge into HyperComply, Conveyor, and Drata AI Questionnaire Assistance alternative pages, linked them from the broad software guide and blog index, then kept source-tag coverage and local links green at `1269` emitted source tags and `128` checked HTML files.
 - 2026-06-25: promoted the `security questionnaire software` comparison wedge into the homepage, pricing, start-here, and free-tools funnels, then restored watcher coverage for the new start-here source tag and kept the local site checks green.
 - 2026-06-19 to 2026-06-20: tightened receiver-side framing, surfaced Claude exact-match coverage, refreshed the route picker and spreadsheet-row paths, and kept validation green while the queue stayed at zero.
 - 2026-06-21: finished the validation-maintenance, builder preset, and SIG / CAIQ / VSAQ follow-through while keeping validation green and the queue at zero.
