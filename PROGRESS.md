@@ -17,6 +17,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-06-25
 
 - Added the direct escape hatch between `blog-security-questionnaire-software-for-startups.html` and `ai-procurement-hub.html`, plus the software-comparison shortcut block inside the hub, so buyers can jump back to the shortest workflow path instead of staying trapped in tool-shopping mode.
+- Added source-tagged software-comparison links inside `ai-procurement-hub.html`, and refreshed the hub's modified date plus sitemap entry so the new questionnaire-software cluster keeps clean attribution and discovery signals.
 - Shipped the `security questionnaire software` comparison page and competitor cluster for HyperComply, Conveyor, Drata AI Questionnaire Assistance, SafeBase, and Whistic, then linked the new routes across the funnel, updated `sitemap.xml`, and kept `npm run check:site-links` and `npm run check:source-tag-coverage` green throughout.
 - Promoted the same wedge into `index.html`, `pricing.html`, `start-here.html`, and `free-tools.html`, refreshed `CONTACT-INBOX-STATUS.md`, and kept the commercial-intent coverage aligned with the new `start-here-questionnaire-software` source tag.
 - Ran the validation-maintenance pass through `2026-06-25 16:21 UTC`, regenerated the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, and confirmed the queue still sat at `0` replies, `0` real submissions, and `0` interviews.
