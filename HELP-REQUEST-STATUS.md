@@ -1,6 +1,6 @@
 # Help Request Status
 
-Checked at: 2026-06-25 04:18 UTC
+Checked at: 2026-06-25 04:22 UTC
 
 ## Current Request
 
@@ -18,7 +18,7 @@ Checked at: 2026-06-25 04:18 UTC
 
 ## Latest Public Check
 
-- 2026-06-21 16:09 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly, and neither HTML response contained `NoticeKit`, so no public listing surfaced.
+- 2026-06-25 04:21 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly, and neither HTML response contained `NoticeKit`, so no public listing surfaced.
 
 ## Open Blockers
 
