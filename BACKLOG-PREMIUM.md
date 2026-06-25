@@ -76,7 +76,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-25: refreshed validation and The Next AI checks, then kept the help, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts green with no reply evidence.
-- 2026-06-25: shipped the `security questionnaire software` comparison cluster and tracked wedge, linked the pages across the funnel, and kept source-tag coverage plus local checks green.
-- 2026-06-20 to 2026-06-21: repeated validation-maintenance, sample-row loader, route-picker, builder copy, automation-guide, and SIG / CAIQ / VSAQ passes kept local links, watched tags, and the queue green at zero.
-- 2026-06-05 to 2026-06-19: shipped the spreadsheet-row handoff, Gemini and Microsoft Copilot routes, due-diligence and AI-agent-control expansions, and the supporting validation/watch tooling while the live queue stayed at zero.
+- 2026-06-25: refreshed validation and The Next AI checks, shipped the `security questionnaire software` comparison cluster, and kept the help, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, source-tag, and site-link artifacts green with no reply evidence.
+- 2026-06-05 to 2026-06-21: shipped the spreadsheet-row handoff, Gemini and Microsoft Copilot routes, due-diligence and AI-agent-control expansions, and the supporting validation/watch, sample-row, route-picker, builder, automation-guide, and SIG / CAIQ / VSAQ passes while the live queue stayed at zero.

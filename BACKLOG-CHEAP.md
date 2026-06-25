@@ -231,7 +231,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-25: added the software-comparison escape hatch and comparison cluster, then kept validation and watch artifacts green with no reply evidence.
-- 2026-06-25: shipped the `security questionnaire software` wedge, linked it across the funnel, and restored source-tag coverage for the new route.
-- 2026-06-20 to 2026-06-21: repeated validation-maintenance plus builder sample-row, route-picker, and automation-guide passes kept site-link and source-tag coverage green.
-- 2026-06-05 to 2026-06-19: shipped the spreadsheet-row, SIG / CAIQ / VSAQ, Gemini, Microsoft Copilot, due-diligence, and AI-agent-control updates while the queue stayed at zero.
+- 2026-06-25: shipped the software-comparison escape hatch and `security questionnaire software` cluster, then kept validation and watch artifacts green with no reply evidence.
+- 2026-06-05 to 2026-06-21: shipped the spreadsheet-row, SIG / CAIQ / VSAQ, Gemini, Microsoft Copilot, due-diligence, AI-agent-control, builder sample-row, route-picker, and automation-guide updates while the queue stayed at zero.
