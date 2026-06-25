@@ -76,9 +76,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-25: validation-maintenance through `13:00 UTC` refreshed the help, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, kept the latest public The Next AI check at `200`/no listing, and still found no reply, redirect, intake, or interview evidence.
-- 2026-06-24: validation-maintenance through `23:23 UTC` kept the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit watch set green and found no new reply evidence.
-- 2026-06-25: shipped the `security questionnaire software` comparison cluster, including the broad guide plus HyperComply, Conveyor, Drata AI Questionnaire Assistance, SafeBase, and Whistic alternative pages, linked the set across the blog/software surfaces, and kept watcher coverage plus local checks green.
-- 2026-06-25: shipped the tracked `security questionnaire software` comparison wedge, linked it from the automation, SIG / CAIQ / VSAQ, homepage, pricing, blog, and procurement-hub surfaces, then refreshed the validation watch with no new reply evidence.
+- 2026-06-25: refreshed validation and The Next AI checks, then kept the help, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts green with no reply evidence.
+- 2026-06-25: shipped the `security questionnaire software` comparison cluster and tracked wedge, linked the pages across the funnel, and kept source-tag coverage plus local checks green.
 - 2026-06-20 to 2026-06-21: repeated validation-maintenance, sample-row loader, route-picker, builder copy, automation-guide, and SIG / CAIQ / VSAQ passes kept local links, watched tags, and the queue green at zero.
 - 2026-06-05 to 2026-06-19: shipped the spreadsheet-row handoff, Gemini and Microsoft Copilot routes, due-diligence and AI-agent-control expansions, and the supporting validation/watch tooling while the live queue stayed at zero.

@@ -42,6 +42,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Ran repeated validation-maintenance passes through the midday cleanup window, resynced the generated help / inbox / generator / partner / benchmark / AI-agent-review / AI-audit / validation artifacts, and collapsed the stale June 25 backlog references so the handwritten memory matched the generated status set again.
 - Ran the next live watch pass at `2026-06-25 13:00 UTC`: `npm run run:validation-maintenance` rechecked the reply watch, self-audit follow-up links, contact webhook record shape, free-teardown handoff, self-audit production, source-tag coverage, and local site links, then refreshed the no-reply checkpoint in `COMMUNITY-FEEDBACK.md`.
 - Confirmed the latest June 25 checkpoint stayed unchanged at `0` replies, `0` real inbox submissions, and `0` interviews while local integrity remained green at `1281` emitted source tags and `130` checked HTML files; `VALIDATION-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and the outreach status files now all read `2026-06-25 13:00 UTC`.
+- Condensed the completed-summary sections in both backlog files so the live signal-gated tasks stay readable without losing the shipped June 25 and earlier history.
 
 ## Next Step
 
