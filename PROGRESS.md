@@ -34,6 +34,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Closed the remaining gap in the software-comparison cluster by adding `blog-whistic-alternative-for-startups.html`, using Whistic's current official trust-center, assessment, and vendor-monitoring positioning as the comparison baseline checked on `2026-06-25`.
 - Linked the new Whistic route from `blog-security-questionnaire-software-for-startups.html` and `blog.html`, extended watcher coverage with `blog-index-whistic-alternative`, `questionnaire-software-whistic-alternative`, and the page-level CTA tags, and refreshed `sitemap.xml` so the broader comparison no longer mentions Whistic without a dedicated follow-through page.
 - Re-ran `npm run check:source-tag-coverage` and `npm run check:site-links` after the Whistic addition; both stayed green with the expanded commercial-intent cluster.
+- Added `blog-safebase-alternative-for-startups.html` to close the remaining SafeBase intent gap in the software-comparison cluster after confirming SafeBase's current public positioning now routes through Drata's broader assurance product language on `2026-06-25`.
+- Linked the new SafeBase route from `blog-security-questionnaire-software-for-startups.html` and `blog.html`, extended watcher coverage with `blog-index-safebase-alternative`, `questionnaire-software-safebase-alternative`, and the page-level CTA tags, and refreshed `sitemap.xml` so the commercial-search cluster now covers the full named-competitor set already referenced in the backlog.
 
 ## Next Step
 
@@ -45,6 +47,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-25: validation-maintenance through `08:14 UTC` refreshed the help, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, kept the queue at zero, and advanced the no-reply checkpoint.
 - 2026-06-25: expanded the `security questionnaire software` wedge into HyperComply, Conveyor, and Drata AI Questionnaire Assistance alternative pages, linked them from the broad software guide and blog index, then kept source-tag coverage and local links green at `1269` emitted source tags and `128` checked HTML files.
 - 2026-06-25: added the Whistic alternative page to complete the software-comparison cluster, linked it from the broad comparison and blog index, and kept source-tag coverage plus local links green after the new watcher tags.
+- 2026-06-25: added the SafeBase alternative page to close the remaining competitor-intent gap in the software-comparison cluster, linked it from the broad comparison and blog index, and extended watcher coverage for the new source tags.
 - 2026-06-25: promoted the `security questionnaire software` comparison wedge into the homepage, pricing, start-here, and free-tools funnels, then restored watcher coverage for the new start-here source tag and kept the local site checks green.
 - 2026-06-19 to 2026-06-20: tightened receiver-side framing, surfaced Claude exact-match coverage, refreshed the route picker and spreadsheet-row paths, and kept validation green while the queue stayed at zero.
 - 2026-06-21: finished the validation-maintenance, builder preset, and SIG / CAIQ / VSAQ follow-through while keeping validation green and the queue at zero.
