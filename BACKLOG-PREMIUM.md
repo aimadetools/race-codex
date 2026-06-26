@@ -78,6 +78,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - Completed live work stays collapsed here as summary lines; the remaining P0-P2 items below are still evidence-gated and intentionally left open.
-- 2026-06-05 to 2026-06-26: summarized the collapsed memory trails and the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage while the live queue stayed at zero.
-- 2026-06-26: rechecked The Next AI public directory pages, confirmed the listing still does not surface publicly, and kept the open browser-session blocker and validation watch state collapsed into the live status docs.
-- 2026-06-26: re-read the premium live watches and kept the backlog trimmed to active evidence-gated decisions only, with completed work remaining collapsed into summary lines.
+- 2026-06-05 to 2026-06-26: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route coverage, then kept the directory blocker and live validation watches evidence-gated.
