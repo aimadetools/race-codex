@@ -234,13 +234,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-25: collapsed the stale memory trails in `HELP-STATUS.md` and `COMMUNITY-FEEDBACK.md` so the current watch window stays readable while the historical checks remain summarized.
-- 2026-06-25: ran the 23:17 UTC validation-maintenance pass, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, and kept the no-reply watch current at zero.
-- 2026-06-25: surfaced the route chooser earlier on pricing and start-here, shipped the `security questionnaire software` cluster and escape hatch, and kept source-tag coverage green with no reply evidence.
-- 2026-06-26: added the `best security questionnaire automation software` route, watcher tags, and trigger tasks for the first automation-software signal.
-- 2026-06-26: added the Vanta, Responsive, and Loopio alternative pages, extended automation-software watch coverage, and wired the new competitor-intent routes into the blog and procurement hub.
-- 2026-06-26: extended the automation-software competitor tracking to Conveyor, Drata, and SafeBase, and aligned the live alternative-cluster trigger line with the full set of tracked vendor routes.
-- 2026-06-26: refreshed the main acquisition pages to surface the software-shopping guide path separately, added `pricing-automation-guide` coverage, and kept the site-link plus source-tag checks green.
-- 2026-06-26: ran the `04:18 UTC` validation-maintenance pass, refreshed the generated status artifacts, and advanced the parked no-reply watch checkpoint with green site-link and source-tag checks.
-- 2026-06-26: ran the `04:28 UTC` validation-maintenance pass, refreshed the generated status artifacts, and kept self-audit production, generator handoff, watcher coverage (`1324` tags), and site-link coverage (`134` HTML files) green while the queue stayed at zero.
+- 2026-06-25 to 2026-06-26: collapsed the stale memory trails, shipped the automation-software and competitor-intent route coverage, refreshed the validation artifacts, and kept the queue at zero with source-tag and site-link checks green.
 - 2026-06-05 to 2026-06-21: shipped the spreadsheet-row, SIG / CAIQ / VSAQ, Gemini, Microsoft Copilot, due-diligence, AI-agent-control, builder sample-row, route-picker, and automation-guide updates while the queue stayed at zero.

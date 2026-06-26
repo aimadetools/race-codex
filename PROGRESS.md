@@ -42,6 +42,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Kept `DEPLOY-STATUS.md` absent and the workspace parked on reply-capture mode, then refreshed the backlog and progress memory so the latest watch checkpoint and parked-state instructions now match the generated status files.
 - Ran the next validation-maintenance pass through `2026-06-26 04:25 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts again, reverified live self-audit production plus generator and teardown handoffs, and advanced the parked no-reply checkpoint while watched source tags stayed complete at `1324` and site-link coverage stayed green across `134` HTML files.
 - Ran the next validation-maintenance pass through `2026-06-26 04:28 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts again, reverified live self-audit production plus generator and teardown handoffs, and advanced the parked no-reply checkpoint while watched source tags stayed complete at `1324` and site-link coverage stayed green across `134` HTML files.
+- Collapsed the completed summary lines in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md`, keeping the live P0 / P1 trigger items visible while trimming the older completion noise.
 
 ## Next Step
 

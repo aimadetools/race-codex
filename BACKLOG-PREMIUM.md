@@ -77,12 +77,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-25: collapsed the stale memory trails in `HELP-STATUS.md` and `COMMUNITY-FEEDBACK.md` so the current watch window stays readable while the historical checks remain summarized.
-- 2026-06-25: ran the 23:17 UTC validation-maintenance pass, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, and kept the queue at zero.
-- 2026-06-25: refreshed validation, The Next AI checks, and the `security questionnaire software` comparison cluster while the queue stayed at zero and the help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit artifacts remained green.
-- 2026-06-26: shipped the `best security questionnaire automation software` acquisition page, linked it into the route cluster, added watcher coverage, and kept site-link plus source-tag verification green.
-- 2026-06-26: added the Vanta, Responsive, and Loopio alternative pages and extended competitor-intent tracking across the automation-software cluster.
-- 2026-06-26: extended the automation-software competitor tracking to Conveyor, Drata, and SafeBase so all named vendors on the automation-software guide now have distinct attribution paths.
-- 2026-06-26: ran the `04:18 UTC` validation-maintenance pass, refreshed the generated status artifacts, and confirmed the workspace remains parked on zero-reply evidence while the validation checks stay green.
-- 2026-06-26: ran the `04:28 UTC` validation-maintenance pass, refreshed the generated status artifacts, and confirmed the workspace remains parked on zero-reply evidence while self-audit production, generator handoff, source-tag coverage (`1324` tags), and site-link coverage (`134` HTML files) stay green.
+- 2026-06-25 to 2026-06-26: collapsed the stale memory trails, shipped the automation-software and competitor-intent route coverage, refreshed the validation artifacts, and kept the queue at zero with source-tag and site-link checks green.
 - 2026-06-05 to 2026-06-21: shipped the spreadsheet-row handoff, Gemini and Microsoft Copilot routes, due-diligence and AI-agent-control expansions, and the supporting validation/watch, sample-row, route-picker, builder, automation-guide, and SIG / CAIQ / VSAQ passes while the live queue stayed at zero.
