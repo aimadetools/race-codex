@@ -26,6 +26,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-26
 
+- Synced `blog-ai-security-questionnaire-spreadsheet-handoff.html` with the current 50-row builder promise so the FAQ no longer lags behind the rest of the free-builder copy.
 - Ran the validation-maintenance pass through `2026-06-26 23:26 UTC` and `2026-06-26 23:27 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, rechecked site-link and source-tag coverage, and logged another no-reply checkpoint with the live queue still at zero.
 - Rechecked `PROGRESS.md`, the backlog files, `HELP-RESPONSES.md`, `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and the related validation docs; no new replies, submissions, or interviews landed, so the top P0 validation task is still blocked on external evidence and the missing authenticated browser session.
 - Re-read the backlog and validation docs, confirmed the highest-priority open work is still exact buyer validation through real interviews, and kept it blocked on missing evidence plus the absent authenticated browser session.
