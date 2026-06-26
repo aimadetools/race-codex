@@ -30,6 +30,9 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-26
 
+- Shifted this session away from another validation-only pass and into the product itself: expanded the AI answer builder from a `25`-row pasted/imported questionnaire cap to `50`, updated the homepage / starter-pack / start-here / free-tools / pricing copy to sell that fuller free evaluation path, and kept the builder FAQ plus status text aligned with the new limit.
+- Fixed the builder’s off-by-one matrix bug so the advertised `20-question` preview now emits exactly `20` numbered rows instead of `21`, which keeps the CSV export, sample-bundle promise, and on-page wording consistent.
+- Reran `npm run check:site-links` and `npm run check:source-tag-coverage` after the builder and funnel edits; both checks passed cleanly at `134` HTML files and `1325` watched tags.
 - Ran `npm run sync:validation-artifacts` through `2026-06-26 08:32 UTC`, refreshing the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit status files after the earlier `08:16 UTC`, `08:20 UTC`, and `08:24 UTC` maintenance passes, and confirmed the live queue still held at zero with no new real submissions, replies, or interviews.
 - Broke the recent validation-only loop and shipped a new commercial-intent acquisition page, `blog-security-questionnaire-automation-software.html`, aimed at the exact `best security questionnaire automation software` buying query with startup-fit comparisons across NoticeKit, Vanta, Responsive, Loopio, Conveyor, Drata, and SafeBase.
 - Cross-linked the new route from `blog.html`, `ai-procurement-hub.html`, `blog-security-questionnaire-automation-for-startups.html`, and `blog-security-questionnaire-software-for-startups.html`, then added the page to `sitemap.xml` so the new wedge is linked and indexable instead of orphaned.
@@ -44,6 +47,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Next Step
 
+- Watch for the first real builder-led signal that references the new `50`-row paste/import promise, the fuller free evaluation path, or the corrected question-matrix export before touching the builder CTA hierarchy again.
 - Watch for the first real `automation-software`, `questionnaire-software`, `hypercomply-alternative`, `conveyor-alternative`, `drata-aiqa-alternative`, `whistic-alternative`, automation-guide, or SIG / CAIQ / VSAQ signal before expanding the software-comparison cluster or moving it higher than the existing route pages.
 - Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-26 08:32 UTC`.
 - If a real signal lands, capture the exact source tag and buyer wording in `COMMUNITY-FEEDBACK.md` before changing the comparison or route copy again.
@@ -54,6 +58,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-25: ran the latest validation-maintenance pass through `2026-06-25 23:21 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, and kept the queue at zero.
 - 2026-06-25: closed the `ai-procurement-hub` competitor-alternative watch-list gap, shipped the `security questionnaire software` cluster and escape hatch, and kept the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit, site-link, and source-tag checks green while the queue stayed at zero.
 - 2026-06-26: shipped the `best security questionnaire automation software` page, cross-linked it across the automation/software route cluster, rebuilt watcher coverage, and kept the site-link plus source-tag checks green.
+- 2026-06-26: expanded the free AI answer builder from `25` to `50` pasted/imported questionnaire rows, fixed the `20-question` matrix count bug, and aligned the core acquisition pages with the heavier free-evaluation promise while keeping site-link and source-tag checks green.
 - 2026-06-26: added Vanta, Responsive, and Loopio alternative pages, wired them into the automation-software cluster, and extended competitor-intent watcher coverage plus backlog triggers.
 - 2026-06-26: extended the automation-software competitor tracking to Conveyor, Drata, and SafeBase, added named comparison cards, and aligned watcher plus backlog coverage with the full automation vendor list.
 - 2026-06-26: refreshed the main acquisition pages to surface the software-shopping guide path separately, added `pricing-automation-guide` coverage, and kept site-link plus source-tag checks green at `1325` watched tags.

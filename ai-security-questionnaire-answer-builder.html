@@ -50,7 +50,7 @@
                 "name": "How is the builder different from the answer template or packet guide?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The builder creates a filled answer block, a pasted-question response pack for the buyer's real questionnaire rows, a proof checklist, an internal handoff brief, and 20 reusable buyer-question responses locally in the browser. The answer template is better when you want a blank copy-paste format. The packet guide is better when procurement, security, and counsel all need the same fuller review artifact."
+                  "text": "The builder creates a filled answer block, a pasted-question response pack for up to 50 real questionnaire rows, a proof checklist, an internal handoff brief, and 20 reusable buyer-question responses locally in the browser. The answer template is better when you want a blank copy-paste format. The packet guide is better when procurement, security, and counsel all need the same fuller review artifact."
                 }
               },
               {
@@ -85,7 +85,7 @@
         <section class="page-hero">
           <span class="eyebrow">Local AI answer + handoff builder</span>
           <h1 id="hero-title">Build the AI answer and the internal handoff before procurement asks for the packet.</h1>
-          <p id="hero-copy">Use this browser-only builder when your SaaS team is answering a buyer or security reviewer and needs one copy-ready AI answer now plus a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links once, then paste up to 25 real buyer questions or upload a questionnaire CSV, TSV, or Excel file to generate a local response pack alongside the answer block, handoff note, reviewer workspace export, answer-bank draft, downloadable 20-question matrix CSV, and 20 reusable buyer-question responses without sending your inputs to a server.</p>
+          <p id="hero-copy">Use this browser-only builder when your SaaS team is answering a buyer or security reviewer and needs one copy-ready AI answer now plus a clean internal brief. Fill the named vendors, scope, stance, decision needed, and proof links once, then paste up to 50 real buyer questions or upload a questionnaire CSV, TSV, or Excel file to generate a local response pack alongside the answer block, handoff note, reviewer workspace export, answer-bank draft, downloadable 20-question matrix CSV, and 20 reusable buyer-question responses without sending your inputs to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#builder">Build answer + bundle</a>
             <a class="button secondary" href="ai-security-questionnaire-starter-pack.html?source=ai-questionnaire-builder-starter-pack">Open starter pack</a>
@@ -203,7 +203,7 @@
               </label>
               <label>Paste buyer questions or questionnaire rows
                 <textarea id="question-list" rows="8" placeholder="Paste one buyer question per line. Example:&#10;Do you use OpenAI or another model provider in this workflow?&#10;What customer data is sent to the model?&#10;Who approves reuse of this answer?"></textarea>
-                <span class="fine-print">You can paste rows directly from a spreadsheet or portal grid, or upload a CSV, TSV, or Excel export. NoticeKit keeps the row reference and any section label it can detect.</span>
+                <span class="fine-print">You can paste up to 50 rows directly from a spreadsheet or portal grid, or upload a CSV, TSV, or Excel export. NoticeKit keeps the row reference and any section label it can detect.</span>
               </label>
             </div>
             <div class="hero-actions" style="margin-top:16px;">
@@ -589,6 +589,7 @@
       const questionListField = document.querySelector("#question-list");
       const builderStorageKey = "noticekit-ai-questionnaire-builder-draft-v2";
       const reusableQuestionCount = 20;
+      const maxCustomQuestionRows = 50;
       let importedQuestionRows = [];
       let syncingImportedQuestions = false;
 
@@ -685,7 +686,7 @@
           .split(/\n+/)
           .map((line) => line.trim().replace(/^[\-\d\.\)\s]+/, ""))
           .filter(Boolean)
-          .slice(0, 25);
+          .slice(0, maxCustomQuestionRows);
       }
 
       function parseDelimitedText(rawText, delimiter) {
@@ -918,7 +919,7 @@
             };
           })
           .filter((row) => row.question)
-          .slice(0, 25);
+          .slice(0, maxCustomQuestionRows);
 
         if (!importedRows.length) {
           throw new Error("missing-question-column");
@@ -978,7 +979,7 @@
         setImportedQuestionRows(importedRows);
         saveDraft();
         render();
-        builderStatus.textContent = `Imported ${importedRows.length} questionnaire rows from ${originLabel}. Source row and section labels are preserved in the response pack and draft export.`;
+        builderStatus.textContent = `Imported ${importedRows.length} of up to ${maxCustomQuestionRows} questionnaire rows from ${originLabel}. Source row and section labels are preserved in the response pack and draft export.`;
       }
 
       function loadSampleQuestionnaire(importedRows, message, sampleContext = {}) {
@@ -1062,7 +1063,7 @@
           const restoredRows = parsed && typeof parsed === "object" && Array.isArray(parsed.importedQuestionRows)
             ? parsed.importedQuestionRows
                 .filter((row) => row && typeof row.question === "string")
-                .slice(0, 25)
+                .slice(0, maxCustomQuestionRows)
                 .map((row, index) => ({
                   sourceRow: String(row.sourceRow || index + 1),
                   section: String(row.section || ""),
@@ -1106,7 +1107,7 @@
         const importedRows = draft && typeof draft === "object" && Array.isArray(draft.importedQuestionRows)
           ? draft.importedQuestionRows
               .filter((row) => row && typeof row.question === "string")
-              .slice(0, 25)
+              .slice(0, maxCustomQuestionRows)
               .map((row, index) => ({
                 sourceRow: String(row.sourceRow || index + 1),
                 section: String(row.section || ""),
@@ -1290,109 +1291,104 @@
 
         const questionMatrix = [
           {
-            number: 0,
+            number: 1,
             question: "What exact buyer question are we answering?",
             answer: `${buyerQuestion} Recommended lane: ${reviewerLaneLabel}. Preferred shape: ${answerShapeLabel}.`
           },
           {
-            number: 1,
+            number: 2,
             question: "Which AI vendors are in scope?",
             answer: `${primaryVendor} is the primary AI vendor for ${workflow}. Supporting vendors in this workflow include ${supportingVendors}.`
           },
           {
-            number: 2,
+            number: 3,
             question: "What workflow is under review?",
             answer: `${company} is reviewing ${workflow}, which is currently ${statusLabel}.`
           },
           {
-            number: 3,
+            number: 4,
             question: "What data categories are involved?",
             answer: dataCategories
           },
           {
-            number: 4,
+            number: 5,
             question: "What is the current retention or training stance?",
             answer: retentionStance
           },
           {
-            number: 5,
+            number: 6,
             question: "Which customers or agreements are affected?",
             answer: customerScope
           },
           {
-            number: 6,
+            number: 7,
             question: "Why is this answer being requested?",
             answer: reviewerAsk
           },
           {
-            number: 7,
+            number: 8,
             question: "What human review or approval sits behind this answer?",
             answer: approvalPath
           },
           {
-            number: 8,
+            number: 9,
             question: "What is explicitly out of scope for this answer?",
             answer: scopeBoundaries
           },
           {
-            number: 9,
+            number: 10,
             question: "When should this answer be rechecked or refreshed?",
             answer: reviewCadence
           },
           {
-            number: 10,
+            number: 11,
             question: "Does this trigger notice, escalation, or counsel review?",
             answer: noticeImpact
           },
           {
-            number: 11,
+            number: 12,
             question: "What decision still needs to be made before broader reuse?",
             answer: decisionNeeded
           },
           {
-            number: 12,
+            number: 13,
             question: "What proof and owner notes sit behind the answer?",
             answer: `Proof: ${proofLinks} Owner and open questions: ${replyOwner}. ${openQuestions}`
           },
           {
-            number: 13,
+            number: 14,
             question: "Is this workflow planned, active, or replacing another vendor flow?",
             answer: `The workflow is currently ${statusLabel}.`
           },
           {
-            number: 14,
+            number: 15,
             question: `Which supporting vendors touch the workflow around ${primaryVendor}?`,
             answer: `Supporting systems in the reviewed path include ${supportingVendors}.`
           },
           {
-            number: 15,
+            number: 16,
             question: "What exact workflow boundary should the reviewer assume?",
             answer: `This answer covers ${workflow}. Anything outside that reviewed workflow stays out of scope: ${scopeBoundaries}`
           },
           {
-            number: 16,
+            number: 17,
             question: "Which customer segment needs the closest contract or DPA check?",
             answer: `Customer scope needing the closest review: ${customerScope}`
           },
           {
-            number: 17,
+            number: 18,
             question: "What would force the answer to change before the next deal?",
             answer: `Refresh the answer when this trigger changes: ${reviewCadence}`
           },
           {
-            number: 18,
+            number: 19,
             question: "What broader notice or rollout issue sits behind the answer?",
             answer: `Notice or escalation impact: ${noticeImpact}`
           },
           {
-            number: 19,
+            number: 20,
             question: "Who owns the response if the buyer asks for more proof tomorrow?",
             answer: `${replyOwner} owns the next response, with this approval path behind the answer: ${approvalPath}`
-          },
-          {
-            number: 20,
-            question: "What is the current safe-to-send position in one line?",
-            answer: `${shortAnswer}. Next decision still open: ${decisionNeeded}`
           }
         ];
 
@@ -2705,7 +2701,7 @@
           setImportedQuestionRows(importedRows);
           saveDraft();
           render();
-          builderStatus.textContent = `Imported ${importedRows.length} questionnaire rows from pasted spreadsheet data. Source row and section labels are preserved in the response pack and draft export.`;
+          builderStatus.textContent = `Imported ${importedRows.length} of up to ${maxCustomQuestionRows} questionnaire rows from pasted spreadsheet data. Source row and section labels are preserved in the response pack and draft export.`;
         } catch (error) {
           // Fall back to normal paste if the grid does not parse cleanly.
         }
@@ -2842,7 +2838,7 @@
             setImportedQuestionRows(importedRows);
             saveDraft();
             render();
-            builderStatus.textContent = `Imported ${importedRows.length} questionnaire rows from Excel. Source row and section labels are preserved in the response pack and draft export.`;
+            builderStatus.textContent = `Imported ${importedRows.length} of up to ${maxCustomQuestionRows} questionnaire rows from Excel. Source row and section labels are preserved in the response pack and draft export.`;
           } else {
             importQuestionnaireRows(await file.text(), "file");
           }
