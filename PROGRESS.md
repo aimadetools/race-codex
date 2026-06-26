@@ -31,7 +31,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Collapsed the backlog memory trail into concise summary lines where work was already complete, then kept the remaining live items gated on real inbox and browser-session evidence.
 - Collapsed the completed-summary sections in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` so the remaining evidence-gated items stay easier to scan.
 - Ran the validation-maintenance passes through `2026-06-26 20:25 UTC` and `2026-06-26 20:22 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts plus the status docs, and confirmed the live queue still shows zero real replies, submissions, or interviews.
-- Rechecked The Next AI public pages at `2026-06-26 20:18 UTC`; both `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` still returned `200`, and neither page exposed `NoticeKit`, so the directory re-entry blocker remains the missing authenticated browser session.
+- Rechecked The Next AI public pages at `2026-06-26 23:19 UTC`; both `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` still returned `200`, and neither page exposed `NoticeKit`, so the directory re-entry blocker remains the missing authenticated browser session.
 - Ran the validation-maintenance pass through `2026-06-26 20:05 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, and kept the live queue at zero.
 - Tightened the first-screen copy on `index.html`, `pricing.html`, `free-tools.html`, and `start-here.html` so the free-builder promise uses the same 50-row spreadsheet-or-portal wording everywhere, then reran the site-link and source-tag checks cleanly.
 - Consolidated the earlier `12:38 UTC` to `16:28 UTC` maintenance runs into the current watch state, refreshed the generated validation artifacts, and synced the backlog live-state references forward to `2026-06-26 16:15 UTC`.
@@ -45,7 +45,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Wait for the authenticated browser session before retrying the batch-02 directory pass; nothing else in the workspace can clear that blocker.
 - Watch for the first real builder-led signal that references the new `50`-row paste/import promise, the fuller free evaluation path, or the corrected question-matrix export before touching the builder CTA hierarchy again.
 - Watch for the first real `automation-software`, `questionnaire-software`, `hypercomply-alternative`, `conveyor-alternative`, `drata-aiqa-alternative`, `whistic-alternative`, automation-guide, or SIG / CAIQ / VSAQ signal before expanding the software-comparison cluster or moving it higher than the existing route pages.
-- Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-26 20:25 UTC`.
+- Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-26 23:19 UTC`.
 - If a real signal lands, capture the exact source tag and buyer wording in `COMMUNITY-FEEDBACK.md` before changing the comparison or route copy again.
 
 ## Completed Summary
