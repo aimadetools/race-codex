@@ -237,6 +237,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-26: collapsed stale memory trails, shipped the spreadsheet-row, SIG / CAIQ / VSAQ, Gemini, Microsoft Copilot, due-diligence, AI-agent-control, builder sample-row, route-picker, automation-guide, automation-software, and competitor-intent route updates, refreshed validation artifacts, and kept the queue at zero.
-- 2026-06-26: reran the midday validation watch cycle through `12:58 UTC`, refreshed the inbox, partner, generator, benchmark, AI-agent-review, AI-audit, and validation artifacts, then advanced the live watch checkpoint references across the backlog and memory files to `16:07 UTC` while the watch state stayed parked at zero real replies or submissions.
-- 2026-06-26: trimmed the first-screen CTA clutter on the homepage, pricing, start-here, free-tools, and route-chooser entry pages, restored the watched due-diligence homepage link, and revalidated site-link plus source-tag coverage.
+- 2026-06-05 to 2026-06-26: collapsed stale memory trails and shipped the spreadsheet-row, SIG / CAIQ / VSAQ, Gemini, Microsoft Copilot, due-diligence, AI-agent-control, builder sample-row, route-picker, automation-guide, automation-software, and competitor-intent route updates while the queue stayed at zero.
+- 2026-06-26: reran the latest validation watch cycles, advanced the live checkpoint to `16:07 UTC`, and trimmed the first-screen CTA clutter on the core entry pages while keeping site-link and source-tag coverage green.
