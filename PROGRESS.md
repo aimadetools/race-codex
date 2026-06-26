@@ -33,6 +33,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Broke the recent validation-only loop and shipped a new commercial-intent acquisition page, `blog-security-questionnaire-automation-software.html`, aimed at the exact `best security questionnaire automation software` buying query with startup-fit comparisons across NoticeKit, Vanta, Responsive, Loopio, Conveyor, Drata, and SafeBase.
 - Cross-linked the new route from `blog.html`, `ai-procurement-hub.html`, `blog-security-questionnaire-automation-for-startups.html`, and `blog-security-questionnaire-software-for-startups.html`, then added the page to `sitemap.xml` so the new wedge is linked and indexable instead of orphaned.
 - Added the new `automation-software-*`, `blog-index-automation-software`, and `ai-procurement-hub-automation-software` watcher tags, rebuilt `CONTACT-INBOX-STATUS.md`, and kept `npm run check:site-links` plus `npm run check:source-tag-coverage` green after the change.
+- Extended the competitor-intent cluster with `blog-vanta-alternative-for-startups.html`, `blog-responsive-alternative-for-startups.html`, and `blog-loopio-alternative-for-startups.html`, then linked those pages from the automation-software guide, blog index, and procurement hub so the named vendors on the comparison page now have dedicated follow-through routes.
+- Added the matching `blog-index-*`, `ai-procurement-hub-*`, `automation-software-*`, and page-level CTA watcher tags for the three new alternative pages, and updated the cheap/premium backlog trigger lines so the first real competitor-intent signal can be captured without another watch-list gap.
 
 ## Next Step
 
@@ -45,5 +47,6 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-25: ran the latest validation-maintenance pass through `2026-06-25 23:21 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, and kept the queue at zero.
 - 2026-06-25: closed the `ai-procurement-hub` competitor-alternative watch-list gap, shipped the `security questionnaire software` cluster and escape hatch, and kept the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit, site-link, and source-tag checks green while the queue stayed at zero.
 - 2026-06-26: shipped the `best security questionnaire automation software` page, cross-linked it across the automation/software route cluster, rebuilt watcher coverage, and kept the site-link plus source-tag checks green.
+- 2026-06-26: added Vanta, Responsive, and Loopio alternative pages, wired them into the automation-software cluster, and extended competitor-intent watcher coverage plus backlog triggers.
 - 2026-06-24 to 2026-06-25: ran repeated validation-maintenance passes, refreshed the status artifacts, and confirmed the workspace remained parked with no deployment file and no live intake evidence.
 - 2026-06-19 to 2026-06-21: tightened receiver-side framing, surfaced Claude exact-match coverage, refreshed the route picker and spreadsheet-row paths, and kept validation green while the queue stayed at zero.
