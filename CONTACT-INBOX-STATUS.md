@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-25 23:21 UTC
+Checked at: 2026-06-26 04:04 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1095,6 +1095,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-ai-risk-assessment: 0
 - automation-guide-nav-audit: 0
 - automation-guide-sig-guide: 0
+- automation-guide-automation-software: 0
 - automation-guide-questionnaire-software: 0
 - automation-guide-builder: 0
 - automation-guide-answer-bank: 0
@@ -1114,6 +1115,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - sig-guide-due-diligence-packet-builder: 0
 - questionnaire-software-nav-audit: 0
 - questionnaire-software-builder: 0
+- questionnaire-software-automation-software: 0
 - questionnaire-software-automation-guide: 0
 - questionnaire-software-sig-guide: 0
 - questionnaire-software-answer-bank: 0
@@ -1124,6 +1126,17 @@ Source of truth: Vercel Blob `contact-submissions/`
 - questionnaire-software-drata-aiqa-alternative: 0
 - questionnaire-software-safebase-alternative: 0
 - questionnaire-software-whistic-alternative: 0
+- automation-software-nav-audit: 0
+- automation-software-builder: 0
+- automation-software-answer-bank: 0
+- automation-software-automation-guide: 0
+- automation-software-questionnaire-software: 0
+- automation-software-sig-guide: 0
+- automation-software-due-diligence: 0
+- automation-software-evidence-map: 0
+- automation-software-audit: 0
+- blog-index-automation-software: 0
+- ai-procurement-hub-automation-software: 0
 - hypercomply-alternative-builder: 0
 - hypercomply-alternative-software-guide: 0
 - hypercomply-alternative-answer-bank: 0
