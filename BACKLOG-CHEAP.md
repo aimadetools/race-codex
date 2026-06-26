@@ -1,6 +1,6 @@
 # Cheap Backlog
 
-These tasks are routine and can be handled quickly. Live reply-capture work stays in the P0 section; completed maintenance and shipping work stays collapsed here as summary context only.
+These tasks are routine and can be handled quickly. Live reply-capture work stays in the P0 section; completed maintenance and shipping work stay collapsed into summary lines below.
 
 ## P0
 
@@ -238,4 +238,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - Completed maintenance work stays collapsed here as summary lines; the remaining P0-P2 items below are still live trigger watches.
-- 2026-06-05 to 2026-06-26: summarized the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage, then kept the Next AI directory blocker and other live watches parked at zero evidence.
+- 2026-06-05 to 2026-06-26: summarized the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage while the Next AI directory blocker and live watches stayed evidence-gated at zero.
