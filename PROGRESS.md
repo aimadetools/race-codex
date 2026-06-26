@@ -40,7 +40,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Refreshed `index.html`, `pricing.html`, `start-here.html`, and `free-tools.html` to put the software-shopping path in a separate guidance band, added `pricing-automation-guide` to the watcher set, regenerated `CONTACT-INBOX-STATUS.md`, and reran the site-link plus source-tag checks to a clean `1325` watched tags.
 - Ran the validation-maintenance passes through `2026-06-26 04:18 UTC` to `2026-06-26 04:28 UTC`, refreshing the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts and keeping the generator, teardown handoff, self-audit production, webhook shape, source-tag coverage, and site-link checks green while the live queue stayed at zero.
 - Kept `DEPLOY-STATUS.md` absent and the workspace parked on reply-capture mode, then refreshed the backlog and progress memory so the latest watch checkpoint and parked-state instructions now match the generated status files.
-- Collapsed the completed summary lines in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md`, keeping the live P0 / P1 trigger items visible while trimming the older completion noise.
+- Kept the completed summary lines in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` collapsed, keeping the live P0 / P1 trigger items visible while trimming the older completion noise.
 
 ## Next Step
 
@@ -58,7 +58,5 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-26: extended the automation-software competitor tracking to Conveyor, Drata, and SafeBase, added named comparison cards, and aligned watcher plus backlog coverage with the full automation vendor list.
 - 2026-06-26: refreshed the main acquisition pages to surface the software-shopping guide path separately, added `pricing-automation-guide` coverage, and kept site-link plus source-tag checks green at `1325` watched tags.
 - 2026-06-26: ran the `04:18 UTC` through `04:28 UTC` validation-maintenance loop, refreshed the generated status artifacts, and kept webhook shape, generator handoff, self-audit production, source-tag coverage, and site-link checks green while the queue stayed at zero.
-- 2026-06-26: ran the `08:24 UTC` validation-maintenance pass, refreshed the generated status artifacts again, and kept the live queue and reply watch at zero while the no-reply checkpoint advanced.
-- 2026-06-26: ran the `08:20 UTC` validation sync, refreshed the generated status artifacts, and kept the live queue and reply watch at zero while the snapshot timestamps advanced.
 - 2026-06-24 to 2026-06-25: ran repeated validation-maintenance passes, refreshed the status artifacts, and confirmed the workspace remained parked with no deployment file and no live intake evidence.
 - 2026-06-19 to 2026-06-21: tightened receiver-side framing, surfaced Claude exact-match coverage, refreshed the route picker and spreadsheet-row paths, and kept validation green while the queue stayed at zero.

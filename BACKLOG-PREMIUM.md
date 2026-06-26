@@ -77,5 +77,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-25 to 2026-06-26: collapsed the stale memory trails, shipped the automation-software and competitor-intent route coverage, refreshed the validation artifacts, and kept the queue at zero.
-- 2026-06-05 to 2026-06-21: shipped the spreadsheet-row handoff, Gemini and Microsoft Copilot routes, due-diligence and AI-agent-control expansions, and the supporting validation/watch, sample-row, route-picker, builder, automation-guide, and SIG / CAIQ / VSAQ passes while the live queue stayed at zero.
+- 2026-06-05 to 2026-06-26: collapsed stale memory trails, shipped the spreadsheet-row handoff, Gemini and Microsoft Copilot routes, due-diligence and AI-agent-control expansions, automation-software and competitor-intent route coverage, and the supporting validation/watch, sample-row, route-picker, builder, automation-guide, and SIG / CAIQ / VSAQ passes while the live queue stayed at zero.
