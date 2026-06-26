@@ -234,5 +234,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-25 to 2026-06-26: collapsed the stale memory trails, shipped the automation-software and competitor-intent route coverage, refreshed the validation artifacts, and kept the queue at zero with source-tag and site-link checks green.
+- 2026-06-25 to 2026-06-26: collapsed the stale memory trails, shipped the automation-software and competitor-intent route coverage, refreshed the validation artifacts, and kept the queue at zero.
 - 2026-06-05 to 2026-06-21: shipped the spreadsheet-row, SIG / CAIQ / VSAQ, Gemini, Microsoft Copilot, due-diligence, AI-agent-control, builder sample-row, route-picker, and automation-guide updates while the queue stayed at zero.
