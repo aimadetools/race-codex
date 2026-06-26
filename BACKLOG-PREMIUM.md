@@ -78,4 +78,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - Completed live work stays collapsed here as summary lines; the remaining P0-P2 items below are still evidence-gated and intentionally left open.
-- 2026-06-05 to 2026-06-26: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route coverage while the directory blocker and live validation watches stayed evidence-gated.
+- 2026-06-05 to 2026-06-26: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route coverage while the directory blocker and live validation watches stayed evidence-gated. No new evidence landed in this pass, so the remaining P0-P2 items stay collapsed and open.
