@@ -78,3 +78,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-06-05 to 2026-06-26: summarized the collapsed memory trails and the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage while the live queue stayed at zero.
+- 2026-06-26: rechecked The Next AI public directory pages, confirmed the listing still does not surface publicly, and kept the open browser-session blocker and validation watch state collapsed into the live status docs.

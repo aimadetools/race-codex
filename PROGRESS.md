@@ -26,6 +26,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-26
 
+- Rechecked The Next AI public pages at `2026-06-26 20:18 UTC`; both `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` still returned `200`, and neither page exposed `NoticeKit`, so the directory re-entry blocker remains the missing authenticated browser session.
 - Ran the validation-maintenance pass through `2026-06-26 20:05 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, deduplicated the no-reply checkpoint, and kept the live queue at zero.
 - Tightened the first-screen copy on `index.html`, `pricing.html`, `free-tools.html`, and `start-here.html` so the free-builder promise uses the same 50-row spreadsheet-or-portal wording everywhere, then reran the site-link and source-tag checks cleanly.
 - Consolidated the earlier `12:38 UTC` to `16:28 UTC` maintenance runs into the current watch state, which still shows zero new replies, redirects, submissions, or interviews.
