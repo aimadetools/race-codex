@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-26 04:18 UTC
+Checked at: 2026-06-26 04:22 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1146,6 +1146,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-software-vanta-alternative: 0
 - automation-software-responsive-alternative: 0
 - automation-software-loopio-alternative: 0
+- automation-software-conveyor-alternative: 0
+- automation-software-drata-aiqa-alternative: 0
+- automation-software-safebase-alternative: 0
 - vanta-alternative-builder: 0
 - vanta-alternative-software-guide: 0
 - vanta-alternative-answer-bank: 0
