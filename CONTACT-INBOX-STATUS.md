@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-26 04:28 UTC
+Checked at: 2026-06-26 08:05 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -540,6 +540,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-due-diligence-packet-builder: 0
 - pricing-ai-framework-map: 0
 - pricing-spreadsheet-rows: 0
+- pricing-automation-guide: 0
 - pricing-sig-guide: 0
 - pricing-questionnaire-software: 0
 - ai-procurement-hub-answer-library: 0

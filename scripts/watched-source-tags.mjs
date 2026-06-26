@@ -338,6 +338,7 @@ export const WATCHED_SOURCE_TAGS = [
   "pricing-ai-due-diligence-packet-builder",
   "pricing-ai-framework-map",
   "pricing-spreadsheet-rows",
+  "pricing-automation-guide",
   "pricing-sig-guide",
   "pricing-questionnaire-software",
   "ai-procurement-hub-answer-library",
