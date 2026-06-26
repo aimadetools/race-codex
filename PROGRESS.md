@@ -26,6 +26,7 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-26
 
+- Hardened the free AI answer builder's spreadsheet import path so multi-sheet Excel files now prefer the best questionnaire sheet, preserve the chosen sheet name in row metadata, and expose that in the preview/export.
 - Collapsed the backlog memory trail into concise summary lines where work was already complete, then kept the remaining live items gated on real inbox and browser-session evidence.
 - Ran the validation-maintenance pass through `2026-06-26 20:25 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts again, and confirmed the live queue still shows zero real replies, submissions, or interviews.
 - Ran the validation-maintenance pass through `2026-06-26 20:22 UTC`, refreshed `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, `HELP-REQUEST-STATUS.md`, `HELP-REQUEST-LAUNCHPAD.md`, `SELF-AUDIT-PRODUCTION-VERIFY.md`, and the outreach status files, and confirmed the watch still shows zero real replies, submissions, or interviews.

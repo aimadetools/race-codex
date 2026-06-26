@@ -240,3 +240,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 - Completed maintenance work stays collapsed here as summary lines; the remaining P0-P2 items below are still live trigger watches.
 - 2026-06-05 to 2026-06-26: summarized the entry-page funnel work, collapsed stale memory trails, and shipped the spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route updates while keeping the queue at zero.
 - 2026-06-26: rechecked The Next AI public directory pages, confirmed the listing still does not surface publicly, and kept the directory blocker and validation watch state summarized in the live status docs.
+- 2026-06-26: hardened the free AI answer builder import path so multi-sheet Excel files prefer the best questionnaire sheet, preserve the selected sheet name, and expose it in the preview/export.

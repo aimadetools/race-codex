@@ -317,6 +317,7 @@
             <table>
               <thead>
                 <tr>
+                  <th>Sheet</th>
                   <th>Source row</th>
                   <th>Section</th>
                   <th>Question</th>
@@ -928,6 +929,64 @@
         return importedRows;
       }
 
+      function scoreImportedQuestionRowsFromGrid(rows) {
+        if (rows.length < 2) {
+          return -1;
+        }
+
+        const headerPresent = hasQuestionHeader(rows[0]);
+        const headers = headerPresent ? rows[0] : [];
+        const bodyRows = headerPresent ? rows.slice(1) : rows;
+        const questionIndex = headerPresent
+          ? pickColumnIndex(headers, 0, [
+              ["question", "prompt", "request", "requirement", "control", "description", "item"]
+            ])
+          : inferQuestionColumn(bodyRows);
+        const rowIndex = headerPresent
+          ? pickColumnIndex(headers, -1, [
+              ["row", "line", "item", "number", "#", "id"]
+            ])
+          : inferRowColumn(bodyRows, questionIndex);
+        const sectionIndex = headerPresent
+          ? pickColumnIndex(headers, -1, [
+              ["section", "domain", "category", "topic", "area", "group"]
+            ])
+          : inferSectionColumn(bodyRows, questionIndex, rowIndex);
+        const importedRows = bodyRows
+          .map((cells, index) => {
+            const question = String(cells[questionIndex] || "").trim();
+            const fallbackRow = headerPresent ? index + 2 : index + 1;
+            const sourceRow = rowIndex >= 0 ? String(cells[rowIndex] || "").trim() : String(fallbackRow);
+            const section = sectionIndex >= 0 ? String(cells[sectionIndex] || "").trim() : "";
+            return {
+              sourceRow: sourceRow || String(fallbackRow),
+              section,
+              question
+            };
+          })
+          .filter((row) => row.question)
+          .slice(0, maxCustomQuestionRows);
+
+        if (!importedRows.length) {
+          return -1;
+        }
+
+        let score = importedRows.length * 10;
+        if (headerPresent) {
+          score += 15;
+        }
+        if (rowIndex >= 0) {
+          score += 4;
+        }
+        if (sectionIndex >= 0) {
+          score += 4;
+        }
+        score += Math.min(importedRows.filter((row) => row.section).length, 6);
+        score += Math.min(importedRows.filter((row) => row.sourceRow && row.sourceRow !== "1").length, 4);
+
+        return score;
+      }
+
       function parseImportedQuestionRows(rawText) {
         const trimmed = String(rawText || "").trim();
         if (!trimmed) {
@@ -949,29 +1008,45 @@
           cellDates: false,
           dense: false
         });
-        const sheetName = workbook.SheetNames.find((name) => {
-          const sheet = workbook.Sheets[name];
+        let bestMatch = null;
+
+        workbook.SheetNames.forEach((sheetName) => {
+          const sheet = workbook.Sheets[sheetName];
           if (!sheet) {
-            return false;
+            return;
           }
           const rows = window.XLSX.utils.sheet_to_json(sheet, {
             header: 1,
             raw: false,
             defval: ""
           });
-          return rows.some((row) => Array.isArray(row) && row.some((cell) => String(cell || "").trim()));
+          if (!rows.some((row) => Array.isArray(row) && row.some((cell) => String(cell || "").trim()))) {
+            return;
+          }
+
+          try {
+            const importedRows = parseImportedQuestionRowsFromGrid(rows);
+            const score = scoreImportedQuestionRowsFromGrid(rows);
+            if (!bestMatch || score > bestMatch.score || (score === bestMatch.score && importedRows.length > bestMatch.rows.length)) {
+              bestMatch = {
+                sheetName,
+                rows: importedRows,
+                score
+              };
+            }
+          } catch (error) {
+            // Skip sheets that do not parse cleanly as questionnaire grids.
+          }
         });
 
-        if (!sheetName) {
+        if (!bestMatch) {
           throw new Error("empty-file");
         }
 
-        const rows = window.XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], {
-          header: 1,
-          raw: false,
-          defval: ""
-        });
-        return parseImportedQuestionRowsFromGrid(rows);
+        return bestMatch.rows.map((row) => ({
+          ...row,
+          sourceSheet: bestMatch.sheetName
+        }));
       }
 
       function importQuestionnaireRows(rawText, originLabel = "file") {
@@ -1068,7 +1143,8 @@
                   sourceRow: String(row.sourceRow || index + 1),
                   section: String(row.section || ""),
                   question: String(row.question || "").trim(),
-                  sourceReference: String(row.sourceReference || (row.section ? `${row.sourceRow} - ${row.section}` : row.sourceRow || index + 1))
+                  sourceReference: String(row.sourceReference || (row.section ? `${row.sourceRow} - ${row.section}` : row.sourceRow || index + 1)),
+                  sourceSheet: String(row.sourceSheet || "")
                 }))
                 .filter((row) => row.question)
             : [];
@@ -1112,7 +1188,8 @@
                 sourceRow: String(row.sourceRow || index + 1),
                 section: String(row.section || ""),
                 question: String(row.question || "").trim(),
-                sourceReference: String(row.sourceReference || (row.section ? `${row.sourceRow} - ${row.section}` : row.sourceRow || index + 1))
+                sourceReference: String(row.sourceReference || (row.section ? `${row.sourceRow} - ${row.section}` : row.sourceRow || index + 1)),
+                sourceSheet: String(row.sourceSheet || "")
               }))
               .filter((row) => row.question)
           : [];
@@ -1420,14 +1497,16 @@
               question: row.question,
               sourceRow: row.sourceRow,
               section: row.section,
-              sourceReference: row.sourceReference
+              sourceReference: row.sourceReference,
+              sourceSheet: row.sourceSheet || ""
             }))
           : parseQuestionList(value("question-list")).map((question, index) => ({
               number: index + 1,
               question,
               sourceRow: String(index + 1),
               section: "",
-              sourceReference: `Pasted line ${index + 1}`
+              sourceReference: `Pasted line ${index + 1}`,
+              sourceSheet: ""
             }));
 
         const customQuestionRows = questionEntries.map((entry) => {
@@ -1495,6 +1574,7 @@
             sourceRow: entry.sourceRow,
             section: entry.section,
             sourceReference: entry.sourceReference,
+            sourceSheet: entry.sourceSheet || "",
             label: selected.label,
             answer: selected.answer
           };
@@ -1503,8 +1583,8 @@
         const customQuestionPack = customQuestionRows.length
           ? customQuestionRows
               .map((row) => {
-                const sourceLine = row.section
-                  ? `Source: ${row.sourceReference}`
+                const sourceLine = row.sourceSheet
+                  ? `Source: ${row.sourceSheet} / ${row.sourceReference}`
                   : `Source: ${row.sourceReference}`;
                 return `${row.number}. ${row.question}\n${sourceLine}\nMapped answer type: ${row.label}\n${row.answer}`;
               })
@@ -1848,9 +1928,9 @@
         customPackOutput.innerHTML = markdownToHtml(payload.customQuestionPack);
         importedRowsOutput.innerHTML = payload.customQuestionRows.length
           ? payload.customQuestionRows
-              .map((row) => `<tr><td>${escapeHtml(row.sourceRow || "")}</td><td>${escapeHtml(row.section || "General")}</td><td>${escapeHtml(row.question)}</td><td>${escapeHtml(row.label)}</td></tr>`)
+              .map((row) => `<tr><td>${escapeHtml(row.sourceSheet || "")}</td><td>${escapeHtml(row.sourceRow || "")}</td><td>${escapeHtml(row.section || "General")}</td><td>${escapeHtml(row.question)}</td><td>${escapeHtml(row.label)}</td></tr>`)
               .join("")
-          : '<tr><td colspan="4">No imported questionnaire rows yet. Paste lines or upload a CSV, TSV, or Excel file to preview preserved row references here.</td></tr>';
+          : '<tr><td colspan="5">No imported questionnaire rows yet. Paste lines or upload a CSV, TSV, or Excel file to preview preserved row references here.</td></tr>';
         questionMatrixOutput.innerHTML = payload.questionMatrix
           .map((row) => `<tr><td>${row.number}</td><td>${escapeHtml(row.question)}</td><td>${escapeHtml(row.answer)}</td></tr>`)
           .join("");
@@ -2701,7 +2781,10 @@
           setImportedQuestionRows(importedRows);
           saveDraft();
           render();
-          builderStatus.textContent = `Imported ${importedRows.length} of up to ${maxCustomQuestionRows} questionnaire rows from pasted spreadsheet data. Source row and section labels are preserved in the response pack and draft export.`;
+          const sourceSheetLabel = importedRows[0] && importedRows[0].sourceSheet
+            ? ` Selected sheet: ${importedRows[0].sourceSheet}.`
+            : "";
+          builderStatus.textContent = `Imported ${importedRows.length} of up to ${maxCustomQuestionRows} questionnaire rows from pasted spreadsheet data.${sourceSheetLabel} Source row and section labels are preserved in the response pack and draft export.`;
         } catch (error) {
           // Fall back to normal paste if the grid does not parse cleanly.
         }
@@ -2761,6 +2844,7 @@
         const payload = buildAnswerPayload();
         const header = [
           "row_number",
+          "source_sheet",
           "source_row",
           "source_section",
           "source_reference",
@@ -2773,6 +2857,7 @@
         ];
         const rows = payload.customQuestionRows.map((row) => [
           row.number,
+          row.sourceSheet || "",
           row.sourceRow || "",
           row.section || "",
           row.sourceReference || "",
@@ -2838,7 +2923,10 @@
             setImportedQuestionRows(importedRows);
             saveDraft();
             render();
-            builderStatus.textContent = `Imported ${importedRows.length} of up to ${maxCustomQuestionRows} questionnaire rows from Excel. Source row and section labels are preserved in the response pack and draft export.`;
+            const sourceSheetLabel = importedRows[0] && importedRows[0].sourceSheet
+              ? ` Selected sheet: ${importedRows[0].sourceSheet}.`
+              : "";
+            builderStatus.textContent = `Imported ${importedRows.length} of up to ${maxCustomQuestionRows} questionnaire rows from Excel.${sourceSheetLabel} Source row and section labels are preserved in the response pack and draft export.`;
           } else {
             importQuestionnaireRows(await file.text(), "file");
           }
