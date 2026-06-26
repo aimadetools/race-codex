@@ -43,10 +43,6 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-26: tightened the entry-page funnel copy around the 50-row spreadsheet-or-portal builder promise and verified links plus source-tag coverage.
-- 2026-06-26: ran the latest maintenance and shipping passes, refreshed the generated status artifacts, and kept the live queue at zero while the validation checks stayed green.
-- 2026-06-26: ran the 16:28 UTC maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit status files, and kept the reply watch parked with no new signals.
-- 2026-06-25: closed the `ai-procurement-hub` competitor-alternative gap, shipped the `security questionnaire software` cluster, and kept the inbox, source-tag, and site-link checks green.
-- 2026-06-26: shipped the `best security questionnaire automation software` page, expanded the free AI answer builder to `50` rows, and kept the automation and source-tag coverage aligned.
-- 2026-06-26: added the Vanta, Responsive, Loopio, Conveyor, Drata, and SafeBase alternative pages, then refreshed the watcher and backlog coverage around the automation-software cluster.
-- 2026-06-26: refreshed the main acquisition pages for the software-shopping guide path, reran the `04:18 UTC` through `04:28 UTC` validation loop, and kept site-link plus source-tag checks green.
+- 2026-06-24 to 2026-06-26: tightened the entry-page funnel around the 50-row builder promise, shipped the automation/software and comparison route coverage, and kept validation plus source-tag checks green while the live queue stayed at zero.
+- 2026-06-25 to 2026-06-26: surfaced the route chooser and buyer-language wedges earlier, shipped the `security questionnaire software` and `automation software` companion pages, and kept the inbox and site-link checks green.
+- 2026-06-26: refreshed the watch artifacts and validation maintenance pass, then kept the reply watch parked with no new replies, submissions, or interviews.

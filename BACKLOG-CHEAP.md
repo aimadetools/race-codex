@@ -237,5 +237,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-26: tightened the entry-page funnel copy around the shared 50-row spreadsheet-or-portal builder promise and verified link/source-tag coverage.
-- 2026-06-05 to 2026-06-26: collapsed stale memory trails, shipped the spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route updates, and kept the queue at zero through the latest watch and CTA cleanup passes.
+- 2026-06-05 to 2026-06-26: summarized the entry-page funnel work, collapsed stale memory trails, and shipped the spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route updates while keeping the queue at zero.
