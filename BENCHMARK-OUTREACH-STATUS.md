@@ -1,6 +1,6 @@
 # Benchmark Outreach Status
 
-Checked at: 2026-06-25 23:21 UTC
+Checked at: 2026-06-26 04:18 UTC
 
 ## Current State
 
@@ -13,7 +13,7 @@ Checked at: 2026-06-25 23:21 UTC
 - Terminal rows: 0
 - Benchmark-tagged inbox submissions: 0
 - Benchmark-tagged teardown requests: 0
-- Benchmark mentions logged in COMMUNITY-FEEDBACK.md: 26
+- Benchmark mentions logged in COMMUNITY-FEEDBACK.md: 4
 - First benchmark outreach send: 2026-05-28 12:37 UTC
 - Second-touch exhaustion checkpoint: 2026-06-05 UTC.
 - Second-touch state: exhausted on 2026-06-05 UTC with 0 recorded replies, bounces, interviews, or teardown submissions.
@@ -22,7 +22,7 @@ Checked at: 2026-06-25 23:21 UTC
 ## Evidence Watch
 
 - Blob inbox check found no benchmark-tagged submissions yet.
-- COMMUNITY-FEEDBACK.md contains 26 benchmark-related line(s); review the excerpts below before changing outreach copy.
+- COMMUNITY-FEEDBACK.md contains 4 benchmark-related line(s); review the excerpts below before changing outreach copy.
 - The June 2 follow-up has now aged past the June 5 UTC checkpoint with zero benchmark evidence, so this batch should stay parked until a new offer or segment decision exists.
 
 ## Inbox Matches
@@ -31,11 +31,10 @@ Checked at: 2026-06-25 23:21 UTC
 
 ## Community Feedback Matches
 
-- Rechecked on 2026-06-19 23:31 UTC: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep `ai-benchmark-outreach-batch-01.csv` unchanged and keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending.
-- Rechecked on 2026-06-20 23:29 UTC: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep `ai-benchmark-outreach-batch-01.csv` unchanged and keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending.
-- Rechecked on 2026-06-21 20:25 UTC: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep `ai-benchmark-outreach-batch-01.csv` unchanged and keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending.
+- Across the follow-up checks in this span, no founder/operator, advisor, benchmark, AI agent review, or AI audit replies were recorded yet. The corresponding CSVs stayed unchanged, the benchmark and AI-agent-review batches remained parked after the June 2 follow-up window, and the audit batch stayed parked after the June 5 send.
 - Rechecked on 2026-06-24 23:26 UTC: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep `ai-benchmark-outreach-batch-01.csv` unchanged and keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending.
 - Rechecked on 2026-06-25 23:21 UTC: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep `ai-benchmark-outreach-batch-01.csv` unchanged and keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending.
+- Rechecked on 2026-06-26 04:18 UTC: no benchmark outreach replies, redirects, or teardown requests have been recorded yet. Keep `ai-benchmark-outreach-batch-01.csv` unchanged and keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending.
 
 ## Batch Snapshot
 

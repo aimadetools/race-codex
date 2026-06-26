@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-26 04:04 UTC
+Checked at: 2026-06-26 04:18 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1136,7 +1136,28 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-software-evidence-map: 0
 - automation-software-audit: 0
 - blog-index-automation-software: 0
+- blog-index-vanta-alternative: 0
+- blog-index-responsive-alternative: 0
+- blog-index-loopio-alternative: 0
 - ai-procurement-hub-automation-software: 0
+- ai-procurement-hub-vanta-alternative: 0
+- ai-procurement-hub-responsive-alternative: 0
+- ai-procurement-hub-loopio-alternative: 0
+- automation-software-vanta-alternative: 0
+- automation-software-responsive-alternative: 0
+- automation-software-loopio-alternative: 0
+- vanta-alternative-builder: 0
+- vanta-alternative-software-guide: 0
+- vanta-alternative-answer-bank: 0
+- vanta-alternative-audit: 0
+- responsive-alternative-builder: 0
+- responsive-alternative-software-guide: 0
+- responsive-alternative-answer-bank: 0
+- responsive-alternative-audit: 0
+- loopio-alternative-builder: 0
+- loopio-alternative-software-guide: 0
+- loopio-alternative-answer-bank: 0
+- loopio-alternative-audit: 0
 - hypercomply-alternative-builder: 0
 - hypercomply-alternative-software-guide: 0
 - hypercomply-alternative-answer-bank: 0
