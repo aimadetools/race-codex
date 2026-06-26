@@ -53,6 +53,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Kept `DEPLOY-STATUS.md` absent and the workspace parked on reply-capture mode, then refreshed the backlog and progress memory so the latest watch checkpoint and parked-state instructions now match the generated status files.
 - Kept the completed summary lines in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` collapsed, keeping the live P0 / P1 trigger items visible while trimming the older completion noise.
 - Trimmed the first-screen CTA clutter on `index.html`, `pricing.html`, `start-here.html`, and `free-tools.html`, aligned the route chooser metadata with the `50`-row builder promise, restored the watched `homepage-job-due-diligence` link on the homepage, and reran `npm run check:site-links` plus `npm run check:source-tag-coverage` to a clean pass.
+- Collapsed the completed-summary sections in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` a bit further, keeping the live P0 / P1 watch items visible while shrinking the older completion noise.
 
 ## Next Step
 
@@ -63,18 +64,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## Completed Summary
 
-- 2026-06-26: ran the `16:19 UTC` maintenance pass, refreshed the generated status artifacts, deduplicated the no-reply checkpoint, and kept the live queue at zero.
-- 2026-06-26: ran the `16:15 UTC` validation-maintenance pass, refreshed the generated status artifacts, and kept the live queue and no-reply checkpoint at zero.
-- 2026-06-26: ran the `08:16 UTC` through `08:32 UTC` validation sync loop, refreshed the generated status artifacts, and kept the live queue and reply watch at zero while the no-reply checkpoint advanced.
-- 2026-06-26: reran the midday validation watch cycle through `12:58 UTC`, refreshed the generated watch artifacts plus self-audit production verification IDs, deduplicated the no-reply checkpoint, and kept the queue at zero with `134` checked HTML files and `1325` watched tags green.
-- 2026-06-25: ran the latest validation-maintenance pass through `2026-06-25 23:21 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, and kept the queue at zero.
-- 2026-06-25: closed the `ai-procurement-hub` competitor-alternative watch-list gap, shipped the `security questionnaire software` cluster and escape hatch, and kept the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit, site-link, and source-tag checks green while the queue stayed at zero.
-- 2026-06-26: shipped the `best security questionnaire automation software` page, cross-linked it across the automation/software route cluster, rebuilt watcher coverage, and kept the site-link plus source-tag checks green.
-- 2026-06-26: expanded the free AI answer builder from `25` to `50` pasted/imported questionnaire rows, fixed the `20-question` matrix count bug, and aligned the core acquisition pages with the heavier free-evaluation promise while keeping site-link and source-tag checks green.
-- 2026-06-26: added Vanta, Responsive, and Loopio alternative pages, wired them into the automation-software cluster, and extended competitor-intent watcher coverage plus backlog triggers.
-- 2026-06-26: extended the automation-software competitor tracking to Conveyor, Drata, and SafeBase, added named comparison cards, and aligned watcher plus backlog coverage with the full automation vendor list.
-- 2026-06-26: refreshed the main acquisition pages to surface the software-shopping guide path separately, added `pricing-automation-guide` coverage, and kept site-link plus source-tag checks green at `1325` watched tags.
-- 2026-06-26: ran the `04:18 UTC` through `04:28 UTC` validation-maintenance loop, refreshed the generated status artifacts, and kept webhook shape, generator handoff, self-audit production, source-tag coverage, and site-link checks green while the queue stayed at zero.
-- 2026-06-26: trimmed the first-screen CTA clutter on the main acquisition pages, aligned the route chooser metadata with the `50`-row builder promise, restored the due-diligence homepage watcher link, and kept site-link plus source-tag checks green.
-- 2026-06-24 to 2026-06-25: ran repeated validation-maintenance passes, refreshed the status artifacts, and confirmed the workspace remained parked with no deployment file and no live intake evidence.
-- 2026-06-19 to 2026-06-21: tightened receiver-side framing, surfaced Claude exact-match coverage, refreshed the route picker and spreadsheet-row paths, and kept validation green while the queue stayed at zero.
+- 2026-06-26: ran the latest maintenance and shipping passes, refreshed the generated status artifacts, and kept the live queue at zero while the validation checks stayed green.
+- 2026-06-25: closed the `ai-procurement-hub` competitor-alternative gap, shipped the `security questionnaire software` cluster, and kept the inbox, source-tag, and site-link checks green.
+- 2026-06-26: shipped the `best security questionnaire automation software` page, expanded the free AI answer builder to `50` rows, and kept the automation and source-tag coverage aligned.
+- 2026-06-26: added the Vanta, Responsive, Loopio, Conveyor, Drata, and SafeBase alternative pages, then refreshed the watcher and backlog coverage around the automation-software cluster.
+- 2026-06-26: refreshed the main acquisition pages for the software-shopping guide path, reran the `04:18 UTC` through `04:28 UTC` validation loop, and kept site-link plus source-tag checks green.

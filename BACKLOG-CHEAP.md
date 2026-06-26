@@ -237,4 +237,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-26: collapsed stale memory trails, shipped the spreadsheet-row, SIG / CAIQ / VSAQ, Gemini, Microsoft Copilot, due-diligence, AI-agent-control, builder sample-row, route-picker, automation-guide, automation-software, and competitor-intent route updates, and kept the queue at zero through the latest watch and CTA cleanup passes.
+- 2026-06-05 to 2026-06-26: collapsed stale memory trails, shipped the spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route updates, and kept the queue at zero through the latest watch and CTA cleanup passes.
