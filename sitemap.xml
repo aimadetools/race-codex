@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://noticekit.tech/ai-procurement-hub.html</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
@@ -92,13 +92,19 @@
   </url>
   <url>
     <loc>https://noticekit.tech/blog-security-questionnaire-software-for-startups.html</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://noticekit.tech/blog-security-questionnaire-response-software.html</loc>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://noticekit.tech/blog-security-questionnaire-automation-software.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -410,7 +416,7 @@
   </url>
   <url>
     <loc>https://noticekit.tech/blog.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

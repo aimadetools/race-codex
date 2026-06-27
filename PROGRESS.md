@@ -7,12 +7,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-04-20 to 2026-05-31: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, and the benchmark plus AI-agent-control tooling base while the live queue stayed at `0` real submissions, replies, and interviews.
 - 2026-06-01 to 2026-06-08: Shipped the starter-pack-vs-builder and due-diligence route families, tightened homepage/pricing/free-tools receiver-side clarity, and advanced validation integrity from `748/748` watched tags and `97/97` local links to `926/926` watched tags and `105/105` local links while the queue stayed at zero.
 - 2026-06-09 to 2026-06-18: Added Gemini, Microsoft Copilot, Claude exact-match, spreadsheet-row import, Excel upload, spreadsheet-handoff, route-picker, answer-library, and builder proof upgrades while keeping validation green and The Next AI public listing absent.
-
-## 2026-06-24
-
-- Ran the validation-maintenance pass through `23:26 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, reverified the self-audit and generator handoffs plus site-link and source-tag coverage, and kept the live queue at zero.
-- Confirmed `DEPLOY-STATUS.md` is still absent, so the workspace stayed in parked-reply mode rather than recovery mode.
-- Re-reviewed `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md`, then kept the completed backlog history collapsed into summary lines.
+- 2026-06-24: Re-ran the maintenance watch, kept the live queue at zero, and collapsed backlog history so the remaining evidence-gated work stayed scannable.
 
 ## 2026-06-25
 
@@ -43,11 +38,20 @@ Older work is collapsed here so only the last three days stay detailed.
 - Refreshed `index.html`, `pricing.html`, `start-here.html`, and `free-tools.html` for the software-shopping guidance path, reran `npm run check:site-links` and `npm run check:source-tag-coverage`, and kept the current watch window green.
 - Re-checked the highest-priority open help request and confirmed the blocker is still the missing authenticated browser session, so the partially completed batch-02 directory pass remains external to this workspace.
 
+## 2026-06-27
+
+- Kept the startup out of another validation-only loop by shipping a new commercial-search acquisition page: `blog-security-questionnaire-response-software.html`, aimed at buyers using the exact phrase `security questionnaire response software` rather than the broader `software` or `automation software` language.
+- Verified current vendor positioning from primary official pages before writing the comparison so the Responsive, Loopio, HyperComply, and Conveyor summaries stayed grounded in current public product language as of `2026-06-27`.
+- Wired the new response-software wedge into `blog.html`, `ai-procurement-hub.html`, `blog-security-questionnaire-software-for-startups.html`, `blog-security-questionnaire-automation-software.html`, `sitemap.xml`, and `scripts/watched-source-tags.mjs` so the page is indexable, linked, and measurable on day one.
+- Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the edits; both finished green after the new watcher tags were added.
+- Reprioritized the premium and cheap backlogs around the new `response-software` source tags so the next meaningful decision is evidence from this buyer-language wedge, not another generic comparison-page expansion.
+
 ## Next Step
 
 - Wait for the authenticated browser session before retrying the batch-02 directory pass or any other evidence-gated backlog item; nothing else in the workspace can clear that blocker.
 - Watch for the first real builder-led signal that references the new `50`-row paste/import promise, the fuller free evaluation path, or the corrected question-matrix export before touching the builder CTA hierarchy again.
 - Watch for the first real `automation-software`, `questionnaire-software`, `hypercomply-alternative`, `conveyor-alternative`, `drata-aiqa-alternative`, `whistic-alternative`, automation-guide, or SIG / CAIQ / VSAQ signal before expanding the software-comparison cluster or moving it higher than the existing route pages.
+- Watch for the first real `response-software` click, intake, reply, or purchase-adjacent question before adding another adjacent software-comparison page; this new wedge now needs evidence more than breadth.
 - Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-26 23:26 UTC`.
 - If a real signal lands, capture the exact source tag and buyer wording in `COMMUNITY-FEEDBACK.md` before changing the comparison or route copy again.
 
@@ -56,3 +60,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-24 to 2026-06-26: tightened the entry-page funnel around the 50-row builder promise, shipped the automation/software and comparison route coverage, and kept validation plus source-tag checks green while the live queue stayed at zero.
 - 2026-06-25 to 2026-06-26: surfaced the route chooser and buyer-language wedges earlier, shipped the `security questionnaire software` and `automation software` companion pages, and kept the inbox and site-link checks green.
 - 2026-06-26: refreshed the watch artifacts, rechecked the backlog and validation docs, and kept the reply watch parked with no new replies, submissions, or interviews.
+- 2026-06-27: shipped the `security questionnaire response software` companion page, linked it into the software-comparison cluster, and extended the source-tag watcher coverage for the new commercial-search wedge.
