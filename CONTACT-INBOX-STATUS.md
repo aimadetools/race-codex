@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-27 04:05 UTC
+Checked at: 2026-06-27 08:10 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -326,6 +326,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-automation-guide: 0
 - free-tools-sig-guide: 0
 - free-tools-questionnaire-software: 0
+- free-tools-response-software: 0
 - free-tools-route-due-diligence: 0
 - free-tools-route-repeat-review: 0
 - free-tools-route-broader-handoff: 0
@@ -345,6 +346,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - route-chooser-broader-hub: 0
 - route-chooser-nav-audit: 0
 - route-chooser-named-vendor: 0
+- route-chooser-response-software: 0
 - route-chooser-sig-guide: 0
 - route-chooser-pricing: 0
 - route-chooser-starter-pack: 0
@@ -391,6 +393,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-automation-guide: 0
 - start-here-sig-guide: 0
 - start-here-questionnaire-software: 0
+- start-here-response-software: 0
 - start-here-ai-answer-library: 0
 - start-here-ai-evidence-map: 0
 - start-here-ai-agent-workspace: 0
@@ -425,6 +428,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-automation-guide: 0
 - homepage-sig-guide: 0
 - homepage-questionnaire-software: 0
+- homepage-response-software: 0
 - homepage-benchmark-appendix: 0
 - homepage-benchmark-report: 0
 - homepage-subprocessor-teardown: 0
@@ -543,6 +547,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-automation-guide: 0
 - pricing-sig-guide: 0
 - pricing-questionnaire-software: 0
+- pricing-response-software: 0
 - ai-procurement-hub-answer-library: 0
 - ai-procurement-hub-answer-library-comparison: 0
 - ai-procurement-hub-due-diligence: 0
@@ -590,6 +595,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-answer-library-framework-map: 0
 - ai-answer-library-agent-review: 0
 - ai-answer-library-agent-approval-gate: 0
+- ai-answer-library-response-software: 0
+- ai-answer-library-questionnaire-software: 0
 - ai-answer-library-evidence-map: 0
 - ai-answer-library-answer-bank: 0
 - ai-answer-library-builder: 0
@@ -884,6 +891,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-starter-pack-openai-answer-example: 0
 - ai-security-questionnaire-starter-pack-openai-answer-bank: 0
 - ai-security-questionnaire-starter-pack-openai-path-guide: 0
+- ai-security-questionnaire-starter-pack-response-software: 0
+- ai-security-questionnaire-starter-pack-questionnaire-software: 0
 - ai-security-questionnaire-starter-pack-packet: 0
 - ai-security-questionnaire-starter-pack-sample: 0
 - ai-security-questionnaire-starter-pack-teardown: 0
@@ -947,6 +956,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-questionnaire-builder-answer-bank: 0
 - ai-questionnaire-builder-starter-pack: 0
 - ai-questionnaire-builder-example: 0
+- ai-questionnaire-builder-response-software: 0
 - ai-answer-bank-vs-pro-kit-answer-bank: 0
 - ai-answer-bank-vs-pro-kit-bank: 0
 - ai-answer-bank-vs-pro-kit-evidence-map: 0
@@ -958,6 +968,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-template-starter-pack: 0
 - ai-security-questionnaire-template-builder: 0
 - ai-security-questionnaire-template-example: 0
+- ai-security-questionnaire-template-response-software: 0
 - ai-security-questionnaire-template-sample: 0
 - ai-security-questionnaire-template-guide: 0
 - ai-security-questionnaire-template-stack: 0
@@ -1034,6 +1045,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-example-builder: 0
 - ai-security-questionnaire-example-starter-pack: 0
 - ai-security-questionnaire-example-template: 0
+- ai-security-questionnaire-example-response-software: 0
 - ai-security-questionnaire-example-guide: 0
 - ai-security-questionnaire-example-packet: 0
 - ai-security-questionnaire-example-teardown: 0
@@ -1223,6 +1235,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-answer-bank-template: 0
 - ai-security-questionnaire-answer-bank-comparison: 0
 - ai-security-questionnaire-answer-bank-openai: 0
+- ai-security-questionnaire-answer-bank-response-software: 0
 - openai-answer-bank-builder: 0
 - openai-answer-bank-template: 0
 - openai-answer-bank-example: 0
@@ -1245,6 +1258,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-answer-bank-vs-builder-builder: 0
 - openai-answer-bank-vs-builder-template: 0
 - openai-answer-bank-vs-builder-example: 0
+- openai-answer-bank-vs-builder-response-software: 0
 - openai-answer-bank-vs-builder-starter-pack: 0
 - openai-answer-bank-vs-builder-teardown: 0
 - openai-answer-bank-vs-builder-pricing: 0
@@ -1266,6 +1280,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - anthropic-answer-bank-vs-builder-builder: 0
 - anthropic-answer-bank-vs-builder-template: 0
 - anthropic-answer-bank-vs-builder-example: 0
+- anthropic-answer-bank-vs-builder-response-software: 0
 - anthropic-answer-bank-vs-builder-starter-pack: 0
 - anthropic-answer-bank-vs-builder-teardown: 0
 - anthropic-answer-bank-vs-builder-pricing: 0
@@ -1287,6 +1302,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - claude-answer-bank-vs-builder-builder: 0
 - claude-answer-bank-vs-builder-template: 0
 - claude-answer-bank-vs-builder-example: 0
+- claude-answer-bank-vs-builder-response-software: 0
 - claude-answer-bank-vs-builder-starter-pack: 0
 - claude-answer-bank-vs-builder-teardown: 0
 - claude-answer-bank-vs-builder-pricing: 0
@@ -1305,6 +1321,16 @@ Source of truth: Vercel Blob `contact-submissions/`
 - anthropic-path-guide-example: 0
 - openai-security-questionnaire-template-comparison: 0
 - openai-security-questionnaire-example-comparison: 0
+- openai-security-questionnaire-template-response-software: 0
+- openai-security-questionnaire-example-response-software: 0
+- anthropic-security-questionnaire-template-response-software: 0
+- anthropic-security-questionnaire-example-response-software: 0
+- claude-security-questionnaire-template-response-software: 0
+- claude-security-questionnaire-example-response-software: 0
+- gemini-security-questionnaire-template-response-software: 0
+- gemini-security-questionnaire-example-response-software: 0
+- microsoft-copilot-security-questionnaire-template-response-software: 0
+- microsoft-copilot-security-questionnaire-example-response-software: 0
 - ai-answer-bank-vs-builder-answer-bank: 0
 - ai-answer-bank-vs-builder-builder: 0
 - ai-answer-bank-vs-builder-pro-kit: 0
@@ -1320,6 +1346,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-pro-kit-builder: 0
 - ai-security-questionnaire-pro-kit-comparison: 0
 - ai-security-questionnaire-pro-kit-evidence-map: 0
+- ai-security-questionnaire-pro-kit-response-software: 0
 - ai-security-questionnaire-pro-kit-audit: 0
 - ai-audit-page: 0
 - ai-audit-page-sample: 0
@@ -1412,6 +1439,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - gemini-answer-bank-vs-builder-bundle-sample: 0
 - gemini-answer-bank-vs-builder-evidence-map: 0
 - gemini-answer-bank-vs-builder-example: 0
+- gemini-answer-bank-vs-builder-response-software: 0
 - gemini-answer-bank-vs-builder-pricing: 0
 - gemini-answer-bank-vs-builder-starter-pack: 0
 - gemini-answer-bank-vs-builder-teardown: 0
