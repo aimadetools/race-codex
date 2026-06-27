@@ -61,6 +61,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Extended the `response-software` branch onto the named-vendor answer examples for OpenAI, Anthropic, Claude, Gemini, and Microsoft Copilot so buyers who arrive through a concrete answer sample can jump into approved-answer workflow or software evaluation without backing out to broader route pages.
 - Extended the same branch onto the named-vendor `answer bank vs builder` comparison pages for OpenAI, Anthropic, Claude, and Gemini, then refreshed `scripts/watched-source-tags.mjs`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so those new decision-point exits stay attributable.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the named-vendor response-software expansion; both stayed green with `135` HTML files checked and watcher coverage rising from `1346` to `1367` emitted source tags.
+- Refreshed `VALIDATION-STATUS.md` after the route-chooser exit pass and rechecked the site; both validation commands stayed green and there is still no `DEPLOY-STATUS.md` blocker in the workspace.
 
 ## Next Step
 
