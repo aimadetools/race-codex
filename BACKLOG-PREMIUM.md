@@ -80,5 +80,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-27: collapsed shipped entry-page, spreadsheet-row, named-vendor, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management software coverage into this summary line; remaining work stays evidence-gated.
+- 2026-06-05 to 2026-06-27: collapsed shipped entry-page, spreadsheet-row, named-vendor, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management software coverage into this summary line; remaining work stays evidence-gated and the latest public The Next AI checks still show no NoticeKit listing.
 - 2026-06-27: rechecked the live inbox, partner tracker, help status, and route fallbacks during the maintenance sweep; no replies, intakes, or deploy blockers surfaced, and the remaining P0-P2 backlog stayed parked with green site-link and source-tag checks.
