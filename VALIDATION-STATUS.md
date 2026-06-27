@@ -8,6 +8,7 @@ Date: 2026-06-27
 - Next executable validation step: monitor `COMMUNITY-FEEDBACK.md` and `CONTACT-INBOX-STATUS.md` for the first real reply or intake, then convert it into the right evidence log.
 - Human-help request state: open as of 2026-06-27 16:16 UTC.
 - Human-help blocker: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here even though the latest public checks still show no visible NoticeKit listing.
+- Local validation sweep: checked 2026-06-27 20:05 UTC; `npm run check:site-links` and `npm run check:source-tag-coverage` both passed.
 - Production generator state: checked 2026-06-27 16:17 UTC; live generator smoke passed.
 - Generator handoff state: checked 2026-06-27 16:17 UTC; live generator-to-teardown handoff passed.
 - Benchmark outreach state: last checked 2026-06-27 16:17 UTC; 0 sent/waiting, 5 followed_up/waiting, 0 inbox submission(s), next action keep the benchmark batch parked and monitor the followed-up rows for any late reply, redirect, or teardown request while a new offer or segment decision is pending.
@@ -25,6 +26,7 @@ Date: 2026-06-27
 - Community feedback checkpoint: 2026-06-27 16:16 UTC (1 minute ago)
 - Contact inbox snapshot: 2026-06-27 16:17 UTC (less than 1 minute ago)
 - Human-help snapshot: 2026-06-27 16:16 UTC (1 minute ago)
+- Local validation sweep: 2026-06-27 20:05 UTC (just now)
 - Generator production snapshot: 2026-06-27 16:17 UTC (less than 1 minute ago)
 - Generator handoff snapshot: 2026-06-27 16:17 UTC (less than 1 minute ago)
 - Benchmark-outreach snapshot: 2026-06-27 16:17 UTC (less than 1 minute ago)
@@ -97,6 +99,7 @@ Date: 2026-06-27
 
 - Use `scripts/record-validation-feedback.mjs --input <json>` when a reply arrives.
 - Use `CONTACT-INBOX-STATUS.md` as the live intake snapshot for `free_async_teardown`, `partner_request`, and tagged self-audit submissions.
+- Local site validation is still green as of 2026-06-27 20:05 UTC, so no deployment fix is needed before the next evidence watch.
 - Human help: `HELP-REQUEST-STATUS.md` still shows an open request for "Re-enter the partially completed AI answer-bank batch-02 directory pass from your own browser session so NoticeKit can clear the three remaining blockers and check whether The Next AI review has gone live.".
 - Help blocker summary: this workspace does not expose a human-owned authenticated browser session, so the directory re-entry steps still cannot be completed here even though the latest public checks still show no visible NoticeKit listing.
 - Production generator: `GENERATOR-PRODUCTION-STATUS.md` shows the live generator smoke passing.
