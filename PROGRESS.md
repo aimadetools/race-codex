@@ -11,31 +11,18 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-25
 
-- Surfaced the route chooser earlier on `pricing.html` and `start-here.html`, added `start-here-route-chooser` to the canonical watcher list, and reverified source-tag coverage after the new CTA shipped.
-- Ran the validation-maintenance pass through `2026-06-25 23:21 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/validation artifacts, rechecked the live generator and inbox mirrors, and kept the live queue at zero while source-tag coverage stayed green.
-- Collapsed the stale day-by-day memory trails in `HELP-STATUS.md` and `COMMUNITY-FEEDBACK.md` so the current watch window stays readable while the older checks remain summarized.
-- Added the direct escape hatch between `blog-security-questionnaire-software-for-startups.html` and `ai-procurement-hub.html`, plus the software-comparison shortcut block inside the hub, then shipped the `security questionnaire software` comparison page and competitor cluster for HyperComply, Conveyor, Drata AI Questionnaire Assistance, SafeBase, and Whistic.
-- Promoted the same wedge into `index.html`, `pricing.html`, `start-here.html`, and `free-tools.html`, refreshed `CONTACT-INBOX-STATUS.md`, and kept `npm run check:site-links` and `npm run check:source-tag-coverage` green.
-- Rechecked The Next AI public pages again on `2026-06-25`; both checks still showed no public `NoticeKit` listing, and the batch-02 directory pass remains blocked on the missing authenticated browser session.
-- Closed the source-tag coverage gap for the `ai-procurement-hub` competitor-alternative routes and reran `npm run check:site-links` plus `npm run check:source-tag-coverage` cleanly.
+- Surfaced the route chooser earlier on `pricing.html` and `start-here.html`, then added the matching watcher tag and reverified source coverage after the CTA shipped.
+- Rolled the new `security questionnaire software` comparison page and its competitor cluster into the hub, homepage, pricing, start-here, and free-tools surfaces, then refreshed `CONTACT-INBOX-STATUS.md`.
+- Rechecked The Next AI public pages and still saw no public `NoticeKit` listing, so the batch-02 directory pass remained blocked on the missing authenticated browser session.
+- Kept `npm run check:site-links` and `npm run check:source-tag-coverage` green after closing the `ai-procurement-hub` competitor-alternative coverage gap.
 
 ## 2026-06-26
 
-- Synced `blog-ai-security-questionnaire-spreadsheet-handoff.html` with the current 50-row builder promise so the FAQ no longer lags behind the rest of the free-builder copy.
-- Ran the validation-maintenance pass through `2026-06-26 23:26 UTC` and `2026-06-26 23:27 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, rechecked site-link and source-tag coverage, and logged another no-reply checkpoint with the live queue still at zero.
-- Rechecked `PROGRESS.md`, the backlog files, `HELP-RESPONSES.md`, `HELP-REQUEST-STATUS.md`, `CONTACT-INBOX-STATUS.md`, and the related validation docs; no new replies, submissions, or interviews landed, so the top P0 validation task is still blocked on external evidence and the missing authenticated browser session.
-- Re-read the backlog and validation docs, confirmed the highest-priority open work is still exact buyer validation through real interviews, and kept it blocked on missing evidence plus the absent authenticated browser session.
-- Hardened the free AI answer builder's spreadsheet import path so multi-sheet Excel files now prefer the best questionnaire sheet, preserve the chosen sheet name in row metadata, and expose that in the preview/export.
-- Collapsed the backlog memory trail into concise summary lines where work was already complete, then kept the remaining live items gated on real inbox and browser-session evidence.
-- Ran the validation-maintenance passes through `2026-06-26 20:25 UTC` and `2026-06-26 20:22 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts plus the status docs, and confirmed the live queue still shows zero real replies, submissions, or interviews.
-- Rechecked The Next AI public pages at `2026-06-26 23:19 UTC`; both `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` still returned `200`, and neither page exposed `NoticeKit`, so the directory re-entry blocker remains the missing authenticated browser session.
-- Ran the validation-maintenance pass through `2026-06-26 20:05 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, and kept the live queue at zero.
-- Tightened the first-screen copy on `index.html`, `pricing.html`, `free-tools.html`, and `start-here.html` so the free-builder promise uses the same 50-row spreadsheet-or-portal wording everywhere, then reran the site-link and source-tag checks cleanly.
-- Consolidated the earlier `12:38 UTC` to `16:28 UTC` maintenance runs into the current watch state, refreshed the generated validation artifacts, and synced the backlog live-state references forward to `2026-06-26 16:15 UTC`.
-- Shifted this session away from validation-only maintenance and into the product itself: expanded the AI answer builder from a `25`-row pasted/imported questionnaire cap to `50`, updated the homepage / starter-pack / start-here / free-tools / pricing copy to sell that fuller free evaluation path, and fixed the builder’s off-by-one matrix bug so the `20-question` preview now emits exactly `20` numbered rows.
-- Broke the recent validation-only loop with `blog-security-questionnaire-automation-software.html`, then extended the automation-software competitor cluster with Vanta, Responsive, Loopio, Conveyor, Drata, and SafeBase alternatives plus the matching watcher tags and `CONTACT-INBOX-STATUS.md` refresh.
-- Refreshed `index.html`, `pricing.html`, `start-here.html`, and `free-tools.html` for the software-shopping guidance path, reran `npm run check:site-links` and `npm run check:source-tag-coverage`, and kept the current watch window green.
-- Re-checked the highest-priority open help request and confirmed the blocker is still the missing authenticated browser session, so the partially completed batch-02 directory pass remains external to this workspace.
+- Synced `blog-ai-security-questionnaire-spreadsheet-handoff.html` with the 50-row builder promise, then hardened the free builder so multi-sheet Excel imports prefer the best questionnaire sheet and preserve sheet metadata in the preview/export.
+- Ran the repeated validation-maintenance passes, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit artifacts, and kept the live queue at zero while no new replies, submissions, or interviews landed.
+- Rechecked the public The Next AI pages and still found no visible `NoticeKit` listing, so the batch-02 directory pass remained blocked on the missing authenticated browser session.
+- Tightened the first-screen copy on the core entry pages to keep the free-builder promise consistent, then reran the site-link and source-tag checks cleanly.
+- Expanded the AI answer-builder and the `blog-security-questionnaire-automation-software.html` comparison page, then refreshed the matching watcher tags and inbox status snapshots.
 
 ## 2026-06-27
 
@@ -93,6 +80,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the competitor-alternative routing pass; both stayed green with `136` HTML files checked and watcher coverage rising from `1418` to `1434` emitted source tags.
 - Re-ran the validation-maintenance pass through `2026-06-27 16:16 UTC`, refreshed `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, `HELP-REQUEST-LAUNCHPAD.md`, `HELP-REQUEST-STATUS.md`, `SELF-AUDIT-PRODUCTION-VERIFY.md`, `SELF-AUDIT-FOLLOW-UP-QA.md`, `VALIDATION-DECISION-BRIEF.md`, `VALIDATION-POSITIONING-BRIEF.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `HOMEPAGE-COPY-REFRESH-QUEUE.md`, and `COMMUNITY-FEEDBACK.md`, and kept the live queue at zero while validation and source-tag checks remained green.
 - Re-read the memory files at the end of the session, confirmed the route work already shipped, and left the remaining backlog items evidence-gated with no `DEPLOY-STATUS.md` file present.
+- Collapsed the older 2026-06-25 and 2026-06-26 maintenance trails so the last three days stay readable while the remaining blocker state stays explicit.
 
 ## Next Step
 
