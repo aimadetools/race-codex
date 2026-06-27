@@ -957,6 +957,7 @@ export const WATCHED_SOURCE_TAGS = [
   "automation-software-answer-bank",
   "automation-software-automation-guide",
   "automation-software-response-software",
+  "automation-software-management-software",
   "automation-software-questionnaire-software",
   "automation-software-sig-guide",
   "automation-software-due-diligence",

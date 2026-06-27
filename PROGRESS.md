@@ -78,6 +78,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the management-software parity pass; both stayed green with `136` HTML files checked and watcher coverage rising to `1393` emitted source tags.
 - Moved to the next adjacent management-intent parity gap and extended the same branch onto the named-vendor OpenAI, Anthropic, Claude, Gemini, and Microsoft Copilot template and example pages plus the OpenAI / Anthropic / Claude / Gemini `answer bank vs builder` comparisons so software-shopping buyers can jump from concrete named-vendor routes into queue-administration guidance without backing out to broader comparison hubs.
 - Added the corresponding named-vendor management source tags in `scripts/watched-source-tags.mjs` and expanded the cheap/premium backlog watch lines so the new `management-software` exits stay attributable beside the existing response-software routes.
+- Closed the last detected `response-software` versus `management-software` routing parity hole by extending `blog-security-questionnaire-automation-software.html` with the sibling management-guide branch, matching CTA copy, and the `automation-software-management-software` source tag.
+- Refreshed `scripts/watched-source-tags.mjs`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so automation-software traffic can now be compared cleanly across the response-software and management-software wedges without losing attribution.
+- Re-ran the parity scan plus `npm run check:site-links` and `npm run check:source-tag-coverage`; the scan returned no remaining HTML pages that link `response-software` without `management-software`, site links stayed green at `136` HTML files checked, and watcher coverage rose to `1408` emitted source tags.
 
 ## Next Step
 
