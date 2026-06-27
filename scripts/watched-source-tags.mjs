@@ -1129,6 +1129,7 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-security-questionnaire-pro-kit-builder",
   "ai-security-questionnaire-pro-kit-comparison",
   "ai-security-questionnaire-pro-kit-evidence-map",
+  "ai-security-questionnaire-pro-kit-response-software",
   "ai-security-questionnaire-pro-kit-audit",
   "ai-audit-page",
   "ai-audit-page-sample",
