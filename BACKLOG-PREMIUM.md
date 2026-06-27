@@ -83,3 +83,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 - 2026-06-05 to 2026-06-27: collapsed shipped entry-page, spreadsheet-row, named-vendor, due-diligence, builder, automation, commercial-search, and competitor-intent coverage into this summary line; remaining work stays evidence-gated.
 - 2026-06-27: rechecked the live inbox, partner tracker, and help status during the maintenance sweep; no replies, intakes, or deploy blockers surfaced, so the remaining P0-P2 work stayed parked.
 - 2026-06-27: refined the response and management route fallbacks, kept the chooser and broader software guide aligned, and left the evidence-gated premium backlog parked.
+- 2026-06-27: reran the site-link and source-tag checks after the route maintenance; both stayed green, and the remaining P0-P2 backlog stayed evidence-gated.
