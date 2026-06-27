@@ -240,8 +240,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- Completed maintenance work stays collapsed here as summary lines; the remaining P0-P2 items below are still live trigger watches.
-- 2026-06-27: shipped the `response-software` routing set across the core entry pages, route chooser, starter-pack, builder, answer-bank, Pro-kit, and named-vendor comparison surfaces so software-shopping buyers can stay on the sharper buyer-language path without losing attribution.
-- 2026-06-27: kept validation and source-tag checks green, confirmed there is still no deploy-status blocker in the workspace, and left the live queue at zero while the new routing watch stayed measurable.
-- 2026-06-27: added direct route-chooser exits plus the `security questionnaire response software` comparison wedge, then linked it into the blog and procurement hub as an evidence-gated commercial-search page.
-- 2026-06-05 to 2026-06-26: summarized the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage while the Next AI directory blocker and live watches stayed evidence-gated at zero. No new trigger fired in this pass, so the remaining P0-P2 items stay collapsed and open.
+- 2026-06-27: shipped the `response-software` routing set, route-chooser exits, and the `security questionnaire response software` commercial-search page across the core entry and comparison surfaces.
+- 2026-06-27: kept validation and source-tag checks green, confirmed there is still no deploy-status blocker in the workspace, and left the live queue at zero.
+- 2026-06-05 to 2026-06-26: summarized the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage while the remaining evidence-gated work stayed open.

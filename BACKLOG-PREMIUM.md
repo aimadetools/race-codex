@@ -78,8 +78,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- Completed live work stays collapsed here as summary lines; the remaining P0-P2 items below are still evidence-gated and intentionally left open.
-- 2026-06-27: shipped the `response-software` routing set across the core entry pages, route chooser, starter-pack, builder, answer-bank, Pro-kit, and named-vendor comparison surfaces so software-shopping buyers can stay on the sharper buyer-language path without losing attribution.
-- 2026-06-27: kept validation and source-tag checks green, confirmed there is still no deploy-status blocker in the workspace, and left the live queue at zero while the new routing watch stayed measurable.
-- 2026-06-27: added direct route-chooser exits plus the `security questionnaire response software` comparison wedge, then linked it into the blog and procurement hub as an evidence-gated commercial-search page.
-- 2026-06-05 to 2026-06-26: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route coverage while the directory blocker and live validation watches stayed evidence-gated. No new evidence landed in this pass, so the remaining P0-P2 items stay collapsed and open.
+- 2026-06-27: shipped the `response-software` routing set, route-chooser exits, and the `security questionnaire response software` commercial-search page across the core entry and comparison surfaces.
+- 2026-06-27: kept validation and source-tag checks green, confirmed there is still no deploy-status blocker in the workspace, and left the live queue at zero.
+- 2026-06-05 to 2026-06-26: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route coverage while the remaining evidence-gated work stayed open.
