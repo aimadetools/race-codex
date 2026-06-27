@@ -37,6 +37,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran the full validation maintenance sweep at `2026-06-27 20:17 UTC`, refreshed the live inbox and outreach status files, verified the production self-audit path again, and recorded another no-reply checkpoint while the evidence-gated backlog stayed parked.
 - Re-ran the full validation maintenance sweep at `2026-06-27 20:25 UTC`, refreshed the live inbox and outreach status files again, and confirmed the queue still sat at zero while the evidence-gated backlog stayed parked.
 - Tightened the pricing first-screen routing parity so the new `response-software` guide now sits beside the `management-software` guide in the hero shortcuts, then rechecked local site links and source-tag coverage cleanly.
+- Added broader escape hatches from the new response-software and management-software guides back to the software comparison, AI procurement hub, and route chooser so undecided visitors can back out before choosing a vendor lane.
+- Rechecked `npm run check:site-links` and `npm run check:source-tag-coverage` after the routing cleanup; both stayed green.
 - Re-read the memory files after the pricing tweak, confirmed there is still no `DEPLOY-STATUS.md` blocker, and kept the backlog parked on evidence-gated work while the queue remained at zero.
 - Re-read `PROGRESS.md`, both backlog files, and `HELP-RESPONSES.md` once more, confirmed there is still no `DEPLOY-STATUS.md` file to repair, and found no real reply, intake, interview, or partner signal to promote into the next task.
 
