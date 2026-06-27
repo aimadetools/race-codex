@@ -35,6 +35,8 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-checked the repository memory files at the end of the day, confirmed there is still no `DEPLOY-STATUS.md` file to repair, and kept the live backlog parked because no new evidence landed.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` at `2026-06-27 20:15 UTC`, confirmed both checks stayed green, and left the pause-expansion recommendation unchanged because no scored reply or interview landed.
 - Re-ran the full validation maintenance sweep at `2026-06-27 20:17 UTC`, refreshed the live inbox and outreach status files, verified the production self-audit path again, and recorded another no-reply checkpoint while the evidence-gated backlog stayed parked.
+- Tightened the pricing first-screen routing parity so the new `response-software` guide now sits beside the `management-software` guide in the hero shortcuts, then rechecked local site links and source-tag coverage cleanly.
+- Re-read the memory files after the pricing tweak, confirmed there is still no `DEPLOY-STATUS.md` blocker, and kept the backlog parked on evidence-gated work while the queue remained at zero.
 
 ## Next Step
 
