@@ -246,3 +246,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - 2026-06-05 to 2026-06-27: collapsed shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, commercial-search, and competitor-intent coverage into this summary line; remaining work stays evidence-gated.
 - 2026-06-27: rechecked the live inbox, partner tracker, and help status during the maintenance sweep; no replies, intakes, or deploy blockers surfaced, so the remaining P0-P1 work stayed parked.
+- 2026-06-27: refined the response and management route fallbacks, kept the route chooser and core entry pages aligned, and left the live P0-P1 backlog unchanged.
