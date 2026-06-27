@@ -80,4 +80,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-27: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, commercial-search, and competitor-intent route coverage while the remaining evidence-gated work stayed open.
+- 2026-06-05 to 2026-06-27: summarized shipped entry-page, spreadsheet-row, named-vendor, due-diligence, builder, automation, commercial-search, and competitor-intent coverage; remaining work stays evidence-gated.
