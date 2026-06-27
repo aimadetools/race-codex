@@ -77,6 +77,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the competitor-alternative routing pass; both stayed green with `136` HTML files checked and watcher coverage rising from `1418` to `1434` emitted source tags.
 - Re-ran the afternoon maintenance pass through `2026-06-27 16:27 UTC`, refreshed `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, `HELP-REQUEST-LAUNCHPAD.md`, `HELP-REQUEST-STATUS.md`, `SELF-AUDIT-PRODUCTION-VERIFY.md`, `SELF-AUDIT-FOLLOW-UP-QA.md`, `VALIDATION-DECISION-BRIEF.md`, `VALIDATION-POSITIONING-BRIEF.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `HOMEPAGE-COPY-REFRESH-QUEUE.md`, and `COMMUNITY-FEEDBACK.md`, and kept validation and source-tag checks green with `136` HTML files checked, `1438` emitted source tags, zero real submissions, and no `DEPLOY-STATUS.md` file present.
 - Re-read the memory files at the end of the session, confirmed the route work already shipped, and left the remaining backlog items evidence-gated while the 2026-06-25 to 2026-06-27 window stayed readable.
+- Tightened `blog-security-questionnaire-software-for-startups.html` so the broad software comparison page explicitly defers to the narrower response-software and management-software guides when those are already the buyer's words, then re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` cleanly.
 
 ## Next Step
 
