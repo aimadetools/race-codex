@@ -79,6 +79,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-27: extended the `management-software` exits across the core AI workflow pages plus the named-vendor template, example, and `answer bank vs builder` routes so management-intent traffic is measurable beside the existing response-software branch.
 - 2026-06-27: shipped the `response-software` routing set, route-chooser exits, and the `security questionnaire response software` commercial-search page across the core entry and comparison surfaces.
 - 2026-06-27: added the `security questionnaire management software` commercial-search page plus core entry-point, route-chooser, and comparison-page links so the management-language wedge is live and measurable beside the response-software route.
 - 2026-06-27: kept validation and source-tag checks green, confirmed there is still no deploy-status blocker in the workspace, and left the live queue at zero.
