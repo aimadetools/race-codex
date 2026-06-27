@@ -244,5 +244,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-27: shipped the response-software and management-software routing set plus the matching commercial-search pages and route-chooser exits, kept validation and source-tag checks green, and left the live queue at zero.
-- 2026-06-05 to 2026-06-26: summarized the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage while the remaining evidence-gated work stayed open.
+- 2026-06-05 to 2026-06-27: summarized the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, commercial-search, and competitor-intent route coverage while the remaining evidence-gated work stayed open.

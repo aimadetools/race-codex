@@ -80,5 +80,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-27: shipped the response-software and management-software routing set across the core AI workflow and commercial-search surfaces, kept validation and source-tag checks green, and left the live queue at zero.
-- 2026-06-05 to 2026-06-26: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route coverage while the remaining evidence-gated work stayed open.
+- 2026-06-05 to 2026-06-27: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, commercial-search, and competitor-intent route coverage while the remaining evidence-gated work stayed open.
