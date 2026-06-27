@@ -63,6 +63,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the named-vendor response-software expansion; both stayed green with `135` HTML files checked and watcher coverage rising from `1346` to `1367` emitted source tags.
 - Refreshed `VALIDATION-STATUS.md` after the route-chooser exit pass and rechecked the site; both validation commands stayed green and there is still no `DEPLOY-STATUS.md` blocker in the workspace.
 - Ran the 2026-06-27 maintenance pass through `2026-06-27 08:10 UTC`, refreshed `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, `HELP-REQUEST-LAUNCHPAD.md`, `HELP-REQUEST-STATUS.md`, `SELF-AUDIT-PRODUCTION-VERIFY.md`, `SELF-AUDIT-FOLLOW-UP-QA.md`, `VALIDATION-DECISION-BRIEF.md`, `VALIDATION-POSITIONING-BRIEF.md`, `VALIDATION-OUTREACH-SEND-PLAN.md`, `HOMEPAGE-COPY-REFRESH-QUEUE.md`, and `COMMUNITY-FEEDBACK.md`, and confirmed the live queue still sits at zero with no new replies, submissions, or interviews.
+- Re-ran the validation-maintenance pass through `2026-06-27 08:17 UTC`, refreshed the inbox/help/validation/watch artifacts again, and kept both `npm run check:source-tag-coverage` and `npm run check:site-links` green while the live queue stayed at zero.
 - Collapsed the remaining redundant completed-summary lines in `BACKLOG-PREMIUM.md` and `BACKLOG-CHEAP.md` so the live watch sections stay easier to scan while the evidence-gated tasks remain open.
 
 ## Next Step
@@ -83,3 +84,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-27: closed the route-picker parity gap for the response-software wedge so homepage, pricing, free-tools, start-here, and procurement-hub pickers can all route into the guide while keeping attribution on the existing response-software source tags.
 - 2026-06-27: extended the response-software branch across named-vendor answer examples, the Microsoft Copilot template, and the OpenAI / Anthropic / Claude / Gemini answer-bank-vs-builder comparison pages so software-shopping buyers can exit from deeper AI review paths without backing out to broader hubs.
 - 2026-06-27: ran the validation-maintenance pass, refreshed the inbox/help/self-audit/decision artifacts, and kept the live queue at zero with the new no-reply checkpoint.
+- 2026-06-27: re-ran the validation-maintenance pass at `08:17 UTC`, refreshed the contact, help, and validation snapshots, and kept the site-link and source-tag checks green with no new replies, submissions, or interviews.
