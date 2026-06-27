@@ -28,6 +28,20 @@
       secondaryHref: "blog-security-questionnaire-software-for-startups.html",
       secondaryLabel: "Open software guide",
     },
+    managementSoftware: {
+      title: "Use the management software guide.",
+      summary:
+        "The team is comparing workflow administration, reusable answer governance, or broader questionnaire management, so start with the management-software guide instead of jumping straight into a full platform shortlist.",
+      bullets: [
+        "Best when the real question is reusable answer management versus a larger operating system",
+        "Keeps answer-quality cleanup separate from assignment, approval, and administration tooling",
+        "Use the response-software guide if the comparison is still mostly about approved answers or SME review",
+      ],
+      primaryHref: "blog-security-questionnaire-management-software.html",
+      primaryLabel: "Open management software guide",
+      secondaryHref: "blog-security-questionnaire-response-software.html",
+      secondaryLabel: "Open response software guide",
+    },
     dueDiligence: {
       title: "Use the due diligence route.",
       summary:
@@ -203,6 +217,7 @@
       root: "[data-route-picker='homepage']",
       sourceTag: "homepage-route-picker",
       sourceOverrides: {
+        managementSoftware: "homepage-management-software",
         responseSoftware: "homepage-response-software",
       },
     },
@@ -210,6 +225,7 @@
       root: "[data-route-picker='free-tools']",
       sourceTag: "free-tools-route-picker",
       sourceOverrides: {
+        managementSoftware: "free-tools-management-software",
         responseSoftware: "free-tools-response-software",
       },
     },
@@ -217,6 +233,7 @@
       root: "[data-route-picker='pricing']",
       sourceTag: "pricing-route-picker",
       sourceOverrides: {
+        managementSoftware: "pricing-management-software",
         responseSoftware: "pricing-response-software",
       },
     },
@@ -224,6 +241,7 @@
       root: "[data-route-picker='start-here']",
       sourceTag: "start-here-route-picker",
       sourceOverrides: {
+        managementSoftware: "start-here-management-software",
         responseSoftware: "start-here-response-software",
       },
     },
@@ -231,6 +249,7 @@
       root: "[data-route-picker='ai-procurement-hub']",
       sourceTag: "ai-procurement-hub-route-picker",
       sourceOverrides: {
+        managementSoftware: "ai-procurement-hub-management-software",
         responseSoftware: "ai-procurement-hub-response-software",
       },
     },
@@ -292,6 +311,9 @@
   const pickRecommendation = (blockerValue, languageValue, needValue) => {
     if (languageValue === "response-software") {
       return { key: "responseSoftware", reason: "response-software shopping" };
+    }
+    if (languageValue === "management-software") {
+      return { key: "managementSoftware", reason: "management-software shopping" };
     }
 
     if (blockerValue === "spreadsheet-rows") {
