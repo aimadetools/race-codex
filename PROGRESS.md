@@ -50,6 +50,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - Extended the same `response-software` branch into `ai-security-questionnaire-answer-library.html` and `choose-path.html` so software-shopping buyers can self-route from the answer library and route chooser instead of falling back to generic automation language.
 - Added `ai-answer-library-response-software`, `ai-answer-library-questionnaire-software`, and `route-chooser-response-software` to `scripts/watched-source-tags.mjs`, then refreshed the cheap/premium backlog watch lines so those new route surfaces remain measurable.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the routing changes; both stayed green with `135` HTML files checked and `1346` emitted source tags covered.
+- Fixed the shared route-picker parity gap across `index.html`, `pricing.html`, `free-tools.html`, `start-here.html`, and `ai-procurement-hub.html` so buyers can now explicitly choose `response software` in the picker instead of relying on surrounding static links.
+- Updated `scripts/route-picker.js` so the new picker branch resolves to `blog-security-questionnaire-response-software.html` while preserving the existing page-level response-software source tags for attribution instead of emitting a generic picker tag.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the picker fix; both stayed green with `135` HTML files checked and `1346` emitted source tags covered.
 
 ## Next Step
 
@@ -67,3 +70,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-25 to 2026-06-26: surfaced the route chooser and buyer-language wedges earlier, shipped the `security questionnaire software` and `automation software` companion pages, and kept the inbox and site-link checks green.
 - 2026-06-26: refreshed the watch artifacts, rechecked the backlog and validation docs, and kept the reply watch parked with no new replies, submissions, or interviews.
 - 2026-06-27: shipped the `security questionnaire response software` companion page, linked it into the software-comparison cluster, surfaced it across homepage / pricing / free-tools / start-here, then extended it into answer-library and route-chooser with watcher coverage for the new routing tags.
+- 2026-06-27: closed the route-picker parity gap for the response-software wedge so homepage, pricing, free-tools, start-here, and procurement-hub pickers can all route into the guide while keeping attribution on the existing response-software source tags.

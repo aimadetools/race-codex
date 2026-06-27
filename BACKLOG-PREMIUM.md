@@ -80,5 +80,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 - Completed live work stays collapsed here as summary lines; the remaining P0-P2 items below are still evidence-gated and intentionally left open.
 - 2026-06-27: extended the `response-software` commercial-intent wedge onto homepage, pricing, free-tools, start-here, answer-library, and route-chooser so the sharper buyer-language comparison can compete from the core entry and self-routing pages before another expansion pass.
+- 2026-06-27: closed the route-picker parity gap for the response-software wedge so the core entry pages and procurement hub can route software-shopping buyers into the guide without losing existing source-tag attribution.
 - 2026-06-05 to 2026-06-26: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route coverage while the directory blocker and live validation watches stayed evidence-gated. No new evidence landed in this pass, so the remaining P0-P2 items stay collapsed and open.
 - 2026-06-27: added the `security questionnaire response software` comparison wedge, linked it into the blog and procurement hub, and left the follow-through explicitly evidence-gated on the first commercial-search signal.

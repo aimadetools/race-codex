@@ -14,6 +14,20 @@
       secondaryHref: "ai-security-questionnaire-answer-builder.html",
       secondaryLabel: "Build answer + bundle",
     },
+    responseSoftware: {
+      title: "Use the response software guide.",
+      summary:
+        "The team is comparing approved answers, answer libraries, or SME-review workflow, so start with the response-software guide instead of a generic automation page.",
+      bullets: [
+        "Best when the real question is one blocked answer versus a larger response-management platform",
+        "Keeps approved-answer, content-library, and workflow-maturity tradeoffs visible",
+        "Use the broader software guide if the comparison widens into trust-center or vendor-risk tooling",
+      ],
+      primaryHref: "blog-security-questionnaire-response-software.html",
+      primaryLabel: "Open response software guide",
+      secondaryHref: "blog-security-questionnaire-software-for-startups.html",
+      secondaryLabel: "Open software guide",
+    },
     dueDiligence: {
       title: "Use the due diligence route.",
       summary:
@@ -188,22 +202,37 @@
     {
       root: "[data-route-picker='homepage']",
       sourceTag: "homepage-route-picker",
+      sourceOverrides: {
+        responseSoftware: "homepage-response-software",
+      },
     },
     {
       root: "[data-route-picker='free-tools']",
       sourceTag: "free-tools-route-picker",
+      sourceOverrides: {
+        responseSoftware: "free-tools-response-software",
+      },
     },
     {
       root: "[data-route-picker='pricing']",
       sourceTag: "pricing-route-picker",
+      sourceOverrides: {
+        responseSoftware: "pricing-response-software",
+      },
     },
     {
       root: "[data-route-picker='start-here']",
       sourceTag: "start-here-route-picker",
+      sourceOverrides: {
+        responseSoftware: "start-here-response-software",
+      },
     },
     {
       root: "[data-route-picker='ai-procurement-hub']",
       sourceTag: "ai-procurement-hub-route-picker",
+      sourceOverrides: {
+        responseSoftware: "ai-procurement-hub-response-software",
+      },
     },
   ];
 
@@ -261,6 +290,10 @@
   };
 
   const pickRecommendation = (blockerValue, languageValue, needValue) => {
+    if (languageValue === "response-software") {
+      return { key: "responseSoftware", reason: "response-software shopping" };
+    }
+
     if (blockerValue === "spreadsheet-rows") {
       return { key: "spreadsheetRows", reason: "spreadsheet rows or portal export" };
     }
@@ -308,7 +341,7 @@
     return { key: "oneAnswer", reason: "one-answer-now cleanup" };
   };
 
-  const initPicker = (root, sourceTag) => {
+  const initPicker = (root, sourceTag, sourceOverrides = {}) => {
     const blocker = root.querySelector("[data-route-picker-blocker]");
     const language = root.querySelector("[data-route-picker-language]");
     const need = root.querySelector("[data-route-picker-need]");
@@ -322,10 +355,12 @@
       const languageValue = language.value;
       const needValue = need.value;
       const recommendationKey = pickRecommendation(blockerValue, languageValue, needValue);
+      const resolvedSourceTag =
+        sourceOverrides[recommendationKey.key] || sourceTag;
       setRecommendation(
         root,
         routeMatrix[recommendationKey.key] || routeMatrix.default,
-        sourceTag,
+        resolvedSourceTag,
         recommendationKey.reason,
       );
     };
@@ -337,7 +372,9 @@
     update();
   };
 
-  pageConfigs.forEach(({ root, sourceTag }) => {
-    document.querySelectorAll(root).forEach((picker) => initPicker(picker, sourceTag));
+  pageConfigs.forEach(({ root, sourceTag, sourceOverrides }) => {
+    document
+      .querySelectorAll(root)
+      .forEach((picker) => initPicker(picker, sourceTag, sourceOverrides));
   });
 })();
