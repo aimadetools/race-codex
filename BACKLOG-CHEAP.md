@@ -244,9 +244,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-27: extended the `management-software` exits across the core AI workflow pages plus the named-vendor template, example, and `answer bank vs builder` routes so management-intent traffic is attributable beside the existing response-software branch.
-- 2026-06-27: added the `security questionnaire management software` commercial-search page and linked it from the core entry, comparison, and route-chooser surfaces with new watched source tags.
-- 2026-06-27: shipped the `response-software` routing set, route-chooser exits, and the `security questionnaire response software` commercial-search page across the core entry and comparison surfaces.
-- 2026-06-27: wired the broader automation and SIG guides into the new response-software and management-software exits so commercial-search traffic can branch into narrower buyer-language pages instead of stopping at the generic comparison layer.
+- 2026-06-27: shipped the response-software and management-software routing set plus the matching commercial-search pages, route-chooser exits, and automation/SIG branches so commercial-search traffic stays attributable.
 - 2026-06-27: kept validation and source-tag checks green, confirmed there is still no deploy-status blocker in the workspace, and left the live queue at zero.
 - 2026-06-05 to 2026-06-26: summarized the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage while the remaining evidence-gated work stayed open.
