@@ -79,6 +79,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - Completed live work stays collapsed here as summary lines; the remaining P0-P2 items below are still evidence-gated and intentionally left open.
+- 2026-06-27: added direct route-chooser exits to the response-software and automation-software commercial pages so uncertain visitors can hand the decision back to the shared chooser instead of bouncing between comparison pages.
 - 2026-06-27: extended the `response-software` commercial-intent wedge onto homepage, pricing, free-tools, start-here, answer-library, and route-chooser so the sharper buyer-language comparison can compete from the core entry and self-routing pages before another expansion pass.
 - 2026-06-27: closed the route-picker parity gap for the response-software wedge so the core entry pages and procurement hub can route software-shopping buyers into the guide without losing existing source-tag attribution.
 - 2026-06-27: extended the same response-software routing into starter-pack, builder, and answer-bank so high-intent AI workflow pages can branch into software-shopping guidance without backing out to broader entry pages.

@@ -241,6 +241,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - Completed maintenance work stays collapsed here as summary lines; the remaining P0-P2 items below are still live trigger watches.
+- 2026-06-27: added direct route-chooser exits to the response-software and automation-software commercial pages so uncertain visitors can hand the decision back to the shared chooser instead of bouncing between comparison pages.
 - 2026-06-27: surfaced the `response-software` guide across homepage, pricing, free-tools, start-here, answer-library, and route-chooser, then added the matching watcher tags so the wedge can be measured outside the blog and procurement hub.
 - 2026-06-27: added response-software follow-through watches so the new buyer-language wedge can be measured before another comparison-page expansion.
 - 2026-06-27: fixed route-picker parity for the response-software wedge across homepage, pricing, free-tools, start-here, and the procurement hub while keeping attribution on the existing response-software source tags instead of a new generic picker tag.
