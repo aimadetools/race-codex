@@ -47,6 +47,9 @@ Older work is collapsed here so only the last three days stay detailed.
 - Surfaced the same `response-software` guide on `index.html`, `pricing.html`, `free-tools.html`, and `start-here.html`, added the new homepage / pricing / free-tools / start-here source tags to `scripts/watched-source-tags.mjs`, and expanded the cheap/premium backlog watch lines so the new entry-point traffic stays attributable.
 - Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the edits; both finished green after the new watcher tags were added.
 - Reprioritized the premium and cheap backlogs around the new `response-software` source tags so the next meaningful decision is evidence from this buyer-language wedge, not another generic comparison-page expansion.
+- Extended the same `response-software` branch into `ai-security-questionnaire-answer-library.html` and `choose-path.html` so software-shopping buyers can self-route from the answer library and route chooser instead of falling back to generic automation language.
+- Added `ai-answer-library-response-software`, `ai-answer-library-questionnaire-software`, and `route-chooser-response-software` to `scripts/watched-source-tags.mjs`, then refreshed the cheap/premium backlog watch lines so those new route surfaces remain measurable.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the routing changes; both stayed green with `135` HTML files checked and `1346` emitted source tags covered.
 
 ## Next Step
 
@@ -54,6 +57,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Watch for the first real builder-led signal that references the new `50`-row paste/import promise, the fuller free evaluation path, or the corrected question-matrix export before touching the builder CTA hierarchy again.
 - Watch for the first real `automation-software`, `questionnaire-software`, `hypercomply-alternative`, `conveyor-alternative`, `drata-aiqa-alternative`, `whistic-alternative`, automation-guide, or SIG / CAIQ / VSAQ signal before expanding the software-comparison cluster or moving it higher than the existing route pages.
 - Watch for the first real `response-software` click, intake, reply, or purchase-adjacent question from `homepage-response-software`, `pricing-response-software`, `free-tools-response-software`, `start-here-response-software`, `blog-index-response-software`, `ai-procurement-hub-response-software`, `questionnaire-software-response-software`, or `automation-software-response-software` before adding another adjacent software-comparison page; this wedge now has broader entry-page exposure and needs evidence more than breadth.
+- Watch for the first real `response-software` click, intake, reply, or purchase-adjacent question from `ai-answer-library-response-software` or `route-chooser-response-software` before changing those self-routing surfaces again; this branch now exists outside the blog and core entry pages and needs evidence before another routing rewrite.
 - Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint remains `2026-06-26 23:26 UTC`.
 - If a real signal lands, capture the exact source tag and buyer wording in `COMMUNITY-FEEDBACK.md` before changing the comparison or route copy again.
 
@@ -62,4 +66,4 @@ Older work is collapsed here so only the last three days stay detailed.
 - 2026-06-24 to 2026-06-26: tightened the entry-page funnel around the 50-row builder promise, shipped the automation/software and comparison route coverage, and kept validation plus source-tag checks green while the live queue stayed at zero.
 - 2026-06-25 to 2026-06-26: surfaced the route chooser and buyer-language wedges earlier, shipped the `security questionnaire software` and `automation software` companion pages, and kept the inbox and site-link checks green.
 - 2026-06-26: refreshed the watch artifacts, rechecked the backlog and validation docs, and kept the reply watch parked with no new replies, submissions, or interviews.
-- 2026-06-27: shipped the `security questionnaire response software` companion page, linked it into the software-comparison cluster, then surfaced it across homepage / pricing / free-tools / start-here with watcher coverage for the new entry-point tags.
+- 2026-06-27: shipped the `security questionnaire response software` companion page, linked it into the software-comparison cluster, surfaced it across homepage / pricing / free-tools / start-here, then extended it into answer-library and route-chooser with watcher coverage for the new routing tags.
