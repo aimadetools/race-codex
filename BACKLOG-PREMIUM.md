@@ -79,12 +79,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - Completed live work stays collapsed here as summary lines; the remaining P0-P2 items below are still evidence-gated and intentionally left open.
-- 2026-06-27: added direct route-chooser exits to the response-software and automation-software commercial pages so uncertain visitors can hand the decision back to the shared chooser instead of bouncing between comparison pages.
-- 2026-06-27: extended the `response-software` commercial-intent wedge onto homepage, pricing, free-tools, start-here, answer-library, and route-chooser so the sharper buyer-language comparison can compete from the core entry and self-routing pages before another expansion pass.
-- 2026-06-27: closed the route-picker parity gap for the response-software wedge so the core entry pages and procurement hub can route software-shopping buyers into the guide without losing existing source-tag attribution.
-- 2026-06-27: extended the same response-software routing into starter-pack, builder, and answer-bank so high-intent AI workflow pages can branch into software-shopping guidance without backing out to broader entry pages.
-- 2026-06-27: extended the same response-software routing into Pro-kit so repeat-review buyers can still branch into software-evaluation guidance before committing to another operating layer.
-- 2026-06-27: refreshed the validation status after the route-chooser exit pass and kept the site-link and source-tag checks green with no deploy blocker in the workspace.
-- 2026-06-27: ran the validation-maintenance pass, refreshed the inbox/help/self-audit/decision artifacts, and kept the live queue at zero with the new no-reply checkpoint.
+- 2026-06-27: shipped the `response-software` routing set across the core entry pages, route chooser, starter-pack, builder, answer-bank, Pro-kit, and named-vendor comparison surfaces so software-shopping buyers can stay on the sharper buyer-language path without losing attribution.
+- 2026-06-27: kept validation and source-tag checks green, confirmed there is still no deploy-status blocker in the workspace, and left the live queue at zero while the new routing watch stayed measurable.
+- 2026-06-27: added direct route-chooser exits plus the `security questionnaire response software` comparison wedge, then linked it into the blog and procurement hub as an evidence-gated commercial-search page.
 - 2026-06-05 to 2026-06-26: summarized the shipped entry-page funnel, spreadsheet-row, named-vendor, due-diligence, builder, automation, and competitor-intent route coverage while the directory blocker and live validation watches stayed evidence-gated. No new evidence landed in this pass, so the remaining P0-P2 items stay collapsed and open.
-- 2026-06-27: added the `security questionnaire response software` comparison wedge, linked it into the blog and procurement hub, and left the follow-through explicitly evidence-gated on the first commercial-search signal.

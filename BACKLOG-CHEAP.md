@@ -241,12 +241,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - Completed maintenance work stays collapsed here as summary lines; the remaining P0-P2 items below are still live trigger watches.
-- 2026-06-27: added direct route-chooser exits to the response-software and automation-software commercial pages so uncertain visitors can hand the decision back to the shared chooser instead of bouncing between comparison pages.
-- 2026-06-27: surfaced the `response-software` guide across homepage, pricing, free-tools, start-here, answer-library, and route-chooser, then added the matching watcher tags so the wedge can be measured outside the blog and procurement hub.
-- 2026-06-27: added response-software follow-through watches so the new buyer-language wedge can be measured before another comparison-page expansion.
-- 2026-06-27: fixed route-picker parity for the response-software wedge across homepage, pricing, free-tools, start-here, and the procurement hub while keeping attribution on the existing response-software source tags instead of a new generic picker tag.
-- 2026-06-27: added response-software branch tags to starter-pack, builder, and answer-bank so internal AI workflow pages can feed software-shopping traffic into the guide and keep that route measurable.
-- 2026-06-27: added the same measurable response-software branch to Pro-kit so paid repeat-review traffic can still break into software-shopping evaluation instead of forcing a kit-first decision.
-- 2026-06-27: refreshed the validation status after the route-chooser exit pass and kept the site-link and source-tag checks green with no deploy blocker in the workspace.
-- 2026-06-27: ran the validation-maintenance pass, refreshed the inbox/help/self-audit/decision artifacts, and kept the live queue at zero with the new no-reply checkpoint.
+- 2026-06-27: shipped the `response-software` routing set across the core entry pages, route chooser, starter-pack, builder, answer-bank, Pro-kit, and named-vendor comparison surfaces so software-shopping buyers can stay on the sharper buyer-language path without losing attribution.
+- 2026-06-27: kept validation and source-tag checks green, confirmed there is still no deploy-status blocker in the workspace, and left the live queue at zero while the new routing watch stayed measurable.
+- 2026-06-27: added direct route-chooser exits plus the `security questionnaire response software` comparison wedge, then linked it into the blog and procurement hub as an evidence-gated commercial-search page.
 - 2026-06-05 to 2026-06-26: summarized the shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, and competitor-intent route coverage while the Next AI directory blocker and live watches stayed evidence-gated at zero. No new trigger fired in this pass, so the remaining P0-P2 items stay collapsed and open.
