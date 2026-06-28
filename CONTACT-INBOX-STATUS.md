@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-28 12:37 UTC
+Checked at: 2026-06-28 16:06 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -902,6 +902,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - benchmark-report-tracker: 0
 - ai-security-questionnaire-guide: 0
 - ai-security-questionnaire-guide-starter-pack: 0
+- ai-security-questionnaire-guide-spreadsheet-template: 0
+- ai-security-questionnaire-guide-response-software: 0
+- ai-security-questionnaire-guide-management-software: 0
 - ai-security-questionnaire-starter-pack-builder: 0
 - ai-security-questionnaire-starter-pack-comparison: 0
 - ai-security-questionnaire-starter-pack-answer-bank: 0
@@ -920,6 +923,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-starter-pack-openai-path-guide: 0
 - ai-security-questionnaire-starter-pack-response-software: 0
 - ai-security-questionnaire-starter-pack-management-software: 0
+- ai-security-questionnaire-starter-pack-spreadsheet-template: 0
 - ai-security-questionnaire-starter-pack-questionnaire-software: 0
 - ai-security-questionnaire-starter-pack-packet: 0
 - ai-security-questionnaire-starter-pack-sample: 0
@@ -943,6 +947,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-path-guide-builder: 0
 - ai-path-guide-evidence-map: 0
 - ai-path-guide-answer-bank: 0
+- ai-path-guide-spreadsheet-template: 0
+- ai-path-guide-response-software: 0
+- ai-path-guide-management-software: 0
 - anthropic-path-guide-builder: 0
 - anthropic-path-guide-evidence-map: 0
 - anthropic-path-guide-answer-bank: 0
@@ -986,6 +993,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-questionnaire-builder-answer-bank: 0
 - ai-questionnaire-builder-starter-pack: 0
 - ai-questionnaire-builder-example: 0
+- ai-questionnaire-builder-spreadsheet-template: 0
 - ai-questionnaire-builder-response-software: 0
 - ai-questionnaire-builder-management-software: 0
 - ai-answer-bank-vs-pro-kit-answer-bank: 0
@@ -995,12 +1003,16 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-answer-bank-vs-pro-kit-pro-kit: 0
 - ai-answer-bank-vs-pro-kit-starter-pack: 0
 - ai-answer-bank-vs-pro-kit-teardown: 0
+- ai-answer-bank-vs-pro-kit-spreadsheet-template: 0
+- ai-answer-bank-vs-pro-kit-response-software: 0
+- ai-answer-bank-vs-pro-kit-management-software: 0
 - ai-security-questionnaire-template: 0
 - ai-security-questionnaire-template-starter-pack: 0
 - ai-security-questionnaire-template-builder: 0
 - ai-security-questionnaire-template-example: 0
 - ai-security-questionnaire-template-response-software: 0
 - ai-security-questionnaire-template-management-software: 0
+- ai-security-questionnaire-template-spreadsheet-template: 0
 - ai-security-questionnaire-template-sample: 0
 - ai-security-questionnaire-template-guide: 0
 - ai-security-questionnaire-template-stack: 0
@@ -1085,6 +1097,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-example-template: 0
 - ai-security-questionnaire-example-response-software: 0
 - ai-security-questionnaire-example-management-software: 0
+- ai-security-questionnaire-example-spreadsheet-template: 0
 - ai-security-questionnaire-example-guide: 0
 - ai-security-questionnaire-example-packet: 0
 - ai-security-questionnaire-example-teardown: 0
@@ -1098,8 +1111,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-sig-guide: 0
 - automation-guide-response-software: 0
 - automation-guide-management-software: 0
+- automation-guide-spreadsheet-template: 0
 - sig-guide-response-software: 0
 - sig-guide-management-software: 0
+- sig-guide-spreadsheet-template: 0
 - ai-procurement-hub-questionnaire-software: 0
 - ai-procurement-hub-management-software: 0
 - ai-procurement-hub-response-software: 0
@@ -1122,6 +1137,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-claude-path-guide: 0
 - ai-procurement-hub-claude-template: 0
 - ai-starter-pack-vs-builder: 0
+- ai-starter-pack-vs-builder-spreadsheet-template: 0
+- ai-starter-pack-vs-builder-response-software: 0
+- ai-starter-pack-vs-builder-management-software: 0
 - ai-procurement-hub-answer-example: 0
 - ai-procurement-hub-answer-builder: 0
 - ai-procurement-hub-answer-bank: 0
@@ -1246,48 +1264,56 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-software-safebase-alternative: 0
 - vanta-alternative-builder: 0
 - vanta-alternative-software-guide: 0
+- vanta-alternative-spreadsheet-template: 0
 - vanta-alternative-response-software: 0
 - vanta-alternative-management-software: 0
 - vanta-alternative-answer-bank: 0
 - vanta-alternative-audit: 0
 - responsive-alternative-builder: 0
 - responsive-alternative-software-guide: 0
+- responsive-alternative-spreadsheet-template: 0
 - responsive-alternative-response-software: 0
 - responsive-alternative-management-software: 0
 - responsive-alternative-answer-bank: 0
 - responsive-alternative-audit: 0
 - loopio-alternative-builder: 0
 - loopio-alternative-software-guide: 0
+- loopio-alternative-spreadsheet-template: 0
 - loopio-alternative-response-software: 0
 - loopio-alternative-management-software: 0
 - loopio-alternative-answer-bank: 0
 - loopio-alternative-audit: 0
 - hypercomply-alternative-builder: 0
 - hypercomply-alternative-software-guide: 0
+- hypercomply-alternative-spreadsheet-template: 0
 - hypercomply-alternative-response-software: 0
 - hypercomply-alternative-management-software: 0
 - hypercomply-alternative-answer-bank: 0
 - hypercomply-alternative-audit: 0
 - conveyor-alternative-builder: 0
 - conveyor-alternative-software-guide: 0
+- conveyor-alternative-spreadsheet-template: 0
 - conveyor-alternative-response-software: 0
 - conveyor-alternative-management-software: 0
 - conveyor-alternative-answer-bank: 0
 - conveyor-alternative-audit: 0
 - safebase-alternative-builder: 0
 - safebase-alternative-software-guide: 0
+- safebase-alternative-spreadsheet-template: 0
 - safebase-alternative-response-software: 0
 - safebase-alternative-management-software: 0
 - safebase-alternative-answer-bank: 0
 - safebase-alternative-audit: 0
 - drata-aiqa-alternative-builder: 0
 - drata-aiqa-alternative-software-guide: 0
+- drata-aiqa-alternative-spreadsheet-template: 0
 - drata-aiqa-alternative-response-software: 0
 - drata-aiqa-alternative-management-software: 0
 - drata-aiqa-alternative-answer-bank: 0
 - drata-aiqa-alternative-audit: 0
 - whistic-alternative-builder: 0
 - whistic-alternative-software-guide: 0
+- whistic-alternative-spreadsheet-template: 0
 - whistic-alternative-response-software: 0
 - whistic-alternative-management-software: 0
 - whistic-alternative-answer-bank: 0
@@ -1321,6 +1347,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-answer-bank-openai: 0
 - ai-security-questionnaire-answer-bank-response-software: 0
 - ai-security-questionnaire-answer-bank-management-software: 0
+- ai-security-questionnaire-answer-bank-spreadsheet-template: 0
 - openai-answer-bank-builder: 0
 - openai-answer-bank-template: 0
 - openai-answer-bank-example: 0
@@ -1451,6 +1478,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-answer-bank-vs-builder-bank: 0
 - ai-answer-bank-vs-builder-evidence-map: 0
 - ai-answer-bank-vs-builder-bundle-sample: 0
+- ai-answer-bank-vs-builder-spreadsheet-template: 0
+- ai-answer-bank-vs-builder-response-software: 0
+- ai-answer-bank-vs-builder-management-software: 0
 - ai-security-questionnaire-pro-kit-preview: 0
 - ai-security-questionnaire-pro-kit-teardown: 0
 - ai-security-questionnaire-pro-kit-answer-bank: 0
@@ -1459,6 +1489,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-pro-kit-evidence-map: 0
 - ai-security-questionnaire-pro-kit-response-software: 0
 - ai-security-questionnaire-pro-kit-management-software: 0
+- ai-security-questionnaire-pro-kit-spreadsheet-template: 0
 - ai-security-questionnaire-pro-kit-audit: 0
 - ai-audit-page: 0
 - ai-audit-page-sample: 0
