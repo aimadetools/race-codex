@@ -250,6 +250,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-28: surfaced the response-workbook export in the homepage, pricing, free-tools, start-here, and builder CTA copy so the spreadsheet-native handoff is easier to find before checkout; `npm run check:site-links` and `npm run check:source-tag-coverage` stayed green at `1529` emitted source tags and `137` checked HTML files.
 - 2026-06-28: added the matching spreadsheet-route watcher tags for the builder, automation-guide, sig-guide, and competitor-alternative pages, then reran `npm run check:site-links` and `npm run check:source-tag-coverage` green at `1514` emitted source tags and `137` checked HTML files.
 - 2026-06-28: upgraded the free AI questionnaire builder with a spreadsheet-native `.xlsx` response workbook export and queued workbook-specific feedback watches so the next sessions can tell whether buyers prefer a full workbook over the older CSV and Markdown exports.
 - 2026-06-24 to 2026-06-28: tightened the entry-page funnel around the 50-row builder promise, shipped the automation/software and comparison route coverage, extended the spreadsheet-template branch into the downstream software and named-vendor pages, and kept validation plus source-tag checks green while the live queue stayed at zero.
