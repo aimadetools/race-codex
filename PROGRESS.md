@@ -67,6 +67,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Added the matching path/comparison watcher tags in `scripts/watched-source-tags.mjs` and reran `npm run check:site-links` plus `npm run check:source-tag-coverage`; both stayed green at `1526` emitted source tags and `137` checked HTML files.
 - Closed the same routing gap on the broad generic AI acquisition page: `blog-ai-security-questionnaire.html` now surfaces the spreadsheet-template guide for worksheet-led buyers and branches software-shopping readers into the response-software and management-software guides before the page forces a starter-pack or builder-first answer path.
 - Added the matching generic AI article watcher tags in `scripts/watched-source-tags.mjs` and reran `npm run check:site-links` plus `npm run check:source-tag-coverage`; both stayed green at `1529` emitted source tags and `137` checked HTML files.
+- Re-checked the response-software, management-software, automation-software, and chooser surfaces for any remaining unblocked route work; they were already wired, so the only live backlog items left this turn are evidence-gated.
 
 ## Next Step
 
