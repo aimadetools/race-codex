@@ -800,6 +800,7 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-security-questionnaire-template-example",
   "ai-security-questionnaire-template-response-software",
   "ai-security-questionnaire-template-management-software",
+  "ai-security-questionnaire-template-spreadsheet-template",
   "ai-security-questionnaire-template-sample",
   "ai-security-questionnaire-template-guide",
   "ai-security-questionnaire-template-stack",
