@@ -247,6 +247,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-28: re-ran the local link and source-tag checks after the spreadsheet-template routing pass; both stayed green, no deploy-status file existed to fix, and no new buyer-language signal landed.
 - 2026-06-05 to 2026-06-27: collapsed shipped spreadsheet-row, named-vendor, due-diligence, AI-agent-control, automation, commercial-search, competitor-intent, and response/management software coverage into this summary line; remaining work stays evidence-gated and the latest public The Next AI checks still show no NoticeKit listing.
 - 2026-06-27: rechecked the live inbox, partner tracker, help status, route fallbacks, and public The Next AI surfaces during the maintenance sweep; no replies, intakes, or deploy blockers surfaced, and the remaining P0-P1 backlog stayed parked with green site-link and source-tag checks.
 - 2026-06-28: routed chooser and shared route-picker spreadsheet-first traffic into the new spreadsheet-template guide, added the new watcher tag, and kept local-link plus source-tag validation green while the evidence-gated backlog stayed parked.

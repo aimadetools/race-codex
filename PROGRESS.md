@@ -40,6 +40,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Added the new spreadsheet-route watcher tags to `scripts/watched-source-tags.mjs` and re-ran `npm run check:site-links` plus `npm run check:source-tag-coverage`; both stayed green at `1461` emitted source tags and `137` checked HTML files after the downstream routing pass.
 - Extended the spreadsheet-template branch into the named-vendor route family so OpenAI, Anthropic, Claude, Gemini, and Microsoft Copilot answer-bank, template, example, comparison, and path-guide pages now expose the worksheet-preservation route directly before forcing buyers into builder-only or software-only decisions.
 - Added the vendor-route spreadsheet watcher tags to `scripts/watched-source-tags.mjs` and re-ran `npm run check:site-links` plus `npm run check:source-tag-coverage`; both stayed green after the pass at `1485` emitted source tags and `137` checked HTML files.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` at `2026-06-28 08:08 UTC`; both stayed green, and there is still no `DEPLOY-STATUS.md` file to repair or any new buyer-language signal to record.
 
 ## Next Step
 
