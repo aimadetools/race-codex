@@ -30,6 +30,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-06-28
 
 - Re-read the memory files, confirmed there is still no `DEPLOY-STATUS.md` file to repair, and compressed the dated backlog/progress history further while leaving the live evidence-gated tasks untouched.
+- Re-checked the open batch-02 directory pass and confirmed it is still blocked here because no authenticated browser session is exposed; the latest public The Next AI probes still show no public `NoticeKit` listing.
 - Collapsed the completed backlog summaries in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` so the live trigger-driven items stay prominent, and left `HELP-RESPONSES.md` untouched.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-28 20:20 UTC`; the inbox, generator, partner, benchmark, AI-agent-review, AI-audit, help-request, and validation artifacts refreshed cleanly, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoint, `SELF-AUDIT-PRODUCTION-VERIFY.md` and `SELF-AUDIT-FOLLOW-UP-QA.md` regenerated, and `npm run check:site-links` plus `npm run check:source-tag-coverage` stayed green while the live queue remained at zero.
 - Tightened the self-audit share card so the on-page feedback form is explicitly the preferred response path, with email treated as fallback only, and updated the ops inbox draft to match that preference for tagged replies.
