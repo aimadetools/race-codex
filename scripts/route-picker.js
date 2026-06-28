@@ -141,18 +141,18 @@
       secondaryLabel: "Build answer + bundle",
     },
     spreadsheetRows: {
-      title: "Use the builder for spreadsheet rows.",
+      title: "Start with the spreadsheet template guide.",
       summary:
-        "You already have the questionnaire rows or portal export, so the fastest move is to paste them into the builder and keep the imported row metadata intact.",
+        "You already have questionnaire rows or a portal export, so start on the spreadsheet-first guide and then branch into the builder, answer bank, or broader software route without losing the row-shaped context.",
       bullets: [
         "Best when the buyer already sent a sheet or portal export",
-        "Keeps the copy-ready answer and row-level response pack together",
-        "Lets you preserve row metadata before the thread gets retyped elsewhere",
+        "Keeps the downloadable template, builder, and answer-bank paths visible together",
+        "Lets you preserve row-shaped context before the thread gets retyped elsewhere",
       ],
-      primaryHref: "ai-security-questionnaire-answer-builder.html",
-      primaryLabel: "Build answer + bundle",
-      secondaryHref: "ai-security-questionnaire-starter-pack.html",
-      secondaryLabel: "Open Starter pack",
+      primaryHref: "blog-security-questionnaire-spreadsheet-template.html",
+      primaryLabel: "Open spreadsheet template guide",
+      secondaryHref: "ai-security-questionnaire-answer-builder.html",
+      secondaryLabel: "Build answer + bundle",
     },
     repeatReview: {
       title: "Use the answer bank or Pro kit.",
@@ -219,6 +219,7 @@
       sourceOverrides: {
         managementSoftware: "homepage-management-software",
         responseSoftware: "homepage-response-software",
+        spreadsheetRows: "homepage-spreadsheet-template",
       },
     },
     {
@@ -227,6 +228,7 @@
       sourceOverrides: {
         managementSoftware: "free-tools-management-software",
         responseSoftware: "free-tools-response-software",
+        spreadsheetRows: "free-tools-spreadsheet-template",
       },
     },
     {
@@ -235,6 +237,7 @@
       sourceOverrides: {
         managementSoftware: "pricing-management-software",
         responseSoftware: "pricing-response-software",
+        spreadsheetRows: "pricing-spreadsheet-template",
       },
     },
     {
@@ -243,6 +246,7 @@
       sourceOverrides: {
         managementSoftware: "start-here-management-software",
         responseSoftware: "start-here-response-software",
+        spreadsheetRows: "start-here-spreadsheet-template",
       },
     },
     {
@@ -251,6 +255,7 @@
       sourceOverrides: {
         managementSoftware: "ai-procurement-hub-management-software",
         responseSoftware: "ai-procurement-hub-response-software",
+        spreadsheetRows: "ai-procurement-hub-spreadsheet-template",
       },
     },
   ];
