@@ -243,7 +243,6 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P1
 
-- If the in-page self-audit submit path produces more responses than `mailto`, update founder and advisor follow-up copy to prefer the on-page form and keep email as fallback.
 - Tighten the copied feedback draft in `ops-contact-inbox.html` if the first real tagged reply drops any field used by `VALIDATION-DECISION-BRIEF.md`.
 
 Completed work stays collapsed below so only live trigger-driven tasks remain in P0-P1.
@@ -251,3 +250,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-06-24 to 2026-06-28: tightened the entry-page funnel, extended the spreadsheet-template, response-software, and management-software routing, shipped the response-workbook and buyer-language decoder updates, and kept validation green with the queue empty.
+- 2026-06-28: tightened the self-audit follow-up copy and ops inbox feedback draft so the on-page form is the preferred response path and email remains the fallback.
