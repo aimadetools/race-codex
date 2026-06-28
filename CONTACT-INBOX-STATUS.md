@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-27 23:21 UTC
+Checked at: 2026-06-28 04:16 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -193,6 +193,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-ai-answer-library: 0
 - blog-index-ai-answer-library-comparison: 0
 - blog-index-ai-spreadsheet-handoff-comparison: 0
+- blog-index-spreadsheet-template: 0
 - blog-index-ai-evidence-map: 0
 - blog-index-ai-follow-up-pack: 0
 - blog-index-ai-answer-bank: 0
@@ -263,6 +264,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-hero-ai-procurement: 0
 - free-tools-ai-stack-guide: 0
 - free-tools-ai-deal-blocker: 0
+- free-tools-spreadsheet-template: 0
+- free-tools-spreadsheet-handoff: 0
 - free-tools-spreadsheet-rows: 0
 - free-tools-dpa-clause-intake: 0
 - free-tools-dpa-clause-intake-legacy: 0
@@ -336,6 +339,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - route-chooser-deal-blocker: 0
 - route-chooser-ai-framework-map: 0
 - route-chooser-builder: 0
+- route-chooser-spreadsheet-template: 0
 - route-chooser-spreadsheet-rows: 0
 - route-chooser-due-diligence: 0
 - route-chooser-due-diligence-answer-bank: 0
@@ -391,6 +395,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-ai-due-diligence-packet-builder: 0
 - start-here-ai-framework-map: 0
 - start-here-ai-deal-blocker: 0
+- start-here-spreadsheet-template: 0
 - start-here-spreadsheet-rows: 0
 - start-here-ai-answer-bank: 0
 - start-here-automation-guide: 0
@@ -424,6 +429,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - partner-client-handoff-cta: 0
 - homepage-shortcut: 0
 - homepage-hero: 0
+- homepage-spreadsheet-template: 0
+- homepage-spreadsheet-handoff: 0
 - homepage-route-chooser: 0
 - homepage-ai-route-inventory: 0
 - homepage-pricing: 0
@@ -548,6 +555,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-due-diligence-scorecard: 0
 - pricing-ai-due-diligence-packet-builder: 0
 - pricing-ai-framework-map: 0
+- pricing-spreadsheet-template: 0
 - pricing-spreadsheet-rows: 0
 - pricing-automation-guide: 0
 - pricing-sig-guide: 0
@@ -564,6 +572,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-due-diligence-packet-builder: 0
 - ai-procurement-hub-framework-map: 0
 - ai-procurement-hub-free-tools: 0
+- ai-procurement-hub-spreadsheet-template: 0
 - ai-due-diligence-template-packet-builder: 0
 - ai-due-diligence-scorecard-packet-builder: 0
 - ai-due-diligence-comparison-packet-builder: 0
@@ -1153,6 +1162,13 @@ Source of truth: Vercel Blob `contact-submissions/`
 - questionnaire-software-answer-bank: 0
 - questionnaire-software-audit: 0
 - questionnaire-software-evidence-map: 0
+- spreadsheet-template-nav-audit: 0
+- spreadsheet-template-builder: 0
+- spreadsheet-template-bundle-sample: 0
+- spreadsheet-template-handoff-guide: 0
+- spreadsheet-template-questionnaire-software: 0
+- spreadsheet-template-answer-bank: 0
+- spreadsheet-template-pricing: 0
 - questionnaire-software-hypercomply-alternative: 0
 - questionnaire-software-conveyor-alternative: 0
 - questionnaire-software-drata-aiqa-alternative: 0
