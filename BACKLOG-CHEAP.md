@@ -249,5 +249,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-06-28: tightened the entry-page funnel, shipped the spreadsheet-template and software-routing updates, and kept validation green while the queue stayed empty.
+- 2026-06-24 to 2026-06-28: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management work while shipping the spreadsheet-template and software-routing updates and keeping validation green with an empty queue.
 - 2026-06-28: kept the self-audit follow-up copy and ops inbox feedback draft aligned so the on-page form stays preferred and email remains fallback.
