@@ -82,6 +82,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-06-28: shipped the spreadsheet-template acquisition wedge, the response-workbook export, and the downstream software and named-vendor routing updates while validation stayed green and the queue remained empty.
-- 2026-06-27 to 2026-06-28: re-ran the validation-maintenance sweeps, kept the inbox and partner snapshots fresh, and left the evidence-gated P0-P2 work parked.
-- 2026-06-05 to 2026-06-27: collapsed the earlier entry-page, spreadsheet-row, named-vendor, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management software work into this summary line.
+- 2026-06-24 to 2026-06-28: shipped the spreadsheet-template wedge, response-workbook export, named-vendor/software routing updates, and validation maintenance while the queue stayed empty.
+- 2026-06-05 to 2026-06-28: collapsed the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management work into this summary set.
