@@ -42,6 +42,7 @@ Older work is collapsed here so only the last three days stay detailed.
 - Added the vendor-route spreadsheet watcher tags to `scripts/watched-source-tags.mjs` and re-ran `npm run check:site-links` plus `npm run check:source-tag-coverage`; both stayed green after the pass at `1485` emitted source tags and `137` checked HTML files.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` at `2026-06-28 08:08 UTC`; both stayed green, and there is still no `DEPLOY-STATUS.md` file to repair or any new buyer-language signal to record.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-28 08:15 UTC`; the inbox, partner, benchmark, AI-agent-review, AI-audit, generator, help-request, validation-positioning, and validation-decision artifacts all refreshed cleanly, `CONTACT-INBOX-STATUS.md` stayed at `0` real submissions, `PARTNER-OUTREACH-STATUS.md` stayed at `5` sent and `0` replied, and `npm run check:source-tag-coverage` plus `npm run check:site-links` both stayed green at `1485` watched tags and `137` checked HTML files.
+- Re-read `PROGRESS.md`, both backlog files, and `HELP-RESPONSES.md` for the current turn, confirmed there was no new evidence-gated task to unfreeze, and collapsed the backlog completion history into shorter summary lines while keeping the last three days detailed.
 
 ## Next Step
 
