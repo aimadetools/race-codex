@@ -264,6 +264,7 @@
               <button class="button secondary" id="download-qa-pack" type="button">Download Q&A pack</button>
               <button class="button secondary" id="download-custom-pack" type="button">Download pasted-question pack</button>
               <button class="button secondary" id="download-custom-csv" type="button">Download pasted-question CSV</button>
+              <button class="button secondary" id="download-response-workbook" type="button">Download response workbook</button>
               <button class="button secondary" id="download-question-matrix" type="button">Download question matrix CSV</button>
               <button class="button secondary" id="download-workspace" type="button">Download workspace</button>
               <button class="button secondary" id="download-answer-bank" type="button">Download answer bank</button>
@@ -274,7 +275,7 @@
               <button class="button secondary" id="clear-saved-draft" type="button">Clear saved draft</button>
               <a class="button secondary" id="send-to-teardown" href="free-teardown.html?source=ai-questionnaire-builder-teardown">Send to teardown</a>
             </div>
-              <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces a copy-ready answer, a pasted-question response pack for the buyer's real rows, pasted spreadsheet grid, or uploaded CSV, TSV, or Excel questionnaire file, a send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, 20 common buyer-question responses, one downloadable question-matrix CSV, one portable JSON draft export, and one downloadable bundle file.</p>
+              <p class="fine-print" id="builder-status" aria-live="polite">This builder runs in your browser. Inputs stay local, autosave on this device, and one pass now produces a copy-ready answer, a pasted-question response pack for the buyer's real rows, pasted spreadsheet grid, or uploaded CSV, TSV, or Excel questionnaire file, a send-ready reviewer note, checklist, handoff, full reviewer workspace, reusable answer-bank draft, one downloadable response workbook, one downloadable question-matrix CSV, one portable JSON draft export, and one downloadable bundle file.</p>
           </aside>
         </section>
 
@@ -565,6 +566,7 @@
       const downloadQaPackButton = document.querySelector("#download-qa-pack");
       const downloadCustomPackButton = document.querySelector("#download-custom-pack");
       const downloadCustomCsvButton = document.querySelector("#download-custom-csv");
+      const downloadResponseWorkbookButton = document.querySelector("#download-response-workbook");
       const downloadQuestionMatrixButton = document.querySelector("#download-question-matrix");
       const downloadWorkspaceButton = document.querySelector("#download-workspace");
       const downloadAnswerBankButton = document.querySelector("#download-answer-bank");
@@ -682,6 +684,92 @@
           payload.answerShapeLabel
         ]);
         return [header, ...rows].map((row) => row.map(csvCell).join(",")).join("\n");
+      }
+
+      function buildResponseWorkbookName(payload) {
+        return `${slugify(`${payload.company}-${payload.primaryVendor}-questionnaire-response-workbook`, "noticekit-ai-questionnaire-response-workbook")}.xlsx`;
+      }
+
+      function downloadResponseWorkbook(payload) {
+        if (!window.XLSX || !window.XLSX.utils || typeof window.XLSX.writeFile !== "function") {
+          builderStatus.textContent = "Workbook export is unavailable in this browser. Use the CSV or Markdown downloads instead.";
+          return;
+        }
+
+        const workbook = window.XLSX.utils.book_new();
+        const summaryRows = [
+          ["field", "value"],
+          ["company", payload.company],
+          ["buyer_question", payload.buyerQuestion],
+          ["workflow", payload.workflow],
+          ["primary_vendor", payload.primaryVendor],
+          ["supporting_vendors", payload.supportingVendors],
+          ["reviewer_lane", payload.reviewerLaneLabel],
+          ["answer_shape", payload.answerShapeLabel],
+          ["customer_scope", payload.customerScope],
+          ["data_categories", payload.dataCategories],
+          ["retention_or_training_stance", payload.retentionStance],
+          ["approval_path", payload.approvalPath],
+          ["proof_links", payload.proofLinks],
+          ["decision_needed_next", payload.decisionNeeded],
+          ["review_cadence", payload.reviewCadence],
+          ["reply_owner", payload.replyOwner]
+        ];
+        const mappedResponseRows = [
+          [
+            "sheet",
+            "source_row",
+            "section",
+            "buyer_question",
+            "mapped_answer_type",
+            "answer_direction",
+            "workflow",
+            "primary_vendor",
+            "supporting_vendors",
+            "customer_scope",
+            "proof_links",
+            "reply_owner"
+          ],
+          ...payload.customQuestionRows.map((row) => [
+            row.sourceSheet || "",
+            row.sourceRow || "",
+            row.section || "",
+            row.question,
+            row.label,
+            row.answer,
+            payload.workflow,
+            payload.primaryVendor,
+            payload.supportingVendors,
+            payload.customerScope,
+            payload.proofLinks,
+            payload.replyOwner
+          ])
+        ];
+        const questionMatrixRows = [
+          ["number", "buyer_question", "answer_direction"],
+          ...payload.questionMatrix.map((row) => [row.number, row.question, row.answer])
+        ];
+
+        window.XLSX.utils.book_append_sheet(
+          workbook,
+          window.XLSX.utils.aoa_to_sheet(summaryRows),
+          "Summary"
+        );
+        window.XLSX.utils.book_append_sheet(
+          workbook,
+          window.XLSX.utils.aoa_to_sheet(mappedResponseRows),
+          "Mapped Responses"
+        );
+        window.XLSX.utils.book_append_sheet(
+          workbook,
+          window.XLSX.utils.aoa_to_sheet(questionMatrixRows),
+          "Question Matrix"
+        );
+
+        window.XLSX.writeFile(workbook, buildResponseWorkbookName(payload));
+        builderStatus.textContent = payload.customQuestionRows.length
+          ? "Response workbook downloaded with summary, mapped questionnaire rows, and question matrix."
+          : "Response workbook downloaded with summary and question matrix. Add pasted or imported rows to populate the mapped-response sheet.";
       }
 
       function parseQuestionList(rawText) {
@@ -2875,6 +2963,9 @@
           [header, ...rows].map((row) => row.map(csvCell).join(",")).join("\n")
         );
         builderStatus.textContent = "Pasted-question response pack downloaded as CSV.";
+      });
+      downloadResponseWorkbookButton.addEventListener("click", () => {
+        downloadResponseWorkbook(buildAnswerPayload());
       });
       downloadQuestionMatrixButton.addEventListener("click", () => {
         const payload = buildAnswerPayload();
