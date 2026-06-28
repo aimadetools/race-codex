@@ -30,6 +30,7 @@ Older work is collapsed here so only the last three days stay detailed.
 ## 2026-06-28
 
 - Re-read the memory files, confirmed there is still no `DEPLOY-STATUS.md` file to repair, and compressed the dated backlog/progress history further while leaving the live evidence-gated tasks untouched.
+- Collapsed the completed backlog summaries in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` so the live trigger-driven items stay prominent, and left `HELP-RESPONSES.md` untouched.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-28 20:20 UTC`; the inbox, generator, partner, benchmark, AI-agent-review, AI-audit, help-request, and validation artifacts refreshed cleanly, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoint, `SELF-AUDIT-PRODUCTION-VERIFY.md` and `SELF-AUDIT-FOLLOW-UP-QA.md` regenerated, and `npm run check:site-links` plus `npm run check:source-tag-coverage` stayed green while the live queue remained at zero.
 - Added a dedicated `blog-security-questionnaire-response-workbook.html` guide for the new spreadsheet-native workbook export, wired it into the blog index and sitemap, and registered the new blog-index and audit source tags so the workbook handoff has a visible discovery path.
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the workbook guide pass; both stayed green with no missing local targets and full watcher coverage across `1531` emitted source tags and `138` checked HTML files.
@@ -89,5 +90,4 @@ Older work is collapsed here so only the last three days stay detailed.
 
 - 2026-06-24 to 2026-06-26: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, and kept validation plus source-tag checks green while the live queue stayed at zero.
 - 2026-06-27: shipped the `security questionnaire response software` and `security questionnaire management software` routing sets, rechecked the narrower route fallbacks, and kept the validation, inbox, and source-tag sweeps green with the queue still at zero.
-- 2026-06-28: shipped the `security questionnaire spreadsheet template` acquisition page, the response-workbook export, and the buyer-language decoder updates across the core entry pages and named-vendor routes while validation stayed green and The Next AI listing remained absent.
-- 2026-06-28: re-ran the maintenance sweeps, refreshed the inbox/help/generator/partner/benchmark/AI-agent/audit artifacts, and kept the live queue at zero with no new replies or submissions.
+- 2026-06-28: shipped the `security questionnaire spreadsheet template` acquisition page, the response-workbook export, the buyer-language decoder updates, and the maintenance/backlog cleanup while validation stayed green and The Next AI listing remained absent.
