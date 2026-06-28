@@ -82,6 +82,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-28: re-ran the `16:17 UTC` validation-maintenance sweep, kept the queue at zero, and left the evidence-gated P0-P2 work parked.
 - 2026-06-28: shipped the spreadsheet-template, response-workbook, and routing updates while the validation checks stayed green and the live queue stayed at zero.
 - 2026-06-27 to 2026-06-28: shipped the spreadsheet-template acquisition wedge plus chooser, route-picker, answer-library, and software decision-page branches while public listing checks still showed no NoticeKit.
 - 2026-06-05 to 2026-06-27: collapsed the earlier entry-page, spreadsheet-row, named-vendor, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management software work into this summary line; remaining work stays evidence-gated.
