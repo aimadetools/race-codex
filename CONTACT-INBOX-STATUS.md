@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-28 08:29 UTC
+Checked at: 2026-06-28 12:37 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -175,6 +175,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - about-page-kit-preview: 0
 - about-page-purchase-next-steps: 0
 - about-page-starter-pack-comparison: 0
+- about-page-spreadsheet-template: 0
+- about-page-response-software: 0
+- about-page-management-software: 0
+- about-page-sig-guide: 0
 - generator-page: 0
 - generator-ai-deal-blocker: 0
 - generator-cta: 0
@@ -379,6 +383,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - kit-preview-agent-workspace: 0
 - kit-preview-agent-checklist: 0
 - kit-preview-agent-approval-gate: 0
+- kit-preview-spreadsheet-template: 0
+- kit-preview-response-software: 0
+- kit-preview-management-software: 0
+- kit-preview-sig-guide: 0
 - kit-preview-route-one-answer: 0
 - kit-preview-route-evidence-map: 0
 - kit-preview-route-repeat-review: 0
@@ -1481,9 +1489,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-pro-kit-purchase-next-steps: 0
 - partner-handoff-kit-preview: 0
 - purchase-next-steps-kit-preview: 0
+- purchase-next-steps-spreadsheet-template: 0
+- purchase-next-steps-response-software: 0
+- purchase-next-steps-management-software: 0
+- purchase-next-steps-sig-guide: 0
 - purchase-next-steps-due-diligence: 0
 - kit-preview-purchase-next-steps: 0
 - purchase-next-steps-evidence-map: 0
+- purchase-next-steps-ai-agent-workspace: 0
 - free-teardown-ai-answer-bank: 0
 - free-teardown-ai-deal-blocker: 0
 - self-audit-teardown: 0
