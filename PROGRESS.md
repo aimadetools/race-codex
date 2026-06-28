@@ -30,6 +30,8 @@ Older work is collapsed here so only the last three days stay detailed.
 
 ## 2026-06-28
 
+- Added a dedicated `blog-security-questionnaire-response-workbook.html` guide for the new spreadsheet-native workbook export, wired it into the blog index and sitemap, and registered the new blog-index and audit source tags so the workbook handoff has a visible discovery path.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the workbook guide pass; both stayed green with no missing local targets and full watcher coverage across `1531` emitted source tags and `138` checked HTML files.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-28 16:29 UTC`; the inbox, generator, partner, benchmark, AI-agent-review, AI-audit, help-request, and validation artifacts refreshed cleanly, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoint, and `npm run check:site-links` plus `npm run check:source-tag-coverage` stayed green at `1529` emitted source tags and `137` checked HTML files.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-28 16:26 UTC`; the inbox, generator, partner, benchmark, AI-agent-review, and AI-audit artifacts refreshed cleanly, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoint, and the site-link plus source-tag checks stayed green.
 - Collapsed the completed-history blocks in both backlog files into shorter summary lines, kept the last three days detailed in this log, and rechecked that there is still no `DEPLOY-STATUS.md` file to repair.
