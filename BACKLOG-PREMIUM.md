@@ -82,6 +82,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-06-28: added the spreadsheet-template branch to the free answer builder, the broader automation and SIG / CAIQ / VSAQ guides, and the major competitor-alternative cluster so spreadsheet-led buyers can preserve worksheet rows before they widen into builder-only or software-only decisions.
 - 2026-06-28: upgraded the free AI questionnaire builder with a spreadsheet-native `.xlsx` response workbook export so mapped questionnaire rows, summary fields, and the 20-question matrix can move back into spreadsheet-led review flows without extra file stitching.
 - 2026-06-28: re-ran the local link/source-tag checks and the 08:15 UTC validation-maintenance pass; all stayed green, no deploy-status file existed to fix, and the live queue stayed at zero.
 - 2026-06-27 to 2026-06-28: shipped the spreadsheet-template acquisition wedge plus chooser, route-picker, answer-library, and software decision-page branches; validation stayed green and the public The Next AI check still showed no NoticeKit listing.
