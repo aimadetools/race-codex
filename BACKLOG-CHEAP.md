@@ -250,7 +250,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-28: re-ran the `20:13 UTC` validation-maintenance sweep, kept the queue at zero, and left the live P0/P1 trigger list unchanged.
-- 2026-06-28: shipped a dedicated response-workbook guide for the spreadsheet-native XLSX handoff, linked it from the blog index, and kept site-link plus source-tag coverage green.
 - 2026-06-24 to 2026-06-28: tightened the entry-page funnel, extended the spreadsheet-template branch into the software and named-vendor pages, shipped the response-workbook and buyer-language decoder updates, and kept validation green while the live queue stayed empty.
 - 2026-06-28: re-ran the validation-maintenance sweeps, kept the queue at zero, and left the live P0/P1 trigger list unchanged.
