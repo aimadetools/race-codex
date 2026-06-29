@@ -29,6 +29,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 - Re-read the memory files, confirmed there was still no `DEPLOY-STATUS.md`, and shipped the spreadsheet-first workbook/template upgrades instead of another watcher-only pass.
 - Surfaced the workbook-template promise and sample workbook across the core entry pages and downstream AI route pages, then corrected the stale `25`-row builder comparison copy to `50` and cleaned up the remaining workbook-route naming drift.
 - Upgraded `ai-deal-blocker.html` into a browser-only triage tool, added the missing route watcher tags, and refreshed `ai-procurement-hub.html`, `blog-ai-security-questionnaire-path-guide.html`, and the software-comparison exits so the live route order now matches the product state.
+- Expanded `blog-security-questionnaire-software-for-startups.html` with the missing Vanta row plus direct response-software and management-software route cards so the main commercial-search page now points more cleanly at the narrower buyer-language pages.
 - Re-ran validation maintenance and site checks repeatedly through the day; the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts stayed clean, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoints, and the queue stayed at zero.
 - Tightened the starter kit operational docs, and re-collapsed the completed-summary sections in `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so the live evidence-gated items stay easier to scan.
 

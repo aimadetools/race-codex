@@ -256,3 +256,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-06-24 to 2026-06-29: kept validation maintenance aligned, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, response/management, and workbook-route cleanup while the queue stayed at zero and site-link/source-tag checks stayed green.
+- 2026-06-29: expanded the main software-comparison page with the missing Vanta row and direct response-software / management-software route cards so the commercial-search entry points now push more cleanly into the narrower buyer-language pages.
