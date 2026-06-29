@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-29 16:11 UTC
+Checked at: 2026-06-29 20:06 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1405,6 +1405,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - spreadsheet-template-questionnaire-software: 0
 - spreadsheet-template-answer-bank: 0
 - spreadsheet-template-pricing: 0
+- questionnaire-software-vanta-alternative: 0
+- questionnaire-software-responsive-alternative: 0
+- questionnaire-software-loopio-alternative: 0
 - questionnaire-software-hypercomply-alternative: 0
 - questionnaire-software-conveyor-alternative: 0
 - questionnaire-software-drata-aiqa-alternative: 0
