@@ -82,6 +82,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-29: reran validation maintenance at `16:11 UTC`, refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, and kept the live queue at zero while the site-link and source-tag checks stayed green.
-- 2026-06-29: reran validation maintenance, refreshed the help-request, inbox, generator, partner, benchmark, AI-agent, audit, self-audit, and validation artifacts, upgraded `ai-deal-blocker.html` into a local triage tool with source-tagged branch recommendations, and kept the live queue at zero.
+- 2026-06-29: kept validation maintenance, the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit refreshes, and the deal-blocker triage updates aligned while site-link and source-tag checks stayed green and the live queue stayed at zero.
 - 2026-06-05 to 2026-06-29: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and outbound-batch work while shipping the spreadsheet-template wedge, workbook template, response-workbook export, named-vendor/software routing, and validation maintenance passes.

@@ -255,6 +255,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-29: reran validation maintenance at `16:11 UTC`, refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, and kept the live queue at zero while the site-link and source-tag checks stayed green.
-- 2026-06-24 to 2026-06-28: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management work while shipping the spreadsheet-template and software-routing updates and keeping validation green.
-- 2026-06-28 to 2026-06-29: kept the self-audit follow-up copy and ops inbox feedback draft aligned, surfaced workbook proof across the AI route pages, finished the workbook-route cleanup, and kept validation refreshes green with no replies or interviews.
+- 2026-06-29: kept validation maintenance aligned, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and left the live queue at zero while site-link and source-tag checks stayed green.
+- 2026-06-24 to 2026-06-29: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, response/management, and workbook-route cleanup work while keeping validation green and the queue at zero.
