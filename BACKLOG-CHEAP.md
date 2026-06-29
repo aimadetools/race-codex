@@ -252,9 +252,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-29: reran validation maintenance, refreshed the inbox/help/generator/partner/benchmark/AI-agent/audit artifacts, and confirmed the live queue still sits at zero with no new replies or interviews.
 - 2026-06-24 to 2026-06-28: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management work while shipping the spreadsheet-template and software-routing updates and keeping validation green with an empty queue.
-- 2026-06-28: kept the self-audit follow-up copy and ops inbox feedback draft aligned so the on-page form stays preferred and email remains fallback.
-- 2026-06-29: surfaced the spreadsheet workbook-template proof across the homepage, pricing, free-tools, start-here, chooser, AI procurement hub, post-purchase, kit-preview, blog-index, and downstream AI route pages so the top CTA copy now matches the shipped workbook-plus-CSV route, and corrected the stale `25`-row builder comparison claim to the live `50`-row limit.
-- 2026-06-29: finished the remaining workbook-route label cleanup so the chooser, builder, comparison, named-vendor, and software/alternative pages now consistently say `workbook template guide` while keeping the existing slug and source tags intact, then turned the response-workbook guide into a real proof surface with a downloadable sample `.xlsx` workbook plus entry links from the spreadsheet-first core pages.
-- 2026-06-29: cleaned up the remaining chooser metadata and card labels so the route-chooser page now matches the workbook-template wording used by the rest of the site.
+- 2026-06-28 to 2026-06-29: kept the self-audit follow-up copy and ops inbox feedback draft aligned, surfaced the workbook-template proof across the homepage and downstream AI route pages, finished the workbook-route naming cleanup, and kept validation green with no replies or interviews.

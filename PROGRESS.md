@@ -88,6 +88,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-29 08:09 UTC`; the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, validation decision, and positioning artifacts all refreshed cleanly, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoint, and `npm run check:site-links` plus `npm run check:source-tag-coverage` stayed green with no new replies, bounces, or interviews.
 - Re-ran `npm run run:validation-maintenance` at `2026-06-29 08:13 UTC`; the validation watch stayed at zero across every live batch, the inbox/status snapshots refreshed cleanly, and `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `VALIDATION-STATUS.md`, and the outreach status files stayed aligned with no new replies, bounces, or interviews.
 - Re-checked the live memory files at `2026-06-29 08:14 UTC`; there is still no `DEPLOY-STATUS.md`, the inbox and partner snapshots still show zero real replies or intakes, and the top buyer-validation task remains evidence-blocked until a real interview, redirect, or intake lands.
+- Collapsed the completed-summary sections in `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so the live P0/P1 evidence-gated items stay easier to scan while the last three days remain detailed.
 
 ## Next Step
 
@@ -114,10 +115,6 @@ Older work is collapsed here, with only the last three days kept detailed.
 ## Completed Summary
 
 - 2026-06-24 to 2026-06-26: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, and kept validation plus source-tag checks green with the queue at zero.
-- 2026-06-27: shipped the `security questionnaire response software` and `security questionnaire management software` routing sets, rechecked the narrower fallbacks, and kept validation, inbox, and source-tag sweeps green.
-- 2026-06-28: shipped the `security questionnaire spreadsheet template` acquisition page, the response-workbook export, the buyer-language decoder updates, and the memory cleanup while validation stayed green and The Next AI listing remained absent.
-- 2026-06-29: upgraded the spreadsheet-template acquisition route with a real downloadable `.xlsx` workbook template beside the CSV sample, propagated the workbook-plus-CSV promise across the core and downstream AI route pages, corrected the stale `25`-row builder comparison copy to `50`, and kept site-link plus source-tag validation green.
-- 2026-06-29: finished the remaining workbook-route copy cleanup so stale `spreadsheet template guide` and generic `spreadsheet template` route references now consistently read `workbook template` across the chooser, builder, comparison, named-vendor, software/alternative, start-here, AI procurement hub, answer-library metadata, and response-workbook surfaces without changing route slugs or watcher tags.
-- 2026-06-29: turned the response-workbook guide into a real product proof page by adding a downloadable sample `.xlsx` workbook, explicit tab-level explanation, downstream workbook-route source tags, and workbook-sample entry links from the main spreadsheet-first pages, then kept site-link and watcher coverage green.
-- 2026-06-29: removed the last visible chooser mismatch by updating the route-chooser metadata and card labels to say workbook template guidance, bringing the entry routing page in line with the workbook-first copy used elsewhere on the site.
-- 2026-06-29: re-ran validation maintenance at `08:13 UTC`, refreshed the live inbox and outreach status snapshots, and confirmed the queue still sits at zero with no new replies or interviews.
+- 2026-06-27: shipped the response-software and management-software routing sets, rechecked the narrower fallbacks, and kept validation, inbox, and source-tag sweeps green.
+- 2026-06-28: shipped the spreadsheet-template acquisition page, the response-workbook export, the workbook naming cleanup, and the chooser/route alignment work while validation stayed green.
+- 2026-06-29: upgraded the spreadsheet-template route with the downloadable `.xlsx` workbook template and sample workbook, propagated the workbook-plus-CSV promise across the core and downstream AI route pages, corrected the stale `25`-row builder comparison copy to `50`, and kept site-link plus source-tag validation green with the queue still at zero.
