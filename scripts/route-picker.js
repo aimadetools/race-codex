@@ -141,7 +141,7 @@
       secondaryLabel: "Build answer + bundle",
     },
     spreadsheetRows: {
-      title: "Start with the spreadsheet template guide.",
+      title: "Start with the workbook template guide.",
       summary:
         "You already have questionnaire rows or a portal export, so start on the spreadsheet-first guide and then branch into the builder, answer bank, or broader software route without losing the row-shaped context.",
       bullets: [
@@ -150,7 +150,7 @@
         "Lets you preserve row-shaped context before the thread gets retyped elsewhere",
       ],
       primaryHref: "blog-security-questionnaire-spreadsheet-template.html",
-      primaryLabel: "Open spreadsheet template guide",
+      primaryLabel: "Open workbook template guide",
       secondaryHref: "ai-security-questionnaire-answer-builder.html",
       secondaryLabel: "Build answer + bundle",
     },

@@ -83,3 +83,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-06-05 to 2026-06-29: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and outbound-batch work while shipping the spreadsheet-template wedge, the browser-side workbook template download, the workbook-proof surfacing across core plus downstream AI route pages, the corrected 50-row builder comparison copy, the response-workbook export, named-vendor/software routing, and validation maintenance passes.
+- 2026-06-29: closed the remaining workbook-route naming inconsistency across the chooser, builder, comparison, named-vendor, and software/alternative pages so the copy now matches the shipped `.xlsx` workbook-plus-CSV route without changing the existing route slug or watcher tags.
