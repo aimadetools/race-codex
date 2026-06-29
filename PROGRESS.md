@@ -28,6 +28,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 
 - Re-read `PROGRESS.md`, both backlog files, and the live status notes, confirmed there is still no `DEPLOY-STATUS.md`, and kept the highest-priority work parked on blocked real-interview validation while cleaning up the memory files.
 - Re-read the memory files, confirmed there was still no `DEPLOY-STATUS.md`, and shipped the spreadsheet-first workbook/template upgrades instead of another watcher-only pass.
+- Re-read the memory files again, confirmed no deployment-status file exists, and collapsed the completed backlog summaries into shorter one-line records while keeping the last three days detailed.
 - Collapsed the backlog completed-summary tails into shorter lines and left the 2026-06-27 through 2026-06-29 notes detailed while older history stays in the milestone summary.
 - Surfaced the workbook-template promise and sample workbook across the core entry pages and downstream AI route pages, then corrected the stale `25`-row builder comparison copy to `50` and cleaned up the remaining workbook-route naming drift.
 - Upgraded `ai-deal-blocker.html` into a browser-only triage tool, added the missing route watcher tags, and refreshed `ai-procurement-hub.html`, `blog-ai-security-questionnaire-path-guide.html`, and the software-comparison exits so the live route order now matches the product state.
