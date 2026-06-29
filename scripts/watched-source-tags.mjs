@@ -404,6 +404,7 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-procurement-hub-framework-map",
   "ai-procurement-hub-free-tools",
   "ai-procurement-hub-spreadsheet-template",
+  "ai-procurement-hub-response-workbook",
   "ai-due-diligence-template-packet-builder",
   "ai-due-diligence-scorecard-packet-builder",
   "ai-due-diligence-comparison-packet-builder",
