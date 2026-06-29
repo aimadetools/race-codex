@@ -36,6 +36,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 - Tightened the starter kit operational docs, and re-collapsed the completed-summary sections in `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so the live evidence-gated items stay easier to scan.
 - Re-ran validation maintenance after the memory cleanup; source-tag coverage and local-link sweeps stayed green, and the live watch checkpoint references were brought forward to the current 20:25 UTC snapshot.
 - Re-ran validation maintenance at `20:25 UTC`; the watch, contact, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts stayed green again, `COMMUNITY-FEEDBACK.md` picked up another deduplicated no-reply checkpoint, and the live watch snapshot advanced to the current timestamp.
+- Surfaced the due-diligence route-comparison CTA on the core homepage, pricing, free-tools, and AI-procurement surfaces so buyers can now compare the lighter template against the broader diligence paths before jumping into the packet pages.
 
 ## Next Step
 
