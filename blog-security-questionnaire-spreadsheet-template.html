@@ -4,23 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Security Questionnaire Spreadsheet Template for SaaS Teams | NoticeKit</title>
-    <meta name="description" content="Download a practical security questionnaire spreadsheet template for SaaS teams, then turn real buyer rows into a local answer pack, reviewer note, and proof-ready handoff without rebuilding the same sheet by hand.">
+    <meta name="description" content="Download a practical security questionnaire spreadsheet template for SaaS teams in CSV or workbook form, then turn real buyer rows into a local answer pack, reviewer note, and proof-ready handoff without rebuilding the same sheet by hand.">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="NoticeKit">
     <meta property="og:url" content="https://noticekit.tech/blog-security-questionnaire-spreadsheet-template.html">
     <meta property="og:title" content="Security Questionnaire Spreadsheet Template for SaaS Teams | NoticeKit">
-    <meta property="og:description" content="Use the downloadable spreadsheet template when the buyer review still lives in rows, then branch into the builder, answer bank, or software guide only when the workflow actually needs more structure.">
+    <meta property="og:description" content="Use the downloadable spreadsheet template in CSV or workbook form when the buyer review still lives in rows, then branch into the builder, answer bank, or software guide only when the workflow actually needs more structure.">
     <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit security questionnaire spreadsheet template">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Security Questionnaire Spreadsheet Template for SaaS Teams | NoticeKit">
-    <meta name="twitter:description" content="Download a startup-fit security questionnaire spreadsheet template, then turn real buyer rows into a cleaner local answer pack without losing row references, proof notes, or reviewer handoff context.">
+    <meta name="twitter:description" content="Download a startup-fit security questionnaire spreadsheet template in CSV or workbook form, then turn real buyer rows into a cleaner local answer pack without losing row references, proof notes, or reviewer handoff context.">
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/blog-security-questionnaire-spreadsheet-template.html">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -28,7 +29,7 @@
           {
             "@type": "Article",
             "headline": "Security Questionnaire Spreadsheet Template for SaaS Teams",
-            "description": "A practical guide and downloadable spreadsheet template for SaaS teams answering buyer security questionnaires.",
+            "description": "A practical guide and downloadable spreadsheet template in CSV and workbook form for SaaS teams answering buyer security questionnaires.",
             "author": {
               "@type": "Organization",
               "name": "NoticeKit"
@@ -39,7 +40,7 @@
               "url": "https://noticekit.tech/"
             },
             "datePublished": "2026-06-28",
-            "dateModified": "2026-06-28",
+            "dateModified": "2026-06-29",
             "mainEntityOfPage": "https://noticekit.tech/blog-security-questionnaire-spreadsheet-template.html"
           },
           {
@@ -94,20 +95,37 @@
           <header class="article-header">
             <span class="eyebrow">Spreadsheet-first route</span>
             <h1>Use a security questionnaire spreadsheet template when the buyer review still lives in rows.</h1>
-            <p>Many startup teams do not need a broad trust workflow on day one. They need a spreadsheet that keeps the buyer question visible, shows the answer direction, preserves the named vendor and workflow under review, and makes the next reviewer faster instead of slower. This page gives you a concrete CSV template, then shows when to stay in the spreadsheet, when to open the builder, and when the review has grown large enough to justify a heavier route.</p>
+            <p>Many startup teams do not need a broad trust workflow on day one. They need a spreadsheet that keeps the buyer question visible, shows the answer direction, preserves the named vendor and workflow under review, and makes the next reviewer faster instead of slower. This page gives you both a concrete CSV template and a spreadsheet-native workbook template, then shows when to stay in the spreadsheet, when to open the builder, and when the review has grown large enough to justify a heavier route.</p>
             <div class="hero-actions">
-              <a class="button" href="noticekit-ai-security-questionnaire-question-matrix-sample.csv" download>Download spreadsheet template</a>
+              <button class="button" id="download-template-workbook" type="button">Download workbook template</button>
+              <a class="button secondary" href="noticekit-ai-security-questionnaire-question-matrix-sample.csv" download>Download CSV template</a>
               <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=spreadsheet-template-builder">Build answer + bundle</a>
               <a class="button secondary" href="ai-security-questionnaire-starter-bundle-sample.html?source=spreadsheet-template-bundle-sample">Open sample bundle</a>
               <a class="button secondary" href="blog-ai-security-questionnaire-spreadsheet-handoff.html?source=spreadsheet-template-handoff-guide">Open handoff guide</a>
               <a class="button secondary" href="blog-security-questionnaire-software-for-startups.html?source=spreadsheet-template-questionnaire-software">Compare software</a>
             </div>
+            <p class="fine-print" id="template-download-status" aria-live="polite">Choose the workbook when the handoff needs sheets for rows, column guidance, and route notes. Choose the CSV when the team only needs a fast flat file.</p>
           </header>
 
           <div class="notice-band">
             <strong>Receiver-side workflow, not a buyer template pack.</strong>
             <p>This spreadsheet template is for the SaaS team answering the buyer questionnaire, not for procurement teams sending one. The goal is to reduce row-by-row rework, keep proof and owner context attached to the answer direction, and branch into a fuller artifact only when the live review actually needs it.</p>
           </div>
+
+          <section class="section">
+            <div class="grid-2">
+              <article class="card">
+                <h3>Download the workbook when the handoff still needs spreadsheet structure</h3>
+                <p>The workbook template adds a dedicated row sheet, a column guide, and route notes in one `.xlsx` file so another reviewer can open it later without guessing how the rows were meant to be used.</p>
+                <button class="button secondary" id="download-template-workbook-card" type="button">Download workbook template</button>
+              </article>
+              <article class="card">
+                <h3>Keep the CSV when the team only needs a flat export</h3>
+                <p>The CSV template is still the fastest route when you only need sortable rows and you already know who owns the next draft.</p>
+                <a class="button secondary" href="noticekit-ai-security-questionnaire-question-matrix-sample.csv" download>Download CSV template</a>
+              </article>
+            </div>
+          </section>
 
           <section class="section">
             <div class="section-head">
@@ -184,8 +202,11 @@
             <div class="grid-2">
               <article class="card">
                 <h3>1. Download the template and map the real rows</h3>
-                <p>Keep the exact buyer row text, tie it to the specific workflow, and set the answer direction before you draft customer-facing prose.</p>
-                <a class="button secondary" href="noticekit-ai-security-questionnaire-question-matrix-sample.csv" download>Download template CSV</a>
+                <p>Keep the exact buyer row text, tie it to the specific workflow, and set the answer direction before you draft customer-facing prose. Use the workbook when the reviewer needs more structure than a flat file, or stay with the CSV if speed matters more than sheet-level guidance.</p>
+                <div class="hero-actions" style="margin-top:12px;">
+                  <button class="button secondary" id="download-template-workbook-flow" type="button">Download workbook</button>
+                  <a class="button secondary" href="noticekit-ai-security-questionnaire-question-matrix-sample.csv" download>Download CSV</a>
+                </div>
               </article>
               <article class="card">
                 <h3>2. Branch to the smallest next artifact that fits</h3>
@@ -204,7 +225,8 @@
               <strong>Download first if the spreadsheet is still the real blocker.</strong>
               <p>Do not force a platform decision before the team has proved it can keep the exact buyer row, answer direction, vendor scope, and reviewer lane stable. Start with the template, then move into the builder or answer bank only when the work has clearly outgrown a live spreadsheet.</p>
               <div class="hero-actions" style="margin-top:12px;">
-                <a class="button" href="noticekit-ai-security-questionnaire-question-matrix-sample.csv" download>Download spreadsheet template</a>
+                <button class="button" id="download-template-workbook-bottom" type="button">Download workbook template</button>
+                <a class="button secondary" href="noticekit-ai-security-questionnaire-question-matrix-sample.csv" download>Download CSV template</a>
                 <a class="button secondary" href="ai-security-questionnaire-starter-bundle-sample.html?source=spreadsheet-template-bundle-sample">Inspect sample bundle</a>
                 <a class="button secondary" href="pricing.html?source=spreadsheet-template-pricing">See paid paths</a>
               </div>
@@ -213,5 +235,105 @@
         </article>
       </main>
     </div>
+    <script>
+      (function () {
+        const workbookButtons = [
+          document.querySelector("#download-template-workbook"),
+          document.querySelector("#download-template-workbook-card"),
+          document.querySelector("#download-template-workbook-flow"),
+          document.querySelector("#download-template-workbook-bottom")
+        ].filter(Boolean);
+        const status = document.querySelector("#template-download-status");
+
+        function buildWorkbookData() {
+          const rowHeaders = [
+            "question_number",
+            "buyer_question",
+            "answer_direction",
+            "workflow",
+            "primary_vendor",
+            "reviewer_lane",
+            "answer_shape",
+            "proof_link",
+            "owner",
+            "next_step"
+          ];
+          const sampleRows = [
+            ["0", "What exact buyer question are we answering?", "Restate the live buyer prompt plus the safest answer shape.", "Customer support drafting assistant for support agents", "OpenAI", "Procurement / buyer review", "Proof-first answer", "Link vendor terms or policy note", "Founder", "Confirm buyer wording"],
+            ["1", "Which AI vendors are in scope?", "Name the primary model provider and any supporting vendors tied to this workflow only.", "Customer support drafting assistant for support agents", "OpenAI", "Security review", "Operational answer", "Link architecture or vendor list", "Security lead", "Confirm production scope"],
+            ["2", "What data categories are involved?", "Call out the real prompt, ticket, attachment, or identifier scope instead of saying only customer data.", "Customer support drafting assistant for support agents", "OpenAI", "Privacy review", "Escalation-aware answer", "Link retention note or DPA excerpt", "Privacy owner", "Check contract branch"]
+          ];
+          const blankRows = Array.from({ length: 15 }, () => Array(rowHeaders.length).fill(""));
+          const rowsSheet = [rowHeaders, ...sampleRows, ...blankRows];
+
+          const columnGuide = [
+            ["column", "why it matters", "example"],
+            ["buyer_question", "Preserves the exact buyer wording before anyone rewrites it.", "Does your AI workflow use customer prompts for training?"],
+            ["answer_direction", "Captures the safe answer shape before prose gets polished.", "State the current stance, owner, and proof source."],
+            ["workflow", "Keeps the answer tied to the exact path under review.", "Customer support drafting assistant for support agents"],
+            ["primary_vendor", "Names the AI provider tied to the workflow.", "OpenAI"],
+            ["reviewer_lane", "Shows who the row is really for.", "Procurement / buyer review"],
+            ["answer_shape", "Flags whether the row is proof-first, operational, or escalation-aware.", "Proof-first answer"],
+            ["proof_link", "Keeps the reference with the row instead of in side chat.", "Link to policy, contract note, or vendor page"],
+            ["owner", "Makes the next handoff explicit.", "Founder"],
+            ["next_step", "Records what still has to happen before reuse.", "Confirm contract branch"]
+          ];
+
+          const routeGuide = [
+            ["signal", "next route", "why"],
+            ["One live buyer thread is blocked on a sendable answer", "Answer builder", "Turn the mapped rows into an answer block, reviewer note, and workbook export now."],
+            ["The same wording keeps coming back across deals", "Answer bank", "Promote one-off row cleanup into reusable approved wording."],
+            ["The team is shopping assignments, approvals, and queue ownership", "Management software guide", "The blocker is workflow administration, not one spreadsheet."],
+            ["The team is shopping approved-answer libraries and SME routing", "Response software guide", "The blocker is response management, not spreadsheet cleanup."],
+            ["The buyer only sent a raw export and the internal owner is still unclear", "Stay in workbook template", "Preserve the row wording and route notes before branching wider."]
+          ];
+
+          return { rowsSheet, columnGuide, routeGuide };
+        }
+
+        function autosizeColumns(rows) {
+          return rows[0].map((_, columnIndex) => {
+            const maxLength = rows.reduce((length, row) => {
+              const value = row[columnIndex] == null ? "" : String(row[columnIndex]);
+              return Math.max(length, value.length);
+            }, 12);
+            return { wch: Math.min(Math.max(maxLength + 2, 14), 48) };
+          });
+        }
+
+        function downloadWorkbook() {
+          if (!window.XLSX) {
+            if (status) {
+              status.textContent = "Workbook download is unavailable in this browser. Use the CSV template instead.";
+            }
+            return;
+          }
+
+          const workbook = XLSX.utils.book_new();
+          const { rowsSheet, columnGuide, routeGuide } = buildWorkbookData();
+          const questionnaireSheet = XLSX.utils.aoa_to_sheet(rowsSheet);
+          const guideSheet = XLSX.utils.aoa_to_sheet(columnGuide);
+          const routeSheet = XLSX.utils.aoa_to_sheet(routeGuide);
+
+          questionnaireSheet["!cols"] = autosizeColumns(rowsSheet);
+          guideSheet["!cols"] = autosizeColumns(columnGuide);
+          routeSheet["!cols"] = autosizeColumns(routeGuide);
+
+          XLSX.utils.book_append_sheet(workbook, questionnaireSheet, "Questionnaire Rows");
+          XLSX.utils.book_append_sheet(workbook, guideSheet, "Column Guide");
+          XLSX.utils.book_append_sheet(workbook, routeSheet, "Route Guide");
+
+          XLSX.writeFile(workbook, "noticekit-security-questionnaire-template-workbook.xlsx");
+
+          if (status) {
+            status.textContent = "Workbook template downloaded with questionnaire rows, a column guide, and route notes.";
+          }
+        }
+
+        workbookButtons.forEach((button) => {
+          button.addEventListener("click", downloadWorkbook);
+        });
+      }());
+    </script>
   </body>
 </html>

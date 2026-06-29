@@ -82,4 +82,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-28: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and outbound-batch work while shipping the spreadsheet-template wedge, response-workbook export, named-vendor/software routing, and validation maintenance passes.
+- 2026-06-05 to 2026-06-29: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and outbound-batch work while shipping the spreadsheet-template wedge, the browser-side workbook template download, the response-workbook export, named-vendor/software routing, and validation maintenance passes.
