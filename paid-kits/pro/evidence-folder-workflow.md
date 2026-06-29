@@ -24,6 +24,8 @@ Example:
 - `06-objection-log.md`: objections, escalations, resolutions, and closeout date.
 - `07-closeout-note.md`: archive summary with final status, close date, and proof locations.
 
+Keep the file names in this order so anyone opening the folder can follow the workflow from change summary through archive.
+
 ## Change Summary Template
 
 ```markdown
@@ -77,3 +79,7 @@ Decision:
 - [ ] Evidence log status is updated.
 - [ ] Owner and close date are recorded.
 - [ ] Closeout note is saved with links to the archived proof set.
+
+## Closeout Standard
+
+Treat the folder as closed only when the change summary, review approval, customer notice, recipient record, public page proof, objection log, and closeout note all point to the same change ID and the objection window has either expired or been resolved.

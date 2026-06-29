@@ -2,6 +2,8 @@
 
 Use this note to give counsel the operational facts and open questions before relying on a customer notice.
 
+Populate this after the internal approval checklist is mostly complete so the handoff reflects the actual change record.
+
 ## Context
 
 Company:
@@ -25,6 +27,8 @@ Business reason for change:
 - Planned effective date:
 - Public subprocessor page URL:
 
+If a fact is unknown, write `unknown` and name the person who will confirm it.
+
 ## Notice Workflow
 
 - Proposed notice date:
@@ -35,12 +39,16 @@ Business reason for change:
 - Draft notice file:
 - Evidence folder:
 
+The notice dates and objection deadline should match the approval checklist and the tracker row for the same change ID.
+
 ## Internal Review Status
 
 - Product review:
 - Security review:
 - Privacy review:
 - Customer success or account owner review:
+
+Use `approved`, `pending`, or `blocked` so counsel can see the current gate without reading the full thread history.
 
 ## Questions For Counsel
 

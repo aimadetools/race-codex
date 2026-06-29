@@ -14,7 +14,7 @@ Starter is for one vendor change, one customer notice workflow, and one clean ev
 ## Suggested Order
 
 1. Fill out `subprocessor-list-template.csv` for the vendor change.
-2. Complete the internal approval checklist before sending notice.
+2. Complete `internal-approval-checklist.md` and `attorney-review-handoff-note.md` before sending notice.
 3. Pick the notice email variant that fits the customer relationship.
 4. Track notice date, objection deadline, owner, and status in the objection tracker.
 5. Save final notices, page screenshots, recipient evidence, and approvals in the evidence log.
