@@ -203,6 +203,7 @@ export const WATCHED_SOURCE_TAGS = [
   "free-tools-route-due-diligence",
   "free-tools-route-repeat-review",
   "free-tools-route-broader-handoff",
+  "ai-deal-blocker-nav-audit",
   "response-workbook-nav-audit",
   "route-chooser-answer-bank",
   "route-chooser-deal-blocker",
