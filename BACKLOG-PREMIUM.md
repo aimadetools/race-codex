@@ -82,4 +82,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-29: kept validation maintenance, inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit refreshes, and deal-blocker triage aligned while folding the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, outbound-batch, spreadsheet-template, workbook, response-workbook, and named-vendor/software routing work into one summary line; the 2026-06-29 `20:25 UTC` maintenance pass finished with the queue still at zero and the latest no-reply checkpoint deduplicated into `COMMUNITY-FEEDBACK.md`.
+- 2026-06-05 to 2026-06-29: kept validation maintenance, inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit refreshes, and deal-blocker triage aligned while folding the older entry-page through named-vendor/software routing work into one summary line; the 2026-06-29 `20:25 UTC` maintenance pass finished with the queue still at zero and the latest no-reply checkpoint deduplicated into `COMMUNITY-FEEDBACK.md`.

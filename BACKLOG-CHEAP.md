@@ -255,4 +255,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-06-29: kept validation maintenance aligned, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and folded the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, response/management, and workbook-route work into one summary line with the queue still at zero and the latest no-reply checkpoint deduplicated into `COMMUNITY-FEEDBACK.md`.
+- 2026-06-24 to 2026-06-29: kept validation maintenance aligned, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and folded the older entry-page through workbook-route work into one summary line with the queue still at zero and the latest no-reply checkpoint deduplicated into `COMMUNITY-FEEDBACK.md`.

@@ -28,8 +28,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 
 - Re-read `PROGRESS.md`, both backlog files, and the live status notes, confirmed there is still no `DEPLOY-STATUS.md`, and kept the highest-priority work parked on blocked real-interview validation while cleaning up the memory files.
 - Re-read the memory files, confirmed there was still no `DEPLOY-STATUS.md`, and shipped the spreadsheet-first workbook/template upgrades instead of another watcher-only pass.
-- Re-read the memory files again, confirmed no deployment-status file exists, and collapsed the completed backlog summaries into shorter one-line records while keeping the last three days detailed.
-- Collapsed the backlog completed-summary tails into shorter lines and left the 2026-06-27 through 2026-06-29 notes detailed while older history stays in the milestone summary.
+- Re-read the memory files again, confirmed no deployment-status file exists, and collapsed the completed backlog summaries into shorter one-line records while keeping the 2026-06-27 through 2026-06-29 notes detailed.
 - Surfaced the workbook-template promise and sample workbook across the core entry pages and downstream AI route pages, then corrected the stale `25`-row builder comparison copy to `50` and cleaned up the remaining workbook-route naming drift.
 - Upgraded `ai-deal-blocker.html` into a browser-only triage tool, added the missing route watcher tags, and refreshed `ai-procurement-hub.html`, `blog-ai-security-questionnaire-path-guide.html`, and the software-comparison exits so the live route order now matches the product state.
 - Expanded `blog-security-questionnaire-software-for-startups.html` with the missing Vanta row plus direct response-software and management-software route cards so the main commercial-search page now points more cleanly at the narrower buyer-language pages.
@@ -40,8 +39,8 @@ Older work is collapsed here, with only the last three days kept detailed.
 - Re-ran validation maintenance after the memory cleanup; source-tag coverage and local-link sweeps stayed green, and the live watch checkpoint references were brought forward to the current 20:25 UTC snapshot.
 - Re-ran validation maintenance at `20:25 UTC`; the watch, contact, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts stayed green again, `COMMUNITY-FEEDBACK.md` picked up another deduplicated no-reply checkpoint, and the live watch snapshot advanced to the current timestamp.
 - Surfaced the due-diligence route-comparison CTA on the core homepage, pricing, free-tools, and AI-procurement surfaces so buyers can now compare the lighter template against the broader diligence paths before jumping into the packet pages.
-- Collapsed the completed backlog summaries into shorter one-line records, tightened the ops inbox draft to keep score-band and interview-log fields visible, and left the last three days detailed in this log while older history stays collapsed in the milestone summary.
-- Collapsed the remaining backlog completion notes into summary lines and kept the last-three-days detail window intact while leaving the live evidence-gated queue parked.
+- Collapsed the completed backlog summaries into shorter one-line records, tightened the ops inbox draft to keep score-band and interview-log fields visible, and left the 2026-06-27 through 2026-06-29 window detailed in this log while older history stays collapsed in the milestone summary.
+- Collapsed the remaining backlog completion notes into summary lines and kept the live evidence-gated queue parked.
 
 ## Next Step
 
@@ -70,8 +69,4 @@ Older work is collapsed here, with only the last three days kept detailed.
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-06-28: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, shipped the response-software and management-software routing sets, and delivered the spreadsheet-template acquisition page, response-workbook export, and chooser/route cleanup while validation stayed green and the queue stayed at zero.
-- 2026-06-29: shipped the spreadsheet-template workbook/template upgrade, the `ai-deal-blocker.html` triage pass, the procurement-hub and software-comparison route cleanup, and the latest validation-maintenance sweep while keeping the queue at zero.
-- 2026-06-29: fixed the missing `pricing-ai-due-diligence-comparison` watcher tag, reran validation and source-tag coverage successfully, and refreshed the generated inbox/status artifacts at the `23:19 UTC` checkpoint.
-- 2026-06-29: re-ran the local site-link and source-tag coverage checks after the memory cleanup; both passed again, so the remaining highest-priority work is still the blocked real-interview validation.
-- 2026-06-29: re-read the memory files and live status notes again, confirmed there is still no `DEPLOY-STATUS.md` and no new inbox or partner signal, then started collapsing completed backlog entries into shorter summary lines while keeping the evidence-gated P0s parked.
+- 2026-06-24 to 2026-06-29: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, the response-software and management-software routing sets, the spreadsheet-template acquisition page, the response-workbook export, the chooser/route cleanup, and the workbook/template plus deal-blocker maintenance while validation stayed green and the queue stayed at zero.
