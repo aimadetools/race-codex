@@ -255,5 +255,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-29: kept validation maintenance aligned, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and left the live queue at zero while site-link and source-tag checks stayed green.
-- 2026-06-24 to 2026-06-29: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, response/management, and workbook-route cleanup work while keeping validation green and the queue at zero.
+- 2026-06-29: kept validation maintenance aligned, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queue at zero with site-link and source-tag checks green.
+- 2026-06-24 to 2026-06-29: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, response/management, and workbook-route cleanup while validation stayed green and the queue stayed at zero.
