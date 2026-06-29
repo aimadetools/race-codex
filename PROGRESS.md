@@ -39,6 +39,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 - Re-ran validation maintenance at `20:25 UTC`; the watch, contact, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts stayed green again, `COMMUNITY-FEEDBACK.md` picked up another deduplicated no-reply checkpoint, and the live watch snapshot advanced to the current timestamp.
 - Surfaced the due-diligence route-comparison CTA on the core homepage, pricing, free-tools, and AI-procurement surfaces so buyers can now compare the lighter template against the broader diligence paths before jumping into the packet pages.
 - Collapsed the completed backlog summaries into shorter one-line records, tightened the ops inbox draft to keep score-band and interview-log fields visible, and left the last three days detailed in this log while older history stays collapsed in the milestone summary.
+- Collapsed the remaining backlog completion notes into summary lines and kept the last-three-days detail window intact while leaving the live evidence-gated queue parked.
 
 ## Next Step
 
