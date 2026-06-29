@@ -383,6 +383,7 @@ export const WATCHED_SOURCE_TAGS = [
   "pricing-ai-due-diligence",
   "pricing-ai-due-diligence-answer-bank",
   "pricing-ai-due-diligence-evidence-map",
+  "pricing-ai-due-diligence-comparison",
   "pricing-ai-due-diligence-scorecard",
   "pricing-ai-due-diligence-packet-builder",
   "pricing-ai-framework-map",
