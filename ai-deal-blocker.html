@@ -113,6 +113,139 @@
           </div>
         </section>
 
+        <section class="section audit-layout" id="deal-blocker-triage">
+          <form class="audit-card" id="deal-blocker-triage-form">
+            <div class="section-head compact-head">
+              <h2>Triage the blocker before you choose the route</h2>
+              <p>Use this browser-only triage when the team knows the deal is stuck but does not want to guess between answer, spreadsheet cleanup, proof packaging, answer-bank work, agent controls, or outside judgment.</p>
+              <div class="route-presets" aria-label="Quick presets">
+                <button class="button secondary" type="button" data-triage-preset="one-answer">One answer due now</button>
+                <button class="button secondary" type="button" data-triage-preset="proof-gap">Proof gap</button>
+                <button class="button secondary" type="button" data-triage-preset="repeat-review">Repeat review loop</button>
+                <button class="button secondary" type="button" data-triage-preset="agent-controls">Agent controls</button>
+                <button class="button secondary" type="button" data-triage-preset="need-judgment">Need judgment</button>
+              </div>
+            </div>
+            <div class="field-grid">
+              <label>What is the shortest description of the blocker?
+                <select id="triage-blocker-shape">
+                  <option value="one-answer">One answer needs to be written now</option>
+                  <option value="spreadsheet-rows">The buyer already sent spreadsheet or portal rows</option>
+                  <option value="proof-gap">The wording exists but proof, owner, or review date is weak</option>
+                  <option value="repeat-review">The same AI questions keep repeating</option>
+                  <option value="agent-controls">The buyer is stuck on agent access, approvals, or audit trail</option>
+                  <option value="named-vendor">The buyer keeps asking about one named vendor</option>
+                  <option value="route-unclear">We still do not know which artifact moves the thread</option>
+                </select>
+              </label>
+              <label>Deadline pressure
+                <select id="triage-deadline">
+                  <option value="today">Reply due today or in 48 hours</option>
+                  <option value="week">Reply due this week</option>
+                  <option value="active">Active deal, but no hard deadline yet</option>
+                  <option value="unknown">Deadline still unclear</option>
+                </select>
+              </label>
+              <label>What do you already have?
+                <select id="triage-artifact">
+                  <option value="question-only">Only the buyer question or thread</option>
+                  <option value="spreadsheet">Spreadsheet or portal export</option>
+                  <option value="draft-answer">A drafted answer, but it does not hold up yet</option>
+                  <option value="approved-answers">Some reusable approved answers already exist</option>
+                  <option value="proof-pack">Proof links and owners exist, but they are scattered</option>
+                  <option value="nothing-clear">Nothing reliable yet</option>
+                </select>
+              </label>
+              <label>Review pressure
+                <select id="triage-review-pressure">
+                  <option value="single-reviewer">One reviewer or one buyer thread</option>
+                  <option value="multi-step">Multiple approvers or internal owners</option>
+                  <option value="counsel-escalation">Counsel or privacy escalation likely</option>
+                  <option value="unknown">Review path still unclear</option>
+                </select>
+              </label>
+              <label>Named vendor in the thread
+                <select id="triage-vendor">
+                  <option value="none">No named vendor yet</option>
+                  <option value="openai">OpenAI</option>
+                  <option value="anthropic">Anthropic</option>
+                  <option value="claude">Claude</option>
+                  <option value="gemini">Gemini</option>
+                  <option value="microsoft-copilot">Microsoft Copilot</option>
+                </select>
+              </label>
+              <label>What is the reviewer pushing for next?
+                <select id="triage-next-ask">
+                  <option value="answer">A copy-ready answer</option>
+                  <option value="proof">Proof links, owner, review date, or approval path</option>
+                  <option value="reuse">Reusable approved answers for repeated reviews</option>
+                  <option value="controls">Control boundary, approvals, or audit trail</option>
+                  <option value="packet">A broader due diligence packet</option>
+                  <option value="judgment">Someone to say what to fix first</option>
+                </select>
+              </label>
+              <label>Constraint that cannot move easily
+                <select id="triage-constraint">
+                  <option value="none">No special constraint</option>
+                  <option value="public-page">Public trust-page wording must stay aligned</option>
+                  <option value="named-owner">Owner or approval path is still fuzzy</option>
+                  <option value="legal-review">Counsel or privacy review is required before reuse</option>
+                  <option value="spreadsheet-handoff">The answer has to go back into a spreadsheet or portal workflow</option>
+                </select>
+              </label>
+            </div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Local triage result</span>
+            <div class="score-row generator-summary">
+              <strong id="triage-score">8/10</strong>
+              <span id="triage-state">Route clear enough to act</span>
+            </div>
+            <div class="score-meter" aria-hidden="true">
+              <span id="triage-meter"></span>
+            </div>
+            <p id="triage-summary">The blocker looks narrow enough that the team can start with one concrete artifact instead of escalating straight into another broad route search.</p>
+            <div class="tier-guidance">
+              <strong id="triage-primary-title">Best next route: answer builder</strong>
+              <p id="triage-primary-copy">Start with the local answer builder when the main issue is shipping one credible AI answer plus the handoff note and proof checklist from the same pass.</p>
+            </div>
+            <div class="result-list">
+              <div>
+                <strong>Signals pointing to this route</strong>
+                <ul id="triage-signal-list" class="article-list"></ul>
+              </div>
+              <div>
+                <strong>What could still widen the thread</strong>
+                <ul id="triage-gap-list" class="article-list"></ul>
+              </div>
+            </div>
+            <div class="generator-actions">
+              <a class="button" id="triage-primary-link" href="ai-security-questionnaire-answer-builder.html?source=ai-deal-blocker-triage-builder">Open answer builder</a>
+              <a class="button secondary" id="triage-secondary-link" href="ai-security-review-evidence-map.html?source=ai-deal-blocker-triage-evidence-map">Open evidence map</a>
+              <button class="button secondary" id="copy-triage-brief" type="button">Copy internal brief</button>
+              <button class="button secondary" id="copy-triage-rationale" type="button">Copy route rationale</button>
+              <button class="button secondary" id="apply-triage-to-form" type="button">Use judgment path</button>
+            </div>
+            <div class="template-box">
+              <strong>Copy-ready internal brief</strong>
+              <div id="triage-brief-output" aria-live="polite"></div>
+            </div>
+            <div hidden aria-hidden="true">
+              <a href="ai-security-questionnaire-answer-bank.html?source=ai-deal-blocker-triage-answer-bank">Triage answer bank fallback</a>
+              <a href="ai-agent-review-workspace.html?source=ai-deal-blocker-triage-agent-workspace">Triage agent workspace fallback</a>
+              <a href="free-teardown.html?source=ai-deal-blocker-triage-teardown">Triage teardown fallback</a>
+              <a href="openai-security-questionnaire-answer-template.html?source=ai-deal-blocker-triage-openai-answer-template">Triage OpenAI fallback</a>
+              <a href="anthropic-security-questionnaire-answer-template.html?source=ai-deal-blocker-triage-anthropic-answer-template">Triage Anthropic fallback</a>
+              <a href="claude-security-questionnaire-answer-template.html?source=ai-deal-blocker-triage-claude-answer-template">Triage Claude fallback</a>
+              <a href="ai-security-questionnaire-audit.html?source=ai-deal-blocker-triage-audit">Triage audit fallback</a>
+              <a href="ai-security-questionnaire-answer-builder.html?source=ai-deal-blocker-triage-spreadsheet-rows">Triage spreadsheet fallback</a>
+              <a href="gemini-security-questionnaire-answer-template.html?source=ai-deal-blocker-triage-gemini-answer-template">Triage Gemini fallback</a>
+              <a href="microsoft-copilot-security-questionnaire-answer-template.html?source=ai-deal-blocker-triage-microsoft-copilot-answer-template">Triage Copilot fallback</a>
+            </div>
+          </aside>
+        </section>
+
         <section class="section">
           <div class="grid-3">
             <article class="card">
@@ -147,10 +280,11 @@
             </article>
             <article class="card">
               <span class="tag">Named vendor</span>
-              <h3>OpenAI, Gemini, or Anthropic route</h3>
-              <p>Use the named-vendor templates when the buyer has already said OpenAI, Gemini, Anthropic, or Claude and generic wording is creating more loops.</p>
+              <h3>Named-vendor route</h3>
+              <p>Use the named-vendor templates when the buyer has already said OpenAI, Claude, Anthropic, Gemini, or Copilot and generic wording is creating more loops.</p>
               <div class="hero-actions">
                 <a class="button secondary" href="openai-security-questionnaire-answer-template.html?source=ai-deal-blocker-openai-answer-template">Open OpenAI template</a>
+                <a class="button secondary" href="claude-security-questionnaire-answer-template.html?source=ai-deal-blocker-claude-answer-template">Open Claude template</a>
                 <a class="button secondary" href="gemini-security-questionnaire-answer-template.html?source=ai-deal-blocker-gemini-answer-template">Open Gemini template</a>
                 <a class="button secondary" href="anthropic-security-questionnaire-answer-template.html?source=ai-deal-blocker-anthropic-answer-template">Open Anthropic template</a>
                 <a class="button secondary" href="microsoft-copilot-security-questionnaire-answer-template.html?source=ai-deal-blocker-microsoft-copilot-answer-template">Open Copilot template</a>
@@ -317,6 +451,30 @@
         deadline: document.querySelector("#deadline"),
         review_need: document.querySelector("#review-need")
       };
+      const triageFields = {
+        blockerShape: document.querySelector("#triage-blocker-shape"),
+        deadline: document.querySelector("#triage-deadline"),
+        artifact: document.querySelector("#triage-artifact"),
+        reviewPressure: document.querySelector("#triage-review-pressure"),
+        vendor: document.querySelector("#triage-vendor"),
+        nextAsk: document.querySelector("#triage-next-ask"),
+        constraint: document.querySelector("#triage-constraint")
+      };
+      const triageScore = document.querySelector("#triage-score");
+      const triageState = document.querySelector("#triage-state");
+      const triageMeter = document.querySelector("#triage-meter");
+      const triageSummary = document.querySelector("#triage-summary");
+      const triagePrimaryTitle = document.querySelector("#triage-primary-title");
+      const triagePrimaryCopy = document.querySelector("#triage-primary-copy");
+      const triageSignalList = document.querySelector("#triage-signal-list");
+      const triageGapList = document.querySelector("#triage-gap-list");
+      const triagePrimaryLink = document.querySelector("#triage-primary-link");
+      const triageSecondaryLink = document.querySelector("#triage-secondary-link");
+      const triageBriefOutput = document.querySelector("#triage-brief-output");
+      const copyTriageBriefButton = document.querySelector("#copy-triage-brief");
+      const copyTriageRationaleButton = document.querySelector("#copy-triage-rationale");
+      const applyTriageToFormButton = document.querySelector("#apply-triage-to-form");
+      let requestSourceOverride = "";
       const requestMeta = {
         free_async_teardown: {
           button: "Send teardown request",
@@ -347,15 +505,23 @@
         return dealBlockerEntrySources.has(dealBlockerSource) ? dealBlockerSource : "ai-deal-blocker";
       }
 
+      function resolveDealBlockerSourceTag(suffix) {
+        return `${resolveDealBlockerBaseSource()}-${suffix}`;
+      }
+
       function resolveRequestSource(type) {
-        return `${resolveDealBlockerBaseSource()}-${type === "concierge_audit" ? "audit" : "teardown"}`;
+        return resolveDealBlockerSourceTag(type === "concierge_audit" ? "audit" : "teardown");
+      }
+
+      function resolveTriageRequestSource(type) {
+        return resolveDealBlockerSourceTag(type === "concierge_audit" ? "triage-audit" : "triage-teardown");
       }
 
       function syncRequestUi() {
         const meta = requestMeta[requestType.value] || requestMeta.free_async_teardown;
         submitButton.textContent = meta.button;
         formNote.textContent = meta.note;
-        sourceTag.value = resolveRequestSource(requestType.value);
+        sourceTag.value = requestSourceOverride || resolveRequestSource(requestType.value);
         const intakeUrl = new URL("audit-request.html", window.location.href);
         intakeUrl.searchParams.set("type", requestType.value);
         intakeUrl.searchParams.set("source", sourceTag.value);
@@ -368,6 +534,336 @@
         fullIntakeLink.setAttribute("href", `${intakeUrl.pathname}${intakeUrl.search}`);
       }
 
+      function copyText(text, message) {
+        return navigator.clipboard.writeText(text).then(() => {
+          formNote.textContent = message;
+        }).catch(() => {
+          formNote.textContent = "Clipboard failed. Copy the brief manually.";
+        });
+      }
+
+      const routeCatalog = {
+        builder: {
+          suffix: "triage-builder",
+          href: "ai-security-questionnaire-answer-builder.html",
+          label: "Open answer builder",
+          title: "Best next route: answer builder"
+        },
+        spreadsheetRows: {
+          suffix: "triage-spreadsheet-rows",
+          href: "ai-security-questionnaire-answer-builder.html",
+          label: "Paste spreadsheet rows",
+          title: "Best next route: spreadsheet rows in the builder"
+        },
+        answerBank: {
+          suffix: "triage-answer-bank",
+          href: "ai-security-questionnaire-answer-bank.html",
+          label: "Open answer bank",
+          title: "Best next route: answer bank"
+        },
+        evidenceMap: {
+          suffix: "triage-evidence-map",
+          href: "ai-security-review-evidence-map.html",
+          label: "Open evidence map",
+          title: "Best next route: evidence map"
+        },
+        agentWorkspace: {
+          suffix: "triage-agent-workspace",
+          href: "ai-agent-review-workspace.html",
+          label: "Open AI agent workspace",
+          title: "Best next route: AI agent workspace"
+        },
+        openai: {
+          suffix: "triage-openai-answer-template",
+          href: "openai-security-questionnaire-answer-template.html",
+          label: "Open OpenAI template",
+          title: "Best next route: OpenAI answer template"
+        },
+        anthropic: {
+          suffix: "triage-anthropic-answer-template",
+          href: "anthropic-security-questionnaire-answer-template.html",
+          label: "Open Anthropic template",
+          title: "Best next route: Anthropic answer template"
+        },
+        claude: {
+          suffix: "triage-claude-answer-template",
+          href: "claude-security-questionnaire-answer-template.html",
+          label: "Open Claude template",
+          title: "Best next route: Claude answer template"
+        },
+        gemini: {
+          suffix: "triage-gemini-answer-template",
+          href: "gemini-security-questionnaire-answer-template.html",
+          label: "Open Gemini template",
+          title: "Best next route: Gemini answer template"
+        },
+        copilot: {
+          suffix: "triage-microsoft-copilot-answer-template",
+          href: "microsoft-copilot-security-questionnaire-answer-template.html",
+          label: "Open Copilot template",
+          title: "Best next route: Microsoft Copilot answer template"
+        },
+        teardown: {
+          suffix: "triage-teardown",
+          href: "free-teardown.html",
+          label: "Request free teardown",
+          title: "Best next route: free teardown"
+        },
+        audit: {
+          suffix: "triage-audit",
+          href: "ai-security-questionnaire-audit.html",
+          label: "Open audit path",
+          title: "Best next route: concierge audit"
+        }
+      };
+
+      function routeHref(route) {
+        const url = new URL(route.href, window.location.href);
+        url.searchParams.set("source", resolveDealBlockerSourceTag(route.suffix));
+        return `${url.pathname}${url.search}`;
+      }
+
+      function vendorRoute(vendor) {
+        if (vendor === "openai") return routeCatalog.openai;
+        if (vendor === "anthropic") return routeCatalog.anthropic;
+        if (vendor === "claude") return routeCatalog.claude;
+        if (vendor === "gemini") return routeCatalog.gemini;
+        if (vendor === "microsoft-copilot") return routeCatalog.copilot;
+        return routeCatalog.builder;
+      }
+
+      function triagePreset(values) {
+        for (const [key, value] of Object.entries(values)) {
+          if (triageFields[key]) {
+            triageFields[key].value = value;
+          }
+        }
+        updateTriage();
+      }
+
+      for (const button of document.querySelectorAll("[data-triage-preset]")) {
+        button.addEventListener("click", () => {
+          const preset = button.getAttribute("data-triage-preset");
+          if (preset === "one-answer") {
+            triagePreset({
+              blockerShape: "one-answer",
+              deadline: "today",
+              artifact: "question-only",
+              reviewPressure: "single-reviewer",
+              vendor: "none",
+              nextAsk: "answer",
+              constraint: "none"
+            });
+          } else if (preset === "proof-gap") {
+            triagePreset({
+              blockerShape: "proof-gap",
+              deadline: "week",
+              artifact: "draft-answer",
+              reviewPressure: "multi-step",
+              vendor: "none",
+              nextAsk: "proof",
+              constraint: "public-page"
+            });
+          } else if (preset === "repeat-review") {
+            triagePreset({
+              blockerShape: "repeat-review",
+              deadline: "active",
+              artifact: "approved-answers",
+              reviewPressure: "multi-step",
+              vendor: "none",
+              nextAsk: "reuse",
+              constraint: "none"
+            });
+          } else if (preset === "agent-controls") {
+            triagePreset({
+              blockerShape: "agent-controls",
+              deadline: "week",
+              artifact: "draft-answer",
+              reviewPressure: "counsel-escalation",
+              vendor: "none",
+              nextAsk: "controls",
+              constraint: "legal-review"
+            });
+          } else if (preset === "need-judgment") {
+            triagePreset({
+              blockerShape: "route-unclear",
+              deadline: "today",
+              artifact: "nothing-clear",
+              reviewPressure: "unknown",
+              vendor: "none",
+              nextAsk: "judgment",
+              constraint: "legal-review"
+            });
+          }
+        });
+      }
+
+      function listHtml(items) {
+        return items.map((item) => `<li>${item}</li>`).join("");
+      }
+
+      function updateTriage() {
+        const blockerShape = triageFields.blockerShape.value;
+        const deadlineState = triageFields.deadline.value;
+        const artifactState = triageFields.artifact.value;
+        const reviewPressure = triageFields.reviewPressure.value;
+        const vendor = triageFields.vendor.value;
+        const nextAsk = triageFields.nextAsk.value;
+        const constraint = triageFields.constraint.value;
+
+        let clarityScore = 4;
+        if (blockerShape !== "route-unclear") clarityScore += 2;
+        if (artifactState !== "nothing-clear") clarityScore += 1;
+        if (nextAsk !== "judgment") clarityScore += 1;
+        if (reviewPressure !== "unknown") clarityScore += 1;
+        if (deadlineState === "today") clarityScore += 1;
+        clarityScore = Math.max(3, Math.min(10, clarityScore));
+
+        let primaryRoute = routeCatalog.builder;
+        let secondaryRoute = routeCatalog.evidenceMap;
+        let requestSuggestion = "free_async_teardown";
+        const signals = [];
+        const gaps = [];
+
+        if (blockerShape === "agent-controls" || nextAsk === "controls") {
+          primaryRoute = routeCatalog.agentWorkspace;
+          secondaryRoute = routeCatalog.evidenceMap;
+          signals.push("The thread is asking about access boundaries, approvals, or audit trail instead of just one paragraph.");
+          gaps.push("The route may widen again if owner, proof links, or reviewer handoff are still weak behind the control story.");
+        } else if (blockerShape === "proof-gap" || nextAsk === "proof" || artifactState === "proof-pack") {
+          primaryRoute = routeCatalog.evidenceMap;
+          secondaryRoute = vendor !== "none" ? vendorRoute(vendor) : routeCatalog.builder;
+          signals.push("The answer is close, but the blocker is proof coverage, ownership, review date, or approval path.");
+          gaps.push("If the wording itself is still unstable, you may need the builder or named-vendor template after the evidence pass.");
+        } else if (blockerShape === "repeat-review" || nextAsk === "reuse" || artifactState === "approved-answers") {
+          primaryRoute = routeCatalog.answerBank;
+          secondaryRoute = vendor !== "none" ? vendorRoute(vendor) : routeCatalog.builder;
+          signals.push("The pain is repeat-review reuse, not just this one buyer thread.");
+          gaps.push("If one live answer is still blocked today, start with the builder first and then save the approved wording into the bank.");
+        } else if (blockerShape === "spreadsheet-rows" || artifactState === "spreadsheet" || constraint === "spreadsheet-handoff") {
+          primaryRoute = routeCatalog.spreadsheetRows;
+          secondaryRoute = nextAsk === "reuse" ? routeCatalog.answerBank : routeCatalog.builder;
+          signals.push("The team already has spreadsheet or portal rows and needs row-preserving output.");
+          gaps.push("If the buyer also wants proof or owner metadata, the evidence map may still be the next stop after the row pass.");
+        } else if (blockerShape === "named-vendor" && vendor !== "none") {
+          primaryRoute = vendorRoute(vendor);
+          secondaryRoute = routeCatalog.builder;
+          signals.push("The buyer is using named-vendor language and generic wording is causing loops.");
+          gaps.push("If the question expands beyond vendor wording into proof or governance, widen into the builder or evidence map next.");
+        } else if (blockerShape === "route-unclear" || nextAsk === "judgment" || artifactState === "nothing-clear") {
+          primaryRoute = deadlineState === "today" || reviewPressure === "counsel-escalation"
+            ? routeCatalog.audit
+            : routeCatalog.teardown;
+          secondaryRoute = routeCatalog.builder;
+          requestSuggestion = primaryRoute === routeCatalog.audit ? "concierge_audit" : "free_async_teardown";
+          signals.push("The team still needs judgment about what to fix first before committing to a drafting route.");
+          gaps.push("If the blocker becomes narrower after the outside read, return to the builder, evidence map, or answer bank instead of widening the thread again.");
+        } else {
+          primaryRoute = vendor !== "none" && nextAsk === "answer" ? vendorRoute(vendor) : routeCatalog.builder;
+          secondaryRoute = artifactState === "draft-answer" ? routeCatalog.evidenceMap : routeCatalog.answerBank;
+          signals.push("The buyer still primarily needs a concrete answer artifact, not a full broader diligence packet.");
+          gaps.push("If approvals or repeat-review reuse become the next bottleneck, branch into the answer bank or evidence map after the first answer lands.");
+        }
+
+        if (deadlineState === "today") {
+          signals.push("The deadline is immediate enough that the first artifact has to be sendable, not just exploratory.");
+        } else if (deadlineState === "week") {
+          signals.push("The thread is active this week, so a focused route is still better than a broad packet-first escalation.");
+        } else {
+          gaps.push("Without a hard deadline, the team can overbuild. Keep the next artifact narrow.");
+        }
+
+        if (reviewPressure === "multi-step") {
+          signals.push("Multiple approvers or internal owners raise the value of reusable wording and explicit handoff notes.");
+        } else if (reviewPressure === "counsel-escalation") {
+          gaps.push("Counsel or privacy escalation may force a stricter owner, proof, or public-page alignment check.");
+        }
+
+        if (constraint === "public-page") {
+          gaps.push("Public trust-page wording needs to stay aligned with whatever answer ships next.");
+        } else if (constraint === "named-owner") {
+          gaps.push("Owner and approval-path ambiguity can keep the thread blocked even if the wording improves.");
+        } else if (constraint === "legal-review") {
+          gaps.push("Counsel review can slow reuse, so capture the shortest internally defensible draft first.");
+        }
+
+        if (nextAsk === "packet") {
+          gaps.push("If the buyer is already asking for a fuller packet, the next route after this one may be due-diligence packaging rather than another answer iteration.");
+        }
+
+        const brief = [
+          `Deal blocker triage`,
+          `- Current blocker: ${triageFields.blockerShape.options[triageFields.blockerShape.selectedIndex].textContent}.`,
+          `- Deadline pressure: ${triageFields.deadline.options[triageFields.deadline.selectedIndex].textContent}.`,
+          `- Current material: ${triageFields.artifact.options[triageFields.artifact.selectedIndex].textContent}.`,
+          `- Review pressure: ${triageFields.reviewPressure.options[triageFields.reviewPressure.selectedIndex].textContent}.`,
+          vendor !== "none" ? `- Named vendor in thread: ${triageFields.vendor.options[triageFields.vendor.selectedIndex].textContent}.` : `- Named vendor in thread: none yet.`,
+          `- Reviewer wants next: ${triageFields.nextAsk.options[triageFields.nextAsk.selectedIndex].textContent}.`,
+          `- Recommended next route: ${primaryRoute.label}.`,
+          `- Backup route after that: ${secondaryRoute.label}.`
+        ].join("\n");
+
+        triageScore.textContent = `${clarityScore}/10`;
+        triageState.textContent = clarityScore >= 8
+          ? "Route clear enough to act"
+          : clarityScore >= 6
+            ? "Route mostly clear"
+            : "Judgment path likely faster";
+        triageMeter.style.width = `${clarityScore * 10}%`;
+        triageSummary.textContent = primaryRoute === routeCatalog.audit || primaryRoute === routeCatalog.teardown
+          ? "The blocker still looks broad enough that outside judgment is likely faster than guessing between drafting routes."
+          : "The blocker looks narrow enough that the next artifact can be chosen locally before the thread sprawls again.";
+        triagePrimaryTitle.textContent = primaryRoute.title;
+        triagePrimaryCopy.textContent = primaryRoute === routeCatalog.spreadsheetRows
+          ? "Start inside the builder with the buyer's exported rows when the deal is blocked on spreadsheet or portal workflow, not on a blank answer."
+          : primaryRoute === routeCatalog.answerBank
+            ? "Start with the answer bank when the recurring pain is reusable approved wording across repeated AI reviews."
+            : primaryRoute === routeCatalog.evidenceMap
+              ? "Start with the evidence map when the buyer is pressing on proof links, owner, review date, approval path, or recheck trigger behind an answer that is already close."
+              : primaryRoute === routeCatalog.agentWorkspace
+                ? "Start with the AI agent workspace when the buyer is really asking about what the agent can access, what it can change, who approves it, and what gets logged."
+                : primaryRoute === routeCatalog.teardown
+                  ? "Use the free teardown when the fastest way forward is a blunt outside read that says what to fix first without buying the full audit."
+                  : primaryRoute === routeCatalog.audit
+                    ? "Use the paid audit path when the deadline is real and the blocker is prioritization, proof coverage, or judgment rather than one more drafting pass."
+                    : "Start with the local drafting route when the fastest path is still one concrete answer artifact that the team can send or hand off today.";
+        const rationale = [
+          primaryRoute.title,
+          "",
+          ...signals.map((item) => `Signal: ${item}`),
+          ...gaps.map((item) => `Watch for: ${item}`)
+        ].join("\n");
+        triageSignalList.innerHTML = listHtml(signals);
+        triageGapList.innerHTML = listHtml(gaps);
+        triagePrimaryLink.textContent = primaryRoute.label;
+        triagePrimaryLink.setAttribute("href", routeHref(primaryRoute));
+        triageSecondaryLink.textContent = secondaryRoute.label;
+        triageSecondaryLink.setAttribute("href", routeHref(secondaryRoute));
+        triageBriefOutput.innerHTML = brief.split("\n").map((line) => `<p>${line}</p>`).join("");
+
+        copyTriageBriefButton.onclick = () => copyText(brief, "Copied the triage brief for internal handoff.");
+        copyTriageRationaleButton.onclick = () => copyText(rationale, "Copied the triage rationale.");
+        applyTriageToFormButton.onclick = () => {
+          requestType.value = requestSuggestion;
+          if (!prefillFields.vendor_change.value.trim()) {
+            prefillFields.vendor_change.value = `Triage route: ${primaryRoute.label}. Current blocker: ${triageFields.blockerShape.options[triageFields.blockerShape.selectedIndex].textContent}. Reviewer wants next: ${triageFields.nextAsk.options[triageFields.nextAsk.selectedIndex].textContent}.`;
+          }
+          if (!prefillFields.deadline.value.trim()) {
+            prefillFields.deadline.value = `${triageFields.deadline.options[triageFields.deadline.selectedIndex].textContent}. Review pressure: ${triageFields.reviewPressure.options[triageFields.reviewPressure.selectedIndex].textContent}.`;
+          }
+          if (!prefillFields.review_need.value.trim()) {
+            prefillFields.review_need.value = `Constraint to preserve: ${triageFields.constraint.options[triageFields.constraint.selectedIndex].textContent}. Backup route after triage: ${secondaryRoute.label}.`;
+          }
+          requestSourceOverride = resolveTriageRequestSource(requestSuggestion);
+          syncRequestUi();
+          document.querySelector("#deal-blocker-brief").scrollIntoView({ behavior: "smooth", block: "start" });
+        };
+      }
+
+      for (const field of Object.values(triageFields)) {
+        field.addEventListener("change", updateTriage);
+      }
+
       for (const queryKey of Object.keys(prefillFields)) {
         syncField(queryKey, queryKey);
       }
@@ -377,11 +873,20 @@
         requestType.value = initialType;
       }
 
-      requestType.addEventListener("change", syncRequestUi);
+      requestType.addEventListener("change", () => {
+        if (requestSourceOverride) {
+          requestSourceOverride = resolveTriageRequestSource(requestType.value);
+        }
+        syncRequestUi();
+      });
       for (const field of Object.values(prefillFields)) {
-        field.addEventListener("input", syncRequestUi);
+        field.addEventListener("input", () => {
+          requestSourceOverride = "";
+          syncRequestUi();
+        });
       }
       syncRequestUi();
+      updateTriage();
 
       function setSummary(text, isError = false) {
         summary.hidden = false;
