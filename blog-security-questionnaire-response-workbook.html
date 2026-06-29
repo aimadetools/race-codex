@@ -21,6 +21,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/blog-security-questionnaire-response-workbook.html">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -39,7 +40,7 @@
               "url": "https://noticekit.tech/"
             },
             "datePublished": "2026-06-28",
-            "dateModified": "2026-06-28",
+            "dateModified": "2026-06-29",
             "mainEntityOfPage": "https://noticekit.tech/blog-security-questionnaire-response-workbook.html"
           },
           {
@@ -96,11 +97,13 @@
             <h1>Use a security questionnaire response workbook when CSV is too thin for the handoff.</h1>
             <p>Some review threads do not need a bigger platform. They need one local file that keeps the answer, the mapped questionnaire rows, and the question matrix together so the team can hand the work off without losing context. NoticeKit's builder now exports that workbook in spreadsheet-native form, which makes it easier to compare the response artifact against a plain CSV or Markdown bundle.</p>
             <div class="hero-actions">
-              <a class="button" href="ai-security-questionnaire-answer-builder.html">Build answer + workbook</a>
-              <a class="button secondary" href="blog-security-questionnaire-spreadsheet-template.html">Open workbook template guide</a>
-              <a class="button secondary" href="ai-security-questionnaire-answer-bank.html">Open answer bank</a>
-              <a class="button secondary" href="pricing.html">See paid paths</a>
+              <button class="button" id="download-response-workbook-sample" type="button">Download sample workbook</button>
+              <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=response-workbook-builder">Build answer + workbook</a>
+              <a class="button secondary" href="blog-security-questionnaire-spreadsheet-template.html?source=response-workbook-spreadsheet-template">Open workbook template guide</a>
+              <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=response-workbook-answer-bank">Open answer bank</a>
+              <a class="button secondary" href="pricing.html?source=response-workbook-pricing">See paid paths</a>
             </div>
+            <p class="fine-print" id="response-workbook-status" aria-live="polite">Download the sample workbook if you want to inspect the exact sheet shape before you open the builder.</p>
           </header>
 
           <div class="notice-band">
@@ -131,6 +134,45 @@
 
           <section class="section">
             <div class="section-head">
+              <h2>Inspect the workbook tabs before you build</h2>
+              <p>The export only matters if the next reviewer can open it and understand the thread without another call.</p>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Sheet</th>
+                    <th>What it shows</th>
+                    <th>Why it matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>Summary</code></td>
+                    <td>Company, workflow, reviewer lane, answer shape, proof links, owner, and next decision.</td>
+                    <td>Keeps the handoff anchored to the live review instead of leaving the answer detached from the operating context.</td>
+                  </tr>
+                  <tr>
+                    <td><code>Mapped Responses</code></td>
+                    <td>The buyer rows beside source row labels, mapped answer type, answer direction, and owner context.</td>
+                    <td>Lets the next reviewer see what each answer came from without reconstructing the spreadsheet from chat or memory.</td>
+                  </tr>
+                  <tr>
+                    <td><code>Question Matrix</code></td>
+                    <td>The reusable question set that the builder uses for follow-up coverage.</td>
+                    <td>Makes the one-off answer easier to reuse when the same review pressure comes back in the next deal.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="hero-actions" style="margin-top:12px;">
+              <button class="button secondary" id="download-response-workbook-sample-table" type="button">Download sample workbook</button>
+              <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=response-workbook-builder">Open builder</a>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
               <h2>When the workbook is the right export</h2>
               <p>Use the workbook when the response needs to survive another person opening it later.</p>
             </div>
@@ -151,14 +193,17 @@
               <article class="card">
                 <h3>Use the builder first</h3>
                 <p>The workbook is an export shape. The builder still handles the live answer, reviewer note, handoff context, and workbook generation in one browser-first flow.</p>
+                <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=response-workbook-builder">Build answer + workbook</a>
               </article>
               <article class="card">
                 <h3>Use the workbook template first</h3>
                 <p>If the review still starts in rows and the team needs to preserve the exact buyer wording, the workbook template keeps the shape clean before the answer gets drafted, with the CSV fallback still available when a flat file is enough.</p>
+                <a class="button secondary" href="blog-security-questionnaire-spreadsheet-template.html?source=response-workbook-spreadsheet-template">Open workbook template guide</a>
               </article>
               <article class="card">
                 <h3>Use the answer bank first</h3>
                 <p>If the same questionnaire keeps coming back, reusable wording matters more than a one-off export file.</p>
+                <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=response-workbook-answer-bank">Open answer bank</a>
               </article>
             </div>
           </section>
@@ -168,14 +213,104 @@
               <strong>Workbook first, platform later.</strong>
               <p>If the team only needs one sendable answer now, keep the workflow simple. If the workbook is what makes the handoff understandable, use it. If the review has moved past local cleanup into assignments, approvals, or a managed program, compare the response-software and management-software routes before buying anything bigger.</p>
               <div class="hero-actions" style="margin-top:12px;">
-                <a class="button" href="ai-security-questionnaire-answer-builder.html">Build answer + workbook</a>
-                <a class="button secondary" href="blog-security-questionnaire-response-software.html">Open response software guide</a>
-                <a class="button secondary" href="blog-security-questionnaire-management-software.html">Open management software guide</a>
+                <button class="button" id="download-response-workbook-sample-bottom" type="button">Download sample workbook</button>
+                <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=response-workbook-builder">Build answer + workbook</a>
+                <a class="button secondary" href="blog-security-questionnaire-response-software.html?source=response-workbook-response-software">Open response software guide</a>
+                <a class="button secondary" href="blog-security-questionnaire-management-software.html?source=response-workbook-management-software">Open management software guide</a>
               </div>
             </div>
           </section>
         </article>
       </main>
     </div>
+    <script>
+      (function () {
+        const sampleButtons = [
+          document.querySelector("#download-response-workbook-sample"),
+          document.querySelector("#download-response-workbook-sample-table"),
+          document.querySelector("#download-response-workbook-sample-bottom")
+        ].filter(Boolean);
+        const status = document.querySelector("#response-workbook-status");
+
+        function autosizeColumns(rows) {
+          return rows[0].map((_, columnIndex) => {
+            const maxLength = rows.reduce((length, row) => {
+              const value = row[columnIndex] == null ? "" : String(row[columnIndex]);
+              return Math.max(length, value.length);
+            }, 12);
+            return { wch: Math.min(Math.max(maxLength + 2, 14), 44) };
+          });
+        }
+
+        function buildWorkbookData() {
+          const summaryRows = [
+            ["field", "value"],
+            ["company", "Northstar Support AI"],
+            ["buyer_question", "How does your AI workflow handle customer support ticket data and reviewer approval?"],
+            ["workflow", "Customer support drafting assistant for support agents"],
+            ["primary_vendor", "OpenAI"],
+            ["supporting_vendors", "Zendesk, Segment, Retool"],
+            ["reviewer_lane", "Procurement / buyer review"],
+            ["answer_shape", "Proof-first answer"],
+            ["customer_scope", "Enterprise support tickets for North America and EU customers"],
+            ["data_categories", "Ticket text, account identifiers, attachments selected by the support agent"],
+            ["retention_or_training_stance", "Customer prompts stay inside the reviewed workflow. Training or retention exceptions route through vendor terms, DPA review, and product approval."],
+            ["approval_path", "Support operations drafts, security reviews the vendor boundary, privacy checks contract fit, and counsel reviews exception language."],
+            ["proof_links", "Vendor terms, DPA excerpt, architecture note, and internal owner review log"],
+            ["decision_needed_next", "Confirm whether regulated healthcare attachments stay out of scope for the current workflow"],
+            ["review_cadence", "Refresh on vendor, retention, or support workflow changes and before repeat enterprise reviews"],
+            ["reply_owner", "Founder / security lead"]
+          ];
+          const mappedResponseRows = [
+            ["sheet", "source_row", "section", "buyer_question", "mapped_answer_type", "answer_direction", "workflow", "primary_vendor", "supporting_vendors", "customer_scope", "proof_links", "reply_owner"],
+            ["Questionnaire Rows", "12", "AI use", "What AI vendors are in scope for support ticket drafting?", "Named vendor chain", "OpenAI is the primary model provider for the support drafting workflow, with Zendesk, Segment, and Retool supporting the surrounding operational path.", "Customer support drafting assistant for support agents", "OpenAI", "Zendesk, Segment, Retool", "Enterprise support tickets for North America and EU customers", "Vendor terms, architecture note", "Founder / security lead"],
+            ["Questionnaire Rows", "13", "Data handling", "What customer data enters the workflow and how is it reviewed?", "Data scope", "The workflow covers ticket text, account identifiers, and selected attachments. Support operations drafts the answer and security plus privacy review the final boundary before reuse.", "Customer support drafting assistant for support agents", "OpenAI", "Zendesk, Segment, Retool", "Enterprise support tickets for North America and EU customers", "DPA excerpt, owner review log", "Founder / security lead"],
+            ["Questionnaire Rows", "14", "Governance", "Who approves the answer and when should it be refreshed?", "Human review and approval", "Support operations drafts, security reviews the vendor boundary, privacy checks contract fit, and counsel handles exception language. Recheck before the next enterprise review or any workflow change.", "Customer support drafting assistant for support agents", "OpenAI", "Zendesk, Segment, Retool", "Enterprise support tickets for North America and EU customers", "Architecture note, review cadence note", "Founder / security lead"]
+          ];
+          const questionMatrixRows = [
+            ["number", "buyer_question", "answer_direction"],
+            [1, "Which AI workflow is under review?", "Scope the answer to the support drafting assistant only."],
+            [2, "Which vendors are in scope?", "Name OpenAI first, then supporting systems tied to the workflow."],
+            [3, "What data categories are involved?", "Describe ticket text, identifiers, and selected attachments plainly."],
+            [4, "What human review sits behind the answer?", "State the support, security, privacy, and counsel review path."],
+            [5, "What would force the answer to change?", "Call out vendor, retention, or workflow changes plus review timing."]
+          ];
+
+          return { summaryRows, mappedResponseRows, questionMatrixRows };
+        }
+
+        function downloadWorkbook() {
+          if (!window.XLSX || !window.XLSX.utils || typeof window.XLSX.writeFile !== "function") {
+            if (status) {
+              status.textContent = "Workbook download is unavailable in this browser. Open the builder instead to inspect the export shape.";
+            }
+            return;
+          }
+
+          const workbook = window.XLSX.utils.book_new();
+          const { summaryRows, mappedResponseRows, questionMatrixRows } = buildWorkbookData();
+          const summarySheet = window.XLSX.utils.aoa_to_sheet(summaryRows);
+          const mappedSheet = window.XLSX.utils.aoa_to_sheet(mappedResponseRows);
+          const matrixSheet = window.XLSX.utils.aoa_to_sheet(questionMatrixRows);
+
+          summarySheet["!cols"] = autosizeColumns(summaryRows);
+          mappedSheet["!cols"] = autosizeColumns(mappedResponseRows);
+          matrixSheet["!cols"] = autosizeColumns(questionMatrixRows);
+
+          window.XLSX.utils.book_append_sheet(workbook, summarySheet, "Summary");
+          window.XLSX.utils.book_append_sheet(workbook, mappedSheet, "Mapped Responses");
+          window.XLSX.utils.book_append_sheet(workbook, matrixSheet, "Question Matrix");
+          window.XLSX.writeFile(workbook, "noticekit-security-questionnaire-response-workbook-sample.xlsx");
+
+          if (status) {
+            status.textContent = "Sample response workbook downloaded with summary, mapped response rows, and question matrix tabs.";
+          }
+        }
+
+        sampleButtons.forEach((button) => {
+          button.addEventListener("click", downloadWorkbook);
+        });
+      }());
+    </script>
   </body>
 </html>
