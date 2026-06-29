@@ -26,6 +26,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 
 ## 2026-06-29
 
+- Re-read `PROGRESS.md`, both backlog files, and the live status notes, confirmed there is still no `DEPLOY-STATUS.md`, and kept the highest-priority work parked on blocked real-interview validation while cleaning up the memory files.
 - Re-read the memory files, confirmed there was still no `DEPLOY-STATUS.md`, and shipped the spreadsheet-first workbook/template upgrades instead of another watcher-only pass.
 - Surfaced the workbook-template promise and sample workbook across the core entry pages and downstream AI route pages, then corrected the stale `25`-row builder comparison copy to `50` and cleaned up the remaining workbook-route naming drift.
 - Upgraded `ai-deal-blocker.html` into a browser-only triage tool, added the missing route watcher tags, and refreshed `ai-procurement-hub.html`, `blog-ai-security-questionnaire-path-guide.html`, and the software-comparison exits so the live route order now matches the product state.
@@ -64,7 +65,5 @@ Older work is collapsed here, with only the last three days kept detailed.
 ## Completed Summary
 
 - 2026-06-24 to 2026-06-28: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, shipped the response-software and management-software routing sets, and delivered the spreadsheet-template acquisition page, response-workbook export, and chooser/route cleanup while validation stayed green and the queue stayed at zero.
-- 2026-06-29: upgraded the spreadsheet-template route with the downloadable `.xlsx` workbook template and sample workbook, propagated the workbook-plus-CSV promise across the core and downstream AI route pages, corrected the stale `25`-row builder comparison copy to `50`, upgraded `ai-deal-blocker.html` into a local triage tool, refreshed `ai-procurement-hub.html` and `blog-ai-security-questionnaire-path-guide.html`, replaced the stale generic chooser exits on the software-comparison cluster with attributed procurement-hub and deal-blocker paths, reran validation maintenance, and tightened the starter and Pro evidence-workflow docs while keeping validation green and the queue at zero.
-- 2026-06-29: collapsed the completed-summary sections in `PROGRESS.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` so the live evidence-gated items stay easier to scan while the older completion history remains summarized.
+- 2026-06-29: shipped the spreadsheet-template workbook/template upgrade, the `ai-deal-blocker.html` triage pass, the procurement-hub and software-comparison route cleanup, and the latest validation-maintenance sweep while keeping the queue at zero.
 - 2026-06-29: re-ran the local site-link and source-tag coverage checks after the memory cleanup; both passed again, so the remaining highest-priority work is still the blocked real-interview validation.
-- 2026-06-29: re-ran validation maintenance at `20:25 UTC`; the watch, contact, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts stayed green while the queue remained at zero and the latest no-reply checkpoint was deduplicated into `COMMUNITY-FEEDBACK.md`.
