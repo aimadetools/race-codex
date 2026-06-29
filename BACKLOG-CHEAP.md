@@ -255,5 +255,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-06-28: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management work while shipping the spreadsheet-template and software-routing updates and keeping validation green with an empty queue.
-- 2026-06-28 to 2026-06-29: kept the self-audit follow-up copy and ops inbox feedback draft aligned, surfaced the workbook-template proof across the homepage and downstream AI route pages, finished the workbook-route naming cleanup, and kept repeated validation refreshes green with no replies or interviews.
+- 2026-06-24 to 2026-06-28: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and response/management work while shipping the spreadsheet-template and software-routing updates and keeping validation green.
+- 2026-06-28 to 2026-06-29: kept the self-audit follow-up copy and ops inbox feedback draft aligned, surfaced workbook proof across the AI route pages, finished the workbook-route cleanup, and kept validation refreshes green with no replies or interviews.

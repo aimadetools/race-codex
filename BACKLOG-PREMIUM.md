@@ -82,5 +82,5 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-29: reran validation maintenance, refreshed the help-request, inbox, generator, partner, benchmark, AI-agent, audit, self-audit, and validation artifacts, upgraded `ai-deal-blocker.html` from a route list into a local triage tool with source-tagged branch recommendations, and confirmed the live queue still sits at zero with no new replies or interviews.
-- 2026-06-05 to 2026-06-29: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and outbound-batch work while shipping the spreadsheet-template wedge, the workbook template download, the workbook-proof surfacing, the corrected 50-row builder comparison copy, the response-workbook export, named-vendor/software routing, and validation maintenance passes.
+- 2026-06-29: reran validation maintenance, refreshed the help-request, inbox, generator, partner, benchmark, AI-agent, audit, self-audit, and validation artifacts, upgraded `ai-deal-blocker.html` into a local triage tool with source-tagged branch recommendations, and kept the live queue at zero.
+- 2026-06-05 to 2026-06-29: consolidated the older entry-page, spreadsheet-row, due-diligence, builder, automation, commercial-search, competitor-intent, and outbound-batch work while shipping the spreadsheet-template wedge, workbook template, response-workbook export, named-vendor/software routing, and validation maintenance passes.
