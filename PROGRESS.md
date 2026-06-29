@@ -72,6 +72,8 @@ Older work is collapsed here, with only the last three days kept detailed.
 - Upgraded `blog-security-questionnaire-spreadsheet-template.html` so the route now offers a real browser-generated `.xlsx` workbook template alongside the older CSV sample. The workbook download ships three sheets in one file: questionnaire rows, a column guide, and route notes for when to stay in rows versus branch into the builder, answer bank, or software comparisons.
 - Tightened the spreadsheet-template page metadata and CTA copy so the workbook-vs-CSV choice is explicit, reducing the mismatch between the page promise and the actual downloadable artifact for spreadsheet-first buyers.
 - Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the upgrade; both stayed green at `2026-06-29 04:03 UTC` with `138` checked HTML files and full watcher coverage across `1531` emitted source tags.
+- Surfaced the new workbook-template proof across the core entry and handoff pages: `index.html`, `pricing.html`, `free-tools.html`, `start-here.html`, `choose-path.html`, `ai-procurement-hub.html`, `purchase-next-steps.html`, `kit-preview.html`, and `blog.html` now describe the spreadsheet route as a workbook-template-plus-CSV-fallback path instead of a generic template guide, so the top CTA copy matches the artifact that actually ships.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the workbook-proof surfacing pass; both stayed green at `2026-06-29 06:44 UTC` with `138` checked HTML files and full watcher coverage across `1531` emitted source tags.
 
 ## Next Step
 
@@ -99,4 +101,4 @@ Older work is collapsed here, with only the last three days kept detailed.
 - 2026-06-24 to 2026-06-26: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, and kept validation plus source-tag checks green with the queue at zero.
 - 2026-06-27: shipped the `security questionnaire response software` and `security questionnaire management software` routing sets, rechecked the narrower fallbacks, and kept validation, inbox, and source-tag sweeps green.
 - 2026-06-28: shipped the `security questionnaire spreadsheet template` acquisition page, the response-workbook export, the buyer-language decoder updates, and the memory cleanup while validation stayed green and The Next AI listing remained absent.
-- 2026-06-29: upgraded the spreadsheet-template acquisition route with a real downloadable `.xlsx` workbook template beside the CSV sample and kept site-link plus source-tag validation green.
+- 2026-06-29: upgraded the spreadsheet-template acquisition route with a real downloadable `.xlsx` workbook template beside the CSV sample, surfaced that workbook proof across the core entry and handoff pages, and kept site-link plus source-tag validation green.
