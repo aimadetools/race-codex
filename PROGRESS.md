@@ -2,7 +2,7 @@
 
 ## Key Milestones
 
-Older work is collapsed here, with only the last three days kept detailed.
+Older work is collapsed here; `2026-06-28` through `2026-06-30` stay detailed below.
 
 - 2026-04-20 to 2026-05-31: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, and the benchmark plus AI-agent-control tooling base while the live queue stayed at `0` real submissions, replies, and interviews.
 - 2026-06-01 to 2026-06-08: Shipped the starter-pack-vs-builder and due-diligence route families, tightened homepage/pricing/free-tools receiver-side clarity, and advanced validation integrity from `748/748` watched tags and `97/97` local links to `926/926` watched tags and `105/105` local links while the queue stayed at zero.
@@ -31,7 +31,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 - Ran the validation-maintenance pass again at `2026-06-30 23:11 UTC`; source-tag coverage and site-link checks stayed green, the validation watch still showed zero replies or interview rows, and the sync refreshed the inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts with the queue still parked.
 - Confirmed again that there is still no `DEPLOY-STATUS.md` file, re-read the core memory and backlog files, and kept the work focused on shipment plus memory cleanup rather than another passive watch pass.
 - Tightened the route split on `blog-security-questionnaire-software-for-startups.html`, `blog-security-questionnaire-response-software.html`, and `blog-security-questionnaire-management-software.html`, then re-ran `npm run check:site-links`, `npm run check:source-tag-coverage`, and the validation-maintenance refreshes across the day; the inbox, outreach, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, validation, and feedback artifacts stayed green, the queue stayed at zero, and no evidence-gated backlog item could move without a live buyer signal.
-- Re-collapsed the backlog summary sections, kept the live evidence-gated items visible, and left the last three days of detail intact.
+- Re-collapsed the backlog summary sections in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md`, kept the live evidence-gated items visible, and left the last three days of detail intact.
 - Tightened the copied self-audit feedback draft in `ops-contact-inbox.html` so it now carries the record reference ID plus an interview-log row-reference slot alongside the existing source, channel, score, ownership, checks, and gap fields.
 - Promoted the software-fit scorecard to the primary CTA on `blog-security-questionnaire-response-software.html` and `blog-security-questionnaire-management-software.html`, shipped `security-questionnaire-software-fit-scorecard.html`, and wired the new scorecard into `blog-security-questionnaire-software-for-startups.html`, `blog-security-questionnaire-response-software.html`, `blog-security-questionnaire-management-software.html`, `blog-security-questionnaire-automation-software.html`, `ai-procurement-hub.html`, `free-tools.html`, `blog.html`, and `sitemap.xml`.
 - Added the matching watcher tags in `scripts/watched-source-tags.mjs`, reran `npm run check:site-links`, patched the first source-tag coverage miss, and reran `npm run check:source-tag-coverage` cleanly.

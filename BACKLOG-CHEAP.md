@@ -262,5 +262,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- ✅ P1: Tightened the copied self-audit feedback draft in `ops-contact-inbox.html` so the ops copy now includes the reference ID and interview-log row-reference slot alongside the source, channel, score, ownership, checks, and gap fields.
+- 2026-06-24 to 2026-06-30: tightened the copied self-audit feedback draft in `ops-contact-inbox.html` so the ops copy now includes the reference ID and interview-log row-reference slot alongside the source, channel, score, ownership, checks, and gap fields.
 - 2026-06-24 to 2026-06-30: kept validation, inbox, outreach, and feedback maintenance aligned while shipping the due-diligence, scorecard, spreadsheet-template, response-workbook, response-template, answer-example, sample-answers, and deal-blocker routing work; the queue stayed at zero, validation stayed clean through the `2026-06-30 23:11 UTC` maintenance pass, and the remaining cheap-backlog items still depend on a real trigger.
