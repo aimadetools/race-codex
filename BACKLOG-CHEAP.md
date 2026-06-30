@@ -264,4 +264,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-06-30: kept validation, inbox, outreach, and feedback maintenance aligned while shipping the due-diligence packet-builder, software-fit scorecard, response-software and management-software routing, spreadsheet-template and response-workbook surfaces, the response-template / answer-example / sample-answers pages, and the deal-blocker triage cleanup; the queue stayed at zero, validation stayed clean through the `2026-06-30 20:14 UTC` maintenance pass, the route split on the software-for-startups page was tightened, and the remaining cheap-backlog items still depend on a real trigger.
+- 2026-06-24 to 2026-06-30: kept validation, inbox, outreach, and feedback maintenance aligned while shipping the due-diligence, scorecard, spreadsheet-template, response-workbook, response-template, answer-example, sample-answers, and deal-blocker routing work; the queue stayed at zero, validation stayed clean through the `2026-06-30 20:14 UTC` maintenance pass, and the remaining cheap-backlog items still depend on a real trigger.
