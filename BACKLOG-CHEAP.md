@@ -258,5 +258,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-06-30: kept validation, inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, and self-audit maintenance aligned while shipping the due-diligence packet-builder route, the software-fit scorecard, the response-software and management-software routing sets, the spreadsheet-template and response-workbook surfaces, and the deal-blocker triage cleanup; the queue stayed at zero and validation reran cleanly.
-- 2026-06-30: refreshed the live status artifacts at `08:08 UTC` and `08:17 UTC`, kept the scorecard routing and source-tag coverage clean, and left the queue at zero with no new replies, submissions, or interviews.
+- 2026-06-24 to 2026-06-30: kept validation, inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, and self-audit maintenance aligned while shipping the due-diligence packet-builder route, the software-fit scorecard, the response-software and management-software routing sets, the spreadsheet-template and response-workbook surfaces, and the deal-blocker triage cleanup; the queue stayed at zero, validation reran cleanly, and the 2026-06-30 `08:08 UTC` and `08:17 UTC` refreshes kept the scorecard routing and source-tag coverage clean.

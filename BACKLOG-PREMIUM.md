@@ -83,5 +83,4 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-06-05 to 2026-06-29: kept validation, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, and deal-blocker maintenance aligned while folding older route work into one summary line; the 2026-06-29 `23:19 UTC` pass ended with the queue still at zero and the latest no-reply checkpoint deduplicated into `COMMUNITY-FEEDBACK.md`.
-- 2026-06-30: promoted the buyer-language due-diligence packet-builder route and the software-fit scorecard across the core AI, named-vendor, and undecided-software surfaces so route judgment lands before the longer comparison guides, then refreshed validation at `08:08 UTC` and `08:17 UTC` with the queue still at zero.
+- 2026-06-05 to 2026-06-30: kept validation, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, and deal-blocker maintenance aligned while promoting the buyer-language due-diligence packet-builder route and the software-fit scorecard across the core AI, named-vendor, and undecided-software surfaces so route judgment lands before the longer comparison guides; the queue stayed at zero, the 2026-06-29 `23:19 UTC` checkpoint deduplicated the latest no-reply note into `COMMUNITY-FEEDBACK.md`, and validation refreshed cleanly again at `08:08 UTC` and `08:17 UTC`.
