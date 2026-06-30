@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-29 23:19 UTC
+Checked at: 2026-06-30 08:08 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -176,6 +176,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - about-page-purchase-next-steps: 0
 - about-page-starter-pack-comparison: 0
 - about-page-spreadsheet-template: 0
+- about-page-software-scorecard: 0
+- about-page-questionnaire-software: 0
 - about-page-response-software: 0
 - about-page-management-software: 0
 - about-page-sig-guide: 0
@@ -348,6 +350,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-questionnaire-software: 0
 - free-tools-management-software: 0
 - free-tools-response-software: 0
+- free-tools-software-scorecard: 0
 - free-tools-route-due-diligence: 0
 - free-tools-route-repeat-review: 0
 - free-tools-route-broader-handoff: 0
@@ -814,6 +817,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-answer-library-agent-review: 0
 - ai-answer-library-agent-approval-gate: 0
 - ai-answer-library-response-software: 0
+- ai-answer-library-software-scorecard: 0
 - ai-answer-library-spreadsheet-handoff: 0
 - ai-answer-library-spreadsheet-template: 0
 - ai-answer-library-management-software: 0
@@ -1117,6 +1121,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-starter-pack-openai-answer-bank: 0
 - ai-security-questionnaire-starter-pack-openai-path-guide: 0
 - ai-security-questionnaire-starter-pack-response-software: 0
+- ai-security-questionnaire-starter-pack-software-scorecard: 0
 - ai-security-questionnaire-starter-pack-management-software: 0
 - ai-security-questionnaire-starter-pack-spreadsheet-template: 0
 - ai-security-questionnaire-starter-pack-questionnaire-software: 0
@@ -1192,6 +1197,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-questionnaire-builder-example: 0
 - ai-questionnaire-builder-spreadsheet-template: 0
 - ai-questionnaire-builder-response-software: 0
+- ai-questionnaire-builder-software-scorecard: 0
 - ai-questionnaire-builder-management-software: 0
 - ai-answer-bank-vs-pro-kit-answer-bank: 0
 - ai-answer-bank-vs-pro-kit-bank: 0
@@ -1399,6 +1405,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - questionnaire-software-answer-bank: 0
 - questionnaire-software-audit: 0
 - questionnaire-software-evidence-map: 0
+- questionnaire-software-scorecard: 0
 - spreadsheet-template-nav-audit: 0
 - spreadsheet-template-builder: 0
 - spreadsheet-template-bundle-sample: 0
@@ -1428,6 +1435,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-software-due-diligence: 0
 - automation-software-evidence-map: 0
 - automation-software-audit: 0
+- automation-software-scorecard: 0
 - management-software-nav-audit: 0
 - management-software-builder: 0
 - management-software-spreadsheet-template: 0
@@ -1437,6 +1445,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - management-software-questionnaire-software: 0
 - management-software-answer-bank: 0
 - management-software-audit: 0
+- management-software-scorecard: 0
 - management-software-responsive-alternative: 0
 - management-software-loopio-alternative: 0
 - management-software-hypercomply-alternative: 0
@@ -1451,16 +1460,33 @@ Source of truth: Vercel Blob `contact-submissions/`
 - response-software-automation-software: 0
 - response-software-answer-bank: 0
 - response-software-audit: 0
+- response-software-scorecard: 0
 - response-software-responsive-alternative: 0
 - response-software-loopio-alternative: 0
 - response-software-hypercomply-alternative: 0
 - response-software-conveyor-alternative: 0
+- homepage-software-scorecard: 0
+- start-here-software-scorecard: 0
+- pricing-software-scorecard: 0
+- route-chooser-software-scorecard: 0
+- software-scorecard-nav-audit: 0
+- software-scorecard-builder: 0
+- software-scorecard-spreadsheet-template: 0
+- software-scorecard-answer-bank: 0
+- software-scorecard-response-software: 0
+- software-scorecard-management-software: 0
+- software-scorecard-questionnaire-software: 0
+- software-scorecard-automation-software: 0
+- software-scorecard-deal-blocker: 0
+- software-scorecard-audit: 0
 - blog-index-response-software: 0
 - blog-index-automation-software: 0
+- blog-index-software-scorecard: 0
 - blog-index-vanta-alternative: 0
 - blog-index-responsive-alternative: 0
 - blog-index-loopio-alternative: 0
 - ai-procurement-hub-automation-software: 0
+- ai-procurement-hub-software-scorecard: 0
 - ai-procurement-hub-vanta-alternative: 0
 - ai-procurement-hub-responsive-alternative: 0
 - ai-procurement-hub-loopio-alternative: 0
@@ -1554,6 +1580,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-answer-bank-comparison: 0
 - ai-security-questionnaire-answer-bank-openai: 0
 - ai-security-questionnaire-answer-bank-response-software: 0
+- ai-security-questionnaire-answer-bank-software-scorecard: 0
 - ai-security-questionnaire-answer-bank-management-software: 0
 - ai-security-questionnaire-answer-bank-spreadsheet-template: 0
 - openai-answer-bank-builder: 0
@@ -1658,22 +1685,27 @@ Source of truth: Vercel Blob `contact-submissions/`
 - openai-security-questionnaire-template-comparison: 0
 - openai-security-questionnaire-example-comparison: 0
 - openai-security-questionnaire-template-response-software: 0
+- openai-security-questionnaire-template-software-scorecard: 0
 - openai-security-questionnaire-template-management-software: 0
 - openai-security-questionnaire-example-response-software: 0
 - openai-security-questionnaire-example-management-software: 0
 - anthropic-security-questionnaire-template-response-software: 0
+- anthropic-security-questionnaire-template-software-scorecard: 0
 - anthropic-security-questionnaire-template-management-software: 0
 - anthropic-security-questionnaire-example-response-software: 0
 - anthropic-security-questionnaire-example-management-software: 0
 - claude-security-questionnaire-template-response-software: 0
+- claude-security-questionnaire-template-software-scorecard: 0
 - claude-security-questionnaire-template-management-software: 0
 - claude-security-questionnaire-example-response-software: 0
 - claude-security-questionnaire-example-management-software: 0
 - gemini-security-questionnaire-template-response-software: 0
+- gemini-security-questionnaire-template-software-scorecard: 0
 - gemini-security-questionnaire-template-management-software: 0
 - gemini-security-questionnaire-example-response-software: 0
 - gemini-security-questionnaire-example-management-software: 0
 - microsoft-copilot-security-questionnaire-template-response-software: 0
+- microsoft-copilot-security-questionnaire-template-software-scorecard: 0
 - microsoft-copilot-security-questionnaire-template-management-software: 0
 - microsoft-copilot-security-questionnaire-example-response-software: 0
 - microsoft-copilot-security-questionnaire-example-management-software: 0
@@ -1696,6 +1728,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-security-questionnaire-pro-kit-comparison: 0
 - ai-security-questionnaire-pro-kit-evidence-map: 0
 - ai-security-questionnaire-pro-kit-response-software: 0
+- ai-security-questionnaire-pro-kit-software-scorecard: 0
 - ai-security-questionnaire-pro-kit-management-software: 0
 - ai-security-questionnaire-pro-kit-spreadsheet-template: 0
 - ai-security-questionnaire-pro-kit-audit: 0
