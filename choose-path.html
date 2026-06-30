@@ -428,16 +428,32 @@
           } else if (languageValue === "due-diligence") {
             recommendation = {
               title: "Use the due diligence route.",
-              summary: "The buyer is already speaking procurement language, so keep the thread in the due-diligence template, scorecard, or packet builder instead of forcing it back into a shorter answer path.",
+              summary: needValue === "pack"
+                ? "The buyer is already speaking procurement language and you need a fuller packet, so move straight into the due-diligence packet builder instead of starting from a lighter template."
+                : "The buyer is already speaking procurement language, so keep the thread in the due-diligence template, scorecard, or packet builder instead of forcing it back into a shorter answer path.",
               bullets: [
-                "Best when the buyer wants vendor chain or framework coverage",
-                "Keeps approval owner, review date, and escalation path together",
-                "Use the evidence map if one claim still needs proof"
+                needValue === "pack"
+                  ? "Best when the buyer wants one practical packet with vendor chain, scope, owner, and proof in one place"
+                  : "Best when the buyer wants vendor chain or framework coverage",
+                needValue === "pack"
+                  ? "Keeps the lighter due-diligence template one click away if the packet shape still needs calibration"
+                  : "Keeps approval owner, review date, and escalation path together",
+                needValue === "pack"
+                  ? "Use the evidence map only after the packet is coherent and one claim still needs proof"
+                  : "Use the evidence map if one claim still needs proof"
               ],
-              primaryHref: "blog-ai-due-diligence-questionnaire-template.html",
-              primaryLabel: "Open due diligence template",
-              secondaryHref: "ai-due-diligence-packet-builder.html",
-              secondaryLabel: "Build due diligence packet"
+              primaryHref: needValue === "pack"
+                ? "ai-due-diligence-packet-builder.html"
+                : "blog-ai-due-diligence-questionnaire-template.html",
+              primaryLabel: needValue === "pack"
+                ? "Build due diligence packet"
+                : "Open due diligence template",
+              secondaryHref: needValue === "pack"
+                ? "blog-ai-due-diligence-questionnaire-template.html"
+                : "ai-due-diligence-packet-builder.html",
+              secondaryLabel: needValue === "pack"
+                ? "Open due diligence template"
+                : "Build due diligence packet"
             };
           } else if (languageValue === "agent") {
             recommendation = {
@@ -554,7 +570,9 @@
           }
 
           const reason = languageValue === "due-diligence"
-            ? "buyer-language due diligence"
+            ? needValue === "pack"
+              ? "buyer-language due diligence packet"
+              : "buyer-language due diligence"
             : languageValue === "management-software"
               ? "management-software shopping"
             : languageValue === "response-software"
