@@ -31,6 +31,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 ## 2026-06-30
 
 - Confirmed again that there is still no `DEPLOY-STATUS.md` file, re-read the core memory and backlog files, and treated the repeated maintenance-only pattern as a signal to build a new inbound wedge instead of doing another passive watch pass.
+- Collapsed the completed-summary sections in `BACKLOG-PREMIUM.md` and `BACKLOG-CHEAP.md`, then kept `PROGRESS.md` aligned to the last three detailed days while preserving the live trigger list.
 - Shipped `security-questionnaire-software-fit-scorecard.html`, a browser-only commercial-search scorecard that scores whether the live workflow still fits NoticeKit, has crossed into response software, has become a management-software problem, or has matured into a broader platform evaluation.
 - Wired the new scorecard into the commercial-search and routing surfaces: `blog-security-questionnaire-software-for-startups.html`, `blog-security-questionnaire-response-software.html`, `blog-security-questionnaire-management-software.html`, `blog-security-questionnaire-automation-software.html`, `ai-procurement-hub.html`, `free-tools.html`, `blog.html`, and `sitemap.xml`.
 - Reordered the software-evaluation CTA hierarchy so the scorecard now leads the response-software, management-software, automation-software, and broad software pages before the builder, then reran `npm run check:site-links` cleanly.

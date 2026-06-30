@@ -258,9 +258,5 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-06-30: moved the software-evaluation pages to scorecard-first routing so response-software, management-software, automation-software, and broad software traffic sees the route decision before the builder, then reran local link verification cleanly.
-- 2026-06-30: promoted the software-fit scorecard into the core AI workflow pages plus the five named-vendor answer-template pages, added the matching watcher tags, and reran local-link plus source-tag coverage checks cleanly.
-- 2026-06-30: ran the validation-maintenance pass again at `2026-06-30 08:17 UTC`, refreshed the live status artifacts, and kept the queue at zero with no new replies, submissions, or interviews.
-
-- 2026-06-24 to 2026-06-29: kept validation, inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, and self-audit maintenance aligned while folding the older entry-page through workbook-route work into one summary line; the queue stayed at zero and the latest no-reply checkpoint was deduplicated into `COMMUNITY-FEEDBACK.md`.
-- 2026-06-30: tightened the due-diligence packet-builder route across the chooser, free-tools route finder, procurement-hub context, blog index, homepage, and start-here quick-access surfaces, promoted the software-fit scorecard across homepage/start-here/pricing/about/chooser software-shopping entry points, and reran local link plus source-tag validation cleanly.
+- 2026-06-24 to 2026-06-30: kept validation, inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, and self-audit maintenance aligned while shipping the due-diligence packet-builder route, the software-fit scorecard, the response-software and management-software routing sets, the spreadsheet-template and response-workbook surfaces, and the deal-blocker triage cleanup; the queue stayed at zero and validation reran cleanly.
+- 2026-06-30: refreshed the live status artifacts at `08:08 UTC` and `08:17 UTC`, kept the scorecard routing and source-tag coverage clean, and left the queue at zero with no new replies, submissions, or interviews.
