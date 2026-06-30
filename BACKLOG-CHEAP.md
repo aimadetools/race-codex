@@ -258,6 +258,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-06-30: moved the software-evaluation pages to scorecard-first routing so response-software, management-software, automation-software, and broad software traffic sees the route decision before the builder, then reran local link verification cleanly.
 - 2026-06-30: promoted the software-fit scorecard into the core AI workflow pages plus the five named-vendor answer-template pages, added the matching watcher tags, and reran local-link plus source-tag coverage checks cleanly.
 
 - 2026-06-24 to 2026-06-29: kept validation, inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, and self-audit maintenance aligned while folding the older entry-page through workbook-route work into one summary line; the queue stayed at zero and the latest no-reply checkpoint was deduplicated into `COMMUNITY-FEEDBACK.md`.
