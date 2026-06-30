@@ -32,6 +32,7 @@ Older work is collapsed here, with only the last three days kept detailed.
 ## 2026-06-30
 
 - Confirmed again that there is still no `DEPLOY-STATUS.md` file, re-read the core memory and backlog files, and kept the work focused on shipment plus memory cleanup rather than another passive watch pass.
+- Tightened the route split on `blog-security-questionnaire-software-for-startups.html`, `blog-security-questionnaire-response-software.html`, and `blog-security-questionnaire-management-software.html` so buyers see the response-vs-management branch earlier, then re-ran the site-link and source-tag checks cleanly.
 - Rechecked the repo checks with `npm run check:site-links` and `npm run check:source-tag-coverage`, confirmed both passed cleanly, and found no evidence-gated backlog item that could be advanced without a live buyer signal.
 - Ran `npm run run:validation-maintenance` at `2026-06-30 16:31 UTC`, refreshed the inbox, outreach, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, logged another deduplicated no-reply checkpoint, and kept the queue at zero.
 - Ran validation-maintenance refreshes at `2026-06-30 08:08 UTC`, `2026-06-30 08:17 UTC`, `2026-06-30 16:07 UTC`, `2026-06-30 16:11 UTC`, and `2026-06-30 16:14 UTC`, updating the inbox, outreach, generator, audit, help-request, self-audit, validation, and feedback artifacts while the queue stayed at zero and site-link/source-tag coverage remained green.
