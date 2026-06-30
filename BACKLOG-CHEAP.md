@@ -259,4 +259,4 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-06-24 to 2026-06-29: kept validation, inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, and self-audit maintenance aligned while folding the older entry-page through workbook-route work into one summary line; the queue stayed at zero and the latest no-reply checkpoint was deduplicated into `COMMUNITY-FEEDBACK.md`.
-- 2026-06-30: tightened the due-diligence packet-builder route across the chooser, free-tools route finder, procurement-hub context, blog index, homepage, and start-here quick-access surfaces, then reran local link and source-tag validation cleanly.
+- 2026-06-30: tightened the due-diligence packet-builder route across the chooser, free-tools route finder, procurement-hub context, blog index, homepage, and start-here quick-access surfaces, promoted the software-fit scorecard across homepage/start-here/pricing/about/chooser software-shopping entry points, and reran local link plus source-tag validation cleanly.
