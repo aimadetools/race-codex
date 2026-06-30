@@ -271,6 +271,9 @@
         const selectedChecks = Array.isArray(record.selectedChecks) && record.selectedChecks.length
           ? record.selectedChecks.join(", ")
           : "None";
+        const interviewLogRows = formatListField(
+          record.interviewLogRows || record.interviewLogRowRefs || record.interviewLogReferences || record.interviewRows
+        );
         const submissionClass = record.isLikelyTestSubmission ? "likely test" : "likely real";
         const summary = record.summary || `Self-audit feedback received from ${record.company}.`;
         const details = record.reviewNeed || "Not provided";
@@ -281,6 +284,7 @@
           `- ${(record.submittedAt || record.uploadedAt || "").slice(0, 10)} | self-audit reply | ${record.company} | ${record.segmentGuess || "unknown"}`,
           `  summary: ${summary}`,
           `  details: ${details}`,
+          `  reference_id: ${record.referenceId || "Not provided"}`,
           `  source_tag: ${record.sourceTag || "site"} | Source tag: ${record.sourceTag || "site"}`,
           `  submission_channel: ${record.submissionChannel || "unknown"} | Channel: ${record.submissionChannel || "unknown"}`,
           `  score: ${score}`,
@@ -289,8 +293,19 @@
           `  submission_class: ${submissionClass}`,
           `  selected_checks: ${selectedChecks}`,
           `  top_gaps: ${topGaps}`,
+          `  interview_log_rows: ${interviewLogRows}`,
           `  reply_expectation: prefer the on-page form; email is fallback`
         ].join("\n");
+      }
+
+      function formatListField(value) {
+        if (Array.isArray(value)) {
+          const cleaned = value.map((entry) => String(entry || "").trim()).filter(Boolean);
+          return cleaned.length ? cleaned.join(", ") : "None";
+        }
+
+        const raw = String(value || "").trim();
+        return raw || "None";
       }
 
       function teardownDraft(record) {
@@ -473,8 +488,10 @@
 
         if (record.isSelfAuditFeedback) {
           renderLines(article, "Self-audit fields", [
+            ["Reference ID", record.referenceId || "Not provided"],
             ["Selected checks", record.selectedChecks || []],
             ["Top gaps", record.topGaps || []],
+            ["Interview-log rows", record.interviewLogRows || record.interviewLogRowRefs || record.interviewLogReferences || record.interviewRows || ""],
             ["Optional note", record.reviewNeed || ""],
             ["Summary", record.summary || ""]
           ]);

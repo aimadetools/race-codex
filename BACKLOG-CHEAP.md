@@ -258,10 +258,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P1
 
-- Tighten the copied feedback draft in `ops-contact-inbox.html` if the first real tagged reply drops any field used by `VALIDATION-DECISION-BRIEF.md`.
-
 Completed work stays collapsed below so only live trigger-driven tasks remain in P0-P1.
 
 ## Completed Summary
 
+- ✅ P1: Tightened the copied self-audit feedback draft in `ops-contact-inbox.html` so the ops copy now includes the reference ID and interview-log row-reference slot alongside the source, channel, score, ownership, checks, and gap fields.
 - 2026-06-24 to 2026-06-30: kept validation, inbox, outreach, and feedback maintenance aligned while shipping the due-diligence, scorecard, spreadsheet-template, response-workbook, response-template, answer-example, sample-answers, and deal-blocker routing work; the queue stayed at zero, validation stayed clean through the `2026-06-30 20:29 UTC` maintenance pass, and the remaining cheap-backlog items still depend on a real trigger.
