@@ -13,21 +13,18 @@ Older work is collapsed here, with only the last three days kept detailed.
 
 ## 2026-06-28
 
-- Re-read the memory files, confirmed there was still no `DEPLOY-STATUS.md` file to repair, and kept the backlog cleanup moving while the live evidence-gated tasks stayed untouched.
-- Kept the batch-02 directory pass blocked because no authenticated browser session is exposed, and the public The Next AI probes still showed no `NoticeKit` listing.
+- Re-read the memory files, confirmed there was still no `DEPLOY-STATUS.md` file to repair, kept the batch-02 directory pass blocked on the missing authenticated browser session, and left the live evidence-gated tasks untouched while public The Next AI probes still showed no `NoticeKit` listing.
 - Tightened the self-audit share card, added the response-workbook guide, and refreshed the related site-link and source-tag checks.
 - Reworked the purchase-next-steps, workbook, spreadsheet-template, chooser, and downstream comparison pages so worksheet-led traffic now lands on the template or workbook path before widening into builder or software language, then reran validation maintenance with the inbox, partner, benchmark, AI-agent, audit, generator, help-request, self-audit, and validation artifacts rebuilding cleanly at zero queue.
 
 ## 2026-06-29
 
-- Confirmed there is still no `DEPLOY-STATUS.md` file, kept the highest-priority work parked on blocked real-interview validation, and used the rest of the day for memory cleanup rather than chasing a false deployment problem.
+- Confirmed there was still no `DEPLOY-STATUS.md` file, kept the highest-priority work parked on blocked real-interview validation, and used the rest of the day for memory cleanup rather than chasing a false deployment problem.
 - Shipped the spreadsheet-first workbook/template upgrades, surfaced the workbook-template promise and sample workbook across the core entry pages, and corrected the stale `25`-row builder comparison copy to `50`.
 - Upgraded `ai-deal-blocker.html` into a browser-only triage tool, added the missing route watcher tags, and refreshed `ai-procurement-hub.html`, `blog-ai-security-questionnaire-path-guide.html`, and the software-comparison exits so the live route order now matches the product state.
 - Expanded `blog-security-questionnaire-software-for-startups.html` with the missing Vanta row plus direct response-software and management-software route cards so the commercial-search page points more cleanly at the narrower buyer-language pages.
-- Ran validation maintenance after catching watcher regressions, added the missing `questionnaire-software-vanta-alternative`, `questionnaire-software-responsive-alternative`, `questionnaire-software-loopio-alternative`, and `pricing-ai-due-diligence-comparison` tags, and reran the validation/site-link sweeps successfully.
-- Re-ran validation maintenance and site checks repeatedly through the day; the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts stayed clean, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoints, and the queue stayed at zero.
-- Ran another validation-maintenance pass at `2026-06-30 08:28 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the live queue at zero while the no-reply watch stayed clean.
-- Tightened the starter kit operational docs, re-collapsed the completed-summary sections in `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md`, and kept the live evidence-gated queue parked.
+- Ran validation maintenance after catching watcher regressions, added the missing `questionnaire-software-vanta-alternative`, `questionnaire-software-responsive-alternative`, `questionnaire-software-loopio-alternative`, and `pricing-ai-due-diligence-comparison` tags, then reran the validation/site-link sweeps successfully while the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts stayed clean and `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoints.
+- Ran another validation-maintenance pass at `2026-06-30 08:28 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, tightened the starter kit operational docs, re-collapsed the completed-summary sections in `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md`, and kept the live evidence-gated queue parked.
 
 ## 2026-06-30
 
