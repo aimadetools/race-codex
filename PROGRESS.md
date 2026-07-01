@@ -70,6 +70,7 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 - Ran the validation-maintenance checks again at `2026-07-01 16:16 UTC`; `check:site-links`, `check:source-tag-coverage`, `check:self-audit-follow-up`, and `check:self-audit-production` all stayed green, the snapshot rewrote the contact inbox and validation status files, and the live queue remained at zero while the human-owned authenticated browser blocker stayed external to this workspace.
 - Ran `npm run run:validation-maintenance` at `2026-07-01 16:22 UTC`; the refresh kept the zero replies, zero submissions, and zero interviews state intact, rewrote the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and left the authenticated-browser directory blocker unresolved.
 - Cleaned up the memory files so older progress stays collapsed, the last three days remain detailed here, and the backlog completion notes stay summarized instead of expanded.
+- Collapsed the finished-summary sections in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` again so the live trigger-driven items stay readable without changing any evidence-gated decisions.
 
 ## Next Step
 
