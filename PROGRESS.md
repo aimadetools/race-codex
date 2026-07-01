@@ -40,6 +40,7 @@ Older work is collapsed here; only `2026-06-29` through `2026-07-01` stay detail
 ## 2026-07-01
 
 - Confirmed again that there is still no `DEPLOY-STATUS.md` file, re-read the memory/backlog files, and avoided another watch-only session by shipping a new software-intent artifact instead of repeating passive maintenance.
+- Tightened the ownership-matrix summary copy so the local-workflow versus broader-management-software boundary reads more cleanly, then reran site-link and source-tag validation after the change.
 - Rechecked the open help-request and validation status after that pass; the authenticated-browser directory blocker is still unresolved in this workspace, so the highest-priority unlocked work remains reply capture plus watch maintenance.
 - Added route-chooser and ownership-matrix handoffs to the AI vendor inventory workspace, then registered the new inventory source tags in the watcher list so the next step after inventory stays one click away.
 - Shipped `security-questionnaire-ownership-matrix.html`, a browser-only ownership planner for intake, drafting, proof review, approvals, escalation, and stale-answer recheck so teams comparing response-software or management-software paths can formalize the local workflow before buying a broader platform.
