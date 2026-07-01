@@ -224,7 +224,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If the first real visit, reply, or teardown request references `blog-subprocessor-benchmark-worksheet.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the subprocessor page checker or review brief builder.
 - If the first real intake lands after the benchmark tracker and the buyer mentions the saved row batch, exported summary, or CSV export as the reason it felt usable, copy the exact wording into `COMMUNITY-FEEDBACK.md` before changing the tracker again.
 - If the benchmark tracker drives three real visits, forwards, or replies before the page checker or review brief builder does, move it into a stronger homepage or free-tools slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
-- Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or partner-program reply; the latest watch checkpoint is `2026-07-01 12:39 UTC`, and the matching CSV or tracker should update immediately if anything lands after that.
+- Check `COMMUNITY-FEEDBACK.md`, `CONTACT-INBOX-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `ops-contact-inbox.html`, `consultant-partner-outreach-tracker.csv`, and `buyer-validation-outreach-batch-01.csv` through `buyer-validation-outreach-batch-04.csv` for the first real founder/advisor reply, `free_async_teardown`, `partner_request`, or partner-program reply; the latest watch checkpoint is `2026-07-01 12:42 UTC`, and the matching CSV or tracker should update immediately if anything lands after that.
 - If the first real `free_async_teardown` lands, record the source tag and whether it came from homepage, pricing, about, outreach, or another campaign link before replying.
 - If the first real direct-submit `free_async_teardown` lands from `free-teardown-page` or a CTA that routes into `free-teardown.html`, preserve the requester role from `ownershipSignal` before replying so founder-led vs advisor-led demand is visible immediately.
 - If the first real `partner_request` lands from `partner-preview-hero`, `partner-preview-cta`, or `partner-outreach-batch-01`, log the qualification outcome in `consultant-partner-outreach-tracker.csv`.
@@ -268,6 +268,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-01: ran the `12:42 UTC` validation-maintenance refresh, refreshed the cheap backlog watch artifacts, and kept the trigger-driven tasks parked while the queue stayed at zero.
 - 2026-07-01: ran the `12:39 UTC` validation-maintenance refresh, refreshed the cheap backlog watch artifacts, and kept the trigger-driven tasks parked while the queue stayed at zero.
 - 2026-07-01: collapsed the finished backlog maintenance into summary lines, kept the live evidence-gated P0 items visible, and left the trigger-based follow-through parked until real buyer signal lands.
 - 2026-07-01: ran the `12:35 UTC` validation-maintenance refresh, kept the live reply-capture and evidence-gated items parked, and left the backlog summaries collapsed while the queue stayed at zero.
