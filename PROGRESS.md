@@ -47,6 +47,7 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 - Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the `start-here` route patch; both passed cleanly with `144` HTML files checked and `1852` emitted source tags covered.
 - Extended `blog-security-questionnaire-automation-for-startups.html` and `blog-sig-caiq-vsaq-questionnaire-automation.html` so broader automation and exact-match questionnaire-family traffic can now branch directly into `security-questionnaire-software-fit-scorecard.html` and `security-questionnaire-ownership-matrix.html` instead of jumping straight from comparison copy into builder-or-platform choices.
 - Added the new `automation-guide-software-scorecard`, `automation-guide-ownership-matrix`, `sig-guide-software-scorecard`, and `sig-guide-ownership-matrix` watcher tags in `scripts/watched-source-tags.mjs`, then reran `npm run check:site-links` and `npm run check:source-tag-coverage` cleanly at `144` HTML files checked and `1856` emitted source tags covered.
+- Repaired `scripts/build-homepage-copy-refresh-queue.mjs` so the homepage refresh queue now inspects the live AI-questionnaire hero, comparison row, and blocker CTA instead of the retired subprocessor-era homepage copy, then regenerated `HOMEPAGE-COPY-REFRESH-QUEUE.md` to keep the advisor-vs-founder queue usable again.
 
 ## Next Step
 

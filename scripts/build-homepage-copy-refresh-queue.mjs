@@ -11,38 +11,38 @@ const OUTPUT_FILE = join(ROOT, "HOMEPAGE-COPY-REFRESH-QUEUE.md");
 const COPY_TARGETS = [
   {
     label: "Hero eyebrow",
-    current: "For SaaS teams under 30 people",
-    proposed: "For privacy advisors and lean SaaS teams"
+    current: "For SaaS teams answering buyer AI security questionnaires",
+    proposed: "For advisors and lean SaaS teams cleaning up buyer AI reviews"
   },
   {
     label: "Hero headline",
-    current: "Ship subprocessor change notices without a trust center.",
-    proposed: "Prepare vendor-change review packets before counsel review."
+    current: "Answer the buyer's AI questionnaire without turning one deal into a month-long cleanup project.",
+    proposed: "Package the buyer's AI questionnaire into a review-ready handoff before the thread spreads."
   },
   {
     label: "Hero copy",
-    current: "NoticeKit turns vendor changes into customer-ready notice copy, objection-window tracking, and an evidence log your attorney can review.",
-    proposed: "NoticeKit turns vendor changes into review-ready notice packets, objection-window tracking, and evidence logs privacy advisors can hand off cleanly."
+    current: "NoticeKit is for the SaaS team answering the buyer's AI questionnaire, not for the buyer sending it. Start with three jobs only: get one answer out now, organize the facts before drafting, or build reusable files for repeat review. If the blocker is still fuzzy, open the route chooser first. The free builder already handles up to 50 real buyer rows pasted from a spreadsheet or portal grid, plus CSV, TSV, and Excel uploads, then turns one fact pass into a copy-ready answer, reviewer note, response pack, downloadable response workbook, and portable JSON draft.",
+    proposed: "NoticeKit helps founders, operators, consultants, and counsel package one live buyer AI review into the smallest credible handoff: one answer now, a fact inventory, or reusable review files. If the blocker is still fuzzy, open the route chooser first. The free builder still handles up to 50 buyer rows pasted from a spreadsheet or portal grid, plus CSV, TSV, and Excel uploads, then turns one fact pass into a copy-ready answer, reviewer note, response pack, downloadable response workbook, and portable JSON draft."
   },
   {
     label: "Comparison row",
     current: "Creates the operating workflow a founder can use before buying hosted tooling.",
-    proposed: "Creates the operating workflow a privacy advisor, operator, or founder can run before buying hosted tooling."
+    proposed: "Creates the operating workflow an advisor, operator, or founder can run before buying hosted tooling."
   },
   {
-    label: "Bottom CTA headline",
-    current: "Founder with a vendor change this month?",
-    proposed: "Advisor or operator cleaning up a vendor change this month?"
+    label: "Primary blocker CTA headline",
+    current: "Already know the blocker?",
+    proposed: "Already know where the review is stuck?"
   },
   {
-    label: "Bottom CTA copy",
-    current: "Send the vendor name, your current subprocessor page, and the customer segment affected. NoticeKit is prioritizing founder/operator workflows before consultant channels.",
-    proposed: "Send the vendor name, current subprocessor page, and affected customer segment. NoticeKit can package the facts, notice draft, and evidence trail before counsel or client review."
+    label: "Primary blocker CTA copy",
+    current: "Use Starter for one answer now, Pro for repeat review, and Audit when the thread needs judgment instead of another paragraph.",
+    proposed: "Use Starter for one answer, Pro for repeat review, and Audit when the founder, advisor, or counsel thread needs judgment instead of another paragraph."
   },
   {
-    label: "Bottom CTA button",
-    current: "Buy founder review",
-    proposed: "Buy advisor review"
+    label: "Primary blocker CTA button",
+    current: "Open AI deal blocker path",
+    proposed: "Open AI review blocker path"
   }
 ];
 
@@ -104,17 +104,17 @@ async function main() {
     "- The backlog calls for a homepage copy refresh queue when tagged self-audit replies lean advisor-heavy.",
     "- This file turns that trigger into a concrete edit brief instead of leaving it as a note inside `VALIDATION-STATUS.md`.",
     "",
-    "## Current Founder-First Copy To Revisit",
+    "## Current Homepage Copy To Revisit",
     "",
     buildTargetBlock(homepageText),
     "",
     "## Execution Plan",
     "",
     queueTriggered
-      ? "- Update the homepage hero, comparison row, and bottom CTA toward advisor handoff language before sending more founder expansion."
+      ? "- Update the homepage hero, comparison row, and primary blocker CTA toward advisor-handoff AI review language before more expansion."
       : "- Keep the current homepage copy until advisor-heavy ownership signals are real. Rebuild this file after every tagged self-audit reply or follow-up status change.",
     queueTriggered
-      ? "- Preserve the operational-not-legal framing while shifting the lead message toward review-ready packets, consultant handoff, and attorney-review prep."
+      ? "- Preserve the receiver-side AI questionnaire framing while shifting the lead message toward review-ready handoff, consultant context, and counsel-facing prep."
       : "- Do not pivot the homepage based on silence, clicks, or untagged replies.",
     queueTriggered
       ? "- Re-run `npm run build:validation-status` after the homepage refresh ships so the status file reflects the queue closure."

@@ -1,6 +1,6 @@
 # Homepage Copy Refresh Queue
 
-Date: 2026-06-30
+Date: 2026-07-01
 
 ## Status
 
@@ -14,29 +14,29 @@ Date: 2026-06-30
 - The backlog calls for a homepage copy refresh queue when tagged self-audit replies lean advisor-heavy.
 - This file turns that trigger into a concrete edit brief instead of leaving it as a note inside `VALIDATION-STATUS.md`.
 
-## Current Founder-First Copy To Revisit
+## Current Homepage Copy To Revisit
 
-- Hero eyebrow: missing
-  Current: "For SaaS teams under 30 people"
-  Proposed: "For privacy advisors and lean SaaS teams"
-- Hero headline: missing
-  Current: "Ship subprocessor change notices without a trust center."
-  Proposed: "Prepare vendor-change review packets before counsel review."
-- Hero copy: missing
-  Current: "NoticeKit turns vendor changes into customer-ready notice copy, objection-window tracking, and an evidence log your attorney can review."
-  Proposed: "NoticeKit turns vendor changes into review-ready notice packets, objection-window tracking, and evidence logs privacy advisors can hand off cleanly."
+- Hero eyebrow: present
+  Current: "For SaaS teams answering buyer AI security questionnaires"
+  Proposed: "For advisors and lean SaaS teams cleaning up buyer AI reviews"
+- Hero headline: present
+  Current: "Answer the buyer's AI questionnaire without turning one deal into a month-long cleanup project."
+  Proposed: "Package the buyer's AI questionnaire into a review-ready handoff before the thread spreads."
+- Hero copy: present
+  Current: "NoticeKit is for the SaaS team answering the buyer's AI questionnaire, not for the buyer sending it. Start with three jobs only: get one answer out now, organize the facts before drafting, or build reusable files for repeat review. If the blocker is still fuzzy, open the route chooser first. The free builder already handles up to 50 real buyer rows pasted from a spreadsheet or portal grid, plus CSV, TSV, and Excel uploads, then turns one fact pass into a copy-ready answer, reviewer note, response pack, downloadable response workbook, and portable JSON draft."
+  Proposed: "NoticeKit helps founders, operators, consultants, and counsel package one live buyer AI review into the smallest credible handoff: one answer now, a fact inventory, or reusable review files. If the blocker is still fuzzy, open the route chooser first. The free builder still handles up to 50 buyer rows pasted from a spreadsheet or portal grid, plus CSV, TSV, and Excel uploads, then turns one fact pass into a copy-ready answer, reviewer note, response pack, downloadable response workbook, and portable JSON draft."
 - Comparison row: present
   Current: "Creates the operating workflow a founder can use before buying hosted tooling."
-  Proposed: "Creates the operating workflow a privacy advisor, operator, or founder can run before buying hosted tooling."
-- Bottom CTA headline: missing
-  Current: "Founder with a vendor change this month?"
-  Proposed: "Advisor or operator cleaning up a vendor change this month?"
-- Bottom CTA copy: missing
-  Current: "Send the vendor name, your current subprocessor page, and the customer segment affected. NoticeKit is prioritizing founder/operator workflows before consultant channels."
-  Proposed: "Send the vendor name, current subprocessor page, and affected customer segment. NoticeKit can package the facts, notice draft, and evidence trail before counsel or client review."
-- Bottom CTA button: missing
-  Current: "Buy founder review"
-  Proposed: "Buy advisor review"
+  Proposed: "Creates the operating workflow an advisor, operator, or founder can run before buying hosted tooling."
+- Primary blocker CTA headline: present
+  Current: "Already know the blocker?"
+  Proposed: "Already know where the review is stuck?"
+- Primary blocker CTA copy: present
+  Current: "Use Starter for one answer now, Pro for repeat review, and Audit when the thread needs judgment instead of another paragraph."
+  Proposed: "Use Starter for one answer, Pro for repeat review, and Audit when the founder, advisor, or counsel thread needs judgment instead of another paragraph."
+- Primary blocker CTA button: present
+  Current: "Open AI deal blocker path"
+  Proposed: "Open AI review blocker path"
 
 ## Execution Plan
 
