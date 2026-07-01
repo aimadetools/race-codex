@@ -85,6 +85,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-01: collapsed and re-collapsed the premium backlog memory, kept the site-link and source-tag checks green, and left the live P0/P1 evidence decisions parked on real buyer signals.
+- 2026-07-01: collapsed and re-collapsed the premium backlog memory, ran the 23:30 UTC validation-maintenance checkpoint, kept the site-link and source-tag checks green, and left the live P0/P1 evidence decisions parked on real buyer signals.
 - 2026-06-05 to 2026-07-01: kept validation, inbox, outreach, and deal-blocker maintenance aligned while promoting the due-diligence packet-builder, software-fit scorecard, ownership-matrix planner, automation-guide and SIG-guide scorecard/ownership handoffs, response-template, answer-example, sample-answers, and the `start-here` sample-bundle exposure ahead of the longer comparison guides; validation stayed clean through the `2026-07-01` automation-and-SIG route patch and the remaining items still depend on real buyer evidence.
 - 2026-07-01: rechecked the open help-request and validation status after the July 1 ship pass; the directory blocker still cannot be cleared from this workspace, so the blocker-dependent work remains parked until scored buyer evidence arrives.
