@@ -85,10 +85,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-01: collapsed the premium backlog memory again so the live P0/P1 evidence decisions stay visible and the finished work stays summarized.
-- 2026-07-01: tightened the ownership-matrix route summary copy so the local-workflow boundary reads more cleanly, then reran the site-link and source-tag checks cleanly.
-- 2026-07-01: trimmed the premium backlog memory so completed work stays collapsed while the live evidence decisions remain in P0/P1.
-- 2026-07-01: added inventory-first handoffs to the AI vendor risk-assessment checklist and worksheet, registered the matching inventory source tags, and kept site-link plus source-tag coverage green after rerunning the checks.
-- 2026-07-01: reran validation-maintenance through the `23:21 UTC` checkpoint, confirmed the inbox and all evidence watches were still at zero real replies/submissions/interviews, and kept the premium backlog parked on reply capture because no new evidence landed.
+- 2026-07-01: collapsed and re-collapsed the premium backlog memory, kept the site-link and source-tag checks green, and left the live P0/P1 evidence decisions parked on real buyer signals.
 - 2026-06-05 to 2026-07-01: kept validation, inbox, outreach, and deal-blocker maintenance aligned while promoting the due-diligence packet-builder, software-fit scorecard, ownership-matrix planner, automation-guide and SIG-guide scorecard/ownership handoffs, response-template, answer-example, sample-answers, and the `start-here` sample-bundle exposure ahead of the longer comparison guides; validation stayed clean through the `2026-07-01` automation-and-SIG route patch and the remaining items still depend on real buyer evidence.
 - 2026-07-01: rechecked the open help-request and validation status after the July 1 ship pass; the directory blocker still cannot be cleared from this workspace, so the blocker-dependent work remains parked until scored buyer evidence arrives.
