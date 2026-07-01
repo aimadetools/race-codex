@@ -43,6 +43,8 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 - Shipped `security-questionnaire-ownership-matrix.html`, a browser-only ownership planner for intake, drafting, proof review, approvals, escalation, and stale-answer recheck so teams comparing response-software or management-software paths can formalize the local workflow before buying a broader platform.
 - Wired the ownership-matrix route into `blog-security-questionnaire-response-software.html`, `blog-security-questionnaire-management-software.html`, `security-questionnaire-software-fit-scorecard.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-answer-library.html`, `free-tools.html`, `blog.html`, and `sitemap.xml`, then added the matching watcher tags in `scripts/watched-source-tags.mjs`.
 - Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the new route shipped; both passed cleanly with `144` HTML files checked and `1851` emitted source tags covered.
+- Closed the missing `start-here-ai-bundle-sample` route gap by surfacing the sample starter bundle on `start-here.html`, adding the watcher tag in `scripts/watched-source-tags.mjs`, and extending the purchase-clarity watch in `scripts/build-validation-status.mjs` so the live backlog source tag now exists on page and in maintenance reporting.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the `start-here` route patch; both passed cleanly with `144` HTML files checked and `1852` emitted source tags covered.
 
 ## Next Step
 
@@ -77,4 +79,4 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-07-01: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, the response-software and management-software routing sets, the spreadsheet-template acquisition page, the response-workbook export, the deal-blocker triage path, the software-fit scorecard, the new ownership-matrix planner across the software-intent surfaces, and the due-diligence packet-builder routing cleanup while validation stayed green through the `2026-07-01` ownership-matrix ship pass and the queue stayed at zero.
+- 2026-06-24 to 2026-07-01: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, the response-software and management-software routing sets, the spreadsheet-template acquisition page, the response-workbook export, the deal-blocker triage path, the software-fit scorecard, the ownership-matrix planner, the `start-here` sample-bundle exposure plus watcher coverage fix, and the due-diligence packet-builder routing cleanup while validation stayed green through the `2026-07-01` start-here bundle-route patch and the queue stayed at zero.

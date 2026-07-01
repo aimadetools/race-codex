@@ -1517,6 +1517,7 @@ export const WATCHED_SOURCE_TAGS = [
   "founder-follow-up-tracker",
   "advisor-follow-up-tracker",
   "free-tools-ai-bundle-sample",
+  "start-here-ai-bundle-sample",
   "ai-security-questionnaire-starter-pack-bundle-sample",
   "ai-security-questionnaire-example-bundle-sample",
   "ai-bundle-sample-builder",

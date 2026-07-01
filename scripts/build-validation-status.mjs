@@ -957,6 +957,7 @@ const purchaseClarityWatch = buildWatchedSourceGroup(contactInboxStatusText, [
   { tag: "pricing-purchase-next-steps", label: "pricing purchase next steps" },
   { tag: "free-tools-kit-preview", label: "free-tools kit preview" },
   { tag: "start-here-kit-preview", label: "start-here kit preview" },
+  { tag: "start-here-ai-bundle-sample", label: "start-here bundle sample" },
   { tag: "blog-index-kit-preview", label: "blog kit preview" },
   { tag: "about-page-kit-preview", label: "about kit preview" },
   { tag: "about-page-purchase-next-steps", label: "about purchase next steps" },
