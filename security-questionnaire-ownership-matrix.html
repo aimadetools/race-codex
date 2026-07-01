@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Security Questionnaire Ownership Matrix | NoticeKit</title>
+    <meta name="description" content="Build a browser-only security questionnaire ownership matrix for your SaaS team. Assign intake, drafting, proof, approvals, escalation, and recheck ownership before you buy heavier response or management software.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:url" content="https://noticekit.tech/security-questionnaire-ownership-matrix.html">
+    <meta property="og:title" content="Security Questionnaire Ownership Matrix | NoticeKit">
+    <meta property="og:description" content="A browser-only ownership matrix and review planner for SaaS teams answering buyer security questionnaires before they commit to heavier workflow software.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit security questionnaire ownership matrix">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Security Questionnaire Ownership Matrix | NoticeKit">
+    <meta name="twitter:description" content="Assign queue ownership, approvals, proof, and escalation before you buy broader questionnaire software.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://noticekit.tech/security-questionnaire-ownership-matrix.html">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "NoticeKit Security Questionnaire Ownership Matrix",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://noticekit.tech/security-questionnaire-ownership-matrix.html",
+            "description": "Browser-only ownership matrix and review planner for SaaS teams answering buyer security questionnaires."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use a security questionnaire ownership matrix?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use it when the work is no longer blocked only by wording and now needs clearer intake ownership, proof review, approvals, escalation, or stale-answer recheck rules."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who should own a security questionnaire response?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The owner depends on workflow maturity, but early teams usually need one clear intake owner, one drafting owner, one proof or security reviewer, and one escalation owner before they need broader software."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this replace response software or management software?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. It helps a startup prove whether a light local ownership workflow is enough or whether the queue has already matured into response-software or management-software territory."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="free-tools.html">Free tools</a>
+          <a class="button secondary" href="ai-security-questionnaire-audit.html?source=ownership-matrix-nav-audit">AI audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <span class="eyebrow">Browser-only ownership planner</span>
+          <h1>Assign intake, proof, approvals, and escalation before you buy heavier questionnaire software.</h1>
+          <p>Use this ownership matrix when the real blocker is not one missing paragraph anymore. The queue now needs a clear intake owner, draft owner, proof reviewer, approval gate, escalation path, and stale-answer recheck rule. Fill the live workflow once, then copy an internal operating brief and download a starter ownership matrix without sending anything to a server.</p>
+          <div class="hero-actions">
+            <a class="button" href="#matrix">Open ownership planner</a>
+            <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=ownership-matrix-scorecard">Open software fit scorecard</a>
+            <a class="button secondary" href="blog-security-questionnaire-response-software.html?source=ownership-matrix-response-software">Open response software guide</a>
+            <a class="button secondary" href="blog-security-questionnaire-management-software.html?source=ownership-matrix-management-software">Open management software guide</a>
+            <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=ownership-matrix-answer-bank">Open answer bank</a>
+            <a class="button secondary" href="ai-deal-blocker.html?source=ownership-matrix-deal-blocker">Open deal blocker path</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice-band">
+            <strong>For the team answering the questionnaire, not buying a platform by reflex.</strong>
+            <p>This planner is for SaaS founders, operators, security reviewers, and fractional leads who need to stop ownership drift before the team overbuys a broader operating system. Use it to prove whether the next step is a local ownership layer, a reusable answer workflow, or a true management-software rollout.</p>
+          </div>
+        </section>
+
+        <section class="section audit-layout" id="matrix">
+          <form class="audit-card" id="ownership-form">
+            <div class="section-head compact-head">
+              <h2>Queue inputs</h2>
+              <p>Keep this tied to the live questionnaire process, not an idealized trust program.</p>
+              <div class="route-presets" aria-label="Quick presets">
+                <button class="button secondary" type="button" data-preset="one-owner">One owner</button>
+                <button class="button secondary" type="button" data-preset="repeat-review">Repeat review</button>
+                <button class="button secondary" type="button" data-preset="multi-owner">Multi-owner queue</button>
+                <button class="button secondary" type="button" data-preset="trust-program">Trust program</button>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label>Company
+                <input id="company" value="Example SaaS">
+              </label>
+              <label>Current queue shape
+                <select id="queue-shape">
+                  <option value="one-answer">One live answer is blocked right now</option>
+                  <option value="repeat-review">The same questions keep returning</option>
+                  <option value="multi-owner">Multiple teams now touch each review</option>
+                  <option value="program">This is already part of a broader trust program</option>
+                </select>
+              </label>
+              <label>Questionnaire volume
+                <select id="volume">
+                  <option value="one-off">One live thread right now</option>
+                  <option value="monthly">A few each month</option>
+                  <option value="weekly">Several every week</option>
+                  <option value="daily">A real daily queue</option>
+                </select>
+              </label>
+              <label>Approved answer maturity
+                <select id="answer-maturity">
+                  <option value="rough">Most answers are still rough</option>
+                  <option value="mixed">Some answers are stable, some still drift</option>
+                  <option value="stable">Most core answers are already stable</option>
+                </select>
+              </label>
+              <label>Main intake shape
+                <select id="intake-shape">
+                  <option value="pasted">Pasted questions or one answer block</option>
+                  <option value="spreadsheet">Spreadsheet rows or workbook export</option>
+                  <option value="portal">Buyer portal or imported questionnaire</option>
+                  <option value="mixed">Messy mix of rows, portals, and repeat asks</option>
+                </select>
+              </label>
+              <label>Current blocker
+                <textarea id="blocker">The buyer thread keeps reopening because nobody clearly owns intake, proof review, and final approval once the first draft is written.</textarea>
+              </label>
+            </div>
+
+            <div class="section-head compact-head" style="margin-top:22px;">
+              <h2>Assign current owners</h2>
+              <p>Use roles or names. The goal is operational clarity, not HR precision.</p>
+            </div>
+            <div class="field-grid">
+              <label>Intake owner
+                <input id="intake-owner" value="Founder or account owner">
+              </label>
+              <label>Draft owner
+                <input id="draft-owner" value="Founder or ops lead">
+              </label>
+              <label>Proof reviewer
+                <input id="proof-owner" value="Security or engineering lead">
+              </label>
+              <label>Approval owner
+                <input id="approval-owner" value="Founder or legal reviewer">
+              </label>
+              <label>Escalation owner
+                <input id="escalation-owner" value="Founder or GTM lead">
+              </label>
+              <label>Stale-answer recheck owner
+                <input id="recheck-owner" value="Product or security owner">
+              </label>
+            </div>
+
+            <div class="section-head compact-head" style="margin-top:22px;">
+              <h2>What must the workflow cover?</h2>
+              <p>Check only the responsibilities that are actually live.</p>
+            </div>
+            <div class="option-grid">
+              <label class="check-card">
+                <input id="need-row-context" type="checkbox" checked>
+                <span>
+                  <strong>Spreadsheet or portal row context</strong>
+                  <small>Exact buyer wording and row references still need preservation.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input id="need-answer-reuse" type="checkbox" checked>
+                <span>
+                  <strong>Reusable approved answers</strong>
+                  <small>The same answers keep returning and cannot live in inbox archaeology.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input id="need-proof-review" type="checkbox" checked>
+                <span>
+                  <strong>Proof and owner review</strong>
+                  <small>Links, named vendors, or operating facts need a clear verifier.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input id="need-approvals" type="checkbox" checked>
+                <span>
+                  <strong>Approval gates</strong>
+                  <small>Someone must approve risky or customer-facing claims before send.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input id="need-escalation" type="checkbox">
+                <span>
+                  <strong>Escalation path</strong>
+                  <small>Edge-case questions need a named path instead of a dead thread.</small>
+                </span>
+              </label>
+              <label class="check-card">
+                <input id="need-analytics" type="checkbox">
+                <span>
+                  <strong>Freshness or queue reporting</strong>
+                  <small>The team now wants status tracking or stale-answer reporting.</small>
+                </span>
+              </label>
+            </div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Ownership result</span>
+            <div class="score-row generator-summary">
+              <strong id="route-score">7/10</strong>
+              <span id="route-state">Formalize the local ownership layer</span>
+            </div>
+            <div class="score-meter" aria-hidden="true">
+              <span id="route-meter"></span>
+            </div>
+            <p id="route-summary">The process is already wider than one answer, but it does not yet prove that you need a broader platform purchase before ownership is explicit.</p>
+            <div class="tier-guidance">
+              <strong id="next-step-title">Best next step</strong>
+              <p id="next-step-copy">Use this ownership matrix plus the answer bank or response-software guide so the queue stops drifting before you widen into heavier management software.</p>
+            </div>
+            <div class="result-list">
+              <div>
+                <strong>What the queue needs now</strong>
+                <ul id="strength-list"></ul>
+              </div>
+              <div>
+                <strong>What still looks premature</strong>
+                <ul id="gap-list"></ul>
+              </div>
+            </div>
+            <div class="generator-actions">
+              <button class="button" id="copy-brief" type="button">Copy operating brief</button>
+              <button class="button secondary" id="copy-csv" type="button">Copy matrix CSV</button>
+              <button class="button secondary" id="download-csv" type="button">Download matrix CSV</button>
+              <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
+            </div>
+            <p class="fine-print" id="planner-status">This planner runs in your browser. Inputs stay local and autosave on this device only.</p>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article>
+              <div class="section-head">
+                <h2>Operating brief</h2>
+                <p>Use this to align the team on what the current queue actually needs.</p>
+              </div>
+              <div class="template-box" id="brief-output" aria-live="polite"></div>
+            </article>
+            <article>
+              <div class="section-head">
+                <h2>Ownership matrix preview</h2>
+                <p>Use this starter grid before you move the process into heavier software.</p>
+              </div>
+              <div class="template-box" id="matrix-output" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="grid-3">
+            <article class="card">
+              <span class="tag">Stay lighter</span>
+              <h3>One owner plus proof path</h3>
+              <p>Use the builder, workbook template, or answer bank when the queue still depends more on better answers than on formal software administration.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Response workflow</span>
+              <h3>Reusable answers plus owner lanes</h3>
+              <p>Use the response-software guide when the real need is approved content reuse, SME review, and a cleaner repeat-review workflow.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Management workflow</span>
+              <h3>Assignments, approvals, reporting</h3>
+              <p>Use the management-software guide when tracked assignments, analytics, stale-answer reporting, and broader administration are already daily problems.</p>
+            </article>
+          </div>
+          <div class="hero-actions" style="margin-top:20px;">
+            <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=ownership-matrix-builder">Build answer + bundle</a>
+            <a class="button secondary" href="blog-security-questionnaire-spreadsheet-template.html?source=ownership-matrix-spreadsheet-template">Open workbook template guide</a>
+            <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=ownership-matrix-answer-bank">Open answer bank</a>
+            <a class="button secondary" href="blog-security-questionnaire-response-software.html?source=ownership-matrix-response-software">Open response software guide</a>
+            <a class="button secondary" href="blog-security-questionnaire-management-software.html?source=ownership-matrix-management-software">Open management software guide</a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      (function () {
+        const storageKey = "noticekit-ownership-matrix-v1";
+        const form = document.querySelector("#ownership-form");
+        const fields = Array.from(form.querySelectorAll("input, select, textarea"));
+        const routeScore = document.querySelector("#route-score");
+        const routeState = document.querySelector("#route-state");
+        const routeMeter = document.querySelector("#route-meter");
+        const routeSummary = document.querySelector("#route-summary");
+        const nextStepTitle = document.querySelector("#next-step-title");
+        const nextStepCopy = document.querySelector("#next-step-copy");
+        const strengthList = document.querySelector("#strength-list");
+        const gapList = document.querySelector("#gap-list");
+        const briefOutput = document.querySelector("#brief-output");
+        const matrixOutput = document.querySelector("#matrix-output");
+        const plannerStatus = document.querySelector("#planner-status");
+        const presetButtons = Array.from(document.querySelectorAll("[data-preset]"));
+        const copyBriefButton = document.querySelector("#copy-brief");
+        const copyCsvButton = document.querySelector("#copy-csv");
+        const downloadCsvButton = document.querySelector("#download-csv");
+        const clearDraftButton = document.querySelector("#clear-draft");
+
+        function getValue(id) {
+          const node = document.getElementById(id);
+          if (!node) return "";
+          return node.type === "checkbox" ? node.checked : node.value.trim();
+        }
+
+        function setValue(id, value) {
+          const node = document.getElementById(id);
+          if (!node) return;
+          if (node.type === "checkbox") {
+            node.checked = Boolean(value);
+          } else {
+            node.value = value;
+          }
+        }
+
+        function loadDraft() {
+          try {
+            const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+            fields.forEach((field) => {
+              if (!(field.id in saved)) return;
+              if (field.type === "checkbox") {
+                field.checked = Boolean(saved[field.id]);
+              } else {
+                field.value = saved[field.id];
+              }
+            });
+          } catch (error) {
+            console.warn("Unable to restore ownership matrix draft", error);
+          }
+        }
+
+        function saveDraft() {
+          const draft = {};
+          fields.forEach((field) => {
+            draft[field.id] = field.type === "checkbox" ? field.checked : field.value;
+          });
+          localStorage.setItem(storageKey, JSON.stringify(draft));
+        }
+
+        function escapeHtml(value) {
+          return value
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+        }
+
+        function csvCell(value) {
+          return `"${String(value).replace(/"/g, '""')}"`;
+        }
+
+        function compute() {
+          const company = getValue("company") || "This team";
+          const queueShape = getValue("queue-shape");
+          const volume = getValue("volume");
+          const answerMaturity = getValue("answer-maturity");
+          const intakeShape = getValue("intake-shape");
+          const blocker = getValue("blocker");
+          const intakeOwner = getValue("intake-owner");
+          const draftOwner = getValue("draft-owner");
+          const proofOwner = getValue("proof-owner");
+          const approvalOwner = getValue("approval-owner");
+          const escalationOwner = getValue("escalation-owner");
+          const recheckOwner = getValue("recheck-owner");
+          const needs = {
+            rowContext: getValue("need-row-context"),
+            answerReuse: getValue("need-answer-reuse"),
+            proofReview: getValue("need-proof-review"),
+            approvals: getValue("need-approvals"),
+            escalation: getValue("need-escalation"),
+            analytics: getValue("need-analytics")
+          };
+
+          let score = 4;
+          if (queueShape === "repeat-review") score += 1;
+          if (queueShape === "multi-owner") score += 3;
+          if (queueShape === "program") score += 4;
+          if (volume === "weekly") score += 1;
+          if (volume === "daily") score += 2;
+          if (answerMaturity === "mixed") score += 1;
+          if (answerMaturity === "stable") score += 2;
+          if (intakeShape === "portal" || intakeShape === "mixed") score += 1;
+          if (needs.answerReuse) score += 1;
+          if (needs.proofReview) score += 1;
+          if (needs.approvals) score += 1;
+          if (needs.escalation) score += 1;
+          if (needs.analytics) score += 2;
+          score = Math.max(1, Math.min(10, score));
+
+          const strengths = [];
+          const gaps = [];
+          const matrixRows = [
+            ["Intake and route the thread", intakeOwner, blocker || "New buyer thread arrives", "Same day", "Source thread, row export, and route decision stay attached."],
+            ["Draft the first answer or row direction", draftOwner, needs.rowContext ? "Spreadsheet rows or portal export" : "Buyer asks for one live answer", "Within one business day", "Exact wording stays tied to the workflow in scope."],
+            ["Verify vendor facts and proof links", proofOwner, needs.proofReview ? "Named vendor, proof, or owner claim needs checking" : "Before final send", "Before approval", "Proof trail and vendor chain stop drifting between drafts."],
+            ["Approve customer-facing wording", approvalOwner, needs.approvals ? "External send or risky claim" : "Before final send", "Before send", "One owner can block weak wording before it leaves the team."],
+            ["Escalate edge cases", escalationOwner, needs.escalation ? "Question falls outside approved stance" : "Question cannot be answered from the current facts", "Same day", "Edge cases stop dying in side threads."],
+            ["Recheck stale answers", recheckOwner, "Vendor, workflow, or policy changes", volume === "daily" ? "Weekly" : "Monthly", "Approved answers stay fresh enough for repeat review."]
+          ];
+
+          let state = "";
+          let summary = "";
+          let nextTitle = "Best next step";
+          let nextCopy = "";
+
+          if (score <= 5) {
+            state = "Keep the workflow local";
+            summary = "The queue still looks closer to one blocked answer or one workbook cleanup path than a real software-administration problem.";
+            nextCopy = "Use the builder, workbook template, or answer bank first so the live answer quality stabilizes before you widen into heavier workflow software.";
+            strengths.push("One live thread still matters more than broader workflow administration.");
+            if (needs.rowContext) strengths.push("Row or portal preservation is still a core need.");
+            gaps.push("A broader platform will formalize churn if answer quality is still unstable.");
+          } else if (score <= 7) {
+            state = "Formalize the local ownership layer";
+            summary = "The process now needs explicit intake, proof, and approval owners, but it still does not prove that you need a broad management platform first.";
+            nextCopy = "Use this ownership matrix plus the answer bank or response-software guide so the queue stops drifting before you widen into heavier management software.";
+            strengths.push("Ownership drift is now a bigger problem than raw drafting alone.");
+            if (needs.answerReuse) strengths.push("Reusable answer governance is beginning to matter.");
+            if (needs.proofReview) strengths.push("Proof and owner review need a named verifier.");
+            gaps.push("You may not need analytics-heavy software yet if the queue is not a daily program.");
+          } else if (score <= 8) {
+            state = "Response workflow is now real";
+            summary = "The team looks past one-answer cleanup and now needs a repeatable response layer with clearer owners, approvals, and reusable approved content.";
+            nextCopy = "Use the response-software guide and keep this matrix as the baseline operating model so the team knows what must be governed before it buys more software.";
+            strengths.push("The queue now depends on reusable approved answers, not one-off drafting.");
+            strengths.push("Multiple ownership lanes need to stay explicit.");
+            if (needs.approvals) strengths.push("Approval gates are part of the real process now.");
+            gaps.push("If reporting and broader administration are still light, full management software may still be early.");
+          } else {
+            state = "Management software evaluation is justified";
+            summary = "The queue already behaves like a broader managed program with recurring approvals, ownership lanes, and workflow administration needs.";
+            nextCopy = "Use the management-software guide or software fit scorecard now. Keep this ownership matrix as the baseline so the shortlist is tied to the real operating shape instead of a vendor logo race.";
+            strengths.push("The queue looks like a recurring managed program, not one blocked thread.");
+            strengths.push("Ownership, approvals, and reporting are all live requirements.");
+            if (volume === "daily") strengths.push("A daily queue now justifies broader workflow administration.");
+            gaps.push("Do not buy software without preserving the actual ownership rules that the tool must support.");
+          }
+
+          if (volume === "daily" || volume === "weekly") strengths.push("The current volume is high enough to expose ownership gaps quickly.");
+          if (answerMaturity === "rough") gaps.push("Approved content is still rough, so software alone will not fix unstable answers.");
+          if (intakeShape === "mixed" || intakeShape === "portal") strengths.push("The intake shape is already messy enough that route ownership matters.");
+          if (!needs.analytics) gaps.push("Freshness and queue reporting are not yet explicit, so a broader admin layer may still be premature.");
+
+          const briefLines = [
+            `${company} should treat the current questionnaire process as: ${state.toLowerCase()}.`,
+            `Current blocker: ${blocker || "No blocker entered."}`,
+            `Intake owner: ${intakeOwner}. Draft owner: ${draftOwner}. Proof reviewer: ${proofOwner}. Approval owner: ${approvalOwner}. Escalation owner: ${escalationOwner}. Recheck owner: ${recheckOwner}.`,
+            `Queue shape: ${queueShape.replace(/-/g, " ")}. Volume: ${volume.replace(/-/g, " ")}. Intake shape: ${intakeShape.replace(/-/g, " ")}. Approved-answer maturity: ${answerMaturity}.`,
+            `Why this route fits now: ${strengths.join(" ")}`,
+            `What to avoid: ${gaps.join(" ")}`
+          ];
+
+          const csvHeader = ["task", "primary_owner", "trigger", "target_timing", "why_it_exists"];
+          const csvRows = [csvHeader].concat(matrixRows);
+          const csvText = csvRows
+            .map((row) => row.map(csvCell).join(","))
+            .join("\n");
+
+          routeScore.textContent = `${score}/10`;
+          routeState.textContent = state;
+          routeMeter.style.width = `${score * 10}%`;
+          routeSummary.textContent = summary;
+          nextStepTitle.textContent = nextTitle;
+          nextStepCopy.textContent = nextCopy;
+
+          strengthList.innerHTML = strengths.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+          gapList.innerHTML = gaps.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+          briefOutput.innerHTML = briefLines.map((line) => `<p>${escapeHtml(line)}</p>`).join("");
+          matrixOutput.innerHTML = [
+            "<table><thead><tr><th>Task</th><th>Primary owner</th><th>Trigger</th><th>Target timing</th></tr></thead><tbody>",
+            ...matrixRows.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td><td>${escapeHtml(row[2])}</td><td>${escapeHtml(row[3])}</td></tr>`),
+            "</tbody></table>"
+          ].join("");
+
+          return {
+            briefText: briefLines.join("\n\n"),
+            csvText
+          };
+        }
+
+        function applyPreset(name) {
+          const presets = {
+            "one-owner": {
+              "queue-shape": "one-answer",
+              volume: "one-off",
+              "answer-maturity": "rough",
+              "intake-shape": "spreadsheet",
+              "intake-owner": "Founder",
+              "draft-owner": "Founder",
+              "proof-owner": "Engineering lead",
+              "approval-owner": "Founder",
+              "escalation-owner": "Founder",
+              "recheck-owner": "Founder",
+              "need-row-context": true,
+              "need-answer-reuse": false,
+              "need-proof-review": true,
+              "need-approvals": true,
+              "need-escalation": false,
+              "need-analytics": false
+            },
+            "repeat-review": {
+              "queue-shape": "repeat-review",
+              volume: "monthly",
+              "answer-maturity": "mixed",
+              "intake-shape": "mixed",
+              "need-row-context": true,
+              "need-answer-reuse": true,
+              "need-proof-review": true,
+              "need-approvals": true,
+              "need-escalation": true,
+              "need-analytics": false
+            },
+            "multi-owner": {
+              "queue-shape": "multi-owner",
+              volume: "weekly",
+              "answer-maturity": "mixed",
+              "intake-shape": "portal",
+              "need-row-context": true,
+              "need-answer-reuse": true,
+              "need-proof-review": true,
+              "need-approvals": true,
+              "need-escalation": true,
+              "need-analytics": true
+            },
+            "trust-program": {
+              "queue-shape": "program",
+              volume: "daily",
+              "answer-maturity": "stable",
+              "intake-shape": "mixed",
+              "need-row-context": true,
+              "need-answer-reuse": true,
+              "need-proof-review": true,
+              "need-approvals": true,
+              "need-escalation": true,
+              "need-analytics": true
+            }
+          };
+
+          const preset = presets[name];
+          if (!preset) return;
+          Object.entries(preset).forEach(([key, value]) => setValue(key, value));
+          saveDraft();
+          compute();
+          plannerStatus.textContent = `Preset loaded: ${name.replace(/-/g, " ")}. Inputs stay local and autosave on this device only.`;
+        }
+
+        function copyText(text, message) {
+          navigator.clipboard.writeText(text)
+            .then(() => {
+              plannerStatus.textContent = message;
+            })
+            .catch(() => {
+              plannerStatus.textContent = "Clipboard access failed. Copy manually from the page.";
+            });
+        }
+
+        function downloadCsv(filename, text) {
+          const blob = new Blob([text], { type: "text/csv;charset=utf-8" });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = filename;
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          URL.revokeObjectURL(url);
+          plannerStatus.textContent = `Downloaded ${filename}.`;
+        }
+
+        loadDraft();
+        let current = compute();
+
+        fields.forEach((field) => {
+          field.addEventListener("input", () => {
+            saveDraft();
+            current = compute();
+          });
+          field.addEventListener("change", () => {
+            saveDraft();
+            current = compute();
+          });
+        });
+
+        presetButtons.forEach((button) => {
+          button.addEventListener("click", () => applyPreset(button.dataset.preset));
+        });
+
+        copyBriefButton.addEventListener("click", () => {
+          current = compute();
+          copyText(current.briefText, "Operating brief copied.");
+        });
+
+        copyCsvButton.addEventListener("click", () => {
+          current = compute();
+          copyText(current.csvText, "Ownership matrix CSV copied.");
+        });
+
+        downloadCsvButton.addEventListener("click", () => {
+          current = compute();
+          downloadCsv("noticekit-security-questionnaire-ownership-matrix.csv", current.csvText);
+        });
+
+        clearDraftButton.addEventListener("click", () => {
+          localStorage.removeItem(storageKey);
+          form.reset();
+          setValue("company", "Example SaaS");
+          setValue("queue-shape", "one-answer");
+          setValue("volume", "one-off");
+          setValue("answer-maturity", "rough");
+          setValue("intake-shape", "pasted");
+          setValue("blocker", "The buyer thread keeps reopening because nobody clearly owns intake, proof review, and final approval once the first draft is written.");
+          setValue("intake-owner", "Founder or account owner");
+          setValue("draft-owner", "Founder or ops lead");
+          setValue("proof-owner", "Security or engineering lead");
+          setValue("approval-owner", "Founder or legal reviewer");
+          setValue("escalation-owner", "Founder or GTM lead");
+          setValue("recheck-owner", "Product or security owner");
+          setValue("need-row-context", true);
+          setValue("need-answer-reuse", true);
+          setValue("need-proof-review", true);
+          setValue("need-approvals", true);
+          setValue("need-escalation", false);
+          setValue("need-analytics", false);
+          current = compute();
+          plannerStatus.textContent = "Local draft cleared.";
+        });
+      }());
+    </script>
+  </body>
+</html>

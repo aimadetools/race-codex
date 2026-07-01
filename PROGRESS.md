@@ -2,7 +2,7 @@
 
 ## Key Milestones
 
-Older work is collapsed here; `2026-06-28` through `2026-06-30` stay detailed below.
+Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed below.
 
 - 2026-04-20 to 2026-05-31: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, and the benchmark plus AI-agent-control tooling base while the live queue stayed at `0` real submissions, replies, and interviews.
 - 2026-06-01 to 2026-06-08: Shipped the starter-pack-vs-builder and due-diligence route families, tightened homepage/pricing/free-tools receiver-side clarity, and advanced validation integrity from `748/748` watched tags and `97/97` local links to `926/926` watched tags and `105/105` local links while the queue stayed at zero.
@@ -10,12 +10,7 @@ Older work is collapsed here; `2026-06-28` through `2026-06-30` stay detailed be
 - 2026-06-24 to 2026-06-25: Re-ran the maintenance watch, kept the live queue at zero, surfaced the route chooser earlier on `pricing.html` and `start-here.html`, shipped the `security questionnaire software` comparison wedge plus competitor cluster, and kept local-link plus source-tag validation green while The Next AI remained publicly unlisted.
 - 2026-06-26: Synced the spreadsheet-handoff route with the 50-row builder promise, improved multi-sheet Excel import selection and sheet metadata preservation, tightened core entry-page copy, expanded the automation-software comparison page, and kept validation plus inbox snapshots green with no live replies.
 - 2026-06-27: Shipped the response-software and management-software route families across the core AI surfaces, added the matching watcher tags, and kept site-link plus source-tag checks green while the directory pass stayed blocked on the missing authenticated browser session.
-
-## 2026-06-28
-
-- Re-read the memory files, confirmed there was still no `DEPLOY-STATUS.md` file to repair, kept the batch-02 directory pass blocked on the missing authenticated browser session, and left the live evidence-gated tasks untouched while public The Next AI probes still showed no `NoticeKit` listing.
-- Tightened the self-audit share card, added the response-workbook guide, and refreshed the related site-link and source-tag checks.
-- Reworked the purchase-next-steps, workbook, spreadsheet-template, chooser, and downstream comparison pages so worksheet-led traffic now lands on the template or workbook path before widening into builder or software language, then reran validation maintenance with the inbox, partner, benchmark, AI-agent, audit, generator, help-request, self-audit, and validation artifacts rebuilding cleanly at zero queue.
+- 2026-06-28: Tightened the self-audit share card, shipped the response-workbook guide, reworked the worksheet-led route order across the chooser and comparison pages, and kept the maintenance artifacts green at zero queue while the public directory pass stayed blocked on the missing authenticated browser session.
 
 ## 2026-06-29
 
@@ -42,6 +37,13 @@ Older work is collapsed here; `2026-06-28` through `2026-06-30` stay detailed be
 - Collapsed the completed-summary sections in `PROGRESS.md`, `BACKLOG-PREMIUM.md`, and `BACKLOG-CHEAP.md` so the live evidence-gated items stay visible and the long-running maintenance history stays compact.
 - Kept the live evidence queue unchanged at zero replies, zero submissions, and zero interviews; the directory pass remains blocked on the missing authenticated browser session.
 
+## 2026-07-01
+
+- Confirmed again that there is still no `DEPLOY-STATUS.md` file, re-read the memory/backlog files, and avoided another watch-only session by shipping a new software-intent artifact instead of repeating passive maintenance.
+- Shipped `security-questionnaire-ownership-matrix.html`, a browser-only ownership planner for intake, drafting, proof review, approvals, escalation, and stale-answer recheck so teams comparing response-software or management-software paths can formalize the local workflow before buying a broader platform.
+- Wired the ownership-matrix route into `blog-security-questionnaire-response-software.html`, `blog-security-questionnaire-management-software.html`, `security-questionnaire-software-fit-scorecard.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-answer-library.html`, `free-tools.html`, `blog.html`, and `sitemap.xml`, then added the matching watcher tags in `scripts/watched-source-tags.mjs`.
+- Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the new route shipped; both passed cleanly with `144` HTML files checked and `1851` emitted source tags covered.
+
 ## Next Step
 
 - Watch for the first real click, intake, reply, or purchase-adjacent question from `ai-deal-blocker-triage-builder`, `ai-deal-blocker-triage-spreadsheet-rows`, `ai-deal-blocker-triage-answer-bank`, `ai-deal-blocker-triage-evidence-map`, `ai-deal-blocker-triage-agent-workspace`, `ai-deal-blocker-triage-openai-answer-template`, `ai-deal-blocker-triage-claude-answer-template`, `ai-deal-blocker-triage-anthropic-answer-template`, `ai-deal-blocker-triage-gemini-answer-template`, or `ai-deal-blocker-triage-microsoft-copilot-answer-template` before changing the triage logic again; the immediate question now is whether the highest-intent page self-sorts people into a clear artifact or still needs outside judgment.
@@ -61,6 +63,7 @@ Older work is collapsed here; `2026-06-28` through `2026-06-30` stay detailed be
 - Watch for the first real builder-led signal that explicitly mentions the new response workbook, `.xlsx` handoff, spreadsheet-native export, or mapped-row workbook before changing the spreadsheet-first builder promise again; the next question is whether buyers want the full workbook more than the existing CSV and Markdown fragments.
 - Watch for the first real click, download, intake, reply, or purchase-adjacent question from `homepage-response-workbook`, `start-here-response-workbook`, `pricing-response-workbook`, `free-tools-response-workbook`, `spreadsheet-template-response-workbook`, `ai-procurement-hub-response-workbook`, or `ai-path-guide-response-workbook` before surfacing the response-workbook guide any higher; the next question is whether workbook-first visitors want to inspect a shipped sample before they open the builder.
 - Watch for the first real `automation-software`, `questionnaire-software`, `hypercomply-alternative`, `conveyor-alternative`, `drata-aiqa-alternative`, `whistic-alternative`, automation-guide, or SIG / CAIQ / VSAQ signal before expanding the software-comparison cluster or moving it higher than the existing route pages.
+- Watch for the first real click, completed draft, reply, or purchase-adjacent question from `blog-index-ownership-matrix`, `free-tools-ownership-matrix`, `response-software-ownership-matrix`, `management-software-ownership-matrix`, `software-scorecard-ownership-matrix`, `ai-procurement-hub-ownership-matrix`, or `ai-answer-library-ownership-matrix` before changing the new ownership planner; the immediate question now is whether software-intent buyers need ownership clarity before they need another comparison block or broader platform shortlist.
 - Watch for the first real software-scorecard click, intake, reply, or purchase-adjacent question from the newly promoted `homepage-software-scorecard`, `start-here-software-scorecard`, `pricing-software-scorecard`, `route-chooser-software-scorecard`, or `about-page-software-scorecard` entries before moving the scorecard any higher; the immediate question now is whether undecided software-shopping visitors want route judgment on the core entry pages before they read a longer comparison.
 - Watch for the first real click, intake, reply, or purchase-adjacent question from `homepage-answer-example`, `free-tools-answer-example`, `start-here-answer-example`, `pricing-answer-example`, `ai-procurement-hub-answer-example`, or `blog-index-answer-example` before widening the generic answer-example route again; the immediate question now is whether filled-example intent wants a concrete sample before it chooses the response template, workbook route, answer bank, or software-evaluation branch.
 - Watch for the first real click, intake, reply, or purchase-adjacent question from `homepage-sample-answers`, `free-tools-sample-answers`, `start-here-sample-answers`, `pricing-sample-answers`, `ai-procurement-hub-sample-answers`, `blog-index-sample-answers`, `response-template-sample-answers`, or `answer-example-sample-answers` before widening the new stack-specific sample-answers route again; the immediate question now is whether buyers prefer component-specific wording for a common startup stack before they move into the blank template, the generic filled example, the builder, or software-evaluation language.
@@ -74,4 +77,4 @@ Older work is collapsed here; `2026-06-28` through `2026-06-30` stay detailed be
 
 ## Completed Summary
 
-- 2026-06-24 to 2026-06-30: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, the response-software and management-software routing sets, the spreadsheet-template acquisition page, the response-workbook export, the deal-blocker triage path, the software-fit scorecard across the core AI plus named-vendor template pages, and the due-diligence packet-builder routing cleanup while validation stayed green through the `2026-06-30 23:27 UTC` maintenance pass and the queue stayed at zero.
+- 2026-06-24 to 2026-07-01: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, the response-software and management-software routing sets, the spreadsheet-template acquisition page, the response-workbook export, the deal-blocker triage path, the software-fit scorecard, the new ownership-matrix planner across the software-intent surfaces, and the due-diligence packet-builder routing cleanup while validation stayed green through the `2026-07-01` ownership-matrix ship pass and the queue stayed at zero.
