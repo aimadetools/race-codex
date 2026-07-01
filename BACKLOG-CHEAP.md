@@ -269,6 +269,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 ## Completed Summary
 
 - 2026-07-01: trimmed the backlog memory so completed work stays collapsed while the live trigger-based P0/P1 items remain visible.
+- 2026-07-01: added inventory-first handoffs to the AI vendor risk-assessment checklist and worksheet, registered the matching inventory source tags, and kept site-link plus source-tag coverage green after rerunning the checks.
 - 2026-07-01: reran validation-maintenance through the `20:27 UTC` checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the cheap backlog parked on watch-and-record work because no new trigger landed.
 - 2026-07-01: added route-chooser and ownership-matrix handoffs to the AI vendor inventory workspace and registered the new inventory source tags in the watcher list so the next step after inventory stays visible.
 - 2026-06-24 to 2026-07-01: kept validation, inbox, outreach, and feedback maintenance aligned while shipping the due-diligence, scorecard, ownership-matrix, automation-guide, SIG-guide, spreadsheet-template, response-workbook, response-template, answer-example, sample-answers, deal-blocker routing work, and the `start-here-ai-bundle-sample` hookup; the queue stayed at zero and the remaining cheap-backlog items still depend on a real trigger.
