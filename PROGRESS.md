@@ -40,6 +40,7 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 ## 2026-07-01
 
 - Confirmed again that there is still no `DEPLOY-STATUS.md` file, re-read the memory/backlog files, and avoided another watch-only session by shipping a new software-intent artifact instead of repeating passive maintenance.
+- Rechecked the open help-request and validation status after that pass; the authenticated-browser directory blocker is still unresolved in this workspace, so the highest-priority unlocked work remains reply capture plus watch maintenance.
 - Shipped `security-questionnaire-ownership-matrix.html`, a browser-only ownership planner for intake, drafting, proof review, approvals, escalation, and stale-answer recheck so teams comparing response-software or management-software paths can formalize the local workflow before buying a broader platform.
 - Wired the ownership-matrix route into `blog-security-questionnaire-response-software.html`, `blog-security-questionnaire-management-software.html`, `security-questionnaire-software-fit-scorecard.html`, `ai-procurement-hub.html`, `ai-security-questionnaire-answer-library.html`, `free-tools.html`, `blog.html`, and `sitemap.xml`, then added the matching watcher tags in `scripts/watched-source-tags.mjs`.
 - Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the new route shipped; both passed cleanly with `144` HTML files checked and `1851` emitted source tags covered.
