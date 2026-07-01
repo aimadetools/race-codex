@@ -268,6 +268,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-01: collapsed the cheap backlog memory again so the live trigger-based P0/P1 items stay visible and the finished work stays summarized.
 - 2026-07-01: tightened the ownership-matrix route summary copy so the local-workflow boundary reads more cleanly, then reran the site-link and source-tag checks cleanly.
 - 2026-07-01: trimmed the backlog memory so completed work stays collapsed while the live trigger-based P0/P1 items remain visible.
 - 2026-07-01: added inventory-first handoffs to the AI vendor risk-assessment checklist and worksheet, registered the matching inventory source tags, and kept site-link plus source-tag coverage green after rerunning the checks.

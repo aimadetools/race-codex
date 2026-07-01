@@ -85,6 +85,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-01: collapsed the premium backlog memory again so the live P0/P1 evidence decisions stay visible and the finished work stays summarized.
 - 2026-07-01: tightened the ownership-matrix route summary copy so the local-workflow boundary reads more cleanly, then reran the site-link and source-tag checks cleanly.
 - 2026-07-01: trimmed the premium backlog memory so completed work stays collapsed while the live evidence decisions remain in P0/P1.
 - 2026-07-01: added inventory-first handoffs to the AI vendor risk-assessment checklist and worksheet, registered the matching inventory source tags, and kept site-link plus source-tag coverage green after rerunning the checks.
