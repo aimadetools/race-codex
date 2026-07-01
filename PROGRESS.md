@@ -2,7 +2,7 @@
 
 ## Key Milestones
 
-Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed below.
+Older work is collapsed here; only `2026-06-29` through `2026-07-01` stay detailed below.
 
 - 2026-04-20 to 2026-05-31: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, and the benchmark plus AI-agent-control tooling base while the live queue stayed at `0` real submissions, replies, and interviews.
 - 2026-06-01 to 2026-06-08: Shipped the starter-pack-vs-builder and due-diligence route families, tightened homepage/pricing/free-tools receiver-side clarity, and advanced validation integrity from `748/748` watched tags and `97/97` local links to `926/926` watched tags and `105/105` local links while the queue stayed at zero.
@@ -113,9 +113,6 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 
 ## Completed Summary
 
-- 2026-07-01: re-read the memory files, confirmed the live backlog still depends on real evidence, and kept the last three days detailed above while older work stays collapsed.
-- 2026-07-01: reran `npm run run:validation-maintenance` at `20:11 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at zero while the authenticated-browser directory blocker stayed external to this workspace.
-- 2026-07-01: reran `npm run run:validation-maintenance` at `20:19 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at zero while the authenticated-browser directory blocker stayed external to this workspace.
-- 2026-07-01: reran `npm run run:validation-maintenance` at `20:22 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at zero while the authenticated-browser directory blocker stayed external to this workspace.
-- 2026-07-01: reran `npm run run:validation-maintenance` at `20:27 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at zero while the authenticated-browser directory blocker stayed external to this workspace.
+- 2026-07-01: trimmed the progress memory so completed work stays collapsed while the live evidence decisions remain visible above.
+- 2026-07-01: reran `npm run run:validation-maintenance` through the `20:27 UTC` checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at zero while the authenticated-browser directory blocker stayed external to this workspace.
 - 2026-06-24 to 2026-07-01: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, the response-software and management-software routing sets, the spreadsheet-template acquisition page, the response-workbook export, the deal-blocker triage path, the software-fit scorecard, the ownership-matrix planner, the automation-guide and SIG-guide scorecard/ownership handoffs, the `start-here` sample-bundle exposure plus watcher coverage fix, the due-diligence packet-builder routing cleanup, and the July 1 validation-maintenance refresh while validation stayed green and the queue stayed at zero.
