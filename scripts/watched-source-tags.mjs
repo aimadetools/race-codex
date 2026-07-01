@@ -920,6 +920,8 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-vendor-inventory-starter-pack",
   "ai-vendor-inventory-teardown",
   "ai-vendor-inventory-risk-assessment",
+  "ai-vendor-inventory-route-chooser",
+  "ai-vendor-inventory-ownership-matrix",
   "ai-procurement-hub-follow-up-pack",
   "ai-procurement-hub-training-stance",
   "blog-ai-questionnaire-follow-up-questions",
