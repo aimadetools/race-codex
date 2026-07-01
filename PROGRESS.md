@@ -57,6 +57,9 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 - Rechecked `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` publicly at `2026-07-01 04:26 UTC`; both returned `200`, neither response contained `NoticeKit` or `noticekit.tech`, and the human-help blocker remained the missing authenticated browser session for directory re-entry.
 - Cleaned up the blog index social-image alt text so it now matches the current AI questionnaire positioning instead of the older subprocessor wording.
 - Collapsed the finished maintenance history in the backlog summaries, kept the last three days detailed in this file, and left the live P0/P1 evidence-gated items untouched.
+- Tightened the homepage first-screen decision so the hero now pushes only the core builder, spreadsheet-row, judgment, answer-bank, and software-fit routes instead of the wider route pile, while leaving the template/example/workbook/sample-bundle exploration lower on the page after the first route is clear.
+- Upgraded `ai-deal-blocker.html` into a stickier browser-only working tool by adding local autosave and restore for triage plus inline request drafts, downloadable triage brief export, copy-ready request-draft export, and a clear-draft reset path so a blocked buyer thread can survive across sessions before the user submits the teardown or audit intake.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the homepage and deal-blocker conversion pass; both finished cleanly with `144` HTML files checked and `1856` emitted source tags covered after restoring the `homepage-route-chooser` tag on the trimmed hero.
 
 ## Next Step
 

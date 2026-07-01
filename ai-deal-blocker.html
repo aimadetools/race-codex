@@ -225,8 +225,11 @@
               <a class="button secondary" id="triage-secondary-link" href="ai-security-review-evidence-map.html?source=ai-deal-blocker-triage-evidence-map">Open evidence map</a>
               <button class="button secondary" id="copy-triage-brief" type="button">Copy internal brief</button>
               <button class="button secondary" id="copy-triage-rationale" type="button">Copy route rationale</button>
+              <button class="button secondary" id="download-triage-brief" type="button">Download brief</button>
               <button class="button secondary" id="apply-triage-to-form" type="button">Use judgment path</button>
+              <button class="button secondary" id="clear-deal-blocker-draft" type="button">Clear saved draft</button>
             </div>
+            <p class="fine-print" id="triage-status">This triage runs in your browser and autosaves on this device only.</p>
             <div class="template-box">
               <strong>Copy-ready internal brief</strong>
               <div id="triage-brief-output" aria-live="polite"></div>
@@ -354,6 +357,7 @@
             <div class="hero-actions">
               <button id="deal-blocker-submit" class="button gold" type="submit">Send teardown request</button>
               <a class="button secondary" id="deal-blocker-full-intake" href="audit-request.html?type=free_async_teardown&source=ai-deal-blocker-teardown&channel=ai-deal-blocker-inline-form">Open full intake instead</a>
+              <button class="button secondary" id="copy-request-draft" type="button">Copy request draft</button>
               <a class="button secondary" href="ai-security-questionnaire-audit-sample.html?source=ai-deal-blocker-audit-sample">Preview audit sample</a>
             </div>
             <p class="fine-print" id="deal-blocker-form-note">The free teardown is the lowest-friction path when you need a specific written next step before paying for the audit.</p>
@@ -408,6 +412,7 @@
       </main>
     </div>
     <script>
+      const DEAL_BLOCKER_STORAGE_KEY = "noticekit-ai-deal-blocker-v1";
       const dealBlockerEntrySources = new Set([
         "homepage-hero",
         "homepage-job-one-answer",
@@ -473,8 +478,14 @@
       const triageBriefOutput = document.querySelector("#triage-brief-output");
       const copyTriageBriefButton = document.querySelector("#copy-triage-brief");
       const copyTriageRationaleButton = document.querySelector("#copy-triage-rationale");
+      const downloadTriageBriefButton = document.querySelector("#download-triage-brief");
       const applyTriageToFormButton = document.querySelector("#apply-triage-to-form");
+      const clearDealBlockerDraftButton = document.querySelector("#clear-deal-blocker-draft");
+      const triageStatus = document.querySelector("#triage-status");
+      const copyRequestDraftButton = document.querySelector("#copy-request-draft");
       let requestSourceOverride = "";
+      let latestTriageBrief = "";
+      let latestTriageRationale = "";
       const requestMeta = {
         free_async_teardown: {
           button: "Send teardown request",
@@ -488,6 +499,18 @@
 
       function formValue(id) {
         return document.querySelector(`#${id}`).value.trim() || "Not provided";
+      }
+
+      function downloadText(filename, text) {
+        const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
       }
 
       function syncField(id, queryKey) {
@@ -515,6 +538,78 @@
 
       function resolveTriageRequestSource(type) {
         return resolveDealBlockerSourceTag(type === "concierge_audit" ? "triage-audit" : "triage-teardown");
+      }
+
+      function saveDealBlockerDraft() {
+        const draft = {
+          requestType: requestType.value,
+          requestSourceOverride,
+          triage: Object.fromEntries(
+            Object.entries(triageFields).map(([key, field]) => [key, field.value])
+          ),
+          form: Object.fromEntries(
+            Object.entries(prefillFields).map(([key, field]) => [key, field.value])
+          )
+        };
+        localStorage.setItem(DEAL_BLOCKER_STORAGE_KEY, JSON.stringify(draft));
+      }
+
+      function loadDealBlockerDraft() {
+        try {
+          const raw = localStorage.getItem(DEAL_BLOCKER_STORAGE_KEY);
+          if (!raw) {
+            return false;
+          }
+          const draft = JSON.parse(raw);
+          if (draft.requestType && requestMeta[draft.requestType]) {
+            requestType.value = draft.requestType;
+          }
+          if (draft.triage) {
+            for (const [key, value] of Object.entries(draft.triage)) {
+              if (triageFields[key] && typeof value === "string") {
+                triageFields[key].value = value;
+              }
+            }
+          }
+          if (draft.form) {
+            for (const [key, value] of Object.entries(draft.form)) {
+              if (prefillFields[key] && typeof value === "string") {
+                prefillFields[key].value = value;
+              }
+            }
+          }
+          requestSourceOverride = typeof draft.requestSourceOverride === "string"
+            ? draft.requestSourceOverride
+            : "";
+          triageStatus.textContent = "Saved draft restored from this browser.";
+          return true;
+        } catch (error) {
+          console.warn("Unable to restore deal blocker draft", error);
+          triageStatus.textContent = "Saved draft could not be restored cleanly.";
+          return false;
+        }
+      }
+
+      function clearDealBlockerDraft(options = {}) {
+        localStorage.removeItem(DEAL_BLOCKER_STORAGE_KEY);
+        requestSourceOverride = "";
+        if (options.resetForm) {
+          document.querySelector("#deal-blocker-triage-form").reset();
+          form.reset();
+        }
+        const initialTypeValue = query.get("type");
+        requestType.value = initialTypeValue === "concierge_audit" || initialTypeValue === "free_async_teardown"
+          ? initialTypeValue
+          : "free_async_teardown";
+        for (const queryKey of Object.keys(prefillFields)) {
+          syncField(queryKey, queryKey);
+        }
+        summary.hidden = true;
+        summary.textContent = "";
+        summary.classList.remove("form-error");
+        triageStatus.textContent = options.resetForm
+          ? "Saved draft cleared from this browser."
+          : "Local draft removed.";
       }
 
       function syncRequestUi() {
@@ -833,6 +928,8 @@
           ...signals.map((item) => `Signal: ${item}`),
           ...gaps.map((item) => `Watch for: ${item}`)
         ].join("\n");
+        latestTriageBrief = brief;
+        latestTriageRationale = rationale;
         triageSignalList.innerHTML = listHtml(signals);
         triageGapList.innerHTML = listHtml(gaps);
         triagePrimaryLink.textContent = primaryRoute.label;
@@ -843,6 +940,10 @@
 
         copyTriageBriefButton.onclick = () => copyText(brief, "Copied the triage brief for internal handoff.");
         copyTriageRationaleButton.onclick = () => copyText(rationale, "Copied the triage rationale.");
+        downloadTriageBriefButton.onclick = () => {
+          downloadText("noticekit-ai-deal-blocker-brief.txt", `${brief}\n\n${rationale}\n`);
+          triageStatus.textContent = "Downloaded the triage brief.";
+        };
         applyTriageToFormButton.onclick = () => {
           requestType.value = requestSuggestion;
           if (!prefillFields.vendor_change.value.trim()) {
@@ -856,13 +957,45 @@
           }
           requestSourceOverride = resolveTriageRequestSource(requestSuggestion);
           syncRequestUi();
+          saveDealBlockerDraft();
+          triageStatus.textContent = "Applied the triage route to the judgment form and saved the draft locally.";
           document.querySelector("#deal-blocker-brief").scrollIntoView({ behavior: "smooth", block: "start" });
         };
+        saveDealBlockerDraft();
+      }
+
+      function buildRequestDraft() {
+        const requestLabel = requestType.options[requestType.selectedIndex]?.textContent || "Request";
+        return [
+          `${requestLabel}`,
+          `Company: ${formValue("company")}`,
+          `Reply email: ${formValue("email")}`,
+          `Role: ${formValue("ownership-signal")}`,
+          `Live page or thread: ${formValue("subprocessor-url")}`,
+          `Source tag: ${sourceTag.value || resolveRequestSource(requestType.value)}`,
+          "",
+          "Deal blocker:",
+          formValue("vendor-change"),
+          "",
+          "Customer segment and deadline:",
+          formValue("deadline"),
+          "",
+          "Constraints to preserve:",
+          formValue("review-need"),
+          "",
+          "Triage brief:",
+          latestTriageBrief || "Not generated yet."
+        ].join("\n");
       }
 
       for (const field of Object.values(triageFields)) {
-        field.addEventListener("change", updateTriage);
+        field.addEventListener("change", () => {
+          updateTriage();
+          saveDealBlockerDraft();
+        });
       }
+
+      loadDealBlockerDraft();
 
       for (const queryKey of Object.keys(prefillFields)) {
         syncField(queryKey, queryKey);
@@ -878,13 +1011,25 @@
           requestSourceOverride = resolveTriageRequestSource(requestType.value);
         }
         syncRequestUi();
+        saveDealBlockerDraft();
       });
       for (const field of Object.values(prefillFields)) {
         field.addEventListener("input", () => {
           requestSourceOverride = "";
           syncRequestUi();
+          saveDealBlockerDraft();
         });
       }
+      copyRequestDraftButton.addEventListener("click", () => {
+        copyText(buildRequestDraft(), "Copied the request draft.");
+      });
+      clearDealBlockerDraftButton.addEventListener("click", () => {
+        clearDealBlockerDraft({ resetForm: true });
+        syncRequestUi();
+        updateTriage();
+        localStorage.removeItem(DEAL_BLOCKER_STORAGE_KEY);
+        triageStatus.textContent = "Saved draft cleared from this browser.";
+      });
       syncRequestUi();
       updateTriage();
 
@@ -952,7 +1097,9 @@
           ];
           setSummary(lines.join("\n"));
           form.reset();
+          clearDealBlockerDraft();
           sourceTag.value = resolveRequestSource(requestType.value);
+          triageStatus.textContent = "Request sent. Local draft cleared from this browser.";
           syncRequestUi();
         } catch (error) {
           setSummary(error.message || "The request could not be sent.", true);
