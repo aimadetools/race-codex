@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-01 20:27 UTC
+Checked at: 2026-07-01 23:18 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1083,6 +1083,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-ai-route-repeat-review: 0
 - pricing-ai-route-broader-handoff: 0
 - blog-index-ai-inventory-template: 0
+- blog-ai-vendor-risk-assessment-inventory: 0
 - dpa-clause-intake-worksheet-calculator: 0
 - dpa-clause-intake-worksheet-pricing: 0
 - dpa-clause-intake-worksheet-tracker: 0
@@ -1290,6 +1291,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-vendor-inventory-starter-pack: 0
 - ai-vendor-inventory-teardown: 0
 - ai-vendor-inventory-risk-assessment: 0
+- ai-vendor-inventory-route-chooser: 0
+- ai-vendor-inventory-ownership-matrix: 0
 - ai-procurement-hub-follow-up-pack: 0
 - ai-procurement-hub-training-stance: 0
 - blog-ai-questionnaire-follow-up-questions: 0
@@ -1433,6 +1436,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - multi-change-register-stack: 0
 - ai-vendor-risk-assessment-starter-pack: 0
 - ai-vendor-risk-assessment-worksheet: 0
+- ai-vendor-risk-assessment-worksheet-inventory: 0
 - ai-vendor-risk-assessment-worksheet-checklist: 0
 - ai-vendor-risk-assessment-worksheet-evidence-map: 0
 - ai-vendor-risk-assessment-worksheet-teardown: 0
