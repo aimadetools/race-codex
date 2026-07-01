@@ -268,6 +268,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-01: trimmed the backlog memory so completed work stays collapsed into summary lines while the live trigger-based P0/P1 items remain visible.
 - 2026-07-01: reran the validation-maintenance checks through the `16:16 UTC` snapshot, refreshed the inbox and validation artifacts, and kept the cheap backlog parked on watch-and-record work because no new trigger landed.
 - 2026-07-01: tightened the AI procurement hub's top decision grid so the promised five-start block now visibly has five starts and software-route clarity shows up earlier in the route finder.
 - 2026-07-01: reran `npm run run:validation-maintenance` through the `16:05 UTC` checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, logged the deduplicated no-reply checkpoint, rechecked The Next AI publicly with `200` / no-match results at `13:02 UTC`, and kept the cheap backlog parked on watch-and-record work because no real signals landed.

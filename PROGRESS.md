@@ -103,6 +103,7 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 
 ## Completed Summary
 
+- 2026-07-01: re-read the memory files, confirmed the live backlog still depends on real evidence, and trimmed the finished-history sections so older work stays collapsed while the last three days remain detailed.
 - 2026-06-24 to 2026-07-01: tightened the entry-page funnel, shipped the automation/software and named-vendor coverage, the response-software and management-software routing sets, the spreadsheet-template acquisition page, the response-workbook export, the deal-blocker triage path, the software-fit scorecard, the ownership-matrix planner, the automation-guide and SIG-guide scorecard/ownership handoffs, the `start-here` sample-bundle exposure plus watcher coverage fix, the due-diligence packet-builder routing cleanup, and the July 1 validation-maintenance refresh through the `2026-07-01 16:10 UTC` checkpoint while validation stayed green and the queue stayed at zero.
 - 2026-07-01: added a software-route-clarity card to the procurement hub's top decision grid so the promised five-start split now matches the visible layout and the response/management software choice appears earlier in the route finder.
 - 2026-07-01: reran `npm run run:validation-maintenance` at `16:10 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at zero while the authenticated-browser directory blocker stayed external to this workspace.

@@ -85,6 +85,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-01: trimmed the premium backlog memory so completed work stays collapsed into summary lines while the live evidence decisions remain in P0/P1.
 - 2026-07-01: reran the validation-maintenance checks through the `16:16 UTC` snapshot, refreshed the inbox and validation artifacts, and kept the premium backlog parked on reply capture because no new evidence landed.
 - 2026-07-01: reran `npm run run:validation-maintenance` through the `16:05 UTC` checkpoint, confirmed the inbox and all evidence watches were still at zero real replies/submissions/interviews, rechecked The Next AI publicly with `200` / no-match results at `13:02 UTC`, kept validation green, and left the premium backlog parked on reply capture instead of more expansion.
 - 2026-07-01: kept the finished premium backlog maintenance collapsed into summary lines, kept the live evidence decisions in P0/P1, and left the blocker-dependent work parked until scored buyer evidence arrives.
