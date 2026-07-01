@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-06-30 23:27 UTC
+Checked at: 2026-07-01 04:22 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -252,6 +252,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-automation-guide: 0
 - blog-index-sig-guide: 0
 - blog-index-questionnaire-software: 0
+- blog-index-ownership-matrix: 0
 - blog-index-management-software: 0
 - blog-index-hypercomply-alternative: 0
 - blog-index-conveyor-alternative: 0
@@ -360,6 +361,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-automation-guide: 0
 - free-tools-sig-guide: 0
 - free-tools-questionnaire-software: 0
+- free-tools-ownership-matrix: 0
 - free-tools-management-software: 0
 - free-tools-response-software: 0
 - free-tools-software-scorecard: 0
@@ -376,6 +378,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-library-builder: 0
 - answer-library-answer-bank: 0
 - answer-library-software-scorecard: 0
+- ai-answer-library-ownership-matrix: 0
 - answer-library-response-software: 0
 - answer-library-management-software: 0
 - answer-library-questionnaire-software: 0
@@ -384,9 +387,21 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-library-ai-procurement-hub: 0
 - answer-library-deal-blocker: 0
 - answer-library-pricing: 0
+- software-scorecard-ownership-matrix: 0
+- response-software-ownership-matrix: 0
+- management-software-ownership-matrix: 0
+- ai-procurement-hub-ownership-matrix: 0
 - answer-library-openai-template: 0
 - answer-library-claude-template: 0
 - answer-library-ai-agent-review: 0
+- ownership-matrix-nav-audit: 0
+- ownership-matrix-scorecard: 0
+- ownership-matrix-response-software: 0
+- ownership-matrix-management-software: 0
+- ownership-matrix-answer-bank: 0
+- ownership-matrix-deal-blocker: 0
+- ownership-matrix-builder: 0
+- ownership-matrix-spreadsheet-template: 0
 - response-workbook-nav-audit: 0
 - sample-answers-nav-audit: 0
 - route-chooser-answer-bank: 0
@@ -1360,9 +1375,13 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-guide-response-software: 0
 - automation-guide-management-software: 0
 - automation-guide-spreadsheet-template: 0
+- automation-guide-software-scorecard: 0
+- automation-guide-ownership-matrix: 0
 - sig-guide-response-software: 0
 - sig-guide-management-software: 0
 - sig-guide-spreadsheet-template: 0
+- sig-guide-software-scorecard: 0
+- sig-guide-ownership-matrix: 0
 - ai-procurement-hub-questionnaire-software: 0
 - ai-procurement-hub-management-software: 0
 - ai-procurement-hub-response-software: 0
@@ -1872,6 +1891,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - founder-follow-up-tracker: 0
 - advisor-follow-up-tracker: 0
 - free-tools-ai-bundle-sample: 0
+- start-here-ai-bundle-sample: 0
 - ai-security-questionnaire-starter-pack-bundle-sample: 0
 - ai-security-questionnaire-example-bundle-sample: 0
 - ai-bundle-sample-builder: 0
