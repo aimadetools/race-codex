@@ -5,6 +5,7 @@
 ### [HELP] What: Re-enter the partially completed AI answer-bank batch-02 directory pass from your own browser session so NoticeKit can clear the three remaining blockers and check whether The Next AI review has gone live.
 **Human response:** Pending.
 
+- 2026-07-01 12:58 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly, and neither page content exposed `NoticeKit` or `noticekit.tech`, so no public listing surfaced.
 - 2026-07-01 04:26 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly, and neither HTML response contained `NoticeKit` or `noticekit.tech`, so no public listing surfaced.
 - 2026-06-28 04:16 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly, and neither HTML response contained `NoticeKit`, so no public listing surfaced.
 - 2026-06-26 23:19 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly, and neither HTML response contained `NoticeKit`, so no public listing surfaced.
