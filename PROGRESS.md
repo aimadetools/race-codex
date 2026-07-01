@@ -54,6 +54,7 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 - Ran `npm run run:validation-maintenance` again at `2026-07-01 04:25 UTC`, which refreshed the inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts again, logged the deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews with local-link and source-tag checks still green.
 - Ran `npm run run:validation-maintenance` at `2026-07-01 04:29 UTC`, which advanced the live watch files again (`CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `GENERATOR-PRODUCTION-STATUS.md`, `GENERATOR-HANDOFF-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, `BENCHMARK-OUTREACH-STATUS.md`, `AI-AGENT-REVIEW-OUTREACH-STATUS.md`, `AI-AUDIT-OUTREACH-STATUS.md`, `VALIDATION-STATUS.md`) and logged another deduplicated no-reply checkpoint in `COMMUNITY-FEEDBACK.md`; `npm run check:site-links` and `npm run check:source-tag-coverage` both stayed green at `144` HTML files checked and `1856` emitted source tags covered while the queue remained at `0` real replies, `0` real submissions, and `0` interviews.
 - Cleaned up the blog index social-image alt text so it now matches the current AI questionnaire positioning instead of the older subprocessor wording.
+- Collapsed the finished maintenance history in the backlog summaries, kept the last three days detailed in this file, and left the live P0/P1 evidence-gated items untouched.
 
 ## Next Step
 
