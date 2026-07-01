@@ -67,6 +67,7 @@ Older work is collapsed here; `2026-06-29` through `2026-07-01` stay detailed be
 - Tightened `ai-procurement-hub.html` so the top “most visitors need one of five starts” grid now actually has five starts, adding software-route clarity earlier in the decision flow instead of leaving response and management software only in the later comparison blocks.
 - Ran `npm run run:validation-maintenance` at `2026-07-01 16:05 UTC`; the refresh kept every watch at zero replies, zero submissions, and zero interviews, updated the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and left the authenticated-browser directory blocker unresolved.
 - Ran `npm run run:validation-maintenance` at `2026-07-01 16:10 UTC`; the refresh repeated the zero replies, zero submissions, and zero interviews state, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and left the authenticated-browser directory blocker unresolved.
+- Cleaned up the memory files so older progress stays collapsed, the last three days remain detailed here, and the backlog completion notes stay summarized instead of expanded.
 
 ## Next Step
 
