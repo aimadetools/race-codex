@@ -10,6 +10,8 @@ import { WATCHED_SOURCE_TAGS } from "./watched-source-tags.mjs";
 
 const ROOT = process.cwd();
 const SOURCE_TAG_PATTERN = /source=([a-z0-9-]+)/g;
+const RUNTIME_SOURCE_TAG_PATTERN = /\bsourceTag\s*:\s*"([a-z0-9-]+)"/g;
+const SOURCE_OVERRIDE_PATTERN = /:\s*"([a-z0-9-]+)"/g;
 const INCLUDED_EXTENSIONS = new Set([".html", ".md", ".mjs", ".js"]);
 const SKIP_DIRS = new Set([".git", ".vercel", "node_modules", "logs"]);
 
@@ -73,6 +75,26 @@ async function main() {
     const locations = emittedTags.get(tag) || [];
     locations.push("ai-deal-blocker.html (runtime inline request propagation)");
     emittedTags.set(tag, locations);
+  }
+
+  const routePickerPath = join(ROOT, "scripts", "route-picker.js");
+  const routePickerText = await readFile(routePickerPath, "utf8").catch(() => "");
+
+  for (const match of routePickerText.matchAll(RUNTIME_SOURCE_TAG_PATTERN)) {
+    const tag = match[1];
+    const locations = emittedTags.get(tag) || [];
+    locations.push("scripts/route-picker.js (runtime sourceTag)");
+    emittedTags.set(tag, locations);
+  }
+
+  const sourceOverridesBlockMatch = routePickerText.match(/sourceOverrides:\s*\{([\s\S]*?)\n\s*\}/g) || [];
+  for (const block of sourceOverridesBlockMatch) {
+    for (const match of block.matchAll(SOURCE_OVERRIDE_PATTERN)) {
+      const tag = match[1];
+      const locations = emittedTags.get(tag) || [];
+      locations.push("scripts/route-picker.js (runtime sourceOverrides)");
+      emittedTags.set(tag, locations);
+    }
   }
 
   const emittedTagList = [...emittedTags.keys()].sort();

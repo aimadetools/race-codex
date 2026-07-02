@@ -212,6 +212,7 @@ export const WATCHED_SOURCE_TAGS = [
   "free-tools-conversion",
   "free-tools-partner",
   "free-tools-route-finder",
+  "free-tools-route-chooser",
   "free-tools-route-finder-evidence-map",
   "free-tools-route-inventory",
   "free-tools-route-one-answer",

@@ -215,7 +215,7 @@
   const pageConfigs = [
     {
       root: "[data-route-picker='homepage']",
-      sourceTag: "homepage-route-picker",
+      sourceTag: "homepage-route-chooser",
       sourceOverrides: {
         managementSoftware: "homepage-management-software",
         responseSoftware: "homepage-response-software",
@@ -224,7 +224,7 @@
     },
     {
       root: "[data-route-picker='free-tools']",
-      sourceTag: "free-tools-route-picker",
+      sourceTag: "free-tools-route-chooser",
       sourceOverrides: {
         managementSoftware: "free-tools-management-software",
         responseSoftware: "free-tools-response-software",
@@ -233,7 +233,7 @@
     },
     {
       root: "[data-route-picker='pricing']",
-      sourceTag: "pricing-route-picker",
+      sourceTag: "pricing-route-chooser",
       sourceOverrides: {
         managementSoftware: "pricing-management-software",
         responseSoftware: "pricing-response-software",
@@ -242,7 +242,7 @@
     },
     {
       root: "[data-route-picker='start-here']",
-      sourceTag: "start-here-route-picker",
+      sourceTag: "start-here-route-chooser",
       sourceOverrides: {
         managementSoftware: "start-here-management-software",
         responseSoftware: "start-here-response-software",
@@ -251,7 +251,7 @@
     },
     {
       root: "[data-route-picker='ai-procurement-hub']",
-      sourceTag: "ai-procurement-hub-route-picker",
+      sourceTag: "ai-procurement-hub-route-chooser",
       sourceOverrides: {
         managementSoftware: "ai-procurement-hub-management-software",
         responseSoftware: "ai-procurement-hub-response-software",

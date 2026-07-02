@@ -25,7 +25,7 @@ Date: 2026-07-02
 - Hero copy: missing
   Current: "NoticeKit is for the SaaS team answering the buyer's AI questionnaire, not for the buyer sending it. Start with three jobs only: get one answer out now, organize the facts before drafting, or build reusable files for repeat review. If the blocker is still fuzzy, open the route chooser first. The free builder already handles up to 50 real buyer rows pasted from a spreadsheet or portal grid, plus CSV, TSV, and Excel uploads, then turns one fact pass into a copy-ready answer, reviewer note, response pack, downloadable response workbook, and portable JSON draft."
   Proposed: "NoticeKit helps founders, operators, consultants, and counsel package one live buyer AI review into the smallest credible handoff: one answer now, a fact inventory, or reusable review files. If the blocker is still fuzzy, open the route chooser first. The free builder still handles up to 50 buyer rows pasted from a spreadsheet or portal grid, plus CSV, TSV, and Excel uploads, then turns one fact pass into a copy-ready answer, reviewer note, response pack, downloadable response workbook, and portable JSON draft."
-- Comparison row: present
+- Comparison row: missing
   Current: "Creates the operating workflow a founder can use before buying hosted tooling."
   Proposed: "Creates the operating workflow an advisor, operator, or founder can run before buying hosted tooling."
 - Primary blocker CTA headline: present

@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-02 08:30 UTC
+Checked at: 2026-07-02 12:44 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -360,6 +360,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-conversion: 0
 - free-tools-partner: 0
 - free-tools-route-finder: 0
+- free-tools-route-chooser: 0
 - free-tools-route-finder-evidence-map: 0
 - free-tools-route-inventory: 0
 - free-tools-route-one-answer: 0
@@ -566,38 +567,23 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-answer-example: 0
 - homepage-spreadsheet-handoff: 0
 - homepage-route-chooser: 0
-- homepage-ai-route-inventory: 0
-- homepage-pricing: 0
-- homepage-free-tools: 0
 - homepage-purchase-audit: 0
 - homepage-automation-guide: 0
 - homepage-sig-guide: 0
 - homepage-questionnaire-software: 0
 - homepage-management-software: 0
 - homepage-response-software: 0
-- homepage-benchmark-appendix: 0
-- homepage-benchmark-report: 0
-- homepage-subprocessor-teardown: 0
 - homepage-job-one-answer: 0
 - homepage-job-inventory: 0
 - homepage-job-repeat-review: 0
 - homepage-job-due-diligence: 0
-- homepage-job-subprocessor: 0
 - homepage-spreadsheet-rows: 0
-- homepage-ai-route-one-answer: 0
-- homepage-ai-route-repeat-review: 0
 - homepage-ai-evidence-map: 0
 - homepage-ai-agent-workspace: 0
 - homepage-ai-route-agent-review: 0
 - homepage-ai-route-agent-checklist: 0
-- homepage-ai-route-agent-approval-gate: 0
 - homepage-ai-route-openai-template: 0
-- homepage-ai-route-openai-example: 0
-- homepage-ai-route-openai-answer-bank: 0
 - homepage-ai-route-openai-path-guide: 0
-- homepage-ai-route-anthropic-template: 0
-- homepage-ai-route-anthropic-example: 0
-- homepage-ai-route-anthropic-answer-bank: 0
 - homepage-ai-route-anthropic-path-guide: 0
 - homepage-ai-route-claude-template: 0
 - homepage-ai-route-claude-example: 0
@@ -859,8 +845,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-due-diligence-evidence-map: 0
 - homepage-ai-due-diligence-packet-builder: 0
 - homepage-ai-framework-map: 0
-- homepage-ai-starter-pack-comparison: 0
-- homepage-ai-route-broader-handoff: 0
 - homepage-ai-bundle-sample: 0
 - pricing-ai-due-diligence: 0
 - pricing-ai-due-diligence-answer-bank: 0
@@ -1302,7 +1286,6 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-path-guide-teardown: 0
 - ai-path-guide-deal-blocker: 0
 - ai-path-guide-pricing: 0
-- homepage-ai-path-guide: 0
 - pricing-ai-path-guide: 0
 - blog-index-ai-path-guide: 0
 - free-tools-path-guide: 0
