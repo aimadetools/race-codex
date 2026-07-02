@@ -280,6 +280,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-02: surfaced the Pro kit on the homepage answer-bank card, aligned the route chooser repeat-review row with the answer-bank + Pro-kit split, and added the new paid-path source tags to validation coverage.
 - 2026-07-02: reran the validation-maintenance checkpoints through `12:59 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the live trigger-driven items parked on zero-signal watch status.
 - 2026-07-02: kept the cheap backlog collapsed while shipping the route-chooser instrumentation repair plus watcher coverage fix, and reran site-link and source-tag checks cleanly.
 - 2026-07-02: reran the validation-maintenance checkpoints through `08:29 UTC`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live trigger-driven items parked on zero-signal watch status.
