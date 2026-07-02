@@ -68,6 +68,7 @@ Older work is collapsed here; only `2026-06-30` through `2026-07-02` stay detail
 ## 2026-07-02
 
 - Re-read the memory files, confirmed there is still no `DEPLOY-STATUS.md` file, and avoided another maintenance-only session by shipping a new exact-match acquisition asset instead of refreshing the watch stack again.
+- Promoted the route chooser into a visible hero CTA on `index.html` and `free-tools.html`, and tightened the homepage helper copy so uncertain visitors are pointed to the chooser before they wander deeper into the catalog.
 - Shipped `security-questionnaire-checklist.html`, a browser-only checklist that helps SaaS teams confirm the buyer ask, row shape, proof links, owner path, and next route before they draft or widen into answer-bank, ownership, response-software, management-software, or audit decisions.
 - Wired the new checklist route into `index.html`, `free-tools.html`, `start-here.html`, `pricing.html`, `blog.html`, `sitemap.xml`, and `scripts/watched-source-tags.mjs` so the new page is discoverable from the main entry surfaces and attributable in the validation watch.
 - Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the checklist ship; both passed cleanly with `145` HTML files checked and `1875` emitted source tags covered.
