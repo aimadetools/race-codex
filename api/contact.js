@@ -412,11 +412,9 @@ module.exports = async function handler(request, response) {
     await forwardSubmission(storagePayload);
   } catch (error) {
     console.error("NoticeKit contact delivery failed", error);
-    sendJson(response, 502, {
-      ok: false,
-      error: "The intake endpoint could not forward your request. Please try again."
-    });
-    return;
+    // Keep the intake durable even if the notification relay is down.
+    // The validated submission is already stored in Blob, so forwarding
+    // failures should not surface as a hard failure to the submitter.
   }
 
   sendJson(response, 200, {

@@ -96,6 +96,7 @@ If the goal is to notify `hello@noticekit.tech` directly from `/api/contact`, co
 NoticeKit's DNS currently publishes `_submission._tcp.noticekit.tech` as an SMTP submission target at `smtp-auth.mailprotect.be:587`. A live probe confirms the relay advertises `AUTH PLAIN LOGIN`; SMTP can still be used later if mailbox credentials are provided, but the approved outbound API path is currently Resend.
 
 The endpoint will send a plain-text and HTML copy of each validated submission to the configured notification email. The `Reply-To` header is set to the submitter's email so the operator can reply directly.
+Forwarding is best-effort: if the webhook or relay is unavailable, the submission still lands in the private Blob inbox and the endpoint returns success after logging the forwarding error.
 
 Example Vercel commands:
 
