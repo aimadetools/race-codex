@@ -88,8 +88,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-02: reran validation-maintenance through the `20:21 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live P0/P1 evidence decisions parked on zero-signal watch status.
-- 2026-07-02: reran validation-maintenance through the `20:16 UTC`, `20:12 UTC`, `20:09 UTC`, and `20:04 UTC` checkpoints, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live P0/P1 evidence decisions parked on zero-signal watch status.
+- 2026-07-02: reran validation-maintenance through the `20:28 UTC`, `20:24 UTC`, `20:21 UTC`, `20:16 UTC`, `20:12 UTC`, `20:09 UTC`, and `20:04 UTC` checkpoints, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live P0/P1 evidence decisions parked on zero-signal watch status.
 - 2026-07-02: tightened the buyer-facing kit preview and post-checkout handoff, fixed the `/api/contact` forwarding failure, deleted the stale synthetic self-audit Blob record, and kept the queue parked at zero while the live P0/P1 watch stayed evidence-gated.
 - 2026-07-02: shipped the homepage lower-funnel refresh plus the route-chooser instrumentation repair, then kept the premium backlog collapsed while validation and source-tag coverage stayed green.
 - 2026-07-01: re-collapsed the premium backlog memory, refreshed validation through the `23:30 UTC` checkpoint, and left the live P0/P1 evidence decisions parked on real buyer signals while the directory blocker stayed external to this workspace.

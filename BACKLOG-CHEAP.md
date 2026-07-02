@@ -280,8 +280,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-07-02: reran validation-maintenance through the `20:21 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live trigger backlog collapsed while the active P0 watch items stayed on zero-signal evidence.
-- 2026-07-02: reran validation-maintenance through the `20:16 UTC`, `20:12 UTC`, `20:09 UTC`, and `20:04 UTC` checkpoints, refreshed the status artifacts again, and kept the live trigger backlog collapsed into summaries while the active P0 watch items stayed parked on zero-signal evidence.
+- 2026-07-02: reran validation-maintenance through the `20:28 UTC`, `20:24 UTC`, `20:21 UTC`, `20:16 UTC`, `20:12 UTC`, `20:09 UTC`, and `20:04 UTC` checkpoints, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live trigger backlog collapsed while the active P0 watch items stayed on zero-signal evidence.
 - 2026-07-02: tightened the buyer-facing kit preview and post-checkout handoff, fixed the `/api/contact` forwarding failure, deleted the stale synthetic self-audit Blob record, and kept the queue at zero while the active P0 watch items stayed evidence-gated.
 - 2026-07-02: shipped the route-chooser instrumentation repair plus watcher coverage fix, then reran site-link and source-tag checks cleanly while the cheap backlog stayed collapsed.
 - 2026-07-01: re-collapsed the cheap backlog memory, refreshed validation through the `23:30 UTC` checkpoint, and left the live trigger-based P0/P1 items parked on real evidence.
