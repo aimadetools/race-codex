@@ -67,6 +67,7 @@ Older work is collapsed here; only `2026-06-30` through `2026-07-02` stay detail
 
 ## 2026-07-02
 
+- Ran `npm run run:validation-maintenance` at `2026-07-02 20:04 UTC`; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all passed again, the refresh rewrote the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, `COMMUNITY-FEEDBACK.md` logged another deduplicated no-reply checkpoint, and the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews.
 - Tightened the buyer-facing preview and post-checkout handoff copy on `kit-preview.html` and `purchase-next-steps.html` so the exact Starter, Pro, and Concierge Audit deliverables are visible at the top of the flow, and the receipt-email fallback is explicit before buyers wait on fulfillment.
 - Fixed `/api/contact` so validated submissions stay durable even when notification forwarding fails, then reran validation-maintenance at `2026-07-02 16:26 UTC`; self-audit production verification, source-tag coverage, site-link checks, and the no-reply checkpoint all passed, and the queue stayed at `0` real replies, `0` real submissions, and `0` interviews.
 - Deleted the stale synthetic self-audit Blob record from the failed retry and regenerated `CONTACT-INBOX-STATUS.md` plus `VALIDATION-STATUS.md` so the inbox returned to `0` likely-test submissions after the cleanup.
