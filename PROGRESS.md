@@ -67,6 +67,7 @@ Older work is collapsed here; only `2026-06-30` through `2026-07-02` stay detail
 
 ## 2026-07-02
 
+- Reran `npm run run:validation-maintenance` at `2026-07-02 08:17 UTC`; the refresh updated the inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, logged another deduplicated no-reply checkpoint, and kept the queue at zero while `check:site-links` and `check:source-tag-coverage` stayed clean.
 - Re-read the memory files again, confirmed there is still no `DEPLOY-STATUS.md` file, ran `npm run run:validation-maintenance` cleanly through the `2026-07-02 08:13 UTC` checkpoint, and compacted the progress and backlog summaries while keeping the last three days detailed.
 - Re-read the memory files, confirmed there is still no `DEPLOY-STATUS.md` file, and avoided another maintenance-only session by shipping a new exact-match acquisition asset instead of refreshing the watch stack again.
 - Promoted the route chooser into a visible hero CTA on `index.html` and `free-tools.html`, and tightened the homepage helper copy so uncertain visitors are pointed to the chooser before they wander deeper into the catalog.
@@ -121,6 +122,7 @@ Older work is collapsed here; only `2026-06-30` through `2026-07-02` stay detail
 
 ## Completed Summary
 
+- 2026-07-02: reran `npm run run:validation-maintenance` through the `08:17 UTC` checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at zero while site-link and source-tag coverage stayed green.
 - 2026-07-02: re-read the memory files again, confirmed there is still no deployment-status blocker, ran clean site-link and source-tag checks, and compacted the progress and backlog summaries while keeping the last three days detailed.
 - 2026-07-01: re-read the memory files, confirmed no deployment-status blocker was present, and kept the live evidence-gated work parked while the backlog summaries stayed collapsed.
 - 2026-07-01: trimmed the progress memory so completed work stays collapsed while the live evidence decisions remain visible above.
