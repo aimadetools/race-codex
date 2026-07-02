@@ -88,6 +88,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-02: reran the validation-maintenance stack through the `16:12 UTC` checkpoint, kept the premium backlog collapsed into summary lines, and left the live P0/P1 decisions parked on evidence-gated watch status.
 - 2026-07-02: reran the validation-maintenance stack through the `16:07 UTC` checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and left the live P0/P1 evidence decisions parked on zero-signal watch status.
 - 2026-07-02: kept the premium backlog collapsed while shipping the homepage lower-funnel refresh plus the route-chooser instrumentation repair that now lines runtime picker traffic up with the watched evidence buckets.
 - 2026-07-01: re-collapsed the premium backlog memory, refreshed validation through the `23:30 UTC` checkpoint, and left the live P0/P1 evidence decisions parked on real buyer signals while the directory blocker stayed external to this workspace.
