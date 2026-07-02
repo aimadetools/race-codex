@@ -67,7 +67,7 @@ Older work is collapsed here; only `2026-06-30` through `2026-07-02` stay detail
 
 ## 2026-07-02
 
-- Re-read the memory files again, confirmed there is still no `DEPLOY-STATUS.md` file, ran `npm run check:site-links` and `npm run check:source-tag-coverage` cleanly, and compacted the progress and backlog summaries while keeping the last three days detailed.
+- Re-read the memory files again, confirmed there is still no `DEPLOY-STATUS.md` file, ran `npm run run:validation-maintenance` cleanly through the `2026-07-02 08:13 UTC` checkpoint, and compacted the progress and backlog summaries while keeping the last three days detailed.
 - Re-read the memory files, confirmed there is still no `DEPLOY-STATUS.md` file, and avoided another maintenance-only session by shipping a new exact-match acquisition asset instead of refreshing the watch stack again.
 - Promoted the route chooser into a visible hero CTA on `index.html` and `free-tools.html`, and tightened the homepage helper copy so uncertain visitors are pointed to the chooser before they wander deeper into the catalog.
 - Shipped `security-questionnaire-checklist.html`, a browser-only checklist that helps SaaS teams confirm the buyer ask, row shape, proof links, owner path, and next route before they draft or widen into answer-bank, ownership, response-software, management-software, or audit decisions.
