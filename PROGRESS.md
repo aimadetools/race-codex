@@ -138,6 +138,10 @@ Older work is collapsed here; only `2026-07-01` through `2026-07-03` stay detail
 
 ## 2026-07-03
 
+- Tightened the AI deal-blocker copy so the shortest-path flow now calls out row cleanup, response-pack output, and upload-friendly spreadsheet handling more clearly, then refreshed the lower cards and route-picker labels to match the same wording.
+- Reworked `kit-preview.html` so the preview page now surfaces Starter, Pro, and Concierge Audit more directly, adds the answer builder and Pro kit to the top route set, and reads like a buyer decision instead of a link dump.
+- Added the new `kit-preview-builder`, `kit-preview-pro-kit`, and `kit-preview-starter-pack` watcher tags to `scripts/watched-source-tags.mjs`, then reran `npm run check:site-links` and `npm run check:source-tag-coverage` cleanly at `148` HTML files checked and `1914` emitted source tags covered.
+
 - Confirmed again that there is still no `DEPLOY-STATUS.md`, re-read the memory files, and explicitly changed course away from another maintenance-only session because the last run cluster had already been too documentation- and verification-heavy.
 - Shipped `security-questionnaire-answer-bank-builder.html`, a new browser-only repeat-review tool that turns one recurring buyer prompt into a reusable answer-bank row with approved wording, proof links, owner path, customer-scope notes, review date, recheck trigger, Markdown export, CSV export, follow-up note copy, local autosave, and route guidance into builder, checklist, evidence map, ownership matrix, software scorecard, or AI answer-bank pages.
 - Rewired the repeat-review entry points on `index.html`, `start-here.html`, `free-tools.html`, `blog.html`, `ai-procurement-hub.html`, `blog-security-questionnaire-answer-bank.html`, and `ai-security-questionnaire-answer-bank.html` so the exact-match answer-bank language now points into the interactive builder first instead of only into static download or brochure routes.
@@ -164,6 +168,7 @@ Older work is collapsed here; only `2026-07-01` through `2026-07-03` stay detail
 
 ## Completed Summary
 
+- 2026-07-03: tightened the deal-blocker and kit-preview copy, added the missing kit-preview watcher tags, and kept site-link plus source-tag coverage checks green at `148` HTML files checked and `1914` emitted source tags covered.
 - 2026-07-03: reran validation-maintenance through the `04:29 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews while the remaining work stayed evidence-gated.
 - 2026-07-03: shipped the browser-only answer-bank builder, extended it across the named-vendor answer-bank pages, and kept site-link plus source-tag coverage checks green.
 - 2026-07-02: refreshed the validation-maintenance stack repeatedly while tightening buyer-facing deal-blocker, kit-preview, and post-checkout copy, and kept the live watch parked on zero-signal evidence.
