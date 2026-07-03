@@ -173,6 +173,7 @@ Older work is collapsed here; only `2026-07-01` through `2026-07-03` stay detail
 - Ran `npm run run:validation-maintenance` again at `2026-07-03 20:05 UTC`; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all passed, the refresh rewrote the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, `COMMUNITY-FEEDBACK.md` logged another deduplicated no-reply checkpoint, and the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews while the authenticated-browser directory blocker remained external to this workspace.
 - Tightened the proof/sample funnel so the homepage sample bundle card, the sample bundle page, and the deal-blocker proof band now point repeat-review visitors directly at the answer-bank workspace when that is the real job, instead of treating the sample as a one-off detour.
 - Added the new sample-bundle answer-bank workspace source tags to `scripts/watched-source-tags.mjs`, then reran `npm run check:site-links` and `npm run check:source-tag-coverage` cleanly with `148` HTML files checked and `1918` emitted source tags covered.
+- Cleaned up the memory files again so the backlog completed sections stay collapsed into short summary lines, while the last three days in this file remain detailed and the live evidence-gated items keep pointing at the freshest checkpoint.
 
 ## Completed Summary
 

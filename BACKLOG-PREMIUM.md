@@ -88,12 +88,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-03: reran validation-maintenance through the `20:05 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live P0/P1 items parked on zero-signal watch status.
-- 2026-07-03: reran validation-maintenance through the `16:25 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the active P0/P1 items parked on zero-signal watch status.
-- 2026-07-03: upgraded the answer-bank builder into a browser-only multi-row workspace, rewired the core and named-vendor answer-bank CTAs to sell the workspace clearly, and kept the site-link and source-tag checks green at `148` HTML files checked and `1914` emitted source tags covered.
-- 2026-07-03: reran validation-maintenance through the `12:58 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the remaining P0/P1 items parked on evidence-gated watch status.
-- 2026-07-03: tightened the deal-blocker and kit-preview preview copy, added the missing kit-preview watcher tags, and kept the site-link and source-tag checks green at `148` HTML files checked and `1914` emitted source tags covered.
-- 2026-07-03: extended the named-vendor answer-bank pages into the new interactive repeat-review builder and made that builder source-aware for OpenAI, Anthropic, Claude, Gemini, and Copilot traffic, leaving the remaining P0/P1 items purely evidence-gated.
-- 2026-07-02: reran validation-maintenance, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live P0/P1 evidence decisions parked on zero-signal watch status.
-- 2026-07-02: tightened the buyer-facing kit preview and post-checkout handoff, fixed the `/api/contact` forwarding failure, deleted the stale synthetic self-audit Blob record, and kept the queue parked at zero while the live P0/P1 watch stayed evidence-gated.
+- 2026-07-03: reran validation-maintenance, tightened the answer-bank workspace and kit-preview/deal-blocker surfaces, and kept the active P0/P1 watch parked on zero-signal evidence while site-link and source-tag checks stayed green.
+- 2026-07-03: upgraded the answer-bank builder into a browser-only multi-row workspace, extended it across the named-vendor pages, and kept the site-link and source-tag checks green.
+- 2026-07-02: reran validation-maintenance, tightened the kit preview and `/api/contact` handoff, and kept the queue parked on zero while the live P0/P1 watch stayed evidence-gated.
 - 2026-07-01 to 2026-06-05: shipped the homepage lower-funnel refresh, route-chooser repair, and the due-diligence / scorecard / ownership-matrix / automation-guide / SIG-guide / response-template / answer-example / sample-answers route set; the remaining items still depend on real buyer evidence.
