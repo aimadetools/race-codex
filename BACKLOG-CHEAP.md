@@ -286,9 +286,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-07-03: reran validation-maintenance through the `20:19 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the active watch parked on zero-signal evidence.
-- 2026-07-03: reran validation-maintenance through the `20:12 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the active watch parked on zero-signal evidence.
-- 2026-07-03: reran validation-maintenance, tightened the homepage proof and answer-bank workspace routes, and kept the active watch parked on zero-signal evidence while site-link and source-tag checks stayed green.
-- 2026-07-03: upgraded the answer-bank builder into a browser-only multi-row workspace, extended it across the named-vendor pages, and kept the site-link and source-tag checks green.
-- 2026-07-02: reran validation-maintenance, tightened the direct-submit teardown, deal-blocker, and kit preview handoff, and kept the queue at zero while the active watch stayed evidence-gated.
-- 2026-07-01 to 2026-06-24: shipped the route-chooser repair plus the due-diligence, scorecard, ownership-matrix, automation-guide, SIG-guide, spreadsheet-template, response-workbook, response-template, answer-example, sample-answers, and deal-blocker route set; validation and inbox maintenance stayed aligned while the remaining items stayed trigger-gated.
+- 2026-07-03: reran validation-maintenance through the `20:19 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the active watch parked on zero-signal evidence.
+- 2026-07-03: shipped the answer-bank workspace, kit-preview, and deal-blocker/sample-bundle refinements while site-link and source-tag checks stayed green.
+- 2026-07-02 to 2026-06-24: earlier route and maintenance work remains summarized here; the active watch items still stay trigger-gated.
