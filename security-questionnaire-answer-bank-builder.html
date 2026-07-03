@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Security Questionnaire Answer Bank Builder | NoticeKit</title>
+    <meta name="description" content="Build a browser-only security questionnaire answer-bank row with approved wording, proof links, owner notes, and reusable variants before the same buyer prompt reopens again.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NoticeKit">
+    <meta property="og:url" content="https://noticekit.tech/security-questionnaire-answer-bank-builder.html">
+    <meta property="og:title" content="Security Questionnaire Answer Bank Builder | NoticeKit">
+    <meta property="og:description" content="Create a reusable answer-bank row, proof notes, and copy-ready CSV locally in your browser.">
+    <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NoticeKit security questionnaire answer bank builder">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Security Questionnaire Answer Bank Builder | NoticeKit">
+    <meta name="twitter:description" content="Turn one repeated buyer prompt into a reusable answer-bank row, proof path, and owner note without sending your inputs to a server.">
+    <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://noticekit.tech/security-questionnaire-answer-bank-builder.html">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "NoticeKit Security Questionnaire Answer Bank Builder",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://noticekit.tech/security-questionnaire-answer-bank-builder.html",
+            "description": "Browser-only builder for reusable security questionnaire answer-bank rows, proof links, owner notes, and segment variants."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "When should I use the answer bank builder?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use it when the same buyer question keeps returning and your team needs one reusable answer row with proof, owner, approval status, and segment notes instead of another one-off draft."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does this builder create?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It creates a reusable answer-bank row summary, a Markdown row you can paste into Docs or Notion, a CSV row for spreadsheets, and an internal follow-up note for anything that is still unresolved."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the builder send my inputs to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The builder runs locally in your browser, autosaves on the current device only, and does not send your inputs to a server."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="mark">N</span><span>NoticeKit</span></a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="free-tools.html">Free tools</a>
+          <a class="button secondary" href="ai-security-questionnaire-audit.html?source=answer-bank-builder-nav-audit">AI audit</a>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <section class="page-hero">
+          <span class="eyebrow">Browser-only repeat-review builder</span>
+          <h1>Turn one repeated buyer question into a reusable answer-bank row before it reopens again.</h1>
+          <p>Use this answer-bank builder when your SaaS team already answered the question once and now needs a stable reusable row with approved wording, proof links, owner notes, customer-scope variants, and a recheck date. Fill the live row once, then copy the Markdown row, CSV row, and internal follow-up note without sending your inputs to a server.</p>
+          <div class="hero-actions">
+            <a class="button" href="#builder">Open answer-bank builder</a>
+            <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">Build one live answer first</a>
+            <a class="button secondary" href="blog-security-questionnaire-spreadsheet-template.html?source=answer-bank-builder-spreadsheet-template">Open workbook template guide</a>
+            <a class="button secondary" href="security-questionnaire-checklist.html?source=answer-bank-builder-checklist">Open checklist</a>
+            <a class="button secondary" href="security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix">Open ownership matrix</a>
+            <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard">Open software fit scorecard</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice-band">
+            <strong>For the company answering the questionnaire.</strong>
+            <p>Use this builder after one answer already exists and the real problem is reuse discipline. If the wording is still unstable, use the <a href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">answer builder</a> first. If row preservation is still the blocker, keep the <a href="blog-security-questionnaire-spreadsheet-template.html?source=answer-bank-builder-spreadsheet-template">workbook template route</a> visible. If the queue has widened into assignments, approvals, or tool evaluation, branch into the <a href="security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix">ownership matrix</a> or <a href="security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard">software fit scorecard</a> instead of pretending another document will solve it.</p>
+          </div>
+        </section>
+
+        <section class="section audit-layout" id="builder">
+          <form class="audit-card" id="answer-bank-form">
+            <div class="section-head compact-head">
+              <h2>Reusable row inputs</h2>
+              <p>Keep this tied to one recurring buyer prompt. The goal is one reusable row with a proof path, not a policy dump.</p>
+              <div class="route-presets" aria-label="Quick presets">
+                <button class="button secondary" type="button" data-preset="ai-vendor">AI vendor chain</button>
+                <button class="button secondary" type="button" data-preset="training">Training stance</button>
+                <button class="button secondary" type="button" data-preset="approvals">Approval path</button>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <label>Company
+                <input id="company" value="Example SaaS">
+              </label>
+              <label>Question label
+                <input id="question-label" value="AI vendor chain and data scope">
+              </label>
+              <label>Common buyer wording
+                <textarea id="buyer-wording">Please describe the AI vendors used in this workflow, the customer data in scope, whether customer content is used for training, and any review or approval process behind the answer.</textarea>
+              </label>
+              <label>Short approved answer
+                <textarea id="short-answer">We use named third-party AI vendors only in the reviewed workflow, keep the customer data categories and scope explicit, and maintain an internal proof path plus review owner before the answer is reused broadly.</textarea>
+              </label>
+              <label>Longer fallback answer
+                <textarea id="long-answer">This workflow currently uses OpenAI for model inference with Vercel, Supabase, and Zendesk supporting the surrounding application flow. The answer is tied to the reviewed support-assistant workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on our customer content. Privacy ops owns the draft, engineering confirms workflow boundaries, and counsel reviews any contract or notice implications before the row is marked approved for reuse.</textarea>
+              </label>
+              <label>Workflow covered
+                <input id="workflow-covered" value="Support assistant workflow for customer-ticket drafting">
+              </label>
+              <label>Vendors involved
+                <input id="vendors" value="OpenAI, Vercel, Supabase, Zendesk">
+              </label>
+              <label>Data scope and current stance
+                <textarea id="data-scope">Support ticket text, account identifiers, and agent prompts may pass through the workflow. The current operating stance is no training on customer content, with proof links saved alongside the row.</textarea>
+              </label>
+              <label>Customer scope or segment notes
+                <textarea id="customer-scope">Applies to standard enterprise and EU buyer reviews. Customer-specific attachments or custom deployment paths need a narrower variant before reuse.</textarea>
+              </label>
+              <label>Proof links and internal references
+                <textarea id="proof-links">Public subprocessor page, vendor terms link, workflow screenshot, internal review packet, tracker row, and reviewer note.</textarea>
+              </label>
+              <label>Owner and approval path
+                <textarea id="owner-path">Privacy ops owns the row, engineering confirms workflow boundaries, and counsel reviews notice or contract implications before approval.</textarea>
+              </label>
+              <label>Approval status
+                <select id="approval-status">
+                  <option value="approved">Approved for repeat reuse</option>
+                  <option value="review">Needs one more reviewer pass</option>
+                  <option value="limited">Use only with segment caveat</option>
+                  <option value="draft">Draft only, do not reuse yet</option>
+                </select>
+              </label>
+              <label>Review date
+                <input id="review-date" type="date" value="2026-07-03">
+              </label>
+              <label>Recheck trigger
+                <textarea id="recheck-trigger">Recheck after any workflow change, vendor change, contract-specific request, or changed stance on retention, access, or training.</textarea>
+              </label>
+              <label>Open questions or follow-up note
+                <textarea id="open-questions">Confirm whether any signed customer agreement adds a narrower notice or deployment-specific variant before this row is reused.</textarea>
+              </label>
+            </div>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <span class="eyebrow">Reusable row result</span>
+            <div class="score-row generator-summary">
+              <strong id="readiness-score">8/10</strong>
+              <span id="readiness-state">Reusable with proof</span>
+            </div>
+            <div class="score-meter" aria-hidden="true">
+              <span id="readiness-meter"></span>
+            </div>
+            <p id="readiness-summary">The row is close to repeat-review ready, but anything missing from proof, owner, or recheck discipline should stay explicit.</p>
+            <div class="tier-guidance">
+              <strong id="next-step-title">Best next step</strong>
+              <p id="next-step-copy">Paste this row into your answer bank, then keep the builder, evidence, or ownership route close for anything still unresolved.</p>
+            </div>
+            <div class="result-list">
+              <div>
+                <strong>Reusable now</strong>
+                <ul id="strength-list"></ul>
+              </div>
+              <div>
+                <strong>Still risky</strong>
+                <ul id="gap-list"></ul>
+              </div>
+            </div>
+            <div class="generator-actions">
+              <button class="button" id="copy-markdown" type="button">Copy Markdown row</button>
+              <button class="button secondary" id="copy-csv" type="button">Copy CSV row</button>
+              <button class="button secondary" id="copy-follow-up" type="button">Copy follow-up note</button>
+              <button class="button secondary" id="download-markdown" type="button">Download Markdown</button>
+              <button class="button secondary" id="download-csv" type="button">Download CSV</button>
+              <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
+            </div>
+            <p class="fine-print" id="builder-status">This builder runs in your browser and autosaves on this device only.</p>
+            <div class="notice-band" style="margin-top:16px;">
+              <strong>Route backup</strong>
+              <div class="hero-actions" style="margin-top:12px;">
+                <a class="button secondary" id="primary-route" href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">Open answer builder</a>
+                <a class="button secondary" id="secondary-route" href="security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix">Open ownership matrix</a>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article>
+              <div class="section-head">
+                <h2>Markdown row</h2>
+                <p>Paste this into Docs, Notion, Git, or the existing Markdown answer-bank files.</p>
+              </div>
+              <div class="template-box" id="markdown-output" aria-live="polite"></div>
+            </article>
+            <article>
+              <div class="section-head">
+                <h2>CSV row</h2>
+                <p>Paste this into your workbook or spreadsheet answer bank when the repeat-review path still lives in rows.</p>
+              </div>
+              <div class="template-box" id="csv-output" aria-live="polite"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="grid-2">
+            <article class="card">
+              <span class="tag">Use this builder when</span>
+              <ul class="feature-list">
+                <li>The same buyer wording keeps returning</li>
+                <li>The answer is already mostly stable</li>
+                <li>Proof links and owner notes matter on every reuse</li>
+                <li>The team needs one clean reusable row before broader software</li>
+              </ul>
+            </article>
+            <article class="card">
+              <span class="tag">Do not use this builder when</span>
+              <ul class="feature-list">
+                <li>You still need the first believable answer draft</li>
+                <li>The spreadsheet or portal rows are still the main blocker</li>
+                <li>The queue has already widened into assignments and administration</li>
+                <li>The row still needs proof cleanup before any reuse is safe</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>&copy; 2026 NoticeKit. Operational templates, not legal advice.</span>
+        <span><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="pricing.html">Pricing</a> | <a href="blog.html">Blog</a> | <a href="changelog.html">Changelog</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="mailto:hello@noticekit.tech">Contact</a></span>
+      </footer>
+    </div>
+    <script>
+      const STORAGE_KEY = "noticekit-security-questionnaire-answer-bank-builder-v1";
+      const form = document.querySelector("#answer-bank-form");
+      const fields = Array.from(form.querySelectorAll("input, textarea, select"));
+      const statusNode = document.querySelector("#builder-status");
+      const markdownOutput = document.querySelector("#markdown-output");
+      const csvOutput = document.querySelector("#csv-output");
+      const strengthList = document.querySelector("#strength-list");
+      const gapList = document.querySelector("#gap-list");
+      const readinessScore = document.querySelector("#readiness-score");
+      const readinessState = document.querySelector("#readiness-state");
+      const readinessSummary = document.querySelector("#readiness-summary");
+      const nextStepTitle = document.querySelector("#next-step-title");
+      const nextStepCopy = document.querySelector("#next-step-copy");
+      const readinessMeter = document.querySelector("#readiness-meter");
+      const primaryRoute = document.querySelector("#primary-route");
+      const secondaryRoute = document.querySelector("#secondary-route");
+      const today = new Date().toISOString().slice(0, 10);
+
+      const presets = {
+        "ai-vendor": {
+          "question-label": "AI vendor chain and proof path",
+          "buyer-wording": "Please identify the AI vendors in this workflow, the customer data involved, and the evidence behind your answer.",
+          "short-answer": "We name the reviewed AI vendors directly, keep the in-scope data categories explicit, and preserve proof links plus review ownership before reuse.",
+          "approval-status": "approved"
+        },
+        training: {
+          "question-label": "Model training and retention stance",
+          "buyer-wording": "Do any AI vendors use your customer content for training, and what is your current retention stance?",
+          "short-answer": "Our current operating position is no training on customer content in the reviewed workflow, with the relevant vendor terms and review notes attached as proof.",
+          "approval-status": "review"
+        },
+        approvals: {
+          "question-label": "Approval and human review path",
+          "buyer-wording": "Who reviews and approves AI questionnaire answers before they are reused across customers or deals?",
+          "short-answer": "Privacy ops drafts the answer, engineering validates the workflow boundary, and counsel reviews any contract or notice implications before repeat reuse.",
+          "approval-status": "limited"
+        }
+      };
+
+      function getValue(id) {
+        const field = document.getElementById(id);
+        return field ? field.value.trim() : "";
+      }
+
+      function setValue(id, value) {
+        const field = document.getElementById(id);
+        if (field) field.value = value;
+      }
+
+      function saveState() {
+        const payload = {};
+        fields.forEach((field) => {
+          payload[field.id] = field.value;
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      }
+
+      function loadState() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          setValue("review-date", today);
+          return;
+        }
+        try {
+          const payload = JSON.parse(raw);
+          fields.forEach((field) => {
+            if (typeof payload[field.id] === "string") {
+              field.value = payload[field.id];
+            }
+          });
+        } catch (error) {
+          console.error("Failed to parse saved answer-bank builder state", error);
+        }
+      }
+
+      function csvEscape(value) {
+        const text = (value || "").replace(/\r?\n/g, " ").trim();
+        return `"${text.replace(/"/g, '""')}"`;
+      }
+
+      function slugify(value) {
+        return (value || "noticekit")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "")
+          .slice(0, 80) || "noticekit";
+      }
+
+      function buildPayload() {
+        return {
+          company: getValue("company"),
+          questionLabel: getValue("question-label"),
+          buyerWording: getValue("buyer-wording"),
+          shortAnswer: getValue("short-answer"),
+          longAnswer: getValue("long-answer"),
+          workflowCovered: getValue("workflow-covered"),
+          vendors: getValue("vendors"),
+          dataScope: getValue("data-scope"),
+          customerScope: getValue("customer-scope"),
+          proofLinks: getValue("proof-links"),
+          ownerPath: getValue("owner-path"),
+          approvalStatus: getValue("approval-status"),
+          reviewDate: getValue("review-date"),
+          recheckTrigger: getValue("recheck-trigger"),
+          openQuestions: getValue("open-questions")
+        };
+      }
+
+      function buildMarkdown(payload) {
+        return [
+          `## ${payload.questionLabel || "Reusable answer-bank row"}`,
+          "",
+          `- Buyer wording: ${payload.buyerWording || "[Add the recurring buyer wording.]"}`,
+          `- Short answer: ${payload.shortAnswer || "[Add the approved concise answer.]"}`,
+          `- Longer answer: ${payload.longAnswer || "[Add the fuller fallback answer.]"}`,
+          `- Workflow covered: ${payload.workflowCovered || "[Add the exact workflow.]"}`,
+          `- Vendors involved: ${payload.vendors || "[Add the named vendors.]"}`,
+          `- Data scope and stance: ${payload.dataScope || "[Add the data scope and current stance.]"}`,
+          `- Customer scope: ${payload.customerScope || "[Add the segment or contract boundary.]"}`,
+          `- Proof links: ${payload.proofLinks || "[Add the proof links and references.]"}`,
+          `- Owner and approval path: ${payload.ownerPath || "[Add the owner path.]"}`,
+          `- Approval status: ${payload.approvalStatus || "[Add the current status.]"}`,
+          `- Review date: ${payload.reviewDate || "[Add the review date.]"}`,
+          `- Recheck trigger: ${payload.recheckTrigger || "[Add the recheck trigger.]"}`,
+          `- Open questions: ${payload.openQuestions || "[Add the unresolved notes.]"}`,
+          "",
+          `Prepared for: ${payload.company || "Example SaaS"}`
+        ].join("\n");
+      }
+
+      function buildCsv(payload) {
+        const headers = [
+          "question_label",
+          "buyer_wording",
+          "short_answer",
+          "long_answer",
+          "workflow_covered",
+          "vendors_involved",
+          "data_scope_and_stance",
+          "customer_scope",
+          "proof_links",
+          "owner_and_approval_path",
+          "approval_status",
+          "review_date",
+          "recheck_trigger",
+          "open_questions"
+        ];
+        const row = [
+          payload.questionLabel,
+          payload.buyerWording,
+          payload.shortAnswer,
+          payload.longAnswer,
+          payload.workflowCovered,
+          payload.vendors,
+          payload.dataScope,
+          payload.customerScope,
+          payload.proofLinks,
+          payload.ownerPath,
+          payload.approvalStatus,
+          payload.reviewDate,
+          payload.recheckTrigger,
+          payload.openQuestions
+        ];
+        return `${headers.join(",")}\n${row.map(csvEscape).join(",")}`;
+      }
+
+      function buildFollowUp(payload, gaps) {
+        return [
+          `Follow-up note for ${payload.questionLabel || "reusable answer-bank row"}`,
+          "",
+          `Company: ${payload.company || "Example SaaS"}`,
+          `Status: ${payload.approvalStatus || "draft"}`,
+          `Review date: ${payload.reviewDate || "TBD"}`,
+          "",
+          "What is still risky:",
+          ...(gaps.length ? gaps.map((gap) => `- ${gap}`) : ["- No major repeat-review gaps are currently obvious."]),
+          "",
+          "Recheck trigger:",
+          payload.recheckTrigger || "Add the recheck trigger before broad reuse."
+        ].join("\n");
+      }
+
+      function copyText(text, message) {
+        navigator.clipboard.writeText(text).then(() => {
+          statusNode.textContent = message;
+        }).catch(() => {
+          statusNode.textContent = "Clipboard copy failed in this browser. Use the download option instead.";
+        });
+      }
+
+      function downloadFile(filename, text, type) {
+        const blob = new Blob([text], { type });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+        statusNode.textContent = `${filename} downloaded.`;
+      }
+
+      function updateRouteHints(payload, score, gaps) {
+        if (!payload.shortAnswer || !payload.longAnswer) {
+          primaryRoute.href = "ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder";
+          primaryRoute.textContent = "Open answer builder";
+          secondaryRoute.href = "blog-security-questionnaire-response-template.html?source=answer-bank-builder-response-template";
+          secondaryRoute.textContent = "Open response template";
+          nextStepTitle.textContent = "Best next step";
+          nextStepCopy.textContent = "The reusable row is not stable yet. Finish the live answer wording before you promote it into repeat-review reuse.";
+          return;
+        }
+        if (!payload.proofLinks || !payload.ownerPath) {
+          primaryRoute.href = "ai-security-review-evidence-map.html?source=answer-bank-builder-evidence-map";
+          primaryRoute.textContent = "Open evidence map";
+          secondaryRoute.href = "security-questionnaire-checklist.html?source=answer-bank-builder-checklist";
+          secondaryRoute.textContent = "Open checklist";
+          nextStepTitle.textContent = "Best next step";
+          nextStepCopy.textContent = "The wording is reusable, but the proof path or owner path is still too thin. Make those explicit before broad reuse.";
+          return;
+        }
+        if (payload.approvalStatus === "draft" || payload.approvalStatus === "review") {
+          primaryRoute.href = "security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix";
+          primaryRoute.textContent = "Open ownership matrix";
+          secondaryRoute.href = "security-questionnaire-checklist.html?source=answer-bank-builder-checklist";
+          secondaryRoute.textContent = "Open checklist";
+          nextStepTitle.textContent = "Best next step";
+          nextStepCopy.textContent = "The row is close, but repeat-review reuse still depends on one more approval or a clearer owner path.";
+          return;
+        }
+        primaryRoute.href = "ai-security-questionnaire-answer-bank.html?source=answer-bank-builder-ai-answer-bank";
+        primaryRoute.textContent = "Open AI answer bank";
+        secondaryRoute.href = "security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard";
+        secondaryRoute.textContent = "Open software fit scorecard";
+        nextStepTitle.textContent = score >= 9 ? "Best next step" : "Best next step";
+        nextStepCopy.textContent = gaps.length
+          ? "Paste this row into the answer bank, but keep the listed gaps explicit so nobody treats the row as broader than it is."
+          : "Paste this row into the answer bank now. The repeat-review asset is reusable and the next decision is whether the queue stays light or widens into software.";
+      }
+
+      function render() {
+        const payload = buildPayload();
+        const strengths = [];
+        const gaps = [];
+        let score = 0;
+
+        if (payload.questionLabel) {
+          score += 1;
+          strengths.push("The recurring buyer prompt is named explicitly.");
+        } else {
+          gaps.push("Question label is still missing.");
+        }
+        if (payload.shortAnswer) {
+          score += 1;
+          strengths.push("A short approved answer exists for fast reuse.");
+        } else {
+          gaps.push("Short approved answer is still missing.");
+        }
+        if (payload.longAnswer) {
+          score += 1;
+          strengths.push("A longer fallback answer exists for reviewers who want more context.");
+        } else {
+          gaps.push("Longer fallback answer is still missing.");
+        }
+        if (payload.vendors && payload.dataScope) {
+          score += 1;
+          strengths.push("Named vendors and data scope are attached to the row.");
+        } else {
+          gaps.push("Named vendors or data scope still need to be made explicit.");
+        }
+        if (payload.proofLinks) {
+          score += 1;
+          strengths.push("Proof links are attached to the reusable row.");
+        } else {
+          gaps.push("Proof links are still missing.");
+        }
+        if (payload.ownerPath) {
+          score += 1;
+          strengths.push("Owner and approval path are visible.");
+        } else {
+          gaps.push("Owner and approval path are still missing.");
+        }
+        if (payload.customerScope) {
+          score += 1;
+          strengths.push("Customer-scope or segment notes limit overreuse.");
+        } else {
+          gaps.push("Customer-scope notes are still missing.");
+        }
+        if (payload.reviewDate && payload.recheckTrigger) {
+          score += 1;
+          strengths.push("Review date and recheck trigger protect the row from going stale.");
+        } else {
+          gaps.push("Review date or recheck trigger is still missing.");
+        }
+        if (payload.approvalStatus === "approved") {
+          score += 1;
+          strengths.push("The row is already marked approved for repeat reuse.");
+        } else if (payload.approvalStatus === "limited") {
+          score += 0.5;
+          gaps.push("The row still carries a segment or limited-use caveat.");
+        } else if (payload.approvalStatus === "review") {
+          gaps.push("The row still needs one more reviewer pass.");
+        } else {
+          gaps.push("The row is still draft-only and should not be reused yet.");
+        }
+        if (payload.openQuestions) {
+          strengths.push("Open questions are preserved instead of buried in inbox history.");
+        }
+
+        const normalizedScore = Math.max(1, Math.min(10, Math.round(score)));
+        readinessScore.textContent = `${normalizedScore}/10`;
+        readinessMeter.style.width = `${normalizedScore * 10}%`;
+        readinessState.textContent = normalizedScore >= 9
+          ? "Reusable with discipline"
+          : normalizedScore >= 7
+            ? "Close to repeat-review ready"
+            : normalizedScore >= 5
+              ? "Needs proof or owner cleanup"
+              : "Still too early for broad reuse";
+        readinessSummary.textContent = normalizedScore >= 8
+          ? "The row is strong enough for an answer bank, but reuse still depends on keeping caveats, proof, and recheck discipline intact."
+          : normalizedScore >= 5
+            ? "The reusable structure exists, but someone could overtrust the row unless proof, owner, or approval gaps stay visible."
+            : "The row still looks more like a one-off draft than a repeat-review asset.";
+
+        markdownOutput.textContent = buildMarkdown(payload);
+        csvOutput.textContent = buildCsv(payload);
+        strengthList.innerHTML = strengths.map((item) => `<li>${item}</li>`).join("");
+        gapList.innerHTML = gaps.map((item) => `<li>${item}</li>`).join("");
+
+        updateRouteHints(payload, normalizedScore, gaps);
+        saveState();
+      }
+
+      loadState();
+      render();
+
+      fields.forEach((field) => {
+        field.addEventListener("input", render);
+        field.addEventListener("change", render);
+      });
+
+      document.querySelectorAll("[data-preset]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const preset = presets[button.dataset.preset];
+          if (!preset) return;
+          Object.entries(preset).forEach(([id, value]) => setValue(id, value));
+          statusNode.textContent = "Preset applied locally.";
+          render();
+        });
+      });
+
+      document.querySelector("#copy-markdown").addEventListener("click", () => {
+        copyText(markdownOutput.textContent, "Reusable Markdown row copied.");
+      });
+      document.querySelector("#copy-csv").addEventListener("click", () => {
+        copyText(csvOutput.textContent, "CSV row copied.");
+      });
+      document.querySelector("#copy-follow-up").addEventListener("click", () => {
+        copyText(buildFollowUp(buildPayload(), Array.from(gapList.querySelectorAll("li")).map((item) => item.textContent)), "Follow-up note copied.");
+      });
+      document.querySelector("#download-markdown").addEventListener("click", () => {
+        const payload = buildPayload();
+        downloadFile(`${slugify(payload.company)}-${slugify(payload.questionLabel)}-answer-bank-row.md`, `${markdownOutput.textContent}\n`, "text/markdown;charset=utf-8");
+      });
+      document.querySelector("#download-csv").addEventListener("click", () => {
+        const payload = buildPayload();
+        downloadFile(`${slugify(payload.company)}-${slugify(payload.questionLabel)}-answer-bank-row.csv`, `${csvOutput.textContent}\n`, "text/csv;charset=utf-8");
+      });
+      document.querySelector("#clear-draft").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        form.reset();
+        setValue("review-date", today);
+        setValue("company", "Example SaaS");
+        setValue("question-label", "AI vendor chain and data scope");
+        setValue("buyer-wording", "Please describe the AI vendors used in this workflow, the customer data in scope, whether customer content is used for training, and any review or approval process behind the answer.");
+        setValue("short-answer", "We use named third-party AI vendors only in the reviewed workflow, keep the customer data categories and scope explicit, and maintain an internal proof path plus review owner before the answer is reused broadly.");
+        setValue("long-answer", "This workflow currently uses OpenAI for model inference with Vercel, Supabase, and Zendesk supporting the surrounding application flow. The answer is tied to the reviewed support-assistant workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on our customer content. Privacy ops owns the draft, engineering confirms workflow boundaries, and counsel reviews any contract or notice implications before the row is marked approved for reuse.");
+        setValue("workflow-covered", "Support assistant workflow for customer-ticket drafting");
+        setValue("vendors", "OpenAI, Vercel, Supabase, Zendesk");
+        setValue("data-scope", "Support ticket text, account identifiers, and agent prompts may pass through the workflow. The current operating stance is no training on customer content, with proof links saved alongside the row.");
+        setValue("customer-scope", "Applies to standard enterprise and EU buyer reviews. Customer-specific attachments or custom deployment paths need a narrower variant before reuse.");
+        setValue("proof-links", "Public subprocessor page, vendor terms link, workflow screenshot, internal review packet, tracker row, and reviewer note.");
+        setValue("owner-path", "Privacy ops owns the row, engineering confirms workflow boundaries, and counsel reviews notice or contract implications before approval.");
+        setValue("approval-status", "approved");
+        setValue("recheck-trigger", "Recheck after any workflow change, vendor change, contract-specific request, or changed stance on retention, access, or training.");
+        setValue("open-questions", "Confirm whether any signed customer agreement adds a narrower notice or deployment-specific variant before this row is reused.");
+        statusNode.textContent = "Saved local draft cleared.";
+        render();
+      });
+    </script>
+  </body>
+</html>

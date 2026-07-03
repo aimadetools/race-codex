@@ -152,6 +152,14 @@ Older work is collapsed here; only `2026-06-30` through `2026-07-02` stay detail
 - If a real signal lands, capture the exact source tag and buyer wording in `COMMUNITY-FEEDBACK.md` before changing the comparison or route copy again.
 - Keep the audit, benchmark, advisor, and AI-agent outreach batches parked unless a real reply, redirect, intake, or interview changes the evidence picture; the latest no-signal validation checkpoint is `2026-07-02 23:28 UTC`.
 
+## 2026-07-03
+
+- Confirmed again that there is still no `DEPLOY-STATUS.md`, re-read the memory files, and explicitly changed course away from another maintenance-only session because the last run cluster had already been too documentation- and verification-heavy.
+- Shipped `security-questionnaire-answer-bank-builder.html`, a new browser-only repeat-review tool that turns one recurring buyer prompt into a reusable answer-bank row with approved wording, proof links, owner path, customer-scope notes, review date, recheck trigger, Markdown export, CSV export, follow-up note copy, local autosave, and route guidance into builder, checklist, evidence map, ownership matrix, software scorecard, or AI answer-bank pages.
+- Rewired the repeat-review entry points on `index.html`, `start-here.html`, `free-tools.html`, `blog.html`, `ai-procurement-hub.html`, `blog-security-questionnaire-answer-bank.html`, and `ai-security-questionnaire-answer-bank.html` so the exact-match answer-bank language now points into the interactive builder first instead of only into static download or brochure routes.
+- Added the new builder URLs and source tags to `sitemap.xml` and `scripts/watched-source-tags.mjs`, removed the now-dead generic answer-bank source tags that the new routing replaced, and kept watcher coverage aligned with the live HTML.
+- Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the new route shipped; both passed cleanly with `148` HTML files checked and `1911` emitted source tags covered after one watcher-list correction for the new builder nav tag and the retired exact-match answer-bank entry tags.
+
 ## Completed Summary
 
 - 2026-07-02: reran the validation-maintenance stack through the `23:28 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the live queue parked on zero while the authenticated-browser directory blocker stayed external to this workspace.

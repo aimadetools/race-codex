@@ -127,6 +127,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://noticekit.tech/security-questionnaire-answer-bank-builder.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
     <loc>https://noticekit.tech/blog-security-questionnaire-spreadsheet-template.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -146,7 +152,7 @@
   </url>
   <url>
     <loc>https://noticekit.tech/blog-security-questionnaire-answer-bank.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
