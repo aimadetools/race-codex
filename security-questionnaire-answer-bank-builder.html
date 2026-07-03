@@ -83,11 +83,11 @@
       <main id="main-content">
         <section class="page-hero">
           <span class="eyebrow">Browser-only repeat-review builder</span>
-          <h1>Turn one repeated buyer question into a reusable answer-bank row before it reopens again.</h1>
-          <p>Use this answer-bank builder when your SaaS team already answered the question once and now needs a stable reusable row with approved wording, proof links, owner notes, customer-scope variants, and a recheck date. Fill the live row once, then copy the Markdown row, CSV row, and internal follow-up note without sending your inputs to a server.</p>
+          <h1 id="hero-title">Turn one repeated buyer question into a reusable answer-bank row before it reopens again.</h1>
+          <p id="hero-copy">Use this answer-bank builder when your SaaS team already answered the question once and now needs a stable reusable row with approved wording, proof links, owner notes, customer-scope variants, and a recheck date. Fill the live row once, then copy the Markdown row, CSV row, and internal follow-up note without sending your inputs to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#builder">Open answer-bank builder</a>
-            <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">Build one live answer first</a>
+            <a class="button secondary" id="live-answer-link" href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">Build one live answer first</a>
             <a class="button secondary" href="blog-security-questionnaire-spreadsheet-template.html?source=answer-bank-builder-spreadsheet-template">Open workbook template guide</a>
             <a class="button secondary" href="security-questionnaire-checklist.html?source=answer-bank-builder-checklist">Open checklist</a>
             <a class="button secondary" href="security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix">Open ownership matrix</a>
@@ -99,6 +99,17 @@
           <div class="notice-band">
             <strong>For the company answering the questionnaire.</strong>
             <p>Use this builder after one answer already exists and the real problem is reuse discipline. If the wording is still unstable, use the <a href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">answer builder</a> first. If row preservation is still the blocker, keep the <a href="blog-security-questionnaire-spreadsheet-template.html?source=answer-bank-builder-spreadsheet-template">workbook template route</a> visible. If the queue has widened into assignments, approvals, or tool evaluation, branch into the <a href="security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix">ownership matrix</a> or <a href="security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard">software fit scorecard</a> instead of pretending another document will solve it.</p>
+          </div>
+        </section>
+
+        <section class="section" id="source-context-section" hidden>
+          <div class="context-band" aria-live="polite">
+            <div>
+              <span class="eyebrow">Source context</span>
+              <h2 id="source-context-title">Keep the reusable row tied to the exact repeat-review thread that sent you here.</h2>
+              <p id="source-context-copy">Use this builder when the named workflow, vendor wording, proof path, and owner notes are already mostly known and the next step is a reusable row instead of another one-off answer.</p>
+            </div>
+            <ol class="context-points" id="source-context-points"></ol>
           </div>
         </section>
 
@@ -276,7 +287,188 @@
       const readinessMeter = document.querySelector("#readiness-meter");
       const primaryRoute = document.querySelector("#primary-route");
       const secondaryRoute = document.querySelector("#secondary-route");
+      const heroTitle = document.querySelector("#hero-title");
+      const heroCopy = document.querySelector("#hero-copy");
+      const liveAnswerLink = document.querySelector("#live-answer-link");
+      const sourceContextSection = document.querySelector("#source-context-section");
+      const sourceContextTitle = document.querySelector("#source-context-title");
+      const sourceContextCopy = document.querySelector("#source-context-copy");
+      const sourceContextPoints = document.querySelector("#source-context-points");
+      const source = new URLSearchParams(window.location.search).get("source") || "";
       const today = new Date().toISOString().slice(0, 10);
+      const baseDefaults = {
+        company: "Example SaaS",
+        "question-label": "AI vendor chain and data scope",
+        "buyer-wording": "Please describe the AI vendors used in this workflow, the customer data in scope, whether customer content is used for training, and any review or approval process behind the answer.",
+        "short-answer": "We use named third-party AI vendors only in the reviewed workflow, keep the customer data categories and scope explicit, and maintain an internal proof path plus review owner before the answer is reused broadly.",
+        "long-answer": "This workflow currently uses OpenAI for model inference with Vercel, Supabase, and Zendesk supporting the surrounding application flow. The answer is tied to the reviewed support-assistant workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on our customer content. Privacy ops owns the draft, engineering confirms workflow boundaries, and counsel reviews any contract or notice implications before the row is marked approved for reuse.",
+        "workflow-covered": "Support assistant workflow for customer-ticket drafting",
+        vendors: "OpenAI, Vercel, Supabase, Zendesk",
+        "data-scope": "Support ticket text, account identifiers, and agent prompts may pass through the workflow. The current operating stance is no training on customer content, with proof links saved alongside the row.",
+        "customer-scope": "Applies to standard enterprise and EU buyer reviews. Customer-specific attachments or custom deployment paths need a narrower variant before reuse.",
+        "proof-links": "Public subprocessor page, vendor terms link, workflow screenshot, internal review packet, tracker row, and reviewer note.",
+        "owner-path": "Privacy ops owns the row, engineering confirms workflow boundaries, and counsel reviews notice or contract implications before approval.",
+        "approval-status": "approved",
+        "recheck-trigger": "Recheck after any workflow change, vendor change, contract-specific request, or changed stance on retention, access, or training.",
+        "open-questions": "Confirm whether any signed customer agreement adds a narrower notice or deployment-specific variant before this row is reused."
+      };
+      const sourceProfiles = {
+        "openai-answer-bank-builder": {
+          heroTitle: "Turn repeated OpenAI buyer wording into a reusable answer-bank row before the next review restarts it.",
+          heroCopy: "Use this builder when OpenAI is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
+          liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=openai-answer-bank-builder",
+          liveAnswerLabel: "Build OpenAI live answer first",
+          contextTitle: "Keep the OpenAI repeat-review row tied to the exact named-vendor story.",
+          contextCopy: "Use this builder after the OpenAI answer wording is mostly stable and the next problem is repeat-review reuse, not first-draft uncertainty.",
+          contextPoints: [
+            "Preserve the named OpenAI workflow and supporting vendors instead of falling back to generic AI wording.",
+            "Keep the same proof links, scope notes, and reviewer caveats attached to the reusable row.",
+            "Switch back to the live-answer builder only if the current deal still needs net-new wording."
+          ],
+          defaults: {
+            "question-label": "OpenAI workflow, data scope, and proof path",
+            "buyer-wording": "Please describe where OpenAI is used in this workflow, the customer data in scope, whether customer content is used for training, and the proof or review path behind the answer.",
+            "short-answer": "We name OpenAI directly in the reviewed workflow, keep the in-scope customer data and supporting vendors explicit, and preserve the proof path plus review owner before the wording is reused broadly.",
+            "long-answer": "This workflow currently uses OpenAI for model inference with Vercel, Supabase, and Zendesk supporting the surrounding application flow. The reusable row stays tied to the reviewed support-assistant workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on our customer content. Privacy ops owns the row, engineering confirms the workflow boundary, and counsel reviews any contract or notice implications before broad reuse.",
+            "workflow-covered": "Support assistant workflow using OpenAI-backed drafting",
+            vendors: "OpenAI, Vercel, Supabase, Zendesk"
+          },
+          routes: {
+            builderHref: "ai-security-questionnaire-answer-builder.html?source=openai-answer-bank-builder",
+            builderLabel: "Build OpenAI live answer",
+            templateHref: "blog-openai-security-questionnaire-answer-template.html?source=openai-answer-bank-template",
+            templateLabel: "Open OpenAI template",
+            evidenceHref: "ai-security-review-evidence-map.html?source=openai-answer-bank-evidence-map",
+            evidenceLabel: "Open evidence map",
+            answerBankHref: "openai-security-questionnaire-answer-bank.html?source=openai-answer-bank-builder",
+            answerBankLabel: "Open OpenAI answer bank"
+          }
+        },
+        "anthropic-answer-bank-builder": {
+          heroTitle: "Turn repeated Anthropic or Claude buyer wording into a reusable answer-bank row before the next review restarts it.",
+          heroCopy: "Use this builder when Anthropic or Claude is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
+          liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=anthropic-answer-bank-builder",
+          liveAnswerLabel: "Build Anthropic live answer first",
+          contextTitle: "Keep the Anthropic repeat-review row tied to the exact named-vendor story.",
+          contextCopy: "Use this builder after the Anthropic or Claude answer wording is mostly stable and the next problem is repeat-review reuse, not first-draft uncertainty.",
+          contextPoints: [
+            "Preserve the named Anthropic or Claude workflow instead of broad generic AI wording.",
+            "Keep the same proof links, scope notes, and reviewer caveats attached to the reusable row.",
+            "Switch back to the live-answer builder only if the current deal still needs net-new wording."
+          ],
+          defaults: {
+            "question-label": "Anthropic or Claude workflow, data scope, and proof path",
+            "buyer-wording": "Please describe where Anthropic or Claude is used in this workflow, the customer data in scope, whether customer content is used for training, and the proof or review path behind the answer.",
+            "short-answer": "We name Anthropic or Claude directly in the reviewed workflow, keep the in-scope customer data and supporting vendors explicit, and preserve the proof path plus review owner before the wording is reused broadly.",
+            "long-answer": "This workflow currently uses Anthropic for model inference with Vercel, Supabase, and Zendesk supporting the surrounding application flow. The reusable row stays tied to the reviewed support-assistant workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on our customer content. Privacy ops owns the row, engineering confirms the workflow boundary, and counsel reviews any contract or notice implications before broad reuse.",
+            "workflow-covered": "Support assistant workflow using Anthropic-backed drafting",
+            vendors: "Anthropic, Vercel, Supabase, Zendesk"
+          },
+          routes: {
+            builderHref: "ai-security-questionnaire-answer-builder.html?source=anthropic-answer-bank-builder",
+            builderLabel: "Build Anthropic live answer",
+            templateHref: "anthropic-security-questionnaire-answer-template.html?source=anthropic-answer-bank-template",
+            templateLabel: "Open Anthropic template",
+            evidenceHref: "ai-security-review-evidence-map.html?source=anthropic-answer-bank-evidence-map",
+            evidenceLabel: "Open evidence map",
+            answerBankHref: "anthropic-security-questionnaire-answer-bank.html?source=anthropic-answer-bank-builder",
+            answerBankLabel: "Open Anthropic answer bank"
+          }
+        },
+        "claude-answer-bank-builder": {
+          heroTitle: "Turn repeated Claude buyer wording into a reusable answer-bank row before the next review restarts it.",
+          heroCopy: "Use this builder when Claude is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
+          liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=claude-answer-bank-builder",
+          liveAnswerLabel: "Build Claude live answer first",
+          contextTitle: "Keep the Claude repeat-review row tied to the exact named-vendor story.",
+          contextCopy: "Use this builder after the Claude answer wording is mostly stable and the next problem is repeat-review reuse, not first-draft uncertainty.",
+          contextPoints: [
+            "Preserve the named Claude workflow and supporting vendors instead of broad generic AI wording.",
+            "Keep the same proof links, scope notes, and reviewer caveats attached to the reusable row.",
+            "Switch back to the live-answer builder only if the current deal still needs net-new wording."
+          ],
+          defaults: {
+            "question-label": "Claude workflow, data scope, and proof path",
+            "buyer-wording": "Please describe where Claude is used in this workflow, the customer data in scope, whether customer content is used for training, and the proof or review path behind the answer.",
+            "short-answer": "We name Claude directly in the reviewed workflow, keep the in-scope customer data and supporting vendors explicit, and preserve the proof path plus review owner before the wording is reused broadly.",
+            "long-answer": "This workflow currently uses Claude by Anthropic for model inference with Vercel, Supabase, and Zendesk supporting the surrounding application flow. The reusable row stays tied to the reviewed support-assistant workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on our customer content. Privacy ops owns the row, engineering confirms the workflow boundary, and counsel reviews any contract or notice implications before broad reuse.",
+            "workflow-covered": "Support assistant workflow using Claude-backed drafting",
+            vendors: "Claude by Anthropic, Vercel, Supabase, Zendesk"
+          },
+          routes: {
+            builderHref: "ai-security-questionnaire-answer-builder.html?source=claude-answer-bank-builder",
+            builderLabel: "Build Claude live answer",
+            templateHref: "claude-security-questionnaire-answer-template.html?source=claude-answer-bank-template",
+            templateLabel: "Open Claude template",
+            evidenceHref: "ai-security-review-evidence-map.html?source=claude-answer-bank-evidence-map",
+            evidenceLabel: "Open evidence map",
+            answerBankHref: "claude-security-questionnaire-answer-bank.html?source=claude-answer-bank-builder",
+            answerBankLabel: "Open Claude answer bank"
+          }
+        },
+        "gemini-answer-bank-builder": {
+          heroTitle: "Turn repeated Gemini buyer wording into a reusable answer-bank row before the next review restarts it.",
+          heroCopy: "Use this builder when Gemini is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
+          liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=gemini-answer-bank-builder",
+          liveAnswerLabel: "Build Gemini live answer first",
+          contextTitle: "Keep the Gemini repeat-review row tied to the exact named-vendor story.",
+          contextCopy: "Use this builder after the Gemini answer wording is mostly stable and the next problem is repeat-review reuse, not first-draft uncertainty.",
+          contextPoints: [
+            "Preserve the named Gemini workflow and supporting vendors instead of broad generic AI wording.",
+            "Keep the same proof links, scope notes, and reviewer caveats attached to the reusable row.",
+            "Switch back to the live-answer builder only if the current deal still needs net-new wording."
+          ],
+          defaults: {
+            "question-label": "Gemini workflow, data scope, and proof path",
+            "buyer-wording": "Please describe where Gemini is used in this workflow, the customer data in scope, whether customer content is used for training, and the proof or review path behind the answer.",
+            "short-answer": "We name Gemini directly in the reviewed workflow, keep the in-scope customer data and supporting vendors explicit, and preserve the proof path plus review owner before the wording is reused broadly.",
+            "long-answer": "This workflow currently uses Google Gemini for model inference with Vercel, Supabase, and Zendesk supporting the surrounding application flow. The reusable row stays tied to the reviewed support-assistant workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on our customer content. Privacy ops owns the row, engineering confirms the workflow boundary, and counsel reviews any contract or notice implications before broad reuse.",
+            "workflow-covered": "Support assistant workflow using Gemini-backed drafting",
+            vendors: "Google Gemini, Vercel, Supabase, Zendesk"
+          },
+          routes: {
+            builderHref: "ai-security-questionnaire-answer-builder.html?source=gemini-answer-bank-builder",
+            builderLabel: "Build Gemini live answer",
+            templateHref: "gemini-security-questionnaire-answer-template.html?source=gemini-answer-bank-template",
+            templateLabel: "Open Gemini template",
+            evidenceHref: "ai-security-review-evidence-map.html?source=gemini-answer-bank-evidence-map",
+            evidenceLabel: "Open evidence map",
+            answerBankHref: "gemini-security-questionnaire-answer-bank.html?source=gemini-answer-bank-builder",
+            answerBankLabel: "Open Gemini answer bank"
+          }
+        },
+        "microsoft-copilot-answer-bank-builder": {
+          heroTitle: "Turn repeated Copilot buyer wording into a reusable answer-bank row before the next review restarts it.",
+          heroCopy: "Use this builder when Microsoft Copilot or Azure OpenAI is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, approval boundary, proof links, owner path, and recheck trigger kept together.",
+          liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=microsoft-copilot-answer-bank-builder",
+          liveAnswerLabel: "Build Copilot live answer first",
+          contextTitle: "Keep the Copilot repeat-review row tied to the exact named-vendor story.",
+          contextCopy: "Use this builder after the Copilot answer wording is mostly stable and the next problem is repeat-review reuse, not first-draft uncertainty.",
+          contextPoints: [
+            "Preserve the named Copilot or Azure OpenAI workflow and approval boundary instead of generic AI wording.",
+            "Keep the same proof links, scope notes, and reviewer caveats attached to the reusable row.",
+            "Switch back to the live-answer builder only if the current deal still needs net-new wording."
+          ],
+          defaults: {
+            "question-label": "Copilot workflow, approval boundary, and proof path",
+            "buyer-wording": "Please describe where Microsoft Copilot or Azure OpenAI is used in this workflow, what the workflow can read or draft, the customer data in scope, and the proof or approval path behind the answer.",
+            "short-answer": "We name Microsoft Copilot or Azure OpenAI directly in the reviewed workflow, keep the action boundary plus in-scope customer data explicit, and preserve the proof path plus review owner before the wording is reused broadly.",
+            "long-answer": "This workflow currently uses Microsoft Copilot or Azure OpenAI-backed features with Microsoft 365, Vercel, and internal approval controls supporting the surrounding application flow. The reusable row stays tied to the reviewed workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on customer content outside the reviewed boundary. Privacy ops owns the row, engineering confirms the action boundary, and counsel reviews any contract or notice implications before broad reuse.",
+            "workflow-covered": "Internal and customer-facing workflow using Microsoft Copilot-backed drafting",
+            vendors: "Microsoft Copilot, Azure OpenAI, Microsoft 365, Vercel"
+          },
+          routes: {
+            builderHref: "ai-security-questionnaire-answer-builder.html?source=microsoft-copilot-answer-bank-builder",
+            builderLabel: "Build Copilot live answer",
+            templateHref: "microsoft-copilot-security-questionnaire-answer-template.html?source=microsoft-copilot-answer-bank-template",
+            templateLabel: "Open Copilot template",
+            evidenceHref: "ai-security-review-evidence-map.html?source=microsoft-copilot-answer-bank-evidence-map",
+            evidenceLabel: "Open evidence map",
+            answerBankHref: "microsoft-copilot-security-questionnaire-answer-bank.html?source=microsoft-copilot-answer-bank-builder",
+            answerBankLabel: "Open Copilot answer bank"
+          }
+        }
+      };
 
       const presets = {
         "ai-vendor": {
@@ -309,6 +501,16 @@
         if (field) field.value = value;
       }
 
+      function getSourceProfile() {
+        return sourceProfiles[source] || null;
+      }
+
+      function applyDefaults(defaults) {
+        const merged = { ...baseDefaults, ...(defaults || {}) };
+        Object.entries(merged).forEach(([id, value]) => setValue(id, value));
+        setValue("review-date", today);
+      }
+
       function saveState() {
         const payload = {};
         fields.forEach((field) => {
@@ -320,8 +522,8 @@
       function loadState() {
         const raw = localStorage.getItem(STORAGE_KEY);
         if (!raw) {
-          setValue("review-date", today);
-          return;
+          applyDefaults(getSourceProfile()?.defaults);
+          return false;
         }
         try {
           const payload = JSON.parse(raw);
@@ -330,9 +532,24 @@
               field.value = payload[field.id];
             }
           });
+          return true;
         } catch (error) {
           console.error("Failed to parse saved answer-bank builder state", error);
+          applyDefaults(getSourceProfile()?.defaults);
         }
+        return false;
+      }
+
+      function applySourceProfile(profile) {
+        if (!profile) return;
+        heroTitle.textContent = profile.heroTitle;
+        heroCopy.textContent = profile.heroCopy;
+        liveAnswerLink.href = profile.liveAnswerHref;
+        liveAnswerLink.textContent = profile.liveAnswerLabel;
+        sourceContextTitle.textContent = profile.contextTitle;
+        sourceContextCopy.textContent = profile.contextCopy;
+        sourceContextPoints.innerHTML = profile.contextPoints.map((point) => `<li>${point}</li>`).join("");
+        sourceContextSection.hidden = false;
       }
 
       function csvEscape(value) {
@@ -463,19 +680,20 @@
         statusNode.textContent = `${filename} downloaded.`;
       }
 
-      function updateRouteHints(payload, score, gaps) {
+      function updateRouteHints(payload, score, gaps, profile) {
+        const routeProfile = profile?.routes || {};
         if (!payload.shortAnswer || !payload.longAnswer) {
-          primaryRoute.href = "ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder";
-          primaryRoute.textContent = "Open answer builder";
-          secondaryRoute.href = "blog-security-questionnaire-response-template.html?source=answer-bank-builder-response-template";
-          secondaryRoute.textContent = "Open response template";
+          primaryRoute.href = routeProfile.builderHref || "ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder";
+          primaryRoute.textContent = routeProfile.builderLabel || "Open answer builder";
+          secondaryRoute.href = routeProfile.templateHref || "blog-security-questionnaire-response-template.html?source=answer-bank-builder-response-template";
+          secondaryRoute.textContent = routeProfile.templateLabel || "Open response template";
           nextStepTitle.textContent = "Best next step";
           nextStepCopy.textContent = "The reusable row is not stable yet. Finish the live answer wording before you promote it into repeat-review reuse.";
           return;
         }
         if (!payload.proofLinks || !payload.ownerPath) {
-          primaryRoute.href = "ai-security-review-evidence-map.html?source=answer-bank-builder-evidence-map";
-          primaryRoute.textContent = "Open evidence map";
+          primaryRoute.href = routeProfile.evidenceHref || "ai-security-review-evidence-map.html?source=answer-bank-builder-evidence-map";
+          primaryRoute.textContent = routeProfile.evidenceLabel || "Open evidence map";
           secondaryRoute.href = "security-questionnaire-checklist.html?source=answer-bank-builder-checklist";
           secondaryRoute.textContent = "Open checklist";
           nextStepTitle.textContent = "Best next step";
@@ -491,8 +709,8 @@
           nextStepCopy.textContent = "The row is close, but repeat-review reuse still depends on one more approval or a clearer owner path.";
           return;
         }
-        primaryRoute.href = "ai-security-questionnaire-answer-bank.html?source=answer-bank-builder-ai-answer-bank";
-        primaryRoute.textContent = "Open AI answer bank";
+        primaryRoute.href = routeProfile.answerBankHref || "ai-security-questionnaire-answer-bank.html?source=answer-bank-builder-ai-answer-bank";
+        primaryRoute.textContent = routeProfile.answerBankLabel || "Open AI answer bank";
         secondaryRoute.href = "security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard";
         secondaryRoute.textContent = "Open software fit scorecard";
         nextStepTitle.textContent = score >= 9 ? "Best next step" : "Best next step";
@@ -591,10 +809,11 @@
         strengthList.innerHTML = strengths.map((item) => `<li>${item}</li>`).join("");
         gapList.innerHTML = gaps.map((item) => `<li>${item}</li>`).join("");
 
-        updateRouteHints(payload, normalizedScore, gaps);
+        updateRouteHints(payload, normalizedScore, gaps, getSourceProfile());
         saveState();
       }
 
+      applySourceProfile(getSourceProfile());
       loadState();
       render();
 
@@ -633,21 +852,7 @@
       document.querySelector("#clear-draft").addEventListener("click", () => {
         localStorage.removeItem(STORAGE_KEY);
         form.reset();
-        setValue("review-date", today);
-        setValue("company", "Example SaaS");
-        setValue("question-label", "AI vendor chain and data scope");
-        setValue("buyer-wording", "Please describe the AI vendors used in this workflow, the customer data in scope, whether customer content is used for training, and any review or approval process behind the answer.");
-        setValue("short-answer", "We use named third-party AI vendors only in the reviewed workflow, keep the customer data categories and scope explicit, and maintain an internal proof path plus review owner before the answer is reused broadly.");
-        setValue("long-answer", "This workflow currently uses OpenAI for model inference with Vercel, Supabase, and Zendesk supporting the surrounding application flow. The answer is tied to the reviewed support-assistant workflow only, not unrelated product paths. Customer content is handled under the applicable business offering and our current operating position is no training on our customer content. Privacy ops owns the draft, engineering confirms workflow boundaries, and counsel reviews any contract or notice implications before the row is marked approved for reuse.");
-        setValue("workflow-covered", "Support assistant workflow for customer-ticket drafting");
-        setValue("vendors", "OpenAI, Vercel, Supabase, Zendesk");
-        setValue("data-scope", "Support ticket text, account identifiers, and agent prompts may pass through the workflow. The current operating stance is no training on customer content, with proof links saved alongside the row.");
-        setValue("customer-scope", "Applies to standard enterprise and EU buyer reviews. Customer-specific attachments or custom deployment paths need a narrower variant before reuse.");
-        setValue("proof-links", "Public subprocessor page, vendor terms link, workflow screenshot, internal review packet, tracker row, and reviewer note.");
-        setValue("owner-path", "Privacy ops owns the row, engineering confirms workflow boundaries, and counsel reviews notice or contract implications before approval.");
-        setValue("approval-status", "approved");
-        setValue("recheck-trigger", "Recheck after any workflow change, vendor change, contract-specific request, or changed stance on retention, access, or training.");
-        setValue("open-questions", "Confirm whether any signed customer agreement adds a narrower notice or deployment-specific variant before this row is reused.");
+        applyDefaults(getSourceProfile()?.defaults);
         statusNode.textContent = "Saved local draft cleared.";
         render();
       });

@@ -88,6 +88,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-03: extended the named-vendor answer-bank pages into the new interactive repeat-review builder and made that builder source-aware for OpenAI, Anthropic, Claude, Gemini, and Copilot traffic, leaving the remaining P0/P1 items purely evidence-gated.
 - 2026-07-02: reran validation-maintenance, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the live P0/P1 evidence decisions parked on zero-signal watch status.
 - 2026-07-02: tightened the buyer-facing kit preview and post-checkout handoff, fixed the `/api/contact` forwarding failure, deleted the stale synthetic self-audit Blob record, and kept the queue parked at zero while the live P0/P1 watch stayed evidence-gated.
 - 2026-07-01 to 2026-06-05: shipped the homepage lower-funnel refresh, route-chooser repair, and the due-diligence / scorecard / ownership-matrix / automation-guide / SIG-guide / response-template / answer-example / sample-answers route set; the remaining items still depend on real buyer evidence.

@@ -283,6 +283,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-03: extended the new browser-only answer-bank builder across the OpenAI, Anthropic, Claude, Gemini, and Microsoft Copilot answer-bank pages, added source-aware named-vendor defaults plus route-backup logic on the builder itself, and kept site-link plus source-tag coverage checks green.
 - 2026-07-02: tightened the direct-submit teardown and AI deal-blocker copy, reran validation-maintenance, and kept the live trigger backlog collapsed while the active P0 watch items stayed on zero-signal evidence.
 - 2026-07-02: tightened the buyer-facing kit preview and post-checkout handoff, fixed the `/api/contact` forwarding failure, deleted the stale synthetic self-audit Blob record, and kept the queue at zero while the active P0 watch items stayed evidence-gated.
 - 2026-07-01 to 2026-06-24: shipped the route-chooser repair plus the due-diligence, scorecard, ownership-matrix, automation-guide, SIG-guide, spreadsheet-template, response-workbook, response-template, answer-example, sample-answers, and deal-blocker route set; validation and inbox maintenance stayed aligned while the remaining items stayed trigger-gated.
