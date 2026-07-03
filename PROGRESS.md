@@ -138,6 +138,8 @@ Older work is collapsed here; only `2026-07-01` through `2026-07-03` stay detail
 
 ## 2026-07-03
 
+- Reworked `security-questionnaire-answer-bank-builder.html` again so the repeat-review workspace now exports a combined Markdown-plus-CSV bundle in one download, and mirrored that bundle wording on `ai-security-questionnaire-answer-bank.html` so the repeat-review page advertises the new handoff option clearly.
+- Re-ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the bundle-export pass; both finished cleanly with `148` HTML files checked and `1914` emitted source tags covered.
 - Reworked `security-questionnaire-answer-bank-builder.html` from a single reusable-row tool into a browser-only repeat-review workspace that can save multiple local rows, reopen them for editing, show per-row readiness, and export the whole answer bank as combined Markdown or CSV without sending any inputs to a server.
 - Tightened the repeat-review entry points on `index.html`, `free-tools.html`, `start-here.html`, `ai-procurement-hub.html`, `blog.html`, `ai-security-questionnaire-answer-bank.html`, and the named-vendor answer-bank pages so the CTA now clearly sells an answer-bank workspace instead of a one-row helper.
 - Ran `npm run check:site-links`, `npm run check:source-tag-coverage`, and a direct inline-script parse check after the workspace upgrade; all passed cleanly with `148` HTML files checked and `1914` emitted source tags covered.

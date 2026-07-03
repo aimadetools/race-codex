@@ -231,13 +231,14 @@
           </div>
           <div class="notice-band" style="margin-bottom:16px;">
             <strong id="workspace-summary">No rows saved yet.</strong>
-            <p id="workspace-summary-copy">Add the current row to start a browser-only answer-bank workspace for repeated questionnaire prompts.</p>
+            <p id="workspace-summary-copy">Add the current row to start a browser-only answer-bank workspace for repeated questionnaire prompts. Then export Markdown, CSV, or one combined bundle when the row set is ready.</p>
           </div>
           <div class="generator-actions" style="margin-bottom:16px;">
             <button class="button" id="copy-workspace-markdown" type="button">Copy workspace Markdown</button>
             <button class="button secondary" id="copy-workspace-csv" type="button">Copy workspace CSV</button>
             <button class="button secondary" id="download-workspace-markdown" type="button">Download workspace Markdown</button>
             <button class="button secondary" id="download-workspace-csv" type="button">Download workspace CSV</button>
+            <button class="button secondary" id="download-workspace-bundle" type="button">Download workspace bundle</button>
             <button class="button secondary" id="clear-workspace" type="button">Clear workspace</button>
           </div>
           <div class="table-wrap">
@@ -906,6 +907,24 @@
         return [headers.join(","), ...lines].join("\n");
       }
 
+      function buildWorkspaceBundle(rows) {
+        const markdown = buildWorkspaceMarkdown(rows);
+        const csv = buildWorkspaceCsv(rows);
+        return [
+          "# NoticeKit answer-bank workspace bundle",
+          "",
+          "Markdown export",
+          "```markdown",
+          markdown,
+          "```",
+          "",
+          "CSV export",
+          "```csv",
+          csv,
+          "```"
+        ].join("\n");
+      }
+
       function loadWorkspaceRow(rowId) {
         const row = workspaceRows.find((item) => item.id === rowId);
         if (!row) return;
@@ -1132,6 +1151,9 @@
       });
       document.querySelector("#download-workspace-csv").addEventListener("click", () => {
         downloadFile("noticekit-answer-bank-workspace.csv", `${buildWorkspaceCsv(workspaceRows)}\n`, "text/csv;charset=utf-8");
+      });
+      document.querySelector("#download-workspace-bundle").addEventListener("click", () => {
+        downloadFile("noticekit-answer-bank-workspace-bundle.txt", `${buildWorkspaceBundle(workspaceRows)}\n`, "text/plain;charset=utf-8");
       });
       document.querySelector("#clear-workspace").addEventListener("click", () => {
         workspaceRows = [];
