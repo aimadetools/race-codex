@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Security Questionnaire Answer Bank Builder | NoticeKit</title>
-    <meta name="description" content="Build a browser-only security questionnaire answer-bank row with approved wording, proof links, owner notes, and reusable variants before the same buyer prompt reopens again.">
+    <meta name="description" content="Build a browser-only security questionnaire answer-bank workspace with reusable rows, proof links, owner notes, and combined exports before the same buyer prompts reopen again.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NoticeKit">
     <meta property="og:url" content="https://noticekit.tech/security-questionnaire-answer-bank-builder.html">
     <meta property="og:title" content="Security Questionnaire Answer Bank Builder | NoticeKit">
-    <meta property="og:description" content="Create a reusable answer-bank row, proof notes, and copy-ready CSV locally in your browser.">
+    <meta property="og:description" content="Create reusable answer-bank rows, proof notes, and combined CSV exports locally in your browser.">
     <meta property="og:image" content="https://noticekit.tech/social-preview.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="NoticeKit security questionnaire answer bank builder">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Security Questionnaire Answer Bank Builder | NoticeKit">
-    <meta name="twitter:description" content="Turn one repeated buyer prompt into a reusable answer-bank row, proof path, and owner note without sending your inputs to a server.">
+    <meta name="twitter:description" content="Turn repeated buyer prompts into a reusable answer-bank workspace, proof path, and owner notes without sending your inputs to a server.">
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/security-questionnaire-answer-bank-builder.html">
@@ -49,7 +49,7 @@
                 "name": "What does this builder create?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "It creates a reusable answer-bank row summary, a Markdown row you can paste into Docs or Notion, a CSV row for spreadsheets, and an internal follow-up note for anything that is still unresolved."
+                  "text": "It creates reusable answer-bank rows, a Markdown row you can paste into Docs or Notion, a CSV row for spreadsheets, combined workspace exports, and an internal follow-up note for anything that is still unresolved."
                 }
               },
               {
@@ -83,8 +83,8 @@
       <main id="main-content">
         <section class="page-hero">
           <span class="eyebrow">Browser-only repeat-review builder</span>
-          <h1 id="hero-title">Turn one repeated buyer question into a reusable answer-bank row before it reopens again.</h1>
-          <p id="hero-copy">Use this answer-bank builder when your SaaS team already answered the question once and now needs a stable reusable row with approved wording, proof links, owner notes, customer-scope variants, and a recheck date. Fill the live row once, then copy the Markdown row, CSV row, and internal follow-up note without sending your inputs to a server.</p>
+          <h1 id="hero-title">Turn repeated buyer questions into a reusable answer-bank workspace before they reopen again.</h1>
+          <p id="hero-copy">Use this answer-bank builder when your SaaS team already answered the question once and now needs stable reusable rows with approved wording, proof links, owner notes, customer-scope variants, and recheck dates. Fill the current row once, add it to the local workspace, then copy the Markdown row, CSV row, combined workspace exports, and internal follow-up note without sending your inputs to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#builder">Open answer-bank builder</a>
             <a class="button secondary" id="live-answer-link" href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">Build one live answer first</a>
@@ -117,7 +117,7 @@
           <form class="audit-card" id="answer-bank-form">
             <div class="section-head compact-head">
               <h2>Reusable row inputs</h2>
-              <p>Keep this tied to one recurring buyer prompt. The goal is one reusable row with a proof path, not a policy dump.</p>
+              <p>Keep the editor tied to one recurring buyer prompt at a time. The goal is a reusable row with a proof path that can join the local workspace, not a policy dump.</p>
               <div class="route-presets" aria-label="Quick presets">
                 <button class="button secondary" type="button" data-preset="ai-vendor">AI vendor chain</button>
                 <button class="button secondary" type="button" data-preset="training">Training stance</button>
@@ -204,6 +204,8 @@
               </div>
             </div>
             <div class="generator-actions">
+              <button class="button" id="save-workspace-row" type="button">Add row to workspace</button>
+              <button class="button secondary" id="reset-workspace-editor" type="button">Reset row editor</button>
               <button class="button" id="copy-markdown" type="button">Copy Markdown row</button>
               <button class="button secondary" id="copy-csv" type="button">Copy CSV row</button>
               <button class="button secondary" id="copy-follow-up" type="button">Copy follow-up note</button>
@@ -220,6 +222,41 @@
               </div>
             </div>
           </aside>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Repeat-review workspace</h2>
+            <p>Save the rows that keep coming back, then export the whole local answer bank when the spreadsheet or document needs a fresh version.</p>
+          </div>
+          <div class="notice-band" style="margin-bottom:16px;">
+            <strong id="workspace-summary">No rows saved yet.</strong>
+            <p id="workspace-summary-copy">Add the current row to start a browser-only answer-bank workspace for repeated questionnaire prompts.</p>
+          </div>
+          <div class="generator-actions" style="margin-bottom:16px;">
+            <button class="button" id="copy-workspace-markdown" type="button">Copy workspace Markdown</button>
+            <button class="button secondary" id="copy-workspace-csv" type="button">Copy workspace CSV</button>
+            <button class="button secondary" id="download-workspace-markdown" type="button">Download workspace Markdown</button>
+            <button class="button secondary" id="download-workspace-csv" type="button">Download workspace CSV</button>
+            <button class="button secondary" id="clear-workspace" type="button">Clear workspace</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Row</th>
+                  <th>Status</th>
+                  <th>Review discipline</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="workspace-table-body">
+                <tr>
+                  <td colspan="4">No reusable rows saved yet.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section class="section">
@@ -271,7 +308,7 @@
       </footer>
     </div>
     <script>
-      const STORAGE_KEY = "noticekit-security-questionnaire-answer-bank-builder-v1";
+      const STORAGE_KEY = "noticekit-security-questionnaire-answer-bank-builder-v2";
       const form = document.querySelector("#answer-bank-form");
       const fields = Array.from(form.querySelectorAll("input, textarea, select"));
       const statusNode = document.querySelector("#builder-status");
@@ -294,8 +331,15 @@
       const sourceContextTitle = document.querySelector("#source-context-title");
       const sourceContextCopy = document.querySelector("#source-context-copy");
       const sourceContextPoints = document.querySelector("#source-context-points");
+      const workspaceSummary = document.querySelector("#workspace-summary");
+      const workspaceSummaryCopy = document.querySelector("#workspace-summary-copy");
+      const workspaceTableBody = document.querySelector("#workspace-table-body");
+      const saveWorkspaceRowButton = document.querySelector("#save-workspace-row");
+      const resetWorkspaceEditorButton = document.querySelector("#reset-workspace-editor");
       const source = new URLSearchParams(window.location.search).get("source") || "";
       const today = new Date().toISOString().slice(0, 10);
+      let workspaceRows = [];
+      let editingRowId = null;
       const baseDefaults = {
         company: "Example SaaS",
         "question-label": "AI vendor chain and data scope",
@@ -312,10 +356,13 @@
         "recheck-trigger": "Recheck after any workflow change, vendor change, contract-specific request, or changed stance on retention, access, or training.",
         "open-questions": "Confirm whether any signed customer agreement adds a narrower notice or deployment-specific variant before this row is reused."
       };
+      const oldStorageKeys = [
+        "noticekit-security-questionnaire-answer-bank-builder-v1"
+      ];
       const sourceProfiles = {
         "openai-answer-bank-builder": {
-          heroTitle: "Turn repeated OpenAI buyer wording into a reusable answer-bank row before the next review restarts it.",
-          heroCopy: "Use this builder when OpenAI is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
+          heroTitle: "Turn repeated OpenAI buyer wording into a reusable answer-bank workspace before the next review restarts it.",
+          heroCopy: "Use this builder when OpenAI is already named in the buyer thread and the answer mostly exists, but the team still needs reusable rows with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
           liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=openai-answer-bank-builder",
           liveAnswerLabel: "Build OpenAI live answer first",
           contextTitle: "Keep the OpenAI repeat-review row tied to the exact named-vendor story.",
@@ -345,8 +392,8 @@
           }
         },
         "anthropic-answer-bank-builder": {
-          heroTitle: "Turn repeated Anthropic or Claude buyer wording into a reusable answer-bank row before the next review restarts it.",
-          heroCopy: "Use this builder when Anthropic or Claude is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
+          heroTitle: "Turn repeated Anthropic or Claude buyer wording into a reusable answer-bank workspace before the next review restarts it.",
+          heroCopy: "Use this builder when Anthropic or Claude is already named in the buyer thread and the answer mostly exists, but the team still needs reusable rows with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
           liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=anthropic-answer-bank-builder",
           liveAnswerLabel: "Build Anthropic live answer first",
           contextTitle: "Keep the Anthropic repeat-review row tied to the exact named-vendor story.",
@@ -376,8 +423,8 @@
           }
         },
         "claude-answer-bank-builder": {
-          heroTitle: "Turn repeated Claude buyer wording into a reusable answer-bank row before the next review restarts it.",
-          heroCopy: "Use this builder when Claude is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
+          heroTitle: "Turn repeated Claude buyer wording into a reusable answer-bank workspace before the next review restarts it.",
+          heroCopy: "Use this builder when Claude is already named in the buyer thread and the answer mostly exists, but the team still needs reusable rows with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
           liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=claude-answer-bank-builder",
           liveAnswerLabel: "Build Claude live answer first",
           contextTitle: "Keep the Claude repeat-review row tied to the exact named-vendor story.",
@@ -407,8 +454,8 @@
           }
         },
         "gemini-answer-bank-builder": {
-          heroTitle: "Turn repeated Gemini buyer wording into a reusable answer-bank row before the next review restarts it.",
-          heroCopy: "Use this builder when Gemini is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
+          heroTitle: "Turn repeated Gemini buyer wording into a reusable answer-bank workspace before the next review restarts it.",
+          heroCopy: "Use this builder when Gemini is already named in the buyer thread and the answer mostly exists, but the team still needs reusable rows with the approved wording, proof links, scope notes, owner path, and recheck trigger kept together.",
           liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=gemini-answer-bank-builder",
           liveAnswerLabel: "Build Gemini live answer first",
           contextTitle: "Keep the Gemini repeat-review row tied to the exact named-vendor story.",
@@ -438,8 +485,8 @@
           }
         },
         "microsoft-copilot-answer-bank-builder": {
-          heroTitle: "Turn repeated Copilot buyer wording into a reusable answer-bank row before the next review restarts it.",
-          heroCopy: "Use this builder when Microsoft Copilot or Azure OpenAI is already named in the buyer thread and the answer mostly exists, but the team still needs one reusable row with the approved wording, approval boundary, proof links, owner path, and recheck trigger kept together.",
+          heroTitle: "Turn repeated Copilot buyer wording into a reusable answer-bank workspace before the next review restarts it.",
+          heroCopy: "Use this builder when Microsoft Copilot or Azure OpenAI is already named in the buyer thread and the answer mostly exists, but the team still needs reusable rows with the approved wording, approval boundary, proof links, owner path, and recheck trigger kept together.",
           liveAnswerHref: "ai-security-questionnaire-answer-builder.html?source=microsoft-copilot-answer-bank-builder",
           liveAnswerLabel: "Build Copilot live answer first",
           contextTitle: "Keep the Copilot repeat-review row tied to the exact named-vendor story.",
@@ -511,27 +558,64 @@
         setValue("review-date", today);
       }
 
-      function saveState() {
+      function buildDraftSnapshot() {
         const payload = {};
         fields.forEach((field) => {
           payload[field.id] = field.value;
         });
+        return payload;
+      }
+
+      function saveState() {
+        const payload = {
+          draft: buildDraftSnapshot(),
+          workspaceRows,
+          editingRowId
+        };
         localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
       }
 
-      function loadState() {
+      function applyDraftSnapshot(draft) {
+        fields.forEach((field) => {
+          if (typeof draft?.[field.id] === "string") {
+            field.value = draft[field.id];
+          }
+        });
+      }
+
+      function getSavedState() {
         const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          return raw;
+        }
+        for (const key of oldStorageKeys) {
+          const legacyRaw = localStorage.getItem(key);
+          if (legacyRaw) {
+            return legacyRaw;
+          }
+        }
+        return null;
+      }
+
+      function loadState() {
+        const raw = getSavedState();
         if (!raw) {
           applyDefaults(getSourceProfile()?.defaults);
           return false;
         }
         try {
           const payload = JSON.parse(raw);
-          fields.forEach((field) => {
-            if (typeof payload[field.id] === "string") {
-              field.value = payload[field.id];
-            }
-          });
+          if (payload && payload.draft) {
+            applyDefaults(getSourceProfile()?.defaults);
+            applyDraftSnapshot(payload.draft);
+            workspaceRows = Array.isArray(payload.workspaceRows) ? payload.workspaceRows : [];
+            editingRowId = typeof payload.editingRowId === "string" ? payload.editingRowId : null;
+          } else {
+            applyDefaults(getSourceProfile()?.defaults);
+            applyDraftSnapshot(payload);
+            workspaceRows = [];
+            editingRowId = null;
+          }
           return true;
         } catch (error) {
           console.error("Failed to parse saved answer-bank builder state", error);
@@ -563,6 +647,10 @@
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/^-+|-+$/g, "")
           .slice(0, 80) || "noticekit";
+      }
+
+      function makeRowId() {
+        return `row-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
       }
 
       function buildPayload() {
@@ -659,68 +747,14 @@
         ].join("\n");
       }
 
-      function copyText(text, message) {
-        navigator.clipboard.writeText(text).then(() => {
-          statusNode.textContent = message;
-        }).catch(() => {
-          statusNode.textContent = "Clipboard copy failed in this browser. Use the download option instead.";
-        });
+      function deriveReadinessState(normalizedScore) {
+        if (normalizedScore >= 9) return "Reusable with discipline";
+        if (normalizedScore >= 7) return "Close to repeat-review ready";
+        if (normalizedScore >= 5) return "Needs proof or owner cleanup";
+        return "Still too early for broad reuse";
       }
 
-      function downloadFile(filename, text, type) {
-        const blob = new Blob([text], { type });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        URL.revokeObjectURL(url);
-        statusNode.textContent = `${filename} downloaded.`;
-      }
-
-      function updateRouteHints(payload, score, gaps, profile) {
-        const routeProfile = profile?.routes || {};
-        if (!payload.shortAnswer || !payload.longAnswer) {
-          primaryRoute.href = routeProfile.builderHref || "ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder";
-          primaryRoute.textContent = routeProfile.builderLabel || "Open answer builder";
-          secondaryRoute.href = routeProfile.templateHref || "blog-security-questionnaire-response-template.html?source=answer-bank-builder-response-template";
-          secondaryRoute.textContent = routeProfile.templateLabel || "Open response template";
-          nextStepTitle.textContent = "Best next step";
-          nextStepCopy.textContent = "The reusable row is not stable yet. Finish the live answer wording before you promote it into repeat-review reuse.";
-          return;
-        }
-        if (!payload.proofLinks || !payload.ownerPath) {
-          primaryRoute.href = routeProfile.evidenceHref || "ai-security-review-evidence-map.html?source=answer-bank-builder-evidence-map";
-          primaryRoute.textContent = routeProfile.evidenceLabel || "Open evidence map";
-          secondaryRoute.href = "security-questionnaire-checklist.html?source=answer-bank-builder-checklist";
-          secondaryRoute.textContent = "Open checklist";
-          nextStepTitle.textContent = "Best next step";
-          nextStepCopy.textContent = "The wording is reusable, but the proof path or owner path is still too thin. Make those explicit before broad reuse.";
-          return;
-        }
-        if (payload.approvalStatus === "draft" || payload.approvalStatus === "review") {
-          primaryRoute.href = "security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix";
-          primaryRoute.textContent = "Open ownership matrix";
-          secondaryRoute.href = "security-questionnaire-checklist.html?source=answer-bank-builder-checklist";
-          secondaryRoute.textContent = "Open checklist";
-          nextStepTitle.textContent = "Best next step";
-          nextStepCopy.textContent = "The row is close, but repeat-review reuse still depends on one more approval or a clearer owner path.";
-          return;
-        }
-        primaryRoute.href = routeProfile.answerBankHref || "ai-security-questionnaire-answer-bank.html?source=answer-bank-builder-ai-answer-bank";
-        primaryRoute.textContent = routeProfile.answerBankLabel || "Open AI answer bank";
-        secondaryRoute.href = "security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard";
-        secondaryRoute.textContent = "Open software fit scorecard";
-        nextStepTitle.textContent = score >= 9 ? "Best next step" : "Best next step";
-        nextStepCopy.textContent = gaps.length
-          ? "Paste this row into the answer bank, but keep the listed gaps explicit so nobody treats the row as broader than it is."
-          : "Paste this row into the answer bank now. The repeat-review asset is reusable and the next decision is whether the queue stays light or widens into software.";
-      }
-
-      function render() {
-        const payload = buildPayload();
+      function evaluatePayload(payload) {
         const strengths = [];
         const gaps = [];
         let score = 0;
@@ -789,15 +823,223 @@
         }
 
         const normalizedScore = Math.max(1, Math.min(10, Math.round(score)));
+        return {
+          strengths,
+          gaps,
+          normalizedScore,
+          readinessState: deriveReadinessState(normalizedScore)
+        };
+      }
+
+      function buildWorkspaceRecord(payload, evaluation) {
+        const nowIso = new Date().toISOString();
+        const existing = editingRowId
+          ? workspaceRows.find((row) => row.id === editingRowId)
+          : null;
+        return {
+          id: existing?.id || makeRowId(),
+          createdAt: existing?.createdAt || nowIso,
+          updatedAt: nowIso,
+          ...payload,
+          readinessScore: evaluation.normalizedScore,
+          readinessState: evaluation.readinessState,
+          gaps: evaluation.gaps
+        };
+      }
+
+      function buildWorkspaceMarkdown(rows) {
+        if (!rows.length) {
+          return "No reusable rows saved yet.";
+        }
+        return rows.map((row, index) => [
+          `# Row ${index + 1}: ${row.questionLabel || "Reusable answer-bank row"}`,
+          "",
+          buildMarkdown(row),
+          "",
+          `- Workspace readiness: ${row.readinessScore || 1}/10 (${row.readinessState || "Needs cleanup"})`,
+          `- Workspace gaps: ${(row.gaps || []).length ? row.gaps.join(" | ") : "No major gaps recorded."}`,
+          ""
+        ].join("\n")).join("\n");
+      }
+
+      function buildWorkspaceCsv(rows) {
+        const headers = [
+          "question_label",
+          "buyer_wording",
+          "short_answer",
+          "long_answer",
+          "workflow_covered",
+          "vendors_involved",
+          "data_scope_and_stance",
+          "customer_scope",
+          "proof_links",
+          "owner_and_approval_path",
+          "approval_status",
+          "review_date",
+          "recheck_trigger",
+          "open_questions",
+          "readiness_score",
+          "readiness_state",
+          "open_gaps",
+          "updated_at"
+        ];
+        const lines = rows.map((row) => [
+          row.questionLabel,
+          row.buyerWording,
+          row.shortAnswer,
+          row.longAnswer,
+          row.workflowCovered,
+          row.vendors,
+          row.dataScope,
+          row.customerScope,
+          row.proofLinks,
+          row.ownerPath,
+          row.approvalStatus,
+          row.reviewDate,
+          row.recheckTrigger,
+          row.openQuestions,
+          String(row.readinessScore || ""),
+          row.readinessState || "",
+          (row.gaps || []).join(" | "),
+          row.updatedAt || ""
+        ].map(csvEscape).join(","));
+        return [headers.join(","), ...lines].join("\n");
+      }
+
+      function loadWorkspaceRow(rowId) {
+        const row = workspaceRows.find((item) => item.id === rowId);
+        if (!row) return;
+        const draft = {
+          company: row.company || "",
+          "question-label": row.questionLabel || "",
+          "buyer-wording": row.buyerWording || "",
+          "short-answer": row.shortAnswer || "",
+          "long-answer": row.longAnswer || "",
+          "workflow-covered": row.workflowCovered || "",
+          vendors: row.vendors || "",
+          "data-scope": row.dataScope || "",
+          "customer-scope": row.customerScope || "",
+          "proof-links": row.proofLinks || "",
+          "owner-path": row.ownerPath || "",
+          "approval-status": row.approvalStatus || "draft",
+          "review-date": row.reviewDate || today,
+          "recheck-trigger": row.recheckTrigger || "",
+          "open-questions": row.openQuestions || ""
+        };
+        applyDefaults(getSourceProfile()?.defaults);
+        applyDraftSnapshot(draft);
+        editingRowId = row.id;
+        statusNode.textContent = `Loaded workspace row: ${row.questionLabel || "Untitled row"}.`;
+        render();
+      }
+
+      function renderWorkspace() {
+        saveWorkspaceRowButton.textContent = editingRowId ? "Update workspace row" : "Add row to workspace";
+        if (!workspaceRows.length) {
+          workspaceSummary.textContent = "No rows saved yet.";
+          workspaceSummaryCopy.textContent = "Add the current row to start a browser-only answer-bank workspace for repeated questionnaire prompts.";
+          workspaceTableBody.innerHTML = '<tr><td colspan="4">No reusable rows saved yet.</td></tr>';
+          return;
+        }
+        const approvedCount = workspaceRows.filter((row) => row.approvalStatus === "approved").length;
+        const reviewCount = workspaceRows.filter((row) => row.approvalStatus === "review" || row.approvalStatus === "draft").length;
+        workspaceSummary.textContent = `${workspaceRows.length} reusable row${workspaceRows.length === 1 ? "" : "s"} saved locally.`;
+        workspaceSummaryCopy.textContent = `${approvedCount} approved for repeat reuse, ${reviewCount} still needing review or draft cleanup.`;
+        workspaceTableBody.innerHTML = workspaceRows.map((row) => {
+          const label = row.questionLabel || "Untitled row";
+          const reviewBits = [
+            row.reviewDate ? `Reviewed ${row.reviewDate}` : "No review date",
+            row.recheckTrigger ? row.recheckTrigger : "No recheck trigger"
+          ].join(" | ");
+          return `
+            <tr>
+              <td>
+                <strong>${label}</strong><br>
+                <span class="fine-print">${row.workflowCovered || "No workflow noted"} | ${row.vendors || "No vendors named"}</span>
+              </td>
+              <td>
+                <strong>${row.readinessScore || 1}/10</strong><br>
+                <span class="fine-print">${row.approvalStatus || "draft"} | ${row.readinessState || "Needs cleanup"}</span>
+              </td>
+              <td><span class="fine-print">${reviewBits}</span></td>
+              <td>
+                <div class="generator-actions">
+                  <button class="button secondary" type="button" data-workspace-edit="${row.id}">Edit</button>
+                  <button class="button secondary" type="button" data-workspace-remove="${row.id}">Remove</button>
+                </div>
+              </td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      function copyText(text, message) {
+        navigator.clipboard.writeText(text).then(() => {
+          statusNode.textContent = message;
+        }).catch(() => {
+          statusNode.textContent = "Clipboard copy failed in this browser. Use the download option instead.";
+        });
+      }
+
+      function downloadFile(filename, text, type) {
+        const blob = new Blob([text], { type });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+        statusNode.textContent = `${filename} downloaded.`;
+      }
+
+      function updateRouteHints(payload, score, gaps, profile) {
+        const routeProfile = profile?.routes || {};
+        if (!payload.shortAnswer || !payload.longAnswer) {
+          primaryRoute.href = routeProfile.builderHref || "ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder";
+          primaryRoute.textContent = routeProfile.builderLabel || "Open answer builder";
+          secondaryRoute.href = routeProfile.templateHref || "blog-security-questionnaire-response-template.html?source=answer-bank-builder-response-template";
+          secondaryRoute.textContent = routeProfile.templateLabel || "Open response template";
+          nextStepTitle.textContent = "Best next step";
+          nextStepCopy.textContent = "The reusable row is not stable yet. Finish the live answer wording before you promote it into repeat-review reuse.";
+          return;
+        }
+        if (!payload.proofLinks || !payload.ownerPath) {
+          primaryRoute.href = routeProfile.evidenceHref || "ai-security-review-evidence-map.html?source=answer-bank-builder-evidence-map";
+          primaryRoute.textContent = routeProfile.evidenceLabel || "Open evidence map";
+          secondaryRoute.href = "security-questionnaire-checklist.html?source=answer-bank-builder-checklist";
+          secondaryRoute.textContent = "Open checklist";
+          nextStepTitle.textContent = "Best next step";
+          nextStepCopy.textContent = "The wording is reusable, but the proof path or owner path is still too thin. Make those explicit before broad reuse.";
+          return;
+        }
+        if (payload.approvalStatus === "draft" || payload.approvalStatus === "review") {
+          primaryRoute.href = "security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix";
+          primaryRoute.textContent = "Open ownership matrix";
+          secondaryRoute.href = "security-questionnaire-checklist.html?source=answer-bank-builder-checklist";
+          secondaryRoute.textContent = "Open checklist";
+          nextStepTitle.textContent = "Best next step";
+          nextStepCopy.textContent = "The row is close, but repeat-review reuse still depends on one more approval or a clearer owner path.";
+          return;
+        }
+        primaryRoute.href = routeProfile.answerBankHref || "ai-security-questionnaire-answer-bank.html?source=answer-bank-builder-ai-answer-bank";
+        primaryRoute.textContent = routeProfile.answerBankLabel || "Open AI answer bank";
+        secondaryRoute.href = "security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard";
+        secondaryRoute.textContent = "Open software fit scorecard";
+        nextStepTitle.textContent = score >= 9 ? "Best next step" : "Best next step";
+        nextStepCopy.textContent = gaps.length
+          ? "Paste this row into the answer bank, but keep the listed gaps explicit so nobody treats the row as broader than it is."
+          : "Paste this row into the answer bank now. The repeat-review asset is reusable and the next decision is whether the queue stays light or widens into software.";
+      }
+
+      function render() {
+        const payload = buildPayload();
+        const evaluation = evaluatePayload(payload);
+        const { strengths, gaps, normalizedScore } = evaluation;
         readinessScore.textContent = `${normalizedScore}/10`;
         readinessMeter.style.width = `${normalizedScore * 10}%`;
-        readinessState.textContent = normalizedScore >= 9
-          ? "Reusable with discipline"
-          : normalizedScore >= 7
-            ? "Close to repeat-review ready"
-            : normalizedScore >= 5
-              ? "Needs proof or owner cleanup"
-              : "Still too early for broad reuse";
+        readinessState.textContent = evaluation.readinessState;
         readinessSummary.textContent = normalizedScore >= 8
           ? "The row is strong enough for an answer bank, but reuse still depends on keeping caveats, proof, and recheck discipline intact."
           : normalizedScore >= 5
@@ -810,6 +1052,7 @@
         gapList.innerHTML = gaps.map((item) => `<li>${item}</li>`).join("");
 
         updateRouteHints(payload, normalizedScore, gaps, getSourceProfile());
+        renderWorkspace();
         saveState();
       }
 
@@ -850,11 +1093,68 @@
         downloadFile(`${slugify(payload.company)}-${slugify(payload.questionLabel)}-answer-bank-row.csv`, `${csvOutput.textContent}\n`, "text/csv;charset=utf-8");
       });
       document.querySelector("#clear-draft").addEventListener("click", () => {
-        localStorage.removeItem(STORAGE_KEY);
         form.reset();
+        editingRowId = null;
         applyDefaults(getSourceProfile()?.defaults);
         statusNode.textContent = "Saved local draft cleared.";
         render();
+      });
+      saveWorkspaceRowButton.addEventListener("click", () => {
+        const payload = buildPayload();
+        const evaluation = evaluatePayload(payload);
+        const record = buildWorkspaceRecord(payload, evaluation);
+        const index = workspaceRows.findIndex((row) => row.id === record.id);
+        if (index >= 0) {
+          workspaceRows[index] = record;
+          statusNode.textContent = `Workspace row updated: ${record.questionLabel || "Untitled row"}.`;
+        } else {
+          workspaceRows = [record, ...workspaceRows];
+          statusNode.textContent = `Workspace row added: ${record.questionLabel || "Untitled row"}.`;
+        }
+        editingRowId = record.id;
+        render();
+      });
+      resetWorkspaceEditorButton.addEventListener("click", () => {
+        editingRowId = null;
+        form.reset();
+        applyDefaults(getSourceProfile()?.defaults);
+        statusNode.textContent = "Row editor reset to defaults.";
+        render();
+      });
+      document.querySelector("#copy-workspace-markdown").addEventListener("click", () => {
+        copyText(buildWorkspaceMarkdown(workspaceRows), "Workspace Markdown copied.");
+      });
+      document.querySelector("#copy-workspace-csv").addEventListener("click", () => {
+        copyText(buildWorkspaceCsv(workspaceRows), "Workspace CSV copied.");
+      });
+      document.querySelector("#download-workspace-markdown").addEventListener("click", () => {
+        downloadFile("noticekit-answer-bank-workspace.md", `${buildWorkspaceMarkdown(workspaceRows)}\n`, "text/markdown;charset=utf-8");
+      });
+      document.querySelector("#download-workspace-csv").addEventListener("click", () => {
+        downloadFile("noticekit-answer-bank-workspace.csv", `${buildWorkspaceCsv(workspaceRows)}\n`, "text/csv;charset=utf-8");
+      });
+      document.querySelector("#clear-workspace").addEventListener("click", () => {
+        workspaceRows = [];
+        editingRowId = null;
+        statusNode.textContent = "Workspace cleared from this browser.";
+        render();
+      });
+      workspaceTableBody.addEventListener("click", (event) => {
+        const editButton = event.target.closest("[data-workspace-edit]");
+        if (editButton) {
+          loadWorkspaceRow(editButton.dataset.workspaceEdit);
+          return;
+        }
+        const removeButton = event.target.closest("[data-workspace-remove]");
+        if (removeButton) {
+          const rowId = removeButton.dataset.workspaceRemove;
+          workspaceRows = workspaceRows.filter((row) => row.id !== rowId);
+          if (editingRowId === rowId) {
+            editingRowId = null;
+          }
+          statusNode.textContent = "Workspace row removed.";
+          render();
+        }
       });
     </script>
   </body>

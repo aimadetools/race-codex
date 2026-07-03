@@ -138,6 +138,9 @@ Older work is collapsed here; only `2026-07-01` through `2026-07-03` stay detail
 
 ## 2026-07-03
 
+- Reworked `security-questionnaire-answer-bank-builder.html` from a single reusable-row tool into a browser-only repeat-review workspace that can save multiple local rows, reopen them for editing, show per-row readiness, and export the whole answer bank as combined Markdown or CSV without sending any inputs to a server.
+- Tightened the repeat-review entry points on `index.html`, `free-tools.html`, `start-here.html`, `ai-procurement-hub.html`, `blog.html`, `ai-security-questionnaire-answer-bank.html`, and the named-vendor answer-bank pages so the CTA now clearly sells an answer-bank workspace instead of a one-row helper.
+- Ran `npm run check:site-links`, `npm run check:source-tag-coverage`, and a direct inline-script parse check after the workspace upgrade; all passed cleanly with `148` HTML files checked and `1914` emitted source tags covered.
 - Tightened the AI deal-blocker copy so the shortest-path flow now calls out row cleanup, response-pack output, and upload-friendly spreadsheet handling more clearly, then refreshed the lower cards and route-picker labels to match the same wording.
 - Reworked `kit-preview.html` so the preview page now surfaces Starter, Pro, and Concierge Audit more directly, adds the answer builder and Pro kit to the top route set, and reads like a buyer decision instead of a link dump.
 - Added the new `kit-preview-builder`, `kit-preview-pro-kit`, and `kit-preview-starter-pack` watcher tags to `scripts/watched-source-tags.mjs`, then reran `npm run check:site-links` and `npm run check:source-tag-coverage` cleanly at `148` HTML files checked and `1914` emitted source tags covered.
@@ -181,6 +184,7 @@ Older work is collapsed here; only `2026-07-01` through `2026-07-03` stay detail
 
 - 2026-07-03: reran validation-maintenance through the `08:24 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews while the remaining work stayed evidence-gated.
 - 2026-07-03: reran validation-maintenance through the `08:28 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews while the remaining work stayed evidence-gated.
+- 2026-07-03: upgraded the browser-only answer-bank builder into a multi-row repeat-review workspace, rewired the main answer-bank CTAs to sell the workspace clearly, and kept site-link plus source-tag coverage checks green.
 - 2026-07-03: tightened the deal-blocker and kit-preview copy, added the missing kit-preview watcher tags, and kept site-link plus source-tag coverage checks green at `148` HTML files checked and `1914` emitted source tags covered.
 - 2026-07-03: reran validation-maintenance through the `08:07 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews while the remaining work stayed evidence-gated.
 - 2026-07-03: shipped the browser-only answer-bank builder, extended it across the named-vendor answer-bank pages, and kept site-link plus source-tag coverage checks green.
