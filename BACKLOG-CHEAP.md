@@ -283,7 +283,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-07-03: reran validation-maintenance through the `08:17 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the live trigger backlog collapsed while the active P0 watch stayed on zero-signal evidence.
+- 2026-07-03: reran validation-maintenance through the `08:21 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the live trigger backlog collapsed while the active P0 watch stayed on zero-signal evidence.
 - 2026-07-03: tightened the deal-blocker and kit-preview preview copy, added the missing kit-preview watcher tags, and kept the site-link and source-tag checks green at `148` HTML files checked and `1914` emitted source tags covered.
 - 2026-07-03: reran validation-maintenance through the `08:07 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the live trigger backlog collapsed while the active P0 watch stayed on zero-signal evidence.
 - 2026-07-03: extended the new browser-only answer-bank builder across the OpenAI, Anthropic, Claude, Gemini, and Microsoft Copilot answer-bank pages, added source-aware named-vendor defaults plus route-backup logic on the builder itself, and kept site-link plus source-tag coverage checks green.

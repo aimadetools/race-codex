@@ -88,7 +88,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-03: reran validation-maintenance through the `08:17 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the remaining P0/P1 items parked on evidence-gated watch status.
+- 2026-07-03: reran validation-maintenance through the `08:21 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the remaining P0/P1 items parked on evidence-gated watch status.
 - 2026-07-03: tightened the deal-blocker and kit-preview preview copy, added the missing kit-preview watcher tags, and kept the site-link and source-tag checks green at `148` HTML files checked and `1914` emitted source tags covered.
 - 2026-07-03: reran validation-maintenance through the `08:07 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts again, and kept the remaining P0/P1 items parked on evidence-gated watch status.
 - 2026-07-03: extended the named-vendor answer-bank pages into the new interactive repeat-review builder and made that builder source-aware for OpenAI, Anthropic, Claude, Gemini, and Copilot traffic, leaving the remaining P0/P1 items purely evidence-gated.
