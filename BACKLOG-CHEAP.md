@@ -263,7 +263,6 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If an advisor reply says the founder handoff page made the workflow click, note that in `COMMUNITY-FEEDBACK.md` before deciding whether advisor-first positioning is beating founder-first positioning.
 - When the first real `partner_request` lands, send a short approve / clarify / decline reply from `hello@noticekit.tech` and log whether it points to referral-only, client-delivery, or white-label demand.
 - When the first real `free_async_teardown` request lands, send a 3-bullet async gap reply from `hello@noticekit.tech` and log the outcome in `COMMUNITY-FEEDBACK.md`.
-- If the first two real direct-submit teardown requests both omit the subprocessor URL or customer-segment field, tighten `free-teardown.html` copy and placeholders so the page asks for the missing fact more explicitly.
 - If the first real teardown submission arrives through the new direct-submit flow before any full-intake submission, move `free-teardown.html` into a stronger homepage or pricing CTA slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real inbound references `generator.html`, `generator-page`, or `generator-cta`, preserve that source tag in the inbox tracker and `COMMUNITY-FEEDBACK.md` before replying.
 - If the first teardown or partner request references the new review brief builder, copy the generated blocker and open-question language into `COMMUNITY-FEEDBACK.md` so the next positioning pass can tell whether handoff cleanup is the real pain point.
@@ -286,6 +285,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- ✅ Direct-submit teardown hardening: tightened `free-teardown.html` and `audit-request.html` copy so the live URL, affected segment, and deadline are harder to miss.
 - 2026-07-03: reran validation-maintenance through the `20:29 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the active watch parked on zero-signal evidence.
 - 2026-07-03: reran validation-maintenance through the `20:25 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the active watch parked on zero-signal evidence.
 - 2026-07-03: reran validation-maintenance through the `20:19 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the active watch parked on zero-signal evidence.
