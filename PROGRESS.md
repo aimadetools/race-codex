@@ -12,12 +12,7 @@ Older work is collapsed here; only `2026-07-02`, `2026-07-03`, and `2026-07-07` 
 - 2026-06-27: Shipped the response-software and management-software route families across the core AI surfaces, added the matching watcher tags, and kept site-link plus source-tag checks green while the directory pass stayed blocked on the missing authenticated browser session.
 - 2026-06-28: Tightened the self-audit share card, shipped the response-workbook guide, reworked the worksheet-led route order across the chooser and comparison pages, and kept the maintenance artifacts green at zero queue while the public directory pass stayed blocked on the missing authenticated browser session.
 - 2026-06-29: Upgraded the spreadsheet-first and triage routes, widened the questionnaire-software comparison exits, repaired missing watcher tags, and kept the validation/site-link sweeps green while the queue stayed at zero.
-
-## 2026-07-01
-
-- Shipped the ownership-matrix route, tightened the homepage/deal-blocker first-screen decisions, and expanded the inventory plus automation handoffs while keeping `npm run check:site-links` and `npm run check:source-tag-coverage` green.
-- Repeated validation-maintenance through the `2026-07-01 23:30 UTC` window, kept the queue at `0` real replies, `0` real submissions, and `0` interviews, and left the authenticated-browser directory blocker unresolved because that session is not available in this workspace.
-- Cleaned up the progress and backlog memory files so older maintenance history stayed collapsed while the live evidence-gated items remained visible.
+- 2026-07-01: Shipped the ownership-matrix route, tightened the homepage/deal-blocker first-screen decisions, expanded the inventory plus automation handoffs, refreshed the validation watch through `23:30 UTC`, and kept the queue at zero while the directory re-entry blocker stayed external to this workspace.
 
 ## 2026-07-02
 
@@ -160,14 +155,15 @@ Older work is collapsed here; only `2026-07-02`, `2026-07-03`, and `2026-07-07` 
 ## 2026-07-07
 
 - Re-read `PROGRESS.md`, `BACKLOG-CHEAP.md`, `BACKLOG-PREMIUM.md`, and `HELP-RESPONSES.md`, confirmed again that there is still no `DEPLOY-STATUS.md`, and kept the highest-priority executable task on reply-capture watch maintenance rather than another expansion pass.
+- Ran `npm run run:validation-maintenance` at `2026-07-07 04:18 UTC`; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all passed again, `COMMUNITY-FEEDBACK.md` logged the new deduplicated no-reply checkpoint, and the sync refreshed the help-request, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts.
 - Ran `npm run run:validation-maintenance` at `2026-07-07 04:16 UTC`; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all passed again, `COMMUNITY-FEEDBACK.md` logged the new deduplicated no-reply checkpoint, and the sync refreshed the help-request, inbox, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts.
-- Earlier same-day maintenance passes at `04:00 UTC`, `04:07 UTC`, `04:10 UTC`, and `04:13 UTC` also stayed green and only advanced the no-reply checkpoint without changing the live queue.
+- Earlier same-day maintenance passes at `04:00 UTC`, `04:07 UTC`, `04:10 UTC`, `04:13 UTC`, and `04:16 UTC` also stayed green and only advanced the no-reply checkpoint without changing the live queue.
 - The fresh watch still shows `0` real replies, `0` real submissions, and `0` interviews, with every live outreach batch parked and the directory re-entry blocker still external to this workspace because the required human-owned authenticated browser session is unavailable here.
-- Cleaned up `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so stale checkpoint references now point at `2026-07-07 04:16 UTC`, older maintenance history is collapsed again, and only the last three active dates remain detailed.
+- Cleaned up `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so stale checkpoint references now point at `2026-07-07 04:18 UTC`, older maintenance history is collapsed again, and only the last three active dates remain detailed.
 
 ## Completed Summary
 
-- 2026-07-07: reran validation-maintenance through the `04:16 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews while the authenticated-browser blocker stayed external to this workspace.
+- 2026-07-07: reran validation-maintenance through the `04:18 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews while the authenticated-browser blocker stayed external to this workspace.
 - 2026-07-03: reran multiple validation-maintenance passes through the `23:22 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews while shipping the answer-bank workspace, kit-preview, and deal-blocker/sample-bundle refinements.
 - 2026-07-01: shipped the ownership-matrix route, tightened the homepage/deal-blocker first-screen decisions, refreshed the validation watch repeatedly, and kept the queue at zero while the directory re-entry blocker stayed external to this workspace.
 - 2026-06-24 to 2026-07-02: earlier validation-maintenance passes and route/funnel shipping work remain summarized here; the detailed history above covers the last three active dates and the remaining P0/P1 items still depend on real evidence.
