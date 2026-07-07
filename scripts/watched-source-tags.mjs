@@ -1689,6 +1689,7 @@ export const WATCHED_SOURCE_TAGS = [
   "ai-procurement-hub-microsoft-copilot-answer-bank",
   "ai-procurement-hub-microsoft-copilot-answer-example",
   "ai-procurement-hub-microsoft-copilot-answer-template",
+  "ai-procurement-hub-microsoft-copilot-answer-comparison",
   "ai-procurement-hub-microsoft-copilot-path-guide",
   "blog-index-microsoft-copilot-answer-bank",
   "blog-index-microsoft-copilot-answer-comparison",
@@ -1707,6 +1708,7 @@ export const WATCHED_SOURCE_TAGS = [
   "free-tools-microsoft-copilot-answer-bank-vs-pro-kit",
   "homepage-ai-route-microsoft-copilot-answer-bank",
   "homepage-ai-route-microsoft-copilot-example",
+  "homepage-ai-route-microsoft-copilot-answer-comparison",
   "homepage-ai-route-microsoft-copilot-path-guide",
   "homepage-ai-route-microsoft-copilot-template",
   "microsoft-copilot-answer-bank-builder",
@@ -1765,5 +1767,6 @@ export const WATCHED_SOURCE_TAGS = [
   "microsoft-copilot-security-questionnaire-template-teardown",
   "pricing-microsoft-copilot-answer-bank",
   "pricing-microsoft-copilot-answer-template",
+  "pricing-microsoft-copilot-answer-comparison",
   "pricing-microsoft-copilot-path-guide"
 ];
