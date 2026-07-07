@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-07 04:30 UTC
+Checked at: 2026-07-07 08:12 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -2075,6 +2075,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - microsoft-copilot-answer-bank-builder: 0
 - microsoft-copilot-answer-bank-evidence-map: 0
 - microsoft-copilot-answer-bank-example: 0
+- microsoft-copilot-answer-bank-teardown: 0
 - microsoft-copilot-answer-bank-nav-audit: 0
 - microsoft-copilot-answer-bank-response-software: 0
 - microsoft-copilot-answer-bank-management-software: 0
@@ -2086,6 +2087,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - microsoft-copilot-answer-template-nav-audit: 0
 - microsoft-copilot-path-guide-answer-bank: 0
 - microsoft-copilot-path-guide-builder: 0
+- microsoft-copilot-path-guide-comparison: 0
 - microsoft-copilot-path-guide-evidence-map: 0
 - microsoft-copilot-path-guide-example: 0
 - microsoft-copilot-path-guide-spreadsheet-template: 0
@@ -2093,6 +2095,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - microsoft-copilot-path-guide-hub: 0
 - microsoft-copilot-path-guide-pricing: 0
 - microsoft-copilot-path-guide-template: 0
+- blog-microsoft-copilot-answer-bank-vs-builder-nav-audit: 0
 - microsoft-copilot-security-questionnaire-example-answer-bank: 0
 - microsoft-copilot-security-questionnaire-example-builder: 0
 - microsoft-copilot-security-questionnaire-example-packet: 0
