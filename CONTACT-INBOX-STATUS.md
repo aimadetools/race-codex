@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-07 12:59 UTC
+Checked at: 2026-07-07 16:07 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1932,12 +1932,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-pro-kit-purchase-next-steps: 0
 - partner-handoff-kit-preview: 0
 - purchase-next-steps-kit-preview: 0
+- purchase-next-steps-bundle-sample: 0
 - purchase-next-steps-spreadsheet-template: 0
 - purchase-next-steps-response-software: 0
 - purchase-next-steps-management-software: 0
 - purchase-next-steps-sig-guide: 0
 - purchase-next-steps-due-diligence: 0
 - kit-preview-purchase-next-steps: 0
+- free-tools-purchase-next-steps: 0
 - purchase-next-steps-evidence-map: 0
 - purchase-next-steps-ai-agent-workspace: 0
 - free-teardown-ai-answer-bank: 0
