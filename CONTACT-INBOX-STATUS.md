@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-07 16:28 UTC
+Checked at: 2026-07-07 20:09 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -2064,14 +2064,17 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-microsoft-copilot-answer-comparison: 0
 - blog-index-microsoft-copilot-answer-example: 0
 - blog-index-microsoft-copilot-answer-template: 0
+- blog-index-microsoft-copilot-answer-bank-vs-pro-kit: 0
 - blog-index-microsoft-copilot-path-guide: 0
 - blog-microsoft-copilot-answer-example-nav-audit: 0
 - blog-microsoft-copilot-example-evidence-map: 0
+- blog-microsoft-copilot-answer-bank-vs-pro-kit-nav-audit: 0
 - blog-microsoft-copilot-path-guide-nav-audit: 0
 - free-tools-microsoft-copilot-answer-bank: 0
 - free-tools-microsoft-copilot-answer-comparison: 0
 - free-tools-microsoft-copilot-answer-example: 0
 - free-tools-microsoft-copilot-answer-template: 0
+- free-tools-microsoft-copilot-answer-bank-vs-pro-kit: 0
 - homepage-ai-route-microsoft-copilot-answer-bank: 0
 - homepage-ai-route-microsoft-copilot-example: 0
 - homepage-ai-route-microsoft-copilot-path-guide: 0
@@ -2081,6 +2084,17 @@ Source of truth: Vercel Blob `contact-submissions/`
 - microsoft-copilot-answer-bank-example: 0
 - microsoft-copilot-answer-bank-teardown: 0
 - microsoft-copilot-answer-bank-vs-builder: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-answer-bank: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-builder: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-evidence-map: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-generic-path-guide: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-management-software: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-path-guide: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-pro-kit: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-response-software: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-spreadsheet-template: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-starter-pack: 0
+- microsoft-copilot-answer-bank-vs-pro-kit-teardown: 0
 - microsoft-copilot-answer-bank-nav-audit: 0
 - microsoft-copilot-answer-bank-response-software: 0
 - microsoft-copilot-answer-bank-management-software: 0
@@ -2090,6 +2104,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - microsoft-copilot-answer-bank-starter-pack: 0
 - microsoft-copilot-answer-bank-template: 0
 - microsoft-copilot-answer-template-nav-audit: 0
+- microsoft-copilot-answer-bank-vs-pro-kit: 0
 - microsoft-copilot-path-guide-answer-bank: 0
 - microsoft-copilot-path-guide-builder: 0
 - microsoft-copilot-path-guide-comparison: 0
@@ -2099,6 +2114,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - microsoft-copilot-path-guide-generic: 0
 - microsoft-copilot-path-guide-hub: 0
 - microsoft-copilot-path-guide-pricing: 0
+- microsoft-copilot-path-guide-pro-kit-comparison: 0
 - microsoft-copilot-path-guide-template: 0
 - blog-microsoft-copilot-answer-bank-vs-builder-nav-audit: 0
 - microsoft-copilot-security-questionnaire-example-answer-bank: 0
