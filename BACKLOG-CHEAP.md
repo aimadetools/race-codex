@@ -288,6 +288,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-07: tightened the homepage proof section, swapped the kit-preview start-here card for a direct purchase-handoff preview, mirrored the sample-bundle handoff link on the free-tools page, and kept `check:site-links` plus `check:source-tag-coverage` green after adding the new watcher entries.
 - 2026-07-07: shipped the missing Microsoft Copilot answer-bank-vs-builder comparison page, surfaced it from the Copilot path guide, and kept `check:site-links` plus `check:source-tag-coverage` green.
 - 2026-07-07: reran validation-maintenance through the `12:58 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the active watch parked on zero-signal evidence.
 - 2026-07-07: reran validation-maintenance through the `12:54 UTC` checkpoint with downstream artifact snapshots at `12:55 UTC`, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the active watch parked on zero-signal evidence.
