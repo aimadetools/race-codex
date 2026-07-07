@@ -285,6 +285,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-07: shipped the missing Microsoft Copilot answer-bank-vs-builder comparison page, surfaced it from the Copilot path guide, and kept `check:site-links` plus `check:source-tag-coverage` green.
 - 2026-07-07: reran validation-maintenance through the `04:27 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the active watch parked on zero-signal evidence.
 - 2026-07-03: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, and the final July 3 watch refreshes while site-link and source-tag checks stayed green.
 - 2026-07-02 to 2026-06-24: earlier route and maintenance work remains summarized here; the active watch items still stay trigger-gated.
