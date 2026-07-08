@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-08 16:30 UTC
+Checked at: 2026-07-08 20:11 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -230,6 +230,24 @@ Source of truth: Vercel Blob `contact-submissions/`
 - response-workbook-pricing: 0
 - response-workbook-response-software: 0
 - response-workbook-management-software: 0
+- response-workbook-answer-bank-comparison: 0
+- security-questionnaire-answer-bank-response-workbook-comparison: 0
+- answer-bank-vs-response-workbook-nav-audit: 0
+- blog-index-answer-bank-vs-response-workbook: 0
+- homepage-answer-bank-vs-response-workbook: 0
+- free-tools-answer-bank-vs-response-workbook: 0
+- start-here-answer-bank-vs-response-workbook: 0
+- ai-procurement-hub-answer-bank-vs-response-workbook: 0
+- answer-bank-vs-response-workbook-answer-bank: 0
+- answer-bank-vs-response-workbook-response-workbook: 0
+- answer-bank-vs-response-workbook-builder: 0
+- answer-bank-vs-response-workbook-spreadsheet-template: 0
+- answer-bank-vs-response-workbook-sample-answers: 0
+- answer-bank-vs-response-workbook-response-software: 0
+- answer-bank-vs-response-workbook-management-software: 0
+- answer-bank-vs-response-workbook-software-scorecard: 0
+- answer-bank-vs-response-workbook-pricing: 0
+- answer-bank-vs-response-workbook-teardown: 0
 - blog-index-ai-evidence-map: 0
 - blog-index-ai-follow-up-pack: 0
 - blog-index-ai-answer-bank: 0
