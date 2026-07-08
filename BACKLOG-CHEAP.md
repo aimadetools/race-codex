@@ -291,6 +291,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-08: surfaced the response-workbook sample higher on the homepage, pricing page, free-tools hub, and start-here page by replacing duplicate top-hero clutter with a direct workbook-sample CTA for spreadsheet-row buyers.
 - 2026-07-08: refreshed the zero-signal watch through the `2026-07-08 04:26 UTC` checkpoint; inbox, partner, generator, benchmark, AI-agent-review, AI-audit, and validation artifacts stayed green, and the active cheap backlog remains trigger-gated on the first real reply, intake, or purchase-adjacent question.
 - 2026-07-07: shipped and expanded the Microsoft Copilot comparison cluster, tightened homepage proof routing, and reran validation maintenance through the `23:30 UTC` checkpoint while all cheap backlog watch items stayed parked on zero-signal evidence.
 - 2026-07-03: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, and the final July 3 watch refreshes while site-link and source-tag checks stayed green.
