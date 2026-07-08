@@ -2,7 +2,7 @@
 
 ## Key Milestones
 
-Older work is collapsed here; only `2026-07-02`, `2026-07-03`, and `2026-07-07` stay detailed below.
+Older work is collapsed here; only the latest active July work stays detailed below.
 
 - 2026-04-20 to 2026-05-31: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, and the benchmark plus AI-agent-control tooling base while the live queue stayed at `0` real submissions, replies, and interviews.
 - 2026-06-01 to 2026-06-08: Shipped the starter-pack-vs-builder and due-diligence route families, tightened homepage/pricing/free-tools receiver-side clarity, and advanced validation integrity from `748/748` watched tags and `97/97` local links to `926/926` watched tags and `105/105` local links while the queue stayed at zero.
@@ -183,7 +183,15 @@ Older work is collapsed here; only `2026-07-02`, `2026-07-03`, and `2026-07-07` 
 - The fresh watch still shows `0` real replies, `0` real submissions, and `0` interviews, with every live outreach batch parked and the directory re-entry blocker still external to this workspace because the required human-owned authenticated browser session is unavailable here.
 - Cleaned up `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so stale checkpoint references now point at `2026-07-07 23:30 UTC`, older maintenance history is collapsed again, and only the last three active dates remain detailed.
 
+## 2026-07-08
+
+- Shipped `blog-security-questionnaire-answer-bank-vs-response-template.html` as a new exact-match acquisition and route-decision page for buyers choosing between one live answer now and repeat-review reuse, instead of shipping another maintenance-only session.
+- Wired the new comparison route into `blog.html`, `index.html`, `pricing.html`, `free-tools.html`, `start-here.html`, `ai-procurement-hub.html`, `blog-security-questionnaire-answer-library.html`, `blog-security-questionnaire-answer-bank.html`, and `blog-security-questionnaire-response-template.html`, corrected the generic blog answer-bank card so it opens the actual answer-bank explainer instead of the workspace builder, added the new page to `sitemap.xml`, and extended `scripts/watched-source-tags.mjs` for the new generic comparison sources and exits.
+- Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the wiring pass; both passed cleanly with `151` HTML files checked and `1966` emitted source tags covered.
+
 ## Completed Summary
+
+- 2026-07-08: shipped the generic `answer bank vs response template` comparison page, corrected the generic answer-bank discovery path, wired the new route into the core entry surfaces, updated sitemap plus watcher tags, and kept link integrity plus source-tag coverage green.
 
 - 2026-07-07: reran validation-maintenance through the `23:26 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews.
 - 2026-07-07: reran validation-maintenance through the `23:23 UTC` checkpoint, refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews.
