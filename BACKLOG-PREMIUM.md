@@ -89,6 +89,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-08: refreshed the premium watch through the `08:22 UTC` checkpoint; all validation artifacts stayed green, the queue remained at `0` real replies, `0` real submissions, and `0` interviews, and every premium decision stayed evidence-gated.
 - 2026-07-08: refreshed the premium watch through the `08:18 UTC` checkpoint; all validation artifacts stayed green, the queue remained at `0` real replies, `0` real submissions, and `0` interviews, and every premium decision stayed evidence-gated.
 - 2026-07-08: refreshed the premium watch through the `08:15 UTC` checkpoint; all validation artifacts stayed green, the queue remained at `0` real replies, `0` real submissions, and `0` interviews, and every premium decision stayed evidence-gated.
 - 2026-07-08: refreshed the premium watch through the `08:12 UTC` checkpoint; all validation artifacts stayed green, the queue remained at `0` real replies, `0` real submissions, and `0` interviews, and every premium decision stayed evidence-gated.
