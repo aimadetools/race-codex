@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the wiring pass; both passed cleanly with `151` HTML files checked and `1966` emitted source tags covered.
 - Surfaced the response-workbook sample higher on `index.html`, `pricing.html`, `free-tools.html`, and `start-here.html` by swapping duplicate top-hero clutter for a direct workbook-sample CTA so spreadsheet-row buyers see the row-shaped route earlier.
 - Cleaned up `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` after the `12:51 UTC` checkpoint so the live watch state points at the freshest zero-signal pass while completed work stays collapsed and only the last three active dates remain detailed here.
+- Re-read the live help request and validation snapshots at `2026-07-08 13:01 UTC`, confirmed the highest-priority incomplete item is still the partially completed AI answer-bank batch-02 directory pass, and recorded that this workspace cannot finish the authenticated-browser re-entry step because no human-owned browser session is exposed here.
 
 ## Completed Summary
 
