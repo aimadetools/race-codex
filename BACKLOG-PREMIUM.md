@@ -90,20 +90,9 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-08: ran validation maintenance through the `23:25 UTC` checkpoint, rechecked site links and source-tag coverage, refreshed the inbox/status artifacts, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `23:22 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `23:18 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `23:15 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `23:10 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `23:07 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `20:30 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `20:27 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `20:24 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `20:11 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `16:30 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: refreshed the watch and validation artifacts through the `16:27 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
-- 2026-07-08: normalized the sample-bundle route, refreshed the premium watch, and kept every premium decision evidence-gated.
-- 2026-07-08: added the source-tagged offer-fit picker plus direct package links on `pricing.html` and `ai-security-questionnaire-audit.html` for a clean conversion test.
+- 2026-07-08: ran validation maintenance through the `23:25 UTC` to `23:07 UTC` checkpoints, rechecked site links and source-tag coverage, refreshed the inbox/status artifacts, and kept every premium decision evidence-gated.
+- 2026-07-08: added the source-tagged offer-fit picker, normalized the sample-bundle route, and kept the premium watch parked on zero buyer evidence.
+- 2026-07-08: ran validation maintenance through the `20:30 UTC` to `16:22 UTC` checkpoints while the premium watch stayed clean and evidence-gated.
+- 2026-07-08: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, and the new comparison route while site-link and source-tag checks stayed green.
 - 2026-07-07: repaired and expanded the Microsoft Copilot comparison acquisition path while the live premium P0/P1 items stayed parked on zero buyer evidence.
-- 2026-07-03: shipped the answer-bank workspace, kit-preview, and deal-blocker/sample-bundle refinements while site-link and source-tag checks stayed green.
-- 2026-07-02 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.
+- 2026-07-03 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.
