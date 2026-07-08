@@ -294,6 +294,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-08: normalized the sample-bundle route to `ai-security-questionnaire-starter-pack-bundle-sample.html`, left the legacy path as a redirect, updated the main sample-bundle entry surfaces and route helpers, and reran link plus source-tag validation cleanly on the expanded `152` HTML-file set.
 - 2026-07-08: refreshed the reply-capture watch repeatedly through the `12:59 UTC` checkpoint; inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, and validation artifacts stayed green, `COMMUNITY-FEEDBACK.md` recorded the latest deduplicated no-reply checkpoint, the starter-pack and deal-blocker watched-source follow-through stayed intact, and the cheap backlog remains trigger-gated on the first real reply, intake, or purchase-adjacent question.
 - 2026-07-08: surfaced the response-workbook sample higher on the homepage, pricing page, free-tools hub, and start-here page by replacing duplicate top-hero clutter with a direct workbook-sample CTA for spreadsheet-row buyers.
 - 2026-07-08: refreshed the zero-signal watch through the `2026-07-08 04:26 UTC` checkpoint; inbox, partner, generator, benchmark, AI-agent-review, AI-audit, and validation artifacts stayed green, and the active cheap backlog remains trigger-gated on the first real reply, intake, or purchase-adjacent question.

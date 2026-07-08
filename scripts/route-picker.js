@@ -191,7 +191,7 @@
         "Use the sample bundle to inspect the artifact shape",
         "Move into the packet builder if the thread is already procurement-sized",
       ],
-      primaryHref: "ai-security-questionnaire-starter-bundle-sample.html",
+      primaryHref: "ai-security-questionnaire-starter-pack-bundle-sample.html",
       primaryLabel: "Open sample bundle",
       secondaryHref: "ai-due-diligence-packet-builder.html",
       secondaryLabel: "Build due diligence packet",

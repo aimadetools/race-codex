@@ -90,6 +90,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-08: normalized the sample-bundle route to `ai-security-questionnaire-starter-pack-bundle-sample.html`, left the legacy path as a redirect, updated the main sample-bundle entry surfaces and route helpers, and reran link plus source-tag validation cleanly on the expanded `152` HTML-file set.
 - 2026-07-08: refreshed the premium watch repeatedly through the `12:59 UTC` checkpoint; all validation artifacts stayed green, the queue remained at `0` real replies, `0` real submissions, and `0` interviews, the `pricing-fit-*` and `ai-audit-fit-*` source families stayed in the live inbox watch, the public The Next AI pages still showed no NoticeKit listing, and every premium decision stayed evidence-gated.
 - 2026-07-08: added a source-tagged offer-fit picker plus direct package links on `pricing.html` and `ai-security-questionnaire-audit.html`, then reran link and source-tag validation so Starter vs Pro vs Audit can be measured as a clean conversion experiment instead of another static copy pass.
 - 2026-07-07: repaired and expanded the Microsoft Copilot comparison acquisition path, then reran validation maintenance through the `23:30 UTC` checkpoint while the live premium P0/P1 items remained parked on zero buyer evidence.

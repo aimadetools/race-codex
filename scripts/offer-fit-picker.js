@@ -27,7 +27,7 @@
       ],
       primaryHref: "https://buy.stripe.com/5kQbJ16SIgtE7ge80feEo09",
       primaryLabel: "Buy Starter",
-      secondaryHref: "ai-security-questionnaire-starter-bundle-sample.html",
+      secondaryHref: "ai-security-questionnaire-starter-pack-bundle-sample.html",
       secondaryLabel: "Inspect sample bundle",
     },
     pro: {
