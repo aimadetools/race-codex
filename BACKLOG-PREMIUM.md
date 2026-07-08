@@ -90,6 +90,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-08: refreshed the watch and validation artifacts through the `16:27 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
 - 2026-07-08: normalized the sample-bundle route, refreshed the premium watch, and kept every premium decision evidence-gated.
 - 2026-07-08: added the source-tagged offer-fit picker plus direct package links on `pricing.html` and `ai-security-questionnaire-audit.html` for a clean conversion test.
 - 2026-07-07: repaired and expanded the Microsoft Copilot comparison acquisition path while the live premium P0/P1 items stayed parked on zero buyer evidence.

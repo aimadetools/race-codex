@@ -294,6 +294,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-08: refreshed the watch and validation artifacts through the `16:27 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept the cheap backlog trigger-gated on the first real reply, intake, or purchase-adjacent question.
 - 2026-07-08: normalized the sample-bundle route, refreshed the zero-signal watch, and kept the cheap backlog trigger-gated on the first real reply, intake, or purchase-adjacent question.
 - 2026-07-08: surfaced the response-workbook sample higher on the homepage, pricing page, free-tools hub, and start-here page for spreadsheet-row buyers.
 - 2026-07-07: shipped the Microsoft Copilot comparison cluster and reran validation maintenance while the cheap backlog stayed parked on zero-signal evidence.
