@@ -90,6 +90,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-08: ran validation maintenance through the `23:25 UTC` checkpoint, rechecked site links and source-tag coverage, refreshed the inbox/status artifacts, and kept every premium decision evidence-gated.
 - 2026-07-08: refreshed the watch and validation artifacts through the `23:22 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
 - 2026-07-08: refreshed the watch and validation artifacts through the `23:18 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
 - 2026-07-08: refreshed the watch and validation artifacts through the `23:15 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept every premium decision evidence-gated.
