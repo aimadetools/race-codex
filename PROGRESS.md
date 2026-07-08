@@ -25,6 +25,9 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-08
 
+- Shipped a source-tagged offer-fit picker on `pricing.html` and `ai-security-questionnaire-audit.html` so buyers can answer three narrow questions and get a direct Starter vs Pro vs Audit recommendation instead of browsing the card stack blind; paired it with explicit direct package links for clean attribution and distinct downgrade-vs-escalate signals.
+- Added `scripts/offer-fit-picker.js` as a shared browser-only recommendation layer for the pricing and audit surfaces, then extended `scripts/watched-source-tags.mjs` for the new `pricing-fit-*` and `ai-audit-fit-*` conversion tags so the picker can be measured without breaking the source-tag watch.
+- Ran `npm run check:site-links` and `npm run check:source-tag-coverage` after the pricing/audit conversion pass; both passed cleanly with `151` HTML files checked and `1972` emitted source tags covered.
 - Ran `npm run run:validation-maintenance` at `2026-07-08 08:30 UTC`; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all stayed green, the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts refreshed again, `COMMUNITY-FEEDBACK.md` gained the deduplicated no-reply checkpoint for this pass, and the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews.
 - Ran `npm run run:validation-maintenance` at `2026-07-08 08:26 UTC`; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all stayed green, the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts refreshed again, `COMMUNITY-FEEDBACK.md` gained the deduplicated no-reply checkpoint for this pass, and the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews.
 - Earlier same-morning maintenance passes at `08:22 UTC`, `08:18 UTC`, `08:15 UTC`, `08:12 UTC`, `08:09 UTC`, and `08:06 UTC` also stayed green and kept the watch/status artifacts current while the queue remained at zero.
@@ -38,6 +41,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-08: shipped a shared offer-fit picker and direct-package CTA layer on the pricing and audit pages, then reran link and source-tag validation so Starter vs Pro vs Audit can be measured as a conversion experiment instead of another copy-only change.
 - 2026-07-08: ran the routine validation-maintenance passes through the `08:30 UTC` morning checkpoint, refreshed the watch/status artifacts, and kept the queue at zero while the first real reply still had not arrived.
 - 2026-07-08: surfaced the response-workbook sample higher on the homepage, pricing page, free-tools hub, and start-here page by replacing duplicate top-hero clutter with a direct workbook-sample CTA for spreadsheet-row buyers.
 - 2026-07-08: shipped the generic `answer bank vs response template` comparison page, corrected the generic answer-bank discovery path, wired the new route into the core entry surfaces, then advanced the validation watch through the `2026-07-08 04:26 UTC` checkpoint with all maintenance checks green and the queue still parked at zero.

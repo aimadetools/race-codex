@@ -205,6 +205,55 @@
               </div>
             </div>
           </div>
+          <div class="notice-band" style="margin-top:18px;" data-offer-picker="pricing">
+            <strong>Need the smallest paid fit, not just the shortest route?</strong>
+            <p>Use this picker when you already know the free route is not enough and need a direct recommendation between Starter, Pro, and the 48-hour audit before checkout.</p>
+            <div class="demo-panel" style="margin-top:12px;">
+              <div class="panel-header">
+                <strong>Offer fit picker</strong>
+                <span class="status">Local only</span>
+              </div>
+              <div class="demo-body">
+                <div class="field-grid">
+                  <label>Main blocker
+                    <select data-offer-picker-blocker>
+                      <option value="one-answer">One live answer is blocked</option>
+                      <option value="repeat-review">The same review keeps coming back</option>
+                      <option value="proof-pushback">The buyer pushed back on proof or wording</option>
+                      <option value="agent-controls">The blocker is AI agent or control-boundary detail</option>
+                      <option value="spreadsheet-handoff">The team mainly needs a cleaner spreadsheet handoff</option>
+                      <option value="unsure">The thread is still fuzzy</option>
+                    </select>
+                  </label>
+                  <label>Current state
+                    <select data-offer-picker-state>
+                      <option value="first-draft">We still need the first usable answer</option>
+                      <option value="repeatable">We already know this will repeat</option>
+                      <option value="buyer-pushback">The buyer already pushed back</option>
+                      <option value="procurement-expanded">The thread widened into a bigger handoff</option>
+                    </select>
+                  </label>
+                  <label>What you need next
+                    <select data-offer-picker-need>
+                      <option value="send-one-answer">One clean answer and handoff</option>
+                      <option value="reusable-files">Reusable files for repeated reviews</option>
+                      <option value="outside-read">A blunt outside read with priorities</option>
+                    </select>
+                  </label>
+                </div>
+                <div data-offer-picker-output class="notice-output" aria-live="polite"></div>
+                <div class="hero-actions" style="margin-top:12px;">
+                  <a data-offer-picker-primary class="button" href="#">Open recommendation</a>
+                  <a data-offer-picker-secondary class="button secondary" href="#">Open backup</a>
+                </div>
+                <p class="fine-print" style="margin-top:12px;">Direct package links:
+                  <a href="https://buy.stripe.com/5kQbJ16SIgtE7ge80feEo09?source=pricing-fit-starter">Starter</a>,
+                  <a href="https://buy.stripe.com/cNieVd3Gw7X858680feEo08?source=pricing-fit-pro">Pro</a>,
+                  <a href="https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07?source=pricing-fit-audit">Audit</a>
+                </p>
+              </div>
+            </div>
+          </div>
           <div class="notice-band" style="margin-top:18px;">
             <strong>Inspect the exact bundle first.</strong>
             <p>The sample bundle shows the answer block, reviewer note, the full 20-question matrix, proof checklist, internal handoff, reviewer workspace export, answer-bank draft, imported-row preview, and response workbook before checkout, while the free builder now handles up to 50 pasted or imported buyer rows. That makes it easier to compare the free path with Starter before you buy.</p>
@@ -804,6 +853,7 @@
       </footer>
     </div>
     <script defer src="scripts/route-picker.js"></script>
+    <script defer src="scripts/offer-fit-picker.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>

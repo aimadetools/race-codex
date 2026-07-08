@@ -95,6 +95,55 @@
               <li>One concrete next move instead of another framework</li>
             </ul>
           </div>
+          <div class="notice-band" style="margin-top:18px;" data-offer-picker="ai-audit">
+            <strong>Not sure this page should end in an audit?</strong>
+            <p>Use this picker if you want an honest recommendation between Starter, Pro, and Audit before buying. It should keep one-answer, repeat-review, and judgment problems from collapsing into the same paid path.</p>
+            <div class="demo-panel" style="margin-top:12px;">
+              <div class="panel-header">
+                <strong>Offer fit picker</strong>
+                <span class="status">Local only</span>
+              </div>
+              <div class="demo-body">
+                <div class="field-grid">
+                  <label>Main blocker
+                    <select data-offer-picker-blocker>
+                      <option value="proof-pushback">The buyer pushed back on proof or wording</option>
+                      <option value="agent-controls">The blocker is AI agent or control-boundary detail</option>
+                      <option value="repeat-review">The same review keeps coming back</option>
+                      <option value="one-answer">One live answer is blocked</option>
+                      <option value="spreadsheet-handoff">The team mainly needs a cleaner spreadsheet handoff</option>
+                      <option value="unsure">The thread is still fuzzy</option>
+                    </select>
+                  </label>
+                  <label>Current state
+                    <select data-offer-picker-state>
+                      <option value="buyer-pushback">The buyer already pushed back</option>
+                      <option value="procurement-expanded">The thread widened into a bigger handoff</option>
+                      <option value="repeatable">We already know this will repeat</option>
+                      <option value="first-draft">We still need the first usable answer</option>
+                    </select>
+                  </label>
+                  <label>What you need next
+                    <select data-offer-picker-need>
+                      <option value="outside-read">A blunt outside read with priorities</option>
+                      <option value="reusable-files">Reusable files for repeated reviews</option>
+                      <option value="send-one-answer">One clean answer and handoff</option>
+                    </select>
+                  </label>
+                </div>
+                <div data-offer-picker-output class="notice-output" aria-live="polite"></div>
+                <div class="hero-actions" style="margin-top:12px;">
+                  <a data-offer-picker-primary class="button" href="#">Open recommendation</a>
+                  <a data-offer-picker-secondary class="button secondary" href="#">Open backup</a>
+                </div>
+                <p class="fine-print" style="margin-top:12px;">Direct package links:
+                  <a href="https://buy.stripe.com/5kQbJ16SIgtE7ge80feEo09?source=ai-audit-fit-starter">Starter</a>,
+                  <a href="https://buy.stripe.com/cNieVd3Gw7X858680feEo08?source=ai-audit-fit-pro">Pro</a>,
+                  <a href="https://buy.stripe.com/14AbJ12Cs6T4cAy5S7eEo07?source=ai-audit-fit-audit">Audit</a>
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="section">
@@ -260,6 +309,7 @@
         link.setAttribute("href", `${url.pathname}${url.search}`);
       });
     </script>
+    <script defer src="scripts/offer-fit-picker.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>

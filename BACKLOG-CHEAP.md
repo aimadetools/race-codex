@@ -4,6 +4,9 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## P0
 
+- If the first real click, intake, reply, or purchase-adjacent question lands from `pricing-fit-starter`, `pricing-fit-pro`, or `pricing-fit-audit`, preserve the exact recommendation path before changing the new pricing offer-fit picker or direct package links.
+- If the first real click, intake, reply, or purchase-adjacent question lands from `ai-audit-fit-starter`, `ai-audit-fit-pro`, or `ai-audit-fit-audit`, preserve whether the visitor downgraded from audit into Starter or Pro, or confirmed the audit path, before changing the new audit-page offer-fit picker.
+- If three real pricing or audit-page visits choose the same offer-fit picker outcome before the others, move that winning package CTA higher on the originating page and note the source shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real click, intake, reply, or purchase-adjacent question lands from `blog-index-microsoft-copilot-answer-comparison`, preserve the exact source tag and whether the visitor wanted one live answer, a reusable answer bank, or a broader route before changing the Copilot blog card again.
 - If the first real click, intake, reply, or purchase-adjacent question lands from `free-tools-microsoft-copilot-answer-comparison` or `microsoft-copilot-answer-bank-vs-builder`, preserve the exact source tag and whether the visitor was deciding between one live answer, repeat-review reuse, workbook handoff, or software evaluation before changing the new Copilot comparison links.
 - If three real Copilot-specific visits choose `blog-microsoft-copilot-security-questionnaire-answer-bank-vs-builder.html` before the Copilot path guide or answer bank from the same blog/free-tools surfaces, move the comparison CTA higher on those entry pages and note the source shift in `COMMUNITY-FEEDBACK.md`.
