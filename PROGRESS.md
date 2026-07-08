@@ -25,6 +25,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-08
 
+- Shipped `blog-security-questionnaire-answer-bank-vs-response-workbook.html` as a new comparison route for teams choosing between repeat-review reuse and a row-aware handoff export, then cross-linked it from the homepage, free-tools hub, start-here page, AI procurement hub, answer bank page, response-workbook page, blog index, sitemap, and source-tag watch list.
 - Ran `npm run run:validation-maintenance` through the `2026-07-08 16:30 UTC` checkpoint, which refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, revalidated source-tag coverage at `1972` emitted tags, confirmed `152` HTML files still have no missing local targets, and logged another deduplicated no-reply checkpoint while the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews.
 - Ran `npm run run:validation-maintenance` through the `2026-07-08 16:27 UTC` checkpoint, which refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, revalidated source-tag coverage at `1972` emitted tags, confirmed `152` HTML files still have no missing local targets, and logged another deduplicated no-reply checkpoint while the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews.
 - Ran `npm run run:validation-maintenance` through the `2026-07-08 16:22 UTC` checkpoint, which refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, logged a deduplicated no-reply checkpoint, and confirmed the batch-02 directory re-entry still cannot advance here without an authenticated browser session.
@@ -40,6 +41,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-08: shipped the answer-bank vs response-workbook comparison route, cross-linked it from the main entry surfaces, and updated the sitemap plus watched source tags.
 - 2026-07-08: refreshed the watch and validation artifacts through the `16:30 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept the queue at zero while the backlog remained evidence-gated.
 - 2026-07-08: refreshed the watch and validation artifacts through the `16:27 UTC` checkpoint, rechecked source-tag coverage and site-link integrity, and kept the queue at zero while the backlog remained evidence-gated.
 - 2026-07-08: earlier same-day maintenance passes at `16:22 UTC`, `12:55 UTC`, `12:51 UTC`, `12:48 UTC`, `12:44 UTC`, `08:30 UTC`, `08:26 UTC`, `08:22 UTC`, `08:18 UTC`, `08:15 UTC`, `08:12 UTC`, `08:09 UTC`, `08:06 UTC`, `04:26 UTC`, `04:23 UTC`, `04:19 UTC`, and `04:12 UTC` stayed green while the watch/status artifacts remained current.
