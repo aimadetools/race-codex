@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-07 23:30 UTC
+Checked at: 2026-07-08 04:12 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -202,19 +202,23 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-spreadsheet-template: 0
 - blog-index-security-questionnaire-template: 0
 - blog-index-response-template: 0
+- blog-index-security-questionnaire-answer-bank: 0
+- blog-index-answer-bank-vs-response-template: 0
 - blog-index-answer-library: 0
 - blog-index-answer-example: 0
 - blog-index-sample-answers: 0
-- blog-index-answer-bank-builder: 0
 - blog-index-response-workbook: 0
 - homepage-answer-library: 0
+- homepage-answer-bank-vs-response-template: 0
 - homepage-response-workbook: 0
 - homepage-sample-answers: 0
 - homepage-ai-pro-kit: 0
 - start-here-response-workbook: 0
 - start-here-sample-answers: 0
+- start-here-answer-bank-vs-response-template: 0
 - pricing-response-workbook: 0
 - pricing-sample-answers: 0
+- pricing-answer-bank-vs-response-template: 0
 - free-tools-response-workbook: 0
 - spreadsheet-template-response-workbook: 0
 - response-workbook-builder: 0
@@ -302,6 +306,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-answer-example: 0
 - free-tools-sample-answers: 0
 - free-tools-answer-bank-builder: 0
+- free-tools-answer-bank-vs-response-template: 0
 - free-tools-spreadsheet-handoff: 0
 - free-tools-spreadsheet-rows: 0
 - free-tools-dpa-clause-intake: 0
@@ -384,8 +389,24 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-library-answer-example: 0
 - answer-library-sample-answers: 0
 - answer-library-security-questionnaire-answer-bank: 0
+- answer-library-answer-bank-vs-response-template: 0
 - answer-library-spreadsheet-template: 0
 - answer-library-response-workbook: 0
+- ai-procurement-hub-answer-bank-vs-response-template: 0
+- security-questionnaire-answer-bank-response-comparison: 0
+- response-template-answer-bank-comparison: 0
+- answer-bank-vs-response-template-nav-audit: 0
+- answer-bank-vs-response-template-template: 0
+- answer-bank-vs-response-template-answer-bank: 0
+- answer-bank-vs-response-template-builder: 0
+- answer-bank-vs-response-template-answer-bank-builder: 0
+- answer-bank-vs-response-template-spreadsheet-template: 0
+- answer-bank-vs-response-template-sample-answers: 0
+- answer-bank-vs-response-template-software-scorecard: 0
+- answer-bank-vs-response-template-response-software: 0
+- answer-bank-vs-response-template-management-software: 0
+- answer-bank-vs-response-template-teardown: 0
+- answer-bank-vs-response-template-pricing: 0
 - answer-library-builder: 0
 - answer-library-software-scorecard: 0
 - ai-answer-library-ownership-matrix: 0
