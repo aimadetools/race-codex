@@ -89,7 +89,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-08: refreshed the premium watch through the `08:26 UTC` morning checkpoint; all validation artifacts stayed green, the queue remained at `0` real replies, `0` real submissions, and `0` interviews, and every premium decision stayed evidence-gated.
+- 2026-07-08: refreshed the premium watch through the `08:30 UTC` morning checkpoint; all validation artifacts stayed green, the queue remained at `0` real replies, `0` real submissions, and `0` interviews, and every premium decision stayed evidence-gated.
 - 2026-07-07: repaired and expanded the Microsoft Copilot comparison acquisition path, then reran validation maintenance through the `23:30 UTC` checkpoint while the live premium P0/P1 items remained parked on zero buyer evidence.
 - 2026-07-03: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, and the final July 3 watch refreshes while site-link and source-tag checks stayed green.
 - 2026-07-02 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.
