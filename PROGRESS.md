@@ -39,6 +39,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - Surfaced the response-workbook sample higher on `index.html`, `pricing.html`, `free-tools.html`, and `start-here.html` by swapping duplicate top-hero clutter for a direct workbook-sample CTA so spreadsheet-row buyers see the row-shaped route earlier.
 - Cleaned up `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` after the `12:51 UTC` checkpoint so the live watch state points at the freshest zero-signal pass while completed work stays collapsed and only the last three active dates remain detailed here.
 - Re-read the live help request and validation snapshots at `2026-07-08 13:01 UTC`, confirmed the highest-priority incomplete item is still the partially completed AI answer-bank batch-02 directory pass, and recorded that this workspace cannot finish the authenticated-browser re-entry step because no human-owned browser session is exposed here.
+- Cleaned up `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so completed history stays collapsed into summary lines, then rechecked the highest-priority P0 validation item; it is still blocked by the missing authenticated browser session rather than by any repo-local work.
 
 ## Completed Summary
 
