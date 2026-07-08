@@ -291,6 +291,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-08: refreshed the reply-capture watch through the `08:15 UTC` checkpoint; inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, and validation artifacts stayed green, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoint, and the cheap backlog remains trigger-gated on the first real reply, intake, or purchase-adjacent question.
 - 2026-07-08: refreshed the reply-capture watch through the `08:12 UTC` checkpoint; inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, and validation artifacts stayed green, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoint, and the cheap backlog remains trigger-gated on the first real reply, intake, or purchase-adjacent question.
 - 2026-07-08: refreshed the reply-capture watch through the `08:06 UTC` checkpoint; inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, and validation artifacts stayed green, `COMMUNITY-FEEDBACK.md` recorded the deduplicated no-reply checkpoint, and the cheap backlog remains trigger-gated on the first real reply, intake, or purchase-adjacent question.
 - 2026-07-08: surfaced the response-workbook sample higher on the homepage, pricing page, free-tools hub, and start-here page by replacing duplicate top-hero clutter with a direct workbook-sample CTA for spreadsheet-row buyers.
