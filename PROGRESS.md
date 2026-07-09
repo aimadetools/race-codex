@@ -35,6 +35,8 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-09
 
+- Shipped `blog-security-questionnaire-checklist-vs-ownership-matrix.html`, a direct comparison page that tells buyers when they still need a live-thread checklist versus when the queue has grown into a real ownership matrix, then wired it into the checklist and ownership-matrix pages plus the blog index.
+- Extended `scripts/watched-source-tags.mjs` and `sitemap.xml` for the new comparison route, then reran `npm run check:site-links`, `npm run check:source-tag-coverage`, and a `jsdom` load of the page; all checks stayed green with `157` HTML files checked, `2086` emitted source tags covered, and the new page executing without runtime errors.
 - Shipped `blog-security-questionnaire-response-software-vs-management-software.html`, a new software-term split route that tells commercial-intent visitors when the live pain is still approved-answer reuse and SME review versus when it has crossed into assignments, approvals, queue ownership, and broader questionnaire-program administration.
 - Wired the new response-vs-management route into the response-software, management-software, software-for-startups, and automation-software guides plus the homepage, pricing, free-tools, start-here, AI procurement hub, and blog index so software-intent visitors can clarify the category before jumping into the heavier guides or tools.
 - Extended `scripts/watched-source-tags.mjs` and `sitemap.xml` for the new route, then reran `npm run check:site-links`, `npm run check:source-tag-coverage`, and a `jsdom` load of the new page; all checks stayed green with `156` HTML files checked, `2074` emitted source tags covered, and the new page executing without runtime errors.
