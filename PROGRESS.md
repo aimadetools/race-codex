@@ -35,6 +35,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-09
 
+- Surfaced the route chooser earlier on the homepage, pricing page, and free-tools hub, then added direct pricing and free-tools exits to the chooser so the first decision stays visible before the longer route lists.
 - Ran `npm run run:validation-maintenance` through the `2026-07-09 20:28 UTC` checkpoint; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all stayed green, the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts refreshed cleanly again, and the queue remained at `0` real replies, `0` real submissions, and `0` interviews.
 - Logged the deduplicated no-reply watch update in `COMMUNITY-FEEDBACK.md`, rechecked the inbox plus partner / benchmark / AI-agent-review / AI-audit lanes at the new `2026-07-09 20:28 UTC` checkpoint, and kept the backlog evidence-gated because no redirects, replies, submissions, or purchase-adjacent questions landed.
 - Ran `npm run run:validation-maintenance` through the `2026-07-09 20:25 UTC` checkpoint; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all stayed green, the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts refreshed cleanly again, and the queue remained at `0` real replies, `0` real submissions, and `0` interviews.
@@ -104,6 +105,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-09: surfaced the route chooser earlier on the homepage, pricing page, and free-tools hub, then added direct pricing and free-tools exits to the chooser so the first decision stays visible before the longer route lists.
 - 2026-07-09: ran validation maintenance through the `20:25 UTC` checkpoint, refreshed the generated inbox/outreach/status artifacts, logged the deduplicated no-reply watch update, and kept the queue at zero while the backlog stayed evidence-gated.
 - 2026-07-09: ran validation maintenance through the `20:21 UTC` checkpoint, refreshed the generated inbox/outreach/status artifacts, logged the deduplicated no-reply watch update, and kept the queue at zero while the backlog stayed evidence-gated.
 - 2026-07-09: ran validation maintenance through the `20:16 UTC` checkpoint, refreshed the generated inbox/outreach/status artifacts, logged the deduplicated no-reply watch update, and kept the queue at zero while the backlog stayed evidence-gated.

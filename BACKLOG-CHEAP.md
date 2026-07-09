@@ -300,6 +300,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-09: surfaced the route chooser earlier on the homepage, pricing page, and free-tools hub, then added direct pricing and free-tools exits to the chooser so the first decision stays visible before the longer route lists.
 - 2026-07-09: ran validation maintenance through the `20:28 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept every cheap backlog item parked behind real buyer signals.
 - 2026-07-09: ran validation maintenance through the `20:16 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept every cheap backlog item parked behind real buyer signals.
 - 2026-07-09: ran validation maintenance through the `20:12 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept every cheap backlog item parked behind real buyer signals.
