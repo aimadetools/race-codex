@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-09 08:28 UTC
+Checked at: 2026-07-09 16:09 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -233,6 +233,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - response-workbook-answer-bank-comparison: 0
 - security-questionnaire-answer-bank-response-workbook-comparison: 0
 - answer-bank-vs-response-workbook-nav-audit: 0
+- security-questionnaire-checklist-comparison: 0
+- security-questionnaire-ownership-matrix-comparison: 0
 - blog-index-answer-bank-vs-response-workbook: 0
 - homepage-answer-bank-vs-response-workbook: 0
 - free-tools-answer-bank-vs-response-workbook: 0
@@ -248,6 +250,15 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-bank-vs-response-workbook-software-scorecard: 0
 - answer-bank-vs-response-workbook-pricing: 0
 - answer-bank-vs-response-workbook-teardown: 0
+- checklist-vs-ownership-matrix-checklist: 0
+- checklist-vs-ownership-matrix-ownership-matrix: 0
+- checklist-vs-ownership-matrix-builder: 0
+- checklist-vs-ownership-matrix-software-scorecard: 0
+- checklist-vs-ownership-matrix-response-software: 0
+- checklist-vs-ownership-matrix-management-software: 0
+- checklist-vs-ownership-matrix-teardown: 0
+- checklist-vs-ownership-matrix-pricing: 0
+- checklist-vs-ownership-matrix-nav-audit: 0
 - blog-index-ai-evidence-map: 0
 - blog-index-ai-follow-up-pack: 0
 - blog-index-ai-answer-bank: 0
@@ -280,8 +291,11 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-automation-guide: 0
 - blog-index-sig-guide: 0
 - blog-index-questionnaire-software: 0
+- blog-index-software-tools-comparison: 0
+- blog-index-software-shortlist: 0
 - blog-index-ownership-matrix: 0
 - blog-index-security-questionnaire-checklist: 0
+- blog-index-checklist-vs-ownership-matrix: 0
 - blog-index-management-software: 0
 - blog-index-hypercomply-alternative: 0
 - blog-index-conveyor-alternative: 0
@@ -395,6 +409,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-automation-guide: 0
 - free-tools-sig-guide: 0
 - free-tools-questionnaire-software: 0
+- free-tools-software-tools-comparison: 0
+- free-tools-software-shortlist: 0
 - free-tools-ownership-matrix: 0
 - free-tools-security-questionnaire-checklist: 0
 - free-tools-management-software: 0
@@ -406,6 +422,35 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-deal-blocker-nav-audit: 0
 - answer-library-nav-audit: 0
 - answer-library-security-questionnaire-template: 0
+- homepage-software-shortlist: 0
+- pricing-software-shortlist: 0
+- start-here-software-shortlist: 0
+- ai-procurement-hub-software-shortlist: 0
+- questionnaire-software-shortlist: 0
+- questionnaire-software-tools-comparison: 0
+- response-software-shortlist: 0
+- response-software-tools-comparison: 0
+- management-software-shortlist: 0
+- management-software-tools-comparison: 0
+- automation-software-shortlist: 0
+- automation-software-tools-comparison: 0
+- software-shortlist-nav-audit: 0
+- software-shortlist-scorecard: 0
+- software-shortlist-tools-comparison: 0
+- software-shortlist-questionnaire-software: 0
+- software-shortlist-response-software: 0
+- software-shortlist-management-software: 0
+- software-shortlist-ownership-matrix: 0
+- software-shortlist-builder: 0
+- software-shortlist-automation-software: 0
+- software-shortlist-responsive-alternative: 0
+- software-shortlist-loopio-alternative: 0
+- software-shortlist-hypercomply-alternative: 0
+- software-shortlist-conveyor-alternative: 0
+- software-shortlist-vanta-alternative: 0
+- software-shortlist-drata-aiqa-alternative: 0
+- software-shortlist-safebase-alternative: 0
+- software-shortlist-whistic-alternative: 0
 - answer-library-response-template: 0
 - answer-library-answer-example: 0
 - answer-library-sample-answers: 0
@@ -1649,6 +1694,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-software-evidence-map: 0
 - automation-software-audit: 0
 - automation-software-scorecard: 0
+- automation-software-response-management-comparison: 0
 - management-software-nav-audit: 0
 - management-software-answer-library: 0
 - management-software-builder: 0
@@ -1660,6 +1706,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - management-software-answer-bank: 0
 - management-software-audit: 0
 - management-software-scorecard: 0
+- management-software-response-management-comparison: 0
 - management-software-responsive-alternative: 0
 - management-software-loopio-alternative: 0
 - management-software-hypercomply-alternative: 0
@@ -1677,16 +1724,27 @@ Source of truth: Vercel Blob `contact-submissions/`
 - response-software-answer-bank: 0
 - response-software-audit: 0
 - response-software-scorecard: 0
+- response-software-response-management-comparison: 0
+- questionnaire-software-response-management-comparison: 0
+- homepage-software-tools-comparison: 0
 - response-software-responsive-alternative: 0
 - response-software-loopio-alternative: 0
 - response-software-hypercomply-alternative: 0
 - response-software-conveyor-alternative: 0
 - homepage-software-scorecard: 0
+- homepage-response-management-comparison: 0
+- free-tools-response-management-comparison: 0
 - start-here-software-scorecard: 0
+- start-here-response-management-comparison: 0
+- start-here-software-tools-comparison: 0
 - pricing-software-scorecard: 0
+- pricing-response-management-comparison: 0
+- pricing-software-tools-comparison: 0
 - route-chooser-software-scorecard: 0
 - software-scorecard-nav-audit: 0
+- software-scorecard-tools-comparison: 0
 - software-scorecard-builder: 0
+- software-scorecard-shortlist: 0
 - software-scorecard-spreadsheet-template: 0
 - software-scorecard-answer-bank: 0
 - software-scorecard-response-software: 0
@@ -1698,11 +1756,33 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-response-software: 0
 - blog-index-automation-software: 0
 - blog-index-software-scorecard: 0
+- software-tools-comparison-nav-audit: 0
+- software-tools-comparison-scorecard: 0
+- software-tools-comparison-shortlist: 0
+- software-tools-comparison-questionnaire-software: 0
+- software-tools-comparison-response-software: 0
+- software-tools-comparison-management-software: 0
+- software-tools-comparison-automation-software: 0
+- software-tools-comparison-ownership-matrix: 0
+- software-tools-comparison-builder: 0
+- response-management-comparison-nav-audit: 0
+- response-management-comparison-response-software: 0
+- response-management-comparison-management-software: 0
+- response-management-comparison-scorecard: 0
+- response-management-comparison-shortlist: 0
+- response-management-comparison-ownership-matrix: 0
+- response-management-comparison-questionnaire-software: 0
+- response-management-comparison-automation-software: 0
+- response-management-comparison-builder: 0
+- response-management-comparison-answer-library: 0
 - blog-index-vanta-alternative: 0
 - blog-index-responsive-alternative: 0
 - blog-index-loopio-alternative: 0
+- blog-index-response-management-comparison: 0
 - ai-procurement-hub-automation-software: 0
 - ai-procurement-hub-software-scorecard: 0
+- ai-procurement-hub-software-tools-comparison: 0
+- ai-procurement-hub-response-management-comparison: 0
 - ai-procurement-hub-sample-answers: 0
 - ai-procurement-hub-vanta-alternative: 0
 - ai-procurement-hub-responsive-alternative: 0
