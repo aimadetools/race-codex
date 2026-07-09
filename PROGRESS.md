@@ -9,14 +9,6 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - 2026-06-09 to 2026-06-18: Added Gemini, Microsoft Copilot, Claude exact-match, spreadsheet-row import, Excel upload, spreadsheet-handoff, route-picker, answer-library, and builder proof upgrades while keeping validation green and The Next AI public listing absent.
 - 2026-06-24 to 2026-07-02: Re-ran the evidence watch repeatedly, shipped the questionnaire-software / competitor / checklist / answer-bank / workspace / kit-preview / deal-blocker / ownership-matrix upgrades, hardened `/api/contact`, kept source-tag and local-link validation green, and held the queue at `0` real replies, `0` real submissions, and `0` interviews while the authenticated-browser directory blocker stayed external to this workspace.
 
-## 2026-07-03
-
-- Re-ran validation maintenance repeatedly through the `2026-07-03 23:22 UTC` checkpoint; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all stayed green while the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts kept refreshing and the queue stayed parked at `0` real replies, `0` real submissions, and `0` interviews.
-- Tightened the free async teardown and audit-request intake copy so the live URL, affected customer segment, and deadline are harder to miss, then reran `npm run check:site-links` and `npm run check:source-tag-coverage` cleanly with `148` HTML files checked and `1918` emitted source tags covered.
-- Reworked `security-questionnaire-answer-bank-builder.html` into a browser-only repeat-review workspace with multi-row local storage, reopen/edit flow, combined export paths, and clearer repeat-review handoff copy across the generic and named-vendor answer-bank pages.
-- Tightened the proof/sample funnel so the homepage sample bundle card, the sample bundle page, and the deal-blocker proof band now point repeat-review visitors directly at the answer-bank workspace when that is the real job.
-- Cleaned up the memory files so the backlog completed sections stay collapsed into short summary lines while the live evidence-gated items kept pointing at the freshest zero-signal checkpoint.
-
 ## 2026-07-07
 
 - Re-ran validation maintenance repeatedly through the `2026-07-07 23:30 UTC` checkpoint; `check:validation-watch`, `check:self-audit-follow-up`, `check:contact-webhook-record`, `check:free-teardown-handoff`, `check:self-audit-production`, `check:source-tag-coverage`, and `check:site-links` all stayed green, the sync kept the help-request/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts current, and the queue stayed at `0` real replies, `0` real submissions, and `0` interviews.
@@ -41,6 +33,12 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - Surfaced the response-workbook sample higher on `index.html`, `pricing.html`, `free-tools.html`, and `start-here.html` by swapping duplicate top-hero clutter for a direct workbook-sample CTA so spreadsheet-row buyers see the row-shaped route earlier.
 - Cleaned up `PROGRESS.md`, `BACKLOG-CHEAP.md`, and `BACKLOG-PREMIUM.md` so completed history stays collapsed into summary lines and only the last three active dates remain detailed here.
 
+## 2026-07-09
+
+- Shipped a preset-aware, shareable `security-questionnaire-software-fit-scorecard.html`: the tool now hydrates from URL query state, falls back to local draft state only when no shared state is present, and can copy a share link alongside the fit brief and caution list so software-intent visitors can hand the exact route decision to teammates instead of re-entering the form.
+- Wired the strongest software-intent acquisition pages into intent-matched presets so `blog-security-questionnaire-response-software.html`, `blog-security-questionnaire-management-software.html`, and `blog-security-questionnaire-automation-software.html` now open the scorecard with repeat-review, multi-owner, or platform-shortlist defaults instead of a blank form.
+- Re-ran `npm run check:site-links`, `npm run check:source-tag-coverage`, and a `jsdom` load of the scorecard with preset query parameters; all checks stayed green with `153` HTML files checked, `1990` emitted source tags covered, and the preset/query-state script executing without runtime errors.
+
 ## Completed Summary
 
 - 2026-07-08: ran validation maintenance through the `23:25 UTC` checkpoint, rechecked site links and source-tag coverage, refreshed the inbox/status artifacts, and kept the queue at zero while the backlog stayed evidence-gated.
@@ -52,6 +50,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - 2026-07-08: refreshed the zero-signal watch repeatedly through the `12:59 UTC` checkpoint; all maintenance checks stayed green, the generated status artifacts refreshed through the `12:59 UTC` snapshot set, `COMMUNITY-FEEDBACK.md` logged the deduplicated no-reply checkpoint, the public The Next AI pages still showed no NoticeKit listing, and the queue remained at zero.
 - 2026-07-08: shipped a shared offer-fit picker and direct-package CTA layer on the pricing and audit pages, then reran link and source-tag validation so Starter vs Pro vs Audit can be measured as a conversion experiment instead of another copy-only change.
 - 2026-07-08: surfaced the response-workbook sample higher on the homepage, pricing page, free-tools hub, and start-here page by replacing duplicate top-hero clutter with a direct workbook-sample CTA for spreadsheet-row buyers.
+- 2026-07-09: added share-link and query-hydration support to the software fit scorecard, deep-linked the response/management/automation software pages into intent-matched presets, and kept link plus source-tag validation green.
 - 2026-07-08: shipped the generic `answer bank vs response template` comparison page, corrected the generic answer-bank discovery path, wired the new route into the core entry surfaces, then advanced the validation watch through the `2026-07-08 04:26 UTC` checkpoint with all maintenance checks green and the queue still parked at zero.
 - 2026-07-08: normalized the sample-bundle route to `ai-security-questionnaire-starter-pack-bundle-sample.html`, left the legacy path as a redirect, updated the main sample-bundle entry surfaces and route helpers, and reran link plus source-tag validation on the expanded `152` HTML-file set.
 - 2026-07-07: shipped and wired the Microsoft Copilot comparison cluster, refreshed homepage proof/discovery paths, and reran validation maintenance through the `23:30 UTC` checkpoint while the queue stayed at zero and the authenticated-browser blocker stayed external to this workspace.

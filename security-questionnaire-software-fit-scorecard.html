@@ -243,6 +243,7 @@
             <div class="generator-actions">
               <button class="button" id="copy-brief" type="button">Copy fit brief</button>
               <button class="button secondary" id="copy-gaps" type="button">Copy caution list</button>
+              <button class="button secondary" id="copy-share-link" type="button">Copy share link</button>
               <button class="button secondary" id="download-brief" type="button">Download brief</button>
               <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
             </div>
@@ -326,6 +327,23 @@
 
     <script>
       const STORAGE_KEY = "noticekit-security-questionnaire-software-fit-scorecard-v1";
+      const QUERY_KEYS = {
+        preset: "preset",
+        company: "company",
+        stage: "stage",
+        volume: "volume",
+        approvedContent: "approved",
+        reviewers: "reviewers",
+        intakeFormat: "intake",
+        shortlist: "shortlist",
+        blocker: "blocker",
+        rowPreservation: "row",
+        reusableLibrary: "library",
+        assignments: "assignments",
+        analytics: "analytics",
+        trustProgram: "trust",
+        proof: "proof"
+      };
 
       const presetMap = {
         "blocked-spreadsheet": {
@@ -488,6 +506,7 @@
       const statusNode = document.querySelector("#scorecard-status");
       const routePrimaryNode = document.querySelector("#route-primary");
       const routeSecondaryNode = document.querySelector("#route-secondary");
+      const shareLinkNode = document.querySelector("#copy-share-link");
 
       function sentence(value, fallback) {
         const text = String(value || "").trim();
@@ -756,49 +775,114 @@
         localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
       }
 
-      function loadDraft() {
-        try {
-          const raw = localStorage.getItem(STORAGE_KEY);
-          if (!raw) return;
-          const payload = JSON.parse(raw);
-          if (payload.company) fields.company.value = payload.company.replace(/[.!?]$/, "");
-          if (payload.stage) fields.stage.value = payload.stage;
-          if (payload.volume) fields.volume.value = payload.volume;
-          if (payload.approvedContent) fields.approvedContent.value = payload.approvedContent;
-          if (payload.reviewers) fields.reviewers.value = payload.reviewers;
-          if (payload.intakeFormat) fields.intakeFormat.value = payload.intakeFormat;
-          if (payload.shortlist) fields.shortlist.value = payload.shortlist.replace(/[.!?]$/, "");
-          if (payload.blocker) fields.blocker.value = payload.blocker.replace(/[.!?]$/, "");
-          if (payload.needs) {
-            fields.rowPreservation.checked = !!payload.needs.rowPreservation;
-            fields.reusableLibrary.checked = !!payload.needs.reusableLibrary;
-            fields.assignments.checked = !!payload.needs.assignments;
-            fields.analytics.checked = !!payload.needs.analytics;
-            fields.trustProgram.checked = !!payload.needs.trustProgram;
-            fields.proof.checked = !!payload.needs.proof;
-          }
-        } catch (error) {
-          console.error(error);
+      function applyPayload(payload) {
+        if (!payload) return;
+        if (payload.company) fields.company.value = payload.company.replace(/[.!?]$/, "");
+        if (payload.stage) fields.stage.value = payload.stage;
+        if (payload.volume) fields.volume.value = payload.volume;
+        if (payload.approvedContent) fields.approvedContent.value = payload.approvedContent;
+        if (payload.reviewers) fields.reviewers.value = payload.reviewers;
+        if (payload.intakeFormat) fields.intakeFormat.value = payload.intakeFormat;
+        if (payload.shortlist) fields.shortlist.value = payload.shortlist.replace(/[.!?]$/, "");
+        if (payload.blocker) fields.blocker.value = payload.blocker.replace(/[.!?]$/, "");
+        if (payload.needs) {
+          if (typeof payload.needs.rowPreservation === "boolean") fields.rowPreservation.checked = payload.needs.rowPreservation;
+          if (typeof payload.needs.reusableLibrary === "boolean") fields.reusableLibrary.checked = payload.needs.reusableLibrary;
+          if (typeof payload.needs.assignments === "boolean") fields.assignments.checked = payload.needs.assignments;
+          if (typeof payload.needs.analytics === "boolean") fields.analytics.checked = payload.needs.analytics;
+          if (typeof payload.needs.trustProgram === "boolean") fields.trustProgram.checked = payload.needs.trustProgram;
+          if (typeof payload.needs.proof === "boolean") fields.proof.checked = payload.needs.proof;
         }
       }
 
-      function applyPreset(name) {
+      function loadDraft() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return false;
+          applyPayload(JSON.parse(raw));
+          return true;
+        } catch (error) {
+          console.error(error);
+          return false;
+        }
+      }
+
+      function applyPreset(name, shouldRender = true) {
         const preset = presetMap[name];
         if (!preset) return;
-        fields.stage.value = preset.stage;
-        fields.volume.value = preset.volume;
-        fields.approvedContent.value = preset.approvedContent;
-        fields.reviewers.value = preset.reviewers;
-        fields.intakeFormat.value = preset.intakeFormat;
-        fields.shortlist.value = preset.shortlist;
-        fields.blocker.value = preset.blocker;
-        fields.rowPreservation.checked = preset.checks.rowPreservation;
-        fields.reusableLibrary.checked = preset.checks.reusableLibrary;
-        fields.assignments.checked = preset.checks.assignments;
-        fields.analytics.checked = preset.checks.analytics;
-        fields.trustProgram.checked = preset.checks.trustProgram;
-        fields.proof.checked = preset.checks.proof;
-        render();
+        applyPayload({
+          stage: preset.stage,
+          volume: preset.volume,
+          approvedContent: preset.approvedContent,
+          reviewers: preset.reviewers,
+          intakeFormat: preset.intakeFormat,
+          shortlist: preset.shortlist,
+          blocker: preset.blocker,
+          needs: {
+            rowPreservation: preset.checks.rowPreservation,
+            reusableLibrary: preset.checks.reusableLibrary,
+            assignments: preset.checks.assignments,
+            analytics: preset.checks.analytics,
+            trustProgram: preset.checks.trustProgram,
+            proof: preset.checks.proof
+          }
+        });
+        if (shouldRender) render();
+      }
+
+      function readBooleanParam(params, key) {
+        const value = params.get(key);
+        if (value === null) return null;
+        return value === "1" || value === "true" || value === "yes";
+      }
+
+      function loadQueryState() {
+        const params = new URLSearchParams(window.location.search);
+        const hasPayloadParams = Object.values(QUERY_KEYS).some((key) => params.has(key));
+        if (!hasPayloadParams) return false;
+
+        const preset = params.get(QUERY_KEYS.preset);
+        if (preset) applyPreset(preset, false);
+
+        applyPayload({
+          company: params.get(QUERY_KEYS.company),
+          stage: params.get(QUERY_KEYS.stage),
+          volume: params.get(QUERY_KEYS.volume),
+          approvedContent: params.get(QUERY_KEYS.approvedContent),
+          reviewers: params.get(QUERY_KEYS.reviewers),
+          intakeFormat: params.get(QUERY_KEYS.intakeFormat),
+          shortlist: params.get(QUERY_KEYS.shortlist),
+          blocker: params.get(QUERY_KEYS.blocker),
+          needs: {
+            rowPreservation: readBooleanParam(params, QUERY_KEYS.rowPreservation),
+            reusableLibrary: readBooleanParam(params, QUERY_KEYS.reusableLibrary),
+            assignments: readBooleanParam(params, QUERY_KEYS.assignments),
+            analytics: readBooleanParam(params, QUERY_KEYS.analytics),
+            trustProgram: readBooleanParam(params, QUERY_KEYS.trustProgram),
+            proof: readBooleanParam(params, QUERY_KEYS.proof)
+          }
+        });
+
+        return true;
+      }
+
+      function buildShareUrl(payload) {
+        const url = new URL(window.location.href);
+        url.searchParams.set(QUERY_KEYS.company, payload.company.replace(/[.!?]$/, ""));
+        url.searchParams.set(QUERY_KEYS.stage, payload.stage);
+        url.searchParams.set(QUERY_KEYS.volume, payload.volume);
+        url.searchParams.set(QUERY_KEYS.approvedContent, payload.approvedContent);
+        url.searchParams.set(QUERY_KEYS.reviewers, payload.reviewers);
+        url.searchParams.set(QUERY_KEYS.intakeFormat, payload.intakeFormat);
+        url.searchParams.set(QUERY_KEYS.shortlist, payload.shortlist.replace(/[.!?]$/, ""));
+        url.searchParams.set(QUERY_KEYS.blocker, payload.blocker.replace(/[.!?]$/, ""));
+        url.searchParams.set(QUERY_KEYS.rowPreservation, payload.needs.rowPreservation ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.reusableLibrary, payload.needs.reusableLibrary ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.assignments, payload.needs.assignments ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.analytics, payload.needs.analytics ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.trustProgram, payload.needs.trustProgram ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.proof, payload.needs.proof ? "1" : "0");
+        return url.toString();
       }
 
       function downloadText(filename, content) {
@@ -841,6 +925,7 @@
 
         document.querySelector("#copy-brief").onclick = () => copyText(brief, "Fit brief copied to clipboard.");
         document.querySelector("#copy-gaps").onclick = () => copyText(gapText, "Caution list copied to clipboard.");
+        shareLinkNode.onclick = () => copyText(buildShareUrl(payload), "Share link copied to clipboard.");
         document.querySelector("#download-brief").onclick = () => downloadText("noticekit-security-questionnaire-software-fit-brief.txt", `${brief}\n\n${gapText}\n`);
       }
 
@@ -858,7 +943,10 @@
         window.location.reload();
       });
 
-      loadDraft();
+      const loadedFromQuery = loadQueryState();
+      if (!loadedFromQuery) {
+        loadDraft();
+      }
       render();
     </script>
   </body>

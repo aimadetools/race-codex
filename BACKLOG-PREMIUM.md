@@ -90,6 +90,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-09: turned the software-fit scorecard into a preset-aware, shareable tool and deep-linked the response/management/automation software pages into intent-matched presets so software-intent traffic reaches a tighter first interaction instead of a blank form.
 - 2026-07-08: ran validation maintenance through the `23:25 UTC` to `23:07 UTC` checkpoints, rechecked site links and source-tag coverage, refreshed the inbox/status artifacts, and kept every premium decision evidence-gated.
 - 2026-07-08: added the source-tagged offer-fit picker, normalized the sample-bundle route, and kept the premium watch parked on zero buyer evidence.
 - 2026-07-08: ran validation maintenance through the `20:30 UTC` to `16:22 UTC` checkpoints while the premium watch stayed clean and evidence-gated.
