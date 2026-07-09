@@ -91,14 +91,14 @@
             <a class="button secondary" href="blog-security-questionnaire-spreadsheet-template.html?source=answer-bank-builder-spreadsheet-template">Open workbook template guide</a>
             <a class="button secondary" href="security-questionnaire-checklist.html?source=answer-bank-builder-checklist">Open checklist</a>
             <a class="button secondary" href="security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix">Open ownership matrix</a>
-            <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard">Open software fit scorecard</a>
+            <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard&amp;preset=repeat-review">Open software fit scorecard</a>
           </div>
         </section>
 
         <section class="section">
           <div class="notice-band">
             <strong>For the company answering the questionnaire.</strong>
-            <p>Use this builder after one answer already exists and the real problem is reuse discipline. If the wording is still unstable, use the <a href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">answer builder</a> first. If row preservation is still the blocker, keep the <a href="blog-security-questionnaire-spreadsheet-template.html?source=answer-bank-builder-spreadsheet-template">workbook template route</a> visible. If the queue has widened into assignments, approvals, or tool evaluation, branch into the <a href="security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix">ownership matrix</a> or <a href="security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard">software fit scorecard</a> instead of pretending another document will solve it.</p>
+            <p>Use this builder after one answer already exists and the real problem is reuse discipline. If the wording is still unstable, use the <a href="ai-security-questionnaire-answer-builder.html?source=answer-bank-builder-builder">answer builder</a> first. If row preservation is still the blocker, keep the <a href="blog-security-questionnaire-spreadsheet-template.html?source=answer-bank-builder-spreadsheet-template">workbook template route</a> visible. If the queue has widened into assignments, approvals, or tool evaluation, branch into the <a href="security-questionnaire-ownership-matrix.html?source=answer-bank-builder-ownership-matrix">ownership matrix</a> or <a href="security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard&amp;preset=repeat-review">software fit scorecard</a> instead of pretending another document will solve it.</p>
           </div>
         </section>
 
@@ -1044,7 +1044,7 @@
         }
         primaryRoute.href = routeProfile.answerBankHref || "ai-security-questionnaire-answer-bank.html?source=answer-bank-builder-ai-answer-bank";
         primaryRoute.textContent = routeProfile.answerBankLabel || "Open AI answer bank";
-        secondaryRoute.href = "security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard";
+        secondaryRoute.href = "security-questionnaire-software-fit-scorecard.html?source=answer-bank-builder-software-scorecard&preset=repeat-review";
         secondaryRoute.textContent = "Open software fit scorecard";
         nextStepTitle.textContent = score >= 9 ? "Best next step" : "Best next step";
         nextStepCopy.textContent = gaps.length
