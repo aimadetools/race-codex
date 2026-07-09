@@ -300,6 +300,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-09: ran validation maintenance through the `23:21 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, logged the deduplicated no-reply watch updates, and kept every cheap backlog item parked behind real buyer signals.
 - 2026-07-09: ran validation maintenance through the `23:17 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, logged the deduplicated no-reply watch updates, and kept every cheap backlog item parked behind real buyer signals.
 - 2026-07-09: surfaced the route chooser earlier on the homepage, pricing page, and free-tools hub; promoted the software shortlist worksheet; shipped the checklist-vs-ownership-matrix and software-fit scorecard-vs-shortlist pages; and kept validation green while the queue stayed at zero.
 - 2026-07-09: ran repeated validation-maintenance passes from `20:28 UTC` through `04:11 UTC`, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, logged the deduplicated no-reply watch updates, and kept every cheap backlog item parked behind real buyer signals.
