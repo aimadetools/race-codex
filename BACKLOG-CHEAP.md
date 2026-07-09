@@ -300,6 +300,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-09: shipped `blog-security-questionnaire-software-fit-scorecard-vs-shortlist.html`, wired it through the main software-intent entry surfaces plus both browser-only tools, extended watched source tags and sitemap coverage, and kept link/source-tag/runtime validation green.
 - 2026-07-09: ran validation maintenance through the `08:28 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept every cheap backlog item parked behind real buyer signals.
 - 2026-07-09: ran validation maintenance through the `08:25 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept every cheap backlog item parked behind real buyer signals.
 - 2026-07-09: ran validation maintenance through the `08:21 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, and kept every cheap backlog item parked behind real buyer signals.
