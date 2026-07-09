@@ -297,6 +297,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-09: rebalanced the starter-pack named-vendor decision block so the visible routes now surface OpenAI, Gemini, Anthropic, Claude, and Microsoft Copilot templates, examples, answer banks, and route guides together instead of leading with OpenAI-only cards.
+- 2026-07-09: extended `scripts/watched-source-tags.mjs` with the starter-pack Gemini, Anthropic, Claude, and Microsoft Copilot source tags, then reran site-link and source-tag validation cleanly.
 - 2026-07-09: ran validation maintenance through the `04:28 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, logged the deduplicated no-reply watch update, and kept every cheap backlog item parked behind real buyer signals.
 - 2026-07-09: ran validation maintenance through the `04:25 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, logged the deduplicated no-reply watch update, and kept every cheap backlog item parked behind real buyer signals.
 - 2026-07-09: ran validation maintenance through the `04:22 UTC` checkpoint, refreshed the generated inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts, logged the deduplicated no-reply watch update, and kept every cheap backlog item parked behind real buyer signals.
