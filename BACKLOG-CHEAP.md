@@ -306,8 +306,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-07-10: surfaced the spreadsheet-handoff guide, repaired watched source coverage, ran multiple validation-maintenance checkpoints, and shipped the homepage/free-tools route updates plus the new software decision pages while keeping the queue at zero.
-- 2026-07-09: reran repeated validation-maintenance passes, moved the route chooser and software shortlist/scorecard paths earlier, and kept every cheap backlog item evidence-gated.
-- 2026-07-08: shipped the answer-bank vs response-workbook route and normalized the sample/workbook proof surfaces while validation stayed green.
-- 2026-07-07: shipped the Microsoft Copilot comparison cluster and refreshed homepage proof/discovery paths.
+- 2026-07-10: surfaced the spreadsheet-handoff guide, repaired watched source coverage, ran validation-maintenance checkpoints, and shipped the homepage/free-tools route updates plus the software decision pages while keeping the queue at zero.
+- 2026-07-09: reran repeated validation-maintenance passes, moved the route chooser and software shortlist/scorecard paths earlier, and kept the cheap backlog evidence-gated.
+- 2026-07-08 to 2026-07-07: shipped the answer-bank vs response-workbook route, normalized the sample/workbook proof surfaces, and refreshed the Microsoft Copilot comparison/discovery paths.
 - 2026-07-03 to 2026-06-24: earlier route and maintenance work remains summarized here; the active watch items still stay trigger-gated.

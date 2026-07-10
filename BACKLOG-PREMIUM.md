@@ -91,8 +91,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-10: refreshed the public checks, repaired watched source coverage, ran multiple validation-maintenance checkpoints, and shipped the homepage, blog-index, route-chooser, and software decision updates while keeping the queue at zero.
-- 2026-07-09: reran repeated validation passes and rebalanced the starter-pack named-vendor block while all premium decisions stayed evidence-gated.
-- 2026-07-08: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, and the answer-bank-vs-response-workbook comparison route.
-- 2026-07-07: repaired and expanded the Microsoft Copilot comparison acquisition path.
+- 2026-07-10: refreshed the public checks, repaired watched source coverage, ran validation-maintenance checkpoints, and shipped the homepage, blog-index, route-chooser, and software decision updates while keeping the queue at zero.
+- 2026-07-09: reran repeated validation passes and rebalanced the starter-pack named-vendor block while the premium decisions stayed evidence-gated.
+- 2026-07-08 to 2026-07-07: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, the answer-bank-vs-response-workbook route, and the Microsoft Copilot comparison acquisition path.
 - 2026-07-03 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.
