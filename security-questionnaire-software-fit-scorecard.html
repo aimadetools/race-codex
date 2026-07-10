@@ -249,6 +249,14 @@
                 <ul id="gap-list"></ul>
               </div>
             </div>
+            <div class="tier-guidance">
+              <strong id="comparison-title">Likely shortlist leader</strong>
+              <p id="comparison-summary">Name the vendors in your shortlist field to get an exact comparison route instead of a generic category recommendation.</p>
+            </div>
+            <div class="generator-actions">
+              <a class="button" id="comparison-primary" href="security-questionnaire-software-shortlist.html?source=software-scorecard-shortlist">Open shortlist worksheet</a>
+              <a class="button secondary" id="comparison-secondary" href="blog-security-questionnaire-software-for-startups.html?source=software-scorecard-questionnaire-software">Open software guide</a>
+            </div>
             <div class="generator-actions">
               <button class="button" id="copy-brief" type="button">Copy fit brief</button>
               <button class="button secondary" id="copy-gaps" type="button">Copy caution list</button>
@@ -277,6 +285,14 @@
               <div class="template-box" id="gaps-output" aria-live="polite"></div>
             </article>
           </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>Shortlist snapshot</h2>
+            <p>If the vendor names are already on the board, this converts the scorecard inputs into a lightweight ranking so the next click can go to the exact comparison page instead of another generic guide.</p>
+          </div>
+          <div class="template-box" id="comparison-output" aria-live="polite"></div>
         </section>
 
         <section class="section">
@@ -425,6 +441,255 @@
         }
       };
 
+      const vendorProfiles = {
+        noticekit: {
+          label: "NoticeKit",
+          routeLabel: "Build answer + bundle",
+          routeHref: "ai-security-questionnaire-answer-builder.html?source=software-scorecard-builder",
+          officialHref: "https://noticekit.tech/",
+          weights: {
+            local: 4,
+            row: 4,
+            library: 3,
+            assignments: 1,
+            trust: 0,
+            analytics: 0,
+            ai: 1,
+            firstAnswer: 4,
+            repeatReview: 3,
+            multiOwner: 1,
+            trustProgram: 0,
+            rough: 4,
+            mixed: 2,
+            stable: 0,
+            pasted: 3,
+            spreadsheet: 4,
+            portal: 1,
+            intakeMixed: 2
+          }
+        },
+        responsive: {
+          label: "Responsive",
+          routeLabel: "Read Responsive alternative guide",
+          routeHref: "blog-responsive-alternative-for-startups.html?source=software-scorecard-responsive-alternative",
+          officialHref: "https://www.responsive.io/solutions/security-questionnaire-software",
+          weights: {
+            local: 0,
+            row: 2,
+            library: 4,
+            assignments: 4,
+            trust: 2,
+            analytics: 3,
+            ai: 4,
+            firstAnswer: 1,
+            repeatReview: 4,
+            multiOwner: 4,
+            trustProgram: 2,
+            rough: 0,
+            mixed: 3,
+            stable: 4,
+            pasted: 1,
+            spreadsheet: 2,
+            portal: 3,
+            intakeMixed: 4
+          }
+        },
+        loopio: {
+          label: "Loopio",
+          routeLabel: "Read Loopio alternative guide",
+          routeHref: "blog-loopio-alternative-for-startups.html?source=software-scorecard-loopio-alternative",
+          officialHref: "https://loopio.com/security-questionnaire-automation/",
+          weights: {
+            local: 0,
+            row: 1,
+            library: 4,
+            assignments: 3,
+            trust: 1,
+            analytics: 2,
+            ai: 4,
+            firstAnswer: 0,
+            repeatReview: 4,
+            multiOwner: 3,
+            trustProgram: 1,
+            rough: 0,
+            mixed: 2,
+            stable: 4,
+            pasted: 0,
+            spreadsheet: 2,
+            portal: 2,
+            intakeMixed: 3
+          }
+        },
+        hypercomply: {
+          label: "HyperComply",
+          routeLabel: "Read HyperComply alternative guide",
+          routeHref: "blog-hypercomply-alternative-for-startups.html?source=software-scorecard-hypercomply-alternative",
+          officialHref: "https://www.hypercomply.com/",
+          weights: {
+            local: 0,
+            row: 2,
+            library: 3,
+            assignments: 3,
+            trust: 3,
+            analytics: 2,
+            ai: 4,
+            firstAnswer: 1,
+            repeatReview: 3,
+            multiOwner: 3,
+            trustProgram: 2,
+            rough: 0,
+            mixed: 2,
+            stable: 3,
+            pasted: 1,
+            spreadsheet: 2,
+            portal: 3,
+            intakeMixed: 3
+          }
+        },
+        conveyor: {
+          label: "Conveyor",
+          routeLabel: "Read Conveyor alternative guide",
+          routeHref: "blog-conveyor-alternative-for-startups.html?source=software-scorecard-conveyor-alternative",
+          officialHref: "https://docs.conveyor.com/docs/collaborate-on-questionnaires",
+          weights: {
+            local: 0,
+            row: 2,
+            library: 3,
+            assignments: 4,
+            trust: 3,
+            analytics: 2,
+            ai: 4,
+            firstAnswer: 1,
+            repeatReview: 3,
+            multiOwner: 4,
+            trustProgram: 3,
+            rough: 0,
+            mixed: 2,
+            stable: 3,
+            pasted: 1,
+            spreadsheet: 2,
+            portal: 4,
+            intakeMixed: 4
+          }
+        },
+        vanta: {
+          label: "Vanta",
+          routeLabel: "Read Vanta alternative guide",
+          routeHref: "blog-vanta-alternative-for-startups.html?source=software-scorecard-vanta-alternative",
+          officialHref: "https://www.vanta.com/products/questionnaire-automation",
+          weights: {
+            local: 0,
+            row: 1,
+            library: 3,
+            assignments: 3,
+            trust: 4,
+            analytics: 3,
+            ai: 4,
+            firstAnswer: 0,
+            repeatReview: 2,
+            multiOwner: 3,
+            trustProgram: 4,
+            rough: 0,
+            mixed: 1,
+            stable: 3,
+            pasted: 0,
+            spreadsheet: 1,
+            portal: 2,
+            intakeMixed: 3
+          }
+        },
+        drata: {
+          label: "Drata AIQA",
+          routeLabel: "Read Drata AIQA alternative guide",
+          routeHref: "blog-drata-ai-questionnaire-assistance-alternative.html?source=software-scorecard-drata-aiqa-alternative",
+          officialHref: "https://drata.com/products/ai-questionnaire-assistance",
+          weights: {
+            local: 0,
+            row: 1,
+            library: 3,
+            assignments: 3,
+            trust: 4,
+            analytics: 3,
+            ai: 4,
+            firstAnswer: 0,
+            repeatReview: 2,
+            multiOwner: 3,
+            trustProgram: 4,
+            rough: 0,
+            mixed: 1,
+            stable: 3,
+            pasted: 0,
+            spreadsheet: 2,
+            portal: 3,
+            intakeMixed: 3
+          }
+        },
+        safebase: {
+          label: "SafeBase",
+          routeLabel: "Read SafeBase alternative guide",
+          routeHref: "blog-safebase-alternative-for-startups.html?source=software-scorecard-safebase-alternative",
+          officialHref: "https://www.safebase.io/",
+          weights: {
+            local: 0,
+            row: 1,
+            library: 3,
+            assignments: 3,
+            trust: 4,
+            analytics: 3,
+            ai: 4,
+            firstAnswer: 0,
+            repeatReview: 2,
+            multiOwner: 3,
+            trustProgram: 4,
+            rough: 0,
+            mixed: 1,
+            stable: 3,
+            pasted: 0,
+            spreadsheet: 1,
+            portal: 2,
+            intakeMixed: 3
+          }
+        },
+        whistic: {
+          label: "Whistic",
+          routeLabel: "Read Whistic alternative guide",
+          routeHref: "blog-whistic-alternative-for-startups.html?source=software-scorecard-whistic-alternative",
+          officialHref: "https://www.whistic.com/",
+          weights: {
+            local: 0,
+            row: 1,
+            library: 2,
+            assignments: 3,
+            trust: 4,
+            analytics: 3,
+            ai: 3,
+            firstAnswer: 0,
+            repeatReview: 1,
+            multiOwner: 3,
+            trustProgram: 4,
+            rough: 0,
+            mixed: 1,
+            stable: 2,
+            pasted: 0,
+            spreadsheet: 1,
+            portal: 2,
+            intakeMixed: 3
+          }
+        }
+      };
+
+      const vendorAliases = [
+        { key: "noticekit", patterns: ["noticekit"] },
+        { key: "responsive", patterns: ["responsive"] },
+        { key: "loopio", patterns: ["loopio"] },
+        { key: "hypercomply", patterns: ["hypercomply", "hyper comply"] },
+        { key: "conveyor", patterns: ["conveyor"] },
+        { key: "vanta", patterns: ["vanta"] },
+        { key: "drata", patterns: ["drata", "aiqa", "drata aiqa"] },
+        { key: "safebase", patterns: ["safebase", "safebase", "safe base"] },
+        { key: "whistic", patterns: ["whistic"] }
+      ];
+
       const stageLabels = {
         "first-answer": "One live answer is blocked now",
         "repeat-review": "The same questions keep coming back",
@@ -516,6 +781,11 @@
       const routePrimaryNode = document.querySelector("#route-primary");
       const routeSecondaryNode = document.querySelector("#route-secondary");
       const shareLinkNode = document.querySelector("#copy-share-link");
+      const comparisonTitleNode = document.querySelector("#comparison-title");
+      const comparisonSummaryNode = document.querySelector("#comparison-summary");
+      const comparisonPrimaryNode = document.querySelector("#comparison-primary");
+      const comparisonSecondaryNode = document.querySelector("#comparison-secondary");
+      const comparisonOutputNode = document.querySelector("#comparison-output");
 
       function sentence(value, fallback) {
         const text = String(value || "").trim();
@@ -531,6 +801,116 @@
           li.textContent = item;
           node.appendChild(li);
         }
+      }
+
+      function shortlistStageKey(payload) {
+        if (payload.stage === "first-answer") return "firstAnswer";
+        if (payload.stage === "repeat-review") return "repeatReview";
+        if (payload.stage === "multi-owner") return "multiOwner";
+        return payload.needs.trustProgram || payload.needs.analytics ? "trustProgram" : "multiOwner";
+      }
+
+      function shortlistMaturityKey(payload) {
+        if (payload.approvedContent === "none") return "rough";
+        if (payload.approvedContent === "partial") return "mixed";
+        return "stable";
+      }
+
+      function shortlistIntakeKey(payload) {
+        return ({
+          pasted: "pasted",
+          spreadsheet: "spreadsheet",
+          portal: "portal",
+          mixed: "intakeMixed"
+        })[payload.intakeFormat];
+      }
+
+      function parseShortlist(shortlistText) {
+        const normalized = String(shortlistText || "").toLowerCase();
+        const keys = [];
+        for (const alias of vendorAliases) {
+          if (alias.patterns.some((pattern) => normalized.includes(pattern))) {
+            keys.push(alias.key);
+          }
+        }
+        return keys;
+      }
+
+      function scoreVendorForPayload(key, payload) {
+        const weights = vendorProfiles[key].weights;
+        let score = 1;
+
+        score += weights[shortlistStageKey(payload)] || 0;
+        score += weights[shortlistMaturityKey(payload)] || 0;
+        score += weights[shortlistIntakeKey(payload)] || 0;
+
+        if (payload.needs.rowPreservation) score += weights.row || 0;
+        if (payload.needs.reusableLibrary) score += weights.library || 0;
+        if (payload.needs.assignments) score += weights.assignments || 0;
+        if (payload.needs.trustProgram) score += weights.trust || 0;
+        if (payload.needs.analytics) score += weights.analytics || 0;
+        if (payload.needs.proof) score += (weights.row || 0) * 0.25;
+
+        if (payload.stage === "first-answer") score += weights.local || 0;
+        if (payload.volume === "weekly" || payload.volume === "daily") {
+          score += (weights.assignments || 0) * 0.5 + (weights.library || 0) * 0.3;
+        }
+        if (payload.volume === "one-off") {
+          score += (weights.firstAnswer || 0) * 0.4 + (weights.local || 0) * 0.3;
+        }
+
+        return Math.round((score / 3) * 10) / 10;
+      }
+
+      function buildComparisonSummary(payload, ranked) {
+        const leader = vendorProfiles[ranked[0].key];
+        const runnerUp = ranked[1] ? vendorProfiles[ranked[1].key] : null;
+        if (payload.stage === "first-answer") {
+          return `${leader.label} is the best fit for the current live-answer problem.${runnerUp ? ` ${runnerUp.label} is close, but the queue still looks smaller than its heavier workflow.` : ""}`;
+        }
+        if (payload.stage === "repeat-review") {
+          return `${leader.label} is leading because reusable-answer pressure now matters more than a one-off drafting tool.${runnerUp ? ` ${runnerUp.label} is the nearest alternative.` : ""}`;
+        }
+        if (payload.stage === "multi-owner") {
+          return `${leader.label} is leading because the queue now looks like a managed multi-owner workflow.${runnerUp ? ` ${runnerUp.label} is the nearest second option.` : ""}`;
+        }
+        return `${leader.label} is leading because the shortlist now behaves like a broader trust or platform decision rather than a first-answer problem.${runnerUp ? ` ${runnerUp.label} remains the next closest route.` : ""}`;
+      }
+
+      function buildComparisonMarkup(ranked) {
+        const rows = ranked.map((item, index) => {
+          const profile = vendorProfiles[item.key];
+          return `<tr><td>${index + 1}</td><td>${profile.label}</td><td>${item.score.toFixed(1)}</td><td><a href="${profile.routeHref}">${profile.routeLabel}</a></td></tr>`;
+        }).join("");
+        return `<div class="table-wrap"><table><thead><tr><th>Rank</th><th>Vendor</th><th>Fit</th><th>Exact next route</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+      }
+
+      function renderComparison(payload) {
+        const vendorKeys = parseShortlist(payload.shortlist);
+        if (!vendorKeys.length) {
+          comparisonTitleNode.textContent = "Likely shortlist leader";
+          comparisonSummaryNode.textContent = "Name the vendors in your shortlist field to get an exact comparison route instead of a generic category recommendation.";
+          comparisonPrimaryNode.textContent = "Open shortlist worksheet";
+          comparisonPrimaryNode.href = "security-questionnaire-software-shortlist.html?source=software-scorecard-shortlist";
+          comparisonSecondaryNode.textContent = "Open software guide";
+          comparisonSecondaryNode.href = "blog-security-questionnaire-software-for-startups.html?source=software-scorecard-questionnaire-software";
+          comparisonOutputNode.innerHTML = "<p>Add names such as NoticeKit, Responsive, Loopio, HyperComply, Conveyor, Vanta, Drata, SafeBase, or Whistic in the shortlist field above to generate a lightweight ranking here.</p>";
+          return;
+        }
+
+        const ranked = vendorKeys
+          .map((key) => ({ key, score: scoreVendorForPayload(key, payload) }))
+          .sort((left, right) => right.score - left.score);
+        const leader = vendorProfiles[ranked[0].key];
+        const runnerUp = ranked[1] ? vendorProfiles[ranked[1].key] : null;
+
+        comparisonTitleNode.textContent = `Likely shortlist leader: ${leader.label}`;
+        comparisonSummaryNode.textContent = buildComparisonSummary(payload, ranked);
+        comparisonPrimaryNode.textContent = leader.routeLabel;
+        comparisonPrimaryNode.href = leader.routeHref;
+        comparisonSecondaryNode.textContent = runnerUp ? runnerUp.routeLabel : "Open shortlist worksheet";
+        comparisonSecondaryNode.href = runnerUp ? runnerUp.routeHref : "security-questionnaire-software-shortlist.html?source=software-scorecard-shortlist";
+        comparisonOutputNode.innerHTML = buildComparisonMarkup(ranked);
       }
 
       function collectPayload() {
@@ -929,6 +1309,7 @@
         renderList(gapListNode, result.gaps, "No major route warnings in the current draft.");
         briefOutputNode.textContent = brief;
         gapsOutputNode.textContent = gapText;
+        renderComparison(payload);
         saveDraft(payload);
         statusNode.textContent = "Draft saved locally on this device.";
 

@@ -8,12 +8,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - 2026-06-01 to 2026-06-08: Shipped the starter-pack-vs-builder and due-diligence route families, tightened homepage/pricing/free-tools receiver-side clarity, and advanced validation integrity from `748/748` watched tags and `97/97` local links to `926/926` watched tags and `105/105` local links while the queue stayed at zero.
 - 2026-06-09 to 2026-06-18: Added Gemini, Microsoft Copilot, Claude exact-match, spreadsheet-row import, Excel upload, spreadsheet-handoff, route-picker, answer-library, and builder proof upgrades while keeping validation green and The Next AI public listing absent.
 - 2026-06-24 to 2026-07-02: Re-ran the evidence watch repeatedly, shipped the questionnaire-software / competitor / checklist / answer-bank / workspace / kit-preview / deal-blocker / ownership-matrix upgrades, hardened `/api/contact`, kept source-tag and local-link validation green, and held the queue at `0` real replies, `0` real submissions, and `0` interviews while the authenticated-browser directory blocker stayed external to this workspace.
-
-## 2026-07-07
-
-- Re-ran validation maintenance through the `2026-07-07 23:30 UTC` checkpoint; the watch artifacts stayed green and the queue remained at zero.
-- Shipped and expanded the Microsoft Copilot comparison cluster across the Copilot answer bank, path guide, homepage, pricing, AI procurement hub, blog index, free-tools, and sitemap surfaces, with tracked source tags and clean link plus source-tag validation.
-- Tightened homepage proof and purchase-clarity routing by surfacing the sample bundle, purchase-next-steps preview, and clearer repeat-review exits without changing the evidence-gated recommendation to keep expansion paused until real signals land.
+- 2026-07-07: Shipped and wired the Microsoft Copilot comparison cluster, refreshed homepage proof/discovery paths, and reran validation maintenance through the `23:30 UTC` checkpoint.
 
 ## 2026-07-08
 
@@ -39,6 +34,12 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - Rebalanced the starter-pack named-vendor decision block and extended watched source tags for Gemini, Anthropic, Claude, and Microsoft Copilot, then reran validation cleanly.
 - Ran validation maintenance through the `04:28 UTC` to `04:11 UTC` checkpoints; every check stayed green, the deduplicated no-reply updates were logged, and the backlog stayed parked on zero buyer signals.
 - Extended the repeat-review and software-fit scorecard presets across the answer-bank, answer-library, Pro-kit, and commercial-search routes, then confirmed link and source-tag coverage stayed green.
+
+## 2026-07-10
+
+- Shifted out of another validation-only loop and upgraded `security-questionnaire-software-fit-scorecard.html` so the scorecard now parses named vendors from the typed shortlist, scores them against the current workflow, and routes high-intent visitors toward the exact alternative page or builder path instead of only returning a generic category result.
+- Added a new shortlist snapshot to the scorecard UI with a lightweight ranking table, exact next-route buttons for the likely leader and runner-up, and vendor-aware copy that turns the commercial-search wedge into a sharper handoff before the fuller shortlist worksheet.
+- Verified the new scorecard logic by compiling the inline script with Node and rerunning `npm run check:site-links`; the script syntax passed and the site-link check finished cleanly with `157 HTML files` and no missing local targets found.
 
 ## Completed Summary
 
