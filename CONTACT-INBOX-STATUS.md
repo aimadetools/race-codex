@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-10 04:07 UTC
+Checked at: 2026-07-10 08:10 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -208,21 +208,37 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-answer-example: 0
 - blog-index-sample-answers: 0
 - blog-index-response-workbook: 0
+- blog-index-pricing-fit-guide: 0
 - homepage-answer-library: 0
 - homepage-answer-bank-vs-response-template: 0
 - homepage-response-workbook: 0
 - homepage-sample-answers: 0
 - homepage-ai-pro-kit: 0
+- homepage-pricing-fit-guide: 0
 - start-here-response-workbook: 0
 - start-here-sample-answers: 0
 - start-here-answer-bank-vs-response-template: 0
 - pricing-response-workbook: 0
 - pricing-sample-answers: 0
 - pricing-answer-bank-vs-response-template: 0
+- pricing-pricing-fit-guide: 0
 - pricing-fit-starter: 0
 - pricing-fit-pro: 0
 - pricing-fit-audit: 0
+- pricing-fit-guide-nav-audit: 0
+- pricing-fit-guide-pricing: 0
+- pricing-fit-guide-route-chooser: 0
+- pricing-fit-guide-starter: 0
+- pricing-fit-guide-pro: 0
+- pricing-fit-guide-audit: 0
+- pricing-fit-guide-software: 0
+- pricing-fit-guide-response-software: 0
+- pricing-fit-guide-management-software: 0
+- pricing-fit-guide-software-scorecard: 0
+- pricing-fit-guide-software-shortlist: 0
+- pricing-fit-guide-teardown: 0
 - free-tools-response-workbook: 0
+- free-tools-pricing-fit-guide: 0
 - spreadsheet-template-response-workbook: 0
 - response-workbook-builder: 0
 - response-workbook-spreadsheet-template: 0
@@ -259,6 +275,22 @@ Source of truth: Vercel Blob `contact-submissions/`
 - checklist-vs-ownership-matrix-teardown: 0
 - checklist-vs-ownership-matrix-pricing: 0
 - checklist-vs-ownership-matrix-nav-audit: 0
+- software-scorecard-vs-ownership-matrix-nav-audit: 0
+- software-scorecard-vs-ownership-matrix-scorecard: 0
+- software-scorecard-vs-ownership-matrix-ownership-matrix: 0
+- software-scorecard-vs-ownership-matrix-shortlist: 0
+- software-scorecard-vs-ownership-matrix-questionnaire-software: 0
+- software-scorecard-vs-ownership-matrix-response-software: 0
+- software-scorecard-vs-ownership-matrix-management-software: 0
+- software-scorecard-vs-ownership-matrix-builder: 0
+- software-shortlist-vs-ownership-matrix-nav-audit: 0
+- software-shortlist-vs-ownership-matrix-shortlist: 0
+- software-shortlist-vs-ownership-matrix-ownership-matrix: 0
+- software-shortlist-vs-ownership-matrix-scorecard: 0
+- software-shortlist-vs-ownership-matrix-questionnaire-software: 0
+- software-shortlist-vs-ownership-matrix-response-software: 0
+- software-shortlist-vs-ownership-matrix-management-software: 0
+- software-shortlist-vs-ownership-matrix-builder: 0
 - blog-index-ai-evidence-map: 0
 - blog-index-ai-follow-up-pack: 0
 - blog-index-ai-answer-bank: 0
@@ -292,6 +324,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-sig-guide: 0
 - blog-index-questionnaire-software: 0
 - blog-index-software-tools-comparison: 0
+- blog-index-scorecard-vs-ownership-matrix: 0
 - blog-index-software-shortlist: 0
 - blog-index-ownership-matrix: 0
 - blog-index-security-questionnaire-checklist: 0
@@ -410,6 +443,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - free-tools-sig-guide: 0
 - free-tools-questionnaire-software: 0
 - free-tools-software-tools-comparison: 0
+- free-tools-scorecard-ownership-comparison: 0
+- free-tools-response-ownership-comparison: 0
 - free-tools-software-shortlist: 0
 - free-tools-ownership-matrix: 0
 - free-tools-security-questionnaire-checklist: 0
@@ -428,12 +463,35 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-software-shortlist: 0
 - questionnaire-software-shortlist: 0
 - questionnaire-software-tools-comparison: 0
+- questionnaire-software-scorecard-ownership-comparison: 0
 - response-software-shortlist: 0
 - response-software-tools-comparison: 0
+- response-software-ownership-comparison: 0
+- response-software-ownership-comparison-nav-audit: 0
+- response-software-ownership-comparison-response-software: 0
+- response-software-ownership-comparison-ownership-matrix: 0
+- response-software-ownership-comparison-scorecard: 0
+- response-software-ownership-comparison-shortlist: 0
+- response-software-ownership-comparison-response-management: 0
+- response-software-ownership-comparison-management-software: 0
+- response-software-ownership-comparison-questionnaire-software: 0
+- response-software-ownership-comparison-builder: 0
+- response-software-ownership-comparison-answer-library: 0
 - management-software-shortlist: 0
 - management-software-tools-comparison: 0
+- management-software-ownership-comparison: 0
+- management-software-ownership-comparison-nav-audit: 0
+- management-software-ownership-comparison-management-software: 0
+- management-software-ownership-comparison-ownership-matrix: 0
+- management-software-ownership-comparison-scorecard: 0
+- management-software-ownership-comparison-shortlist: 0
+- management-software-ownership-comparison-response-management: 0
+- management-software-ownership-comparison-response-software: 0
+- management-software-ownership-comparison-questionnaire-software: 0
+- management-software-ownership-comparison-builder: 0
 - automation-software-shortlist: 0
 - automation-software-tools-comparison: 0
+- automation-software-scorecard-ownership-comparison: 0
 - software-shortlist-nav-audit: 0
 - software-shortlist-scorecard: 0
 - software-shortlist-tools-comparison: 0
@@ -515,6 +573,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-library-ai-agent-review: 0
 - ownership-matrix-nav-audit: 0
 - ownership-matrix-scorecard: 0
+- ownership-matrix-tools-comparison: 0
 - ownership-matrix-response-software: 0
 - ownership-matrix-management-software: 0
 - ownership-matrix-answer-bank: 0
@@ -581,6 +640,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - route-chooser-management-software: 0
 - route-chooser-sig-guide: 0
 - route-chooser-pricing: 0
+- route-chooser-pricing-fit-guide: 0
 - route-chooser-starter-pack: 0
 - free-tools-vendor-register: 0
 - free-tools-vendor-register-legacy: 0
@@ -1737,12 +1797,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-software-scorecard: 0
 - start-here-response-management-comparison: 0
 - start-here-software-tools-comparison: 0
+- start-here-scorecard-ownership-comparison: 0
 - pricing-software-scorecard: 0
 - pricing-response-management-comparison: 0
 - pricing-software-tools-comparison: 0
 - route-chooser-software-scorecard: 0
 - software-scorecard-nav-audit: 0
 - software-scorecard-tools-comparison: 0
+- software-scorecard-tools-ownership-comparison: 0
 - software-scorecard-builder: 0
 - software-scorecard-shortlist: 0
 - software-scorecard-spreadsheet-template: 0
@@ -1773,6 +1835,25 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-tools-comparison-automation-software: 0
 - software-tools-comparison-ownership-matrix: 0
 - software-tools-comparison-builder: 0
+- blog-index-shortlist-vs-ownership-matrix: 0
+- blog-index-response-vs-ownership-matrix: 0
+- blog-index-management-vs-ownership-matrix: 0
+- homepage-shortlist-ownership-comparison: 0
+- homepage-response-ownership-comparison: 0
+- homepage-management-ownership-comparison: 0
+- pricing-shortlist-ownership-comparison: 0
+- pricing-response-ownership-comparison: 0
+- free-tools-shortlist-ownership-comparison: 0
+- start-here-shortlist-ownership-comparison: 0
+- start-here-response-ownership-comparison: 0
+- ai-procurement-hub-shortlist-ownership-comparison: 0
+- ai-procurement-hub-response-ownership-comparison: 0
+- ai-procurement-hub-management-ownership-comparison: 0
+- questionnaire-software-shortlist-ownership-comparison: 0
+- software-shortlist-ownership-comparison: 0
+- ownership-matrix-shortlist-comparison: 0
+- ownership-matrix-response-comparison: 0
+- ownership-matrix-management-comparison: 0
 - response-management-comparison-nav-audit: 0
 - response-management-comparison-response-software: 0
 - response-management-comparison-management-software: 0
@@ -1790,6 +1871,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-automation-software: 0
 - ai-procurement-hub-software-scorecard: 0
 - ai-procurement-hub-software-tools-comparison: 0
+- ai-procurement-hub-scorecard-ownership-comparison: 0
 - ai-procurement-hub-response-management-comparison: 0
 - ai-procurement-hub-sample-answers: 0
 - ai-procurement-hub-vanta-alternative: 0

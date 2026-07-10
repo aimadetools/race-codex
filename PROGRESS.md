@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Ran `npm run run:validation-maintenance` through the `2026-07-10 08:10 UTC` checkpoint; the watch artifacts refreshed cleanly, the inbox stayed at zero, and the deduplicated no-reply checkpoint was logged again.
 - Shipped `blog-security-questionnaire-pricing-fit-guide.html`, then cross-linked it from the homepage, pricing page, free-tools hub, route chooser, blog index, sitemap, and watched source-tag registry so the Starter / Pro / Audit decision has a dedicated landing page.
 - Shipped `blog-security-questionnaire-management-software-vs-ownership-matrix.html`, cross-linked it from the management software guide, ownership matrix, homepage management card, AI procurement hub, blog index, sitemap, and watched source-tag registry, then reran `npm run check:source-tag-coverage` plus `npm run check:site-links` cleanly with `161 HTML files`.
 - Shipped `blog-security-questionnaire-response-software-vs-ownership-matrix.html`, cross-linked it from the response software guide, ownership matrix, homepage, pricing, start-here, free-tools hub, AI procurement hub, blog index, sitemap, and watched source-tag registry, then reran `npm run check:source-tag-coverage` plus `npm run check:site-links` cleanly with `160 HTML files`.
@@ -49,6 +50,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-10: ran validation maintenance through the `08:10 UTC` checkpoint, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
 - 2026-07-10: shipped the pricing-fit guide, wired it across the homepage, pricing page, free-tools hub, route chooser, blog index, sitemap, and watched source-tag coverage, and kept local link plus attribution validation green.
 - 2026-07-10: shipped the management-software-vs-ownership-matrix decision page, wired it across the management-software and ownership entry surfaces, extended sitemap plus watched source-tag coverage, and kept local link plus attribution validation green.
 - 2026-07-10: shipped the response-software-vs-ownership-matrix decision page, wired it across the response-software and ownership entry surfaces, extended sitemap plus watched source-tag coverage, and kept local link plus attribution validation green.
