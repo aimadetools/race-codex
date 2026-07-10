@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Ran `npm run run:validation-maintenance` through the `2026-07-10 20:22 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
 - Collapsed the completed-summary sections in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` so the older finished work now stays summarized while the live P0/P1 items remain visible.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 20:12 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
 - Rechecked `npm run check:site-links` and `npm run check:source-tag-coverage` after the latest maintenance pass; both stayed clean with no missing local targets and complete watcher coverage.
@@ -70,6 +71,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-10: ran validation maintenance through the `20:22 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.
 - 2026-07-10: ran validation maintenance through the `20:12 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.
 - 2026-07-10: rechecked site-link and source-tag coverage after the `20:12 UTC` maintenance checkpoint; both audits stayed green with no missing local targets and complete watcher coverage.
 - 2026-07-10: extended the blog index `ItemList` JSON-LD to cover the newer comparison and software pages already visible in the body, then reran source-tag and local-link validation cleanly with `2182` watched source tags plus `162` local HTML targets still green.
