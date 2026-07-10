@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Shipped `blog-security-questionnaire-software-shortlist-vs-ownership-matrix.html`, cross-linked it from the shortlist worksheet, ownership matrix, homepage, pricing, free-tools hub, start-here page, AI procurement hub, software guide, blog index, sitemap, and watched source-tag registry, then reran `npm run check:source-tag-coverage` plus `npm run check:site-links` cleanly with `159 HTML files`.
 - Shipped `blog-security-questionnaire-software-fit-scorecard-vs-ownership-matrix.html`, cross-linked it from the scorecard, ownership matrix, software-shopping guides, blog index, free-tools hub, start-here page, AI procurement hub, sitemap, and watched source-tag registry, then reran `npm run check:source-tag-coverage` plus `npm run check:site-links` cleanly with `158 HTML files`.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 04:07 UTC` checkpoint, fixed the missing `software-scorecard-*-alternative` watched source tags that initially broke the maintenance gate, reran source-tag and site-link validation cleanly, and refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts with the queue still at zero.
 - Shifted out of another validation-only loop and upgraded `security-questionnaire-software-fit-scorecard.html` so the scorecard now parses named vendors from the typed shortlist, scores them against the current workflow, and routes high-intent visitors toward the exact alternative page or builder path instead of only returning a generic category result.
@@ -45,6 +46,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-10: shipped the shortlist-vs-ownership-matrix software decision page, wired it across the shortlist, ownership matrix, homepage, pricing, free-tools, start-here, AI procurement hub, software guide, blog index, sitemap, and watched source-tag coverage, and kept local link plus attribution validation green.
 - 2026-07-10: shipped the scorecard-vs-ownership-matrix software decision page, wired it across the software-shopping surfaces, extended sitemap plus watched source-tag coverage, and kept local link and attribution validation green.
 - 2026-07-09: ran validation maintenance through the `23:28 UTC` checkpoint, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
 - 2026-07-09: ran validation maintenance through the `23:24 UTC` checkpoint, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
