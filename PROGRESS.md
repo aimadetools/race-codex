@@ -37,6 +37,8 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Wired the exact-match repeat-review cluster more cleanly by adding the browser-only answer-bank workspace CTA to the blog index, registering the new `blog-index-answer-bank-builder` watcher tag, and rebuilding `CONTACT-INBOX-STATUS.md` so the route can collect real signal instead of sitting as a dead watched source.
+- Added the missing OpenAI comparison CTA to the blog index and AI procurement hub, registered `blog-index-openai-answer-comparison` plus `ai-procurement-hub-openai-answer-comparison` in the watched source-tag registry, rebuilt `CONTACT-INBOX-STATUS.md`, and reran `npm run check:source-tag-coverage` plus `npm run check:site-links` cleanly with `2179` emitted source tags and `162 HTML files`.
 - Ran `npm run run:validation-maintenance` repeatedly through the `2026-07-10 08:10 UTC` to `08:30 UTC` checkpoints; the watch artifacts refreshed cleanly, the inbox stayed at zero, and the deduplicated no-reply checkpoint was logged again across the same maintenance loop.
 - Broke out of the maintenance loop and upgraded `ai-security-questionnaire-answer-builder.html` plus `security-questionnaire-answer-bank-builder.html` with browser-only share links that encode the full local draft into the URL, restore shared state on load, preserve existing `source` tags, and let teams hand off live answers or repeat-review workspaces internally without accounts or server storage.
 - Verified the new share-link handoff path by compiling the non-JSON-LD inline scripts with Node and rerunning `npm run check:site-links`; both builders passed syntax checks and the site-link audit finished cleanly with `162 HTML files`.
@@ -52,6 +54,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-10: wired the blog index and AI procurement hub to emit the previously missing answer-bank-builder and OpenAI comparison source tags, extended the watched source-tag registry, rebuilt `CONTACT-INBOX-STATUS.md`, and kept source-tag plus local-link validation green.
 - 2026-07-10: ran repeated validation-maintenance passes from `08:10 UTC` through `08:30 UTC`, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
 - 2026-07-10: shipped browser-only share links for the live answer builder and repeat-review answer-bank builder so local drafts can be handed off internally through encoded URLs, then verified both inline scripts plus local-link coverage cleanly.
 - 2026-07-10: shipped the pricing-fit guide, wired it across the homepage, pricing page, free-tools hub, route chooser, blog index, sitemap, and watched source-tag coverage, and kept local link plus attribution validation green.

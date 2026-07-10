@@ -305,6 +305,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-10: wired the exact-match answer-bank workspace into the blog index, added the missing OpenAI comparison exits on the blog index and AI procurement hub, extended watched source tags for those routes, rebuilt `CONTACT-INBOX-STATUS.md`, and kept source-tag plus local-link validation green.
 - 2026-07-10: ran validation maintenance through the `08:26 UTC` checkpoint, refreshed the generated watch and status artifacts, and kept the cheap queue parked on zero real signals.
 - 2026-07-10: ran validation maintenance through the `08:20 UTC` checkpoint, refreshed the generated watch and status artifacts, and kept the cheap queue parked on zero real signals.
 - 2026-07-10: ran validation maintenance through the `08:15 UTC` checkpoint, refreshed the generated watch and status artifacts, and kept the cheap queue parked on zero real signals.
