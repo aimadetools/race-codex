@@ -258,6 +258,7 @@
               <button class="button secondary" id="copy-handoff" type="button">Copy handoff</button>
               <button class="button secondary" id="copy-qa-pack" type="button">Copy Q&A pack</button>
               <button class="button secondary" id="copy-custom-pack" type="button">Copy pasted-question pack</button>
+              <button class="button secondary" id="copy-share-link" type="button">Copy share link</button>
               <button class="button secondary" id="copy-workspace" type="button">Copy workspace</button>
               <button class="button secondary" id="copy-answer-bank" type="button">Copy answer bank</button>
               <button class="button secondary" id="copy-full-bundle" type="button">Copy starter bundle</button>
@@ -560,6 +561,7 @@
       const copyHandoffButton = document.querySelector("#copy-handoff");
       const copyQaPackButton = document.querySelector("#copy-qa-pack");
       const copyCustomPackButton = document.querySelector("#copy-custom-pack");
+      const copyShareLinkButton = document.querySelector("#copy-share-link");
       const copyWorkspaceButton = document.querySelector("#copy-workspace");
       const copyAnswerBankButton = document.querySelector("#copy-answer-bank");
       const copyFullBundleButton = document.querySelector("#copy-full-bundle");
@@ -595,6 +597,7 @@
       const builderExampleLink = document.querySelector("#builder-example-link");
       const questionListField = document.querySelector("#question-list");
       const builderStorageKey = "noticekit-ai-questionnaire-builder-draft-v2";
+      const shareStateParam = "state";
       const reusableQuestionCount = 20;
       const maxCustomQuestionRows = 50;
       let importedQuestionRows = [];
@@ -650,6 +653,24 @@
 
       function todayIso() {
         return new Date().toISOString().slice(0, 10);
+      }
+
+      function encodeDraftState(draft) {
+        const json = JSON.stringify(draft);
+        const bytes = new TextEncoder().encode(json);
+        let binary = "";
+        bytes.forEach((byte) => {
+          binary += String.fromCharCode(byte);
+        });
+        return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+      }
+
+      function decodeDraftState(encoded) {
+        const normalized = String(encoded || "").replace(/-/g, "+").replace(/_/g, "/");
+        const padding = (4 - (normalized.length % 4 || 4)) % 4;
+        const binary = atob(normalized + "=".repeat(padding));
+        const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
+        return JSON.parse(new TextDecoder().decode(bytes));
       }
 
       function slugify(text, fallback) {
@@ -1182,6 +1203,12 @@
         };
       }
 
+      function buildShareUrl() {
+        const url = new URL(window.location.href);
+        url.searchParams.set(shareStateParam, encodeDraftState(collectDraftState()));
+        return url.toString();
+      }
+
       function clearImportedQuestions(message) {
         importedQuestionRows = [];
         if (message) {
@@ -1247,6 +1274,24 @@
           return true;
         } catch (error) {
           builderStatus.textContent = "Saved draft could not be restored cleanly.";
+          return false;
+        }
+      }
+
+      function restoreDraftFromQuery() {
+        const encoded = query.get(shareStateParam);
+        if (!encoded) {
+          return false;
+        }
+        try {
+          const parsed = decodeDraftState(encoded);
+          if (!applyDraftState(parsed)) {
+            throw new Error("invalid-shared-draft");
+          }
+          builderStatus.textContent = "Shared draft loaded from link. Local autosave was refreshed on this device.";
+          return true;
+        } catch (error) {
+          builderStatus.textContent = "Shared draft link could not be loaded cleanly.";
           return false;
         }
       }
@@ -2899,6 +2944,9 @@
       copyCustomPackButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().customQuestionPack, "Pasted-question response pack copied.");
       });
+      copyShareLinkButton.addEventListener("click", () => {
+        copyText(buildShareUrl(), "Share link copied.");
+      });
       copyWorkspaceButton.addEventListener("click", () => {
         copyText(buildAnswerPayload().workspace, "Reviewer workspace copied.");
       });
@@ -3039,7 +3087,9 @@
         clearSavedDraft();
       });
 
-      restoreDraft();
+      if (!restoreDraftFromQuery()) {
+        restoreDraft();
+      }
       render();
     </script>
   </body>

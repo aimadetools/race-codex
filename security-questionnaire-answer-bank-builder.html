@@ -209,6 +209,7 @@
               <button class="button" id="copy-markdown" type="button">Copy Markdown row</button>
               <button class="button secondary" id="copy-csv" type="button">Copy CSV row</button>
               <button class="button secondary" id="copy-follow-up" type="button">Copy follow-up note</button>
+              <button class="button secondary" id="copy-share-link" type="button">Copy share link</button>
               <button class="button secondary" id="download-markdown" type="button">Download Markdown</button>
               <button class="button secondary" id="download-csv" type="button">Download CSV</button>
               <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
@@ -337,7 +338,10 @@
       const workspaceTableBody = document.querySelector("#workspace-table-body");
       const saveWorkspaceRowButton = document.querySelector("#save-workspace-row");
       const resetWorkspaceEditorButton = document.querySelector("#reset-workspace-editor");
-      const source = new URLSearchParams(window.location.search).get("source") || "";
+      const copyShareLinkButton = document.querySelector("#copy-share-link");
+      const query = new URLSearchParams(window.location.search);
+      const source = query.get("source") || "";
+      const shareStateParam = "state";
       const today = new Date().toISOString().slice(0, 10);
       let workspaceRows = [];
       let editingRowId = null;
@@ -576,6 +580,16 @@
         localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
       }
 
+      function buildShareUrl() {
+        const url = new URL(window.location.href);
+        url.searchParams.set(shareStateParam, encodeState({
+          draft: buildDraftSnapshot(),
+          workspaceRows,
+          editingRowId
+        }));
+        return url.toString();
+      }
+
       function applyDraftSnapshot(draft) {
         fields.forEach((field) => {
           if (typeof draft?.[field.id] === "string") {
@@ -625,6 +639,33 @@
         return false;
       }
 
+      function loadSharedState() {
+        const encoded = query.get(shareStateParam);
+        if (!encoded) {
+          return false;
+        }
+        try {
+          const payload = decodeState(encoded);
+          applyDefaults(getSourceProfile()?.defaults);
+          if (payload && payload.draft) {
+            applyDraftSnapshot(payload.draft);
+            workspaceRows = Array.isArray(payload.workspaceRows) ? payload.workspaceRows : [];
+            editingRowId = typeof payload.editingRowId === "string" ? payload.editingRowId : null;
+          } else {
+            applyDraftSnapshot(payload);
+            workspaceRows = [];
+            editingRowId = null;
+          }
+          saveState();
+          statusNode.textContent = "Shared draft loaded from link. Local autosave was refreshed on this device.";
+          return true;
+        } catch (error) {
+          console.error("Failed to parse shared answer-bank builder state", error);
+          statusNode.textContent = "Shared draft link could not be loaded cleanly.";
+          return false;
+        }
+      }
+
       function applySourceProfile(profile) {
         if (!profile) return;
         heroTitle.textContent = profile.heroTitle;
@@ -648,6 +689,24 @@
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/^-+|-+$/g, "")
           .slice(0, 80) || "noticekit";
+      }
+
+      function encodeState(payload) {
+        const json = JSON.stringify(payload);
+        const bytes = new TextEncoder().encode(json);
+        let binary = "";
+        bytes.forEach((byte) => {
+          binary += String.fromCharCode(byte);
+        });
+        return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+      }
+
+      function decodeState(encoded) {
+        const normalized = String(encoded || "").replace(/-/g, "+").replace(/_/g, "/");
+        const padding = (4 - (normalized.length % 4 || 4)) % 4;
+        const binary = atob(normalized + "=".repeat(padding));
+        const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
+        return JSON.parse(new TextDecoder().decode(bytes));
       }
 
       function makeRowId() {
@@ -1076,7 +1135,9 @@
       }
 
       applySourceProfile(getSourceProfile());
-      loadState();
+      if (!loadSharedState()) {
+        loadState();
+      }
       render();
 
       fields.forEach((field) => {
@@ -1102,6 +1163,9 @@
       });
       document.querySelector("#copy-follow-up").addEventListener("click", () => {
         copyText(buildFollowUp(buildPayload(), Array.from(gapList.querySelectorAll("li")).map((item) => item.textContent)), "Follow-up note copied.");
+      });
+      copyShareLinkButton.addEventListener("click", () => {
+        copyText(buildShareUrl(), "Share link copied.");
       });
       document.querySelector("#download-markdown").addEventListener("click", () => {
         const payload = buildPayload();

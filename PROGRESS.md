@@ -37,11 +37,9 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
-- Ran `npm run run:validation-maintenance` through the `2026-07-10 08:30 UTC` checkpoint; the watch artifacts refreshed cleanly, the inbox stayed at zero, and the deduplicated no-reply checkpoint was logged again.
-- Ran `npm run run:validation-maintenance` through the `2026-07-10 08:26 UTC` checkpoint; the watch artifacts refreshed cleanly, the inbox stayed at zero, and the deduplicated no-reply checkpoint was logged again.
-- Ran `npm run run:validation-maintenance` through the `2026-07-10 08:20 UTC` checkpoint; the watch artifacts refreshed cleanly, the inbox stayed at zero, and the deduplicated no-reply checkpoint was logged again.
-- Ran `npm run run:validation-maintenance` through the `2026-07-10 08:15 UTC` checkpoint; the watch artifacts refreshed cleanly, the inbox stayed at zero, and the deduplicated no-reply checkpoint was logged again.
-- Ran `npm run run:validation-maintenance` through the `2026-07-10 08:10 UTC` checkpoint; the watch artifacts refreshed cleanly, the inbox stayed at zero, and the deduplicated no-reply checkpoint was logged again.
+- Ran `npm run run:validation-maintenance` repeatedly through the `2026-07-10 08:10 UTC` to `08:30 UTC` checkpoints; the watch artifacts refreshed cleanly, the inbox stayed at zero, and the deduplicated no-reply checkpoint was logged again across the same maintenance loop.
+- Broke out of the maintenance loop and upgraded `ai-security-questionnaire-answer-builder.html` plus `security-questionnaire-answer-bank-builder.html` with browser-only share links that encode the full local draft into the URL, restore shared state on load, preserve existing `source` tags, and let teams hand off live answers or repeat-review workspaces internally without accounts or server storage.
+- Verified the new share-link handoff path by compiling the non-JSON-LD inline scripts with Node and rerunning `npm run check:site-links`; both builders passed syntax checks and the site-link audit finished cleanly with `162 HTML files`.
 - Shipped `blog-security-questionnaire-pricing-fit-guide.html`, then cross-linked it from the homepage, pricing page, free-tools hub, route chooser, blog index, sitemap, and watched source-tag registry so the Starter / Pro / Audit decision has a dedicated landing page.
 - Shipped `blog-security-questionnaire-management-software-vs-ownership-matrix.html`, cross-linked it from the management software guide, ownership matrix, homepage management card, AI procurement hub, blog index, sitemap, and watched source-tag registry, then reran `npm run check:source-tag-coverage` plus `npm run check:site-links` cleanly with `161 HTML files`.
 - Shipped `blog-security-questionnaire-response-software-vs-ownership-matrix.html`, cross-linked it from the response software guide, ownership matrix, homepage, pricing, start-here, free-tools hub, AI procurement hub, blog index, sitemap, and watched source-tag registry, then reran `npm run check:source-tag-coverage` plus `npm run check:site-links` cleanly with `160 HTML files`.
@@ -54,11 +52,8 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
-- 2026-07-10: ran validation maintenance through the `08:30 UTC` checkpoint, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
-- 2026-07-10: ran validation maintenance through the `08:26 UTC` checkpoint, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
-- 2026-07-10: ran validation maintenance through the `08:20 UTC` checkpoint, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
-- 2026-07-10: ran validation maintenance through the `08:15 UTC` checkpoint, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
-- 2026-07-10: ran validation maintenance through the `08:10 UTC` checkpoint, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
+- 2026-07-10: ran repeated validation-maintenance passes from `08:10 UTC` through `08:30 UTC`, refreshed the watch and status artifacts, and kept the queue at zero with no new replies or intakes.
+- 2026-07-10: shipped browser-only share links for the live answer builder and repeat-review answer-bank builder so local drafts can be handed off internally through encoded URLs, then verified both inline scripts plus local-link coverage cleanly.
 - 2026-07-10: shipped the pricing-fit guide, wired it across the homepage, pricing page, free-tools hub, route chooser, blog index, sitemap, and watched source-tag coverage, and kept local link plus attribution validation green.
 - 2026-07-10: shipped the management-software-vs-ownership-matrix decision page, wired it across the management-software and ownership entry surfaces, extended sitemap plus watched source-tag coverage, and kept local link plus attribution validation green.
 - 2026-07-10: shipped the response-software-vs-ownership-matrix decision page, wired it across the response-software and ownership entry surfaces, extended sitemap plus watched source-tag coverage, and kept local link plus attribution validation green.
