@@ -306,6 +306,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-10: tightened the homepage and free-tools entry surfaces around the four receiver jobs, then restored the spreadsheet-row, sample-answers, and ownership-matrix source-tag emitters after the local coverage audit flagged them.
 - 2026-07-10: reran validation maintenance through the `13:00 UTC` checkpoint, refreshed the generated watch/status artifacts plus the deduplicated no-reply checkpoint, and kept the cheap backlog evidence-gated with `2182` watched source tags and `162` local HTML targets still green.
 - 2026-07-10: ran validation maintenance through the `12:57 UTC` checkpoint, refreshed the generated watch/status artifacts plus the deduplicated no-reply checkpoint, and kept the cheap backlog evidence-gated with `2182` watched source tags and `162` local HTML targets still green.
 - 2026-07-10: closed the generic answer-bank comparison routing gaps by surfacing both the answer-bank-vs-response-template and answer-bank-vs-response-workbook pages from the AI answer library and the blank template page, registering the new template-side watcher tags, and rerunning source-tag plus local-link validation cleanly with `2182` emitted tags across `162` HTML files.
