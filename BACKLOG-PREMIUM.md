@@ -91,6 +91,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-10: shipped the response-software-vs-ownership-matrix decision page, added the missing ownership-routing branch to the response-software cluster, extended sitemap plus watched source-tag coverage, and kept local validation green.
 - 2026-07-10: shipped the shortlist-vs-ownership-matrix software decision page, extended the software-shopping route split across the shortlist and ownership surfaces, added sitemap plus watched source-tag coverage, and kept local validation green.
 - 2026-07-10: shipped the scorecard-vs-ownership-matrix software decision page, added the missing route split across the software-shopping cluster, extended watched source tags plus sitemap coverage, and kept link validation green.
 - 2026-07-10: ran validation maintenance through the `04:07 UTC` checkpoint, fixed the missing scorecard alternative watched tags, refreshed the premium watch/status artifacts, and kept the queue parked at `0` real replies, `0` real submissions, and `0` interviews.
