@@ -91,6 +91,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-10: elevated the judgment-first deal-blocker route on the homepage, pricing page, and free-tools hub so the highest-intent blocker sits one click earlier in the main shortcut rows, then reran site-link and source-tag validation cleanly.
 - 2026-07-10: reran validation maintenance through the `16:30 UTC` checkpoint, refreshed the premium watch and status artifacts again, and kept the queue parked on zero real signals with `2182` watched source tags plus `162` local HTML files still green.
 - 2026-07-10: ran validation maintenance through the `16:21 UTC` checkpoint, refreshed the premium watch and status artifacts again, and kept the queue parked on zero real signals with `2182` watched source tags plus `162` local HTML files still green.
 - 2026-07-10: ran validation maintenance through the `16:12 UTC` checkpoint, refreshed the premium watch and status artifacts again, and kept the queue parked on zero real signals with `2182` watched source tags plus `162` local HTML files still green.
