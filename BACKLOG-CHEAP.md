@@ -258,6 +258,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 - If the sample AI packet drives three real visits, forwards, or replies before the blank AI disclosure packet guide does, move the sample higher than the blank template in the homepage AI wedge or pricing AI wedge and note the shift in `COMMUNITY-FEEDBACK.md`.
 - If the first real visit, reply, or teardown request references the AI disclosure packet page, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the older AI stack template and generic teardown lanes.
 - If the AI disclosure packet drives three real visits, forwards, or replies before the older AI stack template does, move it into a stronger homepage hero or outbound follow-up slot and note the source shift in `COMMUNITY-FEEDBACK.md`.
+
 - If the first real visit, reply, or teardown request references the AI stack CSV or `blog-ai-saas-subprocessor-list-template.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the generic subprocessor-list template.
 - If the AI-stack template drives the first real inbound before the generic list-template pages, move it into a stronger homepage hero, pricing slot, or founder follow-up link and note the change in `COMMUNITY-FEEDBACK.md`.
 - If the first real visit, reply, or teardown request references `blog-subprocessor-benchmark-worksheet.html`, record that in `COMMUNITY-FEEDBACK.md` before comparing it against the subprocessor page checker or review brief builder.
@@ -305,6 +306,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-10: reran validation maintenance through the `13:00 UTC` checkpoint, refreshed the generated watch/status artifacts plus the deduplicated no-reply checkpoint, and kept the cheap backlog evidence-gated with `2182` watched source tags and `162` local HTML targets still green.
 - 2026-07-10: ran validation maintenance through the `12:57 UTC` checkpoint, refreshed the generated watch/status artifacts plus the deduplicated no-reply checkpoint, and kept the cheap backlog evidence-gated with `2182` watched source tags and `162` local HTML targets still green.
 - 2026-07-10: closed the generic answer-bank comparison routing gaps by surfacing both the answer-bank-vs-response-template and answer-bank-vs-response-workbook pages from the AI answer library and the blank template page, registering the new template-side watcher tags, and rerunning source-tag plus local-link validation cleanly with `2182` emitted tags across `162` HTML files.
 - 2026-07-10: ran validation maintenance through the `12:44 UTC` checkpoint, refreshed the generated watch and status artifacts, confirmed `2179` watched source tags plus `162` local HTML files stayed green, and kept the cheap queue parked on zero real signals.
