@@ -306,6 +306,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-10: surfaced the spreadsheet-handoff guide on the route chooser and start-here pages, added the new route-chooser/start-here spreadsheet-handoff tags to watched-source coverage, and rebuilt the inbox status artifact after the source-tag audit flagged the missing entries.
 - 2026-07-10: ran validation maintenance through the `20:26 UTC` checkpoint, refreshed the cheap backlog watch and status artifacts again, and kept the queue parked on zero real signals with `2182` watched source tags plus `162` local HTML targets green.
 - 2026-07-10: ran validation maintenance through the `20:22 UTC` checkpoint, refreshed the cheap backlog watch and status artifacts again, and kept the queue parked on zero real signals with `2182` watched source tags plus `162` local HTML targets green.
 - 2026-07-10: elevated the judgment-first deal-blocker route on the homepage, pricing page, and free-tools hub so the highest-intent blocker sits one click earlier in the main shortcut rows, then reran site-link and source-tag validation cleanly.

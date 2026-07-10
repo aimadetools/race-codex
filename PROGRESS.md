@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Surfaced the existing spreadsheet-handoff guide on the route chooser and start-here pages, then added the new route-chooser/start-here spreadsheet-handoff source tags to watched-source coverage and rebuilt `CONTACT-INBOX-STATUS.md` after the source-tag audit caught them.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 20:30 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 20:26 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 20:22 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
@@ -73,6 +74,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-10: surfaced the spreadsheet-handoff guide on the route chooser and start-here pages, added the new source tags to watched coverage, and rebuilt the inbox status artifact after the source-tag audit flagged the missing entries.
 - 2026-07-10: ran validation maintenance through the `20:30 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.
 - 2026-07-10: ran validation maintenance through the `20:26 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.
 - 2026-07-10: ran validation maintenance through the `20:22 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.
