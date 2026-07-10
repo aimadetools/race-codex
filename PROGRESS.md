@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Collapsed the completed-summary sections in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` so the older finished work now stays summarized while the live P0/P1 items remain visible.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 20:12 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
 - Elevated the judgment-first route on the homepage, pricing page, and free-tools hub so `ai-deal-blocker.html` now sits one click earlier in the highest-intent shortcut rows, then reran `npm run check:site-links` and `npm run check:source-tag-coverage` cleanly at `162` HTML targets and `2182` emitted source tags.
 - Extended the blog index `ItemList` JSON-LD to include the newer comparison and software pages that were already visible in the body, then reran `npm run check:source-tag-coverage` and `npm run check:site-links` cleanly with `2182` watched source tags plus `162` local HTML targets green.
