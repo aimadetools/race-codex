@@ -466,6 +466,7 @@ export const WATCHED_SOURCE_TAGS = [
   "security-questionnaire-template-spreadsheet-template",
   "security-questionnaire-template-response-workbook",
   "security-questionnaire-template-answer-bank",
+  "security-questionnaire-template-answer-bank-comparison",
   "security-questionnaire-template-response-software",
   "security-questionnaire-template-management-software",
   "security-questionnaire-template-questionnaire-software",
