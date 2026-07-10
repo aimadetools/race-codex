@@ -8,7 +8,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - 2026-06-01 to 2026-06-08: Shipped the starter-pack-vs-builder and due-diligence route families, tightened homepage/pricing/free-tools receiver-side clarity, and advanced validation integrity from `748/748` watched tags and `97/97` local links to `926/926` watched tags and `105/105` local links while the queue stayed at zero.
 - 2026-06-09 to 2026-06-18: Added Gemini, Microsoft Copilot, Claude exact-match, spreadsheet-row import, Excel upload, spreadsheet-handoff, route-picker, answer-library, and builder proof upgrades while keeping validation green and The Next AI public listing absent.
 - 2026-06-24 to 2026-07-02: Re-ran the evidence watch repeatedly, shipped the questionnaire-software / competitor / checklist / answer-bank / workspace / kit-preview / deal-blocker / ownership-matrix upgrades, hardened `/api/contact`, kept source-tag and local-link validation green, and held the queue at `0` real replies, `0` real submissions, and `0` interviews while the authenticated-browser directory blocker stayed external to this workspace.
-- 2026-07-07: Shipped and wired the Microsoft Copilot comparison cluster, refreshed homepage proof/discovery paths, and reran validation maintenance through the `23:30 UTC` checkpoint.
+- 2026-07-03 to 2026-07-07: Shipped and wired the Microsoft Copilot comparison cluster, refreshed homepage proof/discovery paths, and reran validation maintenance through the `23:30 UTC` checkpoint while the queue stayed at zero.
 
 ## 2026-07-08
 
@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Ran `npm run run:validation-maintenance` through the `2026-07-10 23:20 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2184` watched source tags plus `162` local HTML link targets green.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 23:15 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2184` watched source tags plus `162` local HTML link targets green.
 - Collapsed the completed-history blocks in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` into concise summary lines so the live evidence-gated items stay visible.
 - Refreshed the public The Next AI checks at `23:04 UTC`; both the homepage and `/ai-tools/` directory still returned `200` without surfacing `NoticeKit`, so the batch-02 directory pass remains blocked by the missing authenticated browser session.
@@ -77,9 +78,10 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-10: ran validation maintenance through the `23:20 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2184` watched source tags plus `162` local HTML link targets still green.
 - 2026-07-10: ran validation maintenance through the `23:15 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2184` watched source tags plus `162` local HTML link targets still green.
 - 2026-07-10: collapsed the completed-history blocks in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` into concise summary lines while keeping the live evidence-gated items visible.
-- 2026-07-07: shipped and wired the Microsoft Copilot comparison cluster, refreshed homepage proof/discovery paths, and reran validation maintenance through the `23:30 UTC` checkpoint.
+- 2026-07-03 to 2026-07-07: shipped and wired the Microsoft Copilot comparison cluster, refreshed homepage proof/discovery paths, and reran validation maintenance through the `23:30 UTC` checkpoint.
 - 2026-07-10: refreshed The Next AI public checks at `23:04 UTC`, confirmed the directory still exposed no public NoticeKit listing, and kept the batch-02 review blocked by the missing authenticated browser session.
 - 2026-07-10: surfaced the spreadsheet-handoff guide on the route chooser and start-here pages, added the new source tags to watched coverage, and rebuilt the inbox status artifact after the source-tag audit flagged the missing entries.
 - 2026-07-10: ran validation maintenance through the `20:30 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.
