@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-10 12:47 UTC
+Checked at: 2026-07-10 12:57 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -516,6 +516,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-library-sample-answers: 0
 - answer-library-security-questionnaire-answer-bank: 0
 - answer-library-answer-bank-vs-response-template: 0
+- answer-library-answer-bank-vs-response-workbook: 0
 - answer-library-spreadsheet-template: 0
 - answer-library-response-workbook: 0
 - ai-procurement-hub-answer-bank-vs-response-template: 0
@@ -614,6 +615,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - security-questionnaire-template-spreadsheet-template: 0
 - security-questionnaire-template-response-workbook: 0
 - security-questionnaire-template-answer-bank: 0
+- security-questionnaire-template-answer-bank-comparison: 0
+- security-questionnaire-template-answer-bank-response-workbook-comparison: 0
 - security-questionnaire-template-response-software: 0
 - security-questionnaire-template-management-software: 0
 - security-questionnaire-template-questionnaire-software: 0
