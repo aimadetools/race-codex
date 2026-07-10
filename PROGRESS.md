@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Extended the blog index `ItemList` JSON-LD to include the newer comparison and software pages that were already visible in the body, then reran `npm run check:source-tag-coverage` and `npm run check:site-links` cleanly with `2182` watched source tags plus `162` local HTML targets green.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 16:30 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 16:25 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
 - Ran `npm run run:validation-maintenance` through the `2026-07-10 16:21 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2182` watched source tags plus `162` local HTML link targets green.
@@ -65,6 +66,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-10: extended the blog index `ItemList` JSON-LD to cover the newer comparison and software pages already visible in the body, then reran source-tag and local-link validation cleanly with `2182` watched source tags plus `162` local HTML targets still green.
 - 2026-07-10: reran validation maintenance through the `16:30 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.
 - 2026-07-10: reran validation maintenance through the `16:25 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.
 - 2026-07-10: reran validation maintenance through the `16:21 UTC` checkpoint, refreshed the generated watch/status artifacts again, and kept the queue at zero with `2182` watched source tags plus `162` local HTML link targets still green.

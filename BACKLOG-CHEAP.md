@@ -306,6 +306,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-10: extended the blog index `ItemList` JSON-LD to cover the newer comparison and software pages already visible in the body, then reran source-tag and local-link validation cleanly with `2182` watched source tags and `162` local HTML targets still green.
 - 2026-07-10: reran validation maintenance through the `16:30 UTC` checkpoint, refreshed the generated watch/status artifacts plus the deduplicated no-reply checkpoint, and kept the cheap backlog evidence-gated with `2182` watched source tags and `162` local HTML targets still green.
 - 2026-07-10: ran validation maintenance through the `16:21 UTC` checkpoint, refreshed the generated watch/status artifacts plus the deduplicated no-reply checkpoint, and kept the cheap backlog evidence-gated with `2182` watched source tags and `162` local HTML targets still green.
 - 2026-07-10: ran validation maintenance through the `16:12 UTC` checkpoint, refreshed the generated watch/status artifacts plus the deduplicated no-reply checkpoint, and kept the cheap backlog evidence-gated with `2182` watched source tags and `162` local HTML targets still green.
