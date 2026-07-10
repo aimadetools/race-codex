@@ -37,6 +37,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-10
 
+- Ran `npm run run:validation-maintenance` through the `2026-07-10 04:07 UTC` checkpoint, fixed the missing `software-scorecard-*-alternative` watched source tags that initially broke the maintenance gate, reran source-tag and site-link validation cleanly, and refreshed the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts with the queue still at zero.
 - Shifted out of another validation-only loop and upgraded `security-questionnaire-software-fit-scorecard.html` so the scorecard now parses named vendors from the typed shortlist, scores them against the current workflow, and routes high-intent visitors toward the exact alternative page or builder path instead of only returning a generic category result.
 - Added a new shortlist snapshot to the scorecard UI with a lightweight ranking table, exact next-route buttons for the likely leader and runner-up, and vendor-aware copy that turns the commercial-search wedge into a sharper handoff before the fuller shortlist worksheet.
 - Verified the new scorecard logic by compiling the inline script with Node and rerunning `npm run check:site-links`; the script syntax passed and the site-link check finished cleanly with `157 HTML files` and no missing local targets found.

@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-09 23:28 UTC
+Checked at: 2026-07-10 04:07 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1751,6 +1751,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-scorecard-management-software: 0
 - software-scorecard-questionnaire-software: 0
 - software-scorecard-automation-software: 0
+- software-scorecard-responsive-alternative: 0
+- software-scorecard-loopio-alternative: 0
+- software-scorecard-hypercomply-alternative: 0
+- software-scorecard-conveyor-alternative: 0
+- software-scorecard-vanta-alternative: 0
+- software-scorecard-drata-aiqa-alternative: 0
+- software-scorecard-safebase-alternative: 0
+- software-scorecard-whistic-alternative: 0
 - software-scorecard-deal-blocker: 0
 - software-scorecard-audit: 0
 - blog-index-response-software: 0
