@@ -91,17 +91,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-10: ran validation maintenance through the `20:26 UTC` checkpoint, refreshed the premium watch and status artifacts again, and kept the queue parked on zero real signals with `2182` watched source tags plus `162` local HTML files still green.
-- 2026-07-10: ran validation maintenance through the `20:22 UTC` checkpoint, refreshed the premium watch and status artifacts again, and kept the queue parked on zero real signals with `2182` watched source tags plus `162` local HTML files still green.
-- 2026-07-10: elevated the judgment-first deal-blocker route on the homepage, pricing page, and free-tools hub so the highest-intent blocker sits one click earlier in the main shortcut rows, then reran site-link and source-tag validation cleanly.
-- 2026-07-10: reran validation maintenance across the `16:30 UTC`, `16:21 UTC`, `16:12 UTC`, `13:00 UTC`, `12:57 UTC`, and `12:44 UTC` checkpoints, refreshed the premium watch and status artifacts, and kept the queue parked on zero real signals with `2182` watched source tags plus `162` local HTML files still green.
-- 2026-07-10: rechecked site-link and source-tag coverage after the `20:12 UTC` maintenance checkpoint; both audits stayed green with no missing local targets and complete watcher coverage.
-- 2026-07-10: shipped share-link handoff for the AI answer builder and answer-bank builder, added the management-software, response-software, shortlist, and scorecard ownership-matrix decision pages, and kept local validation green.
-- 2026-07-10: ran validation maintenance through the `04:07 UTC` checkpoint and upgraded the software-fit scorecard into a shortlist-aware commercial-search tool that parses named vendors, scores them against the live workflow, and routes the likely leader plus runner-up into exact alternative pages or the builder path with verified local links.
-- 2026-07-09: reran validation maintenance across the `23:28 UTC`, `23:24 UTC`, `23:21 UTC`, `23:17 UTC`, and `20:28 UTC` checkpoints, refreshed the watch/status artifacts, and kept every premium decision evidence-gated because no real replies, redirects, intakes, or interviews landed.
-- 2026-07-09: ran validation maintenance from `20:16 UTC` through `04:11 UTC`, shipped the response-vs-management and scorecard-vs-shortlist software decision pages, and turned the software-fit scorecard into a preset-aware, shareable tool with intent-matched presets.
-- 2026-07-09: shipped the browser-only software shortlist worksheet and kept link/source-tag/runtime validation green.
-- 2026-07-08: ran validation maintenance through the `23:25 UTC` to `16:22 UTC` checkpoints, added the offer-fit picker, normalized the sample-bundle route, and kept the premium watch evidence-gated.
-- 2026-07-08: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, and the answer-bank-vs-response-workbook comparison route while site-link and source-tag checks stayed green.
-- 2026-07-07: repaired and expanded the Microsoft Copilot comparison acquisition path while the live premium P0/P1 items stayed parked on zero buyer evidence.
+- 2026-07-10: refreshed the public checks, repaired watched source coverage, ran multiple validation-maintenance checkpoints, and shipped the homepage, blog-index, route-chooser, and software decision updates while keeping the queue at zero.
+- 2026-07-09: reran repeated validation passes and rebalanced the starter-pack named-vendor block while all premium decisions stayed evidence-gated.
+- 2026-07-08: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, and the answer-bank-vs-response-workbook comparison route.
+- 2026-07-07: repaired and expanded the Microsoft Copilot comparison acquisition path.
 - 2026-07-03 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.
