@@ -20,13 +20,39 @@
     <meta name="twitter:image" content="https://noticekit.tech/social-preview.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://noticekit.tech/free-tools.html">
+    <link rel="alternate" type="application/json" href="noticekit-tool-profile.json">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "NoticeKit Free AI Security Questionnaire Tools",
-        "itemListElement": [
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "name": "NoticeKit Free AI Security Questionnaire Tools",
+            "url": "https://noticekit.tech/free-tools.html",
+            "description": "Free browser-only AI security questionnaire tools for SaaS teams answering buyer review."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "NoticeKit Free Tools",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web browser",
+            "url": "https://noticekit.tech/free-tools.html",
+            "description": "Free browser-only AI security questionnaire tools covering answer drafting, answer-bank reuse, software-fit triage, and review blockers.",
+            "isAccessibleForFree": true,
+            "featureList": [
+              "AI answer builder",
+              "Answer-bank workspace",
+              "Software-fit scorecard",
+              "Ownership matrix",
+              "Deal-blocker route",
+              "Workbook and spreadsheet handoff guides"
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "name": "NoticeKit Free AI Security Questionnaire Tools",
+            "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
@@ -191,6 +217,8 @@
             "@type": "ListItem",
             "position": 33,
             "url": "https://noticekit.tech/security-questionnaire-checklist.html"
+          }
+            ]
           }
         ]
       }

@@ -1,0 +1,58 @@
+{
+  "name": "NoticeKit",
+  "url": "https://noticekit.tech/",
+  "tagline": "AI security questionnaire answers for SaaS teams.",
+  "summary": "Browser-only AI security questionnaire answer workflow for SaaS teams handling buyer procurement, security, and privacy review pressure.",
+  "description": "NoticeKit helps small SaaS teams answer buyer AI security questionnaires without sending questionnaire data to a server. The product includes a live answer builder, repeat-review answer bank, software-fit scorecard, shortlist worksheet, ownership matrix, workbook-friendly exports, and paid starter, pro, and async audit paths.",
+  "audience": [
+    "B2B SaaS founders",
+    "Operations leads",
+    "Fractional security or privacy operators",
+    "Startup attorneys and consultants supporting buyer review"
+  ],
+  "categories": [
+    "SaaS",
+    "AI tool",
+    "Security questionnaire",
+    "Procurement workflow",
+    "Compliance operations"
+  ],
+  "pricing": {
+    "free": "Browser-only builder, answer-bank workspace, checklist, scorecard, and route tools.",
+    "starter_usd": 29,
+    "pro_usd": 79,
+    "audit_usd": 249
+  },
+  "core_features": [
+    "Browser-only AI answer builder with CSV, TSV, and Excel questionnaire import",
+    "Reusable answer-bank workspace for repeated enterprise reviews",
+    "Response workbook and spreadsheet-friendly handoff paths",
+    "Software-fit scorecard, shortlist worksheet, and ownership matrix",
+    "Evidence-map and deal-blocker routes for proof or judgment gaps",
+    "No account or server-side storage required for core free flows"
+  ],
+  "primary_pages": {
+    "homepage": "https://noticekit.tech/",
+    "free_tools": "https://noticekit.tech/free-tools.html",
+    "answer_builder": "https://noticekit.tech/ai-security-questionnaire-answer-builder.html",
+    "answer_bank": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html",
+    "software_evaluation_template": "https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html",
+    "pricing": "https://noticekit.tech/pricing.html"
+  },
+  "tracked_listing_urls": {
+    "indie_makers_hub": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html?source=directory-indie-makers-hub-answer-bank",
+    "startories": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html?source=directory-startories-answer-bank",
+    "productdirs": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html?source=directory-productdirs-answer-bank",
+    "the_next_ai": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html?source=manual-thenextai-answer-bank"
+  },
+  "assets": {
+    "logo": "https://noticekit.tech/favicon.svg",
+    "social_preview": "https://noticekit.tech/social-preview.png"
+  },
+  "contact": {
+    "site": "https://noticekit.tech/",
+    "pricing": "https://noticekit.tech/pricing.html",
+    "audit": "https://noticekit.tech/ai-security-questionnaire-audit.html"
+  },
+  "last_updated_utc": "2026-07-11"
+}
