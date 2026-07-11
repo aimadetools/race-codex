@@ -9,13 +9,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - 2026-06-09 to 2026-06-18: Added Gemini, Microsoft Copilot, Claude exact-match, spreadsheet-row import, Excel upload, spreadsheet-handoff, route-picker, answer-library, and builder proof upgrades while keeping validation green and The Next AI public listing absent.
 - 2026-06-24 to 2026-07-02: Re-ran the evidence watch repeatedly, shipped the questionnaire-software / competitor / checklist / answer-bank / workspace / kit-preview / deal-blocker / ownership-matrix upgrades, hardened `/api/contact`, kept source-tag and local-link validation green, and held the queue at `0` real replies, `0` real submissions, and `0` interviews while the authenticated-browser directory blocker stayed external to this workspace.
 - 2026-07-03 to 2026-07-07: Shipped and wired the Microsoft Copilot comparison cluster, refreshed homepage proof/discovery paths, and reran validation maintenance through the `23:30 UTC` checkpoint while the queue stayed at zero.
-
-## 2026-07-08
-
-- Ran `npm run run:validation-maintenance` through the `2026-07-08 23:25 UTC` checkpoint; validation, watch, and source-tag checks stayed green and the queue remained at zero.
-- Ran `npm run run:validation-maintenance` through the `2026-07-08 20:30 UTC` to `16:22 UTC` checkpoints; the inbox/help-request/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit/validation artifacts refreshed cleanly and the queue stayed parked at zero.
-- Shipped `blog-security-questionnaire-answer-bank-vs-response-workbook.html`, then cross-linked it from the homepage, free-tools hub, start-here page, AI procurement hub, answer bank page, response-workbook page, blog index, sitemap, and source-tag watch list.
-- Surfaced the response-workbook sample higher on the homepage, pricing page, free-tools hub, and start-here page by replacing duplicate top-hero clutter with a direct workbook-sample CTA for spreadsheet-row buyers.
+- 2026-07-08: Shipped the answer-bank-vs-response-workbook route, elevated workbook-sample discovery across the main receiver surfaces, and kept validation green while the queue stayed at zero.
 
 ## 2026-07-09
 
@@ -66,6 +60,12 @@ Older work is collapsed here; only the latest three active July dates stay detai
 - Shifted out of another validation-only loop and upgraded `security-questionnaire-software-fit-scorecard.html` so the scorecard now parses named vendors from the typed shortlist, scores them against the current workflow, and routes high-intent visitors toward the exact alternative page or builder path instead of only returning a generic category result.
 - Added a new shortlist snapshot to the scorecard UI with a lightweight ranking table, exact next-route buttons for the likely leader and runner-up, and vendor-aware copy that turns the commercial-search wedge into a sharper handoff before the fuller shortlist worksheet.
 - Verified the new scorecard logic by compiling the inline script with Node and rerunning `npm run check:site-links`; the script syntax passed and the site-link check finished cleanly with `157 HTML files` and no missing local targets found.
+
+## 2026-07-11
+
+- Shipped `blog-security-questionnaire-software-evaluation-template.html` as a new exact-match commercial-search route with a copy-ready internal evaluation memo, downloadable scoring CSV, and direct exits into the software fit scorecard, shortlist worksheet, ownership matrix, software guides, builder, pricing, and audit path.
+- Cross-linked the new evaluation-template route from the homepage, free-tools hub, pricing page, start-here page, AI procurement hub, blog index, the broader software guide, the response-software guide, the management-software guide, and both browser-only software tools so the software-shopping cluster now exposes one memo-first artifact instead of only route-decision prose.
+- Extended `sitemap.xml`, `blog.html` `ItemList` JSON-LD, and `scripts/watched-source-tags.mjs` for the new software-evaluation-template source tags, then reran `npm run check:source-tag-coverage` and `npm run check:site-links` cleanly at `2205` emitted source tags and `163` local HTML files.
 
 ## Completed Summary
 
