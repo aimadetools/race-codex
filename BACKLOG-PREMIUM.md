@@ -93,6 +93,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 ## Completed Summary
 
 - 2026-07-11: shipped the evaluation-template-vs-ownership-matrix software decision page, wired it across the software-shopping entry surfaces plus the evaluation-template and ownership-matrix tools, extended watched source tags plus sitemap/blog-index coverage, and kept source-tag plus local-link validation green.
+- 2026-07-11: shipped the evaluation-template-vs-scorecard software decision page, wired it across the software-shopping entry surfaces plus the evaluation-template and scorecard tools, extended watched source tags plus sitemap/blog-index coverage, and kept source-tag plus local-link validation green.
 - 2026-07-11: shipped the evaluation-template-vs-shortlist software decision page, wired it across the software-shopping entry surfaces, extended watched source tags plus sitemap/blog-index coverage, and kept validation-maintenance green at `2225` watched source tags plus `164` local HTML files.
 - 2026-07-10: refreshed the public checks, repaired watched source coverage, ran validation-maintenance checkpoints, and shipped the homepage, blog-index, route-chooser, and software decision updates while keeping the queue at zero.
 - 2026-07-11: shipped the exact-match software-evaluation-template artifact, wired it across the software-shopping surfaces, extended watched source tags plus sitemap coverage, and kept source-tag plus local-link validation green.
