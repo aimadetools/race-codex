@@ -28,6 +28,7 @@
 - Status: blocked.
 - What: Post one value-first benchmark comment in the `r/SaaS` and `r/procurement` threads from `HELP-REQUEST-LAUNCHPAD.md`, then request indexing for `https://noticekit.tech/blog-subprocessor-benchmark-report-01.html` in Google Search Console and Bing Webmaster Tools.
 - Why blocked: the workspace can read the public Reddit threads and fetch the benchmark report page, but it does not expose an authenticated Reddit posting session or authenticated Search Console / Bing browser session.
+- 2026-07-11 public web check: the `r/SaaS` thread is still open but the post body is now removed by Reddit filters, while the `r/procurement` thread remains visible and open for comments.
 - Live check: `https://noticekit.tech/blog-subprocessor-benchmark-report-01.html` returns `200`, and the legacy `/blog-subprocessor-benchmark-report.html` alias now redirects to the canonical report path after the Vercel production deploy.
 
 ### [HELP] What: Submit NoticeKit AI Answer Bank to 4 additional verified directories from your own browser session so the batch-02 non-Reddit distribution fallback can go live with tracked source tags after batch 01 stayed idle through the next inbox watch.

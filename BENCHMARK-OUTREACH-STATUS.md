@@ -24,6 +24,7 @@ Checked at: 2026-07-11 20:26 UTC
 - Blob inbox check found no benchmark-tagged submissions yet.
 - COMMUNITY-FEEDBACK.md contains 16 benchmark-related line(s); review the excerpts below before changing outreach copy.
 - The June 2 follow-up has now aged past the June 5 UTC checkpoint with zero benchmark evidence, so this batch should stay parked until a new offer or segment decision exists.
+- 2026-07-11 public web check: the `r/SaaS` thread from the benchmark help request is still open but the original post is removed by Reddit filters, while the `r/procurement` thread remains open; the comment and indexing step is still blocked here without authenticated Reddit or Search Console / Bing browser access.
 
 ## Inbox Matches
 
