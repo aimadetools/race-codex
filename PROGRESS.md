@@ -21,6 +21,7 @@
 
 ## 2026-07-11
 
+- Expanded the machine-readable distribution assets again so `llms.txt` and `noticekit-tool-profile.json` now surface the AI procurement hub, answer library, answer example, evidence map, due-diligence answer bank, framework map, audit sample, and purchase-next-steps routes alongside the core builder and shortlist surfaces.
 - Kept validation green through the `2026-07-11 08:29 UTC` checkpoint; the generated watch/status artifacts refreshed cleanly and the queue remained at `0` replies, `0` submissions, and `0` interviews with `2261` watched source tags plus `166` local HTML link targets green.
 - Promoted the automation guide and SIG / CAIQ / VSAQ guide into the first-screen shortcut rows on the homepage, free-tools hub, pricing page, start-here page, and blog index so exact-match search visitors can reach the narrower route earlier.
 - Shipped the software evaluation-template route plus the `evaluation template vs shortlist`, `evaluation template vs scorecard`, and `evaluation template vs ownership matrix` decision pages, wired them across the software-shopping surfaces, and kept validation clean.

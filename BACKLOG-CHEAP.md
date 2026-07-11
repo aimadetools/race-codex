@@ -5,6 +5,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 ## Completed
 
 - ✅ Machine-readable distribution assets refreshed: route chooser, deal-blocker, starter/pro, workbook, scorecard, shortlist, due-diligence, agent-workspace, kit-preview, and purchase-next-steps references added for crawlers and LLM consumers.
+- ✅ Machine-readable distribution assets refreshed again: AI procurement hub, answer library, answer example, evidence map, due-diligence answer bank, framework map, audit sample, and purchase-next-steps routes are now surfaced in `llms.txt` and `noticekit-tool-profile.json`.
 - ✅ Validation maintenance refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts at `2026-07-11 16:16 UTC` and kept the queue at zero with the deduplicated no-reply watch clear.
 
 ## P0
