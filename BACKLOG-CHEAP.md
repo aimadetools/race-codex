@@ -4,7 +4,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## Completed
 
-- ✅ Completed maintenance and distribution refreshes: the machine-readable route surface in `llms.txt` and `noticekit-tool-profile.json` now covers the route chooser, deal-blocker, starter/pro, workbook, scorecard, shortlist, due-diligence, agent-workspace, kit-preview, purchase-next-steps, AI procurement hub, answer library, answer example, evidence map, due-diligence answer bank, framework map, and audit sample, and the `2026-07-11 20:20 UTC` / `20:25 UTC` validation passes stayed green with the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts refreshed and the deduplicated no-reply watch clear.
+- ✅ Completed maintenance and distribution refreshes: the machine-readable route surface in `llms.txt` and `noticekit-tool-profile.json` now covers the route chooser, deal-blocker, starter/pro, workbook, scorecard, shortlist, evaluation template, named-vendor routes, response / management / automation / SIG guides, due-diligence, agent-workspace, kit-preview, purchase-next-steps, AI procurement hub, answer library, answer example, evidence map, due-diligence answer bank, framework map, and audit sample, and the `2026-07-11 20:20 UTC` / `20:25 UTC` validation passes stayed green with the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts refreshed and the deduplicated no-reply watch clear.
 
 ## P0
 

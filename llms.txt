@@ -22,9 +22,15 @@ Core pages:
 - AI answer library: https://noticekit.tech/ai-security-questionnaire-answer-library.html
 - AI answer example: https://noticekit.tech/blog-security-questionnaire-answer-example.html
 - Response workbook sample: https://noticekit.tech/blog-security-questionnaire-response-workbook.html
+- AI starter bundle sample: https://noticekit.tech/ai-security-questionnaire-starter-pack-bundle-sample.html
 - Software fit scorecard: https://noticekit.tech/security-questionnaire-software-fit-scorecard.html
 - Software shortlist worksheet: https://noticekit.tech/security-questionnaire-software-shortlist.html
 - Software evaluation template: https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html
+- Software ownership matrix: https://noticekit.tech/security-questionnaire-ownership-matrix.html
+- Response software guide: https://noticekit.tech/blog-security-questionnaire-response-software.html
+- Management software guide: https://noticekit.tech/blog-security-questionnaire-management-software.html
+- Automation guide: https://noticekit.tech/blog-security-questionnaire-automation-for-startups.html
+- SIG / CAIQ / VSAQ guide: https://noticekit.tech/blog-sig-caiq-vsaq-questionnaire-automation.html
 - AI security review evidence map: https://noticekit.tech/ai-security-review-evidence-map.html
 - Due diligence packet builder: https://noticekit.tech/ai-due-diligence-packet-builder.html
 - Due diligence answer bank: https://noticekit.tech/ai-due-diligence-answer-bank.html
@@ -36,6 +42,21 @@ Core pages:
 - AI audit: https://noticekit.tech/ai-security-questionnaire-audit.html
 - Pricing: https://noticekit.tech/pricing.html
 
+Named-vendor routes:
+- OpenAI template: https://noticekit.tech/openai-security-questionnaire-answer-template.html
+- OpenAI example: https://noticekit.tech/blog-openai-security-questionnaire-answer-example.html
+- OpenAI answer bank: https://noticekit.tech/openai-security-questionnaire-answer-bank.html
+- Gemini template: https://noticekit.tech/gemini-security-questionnaire-answer-template.html
+- Gemini example: https://noticekit.tech/blog-gemini-security-questionnaire-answer-example.html
+- Gemini answer bank: https://noticekit.tech/gemini-security-questionnaire-answer-bank.html
+- Anthropic answer bank: https://noticekit.tech/anthropic-security-questionnaire-answer-bank.html
+- Claude template: https://noticekit.tech/claude-security-questionnaire-answer-template.html
+- Claude example: https://noticekit.tech/blog-claude-security-questionnaire-answer-example.html
+- Claude answer bank: https://noticekit.tech/claude-security-questionnaire-answer-bank.html
+- Copilot template: https://noticekit.tech/microsoft-copilot-security-questionnaire-answer-template.html
+- Copilot example: https://noticekit.tech/blog-microsoft-copilot-security-questionnaire-answer-example.html
+- Copilot answer bank: https://noticekit.tech/microsoft-copilot-security-questionnaire-answer-bank.html
+
 Structured profile:
 - JSON profile: https://noticekit.tech/noticekit-tool-profile.json
 
@@ -45,6 +66,8 @@ Key capabilities:
 - Import questionnaire rows from CSV, TSV, or Excel
 - Decide whether the team needs a local workflow, response software, management software, or an async audit
 - Use the proof-first route when the paragraph is fine but the owner, review date, or recheck trigger is missing
+- Use named-vendor pages when the buyer names OpenAI, Gemini, Anthropic, Claude, or Microsoft Copilot
+- Use response software, management software, automation, and SIG / CAIQ / VSAQ pages when the buyer is comparing workflow tools
 - Move from route chooser to a smaller paid fit: Starter, Pro, or Audit
 - Package proof, review dates, owner details, and recheck triggers when the thread widens
 - Keep core free flows browser-only

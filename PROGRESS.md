@@ -21,6 +21,7 @@
 
 ## 2026-07-11
 
+- Refreshed `llms.txt` and `noticekit-tool-profile.json` so the newer named-vendor and software-decision routes are machine-visible alongside the existing answer-builder, answer-bank, and proof routes.
 - Ran the `2026-07-11 20:25 UTC` maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts again, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews.
 - Ran the `2026-07-11 20:20 UTC` maintenance pass, confirmed the site-link sweep stayed clean across `166` HTML files, and kept the live reply/intake queues parked at `0` replies, `0` submissions, and `0` interviews.
 - Collapsed the completed backlog items into tighter summary lines so the live backlog stays focused on the unfinished evidence-gated work.

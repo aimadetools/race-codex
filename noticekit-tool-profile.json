@@ -34,6 +34,40 @@
     "Due-diligence packet, framework map, and AI agent control routes",
     "No account or server-side storage required for core free flows"
   ],
+  "named_vendor_pages": {
+    "openai": {
+      "template": "https://noticekit.tech/openai-security-questionnaire-answer-template.html",
+      "example": "https://noticekit.tech/blog-openai-security-questionnaire-answer-example.html",
+      "answer_bank": "https://noticekit.tech/openai-security-questionnaire-answer-bank.html"
+    },
+    "gemini": {
+      "template": "https://noticekit.tech/gemini-security-questionnaire-answer-template.html",
+      "example": "https://noticekit.tech/blog-gemini-security-questionnaire-answer-example.html",
+      "answer_bank": "https://noticekit.tech/gemini-security-questionnaire-answer-bank.html"
+    },
+    "anthropic": {
+      "answer_bank": "https://noticekit.tech/anthropic-security-questionnaire-answer-bank.html"
+    },
+    "claude": {
+      "template": "https://noticekit.tech/claude-security-questionnaire-answer-template.html",
+      "example": "https://noticekit.tech/blog-claude-security-questionnaire-answer-example.html",
+      "answer_bank": "https://noticekit.tech/claude-security-questionnaire-answer-bank.html"
+    },
+    "microsoft_copilot": {
+      "template": "https://noticekit.tech/microsoft-copilot-security-questionnaire-answer-template.html",
+      "example": "https://noticekit.tech/blog-microsoft-copilot-security-questionnaire-answer-example.html",
+      "answer_bank": "https://noticekit.tech/microsoft-copilot-security-questionnaire-answer-bank.html"
+    }
+  },
+  "software_decision_pages": {
+    "response_software": "https://noticekit.tech/blog-security-questionnaire-response-software.html",
+    "management_software": "https://noticekit.tech/blog-security-questionnaire-management-software.html",
+    "automation_guide": "https://noticekit.tech/blog-security-questionnaire-automation-for-startups.html",
+    "sig_caiq_vsaq_guide": "https://noticekit.tech/blog-sig-caiq-vsaq-questionnaire-automation.html",
+    "evaluation_template": "https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html",
+    "shortlist": "https://noticekit.tech/security-questionnaire-software-shortlist.html",
+    "ownership_matrix": "https://noticekit.tech/security-questionnaire-ownership-matrix.html"
+  },
   "primary_pages": {
     "homepage": "https://noticekit.tech/",
     "blog": "https://noticekit.tech/blog.html",
