@@ -3,7 +3,7 @@
   "url": "https://noticekit.tech/",
   "tagline": "AI security questionnaire answers for SaaS teams.",
   "summary": "Browser-only AI security questionnaire answer workflow for SaaS teams handling buyer procurement, security, and privacy review pressure.",
-  "description": "NoticeKit helps small SaaS teams answer buyer AI security questionnaires without sending questionnaire data to a server. The product includes a live answer builder, repeat-review answer bank, software-fit scorecard, shortlist worksheet, ownership matrix, workbook-friendly exports, and paid starter, pro, and async audit paths.",
+  "description": "NoticeKit helps small SaaS teams answer buyer AI security questionnaires without sending questionnaire data to a server. The product includes a live answer builder, route chooser, deal-blocker path, repeat-review answer bank, software-fit scorecard, shortlist worksheet, ownership matrix, workbook-friendly exports, and paid starter, pro, and async audit paths.",
   "audience": [
     "B2B SaaS founders",
     "Operations leads",
@@ -25,20 +25,39 @@
   },
   "core_features": [
     "Browser-only AI answer builder with CSV, TSV, and Excel questionnaire import",
+    "Route chooser and deal-blocker path for fast first-step triage",
     "Reusable answer-bank workspace for repeated enterprise reviews",
     "Response workbook and spreadsheet-friendly handoff paths",
     "Software-fit scorecard, shortlist worksheet, and ownership matrix",
-    "Evidence-map and deal-blocker routes for proof or judgment gaps",
+    "Evidence-map, audit sample, kit preview, and purchase-next-steps proof routes",
+    "Due-diligence packet, framework map, and AI agent control routes",
     "No account or server-side storage required for core free flows"
   ],
   "primary_pages": {
     "homepage": "https://noticekit.tech/",
+    "route_chooser": "https://noticekit.tech/choose-path.html",
+    "deal_blocker": "https://noticekit.tech/ai-deal-blocker.html",
+    "starter_pack": "https://noticekit.tech/ai-security-questionnaire-starter-pack.html",
+    "pro_kit": "https://noticekit.tech/ai-security-questionnaire-pro-kit.html",
     "free_tools": "https://noticekit.tech/free-tools.html",
     "answer_builder": "https://noticekit.tech/ai-security-questionnaire-answer-builder.html",
     "answer_bank": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html",
+    "response_workbook": "https://noticekit.tech/blog-security-questionnaire-response-workbook.html",
+    "software_scorecard": "https://noticekit.tech/security-questionnaire-software-fit-scorecard.html",
+    "software_shortlist": "https://noticekit.tech/security-questionnaire-software-shortlist.html",
     "software_evaluation_template": "https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html",
+    "due_diligence_packet": "https://noticekit.tech/ai-due-diligence-packet-builder.html",
+    "ai_agent_workspace": "https://noticekit.tech/ai-agent-review-workspace.html",
+    "kit_preview": "https://noticekit.tech/kit-preview.html",
+    "purchase_next_steps": "https://noticekit.tech/purchase-next-steps.html",
     "pricing": "https://noticekit.tech/pricing.html"
   },
+  "featured_routes": [
+    "One answer now",
+    "Inventory first",
+    "Repeat review",
+    "Judgment first"
+  ],
   "tracked_listing_urls": {
     "indie_makers_hub": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html?source=directory-indie-makers-hub-answer-bank",
     "startories": "https://noticekit.tech/ai-security-questionnaire-answer-bank.html?source=directory-startories-answer-bank",

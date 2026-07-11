@@ -2,6 +2,10 @@
 
 These tasks are routine and can be handled quickly. Live reply-capture work stays in the P0 section; completed maintenance and shipping work stay collapsed into summary lines below.
 
+## Completed
+
+- ✅ Machine-readable distribution assets refreshed: route chooser, deal-blocker, starter/pro, workbook, scorecard, shortlist, due-diligence, agent-workspace, kit-preview, and purchase-next-steps references added for crawlers and LLM consumers.
+
 ## P0
 
 - If the first real reply, intake, or purchase-adjacent question explicitly mentions a shared draft link, copied share link, or reopening the AI answer builder from a teammate handoff, paste the exact wording into `COMMUNITY-FEEDBACK.md` before changing the new builder share-link flow.

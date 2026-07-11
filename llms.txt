@@ -1,7 +1,7 @@
 NoticeKit
 
 NoticeKit is a browser-only toolkit for SaaS teams answering buyer AI security questionnaires.
-It focuses on one-answer-now drafting, repeat-review answer banks, spreadsheet/workbook handoff, software-fit triage, and proof/judgment gaps.
+It focuses on one-answer-now drafting, inventory-first cleanup, repeat-review answer banks, spreadsheet/workbook handoff, software-fit triage, and proof/judgment gaps.
 Core free flows keep data in the browser and do not require an account.
 
 Primary audience:
@@ -11,10 +11,20 @@ Primary audience:
 
 Core pages:
 - Homepage: https://noticekit.tech/
+- Route chooser: https://noticekit.tech/choose-path.html
+- Deal blocker path: https://noticekit.tech/ai-deal-blocker.html
+- Starter pack: https://noticekit.tech/ai-security-questionnaire-starter-pack.html
+- Pro kit: https://noticekit.tech/ai-security-questionnaire-pro-kit.html
 - Free tools: https://noticekit.tech/free-tools.html
 - AI answer builder: https://noticekit.tech/ai-security-questionnaire-answer-builder.html
 - AI answer bank: https://noticekit.tech/ai-security-questionnaire-answer-bank.html
+- Response workbook sample: https://noticekit.tech/blog-security-questionnaire-response-workbook.html
+- Software fit scorecard: https://noticekit.tech/security-questionnaire-software-fit-scorecard.html
+- Software shortlist worksheet: https://noticekit.tech/security-questionnaire-software-shortlist.html
 - Software evaluation template: https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html
+- Due diligence packet builder: https://noticekit.tech/ai-due-diligence-packet-builder.html
+- AI agent review workspace: https://noticekit.tech/ai-agent-review-workspace.html
+- Kit preview: https://noticekit.tech/kit-preview.html
 - Pricing: https://noticekit.tech/pricing.html
 
 Structured profile:
@@ -25,4 +35,6 @@ Key capabilities:
 - Reuse approved wording, proof links, and owner notes across repeated reviews
 - Import questionnaire rows from CSV, TSV, or Excel
 - Decide whether the team needs a local workflow, response software, management software, or an async audit
+- Move from route chooser to a smaller paid fit: Starter, Pro, or Audit
+- Package proof, review dates, owner details, and recheck triggers when the thread widens
 - Keep core free flows browser-only
