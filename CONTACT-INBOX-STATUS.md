@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-10 23:26 UTC
+Checked at: 2026-07-11 04:19 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -210,19 +210,27 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-sample-answers: 0
 - blog-index-response-workbook: 0
 - blog-index-pricing-fit-guide: 0
+- blog-index-software-evaluation-template: 0
+- blog-index-evaluation-vs-shortlist: 0
 - homepage-answer-library: 0
 - homepage-answer-bank-vs-response-template: 0
 - homepage-response-workbook: 0
 - homepage-sample-answers: 0
 - homepage-ai-pro-kit: 0
 - homepage-pricing-fit-guide: 0
+- homepage-software-evaluation-template: 0
+- homepage-evaluation-shortlist-comparison: 0
 - start-here-response-workbook: 0
 - start-here-sample-answers: 0
 - start-here-answer-bank-vs-response-template: 0
+- start-here-software-evaluation-template: 0
+- start-here-evaluation-shortlist-comparison: 0
 - pricing-response-workbook: 0
 - pricing-sample-answers: 0
 - pricing-answer-bank-vs-response-template: 0
 - pricing-pricing-fit-guide: 0
+- pricing-software-evaluation-template: 0
+- pricing-evaluation-shortlist-comparison: 0
 - pricing-fit-starter: 0
 - pricing-fit-pro: 0
 - pricing-fit-audit: 0
@@ -292,6 +300,17 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-shortlist-vs-ownership-matrix-response-software: 0
 - software-shortlist-vs-ownership-matrix-management-software: 0
 - software-shortlist-vs-ownership-matrix-builder: 0
+- software-evaluation-template-nav-audit: 0
+- software-evaluation-template-scorecard: 0
+- software-evaluation-template-shortlist: 0
+- software-evaluation-template-shortlist-comparison: 0
+- software-evaluation-template-ownership-matrix: 0
+- software-evaluation-template-questionnaire-software: 0
+- software-evaluation-template-response-software: 0
+- software-evaluation-template-management-software: 0
+- software-evaluation-template-response-management-comparison: 0
+- software-evaluation-template-builder: 0
+- software-evaluation-template-pricing: 0
 - blog-index-ai-evidence-map: 0
 - blog-index-ai-follow-up-pack: 0
 - blog-index-ai-answer-bank: 0
@@ -325,6 +344,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-automation-guide: 0
 - blog-index-sig-guide: 0
 - blog-index-questionnaire-software: 0
+- questionnaire-software-evaluation-template: 0
 - blog-index-software-tools-comparison: 0
 - blog-index-scorecard-vs-ownership-matrix: 0
 - blog-index-software-shortlist: 0
@@ -1036,6 +1056,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-questionnaire-software: 0
 - pricing-management-software: 0
 - pricing-response-software: 0
+- free-tools-software-evaluation-template: 0
+- free-tools-evaluation-shortlist-comparison: 0
 - ai-procurement-hub-generic-answer-library: 0
 - ai-procurement-hub-answer-library: 0
 - ai-procurement-hub-answer-library-comparison: 0
@@ -1047,6 +1069,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-procurement-hub-due-diligence-packet-builder: 0
 - ai-procurement-hub-framework-map: 0
 - ai-procurement-hub-free-tools: 0
+- ai-procurement-hub-software-evaluation-template: 0
+- ai-procurement-hub-evaluation-shortlist-comparison: 0
 - ai-procurement-hub-spreadsheet-template: 0
 - ai-procurement-hub-response-template: 0
 - ai-procurement-hub-answer-example: 0
@@ -1101,6 +1125,14 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-answer-library-comparison: 0
 - ai-answer-library-comparison-spreadsheet-template: 0
 - ai-answer-library-audit: 0
+- response-software-evaluation-template: 0
+- management-software-evaluation-template: 0
+- questionnaire-software-evaluation-shortlist-comparison: 0
+- response-software-evaluation-shortlist-comparison: 0
+- management-software-evaluation-shortlist-comparison: 0
+- software-scorecard-evaluation-template: 0
+- software-shortlist-evaluation-template: 0
+- software-shortlist-evaluation-comparison: 0
 - audit-request-ai-packet: 0
 - audit-request-ai-stack: 0
 - audit-request-ai-deal-blocker: 0
@@ -1843,6 +1875,15 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-tools-comparison-automation-software: 0
 - software-tools-comparison-ownership-matrix: 0
 - software-tools-comparison-builder: 0
+- evaluation-shortlist-comparison-nav-audit: 0
+- evaluation-shortlist-comparison-evaluation-template: 0
+- evaluation-shortlist-comparison-shortlist: 0
+- evaluation-shortlist-comparison-scorecard: 0
+- evaluation-shortlist-comparison-ownership-matrix: 0
+- evaluation-shortlist-comparison-questionnaire-software: 0
+- evaluation-shortlist-comparison-response-software: 0
+- evaluation-shortlist-comparison-management-software: 0
+- evaluation-shortlist-comparison-builder: 0
 - blog-index-shortlist-vs-ownership-matrix: 0
 - blog-index-response-vs-ownership-matrix: 0
 - blog-index-management-vs-ownership-matrix: 0
