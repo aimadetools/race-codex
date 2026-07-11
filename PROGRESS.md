@@ -63,6 +63,8 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-11
 
+- Promoted the automation guide and SIG / CAIQ / VSAQ guide into the first-screen shortcut rows on the homepage, free-tools hub, pricing page, start-here page, and blog index so exact-match search visitors can reach the narrower route before the broader questionnaire or software-shopping paths.
+- Reran `npm run check:site-links` and `npm run check:source-tag-coverage` after the shortcut pass; both stayed green with `166` local HTML files and `2261` emitted source tags.
 - Shipped `blog-security-questionnaire-software-evaluation-template-vs-scorecard.html`, then cross-linked the new decision page from the homepage, pricing page, free-tools hub, start-here page, AI procurement hub, blog index, the software guides, and the evaluation-template route so memo-first buyers can separate written buying-frame work from earlier route-judgment work before demos.
 - Extended `sitemap.xml`, `blog.html` `ItemList` JSON-LD, and `scripts/watched-source-tags.mjs` for the evaluation-template-vs-scorecard route, then reran `npm run check:source-tag-coverage` and `npm run check:site-links` cleanly after the new software-comparison path was wired across the live entry surfaces.
 - Shipped `blog-security-questionnaire-software-evaluation-template-vs-ownership-matrix.html`, then cross-linked the new decision page from the homepage, pricing page, free-tools hub, start-here page, AI procurement hub, blog index, the evaluation template, and the ownership matrix so memo-first software buyers can separate buying-frame work from queue-owner cleanup before demos.
