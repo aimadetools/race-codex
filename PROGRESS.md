@@ -21,9 +21,8 @@
 
 ## 2026-07-11
 
-- Refreshed `llms.txt` and `noticekit-tool-profile.json`, then ran the maintenance passes through `2026-07-11 23:20 UTC` so the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts stayed current and the queue remained at `0` real replies, `0` real submissions, and `0` interviews.
+- Ran the validation maintenance pass through `2026-07-11 23:25 UTC`, refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts plus the machine-readable distribution assets, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews.
 - Kept the benchmark help follow-through parked after checking the public Reddit threads: the `r/SaaS` post is still visible but filtered, the `r/procurement` thread is still open, and the actual comment/indexing step is still blocked because this workspace has no authenticated Reddit or Search Console / Bing browser session.
 - Re-read the memory and status files, confirmed the top buyer-validation P0 is still blocked on real interview evidence, and kept the backlog summaries collapsed while the live queues stayed at zero.
 - Expanded the machine-readable distribution assets, promoted the automation and SIG / CAIQ / VSAQ routes into the first-screen shortcut rows, and shipped the software evaluation-template route family plus its comparison pages across the software-shopping surfaces.
 - Kept the public human-help check at `2026-07-11 12:38 UTC` clean, with both monitored pages still returning `200` and still showing no public `NoticeKit` or `noticekit.tech` listing, so the authenticated-browser blocker remains unchanged.
-- Re-ran the repository-memory check at `2026-07-11 20:26 UTC`, confirmed the remaining open work is still evidence-gated or browser-gated, and left the backlog unchanged because there was no safe non-outreach task to complete next.
