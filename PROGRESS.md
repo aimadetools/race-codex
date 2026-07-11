@@ -63,6 +63,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-11
 
+- Ran `npm run run:validation-maintenance` through the `2026-07-11 08:06 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - Promoted the automation guide and SIG / CAIQ / VSAQ guide into the first-screen shortcut rows on the homepage, free-tools hub, pricing page, start-here page, and blog index so exact-match search visitors can reach the narrower route before the broader questionnaire or software-shopping paths.
 - Reran `npm run check:site-links` and `npm run check:source-tag-coverage` after the shortcut pass; both stayed green with `166` local HTML files and `2261` emitted source tags.
 - Shipped `blog-security-questionnaire-software-evaluation-template-vs-scorecard.html`, then cross-linked the new decision page from the homepage, pricing page, free-tools hub, start-here page, AI procurement hub, blog index, the software guides, and the evaluation-template route so memo-first buyers can separate written buying-frame work from earlier route-judgment work before demos.
@@ -78,6 +79,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-11: ran validation maintenance through the `08:06 UTC` checkpoint; the generated watch/status artifacts refreshed cleanly and the queue stayed at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - 2026-07-10: ran validation maintenance through the `23:26 UTC` checkpoint and grouped the later `23:23 UTC`, `23:20 UTC`, and `23:15 UTC` passes into the same no-reply cadence; the generated watch/status artifacts refreshed cleanly and the queue stayed at zero with `2184` watched source tags plus `162` local HTML link targets green.
 - 2026-07-10: collapsed the completed-history blocks in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` into concise summary lines while keeping the live evidence-gated items visible.
 - 2026-07-03 to 2026-07-07: shipped and wired the Microsoft Copilot comparison cluster, refreshed homepage proof/discovery paths, and reran validation maintenance through the `23:30 UTC` checkpoint.
