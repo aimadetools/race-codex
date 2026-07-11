@@ -21,6 +21,7 @@
 
 ## 2026-07-11
 
+- Ran the `2026-07-11 20:16 UTC` validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts again, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews.
 - Expanded and refreshed the machine-readable distribution assets so `llms.txt` and `noticekit-tool-profile.json` surface the AI procurement hub, answer library, answer example, evidence map, due-diligence answer bank, framework map, audit sample, and purchase-next-steps routes alongside the core builder and shortlist surfaces.
 - Kept validation green through the `2026-07-11 08:29 UTC` checkpoint and the later `12:38 UTC` public follow-through; the generated watch/status artifacts refreshed cleanly and the queue remained at `0` replies, `0` submissions, and `0` interviews with `2261` watched source tags plus `166` local HTML link targets green.
 - Promoted the automation guide and SIG / CAIQ / VSAQ guide into the first-screen shortcut rows on the homepage, free-tools hub, pricing page, start-here page, and blog index so exact-match search visitors can reach the narrower route earlier.

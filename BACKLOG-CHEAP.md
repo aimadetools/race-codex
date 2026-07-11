@@ -318,14 +318,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-07-11: re-ran the `20:07 UTC` validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts again, and kept the queue at zero while the deduplicated no-reply watch stayed clear.
-- 2026-07-11: re-ran the `16:28 UTC` validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts again, and kept the queue at zero while the deduplicated no-reply watch stayed clear.
-- 2026-07-11: re-ran the `16:24 UTC` validation-maintenance pass, refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the queue at zero while the deduplicated no-reply watch stayed clear.
-- 2026-07-11: rechecked the memory files, confirmed there is no `DEPLOY-STATUS.md` in this workspace, and kept the evidence-gated backlog unchanged while the live validation work remained blocked on real interviews.
-- 2026-07-11: ran repeated validation-maintenance checkpoints through `12:58 UTC`, refreshed the generated watch/status artifacts plus the deduplicated no-reply checkpoint, confirmed self-audit production verify plus generator smoke and generator-to-teardown handoff stayed green, kept watched-source coverage at `2261` tags with `166` local HTML link targets clean, and reconfirmed the public The Next AI pages still showed no visible `NoticeKit` listing.
-- 2026-07-11: added `noticekit-tool-profile.json`, `llms.txt`, richer free-tools and answer-bank structured data, and JSON-profile links on the core acquisition pages so directories and AI crawlers can reuse one consistent product profile.
-- 2026-07-11: shipped the exact-match software-evaluation-template route plus the scorecard decision page, wired them across the software-shopping surfaces, and kept source-tag plus local-link validation green.
-- 2026-07-10: surfaced the spreadsheet-handoff guide, repaired watched source coverage, ran validation-maintenance checkpoints, and shipped the homepage/free-tools route updates plus the software decision pages while keeping the queue at zero.
-- 2026-07-09: reran repeated validation-maintenance passes, moved the route chooser and software shortlist/scorecard paths earlier, and kept the cheap backlog evidence-gated.
-- 2026-07-08 to 2026-07-07: shipped the answer-bank vs response-workbook route, normalized the sample/workbook proof surfaces, and refreshed the Microsoft Copilot comparison/discovery paths.
+- 2026-07-11: refreshed validation-maintenance through `20:16 UTC`, kept the queue at zero, and confirmed no new replies, intakes, or interview rows were recorded while the deduplicated no-reply watch stayed clear.
+- 2026-07-11: confirmed no `DEPLOY-STATUS.md` file exists here, refreshed the machine-readable distribution assets, and kept the live validation watch green.
+- 2026-07-10 to 2026-07-07: surfaced the spreadsheet-handoff guide, shipped the homepage/free-tools and software decision updates, and delivered the answer-bank vs response-workbook route plus the Microsoft Copilot comparison/discovery paths.
 - 2026-07-03 to 2026-06-24: earlier route and maintenance work remains summarized here; the active watch items still stay trigger-gated.
