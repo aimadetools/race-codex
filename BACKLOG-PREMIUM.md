@@ -92,10 +92,6 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-11: ran the 23:16 UTC maintenance pass, refreshed the live watch and status artifacts, and kept the queue at zero while interview-driven validation stayed blocked on real reply evidence.
-- 2026-07-11: ran the 20:26 UTC maintenance pass, refreshed the live watch and status artifacts, and kept the queue at zero while the interview-driven validation work stayed parked on real reply evidence.
-- 2026-07-11: ran the 20:20 UTC maintenance pass, confirmed 166 HTML local targets were clean, and kept the queue at zero while the live interview-driven validation work stayed parked on real reply evidence.
-- 2026-07-11: refreshed validation-maintenance through `20:16 UTC`, re-ran the public checks, kept the queue at zero, confirmed no `DEPLOY-STATUS.md` file exists here, and left the buyer-validation and outreach decisions parked on real interview evidence.
-- 2026-07-11: added the machine-readable distribution assets, shipped the exact-match software-evaluation-template route family, and kept the public watch/status artifacts plus source coverage green.
+- 2026-07-11: ran the maintenance passes through `23:20 UTC`, refreshed the live watch/status artifacts and the machine-readable distribution assets, and kept the queue at zero while the deduplicated no-reply watch stayed clear.
 - 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, shipped the homepage/blog/route-chooser/software decision updates, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
 - 2026-07-03 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.
