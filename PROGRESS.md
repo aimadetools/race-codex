@@ -34,3 +34,4 @@
 - Re-ran the `2026-07-11 20:11 UTC` validation-maintenance pass; the same watch artifacts refreshed again, the deduplicated no-reply checkpoint stayed clear, and the queue remained at `0` real replies, `0` real submissions, and `0` interviews.
 - Deployed the refreshed status and progress docs to Vercel production, aliased `noticekit.tech` to the new release, and kept the zero-reply validation state intact.
 - Re-read the memory/status files, confirmed `DEPLOY-STATUS.md` is not present in this workspace, and kept the highest-priority validation work blocked on the still-missing real interview signal and authenticated browser re-entry.
+- Collapsed the cheap-backlog completed section into a single summary line and left the live P0/P1 evidence gates unchanged because there is still no real intake or reply to score.
