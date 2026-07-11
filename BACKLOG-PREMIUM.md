@@ -92,11 +92,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-11: shipped the evaluation-template-vs-ownership-matrix software decision page, wired it across the software-shopping entry surfaces plus the evaluation-template and ownership-matrix tools, extended watched source tags plus sitemap/blog-index coverage, and kept source-tag plus local-link validation green.
-- 2026-07-11: shipped the evaluation-template-vs-scorecard software decision page, wired it across the software-shopping entry surfaces plus the evaluation-template and scorecard tools, extended watched source tags plus sitemap/blog-index coverage, and kept source-tag plus local-link validation green.
-- 2026-07-11: shipped the evaluation-template-vs-shortlist software decision page, wired it across the software-shopping entry surfaces, extended watched source tags plus sitemap/blog-index coverage, and kept validation-maintenance green at `2225` watched source tags plus `164` local HTML files.
+- 2026-07-11: shipped the exact-match software-evaluation-template artifact plus the evaluation-template-vs-shortlist, evaluation-template-vs-scorecard, and evaluation-template-vs-ownership-matrix decision pages, wired them across the software-shopping surfaces plus the evaluation-template, shortlist, scorecard, and ownership-matrix tools, extended watched source tags plus sitemap/blog-index coverage, and kept validation green.
 - 2026-07-10: refreshed the public checks, repaired watched source coverage, ran validation-maintenance checkpoints, and shipped the homepage, blog-index, route-chooser, and software decision updates while keeping the queue at zero.
-- 2026-07-11: shipped the exact-match software-evaluation-template artifact, wired it across the software-shopping surfaces, extended watched source tags plus sitemap coverage, and kept source-tag plus local-link validation green.
 - 2026-07-09: reran repeated validation passes and rebalanced the starter-pack named-vendor block while the premium decisions stayed evidence-gated.
 - 2026-07-08 to 2026-07-07: shipped the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, the answer-bank-vs-response-workbook route, and the Microsoft Copilot comparison acquisition path.
 - 2026-07-03 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.
