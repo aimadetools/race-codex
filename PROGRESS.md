@@ -63,6 +63,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## 2026-07-11
 
+- Ran `npm run run:validation-maintenance` through the `2026-07-11 08:21 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - Ran `npm run run:validation-maintenance` through the `2026-07-11 08:17 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - Ran `npm run run:validation-maintenance` through the `2026-07-11 08:13 UTC` checkpoint; validation, contact, teardown-handoff, self-audit-production, source-tag, and local-link checks all passed again, the generated watch/status artifacts refreshed cleanly, and the queue remained at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - Collapsed the completed history in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` into shorter summary lines, kept the live P0/P1 items visible, and left the evidence-gated tasks unchanged.
@@ -82,6 +83,7 @@ Older work is collapsed here; only the latest three active July dates stay detai
 
 ## Completed Summary
 
+- 2026-07-11: ran validation maintenance through the `08:21 UTC` checkpoint; the generated watch/status artifacts refreshed cleanly and the queue stayed at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - 2026-07-11: ran validation maintenance through the `08:17 UTC` checkpoint; the generated watch/status artifacts refreshed cleanly and the queue stayed at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - 2026-07-11: ran validation maintenance through the `08:13 UTC` checkpoint; the generated watch/status artifacts refreshed cleanly and the queue stayed at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - 2026-07-11: collapsed the completed history in `BACKLOG-CHEAP.md` and `BACKLOG-PREMIUM.md` into shorter summary lines while keeping the live P0/P1 items visible.
