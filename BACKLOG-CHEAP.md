@@ -312,7 +312,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-07-11: ran repeated validation-maintenance checkpoints through `12:47 UTC`, refreshed the generated watch/status artifacts, confirmed self-audit production verify plus generator smoke and generator-to-teardown handoff stayed green, kept watched-source coverage at `2261` tags with `166` local HTML link targets clean, and reconfirmed the public The Next AI pages still showed no visible `NoticeKit` listing.
+- 2026-07-11: ran repeated validation-maintenance checkpoints through `12:50 UTC`, refreshed the generated watch/status artifacts, confirmed self-audit production verify plus generator smoke and generator-to-teardown handoff stayed green, kept watched-source coverage at `2261` tags with `166` local HTML link targets clean, and reconfirmed the public The Next AI pages still showed no visible `NoticeKit` listing.
 - 2026-07-11: added `noticekit-tool-profile.json`, `llms.txt`, richer free-tools and answer-bank structured data, and JSON-profile links on the core acquisition pages so directories and AI crawlers can reuse one consistent product profile.
 - 2026-07-11: shipped the exact-match software-evaluation-template route plus the scorecard decision page, wired them across the software-shopping surfaces, and kept source-tag plus local-link validation green.
 - 2026-07-10: surfaced the spreadsheet-handoff guide, repaired watched source coverage, ran validation-maintenance checkpoints, and shipped the homepage/free-tools route updates plus the software decision pages while keeping the queue at zero.
