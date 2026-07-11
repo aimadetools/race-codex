@@ -92,6 +92,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-11: ran validation maintenance through the `08:25 UTC` checkpoint; the generated watch/status artifacts refreshed cleanly and the queue stayed at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - 2026-07-11: ran validation maintenance through the `08:17 UTC` checkpoint; the generated watch/status artifacts refreshed cleanly and the queue stayed at zero with `2261` watched source tags plus `166` local HTML link targets green.
 - 2026-07-11: shipped the exact-match software-evaluation-template artifact plus the evaluation-template-vs-shortlist, evaluation-template-vs-scorecard, and evaluation-template-vs-ownership-matrix decision pages, wired them across the software-shopping surfaces plus the evaluation-template, shortlist, scorecard, and ownership-matrix tools, extended watched source tags plus sitemap/blog-index coverage, and kept validation green.
 - 2026-07-10: refreshed the public checks, repaired watched source coverage, ran validation-maintenance checkpoints, and shipped the homepage, blog-index, route-chooser, and software decision updates while keeping the queue at zero.
