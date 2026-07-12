@@ -92,9 +92,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-12: ran the 08:22 UTC validation-maintenance checkpoint, reverified The Next AI homepage plus `ai-tools` directory still exposed no NoticeKit listing, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit and validation artifacts, and kept the queue at zero while watched-source plus local-link coverage stayed clean.
-- 2026-07-12: ran the 08:13 UTC validation-maintenance checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit and validation artifacts, and kept the queue at zero while watched-source plus local-link coverage stayed clean.
-- 2026-07-12: shipped the structured-data guardrail, repaired the `blog.html` JSON-LD `ItemList`, and folded the software-shopping evaluation-template expansion into the main validation-maintenance flow with structured-data, source-tag, generator, inbox, and local-link checks still green.
+- 2026-07-12: ran the 08:22 and 08:13 UTC validation-maintenance checkpoints, reverified The Next AI homepage plus `ai-tools` still exposed no NoticeKit listing, shipped the structured-data guardrail, repaired the `blog.html` JSON-LD `ItemList`, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit and validation artifacts, and kept the queue at zero while watched-source plus local-link coverage stayed clean.
 - 2026-07-11: ran the maintenance passes through `23:29 UTC`, refreshed the live watch/status artifacts and machine-readable distribution assets, and kept the queue at zero while the deduplicated no-reply watch stayed clear.
 - 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, shipped the homepage/blog/route-chooser/software decision updates, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
 - 2026-07-03 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.
