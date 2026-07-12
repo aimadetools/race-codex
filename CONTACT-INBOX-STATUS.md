@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-11 23:29 UTC
+Checked at: 2026-07-12 04:20 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -177,6 +177,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - about-page-starter-pack-comparison: 0
 - about-page-spreadsheet-template: 0
 - about-page-software-scorecard: 0
+- about-page-software-shortlist: 0
+- about-page-software-evaluation-template: 0
 - about-page-questionnaire-software: 0
 - about-page-response-software: 0
 - about-page-management-software: 0
@@ -674,6 +676,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - route-chooser-named-vendor: 0
 - route-chooser-response-software: 0
 - route-chooser-management-software: 0
+- route-chooser-software-evaluation-template: 0
 - route-chooser-sig-guide: 0
 - route-chooser-pricing: 0
 - route-chooser-pricing-fit-guide: 0
@@ -1655,11 +1658,17 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-guide-management-software: 0
 - automation-guide-spreadsheet-template: 0
 - automation-guide-software-scorecard: 0
+- automation-guide-software-evaluation-template: 0
+- automation-guide-evaluation-scorecard-comparison: 0
+- automation-guide-evaluation-shortlist-comparison: 0
 - automation-guide-ownership-matrix: 0
 - sig-guide-response-software: 0
 - sig-guide-management-software: 0
 - sig-guide-spreadsheet-template: 0
 - sig-guide-software-scorecard: 0
+- sig-guide-software-evaluation-template: 0
+- sig-guide-evaluation-scorecard-comparison: 0
+- sig-guide-evaluation-shortlist-comparison: 0
 - sig-guide-ownership-matrix: 0
 - ai-procurement-hub-questionnaire-software: 0
 - ai-procurement-hub-management-software: 0
@@ -1810,6 +1819,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-software-evidence-map: 0
 - automation-software-audit: 0
 - automation-software-scorecard: 0
+- automation-software-evaluation-template: 0
+- automation-software-evaluation-scorecard-comparison: 0
+- automation-software-evaluation-shortlist-comparison: 0
 - automation-software-response-management-comparison: 0
 - management-software-nav-audit: 0
 - management-software-answer-library: 0
@@ -1885,6 +1897,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-tools-comparison-nav-audit: 0
 - software-tools-comparison-scorecard: 0
 - software-tools-comparison-shortlist: 0
+- software-tools-comparison-evaluation-template: 0
 - software-tools-comparison-questionnaire-software: 0
 - software-tools-comparison-response-software: 0
 - software-tools-comparison-management-software: 0
@@ -1943,6 +1956,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - response-management-comparison-management-software: 0
 - response-management-comparison-scorecard: 0
 - response-management-comparison-shortlist: 0
+- response-management-comparison-evaluation-template: 0
 - response-management-comparison-ownership-matrix: 0
 - response-management-comparison-questionnaire-software: 0
 - response-management-comparison-automation-software: 0
