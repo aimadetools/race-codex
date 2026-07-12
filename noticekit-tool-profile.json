@@ -3,7 +3,7 @@
   "url": "https://noticekit.tech/",
   "tagline": "AI security questionnaire answers for SaaS teams.",
   "summary": "Browser-only AI security questionnaire answer workflow for SaaS teams handling buyer procurement, security, and privacy review pressure.",
-  "description": "NoticeKit helps small SaaS teams answer buyer AI security questionnaires without sending questionnaire data to a server. The product includes a live answer builder, route chooser, deal-blocker path, repeat-review answer bank, answer library, evidence map, AI procurement hub, software-fit scorecard, shortlist worksheet, ownership matrix, workbook-friendly exports, kit preview, purchase-next-steps guidance, and paid starter, pro, and async audit paths.",
+  "description": "NoticeKit helps small SaaS teams answer buyer AI security questionnaires without sending questionnaire data to a server. The product includes a live answer builder, route chooser, deal-blocker path, repeat-review answer bank, answer library, evidence map, AI procurement hub, software-fit scorecard, shortlist worksheet, software demo checklist, ownership matrix, workbook-friendly exports, kit preview, purchase-next-steps guidance, and paid starter, pro, and async audit paths.",
   "audience": [
     "B2B SaaS founders",
     "Operations leads",
@@ -29,7 +29,7 @@
     "Reusable answer-bank workspace for repeated enterprise reviews",
     "Answer library, named-vendor templates, and filled examples for exact-match questions",
     "Response workbook and spreadsheet-friendly handoff paths",
-    "Software-fit scorecard, shortlist worksheet, and ownership matrix",
+    "Software-fit scorecard, shortlist worksheet, software demo checklist, and ownership matrix",
     "AI procurement hub, evidence map, audit sample, kit preview, and purchase-next-steps proof routes",
     "Due-diligence packet, framework map, and AI agent control routes",
     "No account or server-side storage required for core free flows"

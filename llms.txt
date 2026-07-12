@@ -26,6 +26,7 @@ Core pages:
 - Software fit scorecard: https://noticekit.tech/security-questionnaire-software-fit-scorecard.html
 - Software shortlist worksheet: https://noticekit.tech/security-questionnaire-software-shortlist.html
 - Software evaluation template: https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html
+- Software demo checklist: https://noticekit.tech/security-questionnaire-software-demo-checklist.html
 - Software ownership matrix: https://noticekit.tech/security-questionnaire-ownership-matrix.html
 - Response software guide: https://noticekit.tech/blog-security-questionnaire-response-software.html
 - Management software guide: https://noticekit.tech/blog-security-questionnaire-management-software.html
@@ -67,6 +68,7 @@ Key capabilities:
 - Reuse approved wording, proof links, and owner notes across repeated reviews
 - Import questionnaire rows from CSV, TSV, or Excel
 - Decide whether the team needs a local workflow, response software, management software, or an async audit
+- Run vendor demos against the current queue, proof burden, and rollout risk instead of feature theater
 - Use the proof-first route when the paragraph is fine but the owner, review date, or recheck trigger is missing
 - Use named-vendor pages when the buyer names OpenAI, Gemini, Anthropic, Claude, or Microsoft Copilot
 - Use response software, management software, automation, and SIG / CAIQ / VSAQ pages when the buyer is comparing workflow tools
