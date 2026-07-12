@@ -10,6 +10,7 @@ function validateItemList(file, data, blockIndex) {
   }
 
   const positions = [];
+  const urls = [];
   for (const [index, item] of data.itemListElement.entries()) {
     if (!item || item["@type"] !== "ListItem") {
       continue;
@@ -21,6 +22,12 @@ function validateItemList(file, data, blockIndex) {
       continue;
     }
     positions.push(item.position);
+
+    if (typeof item.url !== "string" || !item.url.length) {
+      errors.push(`${file} script #${blockIndex}: itemListElement[${index}] is missing a URL`);
+      continue;
+    }
+    urls.push(item.url);
   }
 
   if (!positions.length) {
@@ -44,6 +51,14 @@ function validateItemList(file, data, blockIndex) {
         }, found ${positions[index]}`
       );
     }
+  }
+
+  const seenUrls = new Set();
+  for (const url of urls) {
+    if (seenUrls.has(url)) {
+      errors.push(`${file} script #${blockIndex}: duplicate ItemList URL ${url}`);
+    }
+    seenUrls.add(url);
   }
 }
 

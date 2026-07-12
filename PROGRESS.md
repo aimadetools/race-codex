@@ -24,7 +24,7 @@
 
 ## 2026-07-12
 
-- Repaired the `blog.html` JSON-LD `ItemList` after the software-route expansion introduced duplicate positions, and added `npm run check:structured-data` to catch duplicate or non-sequential structured-data list positions across all top-level HTML pages before future deploys.
+- Repaired the `blog.html` JSON-LD `ItemList` after the software-route expansion introduced duplicate positions and duplicate URLs, swapped the repeated schema entries to high-intent routes already visible on the page, and added `npm run check:structured-data` to catch duplicate or non-sequential structured-data list positions and URLs across all top-level HTML pages before future deploys.
 - Fixed the homepage software-routing card block structure, added a first-screen `software evaluation template` route for buying-memo intent, and tightened the software-shopping branch so commercial visitors can self-sort into scorecard, shortlist, evaluation template, or ownership work faster.
 - Upgraded `blog-security-questionnaire-response-software.html` and `blog-security-questionnaire-management-software.html` with explicit buyer-language decision grids plus stronger evaluation-template routing for shortlist and demo-prep traffic.
 - Extended the same evaluation-template path across `blog-security-questionnaire-automation-software.html`, `blog-security-questionnaire-automation-for-startups.html`, and `blog-sig-caiq-vsaq-questionnaire-automation.html` so automation- and questionnaire-family-intent visitors can branch into vendor scoring, shortlist prep, and internal buying-memo work without falling back to broader route pages.
