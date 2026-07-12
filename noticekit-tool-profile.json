@@ -46,6 +46,8 @@
       "answer_bank": "https://noticekit.tech/gemini-security-questionnaire-answer-bank.html"
     },
     "anthropic": {
+      "template": "https://noticekit.tech/anthropic-security-questionnaire-answer-template.html",
+      "example": "https://noticekit.tech/blog-anthropic-security-questionnaire-answer-example.html",
       "answer_bank": "https://noticekit.tech/anthropic-security-questionnaire-answer-bank.html"
     },
     "claude": {
@@ -119,5 +121,5 @@
     "pricing": "https://noticekit.tech/pricing.html",
     "audit": "https://noticekit.tech/ai-security-questionnaire-audit.html"
   },
-  "last_updated_utc": "2026-07-11"
+  "last_updated_utc": "2026-07-12"
 }

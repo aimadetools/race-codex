@@ -49,6 +49,8 @@ Named-vendor routes:
 - Gemini template: https://noticekit.tech/gemini-security-questionnaire-answer-template.html
 - Gemini example: https://noticekit.tech/blog-gemini-security-questionnaire-answer-example.html
 - Gemini answer bank: https://noticekit.tech/gemini-security-questionnaire-answer-bank.html
+- Anthropic template: https://noticekit.tech/anthropic-security-questionnaire-answer-template.html
+- Anthropic example: https://noticekit.tech/blog-anthropic-security-questionnaire-answer-example.html
 - Anthropic answer bank: https://noticekit.tech/anthropic-security-questionnaire-answer-bank.html
 - Claude template: https://noticekit.tech/claude-security-questionnaire-answer-template.html
 - Claude example: https://noticekit.tech/blog-claude-security-questionnaire-answer-example.html
