@@ -4,6 +4,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## Completed
 
+- ✅ Completed software-evaluation route follow-through on remaining chooser/comparison surfaces: `about.html`, `choose-path.html`, the response-vs-management page, and the scorecard-vs-shortlist page now expose the evaluation-template branch and the watched source-tag inventory now covers the new software-routing paths cleanly.
 - ✅ Completed software-shopping route tightening: the homepage software-language card grid now includes the evaluation-template route, the response-software and management-software guides now branch more explicitly into scorecard / shortlist / evaluation template / ownership paths, and the `2026-07-12 04:03 UTC` structural plus local-link checks passed clean.
 - ✅ Completed automation and questionnaire-family software routing follow-through: the automation-software, broader automation, and SIG / CAIQ / VSAQ guides now route into the evaluation template alongside scorecard / shortlist comparisons, and the follow-up `npm run check:site-links` pass stayed clean across `166` HTML files.
 - ✅ Completed hub-surface software-routing follow-through: `free-tools.html`, `ai-procurement-hub.html`, and `start-here.html` now expose the evaluation-template branch beside the scorecard and shortlist on their early software-intent entry rows, and the follow-up `npm run check:site-links` pass stayed clean across `166` HTML files.
