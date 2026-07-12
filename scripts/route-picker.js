@@ -154,6 +154,20 @@
       secondaryHref: "ai-security-questionnaire-answer-builder.html",
       secondaryLabel: "Build answer + bundle",
     },
+    softwareEval: {
+      title: "Open the evaluation template.",
+      summary:
+        "The thread has moved into software comparison or demo prep, so use the evaluation template and demo checklist to turn the buying conversation into a clear memo.",
+      bullets: [
+        "Best when vendor names are already on the board",
+        "Keeps scoring, memo structure, and demo prep together",
+        "Use the shortlist if the team needs ranked vendor names first",
+      ],
+      primaryHref: "blog-security-questionnaire-software-evaluation-template.html",
+      primaryLabel: "Open evaluation template",
+      secondaryHref: "security-questionnaire-software-demo-checklist.html",
+      secondaryLabel: "Open demo checklist",
+    },
     repeatReview: {
       title: "Use the answer bank or Pro kit.",
       summary:
@@ -220,6 +234,7 @@
         managementSoftware: "homepage-management-software",
         responseSoftware: "homepage-response-software",
         spreadsheetRows: "homepage-spreadsheet-template",
+        softwareEval: "homepage-software-evaluation-template",
       },
     },
     {
@@ -229,6 +244,7 @@
         managementSoftware: "free-tools-management-software",
         responseSoftware: "free-tools-response-software",
         spreadsheetRows: "free-tools-spreadsheet-template",
+        softwareEval: "free-tools-software-evaluation-template",
       },
     },
     {
@@ -238,6 +254,7 @@
         managementSoftware: "pricing-management-software",
         responseSoftware: "pricing-response-software",
         spreadsheetRows: "pricing-spreadsheet-template",
+        softwareEval: "pricing-software-evaluation-template",
       },
     },
     {
@@ -247,6 +264,7 @@
         managementSoftware: "start-here-management-software",
         responseSoftware: "start-here-response-software",
         spreadsheetRows: "start-here-spreadsheet-template",
+        softwareEval: "start-here-software-evaluation-template",
       },
     },
     {
@@ -256,6 +274,7 @@
         managementSoftware: "ai-procurement-hub-management-software",
         responseSoftware: "ai-procurement-hub-response-software",
         spreadsheetRows: "ai-procurement-hub-spreadsheet-template",
+        softwareEval: "ai-procurement-hub-software-evaluation-template",
       },
     },
   ];
@@ -314,6 +333,10 @@
   };
 
   const pickRecommendation = (blockerValue, languageValue, needValue) => {
+    if (needValue === "memo") {
+      return { key: "softwareEval", reason: "buying memo or demo brief" };
+    }
+
     if (languageValue === "response-software") {
       return { key: "responseSoftware", reason: "response-software shopping" };
     }
