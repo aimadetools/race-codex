@@ -4,6 +4,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## Completed
 
+- ✅ 2026-07-12: Tightened the software evaluation-template and demo-checklist handoff copy with reciprocal FAQ guidance and clearer route language so the newest route pair explains when to use the memo first versus when to move directly into demo prep.
 - ✅ 2026-07-12: Collapsed the latest maintenance and route-expansion work into the summary history above: the `12:51 UTC` validation-maintenance checkpoint plus the earlier `12:42 UTC`, `08:22 UTC`, and `04:20 UTC` refreshes, named-vendor metadata exposure, structured-data validation, the `blog.html` JSON-LD fix, the software-shopping evaluation-template expansion, the new browser-only software demo checklist route, the `demo checklist vs evaluation template`, `demo checklist vs shortlist`, and `demo checklist vs scorecard` comparison pages, and the refreshed watched-source / inbox coverage all landed cleanly while validation stayed green and the queue stayed at zero.
 
 ## P0
