@@ -2,7 +2,7 @@
 
 These tasks are routine and can be handled quickly. Live reply-capture work stays in the P0 section; completed maintenance and shipping work stay collapsed into summary lines below.
 
-## Completed
+## Completed Summary
 
 - ✅ 2026-07-12: Collapsed the day’s maintenance and route-expansion work into the summary history above, including the `16:07 UTC` validation check, the evaluation-template and demo-checklist copy cleanup, the `12:51 UTC` and earlier maintenance checkpoints, named-vendor metadata exposure, the structured-data guardrail and `blog.html` fix, and the refreshed watched-source / inbox coverage, while validation stayed green and the queue stayed at zero.
 
