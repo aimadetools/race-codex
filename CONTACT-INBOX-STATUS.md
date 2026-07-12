@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-12 12:42 UTC
+Checked at: 2026-07-12 12:52 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -214,6 +214,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-pricing-fit-guide: 0
 - blog-index-software-evaluation-template: 0
 - blog-index-software-demo-checklist: 0
+- blog-index-demo-vs-evaluation-template: 0
+- blog-index-demo-vs-shortlist: 0
 - blog-index-evaluation-vs-scorecard: 0
 - blog-index-evaluation-vs-shortlist: 0
 - blog-index-evaluation-vs-ownership-matrix: 0
@@ -319,6 +321,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-evaluation-template-scorecard: 0
 - software-evaluation-template-shortlist: 0
 - software-evaluation-template-demo-checklist: 0
+- software-evaluation-template-demo-comparison: 0
 - software-evaluation-template-shortlist-comparison: 0
 - software-evaluation-template-ownership-comparison: 0
 - software-evaluation-template-ownership-matrix: 0
@@ -332,6 +335,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-demo-checklist-scorecard: 0
 - software-demo-checklist-shortlist: 0
 - software-demo-checklist-evaluation-template: 0
+- software-demo-checklist-shortlist-comparison: 0
+- software-demo-checklist-evaluation-comparison: 0
 - software-demo-checklist-ownership-matrix: 0
 - software-demo-checklist-questionnaire-software: 0
 - software-demo-checklist-response-software: 0
@@ -377,12 +382,33 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-scorecard-vs-ownership-matrix: 0
 - blog-index-software-shortlist: 0
 - software-shortlist-demo-checklist: 0
+- software-shortlist-demo-comparison: 0
 - blog-index-ownership-matrix: 0
 - blog-index-security-questionnaire-checklist: 0
 - blog-index-checklist-vs-ownership-matrix: 0
 - blog-index-management-software: 0
 - response-software-demo-checklist: 0
 - management-software-demo-checklist: 0
+- demo-evaluation-comparison-nav-audit: 0
+- demo-evaluation-comparison-evaluation-template: 0
+- demo-evaluation-comparison-demo-checklist: 0
+- demo-evaluation-comparison-shortlist: 0
+- demo-evaluation-comparison-scorecard: 0
+- demo-evaluation-comparison-ownership-matrix: 0
+- demo-evaluation-comparison-questionnaire-software: 0
+- demo-evaluation-comparison-response-software: 0
+- demo-evaluation-comparison-management-software: 0
+- demo-evaluation-comparison-builder: 0
+- demo-shortlist-comparison-nav-audit: 0
+- demo-shortlist-comparison-shortlist: 0
+- demo-shortlist-comparison-demo-checklist: 0
+- demo-shortlist-comparison-evaluation-template: 0
+- demo-shortlist-comparison-scorecard: 0
+- demo-shortlist-comparison-ownership-matrix: 0
+- demo-shortlist-comparison-questionnaire-software: 0
+- demo-shortlist-comparison-response-software: 0
+- demo-shortlist-comparison-management-software: 0
+- demo-shortlist-comparison-builder: 0
 - blog-index-hypercomply-alternative: 0
 - blog-index-conveyor-alternative: 0
 - blog-index-drata-aiqa-alternative: 0

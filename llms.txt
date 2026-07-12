@@ -27,6 +27,8 @@ Core pages:
 - Software shortlist worksheet: https://noticekit.tech/security-questionnaire-software-shortlist.html
 - Software evaluation template: https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html
 - Software demo checklist: https://noticekit.tech/security-questionnaire-software-demo-checklist.html
+- Demo checklist vs evaluation template: https://noticekit.tech/blog-security-questionnaire-software-demo-checklist-vs-evaluation-template.html
+- Demo checklist vs shortlist worksheet: https://noticekit.tech/blog-security-questionnaire-software-demo-checklist-vs-shortlist.html
 - Software ownership matrix: https://noticekit.tech/security-questionnaire-ownership-matrix.html
 - Response software guide: https://noticekit.tech/blog-security-questionnaire-response-software.html
 - Management software guide: https://noticekit.tech/blog-security-questionnaire-management-software.html

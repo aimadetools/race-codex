@@ -4,7 +4,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## Completed
 
-- ✅ 2026-07-12: Collapsed the latest maintenance and route-expansion work into the summary history above: the `12:42 UTC` validation-maintenance checkpoint plus the earlier `08:22 UTC` and `04:20 UTC` refreshes, named-vendor metadata exposure, structured-data validation, the `blog.html` JSON-LD fix, the software-shopping evaluation-template expansion, and the new browser-only software demo checklist route all landed cleanly while validation stayed green and the queue stayed at zero.
+- ✅ 2026-07-12: Collapsed the latest maintenance and route-expansion work into the summary history above: the `12:51 UTC` validation-maintenance checkpoint plus the earlier `12:42 UTC`, `08:22 UTC`, and `04:20 UTC` refreshes, named-vendor metadata exposure, structured-data validation, the `blog.html` JSON-LD fix, the software-shopping evaluation-template expansion, the new browser-only software demo checklist route, and the demo-checklist comparison pages all landed cleanly while validation stayed green and the queue stayed at zero.
 
 ## P0
 
