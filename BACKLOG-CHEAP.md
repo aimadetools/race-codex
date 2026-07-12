@@ -4,6 +4,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## Completed
 
+- ✅ 2026-07-12: Repaired the `blog.html` JSON-LD `ItemList` numbering regression and added a reusable `check:structured-data` validator so duplicate or out-of-order schema positions fail locally before deploys.
 - ✅ 2026-07-12: Completed the software-shopping route expansion across homepage, hubs, chooser/comparison pages, and response / management / automation / SIG guides, including the new evaluation-template branch and the matching watched-source coverage.
 - ✅ 2026-07-12: Completed the latest maintenance refresh through `04:20 UTC`, regenerated the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit and validation artifacts, and kept validation green at `2275` watched source tags plus `166` HTML files with no missing local links.
 

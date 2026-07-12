@@ -92,6 +92,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-12: repaired the `blog.html` structured-data `ItemList` numbering regression from the latest software-route additions, added a dedicated `check:structured-data` guardrail, and revalidated structured-data positions plus local links and watched source tags cleanly.
 - 2026-07-12: ran the `04:20 UTC` validation-maintenance pass, refreshed the live watch/status artifacts, kept the queue at zero, and revalidated watched-source plus local-link coverage cleanly at `2275` tags and `166` HTML files.
 - 2026-07-12: extended the software-shopping evaluation-template branch into the remaining chooser/comparison entry surfaces (`about`, `choose-path`, response-vs-management, and scorecard-vs-shortlist) and updated watched source-tag coverage so the new memo-intent paths validate cleanly.
 - 2026-07-12: tightened the commercial software-shopping wedge by fixing the homepage software-routing card block, promoting evaluation-template routing inside the homepage plus the response-software and management-software guides, extending the same branch into the automation-software, broader automation, and SIG / CAIQ / VSAQ guides, and closing the remaining first-screen hub gaps on free-tools / AI procurement hub / start-here, then revalidated local links cleanly.
