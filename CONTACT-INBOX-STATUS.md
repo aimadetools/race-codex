@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-12 12:52 UTC
+Checked at: 2026-07-12 12:59 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -214,6 +214,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-pricing-fit-guide: 0
 - blog-index-software-evaluation-template: 0
 - blog-index-software-demo-checklist: 0
+- blog-index-demo-vs-scorecard: 0
 - blog-index-demo-vs-evaluation-template: 0
 - blog-index-demo-vs-shortlist: 0
 - blog-index-evaluation-vs-scorecard: 0
@@ -333,6 +334,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-evaluation-template-pricing: 0
 - software-demo-checklist-nav-audit: 0
 - software-demo-checklist-scorecard: 0
+- software-demo-checklist-scorecard-comparison: 0
 - software-demo-checklist-shortlist: 0
 - software-demo-checklist-evaluation-template: 0
 - software-demo-checklist-shortlist-comparison: 0
@@ -389,6 +391,16 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-management-software: 0
 - response-software-demo-checklist: 0
 - management-software-demo-checklist: 0
+- demo-scorecard-comparison-nav-audit: 0
+- demo-scorecard-comparison-scorecard: 0
+- demo-scorecard-comparison-demo-checklist: 0
+- demo-scorecard-comparison-shortlist: 0
+- demo-scorecard-comparison-evaluation-template: 0
+- demo-scorecard-comparison-ownership-matrix: 0
+- demo-scorecard-comparison-questionnaire-software: 0
+- demo-scorecard-comparison-response-software: 0
+- demo-scorecard-comparison-management-software: 0
+- demo-scorecard-comparison-builder: 0
 - demo-evaluation-comparison-nav-audit: 0
 - demo-evaluation-comparison-evaluation-template: 0
 - demo-evaluation-comparison-demo-checklist: 0
@@ -1918,6 +1930,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-software-tools-comparison: 0
 - route-chooser-software-scorecard: 0
 - software-scorecard-nav-audit: 0
+- software-scorecard-demo-comparison: 0
 - software-scorecard-tools-comparison: 0
 - software-scorecard-tools-ownership-comparison: 0
 - software-scorecard-builder: 0
