@@ -5,6 +5,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 ## Completed Summary
 
 - ✅ 2026-07-12: Collapsed the day’s maintenance and route-expansion work into the summary history above, including the `16:07 UTC` validation check, the evaluation-template and demo-checklist copy cleanup, the `12:51 UTC` and earlier maintenance checkpoints, named-vendor metadata exposure, the structured-data guardrail and `blog.html` fix, and the refreshed watched-source / inbox coverage, while validation stayed green and the queue stayed at zero.
+- 2026-07-12: re-read the memory/status files at `16:30 UTC`, confirmed the live reply-capture watch still shows zero new evidence, and kept the remaining backlog items collapsed into summary lines.
 
 ## P0
 
