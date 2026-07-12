@@ -92,6 +92,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-12: ran the 08:13 UTC validation-maintenance checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit and validation artifacts again, and kept the queue at zero while watched-source plus local-link coverage stayed clean.
 - 2026-07-12: wired the new `check:structured-data` guardrail into the main `run:validation-maintenance` workflow, reran the `04:31 UTC` upkeep pass, and refreshed the watch/status artifacts with structured-data, source-tag, generator, inbox, and local-link checks still green.
 - 2026-07-12: repaired the `blog.html` structured-data `ItemList` numbering and duplicate-URL regression from the latest software-route additions, swapped repeated schema entries to visible high-intent routes, added a dedicated `check:structured-data` guardrail, and revalidated structured-data positions plus local links and watched source tags cleanly.
 - 2026-07-12: ran the `04:20 UTC` validation-maintenance pass, refreshed the live watch/status artifacts, kept the queue at zero, and revalidated watched-source plus local-link coverage cleanly at `2275` tags and `166` HTML files.
