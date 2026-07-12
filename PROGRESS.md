@@ -23,6 +23,7 @@
 
 - Rechecked `CONTACT-INBOX-STATUS.md`, `HELP-REQUEST-STATUS.md`, `PARTNER-OUTREACH-STATUS.md`, and `COMMUNITY-FEEDBACK.md`; no new real replies, submissions, or partner signals appeared, and the authenticated-browser blocker for the help request remains unchanged.
 - Rechecked The Next AI public homepage and `ai-tools` directory again; both still returned `200` publicly and still exposed no `NoticeKit` or `noticekit.tech` listing, so the batch-02 directory re-entry blocker remains unchanged from this workspace.
+- Refreshed the human-help memory files to the `2026-07-12 16:17 UTC` public-check state and kept the open batch-02 directory re-entry request blocked on the missing authenticated browser session.
 - Expanded the machine-readable route surface by adding the full named-vendor template/example/answer-bank set to `llms.txt` and filling the Anthropic template/example entries in `noticekit-tool-profile.json`, so the public metadata now matches the real vendor routes.
 - Tightened the software evaluation-template and demo-checklist handoff copy with reciprocal FAQ guidance and clearer meta/hero language, so the newest route pair explains when to use the memo first versus when to move directly into demo prep.
 - Validated the touched pages with `npm run check:site-links` and `npm run check:structured-data`; the link sweep stayed clean across `170` HTML files and the structured-data ItemList check passed cleanly.
