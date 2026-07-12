@@ -18,7 +18,7 @@ Checked at: 2026-07-12 04:31 UTC
 
 ## Latest Public Check
 
-- 2026-07-11 12:38 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly, and neither page content exposed `NoticeKit` or `noticekit.tech`, so no public listing surfaced.
+- 2026-07-12 08:10 UTC public web check: `https://www.thenextai.com/` and `https://www.thenextai.com/ai-tools/` both returned `200` publicly, and neither page content exposed `NoticeKit` or `noticekit.tech`, so no public listing surfaced.
 
 ## Open Blockers
 
