@@ -4,10 +4,8 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## Completed Summary
 
-- 2026-07-12: ran the 23:13 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
-- 2026-07-12: collapsed the completed backlog sections into summary lines again and left the live trigger-gated work unchanged.
-- 2026-07-12: folded the day’s maintenance, route-expansion, and metadata cleanup into the summary history, then kept validation green and the queue at zero.
-- 2026-07-12: ran the 20:29 UTC maintenance pass, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
+- 2026-07-12: ran the 23:19 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
+- 2026-07-12: collapsed the backlog sections into summary lines, folded the day’s maintenance and route-expansion work into history, and kept validation green with the queue at zero.
 - 2026-07-12: fixed the shared route picker so explicit next-step choices like memo, packet, proof, repeat-review, and blunt-read requests take priority over the starter-pack fallback, then rechecked the picker scripts and site links cleanly.
 
 ## P0
