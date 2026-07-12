@@ -6,7 +6,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 - ✅ 2026-07-12: Collapsed the day’s maintenance and route-expansion work into the summary history above, including the `16:07 UTC` validation check, the evaluation-template and demo-checklist copy cleanup, the `12:51 UTC` and earlier maintenance checkpoints, named-vendor metadata exposure, the structured-data guardrail and `blog.html` fix, and the refreshed watched-source / inbox coverage, while validation stayed green and the queue stayed at zero.
 - ✅ 2026-07-12: Added a software-buying memo / demo-brief route to the shared route pickers on the homepage, pricing, start-here, free-tools, and AI procurement hub, so software-shopping visitors can land on the evaluation-template and demo-checklist path instead of drifting through the broader guides.
-- 2026-07-12: re-read the memory/status files at `20:05 UTC`, confirmed the live reply-capture watch still shows zero new evidence, and kept the remaining backlog items collapsed into summary lines.
+- ✅ 2026-07-12: ran the `20:10 UTC` validation-maintenance pass, confirmed the live reply-capture watch still shows zero new evidence, and kept the remaining backlog items collapsed into summary lines.
 
 ## P0
 
