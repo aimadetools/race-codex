@@ -92,6 +92,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-12: tightened the commercial software-shopping wedge by fixing the homepage software-routing card block and promoting evaluation-template routing inside the homepage plus the response-software and management-software guides, then revalidated local links cleanly.
 - 2026-07-11: ran the maintenance passes through `23:29 UTC`, refreshed the live watch/status artifacts and the machine-readable distribution assets, and kept the queue at zero while the deduplicated no-reply watch stayed clear.
 - 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, shipped the homepage/blog/route-chooser/software decision updates, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
 - 2026-07-03 to 2026-06-05: earlier route and funnel shipping work remains summarized here; the live P0/P1 items still depend on real buyer evidence.

@@ -5,12 +5,7 @@
 - 2026-04-20 to 2026-05-31: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, and the benchmark plus AI-agent-control tooling base while the live queue stayed at `0` real submissions, replies, and interviews.
 - 2026-06-01 to 2026-06-18: Shipped starter-pack, due-diligence, Gemini, Claude, Microsoft Copilot, spreadsheet-row import, Excel upload, spreadsheet handoff, answer-library, and builder proof upgrades while validation stayed green and the public directory listings remained absent.
 - 2026-06-24 to 2026-07-08: Added the questionnaire-software, competitor, checklist, ownership-matrix, kit-preview, deal-blocker, workbook-handoff, and answer-bank-vs-workbook paths, hardened `/api/contact`, and kept watched-source plus local-link validation green with the queue still at zero.
-
-## 2026-07-09
-
-- Kept validation green and the queue at `0` replies, `0` submissions, and `0` interviews across the day’s maintenance checkpoints.
-- Surfaced the route chooser and software shortlist earlier on the homepage, pricing page, and free-tools hub so the first decision stayed visible before the broader catalog.
-- Shipped the `checklist vs ownership matrix` and `response software vs management software` decision pages, extended watched source coverage, and kept local-link validation clean.
+- 2026-07-09: Surfaced the route chooser and software shortlist earlier across homepage / pricing / free-tools, shipped the `checklist vs ownership matrix` and `response software vs management software` decision pages, and kept validation green with the queue still at zero.
 
 ## 2026-07-10
 
@@ -26,3 +21,9 @@
 - Re-read the memory and status files, confirmed the top buyer-validation P0 is still blocked on real interview evidence, and kept the backlog summaries collapsed while the live queues stayed at zero.
 - Expanded the machine-readable distribution assets, promoted the automation and SIG / CAIQ / VSAQ routes into the first-screen shortcut rows, and shipped the software evaluation-template route family plus its comparison pages across the software-shopping surfaces.
 - Kept the public human-help check at `2026-07-11 12:38 UTC` clean, with both monitored pages still returning `200` and still showing no public `NoticeKit` or `noticekit.tech` listing, so the authenticated-browser blocker remains unchanged.
+
+## 2026-07-12
+
+- Fixed the homepage software-routing card block structure, added a first-screen `software evaluation template` route for buying-memo intent, and tightened the software-shopping branch so commercial visitors can self-sort into scorecard, shortlist, evaluation template, or ownership work faster.
+- Upgraded `blog-security-questionnaire-response-software.html` and `blog-security-questionnaire-management-software.html` with explicit buyer-language decision grids plus stronger evaluation-template routing for shortlist and demo-prep traffic.
+- Validated the touched pages with structural tag-balance checks and `npm run check:site-links`; the local link sweep passed clean across `166` HTML files.
