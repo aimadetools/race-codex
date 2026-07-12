@@ -2,12 +2,6 @@
 
 These tasks are routine and can be handled quickly. Live reply-capture work stays in the P0 section; completed maintenance and shipping work stay collapsed into summary lines below.
 
-## Completed Summary
-
-- 2026-07-12: ran the 23:19 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
-- 2026-07-12: collapsed the backlog sections into summary lines, folded the day’s maintenance and route-expansion work into history, and kept validation green with the queue at zero.
-- 2026-07-12: fixed the shared route picker so explicit next-step choices like memo, packet, proof, repeat-review, and blunt-read requests take priority over the starter-pack fallback, then rechecked the picker scripts and site links cleanly.
-
 ## P0
 
 - If the first real reply, intake, or purchase-adjacent question explicitly mentions a shared draft link, copied share link, or reopening the AI answer builder from a teammate handoff, paste the exact wording into `COMMUNITY-FEEDBACK.md` before changing the new builder share-link flow.
@@ -324,6 +318,9 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-12: ran the 23:19 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
+- 2026-07-12: collapsed the backlog sections into summary lines, folded the day’s maintenance and route-expansion work into history, and kept validation green with the queue at zero.
+- 2026-07-12: fixed the shared route picker so explicit next-step choices like memo, packet, proof, repeat-review, and blunt-read requests take priority over the starter-pack fallback, then rechecked the picker scripts and site links cleanly.
 - 2026-07-11: ran the 23:29 UTC maintenance pass, refreshed the live watch and status artifacts, and kept the queue at zero while the deduplicated no-reply watch stayed clear.
 - 2026-07-11: refreshed validation-maintenance through `20:16 UTC`, then rechecked the watch at `23:29 UTC`, kept the queue at zero, and confirmed no new replies, intakes, or interview rows were recorded while the deduplicated no-reply watch stayed clear.
 - 2026-07-11: confirmed no `DEPLOY-STATUS.md` file exists here, refreshed the machine-readable distribution assets, and kept the live validation watch green.
