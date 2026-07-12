@@ -4,8 +4,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## Completed
 
-- ✅ 2026-07-12: Ran the 08:22 UTC validation-maintenance checkpoint, refreshed the status artifacts again, reverified The Next AI homepage plus `ai-tools` directory still exposed no NoticeKit listing, and kept the live queue at zero while the watched-source and local-link checks stayed green.
-- ✅ 2026-07-12: Collapsed the latest maintenance and route-expansion work into the summary history above: named-vendor metadata exposure, structured-data validation, the `blog.html` JSON-LD fix, the software-shopping evaluation-template expansion, and the `04:20 UTC` maintenance refresh all landed cleanly with validation still green.
+- ✅ 2026-07-12: Collapsed the latest maintenance and route-expansion work into the summary history above: the `08:22 UTC` validation-maintenance checkpoint, named-vendor metadata exposure, structured-data validation, the `blog.html` JSON-LD fix, the software-shopping evaluation-template expansion, and the `04:20 UTC` maintenance refresh all landed cleanly while validation stayed green and the queue stayed at zero.
 
 ## P0
 
