@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-12 08:22 UTC
+Checked at: 2026-07-12 12:42 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -213,6 +213,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-response-workbook: 0
 - blog-index-pricing-fit-guide: 0
 - blog-index-software-evaluation-template: 0
+- blog-index-software-demo-checklist: 0
 - blog-index-evaluation-vs-scorecard: 0
 - blog-index-evaluation-vs-shortlist: 0
 - blog-index-evaluation-vs-ownership-matrix: 0
@@ -223,6 +224,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - homepage-ai-pro-kit: 0
 - homepage-pricing-fit-guide: 0
 - homepage-software-evaluation-template: 0
+- homepage-software-demo-checklist: 0
 - homepage-evaluation-scorecard-comparison: 0
 - homepage-evaluation-shortlist-comparison: 0
 - homepage-evaluation-ownership-comparison: 0
@@ -230,6 +232,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - start-here-sample-answers: 0
 - start-here-answer-bank-vs-response-template: 0
 - start-here-software-evaluation-template: 0
+- start-here-software-demo-checklist: 0
 - start-here-evaluation-scorecard-comparison: 0
 - start-here-evaluation-shortlist-comparison: 0
 - start-here-evaluation-ownership-comparison: 0
@@ -238,6 +241,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-answer-bank-vs-response-template: 0
 - pricing-pricing-fit-guide: 0
 - pricing-software-evaluation-template: 0
+- pricing-software-demo-checklist: 0
 - pricing-evaluation-scorecard-comparison: 0
 - pricing-evaluation-shortlist-comparison: 0
 - pricing-evaluation-ownership-comparison: 0
@@ -258,6 +262,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-fit-guide-teardown: 0
 - free-tools-response-workbook: 0
 - free-tools-pricing-fit-guide: 0
+- free-tools-software-demo-checklist: 0
 - spreadsheet-template-response-workbook: 0
 - response-workbook-builder: 0
 - response-workbook-spreadsheet-template: 0
@@ -313,6 +318,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-evaluation-template-nav-audit: 0
 - software-evaluation-template-scorecard: 0
 - software-evaluation-template-shortlist: 0
+- software-evaluation-template-demo-checklist: 0
 - software-evaluation-template-shortlist-comparison: 0
 - software-evaluation-template-ownership-comparison: 0
 - software-evaluation-template-ownership-matrix: 0
@@ -322,6 +328,16 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-evaluation-template-response-management-comparison: 0
 - software-evaluation-template-builder: 0
 - software-evaluation-template-pricing: 0
+- software-demo-checklist-nav-audit: 0
+- software-demo-checklist-scorecard: 0
+- software-demo-checklist-shortlist: 0
+- software-demo-checklist-evaluation-template: 0
+- software-demo-checklist-ownership-matrix: 0
+- software-demo-checklist-questionnaire-software: 0
+- software-demo-checklist-response-software: 0
+- software-demo-checklist-management-software: 0
+- software-demo-checklist-builder: 0
+- software-demo-checklist-pricing: 0
 - blog-index-ai-evidence-map: 0
 - blog-index-ai-follow-up-pack: 0
 - blog-index-ai-answer-bank: 0
@@ -356,13 +372,17 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-sig-guide: 0
 - blog-index-questionnaire-software: 0
 - questionnaire-software-evaluation-template: 0
+- questionnaire-software-demo-checklist: 0
 - blog-index-software-tools-comparison: 0
 - blog-index-scorecard-vs-ownership-matrix: 0
 - blog-index-software-shortlist: 0
+- software-shortlist-demo-checklist: 0
 - blog-index-ownership-matrix: 0
 - blog-index-security-questionnaire-checklist: 0
 - blog-index-checklist-vs-ownership-matrix: 0
 - blog-index-management-software: 0
+- response-software-demo-checklist: 0
+- management-software-demo-checklist: 0
 - blog-index-hypercomply-alternative: 0
 - blog-index-conveyor-alternative: 0
 - blog-index-drata-aiqa-alternative: 0
@@ -495,6 +515,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-software-shortlist: 0
 - start-here-software-shortlist: 0
 - ai-procurement-hub-software-shortlist: 0
+- ai-procurement-hub-software-demo-checklist: 0
 - questionnaire-software-shortlist: 0
 - questionnaire-software-tools-comparison: 0
 - questionnaire-software-scorecard-ownership-comparison: 0
