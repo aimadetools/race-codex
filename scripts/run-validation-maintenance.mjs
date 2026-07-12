@@ -116,6 +116,7 @@ async function main() {
   runCommand("Free teardown handoff check", ["npm", "run", "check:free-teardown-handoff"]);
   runCommand("Self-audit production check", ["npm", "run", "check:self-audit-production"]);
   runCommand("Source tag coverage check", ["npm", "run", "check:source-tag-coverage"]);
+  runCommand("Structured-data ItemList check", ["npm", "run", "check:structured-data"]);
   runCommand("Site link check", ["npm", "run", "check:site-links"]);
   runCommand("No-reply checkpoint log", [
     "npm",

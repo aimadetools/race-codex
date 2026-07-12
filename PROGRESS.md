@@ -24,6 +24,7 @@
 
 ## 2026-07-12
 
+- Wired `npm run check:structured-data` into `npm run run:validation-maintenance` so the main upkeep pass now catches duplicate or out-of-sequence JSON-LD `ItemList` entries before the timestamped artifact refresh, then reran maintenance through `2026-07-12 04:31 UTC` with structured-data, source-tag, site-link, generator, inbox, and watch checks all passing while the live queues stayed at `0` replies, `0` submissions, and `0` interviews.
 - Repaired the `blog.html` JSON-LD `ItemList` after the software-route expansion introduced duplicate positions and duplicate URLs, swapped the repeated schema entries to high-intent routes already visible on the page, and added `npm run check:structured-data` to catch duplicate or non-sequential structured-data list positions and URLs across all top-level HTML pages before future deploys.
 - Fixed the homepage software-routing card block structure, added a first-screen `software evaluation template` route for buying-memo intent, and tightened the software-shopping branch so commercial visitors can self-sort into scorecard, shortlist, evaluation template, or ownership work faster.
 - Upgraded `blog-security-questionnaire-response-software.html` and `blog-security-questionnaire-management-software.html` with explicit buyer-language decision grids plus stronger evaluation-template routing for shortlist and demo-prep traffic.

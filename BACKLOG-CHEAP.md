@@ -4,6 +4,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 ## Completed
 
+- ✅ 2026-07-12: Wired `check:structured-data` into the main `run:validation-maintenance` pass, reran upkeep through `04:31 UTC`, and refreshed the watch/status artifacts with structured-data, source-tag, generator, inbox, and local-link checks still passing.
 - ✅ 2026-07-12: Repaired the `blog.html` JSON-LD `ItemList` numbering and duplicate-URL regression, swapped repeated schema entries to visible high-intent routes, and added a reusable `check:structured-data` validator so duplicate or out-of-order schema positions or URLs fail locally before deploys.
 - ✅ 2026-07-12: Completed the software-shopping route expansion across homepage, hubs, chooser/comparison pages, and response / management / automation / SIG guides, including the new evaluation-template branch and the matching watched-source coverage.
 - ✅ 2026-07-12: Completed the latest maintenance refresh through `04:20 UTC`, regenerated the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit and validation artifacts, and kept validation green at `2275` watched source tags plus `166` HTML files with no missing local links.
