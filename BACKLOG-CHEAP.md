@@ -6,6 +6,7 @@ These tasks are routine and can be handled quickly. Live reply-capture work stay
 
 - ✅ 2026-07-12: Collapsed the day’s maintenance, route-expansion, and metadata cleanup into the summary history above while validation stayed green and the queue stayed at zero.
 - ✅ 2026-07-12: Ran the 20:29 UTC maintenance pass, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
+- ✅ 2026-07-12: Fixed the shared route picker so explicit next-step choices like memo, packet, proof, repeat-review, and blunt-read requests take priority over the starter-pack fallback, then rechecked the picker scripts and site links cleanly.
 
 ## P0
 

@@ -380,6 +380,95 @@
           const languageValue = language.value;
           const needValue = need.value;
 
+          const needRecommendation = (() => {
+            if (needValue === "memo") {
+              return {
+                title: "Open the software evaluation template.",
+                summary: "The route is mostly clear and the immediate need is an internal memo, scoring sheet, or demo-prep artifact, so move into the evaluation template instead of another broad software comparison.",
+                bullets: [
+                  "Best when the team needs a copyable buying memo next",
+                  "Keeps the shortlist, scorecard, and ownership routes one click away",
+                  "Use the scorecard first if the category still feels fuzzy"
+                ],
+                primaryHref: "blog-security-questionnaire-software-evaluation-template.html",
+                primaryLabel: "Open evaluation template",
+                secondaryHref: "security-questionnaire-software-shortlist.html",
+                secondaryLabel: "Open shortlist worksheet"
+              };
+            }
+
+            if (needValue === "pack") {
+              return {
+                title: "Inspect the sample bundle first.",
+                summary: "You need a fuller handoff package, so show the exact bundle shape before you ask for checkout.",
+                bullets: [
+                  "Best when the buyer wants more than one paragraph",
+                  "Use the sample bundle to inspect the artifact shape",
+                  "Move into the packet builder if the thread is already procurement-sized"
+                ],
+                primaryHref: "ai-security-questionnaire-starter-pack-bundle-sample.html",
+                primaryLabel: "Open sample bundle",
+                secondaryHref: "ai-due-diligence-packet-builder.html",
+                secondaryLabel: "Build due diligence packet"
+              };
+            }
+
+            if (needValue === "proof") {
+              return {
+                title: "Open the evidence map.",
+                summary: "The paragraph exists, but the proof trail is thin, so package the claim, owner, review date, and recheck trigger first.",
+                bullets: [
+                  "Best when the buyer wants proof links or named ownership",
+                  "Keeps review date and approval path explicit",
+                  "Use the builder or packet when the proof needs to rejoin a fuller thread"
+                ],
+                primaryHref: "ai-security-review-evidence-map.html",
+                primaryLabel: "Open evidence map",
+                secondaryHref: "ai-security-questionnaire-answer-builder.html",
+                secondaryLabel: "Build answer + bundle"
+              };
+            }
+
+            if (needValue === "repeat") {
+              return {
+                title: "Use the answer bank or Pro kit.",
+                summary: "The same questions keep coming back, so reusable wording is the fastest fix.",
+                bullets: [
+                  "Best when the review is recurring",
+                  "Keeps wording, proof links, and packet files reusable",
+                  "Use the starter pack only if you still need one answer now"
+                ],
+                primaryHref: "ai-security-questionnaire-answer-bank.html",
+                primaryLabel: "Open answer bank",
+                secondaryHref: "ai-security-questionnaire-pro-kit.html",
+                secondaryLabel: "Open Pro kit"
+              };
+            }
+
+            if (needValue === "read") {
+              return {
+                title: "Open the deal blocker path first.",
+                summary: "You do not need another template yet; you need the triage page that keeps free teardown and paid audit in one place.",
+                bullets: [
+                  "Best when the thread needs judgment",
+                  "Keeps the free teardown and paid audit together",
+                  "Prevents another loop through a generic template"
+                ],
+                primaryHref: "ai-deal-blocker.html",
+                primaryLabel: "Open deal blocker path",
+                secondaryHref: "ai-security-questionnaire-audit.html",
+                secondaryLabel: "See audit details"
+              };
+            }
+
+            return null;
+          })();
+
+          if (needRecommendation) {
+            setRecommendation(needRecommendation, "need-based next step");
+            return;
+          }
+
           let recommendation = {
             title: "Start with the AI starter pack.",
             summary: "One live answer is blocking the deal, so the shortest route is the starter pack or builder before the review widens, with the workbook template guide available if the buyer already sent a live sheet or portal export.",

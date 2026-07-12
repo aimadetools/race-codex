@@ -337,6 +337,22 @@
       return { key: "softwareEval", reason: "buying memo or demo brief" };
     }
 
+    if (needValue === "pack") {
+      return { key: "pack", reason: "fuller handoff package" };
+    }
+
+    if (needValue === "proof") {
+      return { key: "proof", reason: "proof links and owner details" };
+    }
+
+    if (needValue === "repeat") {
+      return { key: "repeatReview", reason: "repeat-review cleanup" };
+    }
+
+    if (needValue === "read") {
+      return { key: "judgment", reason: "human judgment" };
+    }
+
     if (languageValue === "response-software") {
       return { key: "responseSoftware", reason: "response-software shopping" };
     }
@@ -372,20 +388,16 @@
       return { key: "inventory", reason: "scattered vendor facts" };
     }
 
-    if (blockerValue === "proof" || needValue === "proof") {
+    if (blockerValue === "proof") {
       return { key: "proof", reason: "proof-first cleanup" };
     }
 
-    if (blockerValue === "repeat-review" || needValue === "repeat") {
+    if (blockerValue === "repeat-review") {
       return { key: "repeatReview", reason: "repeat-review cleanup" };
     }
 
-    if (blockerValue === "judgment" || needValue === "read") {
+    if (blockerValue === "judgment") {
       return { key: "judgment", reason: "human judgment" };
-    }
-
-    if (needValue === "pack") {
-      return { key: "pack", reason: "fuller handoff package" };
     }
 
     return { key: "oneAnswer", reason: "one-answer-now cleanup" };
