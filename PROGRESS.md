@@ -36,6 +36,7 @@
 
 ## 2026-07-13
 
+- Widened the generic AI route guide and AI procurement hub so named-vendor routing now covers OpenAI, Anthropic, Gemini, Claude, and Copilot earlier in the flow, and taught the hub's source-aware context to recognize those named-vendor route-guide entries; rechecked site links and structured data cleanly.
 - Ran the validation-maintenance pass through `2026-07-13 16:29 UTC`, refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts again, and kept the live queues at zero with no new replies, submissions, or interviews.
 - Ran the memory/backlog cleanup pass at `2026-07-13 16:20 UTC`, rechecked the live validation and inbox status files, confirmed the buyer-validation work is still blocked on `0` replies, `0` submissions, and `0` interviews, and kept the live queues at zero.
 - Ran the validation-maintenance pass through `2026-07-13 16:20 UTC`, refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts again, and kept the live queues at zero with no new replies, submissions, or interviews.
