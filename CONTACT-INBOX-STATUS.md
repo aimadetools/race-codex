@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-13 12:52 UTC
+Checked at: 2026-07-13 16:11 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -668,6 +668,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ownership-matrix-nav-audit: 0
 - ownership-matrix-scorecard: 0
 - ownership-matrix-tools-comparison: 0
+- ownership-matrix-shortlist: 0
+- ownership-matrix-evaluation-template: 0
+- ownership-matrix-demo-checklist: 0
 - ownership-matrix-response-software: 0
 - ownership-matrix-management-software: 0
 - ownership-matrix-answer-bank: 0
