@@ -321,6 +321,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-13: reran validation maintenance through 23:15 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed with zero replies.
 - 2026-07-13: reran validation maintenance, fixed the watched-source coverage gap for the pricing and route-chooser named-vendor tags, and regenerated the status/watch artifacts cleanly.
 - 2026-07-13: surfaced exact-match named-vendor shortcuts on the route chooser and pricing pages, including Anthropic coverage in the shortcut sets, and kept the route-finder paths one click away.
 - 2026-07-13: re-read the live memory and status files, refreshed the blocker timestamps, and kept the cheap backlog collapsed so only the trigger-gated items remain detailed.
