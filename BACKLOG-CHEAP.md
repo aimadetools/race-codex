@@ -318,6 +318,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-13: tightened the pricing-page named-vendor heading and added explicit spreadsheet-handoff handling to the pricing offer-fit picker so the paid-fit advice matches the buyer's actual state.
 - 2026-07-12: ran the 23:31 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
 - 2026-07-12: ran the 23:26 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
 - 2026-07-12: ran the 23:19 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.

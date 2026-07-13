@@ -3,13 +3,7 @@
 ## Key Milestones
 
 - 2026-04-20 to 2026-07-09: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, the benchmark plus AI-agent-control tooling base, the starter-pack / due-diligence / named-vendor expansions, the spreadsheet-row / Excel / workbook handoff proof, and the questionnaire-software / competitor / checklist / ownership-matrix / kit-preview / deal-blocker / route-chooser / shortlist surfaces while validation stayed green and the queue remained at zero.
-
-## 2026-07-10
-
-- Kept validation green and the queue at `0` replies, `0` submissions, and `0` interviews while the public The Next AI checks still showed no visible NoticeKit listing.
-- Shipped browser-only share-link handoff for the live answer builder and repeat-review answer-bank builder so local drafts can be forwarded internally without accounts or server storage.
-- Upgraded the software-fit scorecard with shortlist-aware vendor parsing, stronger route judgment, and a clearer snapshot of likely vendor routes before the full shortlist worksheet.
-- Added the software evaluation-template route family and cross-linked it across the software-shopping surfaces, then reran site-link and source-tag checks cleanly.
+- 2026-07-10: Shipped browser-only share-link handoff for the live answer builder and repeat-review answer-bank builder, upgraded the software-fit scorecard, and expanded the software evaluation-template route family across the site.
 
 ## 2026-07-11
 
@@ -39,3 +33,9 @@
 - Collapsed the duplicate completed-summary block in `BACKLOG-CHEAP.md` into one historical section and kept the live P0/P1 watch items unchanged.
 - Collapsed the cheap and premium backlog completed sections, kept the last three days detailed, and left the live P0/P1 evidence gates blocked on missing interview evidence.
 - Ran a follow-up memory cleanup pass, confirmed there is still no `DEPLOY-STATUS.md` file in this workspace, and kept the live evidence gates blocked while the backlog history stayed compact.
+
+## 2026-07-13
+
+- Tightened the pricing-page named-vendor copy so the heading now matches the full OpenAI, Gemini, Anthropic, Claude, and Microsoft Copilot route set.
+- Added explicit spreadsheet-handoff handling to the pricing offer-fit picker so a spreadsheet-shaped first answer stays on Starter while spreadsheet-handoff plus repeat-review pressure escalates to Pro.
+- Kept the repo checks aligned with the copy and picker updates, then folded the memory and backlog summaries forward again.

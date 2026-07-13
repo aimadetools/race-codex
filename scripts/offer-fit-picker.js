@@ -114,6 +114,14 @@
   }
 
   function pickRecommendation(blocker, state, need) {
+    if (blocker === "spreadsheet-handoff") {
+      if (state === "procurement-expanded" || need === "reusable-files") {
+        return { key: "pro", reason: "spreadsheet handoff plus repeat-review pressure" };
+      }
+
+      return { key: "starter", reason: "spreadsheet-shaped first answer" };
+    }
+
     if (
       need === "outside-read" ||
       state === "buyer-pushback" ||
