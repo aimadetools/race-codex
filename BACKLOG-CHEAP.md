@@ -321,6 +321,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-13: ran the 16:17 UTC validation-maintenance checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live trigger-driven tasks collapsed.
 - 2026-07-13: fixed the ownership-matrix source-tag coverage gap in the watcher manifest, reran validation maintenance cleanly through `16:11 UTC`, and kept the live trigger-driven tasks collapsed.
 - 2026-07-13: re-read the live memory, inbox, help, and community status files at `16:06 UTC`, confirmed no reply or intake trigger had landed, and left the trigger-gated backlog items unchanged.
 - 2026-07-13: elevated the judgment-first deal-blocker hierarchy so teardown and audit now surface before the drafting routes in the hero and card grid.

@@ -36,6 +36,7 @@
 
 ## 2026-07-13
 
+- Ran the validation-maintenance pass through `2026-07-13 16:17 UTC`, refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts again, and kept the live queues at zero with no new replies, submissions, or interviews.
 - Closed the next software-buying continuity gap in `security-questionnaire-ownership-matrix.html`: the planner now routes back into the scorecard, shortlist, evaluation template, and demo checklist with live query-state handoff, and its recommended next-step buttons now change with the ownership score instead of pointing at static dead-end links.
 - Fixed the software evaluation-template recommended-route panel so each CTA now keeps its label aligned with its destination after the route recommendation changes, then revalidated the software-buying surfaces with `npm run check:site-links` and `npm run check:structured-data`.
 - Shipped cross-tool software-buying handoff continuity: the software fit scorecard now prefills the evaluation template, the shortlist now prefills both the evaluation template and demo checklist, and the evaluation-template plus demo-checklist tools now autosave locally, load from query-state handoffs, and generate reusable share links instead of acting like dead-end pages.
