@@ -87,7 +87,10 @@
           <p>Use this ownership matrix when the real blocker is not one missing paragraph anymore. The queue now needs a clear intake owner, draft owner, proof reviewer, approval gate, escalation path, and stale-answer recheck rule. Fill the live workflow once, then copy an internal operating brief and download a starter ownership matrix without sending anything to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#matrix">Open ownership planner</a>
-            <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=ownership-matrix-scorecard">Open software fit scorecard</a>
+            <a class="button secondary" id="hero-scorecard-link" href="security-questionnaire-software-fit-scorecard.html?source=ownership-matrix-scorecard">Open software fit scorecard</a>
+            <a class="button secondary" id="hero-shortlist-link" href="security-questionnaire-software-shortlist.html?source=ownership-matrix-shortlist">Open shortlist worksheet</a>
+            <a class="button secondary" id="hero-evaluation-link" href="blog-security-questionnaire-software-evaluation-template.html?source=ownership-matrix-evaluation-template">Open evaluation template</a>
+            <a class="button secondary" id="hero-demo-link" href="security-questionnaire-software-demo-checklist.html?source=ownership-matrix-demo-checklist">Open demo checklist</a>
             <a class="button secondary" href="blog-security-questionnaire-software-fit-scorecard-vs-ownership-matrix.html?source=ownership-matrix-tools-comparison">Scorecard vs ownership matrix</a>
             <a class="button secondary" href="blog-security-questionnaire-software-shortlist-vs-ownership-matrix.html?source=ownership-matrix-shortlist-comparison">Shortlist vs ownership matrix</a>
             <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template-vs-ownership-matrix.html?source=ownership-matrix-evaluation-comparison">Evaluation template vs ownership matrix</a>
@@ -250,6 +253,11 @@
               <strong id="next-step-title">Best next step</strong>
               <p id="next-step-copy">Use this ownership matrix plus the answer bank or response-software guide so the queue stops drifting before you widen into heavier management software.</p>
             </div>
+            <div class="hero-actions">
+              <a class="button" id="next-step-primary" href="security-questionnaire-software-fit-scorecard.html?source=ownership-matrix-scorecard">Open software fit scorecard</a>
+              <a class="button secondary" id="next-step-secondary" href="security-questionnaire-software-shortlist.html?source=ownership-matrix-shortlist">Open shortlist worksheet</a>
+              <a class="button secondary" id="next-step-tertiary" href="blog-security-questionnaire-software-evaluation-template.html?source=ownership-matrix-evaluation-template">Open evaluation template</a>
+            </div>
             <div class="result-list">
               <div>
                 <strong>What the queue needs now</strong>
@@ -309,6 +317,10 @@
             </article>
           </div>
           <div class="hero-actions" style="margin-top:20px;">
+            <a class="button secondary" id="footer-scorecard-link" href="security-questionnaire-software-fit-scorecard.html?source=ownership-matrix-scorecard">Open software fit scorecard</a>
+            <a class="button secondary" id="footer-shortlist-link" href="security-questionnaire-software-shortlist.html?source=ownership-matrix-shortlist">Open shortlist worksheet</a>
+            <a class="button secondary" id="footer-evaluation-link" href="blog-security-questionnaire-software-evaluation-template.html?source=ownership-matrix-evaluation-template">Open evaluation template</a>
+            <a class="button secondary" id="footer-demo-link" href="security-questionnaire-software-demo-checklist.html?source=ownership-matrix-demo-checklist">Open demo checklist</a>
             <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=ownership-matrix-builder">Build answer + bundle</a>
             <a class="button secondary" href="blog-security-questionnaire-spreadsheet-template.html?source=ownership-matrix-spreadsheet-template">Open workbook template guide</a>
             <a class="button secondary" href="ai-security-questionnaire-answer-bank.html?source=ownership-matrix-answer-bank">Open answer bank</a>
@@ -360,6 +372,17 @@
         const downloadCsvButton = document.querySelector("#download-csv");
         const copyShareLinkButton = document.querySelector("#copy-share-link");
         const clearDraftButton = document.querySelector("#clear-draft");
+        const heroScorecardLink = document.querySelector("#hero-scorecard-link");
+        const heroShortlistLink = document.querySelector("#hero-shortlist-link");
+        const heroEvaluationLink = document.querySelector("#hero-evaluation-link");
+        const heroDemoLink = document.querySelector("#hero-demo-link");
+        const nextStepPrimary = document.querySelector("#next-step-primary");
+        const nextStepSecondary = document.querySelector("#next-step-secondary");
+        const nextStepTertiary = document.querySelector("#next-step-tertiary");
+        const footerScorecardLink = document.querySelector("#footer-scorecard-link");
+        const footerShortlistLink = document.querySelector("#footer-shortlist-link");
+        const footerEvaluationLink = document.querySelector("#footer-evaluation-link");
+        const footerDemoLink = document.querySelector("#footer-demo-link");
 
         function getValue(id) {
           const node = document.getElementById(id);
@@ -474,6 +497,87 @@
           return url.toString();
         }
 
+        function buildScorecardLink(payload) {
+          const url = new URL("security-questionnaire-software-fit-scorecard.html", window.location.href);
+          url.searchParams.set("source", "ownership-matrix-scorecard");
+          url.searchParams.set("company", payload.company);
+          url.searchParams.set("stage", payload["queue-shape"] === "one-answer" ? "first-answer" : payload["queue-shape"] === "repeat-review" ? "repeat-review" : payload["queue-shape"] === "program" ? "platform-eval" : "multi-owner");
+          url.searchParams.set("volume", payload.volume);
+          url.searchParams.set("approved", payload["answer-maturity"] === "rough" ? "none" : payload["answer-maturity"] === "mixed" ? "partial" : "stable");
+          url.searchParams.set("reviewers", payload["need-approvals"] || payload["need-escalation"] || payload["need-analytics"] ? "4plus" : "2-3");
+          url.searchParams.set("intake", payload["intake-shape"]);
+          url.searchParams.set("blocker", payload.blocker);
+          url.searchParams.set("row", payload["need-row-context"] ? "1" : "0");
+          url.searchParams.set("library", payload["need-answer-reuse"] ? "1" : "0");
+          url.searchParams.set("assignments", payload["need-approvals"] ? "1" : "0");
+          url.searchParams.set("analytics", payload["need-analytics"] ? "1" : "0");
+          url.searchParams.set("trust", payload["queue-shape"] === "program" ? "1" : "0");
+          url.searchParams.set("proof", payload["need-proof-review"] ? "1" : "0");
+          return `${url.pathname}${url.search}`;
+        }
+
+        function buildShortlistLink(payload) {
+          const url = new URL("security-questionnaire-software-shortlist.html", window.location.href);
+          url.searchParams.set("source", "ownership-matrix-shortlist");
+          url.searchParams.set("company", payload.company);
+          url.searchParams.set("stage", payload["queue-shape"] === "one-answer" ? "first-answer" : payload["queue-shape"] === "repeat-review" ? "repeat-review" : "platform-shortlist");
+          url.searchParams.set("volume", payload.volume);
+          url.searchParams.set("maturity", payload["answer-maturity"]);
+          url.searchParams.set("intake", payload["intake-shape"]);
+          url.searchParams.set("blocker", payload.blocker);
+          url.searchParams.set("local", payload["queue-shape"] === "one-answer" ? "1" : "0");
+          url.searchParams.set("row", payload["need-row-context"] ? "1" : "0");
+          url.searchParams.set("library", payload["need-answer-reuse"] ? "1" : "0");
+          url.searchParams.set("assignments", payload["need-approvals"] ? "1" : "0");
+          url.searchParams.set("trust", payload["queue-shape"] === "program" ? "1" : "0");
+          url.searchParams.set("tprm", payload["queue-shape"] === "program" ? "1" : "0");
+          url.searchParams.set("analytics", payload["need-analytics"] ? "1" : "0");
+          url.searchParams.set("ai", payload["need-answer-reuse"] ? "1" : "0");
+          return `${url.pathname}${url.search}`;
+        }
+
+        function buildEvaluationLink(payload) {
+          const url = new URL("blog-security-questionnaire-software-evaluation-template.html", window.location.href);
+          url.searchParams.set("source", "ownership-matrix-evaluation-template");
+          url.searchParams.set("company", payload.company);
+          url.searchParams.set("stage", payload["queue-shape"] === "one-answer" ? "first-answer" : payload["queue-shape"] === "repeat-review" ? "repeat-review" : "platform-eval");
+          url.searchParams.set("volume", payload.volume);
+          url.searchParams.set("maturity", payload["answer-maturity"]);
+          url.searchParams.set("intake", payload["intake-shape"]);
+          url.searchParams.set("blocker", payload.blocker.replace(/[.!?]$/, ""));
+          url.searchParams.set("caution", payload["queue-shape"] === "program"
+            ? "Do not widen the buying motion until the ownership lanes, approvals, and reporting expectations are explicit."
+            : "Do not widen the buying motion until the ownership lanes and approval rules stop drifting between reviews.");
+          url.searchParams.set("needLocal", payload["queue-shape"] === "one-answer" ? "1" : "0");
+          url.searchParams.set("needRow", payload["need-row-context"] ? "1" : "0");
+          url.searchParams.set("needLibrary", payload["need-answer-reuse"] ? "1" : "0");
+          url.searchParams.set("needAssignments", payload["need-approvals"] ? "1" : "0");
+          url.searchParams.set("needTrust", payload["queue-shape"] === "program" ? "1" : "0");
+          url.searchParams.set("needTprm", payload["queue-shape"] === "program" ? "1" : "0");
+          url.searchParams.set("needAnalytics", payload["need-analytics"] ? "1" : "0");
+          url.searchParams.set("needAi", payload["need-answer-reuse"] ? "1" : "0");
+          return `${url.pathname}${url.search}`;
+        }
+
+        function buildDemoChecklistLink(payload) {
+          const url = new URL("security-questionnaire-software-demo-checklist.html", window.location.href);
+          url.searchParams.set("source", "ownership-matrix-demo-checklist");
+          url.searchParams.set("company", payload.company);
+          url.searchParams.set("lane", payload["queue-shape"] === "program" ? "trust" : payload["need-analytics"] || payload["need-approvals"] || payload["need-escalation"] ? "management" : "response");
+          url.searchParams.set("stage", payload["queue-shape"] === "program" ? "trust-program" : payload["queue-shape"] === "repeat-review" ? "repeat-review" : payload["queue-shape"] === "multi-owner" ? "multi-owner" : "spreadsheet");
+          url.searchParams.set("blocker", payload.blocker.replace(/[.!?]$/, ""));
+          url.searchParams.set("redFlags", payload["need-analytics"]
+            ? "Do not buy reporting-heavy software before the ownership rules are explicit."
+            : "Do not let the demo hide missing owner, proof, or approval clarity.");
+          url.searchParams.set("rowFidelity", payload["need-row-context"] ? "1" : "0");
+          url.searchParams.set("answerReuse", payload["need-answer-reuse"] ? "1" : "0");
+          url.searchParams.set("proof", payload["need-proof-review"] ? "1" : "0");
+          url.searchParams.set("approvals", payload["need-approvals"] ? "1" : "0");
+          url.searchParams.set("timeToValue", payload.volume === "one-off" ? "1" : "0");
+          url.searchParams.set("trustLayer", payload["queue-shape"] === "program" ? "1" : "0");
+          return `${url.pathname}${url.search}`;
+        }
+
         function escapeHtml(value) {
           return value
             .replace(/&/g, "&amp;")
@@ -508,6 +612,11 @@
             escalation: getValue("need-escalation"),
             analytics: getValue("need-analytics")
           };
+          const payload = buildPayload();
+          const scorecardLink = buildScorecardLink(payload);
+          const shortlistLink = buildShortlistLink(payload);
+          const evaluationLink = buildEvaluationLink(payload);
+          const demoChecklistLink = buildDemoChecklistLink(payload);
 
           let score = 4;
           if (queueShape === "repeat-review") score += 1;
@@ -600,6 +709,44 @@
           routeSummary.textContent = summary;
           nextStepTitle.textContent = nextTitle;
           nextStepCopy.textContent = nextCopy;
+          heroScorecardLink.href = scorecardLink;
+          heroShortlistLink.href = shortlistLink;
+          heroEvaluationLink.href = evaluationLink;
+          heroDemoLink.href = demoChecklistLink;
+          footerScorecardLink.href = scorecardLink;
+          footerShortlistLink.href = shortlistLink;
+          footerEvaluationLink.href = evaluationLink;
+          footerDemoLink.href = demoChecklistLink;
+
+          if (score <= 5) {
+            nextStepPrimary.href = scorecardLink;
+            nextStepPrimary.textContent = "Open software fit scorecard";
+            nextStepSecondary.href = "ai-security-questionnaire-answer-builder.html?source=ownership-matrix-builder";
+            nextStepSecondary.textContent = "Build answer + bundle";
+            nextStepTertiary.href = "blog-security-questionnaire-spreadsheet-template.html?source=ownership-matrix-spreadsheet-template";
+            nextStepTertiary.textContent = "Open workbook template guide";
+          } else if (score <= 7) {
+            nextStepPrimary.href = "blog-security-questionnaire-response-software.html?source=ownership-matrix-response-software";
+            nextStepPrimary.textContent = "Open response software guide";
+            nextStepSecondary.href = "ai-security-questionnaire-answer-bank.html?source=ownership-matrix-answer-bank";
+            nextStepSecondary.textContent = "Open answer bank";
+            nextStepTertiary.href = shortlistLink;
+            nextStepTertiary.textContent = "Open shortlist worksheet";
+          } else if (score <= 8) {
+            nextStepPrimary.href = "blog-security-questionnaire-response-software.html?source=ownership-matrix-response-software";
+            nextStepPrimary.textContent = "Open response software guide";
+            nextStepSecondary.href = shortlistLink;
+            nextStepSecondary.textContent = "Open shortlist worksheet";
+            nextStepTertiary.href = demoChecklistLink;
+            nextStepTertiary.textContent = "Open demo checklist";
+          } else {
+            nextStepPrimary.href = "blog-security-questionnaire-management-software.html?source=ownership-matrix-management-software";
+            nextStepPrimary.textContent = "Open management software guide";
+            nextStepSecondary.href = scorecardLink;
+            nextStepSecondary.textContent = "Open software fit scorecard";
+            nextStepTertiary.href = evaluationLink;
+            nextStepTertiary.textContent = "Open evaluation template";
+          }
 
           strengthList.innerHTML = strengths.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
           gapList.innerHTML = gaps.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
