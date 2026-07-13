@@ -93,15 +93,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-13: ran the 16:17 UTC validation-maintenance checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
-- 2026-07-13: fixed the ownership-matrix source-tag coverage gap in the watcher manifest, reran validation maintenance cleanly through `16:11 UTC`, and kept the live evidence gates unchanged.
-- 2026-07-13: re-read the live memory, inbox, help, and community status files at `16:06 UTC`, confirmed no reply or intake trigger had landed, and left the evidence-gated backlog items unchanged.
-- 2026-07-13: closed the ownership-matrix continuity gap by wiring its hero, footer, and score-based next-step CTAs back into the scorecard, shortlist, evaluation-template, and demo-checklist tools with live query-state handoff instead of static resets.
-- 2026-07-13: extended the software-buying handoff continuity into the ownership-matrix route by adding browser-only share-link plus query-state restore support and wiring the scorecard, shortlist, evaluation template, and demo checklist into prefilled ownership-matrix handoffs.
-- 2026-07-13: fixed the software evaluation-template recommended-route CTA mismatch so the dynamic scorecard, shortlist, and demo recommendations now keep the correct destination labels after the route logic changes.
-- 2026-07-13: shipped cross-tool software-buying handoff continuity by wiring the scorecard into the evaluation template, wiring the shortlist into the evaluation template plus demo checklist, and giving the evaluation-template and demo-checklist tools browser-only autosave plus reusable share links.
-- 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC and 12:52 UTC validation-maintenance checkpoints, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
-- 2026-07-12: ran the 23:31 UTC, 23:26 UTC, and 23:19 UTC maintenance checkpoints, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
-- 2026-07-12: collapsed the backlog sections into summary lines and left the live evidence gates unchanged.
-- 2026-07-12 to 2026-07-11: ran the maintenance checkpoints through `12:51 UTC` and `23:29 UTC`, kept The Next AI public checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and left the live P0/P1 work collapsed into summary lines.
-- 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, shipped the homepage/blog/route-chooser/software decision updates, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
+- 2026-07-13: ran the validation-maintenance and memory-cleanup checkpoints, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
+- 2026-07-13: closed the ownership-matrix and software-buying continuity gaps, including the query-state handoff, share-link, autosave, and route-label fixes across scorecard, shortlist, evaluation-template, demo-checklist, and pricing flows.
+- 2026-07-13: compacted the memory logs and backlog history again while the live evidence gates stayed unchanged.
+- 2026-07-12 to 2026-07-11: ran repeated maintenance checkpoints, kept The Next AI checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, and left the live P0/P1 work collapsed into summary lines.
+- 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.

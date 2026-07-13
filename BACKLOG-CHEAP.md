@@ -321,21 +321,9 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-07-13: ran the 16:17 UTC validation-maintenance checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live trigger-driven tasks collapsed.
-- 2026-07-13: fixed the ownership-matrix source-tag coverage gap in the watcher manifest, reran validation maintenance cleanly through `16:11 UTC`, and kept the live trigger-driven tasks collapsed.
-- 2026-07-13: re-read the live memory, inbox, help, and community status files at `16:06 UTC`, confirmed no reply or intake trigger had landed, and left the trigger-gated backlog items unchanged.
-- 2026-07-13: elevated the judgment-first deal-blocker hierarchy so teardown and audit now surface before the drafting routes in the hero and card grid.
-- 2026-07-13: extended the ownership-matrix planner with browser-only share links plus query-state restore support and wired the scorecard, shortlist, evaluation template, and demo checklist into prefilled ownership-matrix handoffs.
-- 2026-07-13: fixed the software evaluation-template recommended-route CTA mismatch so each dynamic recommendation now keeps the correct destination label, then rechecked site links and structured data cleanly.
-- 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC and 12:52 UTC validation-maintenance checkpoints, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live trigger-driven tasks collapsed.
-- 2026-07-13: tightened the pricing-page named-vendor heading and added explicit spreadsheet-handoff handling to the pricing offer-fit picker so the paid-fit advice matches the buyer's actual state.
-- 2026-07-12: ran the 23:31 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
-- 2026-07-12: ran the 23:26 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
-- 2026-07-12: ran the 23:19 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
-- 2026-07-12: collapsed the backlog sections into summary lines, folded the day’s maintenance and route-expansion work into history, and kept validation green with the queue at zero.
-- 2026-07-12: fixed the shared route picker so explicit next-step choices like memo, packet, proof, repeat-review, and blunt-read requests take priority over the starter-pack fallback, then rechecked the picker scripts and site links cleanly.
-- 2026-07-11: ran the 23:29 UTC maintenance pass, refreshed the live watch and status artifacts, and kept the queue at zero while the deduplicated no-reply watch stayed clear.
-- 2026-07-11: refreshed validation-maintenance through `20:16 UTC`, then rechecked the watch at `23:29 UTC`, kept the queue at zero, and confirmed no new replies, intakes, or interview rows were recorded while the deduplicated no-reply watch stayed clear.
-- 2026-07-11: confirmed no `DEPLOY-STATUS.md` file exists here, refreshed the machine-readable distribution assets, and kept the live validation watch green.
-- 2026-07-10 to 2026-07-07: surfaced the spreadsheet-handoff guide, shipped the homepage/free-tools and software decision updates, and delivered the answer-bank vs response-workbook route plus the Microsoft Copilot comparison/discovery paths.
+- 2026-07-13: ran the validation-maintenance checkpoints, refreshed the live watches, and kept the trigger-driven tasks collapsed.
+- 2026-07-13: fixed the ownership-matrix and software-buying continuity gaps, including the query-state handoff, share-link, autosave, and route-label updates.
+- 2026-07-13: compacted the memory logs and backlog history again while the live evidence gates stayed unchanged.
+- 2026-07-12 to 2026-07-11: ran repeated maintenance checkpoints, kept The Next AI checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, and left the live queue at zero.
+- 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
 - 2026-07-03 to 2026-06-24: earlier route and maintenance work remains summarized here; the active watch items still stay trigger-gated.
