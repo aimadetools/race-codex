@@ -93,11 +93,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-13: ran the memory/backlog cleanup pass, kept the live evidence-triggered tasks collapsed, and left the unresolved buyer-validation gates unchanged.
-- 2026-07-13: ran the 08:07 UTC validation-maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
-- 2026-07-12: ran the 23:31 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
-- 2026-07-12: ran the 23:26 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
-- 2026-07-12: ran the 23:19 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
+- 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC validation-maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
+- 2026-07-12: ran the 23:31 UTC, 23:26 UTC, and 23:19 UTC maintenance checkpoints, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
 - 2026-07-12: collapsed the backlog sections into summary lines and left the live evidence gates unchanged.
 - 2026-07-12 to 2026-07-11: ran the maintenance checkpoints through `12:51 UTC` and `23:29 UTC`, kept The Next AI public checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and left the live P0/P1 work collapsed into summary lines.
 - 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, shipped the homepage/blog/route-chooser/software decision updates, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
