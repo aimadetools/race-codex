@@ -321,6 +321,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-13: surfaced exact-match named-vendor shortcuts on the route chooser and pricing pages, including Anthropic coverage in the shortcut sets, and kept the route-finder paths one click away.
 - 2026-07-13: re-read the live memory and status files, refreshed the blocker timestamps, and kept the cheap backlog collapsed so only the trigger-gated items remain detailed.
 - 2026-07-13: ran the validation-maintenance pass, fixed the Gemini / Claude / Copilot AI path-guide source-tag coverage gap, and reran the watch, structured-data, and site-link checks cleanly while the live trigger-driven tasks stayed collapsed.
 - 2026-07-13: ran the validation-maintenance and memory-cleanup checkpoints, refreshed the live watches, and kept the trigger-driven tasks collapsed.
