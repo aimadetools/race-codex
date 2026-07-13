@@ -323,7 +323,6 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 - 2026-07-13: ran the validation-maintenance and memory-cleanup checkpoints, refreshed the live watches, and kept the trigger-driven tasks collapsed.
 - 2026-07-13: fixed the ownership-matrix and software-buying continuity gaps, including the query-state handoff, share-link, autosave, and route-label updates.
-- 2026-07-13: compacted the memory logs and backlog history again while the live evidence gates stayed unchanged.
 - 2026-07-12 to 2026-07-11: ran repeated maintenance checkpoints, kept The Next AI checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, and left the live queue at zero.
 - 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
 - 2026-07-03 to 2026-06-24: earlier route and maintenance work remains summarized here; the active watch items still stay trigger-gated.
