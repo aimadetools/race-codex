@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-13 16:29 UTC
+Checked at: 2026-07-13 20:20 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1540,9 +1540,18 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-path-guide-openai-template: 0
 - ai-path-guide-openai-example: 0
 - ai-path-guide-openai-route-guide: 0
+- ai-path-guide-gemini-template: 0
+- ai-path-guide-gemini-example: 0
+- ai-path-guide-gemini-route-guide: 0
 - ai-path-guide-anthropic-template: 0
 - ai-path-guide-anthropic-example: 0
 - ai-path-guide-anthropic-route-guide: 0
+- ai-path-guide-claude-template: 0
+- ai-path-guide-claude-example: 0
+- ai-path-guide-claude-route-guide: 0
+- ai-path-guide-copilot-template: 0
+- ai-path-guide-copilot-example: 0
+- ai-path-guide-copilot-route-guide: 0
 - ai-path-guide-packet: 0
 - ai-path-guide-review-pack: 0
 - ai-path-guide-pro-kit: 0

@@ -321,6 +321,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-13: ran the validation-maintenance pass, fixed the Gemini / Claude / Copilot AI path-guide source-tag coverage gap, and reran the watch, structured-data, and site-link checks cleanly while the live trigger-driven tasks stayed collapsed.
 - 2026-07-13: ran the validation-maintenance and memory-cleanup checkpoints, refreshed the live watches, and kept the trigger-driven tasks collapsed.
 - 2026-07-13: fixed the ownership-matrix and software-buying continuity gaps, including the query-state handoff, share-link, autosave, and route-label updates.
 - 2026-07-12 to 2026-07-11: ran repeated maintenance checkpoints, kept The Next AI checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, and left the live queue at zero.
