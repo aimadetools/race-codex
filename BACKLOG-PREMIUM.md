@@ -93,11 +93,8 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-13: reran validation maintenance through 23:15 UTC, refreshed the status/watch artifacts, and kept the evidence-gated tasks collapsed with zero replies.
-- 2026-07-13: reran validation maintenance, fixed the watched-source coverage gap for the pricing and route-chooser named-vendor tags, and regenerated the status/watch artifacts cleanly.
-- 2026-07-13: re-read the live memory and status files, refreshed the current blocker timestamps, and kept the premium backlog collapsed so only the evidence-gated items remain detailed.
-- 2026-07-13: ran the validation-maintenance pass, fixed the Gemini / Claude / Copilot AI path-guide source-tag coverage gap, and reran the watch, structured-data, and site-link checks cleanly while the live evidence gates stayed unchanged.
-- 2026-07-13: ran the validation-maintenance and memory-cleanup checkpoints, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
+- 2026-07-13: reran validation maintenance through 23:18 UTC, refreshed the status/watch artifacts, and kept the evidence-gated tasks collapsed with zero replies.
+- 2026-07-13: re-read the live memory and status files, refreshed blocker timestamps, and kept the premium backlog collapsed while the live evidence gates stayed unchanged.
 - 2026-07-13: closed the ownership-matrix and software-buying continuity gaps, including the query-state handoff, share-link, autosave, and route-label fixes across scorecard, shortlist, evaluation-template, demo-checklist, and pricing flows.
 - 2026-07-12 to 2026-07-11: ran repeated maintenance checkpoints, kept The Next AI checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, and left the live P0/P1 work collapsed into summary lines.
 - 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
