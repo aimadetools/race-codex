@@ -105,11 +105,13 @@
             <h1>Use a security questionnaire software evaluation template before demos turn into a bigger buying story than your queue actually justifies.</h1>
             <p>Most startup teams do not need another generic software roundup. They need a clean internal artifact that explains what the live questionnaire workflow looks like, what the winner must handle now, and what would make a broader platform premature. This page gives you a copy-ready evaluation memo, a downloadable scoring CSV, and the shortest route into NoticeKit's scorecard, shortlist worksheet, demo checklist, ownership matrix, or narrower software guides.</p>
             <div class="hero-actions">
-              <button class="button" id="copy-evaluation-template" type="button">Copy evaluation template</button>
+              <button class="button" id="copy-evaluation-template" type="button">Copy evaluation memo</button>
               <button class="button secondary" id="download-evaluation-csv" type="button">Download scoring CSV</button>
-              <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=software-evaluation-template-scorecard">Open software fit scorecard</a>
-              <a class="button secondary" href="security-questionnaire-software-shortlist.html?source=software-evaluation-template-shortlist">Open shortlist worksheet</a>
-              <a class="button secondary" href="security-questionnaire-software-demo-checklist.html?source=software-evaluation-template-demo-checklist">Open demo checklist</a>
+              <button class="button secondary" id="copy-share-link" type="button">Copy share link</button>
+              <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
+              <a class="button secondary" id="hero-scorecard-link" href="security-questionnaire-software-fit-scorecard.html?source=software-evaluation-template-scorecard">Open software fit scorecard</a>
+              <a class="button secondary" id="hero-shortlist-link" href="security-questionnaire-software-shortlist.html?source=software-evaluation-template-shortlist">Open shortlist worksheet</a>
+              <a class="button secondary" id="hero-demo-link" href="security-questionnaire-software-demo-checklist.html?source=software-evaluation-template-demo-checklist">Open demo checklist</a>
               <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template-vs-scorecard.html?source=software-evaluation-template-scorecard-comparison">Evaluation template vs scorecard</a>
               <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template-vs-shortlist.html?source=software-evaluation-template-shortlist-comparison">Evaluation template vs shortlist</a>
               <a class="button secondary" href="blog-security-questionnaire-software-demo-checklist-vs-evaluation-template.html?source=software-evaluation-template-demo-comparison">Demo checklist vs evaluation template</a>
@@ -128,6 +130,131 @@
             <strong>For the team answering the buyer questionnaire.</strong>
             <p>This template is for founders, operators, security leads, and fractional reviewers deciding how much questionnaire workflow they actually need. It is not a universal leaderboard and it is not legal advice.</p>
           </div>
+
+          <section class="section audit-layout" id="evaluation-template-tool">
+            <form class="audit-card" id="evaluation-form">
+              <div class="section-head compact-head">
+                <h2>Evaluation inputs</h2>
+                <p>Keep the memo tied to the current queue, not a generic software wish list.</p>
+              </div>
+
+              <div class="field-grid">
+                <label>Company
+                  <input id="company" value="Example SaaS">
+                </label>
+                <label>Current motion
+                  <select id="stage">
+                    <option value="first-answer">One blocked answer right now</option>
+                    <option value="repeat-review">Repeat-review answer reuse</option>
+                    <option value="multi-owner">Multi-owner queue or approvals</option>
+                    <option value="platform-eval">Broader platform shortlist</option>
+                  </select>
+                </label>
+                <label>Queue volume
+                  <select id="volume">
+                    <option value="one-off">One live thread</option>
+                    <option value="monthly">A few each month</option>
+                    <option value="weekly">Several each week</option>
+                    <option value="daily">A real daily queue</option>
+                  </select>
+                </label>
+                <label>Approved-answer maturity
+                  <select id="maturity">
+                    <option value="rough">Rough or missing</option>
+                    <option value="mixed">Partially stable</option>
+                    <option value="stable">Stable approved base</option>
+                  </select>
+                </label>
+                <label>Intake format
+                  <select id="intake">
+                    <option value="pasted">Pasted prompts or one answer block</option>
+                    <option value="spreadsheet">Spreadsheet rows or workbook handoff</option>
+                    <option value="portal">Buyer portal or imported questionnaire</option>
+                    <option value="mixed">Messy mix of spreadsheets, portals, and repeats</option>
+                  </select>
+                </label>
+                <label>Shortlist vendors
+                  <input id="vendors" value="NoticeKit, Responsive, Loopio">
+                </label>
+                <label>Current blocker
+                  <textarea id="blocker">We need a buying memo that keeps the software conversation tied to the actual questionnaire workflow instead of rewarding the broadest platform story.</textarea>
+                </label>
+                <label>Prematurity or caution notes
+                  <textarea id="caution">We still need stable approved answers, named owners, and a clear answer export before we widen the buying motion.</textarea>
+                </label>
+              </div>
+
+              <div class="section-head compact-head" style="margin-top:22px;">
+                <h2>What the winner must handle now</h2>
+                <p>Check only the needs that are already real in the live process.</p>
+              </div>
+              <div class="option-grid">
+                <label class="check-card">
+                  <input id="need-local" type="checkbox" checked>
+                  <span>
+                    <strong>Low-friction first pass</strong>
+                    <small>The team still wants a smaller route before another hosted rollout.</small>
+                  </span>
+                </label>
+                <label class="check-card">
+                  <input id="need-row" type="checkbox" checked>
+                  <span>
+                    <strong>Spreadsheet or row fidelity</strong>
+                    <small>Exact buyer wording, row references, or workbook handoff still matter.</small>
+                  </span>
+                </label>
+                <label class="check-card">
+                  <input id="need-library" type="checkbox">
+                  <span>
+                    <strong>Approved-answer reuse</strong>
+                    <small>The same answers keep reopening and need a durable answer base.</small>
+                  </span>
+                </label>
+                <label class="check-card">
+                  <input id="need-assignments" type="checkbox">
+                  <span>
+                    <strong>Assignments and approvals</strong>
+                    <small>Multiple owners now need tracked review and approval steps.</small>
+                  </span>
+                </label>
+                <label class="check-card">
+                  <input id="need-analytics" type="checkbox">
+                  <span>
+                    <strong>Analytics or reporting</strong>
+                    <small>Leadership wants throughput, freshness, or queue visibility.</small>
+                  </span>
+                </label>
+                <label class="check-card">
+                  <input id="need-trust" type="checkbox">
+                  <span>
+                    <strong>Trust or TPRM layer</strong>
+                    <small>The questionnaire route already sits inside a broader assurance motion.</small>
+                  </span>
+                </label>
+                <label class="check-card">
+                  <input id="need-proof" type="checkbox" checked>
+                  <span>
+                    <strong>Proof links and owner path</strong>
+                    <small>The blocker includes proof, source notes, or who signs off.</small>
+                  </span>
+                </label>
+              </div>
+            </form>
+
+            <aside class="result-panel" aria-live="polite">
+              <span class="eyebrow">Memo output</span>
+              <div class="tier-guidance">
+                <strong id="recommendation-title">Recommended route</strong>
+                <p id="recommendation-copy">Use the scorecard when the category is still fuzzy, the shortlist when vendor names are already live, and the demo checklist only when calls are truly next.</p>
+              </div>
+              <div class="generator-actions">
+                <a class="button" id="result-scorecard-link" href="security-questionnaire-software-fit-scorecard.html?source=software-evaluation-template-scorecard">Open software fit scorecard</a>
+                <a class="button secondary" id="result-shortlist-link" href="security-questionnaire-software-shortlist.html?source=software-evaluation-template-shortlist">Open shortlist worksheet</a>
+                <a class="button secondary" id="result-demo-link" href="security-questionnaire-software-demo-checklist.html?source=software-evaluation-template-demo-checklist">Open demo checklist</a>
+              </div>
+              <p class="fine-print">This memo updates locally in your browser and autosaves on this device only.</p>
+            </aside>
+          </section>
 
           <section class="section">
             <div class="section-head">
@@ -263,82 +390,388 @@
     </div>
 
     <script>
-      const templateText = `Security questionnaire software evaluation template
+      const STORAGE_KEY = "noticekit-security-questionnaire-software-evaluation-template-v1";
+      const QUERY_KEYS = {
+        company: "company",
+        stage: "stage",
+        volume: "volume",
+        maturity: "maturity",
+        intake: "intake",
+        vendors: "vendors",
+        blocker: "blocker",
+        caution: "caution",
+        needLocal: "needLocal",
+        needRow: "needRow",
+        needLibrary: "needLibrary",
+        needAssignments: "needAssignments",
+        needAnalytics: "needAnalytics",
+        needTrust: "needTrust",
+        needProof: "needProof"
+      };
+
+      const fields = {
+        company: document.getElementById("company"),
+        stage: document.getElementById("stage"),
+        volume: document.getElementById("volume"),
+        maturity: document.getElementById("maturity"),
+        intake: document.getElementById("intake"),
+        vendors: document.getElementById("vendors"),
+        blocker: document.getElementById("blocker"),
+        caution: document.getElementById("caution"),
+        needLocal: document.getElementById("need-local"),
+        needRow: document.getElementById("need-row"),
+        needLibrary: document.getElementById("need-library"),
+        needAssignments: document.getElementById("need-assignments"),
+        needAnalytics: document.getElementById("need-analytics"),
+        needTrust: document.getElementById("need-trust"),
+        needProof: document.getElementById("need-proof")
+      };
+
+      const templateOutputNode = document.getElementById("evaluation-template-output");
+      const statusNode = document.getElementById("evaluation-template-status");
+      const recommendationTitleNode = document.getElementById("recommendation-title");
+      const recommendationCopyNode = document.getElementById("recommendation-copy");
+
+      function parseList(text) {
+        return String(text || "")
+          .split(/[\n,]/)
+          .map((item) => item.trim())
+          .filter(Boolean);
+      }
+
+      function readBooleanParam(params, key) {
+        const value = params.get(key);
+        if (value === null) return null;
+        return value === "1" || value === "true" || value === "yes";
+      }
+
+      function stageLabel(value) {
+        return ({
+          "first-answer": "one blocked answer right now",
+          "repeat-review": "repeat-review answer reuse",
+          "multi-owner": "multi-owner queue or approvals",
+          "platform-eval": "broader platform shortlist"
+        })[value] || value;
+      }
+
+      function intakeLabel(value) {
+        return ({
+          pasted: "pasted prompts or one answer block",
+          spreadsheet: "spreadsheet rows or workbook handoff",
+          portal: "buyer portal or imported questionnaire",
+          mixed: "messy mix of spreadsheets, portals, and repeats"
+        })[value] || value;
+      }
+
+      function collectPayload() {
+        return {
+          company: fields.company.value.trim() || "Example SaaS",
+          stage: fields.stage.value,
+          volume: fields.volume.value,
+          maturity: fields.maturity.value,
+          intake: fields.intake.value,
+          vendors: fields.vendors.value.trim(),
+          blocker: fields.blocker.value.trim(),
+          caution: fields.caution.value.trim(),
+          needs: {
+            local: fields.needLocal.checked,
+            row: fields.needRow.checked,
+            library: fields.needLibrary.checked,
+            assignments: fields.needAssignments.checked,
+            analytics: fields.needAnalytics.checked,
+            trust: fields.needTrust.checked,
+            proof: fields.needProof.checked
+          }
+        };
+      }
+
+      function applyPayload(payload) {
+        if (!payload) return;
+        if (payload.company) fields.company.value = payload.company;
+        if (payload.stage) fields.stage.value = payload.stage;
+        if (payload.volume) fields.volume.value = payload.volume;
+        if (payload.maturity) fields.maturity.value = payload.maturity;
+        if (payload.intake) fields.intake.value = payload.intake;
+        if (payload.vendors) fields.vendors.value = payload.vendors;
+        if (payload.blocker) fields.blocker.value = payload.blocker;
+        if (payload.caution) fields.caution.value = payload.caution;
+        if (payload.needs) {
+          if (typeof payload.needs.local === "boolean") fields.needLocal.checked = payload.needs.local;
+          if (typeof payload.needs.row === "boolean") fields.needRow.checked = payload.needs.row;
+          if (typeof payload.needs.library === "boolean") fields.needLibrary.checked = payload.needs.library;
+          if (typeof payload.needs.assignments === "boolean") fields.needAssignments.checked = payload.needs.assignments;
+          if (typeof payload.needs.analytics === "boolean") fields.needAnalytics.checked = payload.needs.analytics;
+          if (typeof payload.needs.trust === "boolean") fields.needTrust.checked = payload.needs.trust;
+          if (typeof payload.needs.proof === "boolean") fields.needProof.checked = payload.needs.proof;
+        }
+      }
+
+      function loadQueryPayload() {
+        const params = new URLSearchParams(window.location.search);
+        const hasQueryState = Object.values(QUERY_KEYS).some((key) => params.has(key));
+        if (!hasQueryState) return false;
+        applyPayload({
+          company: params.get(QUERY_KEYS.company),
+          stage: params.get(QUERY_KEYS.stage),
+          volume: params.get(QUERY_KEYS.volume),
+          maturity: params.get(QUERY_KEYS.maturity),
+          intake: params.get(QUERY_KEYS.intake),
+          vendors: params.get(QUERY_KEYS.vendors),
+          blocker: params.get(QUERY_KEYS.blocker),
+          caution: params.get(QUERY_KEYS.caution),
+          needs: {
+            local: readBooleanParam(params, QUERY_KEYS.needLocal),
+            row: readBooleanParam(params, QUERY_KEYS.needRow),
+            library: readBooleanParam(params, QUERY_KEYS.needLibrary),
+            assignments: readBooleanParam(params, QUERY_KEYS.needAssignments),
+            analytics: readBooleanParam(params, QUERY_KEYS.needAnalytics),
+            trust: readBooleanParam(params, QUERY_KEYS.needTrust),
+            proof: readBooleanParam(params, QUERY_KEYS.needProof)
+          }
+        });
+        return true;
+      }
+
+      function saveDraft(payload) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      }
+
+      function loadDraft() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return false;
+          applyPayload(JSON.parse(raw));
+          return true;
+        } catch (error) {
+          console.error(error);
+          return false;
+        }
+      }
+
+      function buildShareLink(payload) {
+        const url = new URL(window.location.href);
+        url.search = "";
+        url.searchParams.set(QUERY_KEYS.company, payload.company);
+        url.searchParams.set(QUERY_KEYS.stage, payload.stage);
+        url.searchParams.set(QUERY_KEYS.volume, payload.volume);
+        url.searchParams.set(QUERY_KEYS.maturity, payload.maturity);
+        url.searchParams.set(QUERY_KEYS.intake, payload.intake);
+        url.searchParams.set(QUERY_KEYS.vendors, payload.vendors);
+        url.searchParams.set(QUERY_KEYS.blocker, payload.blocker);
+        url.searchParams.set(QUERY_KEYS.caution, payload.caution);
+        url.searchParams.set(QUERY_KEYS.needLocal, payload.needs.local ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.needRow, payload.needs.row ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.needLibrary, payload.needs.library ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.needAssignments, payload.needs.assignments ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.needAnalytics, payload.needs.analytics ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.needTrust, payload.needs.trust ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.needProof, payload.needs.proof ? "1" : "0");
+        return url.toString();
+      }
+
+      function buildScorecardLink(payload) {
+        const url = new URL("security-questionnaire-software-fit-scorecard.html", window.location.href);
+        url.searchParams.set("source", "software-evaluation-template-scorecard");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("stage", payload.stage);
+        url.searchParams.set("volume", payload.volume);
+        url.searchParams.set("approved", payload.maturity === "rough" ? "none" : payload.maturity === "mixed" ? "partial" : "stable");
+        url.searchParams.set("reviewers", payload.needs.assignments ? "4plus" : "2-3");
+        url.searchParams.set("intake", payload.intake);
+        url.searchParams.set("shortlist", payload.vendors);
+        url.searchParams.set("blocker", payload.blocker);
+        url.searchParams.set("row", payload.needs.row ? "1" : "0");
+        url.searchParams.set("library", payload.needs.library ? "1" : "0");
+        url.searchParams.set("assignments", payload.needs.assignments ? "1" : "0");
+        url.searchParams.set("analytics", payload.needs.analytics ? "1" : "0");
+        url.searchParams.set("trust", payload.needs.trust ? "1" : "0");
+        url.searchParams.set("proof", payload.needs.proof ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
+      function buildShortlistLink(payload) {
+        const url = new URL("security-questionnaire-software-shortlist.html", window.location.href);
+        url.searchParams.set("source", "software-evaluation-template-shortlist");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("stage", payload.stage === "first-answer" ? "first-answer" : payload.stage === "repeat-review" ? "repeat-review" : "platform-shortlist");
+        url.searchParams.set("volume", payload.volume);
+        url.searchParams.set("maturity", payload.maturity);
+        url.searchParams.set("intake", payload.intake);
+        url.searchParams.set("blocker", payload.blocker);
+        url.searchParams.set("vendors", payload.vendors);
+        url.searchParams.set("local", payload.needs.local ? "1" : "0");
+        url.searchParams.set("row", payload.needs.row ? "1" : "0");
+        url.searchParams.set("library", payload.needs.library ? "1" : "0");
+        url.searchParams.set("assignments", payload.needs.assignments ? "1" : "0");
+        url.searchParams.set("trust", payload.needs.trust ? "1" : "0");
+        url.searchParams.set("tprm", payload.needs.trust ? "1" : "0");
+        url.searchParams.set("analytics", payload.needs.analytics ? "1" : "0");
+        url.searchParams.set("ai", payload.needs.library ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
+      function buildDemoLink(payload) {
+        const url = new URL("security-questionnaire-software-demo-checklist.html", window.location.href);
+        url.searchParams.set("source", "software-evaluation-template-demo-checklist");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("lane", payload.needs.assignments || payload.needs.trust || payload.needs.analytics ? "management" : "response");
+        url.searchParams.set("stage", payload.stage === "repeat-review" ? "repeat-review" : payload.stage === "first-answer" ? "spreadsheet" : "multi-owner");
+        url.searchParams.set("vendors", payload.vendors);
+        url.searchParams.set("blocker", payload.blocker);
+        url.searchParams.set("redFlags", payload.caution);
+        url.searchParams.set("rowFidelity", payload.needs.row ? "1" : "0");
+        url.searchParams.set("answerReuse", payload.needs.library ? "1" : "0");
+        url.searchParams.set("proof", payload.needs.proof ? "1" : "0");
+        url.searchParams.set("approvals", payload.needs.assignments ? "1" : "0");
+        url.searchParams.set("timeToValue", payload.needs.local ? "1" : "0");
+        url.searchParams.set("trustLayer", payload.needs.trust ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
+      function chooseRecommendation(payload) {
+        if (payload.stage === "first-answer" || (payload.needs.local && !payload.needs.assignments && !payload.needs.analytics)) {
+          return {
+            title: "Recommended route: stay small first",
+            copy: "Use the software fit scorecard or the answer-builder route before you let a one-answer problem turn into a bigger software purchase.",
+            primary: buildScorecardLink(payload),
+            secondary: buildShortlistLink(payload),
+            tertiary: buildDemoLink(payload)
+          };
+        }
+        if (payload.stage === "repeat-review" || parseList(payload.vendors).length > 0) {
+          return {
+            title: "Recommended route: rank the shortlist",
+            copy: "Vendor names are already live, so move into the shortlist worksheet and only book demos after the ranking and caution list are written down.",
+            primary: buildShortlistLink(payload),
+            secondary: buildDemoLink(payload),
+            tertiary: buildScorecardLink(payload)
+          };
+        }
+        return {
+          title: "Recommended route: keep the memo tied to the queue",
+          copy: "The buying motion already smells larger than one answer, but the team still needs the memo, route judgment, and demo discipline to stay aligned.",
+          primary: buildScorecardLink(payload),
+          secondary: buildShortlistLink(payload),
+          tertiary: buildDemoLink(payload)
+        };
+      }
+
+      function buildMemo(payload) {
+        const vendors = parseList(payload.vendors);
+        const mustHandle = [];
+        if (payload.needs.local) mustHandle.push("A low-friction first pass before a larger rollout.");
+        if (payload.needs.row) mustHandle.push("Spreadsheet or workbook row fidelity.");
+        if (payload.needs.library) mustHandle.push("Reusable approved answers.");
+        if (payload.needs.assignments) mustHandle.push("Assignments, approvals, and escalation.");
+        if (payload.needs.analytics) mustHandle.push("Operational visibility or reporting.");
+        if (payload.needs.trust) mustHandle.push("A broader trust or TPRM layer.");
+        if (payload.needs.proof) mustHandle.push("Proof links and named owner path.");
+
+        const recommendation = chooseRecommendation(payload);
+
+        return `Security questionnaire software evaluation memo
 
 1. Current workflow summary
-- Current queue shape:
-- Current blocker:
-- Intake format:
-- Approved-answer maturity:
-- Reviewer / owner sprawl:
+- Company: ${payload.company}
+- Current queue shape: ${stageLabel(payload.stage)}
+- Queue volume: ${payload.volume}
+- Intake format: ${intakeLabel(payload.intake)}
+- Approved-answer maturity: ${payload.maturity}
+- Current blocker: ${payload.blocker || "Not yet stated"}
 
 2. What the winner must handle now
-- Preserve spreadsheet or row context:
-- Reuse approved answers:
-- Support assignments or approvals:
-- Support analytics or reporting:
-- Fit trust / assurance / TPRM demands:
+${mustHandle.length ? mustHandle.map((item) => `- ${item}`).join("\n") : "- No must-handle items selected"}
 
 3. Prematurity checks
-- What would make a broader platform premature?
-- Which owner, proof, or answer gaps are still unresolved?
-- What would have to become true before a heavier rollout is justified?
+- ${payload.caution || "No explicit caution list entered yet."}
+- Do not reward a broader rollout if the live blocker still looks smaller than the tool being purchased.
 
 4. Candidate notes
-- NoticeKit:
-- Vendor 2:
-- Vendor 3:
-- Vendor 4:
+${vendors.length ? vendors.map((vendor) => `- ${vendor}:`).join("\n") : "- NoticeKit:\n- Vendor 2:\n- Vendor 3:"}
 
 5. Recommendation
-- Recommended route or vendor:
-- Why it fits the live queue:
-- Best next step before demos or purchase:
-- Caution list:`;
+- ${recommendation.title.replace("Recommended route: ", "")}
+- Why it fits: ${recommendation.copy}
+- Best next step before demos or purchase: ${parseList(payload.vendors).length ? "Run the shortlist worksheet with this exact context." : "Run the software fit scorecard with this exact context."}
+- Caution list: ${payload.caution || "Document the prematurity risk before booking calls."}`;
+      }
 
-      const csvText = [
-        "vendor,current_queue_fit,approved_answer_fit,intake_fit,owner_pressure_fit,trust_program_fit,prematurity_risk,notes",
-        "NoticeKit,,,,,,,",
-        "Responsive,,,,,,,",
-        "Loopio,,,,,,,",
-        "HyperComply,,,,,,,",
-        "Conveyor,,,,,,,",
-        "Vanta,,,,,,,",
-        "Drata AIQA,,,,,,,",
-        "SafeBase,,,,,,,",
-        "Whistic,,,,,,,"
-      ].join("\\n");
+      function buildCsv(payload) {
+        const vendors = parseList(payload.vendors);
+        const rows = [
+          ["vendor", "current_queue_fit", "approved_answer_fit", "intake_fit", "owner_pressure_fit", "trust_program_fit", "prematurity_risk", "notes"]
+        ];
+        const vendorRows = vendors.length ? vendors : ["NoticeKit", "Vendor 2", "Vendor 3"];
+        for (const vendor of vendorRows) {
+          rows.push([vendor, "", "", "", "", "", payload.caution || "", ""]);
+        }
+        return rows
+          .map((row) => row.map((value) => `"${String(value).replace(/"/g, "\"\"")}"`).join(","))
+          .join("\n");
+      }
 
-      const templateOutputNode = document.querySelector("#evaluation-template-output");
-      const statusNode = document.querySelector("#evaluation-template-status");
-
-      templateOutputNode.textContent = templateText;
-
-      function downloadText(filename, content) {
-        const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+      function downloadText(filename, content, type) {
+        const blob = new Blob([content], { type });
+        const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
+        link.href = url;
         link.download = filename;
         document.body.appendChild(link);
         link.click();
         link.remove();
-        URL.revokeObjectURL(link.href);
+        URL.revokeObjectURL(url);
       }
 
-      async function copyText(text, successMessage) {
+      async function copyText(text, successMessage, failureMessage) {
         try {
           await navigator.clipboard.writeText(text);
           statusNode.textContent = successMessage;
         } catch (error) {
-          statusNode.textContent = "Clipboard access failed. Download the CSV or copy the template manually.";
+          statusNode.textContent = failureMessage;
         }
       }
 
-      document.querySelector("#copy-evaluation-template").onclick = () => copyText(templateText, "Copied evaluation template.");
-      document.querySelector("#download-evaluation-csv").onclick = () => {
-        downloadText("noticekit-security-questionnaire-software-evaluation-template.csv", csvText);
-        statusNode.textContent = "Downloaded scoring CSV.";
-      };
+      function render() {
+        const payload = collectPayload();
+        const memo = buildMemo(payload);
+        const recommendation = chooseRecommendation(payload);
+
+        templateOutputNode.textContent = memo;
+        recommendationTitleNode.textContent = recommendation.title;
+        recommendationCopyNode.textContent = recommendation.copy;
+        document.getElementById("hero-scorecard-link").href = buildScorecardLink(payload);
+        document.getElementById("hero-shortlist-link").href = buildShortlistLink(payload);
+        document.getElementById("hero-demo-link").href = buildDemoLink(payload);
+        document.getElementById("result-scorecard-link").href = recommendation.primary;
+        document.getElementById("result-shortlist-link").href = recommendation.secondary;
+        document.getElementById("result-demo-link").href = recommendation.tertiary;
+
+        saveDraft(payload);
+        statusNode.textContent = "Draft saved locally on this device.";
+
+        document.getElementById("copy-evaluation-template").onclick = () => copyText(memo, "Copied evaluation memo.", "Clipboard access failed. Copy the memo manually.");
+        document.getElementById("download-evaluation-csv").onclick = () => {
+          downloadText("noticekit-security-questionnaire-software-evaluation-template.csv", buildCsv(payload), "text/csv;charset=utf-8");
+          statusNode.textContent = "Downloaded scoring CSV.";
+        };
+        document.getElementById("copy-share-link").onclick = () => copyText(buildShareLink(payload), "Copied share link.", "Clipboard access failed. Copy the URL from the address bar.");
+      }
+
+      for (const field of Object.values(fields)) {
+        field.addEventListener("input", render);
+        field.addEventListener("change", render);
+      }
+
+      document.getElementById("clear-draft").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        window.location.href = window.location.pathname;
+      });
+
+      const loadedFromQuery = loadQueryPayload();
+      if (!loadedFromQuery) {
+        loadDraft();
+      }
+      render();
     </script>
   </body>
 </html>

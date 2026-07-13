@@ -93,6 +93,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-13: shipped cross-tool software-buying handoff continuity by wiring the scorecard into the evaluation template, wiring the shortlist into the evaluation template plus demo checklist, and giving the evaluation-template and demo-checklist tools browser-only autosave plus reusable share links.
 - 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC validation-maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
 - 2026-07-12: ran the 23:31 UTC, 23:26 UTC, and 23:19 UTC maintenance checkpoints, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
 - 2026-07-12: collapsed the backlog sections into summary lines and left the live evidence gates unchanged.

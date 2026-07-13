@@ -97,8 +97,8 @@
           <div class="hero-actions">
             <a class="button" href="#demo-checklist">Open demo checklist</a>
             <a class="button secondary" href="blog-security-questionnaire-software-demo-checklist-vs-scorecard.html?source=software-demo-checklist-scorecard-comparison">Demo checklist vs scorecard</a>
-            <a class="button secondary" href="security-questionnaire-software-shortlist.html?source=software-demo-checklist-shortlist">Open shortlist worksheet</a>
-            <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template.html?source=software-demo-checklist-evaluation-template">Open evaluation template</a>
+            <a class="button secondary" id="hero-shortlist-link" href="security-questionnaire-software-shortlist.html?source=software-demo-checklist-shortlist">Open shortlist worksheet</a>
+            <a class="button secondary" id="hero-evaluation-link" href="blog-security-questionnaire-software-evaluation-template.html?source=software-demo-checklist-evaluation-template">Open evaluation template</a>
             <a class="button secondary" href="blog-security-questionnaire-software-demo-checklist-vs-shortlist.html?source=software-demo-checklist-shortlist-comparison">Demo checklist vs shortlist</a>
             <a class="button secondary" href="blog-security-questionnaire-software-demo-checklist-vs-evaluation-template.html?source=software-demo-checklist-evaluation-comparison">Demo checklist vs evaluation template</a>
             <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=software-demo-checklist-scorecard">Open software fit scorecard</a>
@@ -226,6 +226,8 @@ No clear proof or approval workflow</textarea>
               <button class="button" id="copy-brief" type="button">Copy demo brief</button>
               <button class="button secondary" id="copy-questions" type="button">Copy questions</button>
               <button class="button secondary" id="download-demo-csv" type="button">Download demo CSV</button>
+              <button class="button secondary" id="copy-share-link" type="button">Copy share link</button>
+              <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
             </div>
             <p class="fine-print" id="demo-status" aria-live="polite">The checklist updates locally in your browser as you change the shortlist, lane, and must-prove items.</p>
 
@@ -260,17 +262,17 @@ No clear proof or approval workflow</textarea>
             <article class="card">
               <h3>Need route judgment first?</h3>
               <p>Use the scorecard when the category is still fuzzy and the team should not book vendor calls yet.</p>
-              <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=software-demo-checklist-scorecard">Open software fit scorecard</a>
+              <a class="button secondary" id="card-scorecard-link" href="security-questionnaire-software-fit-scorecard.html?source=software-demo-checklist-scorecard">Open software fit scorecard</a>
             </article>
             <article class="card">
               <h3>Need a ranked recommendation first?</h3>
               <p>Use the shortlist worksheet when vendor names are already live and the team needs a scored recommendation before or after demos.</p>
-              <a class="button secondary" href="security-questionnaire-software-shortlist.html?source=software-demo-checklist-shortlist">Open shortlist worksheet</a>
+              <a class="button secondary" id="card-shortlist-link" href="security-questionnaire-software-shortlist.html?source=software-demo-checklist-shortlist">Open shortlist worksheet</a>
             </article>
             <article class="card">
               <h3>Need the buying memo first?</h3>
               <p>Use the evaluation template when the next useful artifact is still the internal memo, scoring sheet, or caution list.</p>
-              <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template.html?source=software-demo-checklist-evaluation-template">Open evaluation template</a>
+              <a class="button secondary" id="card-evaluation-link" href="blog-security-questionnaire-software-evaluation-template.html?source=software-demo-checklist-evaluation-template">Open evaluation template</a>
             </article>
           </div>
         </section>
@@ -282,13 +284,38 @@ No clear proof or approval workflow</textarea>
     </div>
 
     <script>
+      const STORAGE_KEY = "noticekit-security-questionnaire-software-demo-checklist-v1";
+      const QUERY_KEYS = {
+        company: "company",
+        lane: "lane",
+        stage: "stage",
+        vendors: "vendors",
+        blocker: "blocker",
+        redFlags: "redFlags",
+        rowFidelity: "rowFidelity",
+        answerReuse: "answerReuse",
+        proof: "proof",
+        approvals: "approvals",
+        timeToValue: "timeToValue",
+        trustLayer: "trustLayer"
+      };
+
       const form = document.getElementById("demo-form");
-      const companyInput = document.getElementById("company");
-      const laneInput = document.getElementById("lane");
-      const stageInput = document.getElementById("stage");
-      const vendorsInput = document.getElementById("vendors");
-      const blockerInput = document.getElementById("blocker");
-      const redFlagsInput = document.getElementById("redFlags");
+      const fields = {
+        company: document.getElementById("company"),
+        lane: document.getElementById("lane"),
+        stage: document.getElementById("stage"),
+        vendors: document.getElementById("vendors"),
+        blocker: document.getElementById("blocker"),
+        redFlags: document.getElementById("redFlags"),
+        rowFidelity: document.getElementById("need-row-fidelity"),
+        answerReuse: document.getElementById("need-answer-reuse"),
+        proof: document.getElementById("need-proof"),
+        approvals: document.getElementById("need-approvals"),
+        timeToValue: document.getElementById("need-time-to-value"),
+        trustLayer: document.getElementById("need-trust-layer")
+      };
+
       const briefOutput = document.getElementById("demo-brief-output");
       const questionsOutput = document.getElementById("demo-questions-output");
       const nextStepOutput = document.getElementById("demo-next-step");
@@ -298,43 +325,22 @@ No clear proof or approval workflow</textarea>
         response: {
           lane: "response",
           stage: "repeat-review",
-          needs: {
-            "need-row-fidelity": true,
-            "need-answer-reuse": true,
-            "need-proof": true,
-            "need-approvals": false,
-            "need-time-to-value": true,
-            "need-trust-layer": false
-          }
+          checks: { rowFidelity: true, answerReuse: true, proof: true, approvals: false, timeToValue: true, trustLayer: false }
         },
         management: {
           lane: "management",
           stage: "multi-owner",
-          needs: {
-            "need-row-fidelity": true,
-            "need-answer-reuse": true,
-            "need-proof": true,
-            "need-approvals": true,
-            "need-time-to-value": true,
-            "need-trust-layer": false
-          }
+          checks: { rowFidelity: true, answerReuse: true, proof: true, approvals: true, timeToValue: true, trustLayer: false }
         },
         trust: {
           lane: "trust",
           stage: "trust-program",
-          needs: {
-            "need-row-fidelity": false,
-            "need-answer-reuse": true,
-            "need-proof": true,
-            "need-approvals": true,
-            "need-time-to-value": false,
-            "need-trust-layer": true
-          }
+          checks: { rowFidelity: false, answerReuse: true, proof: true, approvals: true, timeToValue: false, trustLayer: true }
         }
       };
 
       function parseList(text) {
-        return text
+        return String(text || "")
           .split(/[\n,]/)
           .map((item) => item.trim())
           .filter(Boolean);
@@ -353,34 +359,187 @@ No clear proof or approval workflow</textarea>
         return "repeat-review answer reuse";
       }
 
-      function getNeeds() {
+      function readBooleanParam(params, key) {
+        const value = params.get(key);
+        if (value === null) return null;
+        return value === "1" || value === "true" || value === "yes";
+      }
+
+      function collectPayload() {
         return {
-          rowFidelity: document.getElementById("need-row-fidelity").checked,
-          answerReuse: document.getElementById("need-answer-reuse").checked,
-          proof: document.getElementById("need-proof").checked,
-          approvals: document.getElementById("need-approvals").checked,
-          timeToValue: document.getElementById("need-time-to-value").checked,
-          trustLayer: document.getElementById("need-trust-layer").checked
+          company: fields.company.value.trim() || "Example SaaS",
+          lane: fields.lane.value,
+          stage: fields.stage.value,
+          vendors: fields.vendors.value.trim(),
+          blocker: fields.blocker.value.trim(),
+          redFlags: fields.redFlags.value.trim(),
+          needs: {
+            rowFidelity: fields.rowFidelity.checked,
+            answerReuse: fields.answerReuse.checked,
+            proof: fields.proof.checked,
+            approvals: fields.approvals.checked,
+            timeToValue: fields.timeToValue.checked,
+            trustLayer: fields.trustLayer.checked
+          }
         };
       }
 
-      function buildQuestions(lane, stage, vendors, needs, redFlags) {
+      function applyPayload(payload) {
+        if (!payload) return;
+        if (payload.company) fields.company.value = payload.company;
+        if (payload.lane) fields.lane.value = payload.lane;
+        if (payload.stage) fields.stage.value = payload.stage;
+        if (payload.vendors) fields.vendors.value = payload.vendors;
+        if (payload.blocker) fields.blocker.value = payload.blocker;
+        if (payload.redFlags) fields.redFlags.value = payload.redFlags;
+        if (payload.needs) {
+          if (typeof payload.needs.rowFidelity === "boolean") fields.rowFidelity.checked = payload.needs.rowFidelity;
+          if (typeof payload.needs.answerReuse === "boolean") fields.answerReuse.checked = payload.needs.answerReuse;
+          if (typeof payload.needs.proof === "boolean") fields.proof.checked = payload.needs.proof;
+          if (typeof payload.needs.approvals === "boolean") fields.approvals.checked = payload.needs.approvals;
+          if (typeof payload.needs.timeToValue === "boolean") fields.timeToValue.checked = payload.needs.timeToValue;
+          if (typeof payload.needs.trustLayer === "boolean") fields.trustLayer.checked = payload.needs.trustLayer;
+        }
+      }
+
+      function saveDraft(payload) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      }
+
+      function loadDraft() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return false;
+          applyPayload(JSON.parse(raw));
+          return true;
+        } catch (error) {
+          console.error(error);
+          return false;
+        }
+      }
+
+      function loadQueryPayload() {
+        const params = new URLSearchParams(window.location.search);
+        const hasQueryState = Object.values(QUERY_KEYS).some((key) => params.has(key));
+        if (!hasQueryState) return false;
+
+        applyPayload({
+          company: params.get(QUERY_KEYS.company),
+          lane: params.get(QUERY_KEYS.lane),
+          stage: params.get(QUERY_KEYS.stage),
+          vendors: params.get(QUERY_KEYS.vendors),
+          blocker: params.get(QUERY_KEYS.blocker),
+          redFlags: params.get(QUERY_KEYS.redFlags),
+          needs: {
+            rowFidelity: readBooleanParam(params, QUERY_KEYS.rowFidelity),
+            answerReuse: readBooleanParam(params, QUERY_KEYS.answerReuse),
+            proof: readBooleanParam(params, QUERY_KEYS.proof),
+            approvals: readBooleanParam(params, QUERY_KEYS.approvals),
+            timeToValue: readBooleanParam(params, QUERY_KEYS.timeToValue),
+            trustLayer: readBooleanParam(params, QUERY_KEYS.trustLayer)
+          }
+        });
+        return true;
+      }
+
+      function buildShareLink(payload) {
+        const url = new URL(window.location.href);
+        url.search = "";
+        url.searchParams.set(QUERY_KEYS.company, payload.company);
+        url.searchParams.set(QUERY_KEYS.lane, payload.lane);
+        url.searchParams.set(QUERY_KEYS.stage, payload.stage);
+        url.searchParams.set(QUERY_KEYS.vendors, payload.vendors);
+        url.searchParams.set(QUERY_KEYS.blocker, payload.blocker);
+        url.searchParams.set(QUERY_KEYS.redFlags, payload.redFlags);
+        url.searchParams.set(QUERY_KEYS.rowFidelity, payload.needs.rowFidelity ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.answerReuse, payload.needs.answerReuse ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.proof, payload.needs.proof ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.approvals, payload.needs.approvals ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.timeToValue, payload.needs.timeToValue ? "1" : "0");
+        url.searchParams.set(QUERY_KEYS.trustLayer, payload.needs.trustLayer ? "1" : "0");
+        return url.toString();
+      }
+
+      function buildShortlistLink(payload) {
+        const url = new URL("security-questionnaire-software-shortlist.html", window.location.href);
+        url.searchParams.set("source", "software-demo-checklist-shortlist");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("stage", payload.stage === "repeat-review" ? "repeat-review" : payload.lane === "management" || payload.lane === "trust" ? "platform-shortlist" : "first-answer");
+        url.searchParams.set("volume", payload.stage === "trust-program" ? "daily" : payload.stage === "multi-owner" ? "weekly" : "monthly");
+        url.searchParams.set("maturity", payload.needs.answerReuse ? "mixed" : "rough");
+        url.searchParams.set("intake", payload.needs.rowFidelity ? "spreadsheet" : payload.lane === "trust" ? "mixed" : "portal");
+        url.searchParams.set("blocker", payload.blocker);
+        url.searchParams.set("vendors", payload.vendors);
+        url.searchParams.set("local", payload.needs.timeToValue ? "1" : "0");
+        url.searchParams.set("row", payload.needs.rowFidelity ? "1" : "0");
+        url.searchParams.set("library", payload.needs.answerReuse ? "1" : "0");
+        url.searchParams.set("assignments", payload.needs.approvals ? "1" : "0");
+        url.searchParams.set("trust", payload.needs.trustLayer ? "1" : "0");
+        url.searchParams.set("tprm", payload.lane === "trust" ? "1" : "0");
+        url.searchParams.set("analytics", payload.lane !== "response" ? "1" : "0");
+        url.searchParams.set("ai", payload.needs.answerReuse ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
+      function buildEvaluationLink(payload) {
+        const url = new URL("blog-security-questionnaire-software-evaluation-template.html", window.location.href);
+        url.searchParams.set("source", "software-demo-checklist-evaluation-template");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("stage", payload.stage === "repeat-review" ? "repeat-review" : payload.lane === "management" || payload.lane === "trust" ? "multi-owner" : "first-answer");
+        url.searchParams.set("volume", payload.stage === "trust-program" ? "daily" : payload.stage === "multi-owner" ? "weekly" : "monthly");
+        url.searchParams.set("maturity", payload.needs.answerReuse ? "mixed" : "rough");
+        url.searchParams.set("intake", payload.needs.rowFidelity ? "spreadsheet" : payload.lane === "trust" ? "mixed" : "portal");
+        url.searchParams.set("vendors", payload.vendors);
+        url.searchParams.set("blocker", payload.blocker);
+        url.searchParams.set("needLocal", payload.needs.timeToValue ? "1" : "0");
+        url.searchParams.set("needRow", payload.needs.rowFidelity ? "1" : "0");
+        url.searchParams.set("needLibrary", payload.needs.answerReuse ? "1" : "0");
+        url.searchParams.set("needAssignments", payload.needs.approvals ? "1" : "0");
+        url.searchParams.set("needTrust", payload.needs.trustLayer ? "1" : "0");
+        url.searchParams.set("needAnalytics", payload.lane !== "response" ? "1" : "0");
+        url.searchParams.set("needProof", payload.needs.proof ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
+      function buildScorecardLink(payload) {
+        const url = new URL("security-questionnaire-software-fit-scorecard.html", window.location.href);
+        url.searchParams.set("source", "software-demo-checklist-scorecard");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("stage", payload.stage === "repeat-review" ? "repeat-review" : payload.lane === "management" || payload.lane === "trust" ? "multi-owner" : "first-answer");
+        url.searchParams.set("volume", payload.stage === "trust-program" ? "daily" : payload.stage === "multi-owner" ? "weekly" : "monthly");
+        url.searchParams.set("approved", payload.needs.answerReuse ? "partial" : "none");
+        url.searchParams.set("reviewers", payload.needs.approvals ? "4plus" : "2-3");
+        url.searchParams.set("intake", payload.needs.rowFidelity ? "spreadsheet" : payload.lane === "trust" ? "mixed" : "portal");
+        url.searchParams.set("shortlist", payload.vendors);
+        url.searchParams.set("blocker", payload.blocker);
+        url.searchParams.set("row", payload.needs.rowFidelity ? "1" : "0");
+        url.searchParams.set("library", payload.needs.answerReuse ? "1" : "0");
+        url.searchParams.set("assignments", payload.needs.approvals ? "1" : "0");
+        url.searchParams.set("analytics", payload.lane !== "response" ? "1" : "0");
+        url.searchParams.set("trust", payload.needs.trustLayer ? "1" : "0");
+        url.searchParams.set("proof", payload.needs.proof ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
+      function buildQuestions(payload) {
+        const vendors = parseList(payload.vendors);
+        const redFlags = parseList(payload.redFlags);
         const questions = [
           {
             category: "Queue fit",
-            question: `Show how the product handles the current ${getStageLabel(stage)} workflow without forcing a bigger rollout first.`,
+            question: `Show how the product handles the current ${getStageLabel(payload.stage)} workflow without forcing a bigger rollout first.`,
             goodAnswer: "Maps the product to the actual queue shape and names what stays lightweight.",
             redFlag: "Talks only about the full platform vision."
           },
           {
             category: "Live blocker",
-            question: `Walk through the exact blocker: ${blockerInput.value.trim() || "current questionnaire blocker"}.`,
+            question: `Walk through the exact blocker: ${payload.blocker || "current questionnaire blocker"}.`,
             goodAnswer: "Shows the live workflow with concrete steps and visible outputs.",
             redFlag: "Stays at feature-overview level."
           }
         ];
 
-        if (needs.rowFidelity) {
+        if (payload.needs.rowFidelity) {
           questions.push({
             category: "Spreadsheet handling",
             question: "Show spreadsheet row preservation, workbook handoff, or portal-question import using the exact row wording we receive today.",
@@ -389,7 +548,7 @@ No clear proof or approval workflow</textarea>
           });
         }
 
-        if (needs.answerReuse) {
+        if (payload.needs.answerReuse) {
           questions.push({
             category: "Approved answers",
             question: "Show how approved answers, owner notes, and freshness signals stay reusable after the first response.",
@@ -398,7 +557,7 @@ No clear proof or approval workflow</textarea>
           });
         }
 
-        if (needs.proof) {
+        if (payload.needs.proof) {
           questions.push({
             category: "Proof",
             question: "Show how proof links, citations, or evidence notes stay attached to each answer and survive export.",
@@ -407,7 +566,7 @@ No clear proof or approval workflow</textarea>
           });
         }
 
-        if (needs.approvals) {
+        if (payload.needs.approvals) {
           questions.push({
             category: "Approvals",
             question: "Show reviewer gates, escalation, stale-answer rechecks, and what happens when a response needs security, privacy, or legal review.",
@@ -416,7 +575,7 @@ No clear proof or approval workflow</textarea>
           });
         }
 
-        if (needs.timeToValue) {
+        if (payload.needs.timeToValue) {
           questions.push({
             category: "Time to value",
             question: "What useful output does the team get in the first week, before a full rollout or content migration is complete?",
@@ -425,7 +584,7 @@ No clear proof or approval workflow</textarea>
           });
         }
 
-        if (needs.trustLayer || lane === "trust") {
+        if (payload.needs.trustLayer || payload.lane === "trust") {
           questions.push({
             category: "Trust layer",
             question: "Which trust-center, publishing, or TPRM features are genuinely required now, and which ones can wait until the questionnaire workflow matures?",
@@ -434,7 +593,7 @@ No clear proof or approval workflow</textarea>
           });
         }
 
-        if (lane === "response") {
+        if (payload.lane === "response") {
           questions.push({
             category: "Response workflow",
             question: "Show how the product turns one approved answer into governed reuse across repeated questionnaires without introducing heavy queue administration.",
@@ -443,7 +602,7 @@ No clear proof or approval workflow</textarea>
           });
         }
 
-        if (lane === "management") {
+        if (payload.lane === "management") {
           questions.push({
             category: "Management workflow",
             question: "Show assignments, approval routing, escalations, and reporting for a real multi-owner review path.",
@@ -473,23 +632,25 @@ No clear proof or approval workflow</textarea>
         return questions;
       }
 
-      function buildBrief(vendors, lane, stage, needs, redFlags) {
+      function buildBrief(payload) {
+        const vendors = parseList(payload.vendors);
+        const redFlags = parseList(payload.redFlags);
         const mustProve = [];
 
-        if (needs.rowFidelity) mustProve.push("spreadsheet or portal row fidelity");
-        if (needs.answerReuse) mustProve.push("approved-answer reuse");
-        if (needs.proof) mustProve.push("proof and citation handling");
-        if (needs.approvals) mustProve.push("approvals and escalation");
-        if (needs.timeToValue) mustProve.push("first-week value");
-        if (needs.trustLayer) mustProve.push("trust-program extension");
+        if (payload.needs.rowFidelity) mustProve.push("spreadsheet or portal row fidelity");
+        if (payload.needs.answerReuse) mustProve.push("approved-answer reuse");
+        if (payload.needs.proof) mustProve.push("proof and citation handling");
+        if (payload.needs.approvals) mustProve.push("approvals and escalation");
+        if (payload.needs.timeToValue) mustProve.push("first-week value");
+        if (payload.needs.trustLayer) mustProve.push("trust-program extension");
 
         return `Security questionnaire software demo brief
 
-Company: ${companyInput.value.trim() || "Example SaaS"}
-Current lane: ${getLaneLabel(lane)}
-Current queue stage: ${getStageLabel(stage)}
+Company: ${payload.company}
+Current lane: ${getLaneLabel(payload.lane)}
+Current queue stage: ${getStageLabel(payload.stage)}
 Shortlist: ${vendors.join(", ") || "No shortlist entered"}
-Main blocker: ${blockerInput.value.trim() || "No blocker entered"}
+Main blocker: ${payload.blocker || "No blocker entered"}
 
 What this demo must prove:
 - ${mustProve.join("\n- ") || "No must-prove items selected"}
@@ -503,8 +664,9 @@ Decision rule:
 - We escalate into a broader platform only if the real queue already justifies it.`;
       }
 
-      function buildNextStep(lane, needs, redFlags) {
-        if (redFlags.some((flag) => /owner|approval|escalat|review/i.test(flag)) || needs.approvals) {
+      function buildNextStep(payload) {
+        const redFlags = parseList(payload.redFlags);
+        if (redFlags.some((flag) => /owner|approval|escalat|review/i.test(flag)) || payload.needs.approvals) {
           return {
             title: "Owner clarity still matters after the demos.",
             body: "If the calls show that the team still lacks stable approval, proof, or escalation ownership, use the ownership matrix next so the buying motion does not hide an operating problem.",
@@ -513,11 +675,11 @@ Decision rule:
           };
         }
 
-        if (lane === "response" || lane === "management") {
+        if (payload.lane === "response" || payload.lane === "management") {
           return {
             title: "Turn the calls into a ranked decision.",
             body: "If the route is already clear, move back into the shortlist worksheet so the team scores vendors against the live blocker instead of call polish.",
-            href: "security-questionnaire-software-shortlist.html?source=software-demo-checklist-shortlist",
+            href: buildShortlistLink(payload),
             label: "Open shortlist worksheet"
           };
         }
@@ -525,86 +687,97 @@ Decision rule:
         return {
           title: "Pressure-test whether the broader layer is still justified.",
           body: "If the demos widen into trust-center or TPRM scope, use the evaluation template next so the team writes down exactly what is required before committing to the larger motion.",
-          href: "blog-security-questionnaire-software-evaluation-template.html?source=software-demo-checklist-evaluation-template",
+          href: buildEvaluationLink(payload),
           label: "Open evaluation template"
         };
       }
 
-      function render() {
-        const vendors = parseList(vendorsInput.value);
-        const redFlags = parseList(redFlagsInput.value);
-        const lane = laneInput.value;
-        const stage = stageInput.value;
-        const needs = getNeeds();
-        const questions = buildQuestions(lane, stage, vendors, needs, redFlags);
-
-        briefOutput.textContent = buildBrief(vendors, lane, stage, needs, redFlags);
-        questionsOutput.textContent = questions
-          .map((item, index) => `${index + 1}. [${item.category}] ${item.question}\n   Good answer: ${item.goodAnswer}\n   Red flag: ${item.redFlag}`)
+      function buildQuestionsText(questions) {
+        return questions
+          .map((item, index) => `${index + 1}. [${item.category}] ${item.question}\nGood answer: ${item.goodAnswer}\nRed flag: ${item.redFlag}`)
           .join("\n\n");
-
-        const nextStep = buildNextStep(lane, needs, redFlags);
-        nextStepOutput.innerHTML = `<strong>${nextStep.title}</strong><p>${nextStep.body}</p><a class="button secondary" href="${nextStep.href}">${nextStep.label}</a>`;
-        status.textContent = `Checklist ready for ${vendors.length || 0} vendor${vendors.length === 1 ? "" : "s"} in the ${getLaneLabel(lane)} lane.`;
       }
 
-      function copyText(text, message) {
-        navigator.clipboard.writeText(text).then(() => {
-          status.textContent = message;
-        }).catch(() => {
-          status.textContent = "Clipboard permission failed. Copy manually from the output.";
-        });
-      }
-
-      function downloadCsv() {
-        const vendors = parseList(vendorsInput.value);
-        const redFlags = parseList(redFlagsInput.value);
-        const lane = laneInput.value;
-        const stage = stageInput.value;
-        const needs = getNeeds();
-        const questions = buildQuestions(lane, stage, vendors, needs, redFlags);
+      function buildCsv(questions) {
         const rows = [["category", "question", "good_answer", "red_flag"]];
-
         for (const item of questions) {
           rows.push([item.category, item.question, item.goodAnswer, item.redFlag]);
         }
-
-        const csv = rows
+        return rows
           .map((row) => row.map((value) => `"${String(value).replace(/"/g, "\"\"")}"`).join(","))
           .join("\n");
+      }
 
-        const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+      function triggerDownload(filename, content, type) {
+        const blob = new Blob([content], { type });
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
         link.href = url;
-        link.download = "security-questionnaire-software-demo-checklist.csv";
+        link.download = filename;
         document.body.appendChild(link);
         link.click();
         link.remove();
         URL.revokeObjectURL(url);
-        status.textContent = "Downloaded the demo checklist CSV.";
+      }
+
+      async function copyText(text, message, fallback) {
+        try {
+          await navigator.clipboard.writeText(text);
+          status.textContent = message;
+        } catch (error) {
+          status.textContent = fallback;
+        }
+      }
+
+      function render() {
+        const payload = collectPayload();
+        const questions = buildQuestions(payload);
+        const brief = buildBrief(payload);
+        const nextStep = buildNextStep(payload);
+
+        briefOutput.textContent = brief;
+        questionsOutput.textContent = buildQuestionsText(questions);
+        nextStepOutput.innerHTML = `<strong>${nextStep.title}</strong><p>${nextStep.body}</p><a class="button secondary" href="${nextStep.href}">${nextStep.label}</a>`;
+
+        document.getElementById("hero-shortlist-link").href = buildShortlistLink(payload);
+        document.getElementById("card-shortlist-link").href = buildShortlistLink(payload);
+        document.getElementById("hero-evaluation-link").href = buildEvaluationLink(payload);
+        document.getElementById("card-evaluation-link").href = buildEvaluationLink(payload);
+        document.getElementById("card-scorecard-link").href = buildScorecardLink(payload);
+
+        saveDraft(payload);
+        status.textContent = "Draft saved locally on this device.";
+
+        document.getElementById("copy-brief").onclick = () => copyText(brief, "Copied the demo brief.", "Clipboard permission failed. Copy manually from the output.");
+        document.getElementById("copy-questions").onclick = () => copyText(buildQuestionsText(questions), "Copied the demo questions.", "Clipboard permission failed. Copy manually from the output.");
+        document.getElementById("download-demo-csv").onclick = () => {
+          triggerDownload("security-questionnaire-software-demo-checklist.csv", buildCsv(questions), "text/csv;charset=utf-8");
+          status.textContent = "Downloaded the demo checklist CSV.";
+        };
+        document.getElementById("copy-share-link").onclick = () => copyText(buildShareLink(payload), "Copied the share link.", "Clipboard permission failed. Copy the URL from the address bar.");
       }
 
       form.addEventListener("input", render);
-      document.getElementById("copy-brief").addEventListener("click", () => copyText(briefOutput.textContent, "Copied the demo brief."));
-      document.getElementById("copy-questions").addEventListener("click", () => copyText(questionsOutput.textContent, "Copied the demo questions."));
-      document.getElementById("download-demo-csv").addEventListener("click", downloadCsv);
+      form.addEventListener("change", render);
+
+      document.getElementById("clear-draft").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        window.location.href = window.location.pathname;
+      });
 
       document.querySelectorAll("[data-preset]").forEach((button) => {
         button.addEventListener("click", () => {
           const preset = presetConfig[button.dataset.preset];
           if (!preset) return;
-
-          laneInput.value = preset.lane;
-          stageInput.value = preset.stage;
-          Object.entries(preset.needs).forEach(([id, checked]) => {
-            const input = document.getElementById(id);
-            if (input) input.checked = checked;
-          });
+          applyPayload({ lane: preset.lane, stage: preset.stage, needs: preset.checks });
           render();
         });
       });
 
+      const loadedFromQuery = loadQueryPayload();
+      if (!loadedFromQuery) {
+        loadDraft();
+      }
       render();
     </script>
   </body>

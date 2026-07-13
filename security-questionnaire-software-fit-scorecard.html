@@ -259,7 +259,7 @@
             </div>
             <div class="generator-actions">
               <a class="button" id="comparison-primary" href="security-questionnaire-software-shortlist.html?source=software-scorecard-shortlist">Open shortlist worksheet</a>
-              <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template.html?source=software-scorecard-evaluation-template">Open evaluation template</a>
+              <a class="button secondary" id="comparison-evaluation-link" href="blog-security-questionnaire-software-evaluation-template.html?source=software-scorecard-evaluation-template">Open evaluation template</a>
               <a class="button secondary" id="comparison-secondary" href="blog-security-questionnaire-software-for-startups.html?source=software-scorecard-questionnaire-software">Open software guide</a>
             </div>
             <div class="generator-actions">
@@ -1279,6 +1279,26 @@
         return url.toString();
       }
 
+      function buildEvaluationTemplateUrl(payload) {
+        const url = new URL("blog-security-questionnaire-software-evaluation-template.html", window.location.href);
+        url.searchParams.set("source", "software-scorecard-evaluation-template");
+        url.searchParams.set("company", payload.company.replace(/[.!?]$/, ""));
+        url.searchParams.set("stage", payload.stage);
+        url.searchParams.set("volume", payload.volume);
+        url.searchParams.set("maturity", payload.approvedContent === "none" ? "rough" : payload.approvedContent === "partial" ? "mixed" : "stable");
+        url.searchParams.set("intake", payload.intakeFormat);
+        url.searchParams.set("vendors", payload.shortlist.replace(/[.!?]$/, ""));
+        url.searchParams.set("blocker", payload.blocker.replace(/[.!?]$/, ""));
+        url.searchParams.set("needLocal", payload.stage === "first-answer" ? "1" : "0");
+        url.searchParams.set("needRow", payload.needs.rowPreservation ? "1" : "0");
+        url.searchParams.set("needLibrary", payload.needs.reusableLibrary ? "1" : "0");
+        url.searchParams.set("needAssignments", payload.needs.assignments ? "1" : "0");
+        url.searchParams.set("needTrust", payload.needs.trustProgram ? "1" : "0");
+        url.searchParams.set("needAnalytics", payload.needs.analytics ? "1" : "0");
+        url.searchParams.set("needProof", payload.needs.proof ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
       function downloadText(filename, content) {
         const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
         const url = URL.createObjectURL(blob);
@@ -1315,6 +1335,7 @@
         briefOutputNode.textContent = brief;
         gapsOutputNode.textContent = gapText;
         renderComparison(payload);
+        document.querySelector("#comparison-evaluation-link").href = buildEvaluationTemplateUrl(payload);
         saveDraft(payload);
         statusNode.textContent = "Draft saved locally on this device.";
 

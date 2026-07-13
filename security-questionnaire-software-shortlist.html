@@ -87,7 +87,7 @@
           <p>Use this worksheet when the team already has vendor names on the board and needs a defensible internal recommendation before it books demos, buys a broader platform, or keeps forcing a one-answer workflow past its limit. Score the current queue, shortlist, and must-have capabilities once, then get a local ranking, decision memo, and caution list without sending anything to a server.</p>
           <div class="hero-actions">
             <a class="button" href="#shortlist">Open shortlist worksheet</a>
-            <a class="button secondary" href="security-questionnaire-software-demo-checklist.html?source=software-shortlist-demo-checklist">Open demo checklist</a>
+            <a class="button secondary" id="open-demo-checklist" href="security-questionnaire-software-demo-checklist.html?source=software-shortlist-demo-checklist">Open demo checklist</a>
             <a class="button secondary" href="blog-security-questionnaire-software-demo-checklist-vs-shortlist.html?source=software-shortlist-demo-comparison">Demo checklist vs shortlist</a>
             <a class="button secondary" href="security-questionnaire-software-fit-scorecard.html?source=software-shortlist-scorecard">Open software fit scorecard</a>
             <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template-vs-shortlist.html?source=software-shortlist-evaluation-comparison">Evaluation template vs shortlist</a>
@@ -329,7 +329,7 @@
             <div class="generator-actions">
               <button class="button" id="copy-memo" type="button">Copy decision memo</button>
               <button class="button secondary" id="copy-csv" type="button">Copy ranking CSV</button>
-              <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template.html?source=software-shortlist-evaluation-template">Open evaluation template</a>
+              <a class="button secondary" id="open-evaluation-template" href="blog-security-questionnaire-software-evaluation-template.html?source=software-shortlist-evaluation-template">Open evaluation template</a>
               <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template-vs-shortlist.html?source=software-shortlist-evaluation-comparison">Evaluation template vs shortlist</a>
               <button class="button secondary" id="copy-share-link" type="button">Copy share link</button>
               <button class="button secondary" id="download-memo" type="button">Download memo</button>
@@ -1073,6 +1073,45 @@
         return url.toString();
       }
 
+      function buildEvaluationTemplateLink(payload) {
+        const url = new URL("blog-security-questionnaire-software-evaluation-template.html", window.location.href);
+        url.searchParams.set("source", "software-shortlist-evaluation-template");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("stage", payload.stage);
+        url.searchParams.set("volume", payload.volume);
+        url.searchParams.set("maturity", payload.maturity);
+        url.searchParams.set("intake", payload.intake);
+        url.searchParams.set("blocker", payload.blocker.replace(/[.!?]$/, ""));
+        url.searchParams.set("vendors", payload.vendors.map((key) => vendorProfiles[key].label).join(", "));
+        url.searchParams.set("needLocal", payload.needLocal ? "1" : "0");
+        url.searchParams.set("needRow", payload.needRow ? "1" : "0");
+        url.searchParams.set("needLibrary", payload.needLibrary ? "1" : "0");
+        url.searchParams.set("needAssignments", payload.needAssignments ? "1" : "0");
+        url.searchParams.set("needTrust", payload.needTrust ? "1" : "0");
+        url.searchParams.set("needTprm", payload.needTprm ? "1" : "0");
+        url.searchParams.set("needAnalytics", payload.needAnalytics ? "1" : "0");
+        url.searchParams.set("needAi", payload.needAi ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
+      function buildDemoChecklistLink(payload) {
+        const url = new URL("security-questionnaire-software-demo-checklist.html", window.location.href);
+        url.searchParams.set("source", "software-shortlist-demo-checklist");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("vendors", payload.vendors.map((key) => vendorProfiles[key].label).join(", "));
+        url.searchParams.set("blocker", payload.blocker.replace(/[.!?]$/, ""));
+        url.searchParams.set("lane", payload.needAssignments || payload.needTrust || payload.needTprm || payload.needAnalytics ? "management" : "response");
+        url.searchParams.set("stage", payload.stage === "platform-shortlist" ? "multi-owner" : payload.stage === "repeat-review" ? "repeat-review" : "spreadsheet");
+        url.searchParams.set("redFlags", buildGaps(payload, payload.vendors[0] || "noticekit").join("\n"));
+        url.searchParams.set("rowFidelity", payload.needRow ? "1" : "0");
+        url.searchParams.set("answerReuse", payload.needLibrary ? "1" : "0");
+        url.searchParams.set("proof", "1");
+        url.searchParams.set("approvals", payload.needAssignments ? "1" : "0");
+        url.searchParams.set("timeToValue", payload.needLocal ? "1" : "0");
+        url.searchParams.set("trustLayer", payload.needTrust || payload.needTprm ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
       function readQueryPayload() {
         const params = new URLSearchParams(window.location.search);
         if (!params.toString()) return null;
@@ -1159,6 +1198,8 @@
         document.querySelector("#copy-csv").onclick = () => copyText(buildRankingCsv(ranked), "Copied ranking CSV.");
         document.querySelector("#copy-share-link").onclick = () => copyText(buildShareLink(payload), "Copied share link.");
         document.querySelector("#download-memo").onclick = () => triggerDownload("noticekit-security-questionnaire-software-shortlist.txt", memo);
+        document.querySelector("#open-evaluation-template").href = buildEvaluationTemplateLink(payload);
+        document.querySelector("#open-demo-checklist").href = buildDemoChecklistLink(payload);
         document.querySelector("#clear-draft").onclick = () => {
           localStorage.removeItem(STORAGE_KEY);
           window.location.href = window.location.pathname;
