@@ -633,26 +633,53 @@
           return {
             title: "Recommended route: stay small first",
             copy: "Use the software fit scorecard or the answer-builder route before you let a one-answer problem turn into a bigger software purchase.",
-            primary: buildScorecardLink(payload),
-            secondary: buildShortlistLink(payload),
-            tertiary: buildDemoLink(payload)
+            primary: {
+              href: buildScorecardLink(payload),
+              label: "Open software fit scorecard"
+            },
+            secondary: {
+              href: buildShortlistLink(payload),
+              label: "Open shortlist worksheet"
+            },
+            tertiary: {
+              href: buildDemoLink(payload),
+              label: "Open demo checklist"
+            }
           };
         }
         if (payload.stage === "repeat-review" || parseList(payload.vendors).length > 0) {
           return {
             title: "Recommended route: rank the shortlist",
             copy: "Vendor names are already live, so move into the shortlist worksheet and only book demos after the ranking and caution list are written down.",
-            primary: buildShortlistLink(payload),
-            secondary: buildDemoLink(payload),
-            tertiary: buildScorecardLink(payload)
+            primary: {
+              href: buildShortlistLink(payload),
+              label: "Open shortlist worksheet"
+            },
+            secondary: {
+              href: buildDemoLink(payload),
+              label: "Open demo checklist"
+            },
+            tertiary: {
+              href: buildScorecardLink(payload),
+              label: "Open software fit scorecard"
+            }
           };
         }
         return {
           title: "Recommended route: keep the memo tied to the queue",
           copy: "The buying motion already smells larger than one answer, but the team still needs the memo, route judgment, and demo discipline to stay aligned.",
-          primary: buildScorecardLink(payload),
-          secondary: buildShortlistLink(payload),
-          tertiary: buildDemoLink(payload)
+          primary: {
+            href: buildScorecardLink(payload),
+            label: "Open software fit scorecard"
+          },
+          secondary: {
+            href: buildShortlistLink(payload),
+            label: "Open shortlist worksheet"
+          },
+          tertiary: {
+            href: buildDemoLink(payload),
+            label: "Open demo checklist"
+          }
         };
       }
 
@@ -742,9 +769,12 @@ ${vendors.length ? vendors.map((vendor) => `- ${vendor}:`).join("\n") : "- Notic
         document.getElementById("hero-scorecard-link").href = buildScorecardLink(payload);
         document.getElementById("hero-shortlist-link").href = buildShortlistLink(payload);
         document.getElementById("hero-demo-link").href = buildDemoLink(payload);
-        document.getElementById("result-scorecard-link").href = recommendation.primary;
-        document.getElementById("result-shortlist-link").href = recommendation.secondary;
-        document.getElementById("result-demo-link").href = recommendation.tertiary;
+        document.getElementById("result-scorecard-link").href = recommendation.primary.href;
+        document.getElementById("result-scorecard-link").textContent = recommendation.primary.label;
+        document.getElementById("result-shortlist-link").href = recommendation.secondary.href;
+        document.getElementById("result-shortlist-link").textContent = recommendation.secondary.label;
+        document.getElementById("result-demo-link").href = recommendation.tertiary.href;
+        document.getElementById("result-demo-link").textContent = recommendation.tertiary.label;
 
         saveDraft(payload);
         statusNode.textContent = "Draft saved locally on this device.";

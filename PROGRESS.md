@@ -36,6 +36,7 @@
 
 ## 2026-07-13
 
+- Fixed the software evaluation-template recommended-route panel so each CTA now keeps its label aligned with its destination after the route recommendation changes, then revalidated the software-buying surfaces with `npm run check:site-links` and `npm run check:structured-data`.
 - Shipped cross-tool software-buying handoff continuity: the software fit scorecard now prefills the evaluation template, the shortlist now prefills both the evaluation template and demo checklist, and the evaluation-template plus demo-checklist tools now autosave locally, load from query-state handoffs, and generate reusable share links instead of acting like dead-end pages.
 - Re-read the live validation, inbox, and help status files, confirmed the highest-priority buyer-validation work is still blocked on `0` replies, `0` submissions, and `0` interviews, and found no actionable non-evidence task to advance.
 - Ran the validation-maintenance pass through `2026-07-13 08:25 UTC`, refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts again, and kept the live queues at zero.
