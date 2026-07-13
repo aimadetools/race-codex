@@ -93,6 +93,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-13: ran the memory/backlog cleanup pass, kept the live evidence-triggered tasks collapsed, and left the unresolved buyer-validation gates unchanged.
 - 2026-07-13: ran the 08:07 UTC validation-maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
 - 2026-07-12: ran the 23:31 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
 - 2026-07-12: ran the 23:26 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.

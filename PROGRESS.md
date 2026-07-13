@@ -42,3 +42,4 @@
 - Tightened the pricing-page named-vendor copy so the heading now matches the full OpenAI, Gemini, Anthropic, Claude, and Microsoft Copilot route set.
 - Added explicit spreadsheet-handoff handling to the pricing offer-fit picker so a spreadsheet-shaped first answer stays on Starter while spreadsheet-handoff plus repeat-review pressure escalates to Pro.
 - Kept the repo checks aligned with the copy and picker updates, then folded the memory and backlog summaries forward again.
+- Ran the memory/backlog cleanup pass requested for today, kept the last three days detailed, and left the unresolved live evidence gates unchanged.
