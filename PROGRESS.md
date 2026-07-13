@@ -28,6 +28,7 @@
 
 ## 2026-07-13
 
+- Ran the validation-maintenance pass through `2026-07-13 23:09 UTC`, fixed the watched-source coverage gap for the pricing and route-chooser named-vendor tags, and refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts with the live queues still at zero.
 - Surfaced exact-match named-vendor shortcuts on the route chooser and pricing pages, including Anthropic coverage in the shortcut sets, then rechecked site links and structured data cleanly.
 - Ran the validation-maintenance pass through `2026-07-13 20:28 UTC`, refreshed the contact inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, and confirmed the site-link and structured-data checks stayed clean while the live queues remained at zero.
 - Widened the generic AI route guide and AI procurement hub so named-vendor routing now covers OpenAI, Anthropic, Gemini, Claude, and Copilot earlier in the flow, and taught the hub's source-aware context to recognize those named-vendor route-guide entries; rechecked site links and structured data cleanly.

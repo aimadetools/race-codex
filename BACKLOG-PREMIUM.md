@@ -93,6 +93,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-13: reran validation maintenance, fixed the watched-source coverage gap for the pricing and route-chooser named-vendor tags, and regenerated the status/watch artifacts cleanly.
 - 2026-07-13: re-read the live memory and status files, refreshed the current blocker timestamps, and kept the premium backlog collapsed so only the evidence-gated items remain detailed.
 - 2026-07-13: ran the validation-maintenance pass, fixed the Gemini / Claude / Copilot AI path-guide source-tag coverage gap, and reran the watch, structured-data, and site-link checks cleanly while the live evidence gates stayed unchanged.
 - 2026-07-13: ran the validation-maintenance and memory-cleanup checkpoints, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.

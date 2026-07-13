@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-13 20:28 UTC
+Checked at: 2026-07-13 23:09 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -1384,6 +1384,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-openai-answer-template: 0
 - pricing-openai-answer-bank: 0
 - pricing-openai-path-guide: 0
+- pricing-anthropic-answer-template: 0
+- pricing-anthropic-answer-bank: 0
+- pricing-anthropic-path-guide: 0
 - anthropic-security-questionnaire-template-pricing: 0
 - anthropic-security-questionnaire-example-pricing: 0
 - anthropic-answer-bank-pricing: 0
@@ -2454,6 +2457,16 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-gemini-answer-bank: 0
 - pricing-gemini-answer-template: 0
 - pricing-gemini-path-guide: 0
+- route-chooser-openai-template: 0
+- route-chooser-openai-answer-bank: 0
+- route-chooser-anthropic-template: 0
+- route-chooser-anthropic-answer-bank: 0
+- route-chooser-gemini-template: 0
+- route-chooser-gemini-answer-bank: 0
+- route-chooser-claude-template: 0
+- route-chooser-claude-answer-bank: 0
+- route-chooser-copilot-template: 0
+- route-chooser-copilot-answer-bank: 0
 - ai-answer-library-microsoft-copilot-answer-bank: 0
 - ai-answer-library-microsoft-copilot-template: 0
 - ai-deal-blocker-microsoft-copilot-answer-template: 0
