@@ -96,7 +96,7 @@
             <a class="button secondary" href="blog-security-questionnaire-software-for-startups.html?source=software-shortlist-questionnaire-software">Open software guide</a>
             <a class="button secondary" href="blog-security-questionnaire-response-software.html?source=software-shortlist-response-software">Open response software guide</a>
             <a class="button secondary" href="blog-security-questionnaire-management-software.html?source=software-shortlist-management-software">Open management software guide</a>
-            <a class="button secondary" href="security-questionnaire-ownership-matrix.html?source=software-shortlist-ownership-matrix">Open ownership matrix</a>
+            <a class="button secondary" id="hero-ownership-link" href="security-questionnaire-ownership-matrix.html?source=software-shortlist-ownership-matrix">Open ownership matrix</a>
             <a class="button secondary" href="ai-security-questionnaire-answer-builder.html?source=software-shortlist-builder">Build answer + bundle</a>
           </div>
         </section>
@@ -1112,6 +1112,24 @@
         return `${url.pathname}${url.search}`;
       }
 
+      function buildOwnershipMatrixLink(payload) {
+        const url = new URL("security-questionnaire-ownership-matrix.html", window.location.href);
+        url.searchParams.set("source", "software-shortlist-ownership-matrix");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("queue", payload.stage === "first-answer" ? "one-answer" : payload.stage === "repeat-review" ? "repeat-review" : payload.needAssignments || payload.needAnalytics || payload.needTrust || payload.needTprm ? "program" : "multi-owner");
+        url.searchParams.set("volume", payload.volume);
+        url.searchParams.set("maturity", payload.maturity);
+        url.searchParams.set("intake", payload.intake);
+        url.searchParams.set("blocker", payload.blocker.replace(/[.!?]$/, ""));
+        url.searchParams.set("rowContext", payload.needRow ? "1" : "0");
+        url.searchParams.set("answerReuse", payload.needLibrary ? "1" : "0");
+        url.searchParams.set("proofReview", "1");
+        url.searchParams.set("approvals", payload.needAssignments ? "1" : "0");
+        url.searchParams.set("escalation", payload.needAssignments ? "1" : "0");
+        url.searchParams.set("analytics", payload.needAnalytics ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
       function readQueryPayload() {
         const params = new URLSearchParams(window.location.search);
         if (!params.toString()) return null;
@@ -1167,6 +1185,7 @@
         const leader = ranked[0];
         const runnerUp = ranked[1];
         const leaderProfile = vendorProfiles[leader.key];
+        const ownershipMatrixLink = buildOwnershipMatrixLink(payload);
 
         winnerScoreNode.textContent = leader.score.toFixed(1);
         winnerNameNode.textContent = leaderProfile.label;
@@ -1191,7 +1210,7 @@
           secondaryRouteNode.href = vendorProfiles[runnerUp.key].routeHref;
         } else {
           secondaryRouteNode.textContent = "Open ownership matrix";
-          secondaryRouteNode.href = "security-questionnaire-ownership-matrix.html?source=software-shortlist-ownership-matrix";
+          secondaryRouteNode.href = ownershipMatrixLink;
         }
 
         document.querySelector("#copy-memo").onclick = () => copyText(memo, "Copied decision memo.");
@@ -1200,6 +1219,7 @@
         document.querySelector("#download-memo").onclick = () => triggerDownload("noticekit-security-questionnaire-software-shortlist.txt", memo);
         document.querySelector("#open-evaluation-template").href = buildEvaluationTemplateLink(payload);
         document.querySelector("#open-demo-checklist").href = buildDemoChecklistLink(payload);
+        document.querySelector("#hero-ownership-link").href = ownershipMatrixLink;
         document.querySelector("#clear-draft").onclick = () => {
           localStorage.removeItem(STORAGE_KEY);
           window.location.href = window.location.pathname;

@@ -90,7 +90,7 @@
             <a class="button secondary" href="blog-security-questionnaire-software-fit-scorecard-vs-shortlist.html?source=software-scorecard-tools-comparison">Scorecard vs shortlist</a>
             <a class="button secondary" href="blog-security-questionnaire-software-demo-checklist-vs-scorecard.html?source=software-scorecard-demo-comparison">Scorecard vs demo checklist</a>
             <a class="button secondary" href="blog-security-questionnaire-software-fit-scorecard-vs-ownership-matrix.html?source=software-scorecard-tools-ownership-comparison">Scorecard vs ownership matrix</a>
-            <a class="button secondary" href="security-questionnaire-ownership-matrix.html?source=software-scorecard-ownership-matrix">Open ownership matrix</a>
+            <a class="button secondary" id="hero-ownership-link" href="security-questionnaire-ownership-matrix.html?source=software-scorecard-ownership-matrix">Open ownership matrix</a>
             <a class="button secondary" href="blog-security-questionnaire-software-for-startups.html?source=software-scorecard-questionnaire-software">Open software guide</a>
             <a class="button secondary" href="blog-security-questionnaire-response-software.html?source=software-scorecard-response-software">Open response software guide</a>
             <a class="button secondary" href="blog-security-questionnaire-management-software.html?source=software-scorecard-management-software">Open management software guide</a>
@@ -788,6 +788,7 @@
       const shareLinkNode = document.querySelector("#copy-share-link");
       const comparisonTitleNode = document.querySelector("#comparison-title");
       const comparisonSummaryNode = document.querySelector("#comparison-summary");
+      const heroOwnershipLinkNode = document.querySelector("#hero-ownership-link");
       const comparisonPrimaryNode = document.querySelector("#comparison-primary");
       const comparisonSecondaryNode = document.querySelector("#comparison-secondary");
       const comparisonOutputNode = document.querySelector("#comparison-output");
@@ -1299,6 +1300,24 @@
         return `${url.pathname}${url.search}`;
       }
 
+      function buildOwnershipMatrixUrl(payload) {
+        const url = new URL("security-questionnaire-ownership-matrix.html", window.location.href);
+        url.searchParams.set("source", "software-scorecard-ownership-matrix");
+        url.searchParams.set("company", payload.company.replace(/[.!?]$/, ""));
+        url.searchParams.set("queue", payload.stage === "first-answer" ? "one-answer" : payload.stage === "repeat-review" ? "repeat-review" : payload.stage === "multi-owner" ? "multi-owner" : payload.needs.analytics || payload.needs.trustProgram ? "program" : "multi-owner");
+        url.searchParams.set("volume", payload.volume);
+        url.searchParams.set("maturity", payload.approvedContent === "none" ? "rough" : payload.approvedContent === "partial" ? "mixed" : "stable");
+        url.searchParams.set("intake", payload.intakeFormat);
+        url.searchParams.set("blocker", payload.blocker.replace(/[.!?]$/, ""));
+        url.searchParams.set("rowContext", payload.needs.rowPreservation ? "1" : "0");
+        url.searchParams.set("answerReuse", payload.needs.reusableLibrary ? "1" : "0");
+        url.searchParams.set("proofReview", payload.needs.proof ? "1" : "0");
+        url.searchParams.set("approvals", payload.needs.assignments ? "1" : "0");
+        url.searchParams.set("escalation", payload.needs.assignments ? "1" : "0");
+        url.searchParams.set("analytics", payload.needs.analytics ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
       function downloadText(filename, content) {
         const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
         const url = URL.createObjectURL(blob);
@@ -1336,6 +1355,7 @@
         gapsOutputNode.textContent = gapText;
         renderComparison(payload);
         document.querySelector("#comparison-evaluation-link").href = buildEvaluationTemplateUrl(payload);
+        heroOwnershipLinkNode.href = buildOwnershipMatrixUrl(payload);
         saveDraft(payload);
         statusNode.textContent = "Draft saved locally on this device.";
 

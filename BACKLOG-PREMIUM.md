@@ -93,9 +93,10 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-13: extended the software-buying handoff continuity into the ownership-matrix route by adding browser-only share-link plus query-state restore support and wiring the scorecard, shortlist, evaluation template, and demo checklist into prefilled ownership-matrix handoffs.
 - 2026-07-13: fixed the software evaluation-template recommended-route CTA mismatch so the dynamic scorecard, shortlist, and demo recommendations now keep the correct destination labels after the route logic changes.
 - 2026-07-13: shipped cross-tool software-buying handoff continuity by wiring the scorecard into the evaluation template, wiring the shortlist into the evaluation template plus demo checklist, and giving the evaluation-template and demo-checklist tools browser-only autosave plus reusable share links.
-- 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC validation-maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
+- 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC and 12:52 UTC validation-maintenance checkpoints, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
 - 2026-07-12: ran the 23:31 UTC, 23:26 UTC, and 23:19 UTC maintenance checkpoints, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live evidence gates unchanged.
 - 2026-07-12: collapsed the backlog sections into summary lines and left the live evidence gates unchanged.
 - 2026-07-12 to 2026-07-11: ran the maintenance checkpoints through `12:51 UTC` and `23:29 UTC`, kept The Next AI public checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and left the live P0/P1 work collapsed into summary lines.

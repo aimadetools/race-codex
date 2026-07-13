@@ -321,8 +321,9 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-13: extended the ownership-matrix planner with browser-only share links plus query-state restore support and wired the scorecard, shortlist, evaluation template, and demo checklist into prefilled ownership-matrix handoffs.
 - 2026-07-13: fixed the software evaluation-template recommended-route CTA mismatch so each dynamic recommendation now keeps the correct destination label, then rechecked site links and structured data cleanly.
-- 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC validation-maintenance checkpoint, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live trigger-driven tasks collapsed.
+- 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC and 12:52 UTC validation-maintenance checkpoints, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live trigger-driven tasks collapsed.
 - 2026-07-13: tightened the pricing-page named-vendor heading and added explicit spreadsheet-handoff handling to the pricing offer-fit picker so the paid-fit advice matches the buyer's actual state.
 - 2026-07-12: ran the 23:31 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.
 - 2026-07-12: ran the 23:26 UTC maintenance checkpoint, refreshed the validation/help/inbox/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live queues at zero.

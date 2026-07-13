@@ -264,6 +264,7 @@
               <button class="button" id="copy-brief" type="button">Copy operating brief</button>
               <button class="button secondary" id="copy-csv" type="button">Copy matrix CSV</button>
               <button class="button secondary" id="download-csv" type="button">Download matrix CSV</button>
+              <button class="button secondary" id="copy-share-link" type="button">Copy share link</button>
               <button class="button secondary" id="clear-draft" type="button">Clear saved draft</button>
             </div>
             <p class="fine-print" id="planner-status">This planner runs in your browser. Inputs stay local and autosave on this device only.</p>
@@ -320,6 +321,26 @@
     <script>
       (function () {
         const storageKey = "noticekit-ownership-matrix-v1";
+        const QUERY_KEYS = {
+          company: "company",
+          queueShape: "queue",
+          volume: "volume",
+          answerMaturity: "maturity",
+          intakeShape: "intake",
+          blocker: "blocker",
+          intakeOwner: "intakeOwner",
+          draftOwner: "draftOwner",
+          proofOwner: "proofOwner",
+          approvalOwner: "approvalOwner",
+          escalationOwner: "escalationOwner",
+          recheckOwner: "recheckOwner",
+          needRowContext: "rowContext",
+          needAnswerReuse: "answerReuse",
+          needProofReview: "proofReview",
+          needApprovals: "approvals",
+          needEscalation: "escalation",
+          needAnalytics: "analytics"
+        };
         const form = document.querySelector("#ownership-form");
         const fields = Array.from(form.querySelectorAll("input, select, textarea"));
         const routeScore = document.querySelector("#route-score");
@@ -337,6 +358,7 @@
         const copyBriefButton = document.querySelector("#copy-brief");
         const copyCsvButton = document.querySelector("#copy-csv");
         const downloadCsvButton = document.querySelector("#download-csv");
+        const copyShareLinkButton = document.querySelector("#copy-share-link");
         const clearDraftButton = document.querySelector("#clear-draft");
 
         function getValue(id) {
@@ -355,28 +377,101 @@
           }
         }
 
+        function readBooleanParam(params, key) {
+          const value = params.get(key);
+          if (value === null) return null;
+          return value === "1" || value === "true" || value === "yes";
+        }
+
+        function buildPayload() {
+          const payload = {};
+          fields.forEach((field) => {
+            payload[field.id] = field.type === "checkbox" ? field.checked : field.value;
+          });
+          return payload;
+        }
+
+        function applyPayload(payload) {
+          if (!payload) return;
+          fields.forEach((field) => {
+            if (!(field.id in payload)) return;
+            if (field.type === "checkbox") {
+              if (typeof payload[field.id] === "boolean") {
+                field.checked = payload[field.id];
+              }
+            } else if (typeof payload[field.id] === "string") {
+              field.value = payload[field.id];
+            }
+          });
+        }
+
         function loadDraft() {
           try {
-            const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
-            fields.forEach((field) => {
-              if (!(field.id in saved)) return;
-              if (field.type === "checkbox") {
-                field.checked = Boolean(saved[field.id]);
-              } else {
-                field.value = saved[field.id];
-              }
-            });
+            const raw = localStorage.getItem(storageKey);
+            if (!raw) return false;
+            applyPayload(JSON.parse(raw));
+            return true;
           } catch (error) {
             console.warn("Unable to restore ownership matrix draft", error);
+            return false;
           }
         }
 
         function saveDraft() {
-          const draft = {};
-          fields.forEach((field) => {
-            draft[field.id] = field.type === "checkbox" ? field.checked : field.value;
+          localStorage.setItem(storageKey, JSON.stringify(buildPayload()));
+        }
+
+        function loadQueryPayload() {
+          const params = new URLSearchParams(window.location.search);
+          const hasQueryState = Object.values(QUERY_KEYS).some((key) => params.has(key));
+          if (!hasQueryState) return false;
+
+          applyPayload({
+            company: params.get(QUERY_KEYS.company),
+            "queue-shape": params.get(QUERY_KEYS.queueShape),
+            volume: params.get(QUERY_KEYS.volume),
+            "answer-maturity": params.get(QUERY_KEYS.answerMaturity),
+            "intake-shape": params.get(QUERY_KEYS.intakeShape),
+            blocker: params.get(QUERY_KEYS.blocker),
+            "intake-owner": params.get(QUERY_KEYS.intakeOwner),
+            "draft-owner": params.get(QUERY_KEYS.draftOwner),
+            "proof-owner": params.get(QUERY_KEYS.proofOwner),
+            "approval-owner": params.get(QUERY_KEYS.approvalOwner),
+            "escalation-owner": params.get(QUERY_KEYS.escalationOwner),
+            "recheck-owner": params.get(QUERY_KEYS.recheckOwner),
+            "need-row-context": readBooleanParam(params, QUERY_KEYS.needRowContext),
+            "need-answer-reuse": readBooleanParam(params, QUERY_KEYS.needAnswerReuse),
+            "need-proof-review": readBooleanParam(params, QUERY_KEYS.needProofReview),
+            "need-approvals": readBooleanParam(params, QUERY_KEYS.needApprovals),
+            "need-escalation": readBooleanParam(params, QUERY_KEYS.needEscalation),
+            "need-analytics": readBooleanParam(params, QUERY_KEYS.needAnalytics)
           });
-          localStorage.setItem(storageKey, JSON.stringify(draft));
+          return true;
+        }
+
+        function buildShareLink() {
+          const payload = buildPayload();
+          const url = new URL(window.location.href);
+          url.search = "";
+          url.searchParams.set(QUERY_KEYS.company, payload.company);
+          url.searchParams.set(QUERY_KEYS.queueShape, payload["queue-shape"]);
+          url.searchParams.set(QUERY_KEYS.volume, payload.volume);
+          url.searchParams.set(QUERY_KEYS.answerMaturity, payload["answer-maturity"]);
+          url.searchParams.set(QUERY_KEYS.intakeShape, payload["intake-shape"]);
+          url.searchParams.set(QUERY_KEYS.blocker, payload.blocker);
+          url.searchParams.set(QUERY_KEYS.intakeOwner, payload["intake-owner"]);
+          url.searchParams.set(QUERY_KEYS.draftOwner, payload["draft-owner"]);
+          url.searchParams.set(QUERY_KEYS.proofOwner, payload["proof-owner"]);
+          url.searchParams.set(QUERY_KEYS.approvalOwner, payload["approval-owner"]);
+          url.searchParams.set(QUERY_KEYS.escalationOwner, payload["escalation-owner"]);
+          url.searchParams.set(QUERY_KEYS.recheckOwner, payload["recheck-owner"]);
+          url.searchParams.set(QUERY_KEYS.needRowContext, payload["need-row-context"] ? "1" : "0");
+          url.searchParams.set(QUERY_KEYS.needAnswerReuse, payload["need-answer-reuse"] ? "1" : "0");
+          url.searchParams.set(QUERY_KEYS.needProofReview, payload["need-proof-review"] ? "1" : "0");
+          url.searchParams.set(QUERY_KEYS.needApprovals, payload["need-approvals"] ? "1" : "0");
+          url.searchParams.set(QUERY_KEYS.needEscalation, payload["need-escalation"] ? "1" : "0");
+          url.searchParams.set(QUERY_KEYS.needAnalytics, payload["need-analytics"] ? "1" : "0");
+          return url.toString();
         }
 
         function escapeHtml(value) {
@@ -587,13 +682,13 @@
           plannerStatus.textContent = `Preset loaded: ${name.replace(/-/g, " ")}. Inputs stay local and autosave on this device only.`;
         }
 
-        function copyText(text, message) {
+        function copyText(text, message, fallbackMessage) {
           navigator.clipboard.writeText(text)
             .then(() => {
               plannerStatus.textContent = message;
             })
             .catch(() => {
-              plannerStatus.textContent = "Clipboard access failed. Copy manually from the page.";
+              plannerStatus.textContent = fallbackMessage;
             });
         }
 
@@ -610,7 +705,10 @@
           plannerStatus.textContent = `Downloaded ${filename}.`;
         }
 
-        loadDraft();
+        const loadedFromQuery = loadQueryPayload();
+        if (!loadedFromQuery) {
+          loadDraft();
+        }
         let current = compute();
 
         fields.forEach((field) => {
@@ -630,12 +728,12 @@
 
         copyBriefButton.addEventListener("click", () => {
           current = compute();
-          copyText(current.briefText, "Operating brief copied.");
+          copyText(current.briefText, "Operating brief copied.", "Clipboard access failed. Copy the brief manually from the page.");
         });
 
         copyCsvButton.addEventListener("click", () => {
           current = compute();
-          copyText(current.csvText, "Ownership matrix CSV copied.");
+          copyText(current.csvText, "Ownership matrix CSV copied.", "Clipboard access failed. Copy the CSV manually from the page.");
         });
 
         downloadCsvButton.addEventListener("click", () => {
@@ -643,29 +741,13 @@
           downloadCsv("noticekit-security-questionnaire-ownership-matrix.csv", current.csvText);
         });
 
+        copyShareLinkButton.addEventListener("click", () => {
+          copyText(buildShareLink(), "Ownership matrix share link copied.", "Clipboard access failed. Copy the URL from the address bar.");
+        });
+
         clearDraftButton.addEventListener("click", () => {
           localStorage.removeItem(storageKey);
-          form.reset();
-          setValue("company", "Example SaaS");
-          setValue("queue-shape", "one-answer");
-          setValue("volume", "one-off");
-          setValue("answer-maturity", "rough");
-          setValue("intake-shape", "pasted");
-          setValue("blocker", "The buyer thread keeps reopening because nobody clearly owns intake, proof review, and final approval once the first draft is written.");
-          setValue("intake-owner", "Founder or account owner");
-          setValue("draft-owner", "Founder or ops lead");
-          setValue("proof-owner", "Security or engineering lead");
-          setValue("approval-owner", "Founder or legal reviewer");
-          setValue("escalation-owner", "Founder or GTM lead");
-          setValue("recheck-owner", "Product or security owner");
-          setValue("need-row-context", true);
-          setValue("need-answer-reuse", true);
-          setValue("need-proof-review", true);
-          setValue("need-approvals", true);
-          setValue("need-escalation", false);
-          setValue("need-analytics", false);
-          current = compute();
-          plannerStatus.textContent = "Local draft cleared.";
+          window.location.href = window.location.pathname;
         });
       }());
     </script>

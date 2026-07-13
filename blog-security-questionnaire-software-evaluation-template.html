@@ -116,7 +116,7 @@
               <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template-vs-shortlist.html?source=software-evaluation-template-shortlist-comparison">Evaluation template vs shortlist</a>
               <a class="button secondary" href="blog-security-questionnaire-software-demo-checklist-vs-evaluation-template.html?source=software-evaluation-template-demo-comparison">Demo checklist vs evaluation template</a>
               <a class="button secondary" href="blog-security-questionnaire-software-evaluation-template-vs-ownership-matrix.html?source=software-evaluation-template-ownership-comparison">Evaluation template vs ownership matrix</a>
-              <a class="button secondary" href="security-questionnaire-ownership-matrix.html?source=software-evaluation-template-ownership-matrix">Open ownership matrix</a>
+              <a class="button secondary" id="hero-ownership-link" href="security-questionnaire-ownership-matrix.html?source=software-evaluation-template-ownership-matrix">Open ownership matrix</a>
               <a class="button secondary" href="blog-security-questionnaire-software-for-startups.html?source=software-evaluation-template-questionnaire-software">Open software guide</a>
               <a class="button secondary" href="blog-security-questionnaire-response-software.html?source=software-evaluation-template-response-software">Open response software guide</a>
               <a class="button secondary" href="blog-security-questionnaire-management-software.html?source=software-evaluation-template-management-software">Open management software guide</a>
@@ -336,7 +336,7 @@
                     <td>"Do we have a vendor problem or an owner problem?"</td>
                     <td>Ownership matrix</td>
                     <td>The route may be clear already, but intake, proof, approval, and escalation ownership still drift.</td>
-                    <td><a href="security-questionnaire-ownership-matrix.html?source=software-evaluation-template-ownership-matrix">Build the ownership matrix</a></td>
+                    <td><a id="table-ownership-link" href="security-questionnaire-ownership-matrix.html?source=software-evaluation-template-ownership-matrix">Build the ownership matrix</a></td>
                   </tr>
                   <tr>
                     <td>"Are we really shopping response software or management software?"</td>
@@ -628,6 +628,24 @@
         return `${url.pathname}${url.search}`;
       }
 
+      function buildOwnershipMatrixLink(payload) {
+        const url = new URL("security-questionnaire-ownership-matrix.html", window.location.href);
+        url.searchParams.set("source", "software-evaluation-template-ownership-matrix");
+        url.searchParams.set("company", payload.company);
+        url.searchParams.set("queue", payload.stage === "first-answer" ? "one-answer" : payload.stage === "repeat-review" ? "repeat-review" : payload.needs.assignments || payload.needs.analytics || payload.needs.trust ? "program" : "multi-owner");
+        url.searchParams.set("volume", payload.volume);
+        url.searchParams.set("maturity", payload.maturity);
+        url.searchParams.set("intake", payload.intake);
+        url.searchParams.set("blocker", payload.blocker);
+        url.searchParams.set("rowContext", payload.needs.row ? "1" : "0");
+        url.searchParams.set("answerReuse", payload.needs.library ? "1" : "0");
+        url.searchParams.set("proofReview", payload.needs.proof ? "1" : "0");
+        url.searchParams.set("approvals", payload.needs.assignments ? "1" : "0");
+        url.searchParams.set("escalation", payload.needs.assignments ? "1" : "0");
+        url.searchParams.set("analytics", payload.needs.analytics ? "1" : "0");
+        return `${url.pathname}${url.search}`;
+      }
+
       function chooseRecommendation(payload) {
         if (payload.stage === "first-answer" || (payload.needs.local && !payload.needs.assignments && !payload.needs.analytics)) {
           return {
@@ -769,6 +787,8 @@ ${vendors.length ? vendors.map((vendor) => `- ${vendor}:`).join("\n") : "- Notic
         document.getElementById("hero-scorecard-link").href = buildScorecardLink(payload);
         document.getElementById("hero-shortlist-link").href = buildShortlistLink(payload);
         document.getElementById("hero-demo-link").href = buildDemoLink(payload);
+        document.getElementById("hero-ownership-link").href = buildOwnershipMatrixLink(payload);
+        document.getElementById("table-ownership-link").href = buildOwnershipMatrixLink(payload);
         document.getElementById("result-scorecard-link").href = recommendation.primary.href;
         document.getElementById("result-scorecard-link").textContent = recommendation.primary.label;
         document.getElementById("result-shortlist-link").href = recommendation.secondary.href;
