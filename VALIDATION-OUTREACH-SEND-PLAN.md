@@ -1,6 +1,6 @@
 # NoticeKit Validation Outreach Send Plan
 
-Date: 2026-07-12
+Date: 2026-07-13
 
 This plan translates the current outreach CSV state into the active send and reply-handling queue.
 Use it to see which batches are live, which are still queued, and what should happen next when evidence arrives.
