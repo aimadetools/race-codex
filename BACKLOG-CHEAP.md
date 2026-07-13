@@ -321,6 +321,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-13: elevated the judgment-first deal-blocker hierarchy so teardown and audit now surface before the drafting routes in the hero and card grid.
 - 2026-07-13: extended the ownership-matrix planner with browser-only share links plus query-state restore support and wired the scorecard, shortlist, evaluation template, and demo checklist into prefilled ownership-matrix handoffs.
 - 2026-07-13: fixed the software evaluation-template recommended-route CTA mismatch so each dynamic recommendation now keeps the correct destination label, then rechecked site links and structured data cleanly.
 - 2026-07-13: ran the memory/backlog cleanup pass plus the 08:25 UTC and 12:52 UTC validation-maintenance checkpoints, refreshed the inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts, and kept the live trigger-driven tasks collapsed.
