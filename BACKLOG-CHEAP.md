@@ -327,6 +327,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-14: extended watched-source coverage for the alternative-page software-decision handoff tags and kept the emitted tag watch complete at `2539` tags after revalidating links and structured data cleanly.
 - 2026-07-14: extended the older pricing-fit, answer-bank-vs-response-template, answer-bank-vs-response-workbook, and spreadsheet-template pages with ROI-calculator, shortlist, and evaluation-template software handoffs, then revalidated links, structured data, and watched source coverage cleanly at `2507` emitted tags.
 - 2026-07-14: promoted the ROI calculator ahead of scorecard, shortlist, and demo/evaluation paths on the main homepage, pricing, free-tools, start-here, and AI procurement hub software sections, then revalidated links and structured data cleanly.
 - 2026-07-14: wired the ROI calculator into the route chooser as a first-class path with hero links, table coverage, route-summary guidance, and quick-finder ROI math handling, then revalidated the site-link and structured-data checks cleanly.
