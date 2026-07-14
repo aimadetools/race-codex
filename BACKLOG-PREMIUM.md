@@ -94,10 +94,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
-- 2026-07-14: rechecked live memory, kept the backlog collapsed, and left the site-link, structured-data, and source-tag coverage checks green with no live replies.
-- 2026-07-14: ran validation-maintenance through 16:29 UTC, refreshed the status/watch artifacts, and kept the live evidence gates blocked while the site checks stayed green.
-- 2026-07-14: ran validation-maintenance through 16:25 UTC, refreshed the status/watch artifacts, and kept the live evidence gates blocked while the site checks stayed green.
-- 2026-07-14: ran validation-maintenance through 16:17 UTC, refreshed the status/watch artifacts, deduplicated the no-reply checkpoint, and kept the live evidence gates blocked while the site checks stayed green.
+- 2026-07-14: rechecked live memory and ran validation-maintenance passes through 20:09 UTC, refreshing the status/watch artifacts, deduplicating the no-reply checkpoints, and keeping the evidence-gated backlog collapsed while the site checks stayed green.
 - 2026-07-14: extended the exact-match security-questionnaire checklist route into the automation-software, automation-guide, and SIG / CAIQ / VSAQ guides so automation-intent visitors can branch into a live-thread fact pass before widening into heavier workflow decisions, then revalidated links, structured data, and watched source coverage cleanly at `2546` emitted tags.
 - 2026-07-14: extended the Vanta / Responsive / Loopio / HyperComply / Conveyor / Drata AI Questionnaire Assistance / SafeBase / Whistic alternative pages with software-fit-scorecard, shortlist, ROI-calculator, and evaluation-template continuity, then revalidated links, structured data, and watched source coverage cleanly at `2539` emitted tags.
 - 2026-07-14: extended the older pricing-fit plus file-first answer-bank/template/workbook pages with ROI-calculator, shortlist, and evaluation-template software-decision continuity, then revalidated links, structured data, and watcher coverage cleanly.

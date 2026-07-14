@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-14 16:29 UTC
+Checked at: 2026-07-14 20:09 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -209,6 +209,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-answer-bank-vs-response-template: 0
 - blog-index-answer-library: 0
 - blog-index-answer-example: 0
+- blog-index-answer-example-vs-response-template: 0
 - blog-index-sample-answers: 0
 - blog-index-response-workbook: 0
 - blog-index-pricing-fit-guide: 0
