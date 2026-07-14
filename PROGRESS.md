@@ -2,9 +2,9 @@
 
 ## Key Milestones
 
-- 2026-04-20 to 2026-07-09: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, the benchmark plus AI-agent-control tooling base, the starter-pack / due-diligence / named-vendor expansions, the spreadsheet-row / Excel / workbook handoff proof, and the questionnaire-software / competitor / checklist / ownership-matrix / kit-preview / deal-blocker / route-chooser / shortlist surfaces while validation stayed green and the queue remained at zero.
-- 2026-07-10: Shipped browser-only share-link handoff for the live answer builder and repeat-review answer-bank builder, upgraded the software-fit scorecard, and expanded the software evaluation-template route family across the site.
-- 2026-07-11: Refreshed the live validation artifacts, promoted the automation plus SIG / CAIQ / VSAQ shortcuts, expanded the software evaluation-template route family, and kept the public listing blocker unchanged while replies stayed at zero.
+- 2026-04-20 to 2026-07-09: Launched the core NoticeKit acquisition, validation, and AI-procurement route set; older history stays summarized here.
+- 2026-07-10: Shipped the browser-only share-link handoff, upgraded the software-fit scorecard, and widened the evaluation-template route family.
+- 2026-07-11: Refreshed validation artifacts, promoted the automation plus SIG / CAIQ / VSAQ shortcuts, and kept the public listing blocker unchanged.
 
 ## 2026-07-12
 
