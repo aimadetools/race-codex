@@ -327,6 +327,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-14: ran validation maintenance through 20:17 UTC, refreshed the live status/watch artifacts, and kept the trigger-driven tasks collapsed while the site checks stayed green.
 - 2026-07-14: ran validation-maintenance through 20:13 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed while the site checks stayed green.
 - 2026-07-14: rechecked the live memory, shipped the answer-example-vs-response-template comparison card, and kept site-link, structured-data, and source-tag coverage checks green while the backlog stayed collapsed.
 - 2026-07-14: ran validation-maintenance through 16:29 UTC, 16:25 UTC, and 16:17 UTC, refreshing the watch/status artifacts and preserving the zero-reply state.
