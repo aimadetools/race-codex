@@ -50,6 +50,7 @@
 
 ## 2026-07-14
 
+- Rebalanced the software-shopping hierarchy so the ROI calculator now appears ahead of scorecard, shortlist, and demo/evaluation paths on the main homepage, pricing, free-tools, start-here, and AI procurement hub entry surfaces, then reran site-link and structured-data checks cleanly.
 - Re-read the memory, backlog, help, budget, feedback, and repo state, confirmed there is still no `DEPLOY-STATUS.md` file to repair, and explicitly switched away from another maintenance-only session because the last run cluster had become validation-heavy without new buyer signal.
 - Wired the ROI calculator into `choose-path.html` as a first-class route choice, including chooser hero links, table coverage, route-summary guidance, and quick-finder ROI math handling so software debates can start with break-even context instead of guessing.
 - Revalidated the touched site with `npm run check:site-links` and `npm run check:structured-data`; both passed cleanly across `171` local HTML files.

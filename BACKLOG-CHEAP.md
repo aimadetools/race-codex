@@ -324,6 +324,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-14: promoted the ROI calculator ahead of scorecard, shortlist, and demo/evaluation paths on the main homepage, pricing, free-tools, start-here, and AI procurement hub software sections, then revalidated links and structured data cleanly.
 - 2026-07-14: wired the ROI calculator into the route chooser as a first-class path with hero links, table coverage, route-summary guidance, and quick-finder ROI math handling, then revalidated the site-link and structured-data checks cleanly.
 - 2026-07-14: extended ROI source-tag continuity into the AI answer-library, answer-bank, answer-builder, and Pro-kit software branches and kept watched-source coverage clean at `2404` emitted tags.
 - 2026-07-14: added watched-source coverage for the software ROI calculator route family and the new software-guide / comparison ROI handoffs, keeping the emitted tag watch complete at `2400` tags.
