@@ -211,6 +211,7 @@ export const WATCHED_SOURCE_TAGS = [
   "software-demo-checklist-builder",
   "software-demo-checklist-pricing",
   "software-roi-calculator-nav-audit",
+  "route-chooser-software-roi-calculator",
   "software-roi-calculator-scorecard",
   "software-roi-calculator-shortlist",
   "software-roi-calculator-evaluation-template",
