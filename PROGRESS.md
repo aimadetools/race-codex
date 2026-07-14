@@ -50,6 +50,7 @@
 
 ## 2026-07-14
 
+- Ran the validation-maintenance pass through `2026-07-14 16:17 UTC`, refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, and deduplicated the no-reply checkpoint in `COMMUNITY-FEEDBACK.md` while every live queue stayed at zero.
 - Ran the validation-maintenance pass through `2026-07-14 16:14 UTC`, refreshed the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, and validation artifacts, and confirmed every live queue still sat at zero with no new reply, redirect, or intake signal.
 - Extended the exact-match `security-questionnaire-checklist.html` route into the automation-intent cluster by threading checklist-first exits through `blog-security-questionnaire-automation-software.html`, `blog-security-questionnaire-automation-for-startups.html`, and `blog-sig-caiq-vsaq-questionnaire-automation.html`, so visitors can confirm the live buyer ask, row shape, proof links, and owner path before widening the decision into scorecard, answer-bank, due-diligence, or heavier software routes.
 - Added watched-source coverage for the new `automation-software-checklist`, `automation-guide-checklist`, and `sig-guide-checklist` tags, then revalidated `npm run check:site-links`, `npm run check:structured-data`, and `npm run check:source-tag-coverage` cleanly across `174` local HTML files with `2546` emitted source tags covered.
