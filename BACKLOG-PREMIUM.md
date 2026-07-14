@@ -94,6 +94,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-14: extended the named-vendor OpenAI / Anthropic / Claude / Gemini / Microsoft Copilot answer-bank and answer-bank-vs-builder pages with software-fit-scorecard and ROI-calculator continuity, normalized the Copilot comparison source-tag pattern, and revalidated links, structured data, and watcher coverage cleanly.
 - 2026-07-14: extended the ROI continuity path into the AI answer-library, answer-bank, answer-builder, and Pro-kit software-escalation surfaces, then revalidated links, structured data, and watcher coverage cleanly.
 - 2026-07-14: extended the software-buying ROI continuity across the questionnaire / response / management / automation guides and the main software comparison pages, then revalidated links, structured data, and watcher coverage cleanly.
 - 2026-07-14: shipped the browser-only security-questionnaire-software ROI calculator, threaded it into the software-buying route set, refreshed machine-readable discovery assets, and revalidated links plus structured data cleanly.
