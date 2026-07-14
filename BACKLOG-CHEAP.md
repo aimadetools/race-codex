@@ -327,30 +327,13 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
-- 2026-07-14: rechecked live memory, kept the backlog collapsed, and left the site-link, structured-data, and source-tag coverage checks green with no live replies.
-- 2026-07-14: promoted the answer-example-vs-response-template page into a dedicated blog-index comparison card so the filled-example vs copy-ready-template decision is now a first-class blog route instead of only a nested CTA.
-- 2026-07-14: re-ran site-link, structured-data, and source-tag coverage checks after the blog-index promotion; all passed cleanly across `175` HTML files with `2559` emitted source tags.
-- 2026-07-14: ran validation-maintenance through 16:29 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed while the site checks stayed green.
-- 2026-07-14: ran validation-maintenance through 16:25 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed while the site checks stayed green.
-- 2026-07-14: ran validation-maintenance through 16:17 UTC, refreshed the status/watch artifacts, deduplicated the no-reply checkpoint, and kept the live trigger-driven tasks blocked while the site checks stayed green.
-- 2026-07-14: added a dedicated answer-example-vs-response-template comparison page, threaded it into the homepage, blog index, free-tools, pricing, start-here, and AI procurement hub entry surfaces, and revalidated links, structured data, and source-tag coverage cleanly at `2558` emitted tags.
-- 2026-07-14: added checklist-first continuity into the automation-software, automation-guide, and SIG / CAIQ / VSAQ guides, then extended watched-source coverage for the new checklist handoff tags and revalidated links, structured data, and watcher coverage cleanly at `2546` emitted tags.
-- 2026-07-14: extended watched-source coverage for the alternative-page software-decision handoff tags and kept the emitted tag watch complete at `2539` tags after revalidating links and structured data cleanly.
-- 2026-07-14: extended the older pricing-fit, answer-bank-vs-response-template, answer-bank-vs-response-workbook, and spreadsheet-template pages with ROI-calculator, shortlist, and evaluation-template software handoffs, then revalidated links, structured data, and watched source coverage cleanly at `2507` emitted tags.
-- 2026-07-14: promoted the ROI calculator ahead of scorecard, shortlist, and demo/evaluation paths on the main homepage, pricing, free-tools, start-here, and AI procurement hub software sections, then revalidated links and structured data cleanly.
-- 2026-07-14: wired the ROI calculator into the route chooser as a first-class path with hero links, table coverage, route-summary guidance, and quick-finder ROI math handling, then revalidated the site-link and structured-data checks cleanly.
-- 2026-07-14: shipped the ROI comparison cluster against scorecard, shortlist, and evaluation template; wired it into the software pages and blog index; then revalidated links, structured data, and source-tag coverage cleanly.
-- 2026-07-14: extended ROI source-tag continuity into the AI answer-library, answer-bank, answer-builder, and Pro-kit software branches and kept watched-source coverage clean at `2404` emitted tags.
-- 2026-07-14: added watched-source coverage for the software ROI calculator route family and the new software-guide / comparison ROI handoffs, keeping the emitted tag watch complete at `2400` tags.
-- 2026-07-13: reran validation maintenance through 23:30 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed with zero replies.
-- 2026-07-13: reran validation maintenance through 23:22 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed with zero replies.
-- 2026-07-13: reran validation maintenance through 23:15 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed with zero replies.
-- 2026-07-13: reran validation maintenance, fixed the watched-source coverage gap for the pricing and route-chooser named-vendor tags, and regenerated the status/watch artifacts cleanly.
-- 2026-07-13: surfaced exact-match named-vendor shortcuts on the route chooser and pricing pages, including Anthropic coverage in the shortcut sets, and kept the route-finder paths one click away.
-- 2026-07-13: re-read the live memory and status files, refreshed the blocker timestamps, and kept the cheap backlog collapsed so only the trigger-gated items remain detailed.
-- 2026-07-13: ran the validation-maintenance pass, fixed the Gemini / Claude / Copilot AI path-guide source-tag coverage gap, and reran the watch, structured-data, and site-link checks cleanly while the live trigger-driven tasks stayed collapsed.
-- 2026-07-13: ran the validation-maintenance and memory-cleanup checkpoints, refreshed the live watches, and kept the trigger-driven tasks collapsed.
-- 2026-07-13: fixed the ownership-matrix and software-buying continuity gaps, including the query-state handoff, share-link, autosave, and route-label updates.
-- 2026-07-12 to 2026-07-11: ran repeated maintenance checkpoints, kept The Next AI checks clean, shipped the structured-data guardrail plus the demo-checklist and comparison route set, and left the live queue at zero.
-- 2026-07-10 to 2026-07-07: refreshed public checks, repaired watched source coverage, and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
+- 2026-07-14: rechecked the live memory, shipped the answer-example-vs-response-template comparison card, and kept site-link, structured-data, and source-tag coverage checks green while the backlog stayed collapsed.
+- 2026-07-14: ran validation-maintenance through 16:29 UTC, 16:25 UTC, and 16:17 UTC, refreshing the watch/status artifacts and preserving the zero-reply state.
+- 2026-07-14: extended watched-source coverage for the alternative-page, pricing-fit, answer-bank, workbook, checklist, and ROI handoff tags, then revalidated the touched pages cleanly.
+- 2026-07-14: added checklist-first continuity into the automation-software, automation-guide, and SIG / CAIQ / VSAQ guides, plus the ROI comparison and route-chooser updates, then revalidated the touched pages cleanly.
+- 2026-07-14: promoted the ROI calculator and related continuity across the homepage, pricing, free-tools, start-here, AI procurement hub, answer-library, answer-bank, answer-builder, and Pro-kit software surfaces, then revalidated links, structured data, and watcher coverage cleanly.
+- 2026-07-13: ran repeated validation maintenance, fixed watched-source coverage gaps for pricing, route-chooser, Gemini, Claude, and Copilot paths, and kept the live watches and site checks green.
+- 2026-07-13: closed the ownership-matrix and software-buying continuity gaps, including the query-state handoff, share-link, autosave, and route-label updates.
+- 2026-07-12 to 2026-07-11: ran maintenance checkpoints, kept The Next AI checks clean, and shipped the structured-data guardrail plus the demo-checklist and comparison route set.
+- 2026-07-10 to 2026-07-07: refreshed public checks and delivered the answer-bank workspace, kit-preview, deal-blocker/sample-bundle refinements, response-workbook route, and Microsoft Copilot comparison path.
 - 2026-07-03 to 2026-06-24: earlier route and maintenance work remains summarized here; the active watch items still stay trigger-gated.

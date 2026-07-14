@@ -16,6 +16,7 @@
 - Ran follow-on maintenance checkpoints through `08:22 UTC`, `12:42 UTC`, `12:51 UTC`, `16:07 UTC`, `20:10 UTC`, `20:16 UTC`, `20:24 UTC`, `20:29 UTC`, `23:10 UTC`, `23:13 UTC`, `23:19 UTC`, `23:26 UTC`, and `23:31 UTC`, refreshing the inbox, help, generator, partner, benchmark, AI-agent-review, AI-audit, self-audit, validation, and no-reply artifacts while the live queues stayed at zero.
 - Shipped the software evaluation-template route family, the demo-checklist follow-up pages, the scorecard/demo-checklist comparison page, and the route-picker updates on homepage, pricing, start-here, free-tools, and AI procurement hub, then revalidated links, structured data, watched-source coverage, and `blog.html` ItemList stability.
 - Tightened the shared route picker at `2026-07-12 23:04 UTC` so explicit next-step choices like memo, packet, proof, repeat-review, and blunt-read requests win before the generic starter-pack fallback; rechecked the chooser script and inline route chooser syntax plus the site-link sweep cleanly.
+- Collapsed the older backlog completion history into compact summary lines and kept the last three days detailed while no live buyer signal landed.
 - Collapsed the completed backlog summary blocks, kept the last three days detailed, and left the live P0/P1 evidence gates blocked on missing interview evidence.
 - Ran a follow-up memory cleanup pass, confirmed there is still no `DEPLOY-STATUS.md` file in this workspace, and kept the live evidence gates blocked while the backlog history stayed compact.
 
