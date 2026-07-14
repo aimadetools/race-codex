@@ -3,7 +3,7 @@
   "url": "https://noticekit.tech/",
   "tagline": "AI security questionnaire answers for SaaS teams.",
   "summary": "Browser-only AI security questionnaire answer workflow for SaaS teams handling buyer procurement, security, and privacy review pressure.",
-  "description": "NoticeKit helps small SaaS teams answer buyer AI security questionnaires without sending questionnaire data to a server. The product includes a live answer builder, route chooser, deal-blocker path, repeat-review answer bank, answer library, evidence map, AI procurement hub, software-fit scorecard, shortlist worksheet, software demo checklist, ownership matrix, workbook-friendly exports, kit preview, purchase-next-steps guidance, and paid starter, pro, and async audit paths.",
+  "description": "NoticeKit helps small SaaS teams answer buyer AI security questionnaires without sending questionnaire data to a server. The product includes a live answer builder, route chooser, deal-blocker path, repeat-review answer bank, answer library, evidence map, AI procurement hub, software-fit scorecard, shortlist worksheet, software ROI calculator, software demo checklist, ownership matrix, workbook-friendly exports, kit preview, purchase-next-steps guidance, and paid starter, pro, and async audit paths.",
   "audience": [
     "B2B SaaS founders",
     "Operations leads",
@@ -29,7 +29,7 @@
     "Reusable answer-bank workspace for repeated enterprise reviews",
     "Answer library, named-vendor templates, and filled examples for exact-match questions",
     "Response workbook and spreadsheet-friendly handoff paths",
-    "Software-fit scorecard, shortlist worksheet, software demo checklist, and ownership matrix",
+    "Software-fit scorecard, shortlist worksheet, software ROI calculator, software demo checklist, and ownership matrix",
     "AI procurement hub, evidence map, audit sample, kit preview, and purchase-next-steps proof routes",
     "Due-diligence packet, framework map, and AI agent control routes",
     "No account or server-side storage required for core free flows"
@@ -67,6 +67,7 @@
     "automation_guide": "https://noticekit.tech/blog-security-questionnaire-automation-for-startups.html",
     "sig_caiq_vsaq_guide": "https://noticekit.tech/blog-sig-caiq-vsaq-questionnaire-automation.html",
     "demo_checklist": "https://noticekit.tech/security-questionnaire-software-demo-checklist.html",
+    "roi_calculator": "https://noticekit.tech/security-questionnaire-software-roi-calculator.html",
     "evaluation_template": "https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html",
     "shortlist": "https://noticekit.tech/security-questionnaire-software-shortlist.html",
     "ownership_matrix": "https://noticekit.tech/security-questionnaire-ownership-matrix.html"
@@ -88,6 +89,7 @@
     "response_workbook": "https://noticekit.tech/blog-security-questionnaire-response-workbook.html",
     "software_scorecard": "https://noticekit.tech/security-questionnaire-software-fit-scorecard.html",
     "software_shortlist": "https://noticekit.tech/security-questionnaire-software-shortlist.html",
+    "software_roi_calculator": "https://noticekit.tech/security-questionnaire-software-roi-calculator.html",
     "software_evaluation_template": "https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html",
     "evidence_map": "https://noticekit.tech/ai-security-review-evidence-map.html",
     "due_diligence_packet": "https://noticekit.tech/ai-due-diligence-packet-builder.html",
@@ -122,5 +124,5 @@
     "pricing": "https://noticekit.tech/pricing.html",
     "audit": "https://noticekit.tech/ai-security-questionnaire-audit.html"
   },
-  "last_updated_utc": "2026-07-12"
+  "last_updated_utc": "2026-07-14"
 }

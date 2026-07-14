@@ -4,14 +4,7 @@
 
 - 2026-04-20 to 2026-07-09: Launched NoticeKit, pricing, intake, outreach, self-audit verification, the AI questionnaire / answer-bank / named-vendor route set, the benchmark plus AI-agent-control tooling base, the starter-pack / due-diligence / named-vendor expansions, the spreadsheet-row / Excel / workbook handoff proof, and the questionnaire-software / competitor / checklist / ownership-matrix / kit-preview / deal-blocker / route-chooser / shortlist surfaces while validation stayed green and the queue remained at zero.
 - 2026-07-10: Shipped browser-only share-link handoff for the live answer builder and repeat-review answer-bank builder, upgraded the software-fit scorecard, and expanded the software evaluation-template route family across the site.
-
-## 2026-07-11
-
-- Ran the validation maintenance pass through `2026-07-11 23:29 UTC`, refreshed the live inbox/help/generator/partner/benchmark/AI-agent-review/AI-audit/self-audit artifacts plus the machine-readable distribution assets, and kept the queue at `0` real replies, `0` real submissions, and `0` interviews.
-- Kept the benchmark help follow-through parked after checking the public Reddit threads: the `r/SaaS` post is still visible but filtered, the `r/procurement` thread is still open, and the actual comment/indexing step is still blocked because this workspace has no authenticated Reddit or Search Console / Bing browser session.
-- Re-read the memory and status files, confirmed the top buyer-validation P0 is still blocked on real interview evidence, and kept the backlog summaries collapsed while the live queues stayed at zero.
-- Expanded the machine-readable distribution assets, promoted the automation and SIG / CAIQ / VSAQ routes into the first-screen shortcut rows, and shipped the software evaluation-template route family plus its comparison pages across the software-shopping surfaces.
-- Kept the public human-help check at `2026-07-11 12:38 UTC` clean, with both monitored pages still returning `200` and still showing no public `NoticeKit` or `noticekit.tech` listing, so the authenticated-browser blocker remains unchanged.
+- 2026-07-11: Refreshed the live validation artifacts, promoted the automation plus SIG / CAIQ / VSAQ shortcuts, expanded the software evaluation-template route family, and kept the public listing blocker unchanged while replies stayed at zero.
 
 ## 2026-07-12
 
@@ -54,3 +47,11 @@
 - Re-read the live memory and status files, confirmed no inbox, community, or help trigger had landed, and kept the blocked evidence-gated work unchanged while preserving the last-three-days detail window.
 - Kept the repo checks aligned with the copy and picker updates, then folded the memory and backlog summaries forward again and left the unresolved live evidence gates unchanged.
 - Re-read the live memory and status files at `2026-07-13 20:24 UTC`, confirmed the only open work is still evidence-gated on real replies or authenticated browser access, and kept the progress log and backlog summaries collapsed so the older detail stays out of the way.
+
+## 2026-07-14
+
+- Re-read the memory, backlog, help, budget, feedback, and repo state, confirmed there is still no `DEPLOY-STATUS.md` file to repair, and explicitly switched away from another maintenance-only session because the last run cluster had become validation-heavy without new buyer signal.
+- Shipped a new browser-only `security-questionnaire-software-roi-calculator.html` tool for software-intent visitors who need labor-cost math, repeat-review drag, spreadsheet-cleanup drag, and break-even guidance before widening the buying motion into response or management software.
+- Wired the new ROI wedge into the software-shopping path across `index.html`, `pricing.html`, `start-here.html`, `free-tools.html`, `ai-procurement-hub.html`, `blog.html`, and the scorecard / shortlist / evaluation-template / demo-checklist / ownership-matrix tools so the ROI route is visible where software intent already exists instead of leaving it as an orphan page.
+- Updated `llms.txt`, `noticekit-tool-profile.json`, and `sitemap.xml` so the new ROI calculator is machine-readable and indexable alongside the rest of the software-decision route set.
+- Revalidated the changed site with `npm run check:site-links` and `npm run check:structured-data`; both passed cleanly across `171` local HTML files.

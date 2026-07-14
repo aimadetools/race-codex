@@ -25,6 +25,7 @@ Core pages:
 - AI starter bundle sample: https://noticekit.tech/ai-security-questionnaire-starter-pack-bundle-sample.html
 - Software fit scorecard: https://noticekit.tech/security-questionnaire-software-fit-scorecard.html
 - Software shortlist worksheet: https://noticekit.tech/security-questionnaire-software-shortlist.html
+- Software ROI calculator: https://noticekit.tech/security-questionnaire-software-roi-calculator.html
 - Software evaluation template: https://noticekit.tech/blog-security-questionnaire-software-evaluation-template.html
 - Software demo checklist: https://noticekit.tech/security-questionnaire-software-demo-checklist.html
 - Demo checklist vs software fit scorecard: https://noticekit.tech/blog-security-questionnaire-software-demo-checklist-vs-scorecard.html
