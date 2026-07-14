@@ -93,6 +93,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-14: surfaced OpenAI, Gemini, Anthropic, Claude, and Microsoft Copilot bank-vs-builder comparison links across the homepage, pricing, free-tools, AI procurement hub, and answer-library surfaces, then revalidated links and structured data cleanly.
 - 2026-07-14: promoted the ROI calculator ahead of scorecard, shortlist, and demo/evaluation paths on the main homepage, pricing, free-tools, start-here, and AI procurement hub software sections, then revalidated links and structured data cleanly.
 - 2026-07-14: extended the named-vendor OpenAI / Anthropic / Claude / Gemini / Microsoft Copilot answer-bank and answer-bank-vs-builder pages with software-fit-scorecard and ROI-calculator continuity, normalized the Copilot comparison source-tag pattern, and revalidated links, structured data, and watcher coverage cleanly.
 - 2026-07-14: extended the ROI continuity path into the AI answer-library, answer-bank, answer-builder, and Pro-kit software-escalation surfaces, then revalidated links, structured data, and watcher coverage cleanly.
