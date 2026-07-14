@@ -61,6 +61,7 @@ export const WATCHED_SOURCE_TAGS = [
   "blog-index-answer-bank-vs-response-template",
   "blog-index-answer-library",
   "blog-index-answer-example",
+  "blog-index-answer-example-vs-response-template",
   "blog-index-sample-answers",
   "blog-index-response-workbook",
   "blog-index-pricing-fit-guide",

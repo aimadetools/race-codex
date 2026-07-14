@@ -50,6 +50,8 @@
 
 ## 2026-07-14
 
+- Promoted `blog-security-questionnaire-answer-example-vs-response-template.html` into a dedicated blog-index comparison card so the filled-example vs copy-ready-template decision is first-class in the blog route set instead of only a nested CTA.
+- Re-ran `npm run check:site-links`, `npm run check:structured-data`, and `npm run check:source-tag-coverage`; all passed cleanly across `175` HTML files with `2559` emitted source tags covered.
 - Ran the validation-maintenance pass through `2026-07-14 16:29 UTC`, refreshed the contact inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, and validation artifacts, and logged another deduplicated no-reply checkpoint while every live queue stayed at zero.
 - Ran the validation-maintenance pass through `2026-07-14 16:25 UTC`, refreshed the contact inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, and validation artifacts, and logged another deduplicated no-reply checkpoint while every live queue stayed at zero.
 - Ran the validation-maintenance pass through `2026-07-14 16:21 UTC`, refreshed the contact inbox, help-request, generator, partner, benchmark, AI-agent-review, AI-audit, and validation artifacts, and logged a deduplicated no-reply checkpoint while every live queue stayed at zero.

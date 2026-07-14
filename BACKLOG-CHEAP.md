@@ -327,6 +327,8 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-14: promoted the answer-example-vs-response-template page into a dedicated blog-index comparison card so the filled-example vs copy-ready-template decision is now a first-class blog route instead of only a nested CTA.
+- 2026-07-14: re-ran site-link, structured-data, and source-tag coverage checks after the blog-index promotion; all passed cleanly across `175` HTML files with `2559` emitted source tags.
 - 2026-07-14: ran validation-maintenance through 16:29 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed while the site checks stayed green.
 - 2026-07-14: ran validation-maintenance through 16:25 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed while the site checks stayed green.
 - 2026-07-14: ran validation-maintenance through 16:17 UTC, refreshed the status/watch artifacts, deduplicated the no-reply checkpoint, and kept the live trigger-driven tasks blocked while the site checks stayed green.
