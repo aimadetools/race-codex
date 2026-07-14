@@ -94,6 +94,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-14: extended the older pricing-fit plus file-first answer-bank/template/workbook pages with ROI-calculator, shortlist, and evaluation-template software-decision continuity, then revalidated links, structured data, and watcher coverage cleanly.
 - 2026-07-14: closed the older checklist-vs-ownership-matrix software continuity gap by adding shortlist and ROI-calculator exits, refreshing machine-readable discovery, extending watched-source coverage, and revalidating links, structured data, and watcher coverage cleanly.
 - 2026-07-14: surfaced OpenAI, Gemini, Anthropic, Claude, and Microsoft Copilot bank-vs-builder comparison links across the homepage, pricing, free-tools, AI procurement hub, and answer-library surfaces, then revalidated links and structured data cleanly.
 - 2026-07-14: shipped the ROI-calculator-vs-scorecard / shortlist / evaluation-template comparison cluster, threaded it through the software-buying pages and machine-readable assets, repaired the `blog.html` ItemList positions, and revalidated links, structured data, and watched source coverage cleanly.
