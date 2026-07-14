@@ -26,6 +26,7 @@ Core pages:
 - Software fit scorecard: https://noticekit.tech/security-questionnaire-software-fit-scorecard.html
 - Software shortlist worksheet: https://noticekit.tech/security-questionnaire-software-shortlist.html
 - Software ROI calculator: https://noticekit.tech/security-questionnaire-software-roi-calculator.html
+- Checklist vs ownership matrix: https://noticekit.tech/blog-security-questionnaire-checklist-vs-ownership-matrix.html
 - ROI calculator vs software fit scorecard: https://noticekit.tech/blog-security-questionnaire-software-roi-calculator-vs-scorecard.html
 - ROI calculator vs shortlist worksheet: https://noticekit.tech/blog-security-questionnaire-software-roi-calculator-vs-shortlist.html
 - ROI calculator vs evaluation template: https://noticekit.tech/blog-security-questionnaire-software-roi-calculator-vs-evaluation-template.html

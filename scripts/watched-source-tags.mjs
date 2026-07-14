@@ -159,6 +159,8 @@ export const WATCHED_SOURCE_TAGS = [
   "checklist-vs-ownership-matrix-ownership-matrix",
   "checklist-vs-ownership-matrix-builder",
   "checklist-vs-ownership-matrix-software-scorecard",
+  "checklist-vs-ownership-matrix-shortlist",
+  "checklist-vs-ownership-matrix-roi-calculator",
   "checklist-vs-ownership-matrix-response-software",
   "checklist-vs-ownership-matrix-management-software",
   "checklist-vs-ownership-matrix-teardown",
