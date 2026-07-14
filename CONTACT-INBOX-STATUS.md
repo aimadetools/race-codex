@@ -1,6 +1,6 @@
 # Contact Inbox Status
 
-Checked at: 2026-07-14 08:22 UTC
+Checked at: 2026-07-14 16:14 UTC
 Source of truth: Vercel Blob `contact-submissions/`
 
 ## Totals
@@ -213,6 +213,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-response-workbook: 0
 - blog-index-pricing-fit-guide: 0
 - blog-index-software-roi-calculator: 0
+- blog-index-roi-vs-scorecard: 0
+- blog-index-roi-vs-shortlist: 0
+- blog-index-roi-vs-evaluation-template: 0
 - blog-index-software-evaluation-template: 0
 - blog-index-software-demo-checklist: 0
 - blog-index-demo-vs-scorecard: 0
@@ -266,8 +269,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-fit-guide-software: 0
 - pricing-fit-guide-response-software: 0
 - pricing-fit-guide-management-software: 0
+- pricing-fit-guide-software-roi-calculator: 0
 - pricing-fit-guide-software-scorecard: 0
 - pricing-fit-guide-software-shortlist: 0
+- pricing-fit-guide-software-evaluation-template: 0
 - pricing-fit-guide-teardown: 0
 - free-tools-response-workbook: 0
 - free-tools-pricing-fit-guide: 0
@@ -295,6 +300,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-bank-vs-response-workbook-builder: 0
 - answer-bank-vs-response-workbook-spreadsheet-template: 0
 - answer-bank-vs-response-workbook-sample-answers: 0
+- answer-bank-vs-response-workbook-roi-calculator: 0
+- answer-bank-vs-response-workbook-shortlist: 0
+- answer-bank-vs-response-workbook-evaluation-template: 0
 - answer-bank-vs-response-workbook-response-software: 0
 - answer-bank-vs-response-workbook-management-software: 0
 - answer-bank-vs-response-workbook-software-scorecard: 0
@@ -304,6 +312,8 @@ Source of truth: Vercel Blob `contact-submissions/`
 - checklist-vs-ownership-matrix-ownership-matrix: 0
 - checklist-vs-ownership-matrix-builder: 0
 - checklist-vs-ownership-matrix-software-scorecard: 0
+- checklist-vs-ownership-matrix-shortlist: 0
+- checklist-vs-ownership-matrix-roi-calculator: 0
 - checklist-vs-ownership-matrix-response-software: 0
 - checklist-vs-ownership-matrix-management-software: 0
 - checklist-vs-ownership-matrix-teardown: 0
@@ -311,6 +321,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - checklist-vs-ownership-matrix-nav-audit: 0
 - software-scorecard-vs-ownership-matrix-nav-audit: 0
 - software-scorecard-roi-calculator: 0
+- software-scorecard-roi-comparison: 0
 - software-scorecard-vs-ownership-matrix-scorecard: 0
 - software-scorecard-vs-ownership-matrix-ownership-matrix: 0
 - software-scorecard-vs-ownership-matrix-shortlist: 0
@@ -321,6 +332,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-scorecard-vs-ownership-matrix-builder: 0
 - software-shortlist-vs-ownership-matrix-nav-audit: 0
 - software-shortlist-roi-calculator: 0
+- software-shortlist-roi-comparison: 0
 - software-shortlist-vs-ownership-matrix-shortlist: 0
 - software-shortlist-vs-ownership-matrix-ownership-matrix: 0
 - software-shortlist-vs-ownership-matrix-scorecard: 0
@@ -333,6 +345,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-evaluation-template-scorecard: 0
 - software-evaluation-template-shortlist: 0
 - software-evaluation-template-roi-calculator: 0
+- software-evaluation-template-roi-comparison: 0
 - software-evaluation-template-demo-checklist: 0
 - software-evaluation-template-demo-comparison: 0
 - software-evaluation-template-shortlist-comparison: 0
@@ -361,8 +374,11 @@ Source of truth: Vercel Blob `contact-submissions/`
 - software-roi-calculator-nav-audit: 0
 - route-chooser-software-roi-calculator: 0
 - software-roi-calculator-scorecard: 0
+- software-roi-calculator-scorecard-comparison: 0
 - software-roi-calculator-shortlist: 0
+- software-roi-calculator-shortlist-comparison: 0
 - software-roi-calculator-evaluation-template: 0
+- software-roi-calculator-evaluation-comparison: 0
 - software-roi-calculator-demo-checklist: 0
 - software-roi-calculator-ownership-matrix: 0
 - software-roi-calculator-questionnaire-software: 0
@@ -406,6 +422,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - blog-index-sig-guide: 0
 - blog-index-questionnaire-software: 0
 - questionnaire-software-roi-calculator: 0
+- questionnaire-software-roi-scorecard-comparison: 0
+- questionnaire-software-roi-shortlist-comparison: 0
+- questionnaire-software-roi-evaluation-comparison: 0
 - questionnaire-software-evaluation-template: 0
 - questionnaire-software-demo-checklist: 0
 - blog-index-software-tools-comparison: 0
@@ -656,6 +675,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-bank-vs-response-template-answer-bank-builder: 0
 - answer-bank-vs-response-template-spreadsheet-template: 0
 - answer-bank-vs-response-template-sample-answers: 0
+- answer-bank-vs-response-template-roi-calculator: 0
+- answer-bank-vs-response-template-shortlist: 0
+- answer-bank-vs-response-template-evaluation-template: 0
 - answer-bank-vs-response-template-software-scorecard: 0
 - answer-bank-vs-response-template-response-software: 0
 - answer-bank-vs-response-template-management-software: 0
@@ -1839,6 +1861,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ai-vendor-risk-assessment-answer-bank: 0
 - free-tools-ai-risk-assessment: 0
 - automation-guide-nav-audit: 0
+- automation-guide-checklist: 0
 - automation-guide-sig-guide: 0
 - automation-guide-automation-software: 0
 - automation-guide-questionnaire-software: 0
@@ -1850,6 +1873,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-guide-due-diligence-scorecard: 0
 - automation-guide-due-diligence-packet-builder: 0
 - sig-guide-nav-audit: 0
+- sig-guide-checklist: 0
 - sig-guide-builder: 0
 - sig-guide-answer-bank: 0
 - sig-guide-questionnaire-software: 0
@@ -1877,6 +1901,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - spreadsheet-template-bundle-sample: 0
 - spreadsheet-template-handoff-guide: 0
 - spreadsheet-template-questionnaire-software: 0
+- spreadsheet-template-software-roi-calculator: 0
+- spreadsheet-template-software-shortlist: 0
+- spreadsheet-template-software-evaluation-template: 0
 - spreadsheet-template-answer-bank: 0
 - spreadsheet-template-pricing: 0
 - response-template-nav-audit: 0
@@ -1908,6 +1935,18 @@ Source of truth: Vercel Blob `contact-submissions/`
 - answer-example-deal-blocker: 0
 - answer-example-ai-questionnaire-example: 0
 - answer-example-pricing: 0
+- answer-example-response-template-nav-audit: 0
+- answer-example-response-template-builder: 0
+- answer-example-response-template-spreadsheet-template: 0
+- answer-example-response-template-answer-bank-builder: 0
+- answer-example-response-template-answer-example: 0
+- answer-example-response-template-response-template: 0
+- answer-example-response-template-sample-answers: 0
+- answer-example-response-template-response-software: 0
+- answer-example-response-template-management-software: 0
+- answer-example-response-template-ai-procurement-hub: 0
+- answer-example-response-template-teardown: 0
+- answer-example-response-template-pricing: 0
 - questionnaire-software-vanta-alternative: 0
 - questionnaire-software-responsive-alternative: 0
 - questionnaire-software-loopio-alternative: 0
@@ -1916,7 +1955,9 @@ Source of truth: Vercel Blob `contact-submissions/`
 - questionnaire-software-drata-aiqa-alternative: 0
 - questionnaire-software-safebase-alternative: 0
 - questionnaire-software-whistic-alternative: 0
+- questionnaire-software-checklist: 0
 - automation-software-nav-audit: 0
+- automation-software-checklist: 0
 - automation-software-builder: 0
 - automation-software-spreadsheet-template: 0
 - automation-software-ai-procurement-hub: 0
@@ -1936,6 +1977,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-software-evaluation-shortlist-comparison: 0
 - automation-software-response-management-comparison: 0
 - management-software-nav-audit: 0
+- management-software-checklist: 0
 - management-software-answer-library: 0
 - management-software-builder: 0
 - management-software-spreadsheet-template: 0
@@ -1953,6 +1995,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - management-software-hypercomply-alternative: 0
 - management-software-conveyor-alternative: 0
 - response-software-nav-audit: 0
+- response-software-checklist: 0
 - response-software-answer-library: 0
 - response-software-builder: 0
 - response-software-spreadsheet-template: 0
@@ -2069,6 +2112,7 @@ Source of truth: Vercel Blob `contact-submissions/`
 - ownership-matrix-response-comparison: 0
 - ownership-matrix-management-comparison: 0
 - response-management-comparison-nav-audit: 0
+- response-management-comparison-checklist: 0
 - response-management-comparison-response-software: 0
 - response-management-comparison-management-software: 0
 - response-management-comparison-scorecard: 0
@@ -2101,6 +2145,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - automation-software-drata-aiqa-alternative: 0
 - automation-software-safebase-alternative: 0
 - vanta-alternative-builder: 0
+- vanta-alternative-software-scorecard: 0
+- vanta-alternative-software-shortlist: 0
+- vanta-alternative-software-roi-calculator: 0
+- vanta-alternative-software-evaluation-template: 0
 - vanta-alternative-software-guide: 0
 - vanta-alternative-spreadsheet-template: 0
 - vanta-alternative-response-software: 0
@@ -2108,6 +2156,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - vanta-alternative-answer-bank: 0
 - vanta-alternative-audit: 0
 - responsive-alternative-builder: 0
+- responsive-alternative-software-scorecard: 0
+- responsive-alternative-software-shortlist: 0
+- responsive-alternative-software-roi-calculator: 0
+- responsive-alternative-software-evaluation-template: 0
 - responsive-alternative-software-guide: 0
 - responsive-alternative-spreadsheet-template: 0
 - responsive-alternative-response-software: 0
@@ -2115,6 +2167,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - responsive-alternative-answer-bank: 0
 - responsive-alternative-audit: 0
 - loopio-alternative-builder: 0
+- loopio-alternative-software-scorecard: 0
+- loopio-alternative-software-shortlist: 0
+- loopio-alternative-software-roi-calculator: 0
+- loopio-alternative-software-evaluation-template: 0
 - loopio-alternative-software-guide: 0
 - loopio-alternative-spreadsheet-template: 0
 - loopio-alternative-response-software: 0
@@ -2122,6 +2178,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - loopio-alternative-answer-bank: 0
 - loopio-alternative-audit: 0
 - hypercomply-alternative-builder: 0
+- hypercomply-alternative-software-scorecard: 0
+- hypercomply-alternative-software-shortlist: 0
+- hypercomply-alternative-software-roi-calculator: 0
+- hypercomply-alternative-software-evaluation-template: 0
 - hypercomply-alternative-software-guide: 0
 - hypercomply-alternative-spreadsheet-template: 0
 - hypercomply-alternative-response-software: 0
@@ -2129,6 +2189,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - hypercomply-alternative-answer-bank: 0
 - hypercomply-alternative-audit: 0
 - conveyor-alternative-builder: 0
+- conveyor-alternative-software-scorecard: 0
+- conveyor-alternative-software-shortlist: 0
+- conveyor-alternative-software-roi-calculator: 0
+- conveyor-alternative-software-evaluation-template: 0
 - conveyor-alternative-software-guide: 0
 - conveyor-alternative-spreadsheet-template: 0
 - conveyor-alternative-response-software: 0
@@ -2136,6 +2200,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - conveyor-alternative-answer-bank: 0
 - conveyor-alternative-audit: 0
 - safebase-alternative-builder: 0
+- safebase-alternative-software-scorecard: 0
+- safebase-alternative-software-shortlist: 0
+- safebase-alternative-software-roi-calculator: 0
+- safebase-alternative-software-evaluation-template: 0
 - safebase-alternative-software-guide: 0
 - safebase-alternative-spreadsheet-template: 0
 - safebase-alternative-response-software: 0
@@ -2143,6 +2211,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - safebase-alternative-answer-bank: 0
 - safebase-alternative-audit: 0
 - drata-aiqa-alternative-builder: 0
+- drata-aiqa-alternative-software-scorecard: 0
+- drata-aiqa-alternative-software-shortlist: 0
+- drata-aiqa-alternative-software-roi-calculator: 0
+- drata-aiqa-alternative-software-evaluation-template: 0
 - drata-aiqa-alternative-software-guide: 0
 - drata-aiqa-alternative-spreadsheet-template: 0
 - drata-aiqa-alternative-response-software: 0
@@ -2150,6 +2222,10 @@ Source of truth: Vercel Blob `contact-submissions/`
 - drata-aiqa-alternative-answer-bank: 0
 - drata-aiqa-alternative-audit: 0
 - whistic-alternative-builder: 0
+- whistic-alternative-software-scorecard: 0
+- whistic-alternative-software-shortlist: 0
+- whistic-alternative-software-roi-calculator: 0
+- whistic-alternative-software-evaluation-template: 0
 - whistic-alternative-software-guide: 0
 - whistic-alternative-spreadsheet-template: 0
 - whistic-alternative-response-software: 0
@@ -2630,6 +2706,52 @@ Source of truth: Vercel Blob `contact-submissions/`
 - pricing-microsoft-copilot-answer-template: 0
 - pricing-microsoft-copilot-answer-comparison: 0
 - pricing-microsoft-copilot-path-guide: 0
+- ai-answer-library-openai-answer-comparison: 0
+- ai-answer-library-anthropic-answer-comparison: 0
+- ai-answer-library-claude-answer-comparison: 0
+- ai-answer-library-gemini-answer-comparison: 0
+- ai-answer-library-microsoft-copilot-answer-comparison: 0
+- ai-procurement-hub-anthropic-answer-comparison: 0
+- ai-procurement-hub-claude-answer-comparison: 0
+- ai-procurement-hub-gemini-answer-comparison: 0
+- free-tools-anthropic-answer-comparison: 0
+- free-tools-claude-answer-comparison: 0
+- free-tools-gemini-answer-comparison: 0
+- homepage-ai-route-openai-answer-comparison: 0
+- homepage-ai-route-anthropic-answer-comparison: 0
+- homepage-ai-route-claude-answer-comparison: 0
+- homepage-ai-route-gemini-answer-comparison: 0
+- pricing-openai-answer-comparison: 0
+- pricing-anthropic-answer-comparison: 0
+- pricing-claude-answer-comparison: 0
+- pricing-gemini-answer-comparison: 0
+- software-roi-calculator-vs-scorecard-nav-audit: 0
+- software-roi-calculator-vs-scorecard-roi-calculator: 0
+- software-roi-calculator-vs-scorecard-scorecard: 0
+- software-roi-calculator-vs-scorecard-shortlist: 0
+- software-roi-calculator-vs-scorecard-evaluation-template: 0
+- software-roi-calculator-vs-scorecard-questionnaire-software: 0
+- software-roi-calculator-vs-scorecard-response-software: 0
+- software-roi-calculator-vs-scorecard-management-software: 0
+- software-roi-calculator-vs-scorecard-builder: 0
+- software-roi-calculator-vs-shortlist-nav-audit: 0
+- software-roi-calculator-vs-shortlist-roi-calculator: 0
+- software-roi-calculator-vs-shortlist-shortlist: 0
+- software-roi-calculator-vs-shortlist-scorecard: 0
+- software-roi-calculator-vs-shortlist-evaluation-template: 0
+- software-roi-calculator-vs-shortlist-questionnaire-software: 0
+- software-roi-calculator-vs-shortlist-response-software: 0
+- software-roi-calculator-vs-shortlist-management-software: 0
+- software-roi-calculator-vs-shortlist-builder: 0
+- software-roi-calculator-vs-evaluation-template-nav-audit: 0
+- software-roi-calculator-vs-evaluation-template-roi-calculator: 0
+- software-roi-calculator-vs-evaluation-template-evaluation-template: 0
+- software-roi-calculator-vs-evaluation-template-scorecard: 0
+- software-roi-calculator-vs-evaluation-template-shortlist: 0
+- software-roi-calculator-vs-evaluation-template-questionnaire-software: 0
+- software-roi-calculator-vs-evaluation-template-response-software: 0
+- software-roi-calculator-vs-evaluation-template-management-software: 0
+- software-roi-calculator-vs-evaluation-template-builder: 0
 
 ## Latest Real Submission
 
