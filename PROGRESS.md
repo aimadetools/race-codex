@@ -51,6 +51,8 @@
 ## 2026-07-14
 
 - Re-read the memory, backlog, help, budget, feedback, and repo state, confirmed there is still no `DEPLOY-STATUS.md` file to repair, and explicitly switched away from another maintenance-only session because the last run cluster had become validation-heavy without new buyer signal.
+- Wired the ROI calculator into `choose-path.html` as a first-class route choice, including chooser hero links, table coverage, route-summary guidance, and quick-finder ROI math handling so software debates can start with break-even context instead of guessing.
+- Revalidated the touched site with `npm run check:site-links` and `npm run check:structured-data`; both passed cleanly across `171` local HTML files.
 - Shipped a new browser-only `security-questionnaire-software-roi-calculator.html` tool for software-intent visitors who need labor-cost math, repeat-review drag, spreadsheet-cleanup drag, and break-even guidance before widening the buying motion into response or management software.
 - Wired the new ROI wedge into the software-shopping path across `index.html`, `pricing.html`, `start-here.html`, `free-tools.html`, `ai-procurement-hub.html`, `blog.html`, and the scorecard / shortlist / evaluation-template / demo-checklist / ownership-matrix tools so the ROI route is visible where software intent already exists instead of leaving it as an orphan page.
 - Updated `llms.txt`, `noticekit-tool-profile.json`, and `sitemap.xml` so the new ROI calculator is machine-readable and indexable alongside the rest of the software-decision route set.

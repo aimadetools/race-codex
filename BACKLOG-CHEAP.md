@@ -324,6 +324,7 @@ Completed work stays collapsed below so only live trigger-driven tasks remain in
 
 ## Completed Summary
 
+- 2026-07-14: wired the ROI calculator into the route chooser as a first-class path with hero links, table coverage, route-summary guidance, and quick-finder ROI math handling, then revalidated the site-link and structured-data checks cleanly.
 - 2026-07-14: extended ROI source-tag continuity into the AI answer-library, answer-bank, answer-builder, and Pro-kit software branches and kept watched-source coverage clean at `2404` emitted tags.
 - 2026-07-14: added watched-source coverage for the software ROI calculator route family and the new software-guide / comparison ROI handoffs, keeping the emitted tag watch complete at `2400` tags.
 - 2026-07-13: reran validation maintenance through 23:30 UTC, refreshed the watch/status artifacts, and kept the trigger-driven tasks collapsed with zero replies.
