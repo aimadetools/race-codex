@@ -21,6 +21,7 @@ Core pages:
 - AI answer bank: https://noticekit.tech/ai-security-questionnaire-answer-bank.html
 - AI answer library: https://noticekit.tech/ai-security-questionnaire-answer-library.html
 - AI answer example: https://noticekit.tech/blog-security-questionnaire-answer-example.html
+- AI answer example vs response template: https://noticekit.tech/blog-security-questionnaire-answer-example-vs-response-template.html
 - Response workbook sample: https://noticekit.tech/blog-security-questionnaire-response-workbook.html
 - AI starter bundle sample: https://noticekit.tech/ai-security-questionnaire-starter-pack-bundle-sample.html
 - Software fit scorecard: https://noticekit.tech/security-questionnaire-software-fit-scorecard.html
