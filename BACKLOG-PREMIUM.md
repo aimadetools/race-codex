@@ -94,6 +94,7 @@ Completed work stays collapsed below so only live evidence decisions remain in P
 
 ## Completed Summary
 
+- 2026-07-14: extended the exact-match security-questionnaire checklist route into the automation-software, automation-guide, and SIG / CAIQ / VSAQ guides so automation-intent visitors can branch into a live-thread fact pass before widening into heavier workflow decisions, then revalidated links, structured data, and watched source coverage cleanly at `2546` emitted tags.
 - 2026-07-14: extended the Vanta / Responsive / Loopio / HyperComply / Conveyor / Drata AI Questionnaire Assistance / SafeBase / Whistic alternative pages with software-fit-scorecard, shortlist, ROI-calculator, and evaluation-template continuity, then revalidated links, structured data, and watched source coverage cleanly at `2539` emitted tags.
 - 2026-07-14: extended the older pricing-fit plus file-first answer-bank/template/workbook pages with ROI-calculator, shortlist, and evaluation-template software-decision continuity, then revalidated links, structured data, and watcher coverage cleanly.
 - 2026-07-14: closed the older checklist-vs-ownership-matrix software continuity gap by adding shortlist and ROI-calculator exits, refreshing machine-readable discovery, extending watched-source coverage, and revalidating links, structured data, and watcher coverage cleanly.
